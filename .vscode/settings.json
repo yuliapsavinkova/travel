@@ -1,0 +1,36 @@
+{
+  // Use Biome as the default formatter everywhere
+  "editor.defaultFormatter": "biomejs.biome",
+
+  // Always format on save
+  "editor.formatOnSave": true,
+
+  // Enable Biome diagnostics (linting + formatting)
+  "biome.enable": true,
+
+  // Disable ESLint if it exists (prevents conflicts)
+  "eslint.enable": false,
+
+  // Explicit per-language formatter (safe + future-proof)
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}

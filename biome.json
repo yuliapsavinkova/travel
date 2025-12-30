@@ -1,0 +1,56 @@
+{
+  "root": true,
+
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+
+  "javascript": {
+    "formatter": {
+      "semicolons": "always",
+      "quoteStyle": "single",
+      "trailingCommas": "es5"
+    }
+  },
+
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  },
+
+  "files": {
+    "ignore": [
+      "node_modules",
+      ".next",
+      "out",
+      "build"
+    ]
+  },
+
+  "jsx": {
+    "runtime": "automatic"
+  },
+
+  "json": {
+    "formatter": {
+      "enabled": true
+    }
+  },
+
+  "css": {
+    "formatter": {
+      "enabled": true
+    }
+  },
+
+  "mdx": {
+    "formatter": {
+      "enabled": true
+    }
+  }
+}
