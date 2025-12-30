@@ -13,6 +13,7 @@ export default function HomePage() {
       <div className={styles.heroOverlay}>
         <h1>Welcome to MyApp</h1>
         <p>We make things simple</p>
+        <code>function;</code>
       </div>
     </div>
   )

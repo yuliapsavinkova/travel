@@ -1,0 +1,58 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+ --font-serif: 'Playfair Display', serif; /* self-hosted */
+}
+
+/* Self-hosted font - will remove when find replacement font from Next.js */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Italic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2 {
+  font-family: var(--font-serif);
+  /* Self-hosted font settings */
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-optical-sizing: auto;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.rootLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.rootMain {
+  flex: 1;
+}
