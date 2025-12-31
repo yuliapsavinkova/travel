@@ -1,0 +1,79 @@
+.portal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-4);
+}
+
+.portal-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(40px);
+}
+
+.portal-modal {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  background: var(--c-obsidian);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--c-border);
+  padding: var(--s-7);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
+}
+
+.portal-header-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--s-6);
+}
+
+.portal-close-btn {
+  background: var(--c-glass);
+  border: 1px solid var(--c-border);
+  color: var(--c-gold);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.portal-close-btn:hover {
+  background: var(--c-gold);
+  color: var(--c-black);
+  transform: rotate(90deg);
+}
+
+.portal-success-content {
+  text-align: center;
+  padding: var(--s-7) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.portal-success-icon {
+  color: var(--c-gold);
+  margin-bottom: var(--s-2);
+}
+
+.portal-success-title {
+  font-size: 48px;
+  color: var(--c-white);
+}
+
+.portal-success-body {
+  color: var(--c-text-dim);
+  font-size: 18px;
+  max-width: 400px;
+  margin-bottom: var(--s-4);
+}

@@ -1,0 +1,56 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: crosshair;
+}
+
+/* Explicitly force pointer for interactive elements and their children to override global crosshair */
+a, a *,
+button, button *,
+[role="button"], [role="button"] *,
+.branding-clickable, .branding-clickable *,
+.branding-text, .branding-text *,
+.btn-nav, .btn-nav *,
+.btn-gold, .btn-gold *,
+.secondary-btn, .secondary-btn *,
+.scroll-trigger, .scroll-trigger *,
+.glass-card, .glass-card *,
+.social-icon, .social-icon *,
+.footer-links li, .footer-links li *,
+.mobile-menu-item, .mobile-menu-item *,
+.btn-back, .btn-back * {
+  cursor: pointer !important;
+}
+
+body {
+  background-color: var(--c-black);
+  color: var(--c-text);
+  font-family: var(--f-main);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

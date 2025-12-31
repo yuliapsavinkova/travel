@@ -1,0 +1,176 @@
+
+/* Ethereal Glass Card */
+.glass-card {
+  background: var(--c-glass);
+  backdrop-filter: blur(50px);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--s-5);
+  color: var(--c-text);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--c-gold-rich);
+  transform: translateY(-6px);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+
+.toolkit-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  height: 100%;
+}
+
+.claim-link-under {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--c-gold-faint);
+  border: 1px solid var(--c-border-gold);
+  border-radius: var(--r-sm);
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.claim-link-under:hover {
+  background: var(--c-gold-muted);
+  border-color: var(--c-gold);
+  transform: translateY(-2px);
+}
+
+.claim-link-text {
+  color: var(--c-gold);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.card-image-viewport {
+  height: 240px;
+  border-radius: var(--r-sm);
+  margin-bottom: var(--s-5);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.card-image-viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover .card-image-viewport img {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-family: var(--f-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: var(--s-2);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.card-description {
+  font-family: var(--f-main);
+  font-size: 14px;
+  color: var(--c-text-dim);
+  line-height: 1.6;
+  margin-bottom: var(--s-5);
+}
+
+.card-metadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-4);
+  margin-bottom: var(--s-4);
+  width: 100%;
+}
+
+.card-metadata-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--c-gold);
+  white-space: nowrap;
+}
+
+.card-badge {
+  position: absolute;
+  top: var(--s-4);
+  right: var(--s-4);
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(14px) saturate(1.8);
+  padding: 8px 16px;
+  border-radius: var(--r-pill);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  z-index: 5;
+  color: var(--c-white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.card-footer {
+  margin-top: auto;
+  padding: var(--s-4) 0 var(--s-5) 0;
+  border-top: 1px solid var(--c-border-light);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  width: 100%;
+}
+
+.card-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-action-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.card-action-label {
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--c-gold);
+}

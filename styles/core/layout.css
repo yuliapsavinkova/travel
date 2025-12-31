@@ -1,0 +1,94 @@
+/* Enforce a minimum width globally to prevent layout collapse or squishing */
+.app-root {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--s-6);
+  box-sizing: border-box;
+  /* Protect content from squishing */
+  min-width: 300px;
+}
+
+.studio-depth {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-back);
+  background: radial-gradient(circle at 50% 0%, #111112 0%, var(--c-black) 90%);
+}
+
+.media-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.media-viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.grid-standard {
+  display: grid;
+  /* Minmax floor ensures cards don't shrink past a point of legibility */
+  grid-template-columns: repeat(auto-fill, minmax(clamp(280px, 100%, 400px), 1fr));
+  gap: var(--s-5);
+  width: 100%;
+}
+
+.text-center { 
+  text-align: center; 
+}
+
+.section-divider {
+  text-align: center;
+  margin: var(--s-8) 0 var(--s-6);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--c-border-light);
+  width: 100%;
+}
+
+.main-top-spacing { 
+  padding-top: 140px; 
+}
+
+/* Scroll Offset for Anchors */
+#portfolio, #archive, #guides, #framework, #milestones {
+  scroll-margin-top: 140px;
+}
+
+.margin-bottom-sm { margin-bottom: var(--s-4); }
+.margin-bottom-md { margin-bottom: var(--s-5); }
+.margin-bottom-lg { margin-bottom: var(--s-6); }
+.margin-bottom-xl { margin-bottom: var(--s-8); }
+
+.section-margin { margin-bottom: var(--s-8); }
+
+.flex-col { display: flex; flex-direction: column; }
+.flex-gap-md { gap: var(--s-4); }
+.flex-gap-lg { gap: var(--s-6); }
+.flex-gap-xl { gap: var(--s-8); }
+
+@media (max-width: 768px) {
+  .container { padding: 0 var(--s-4); }
+  .main-top-spacing { padding-top: 100px; }
+  .grid-standard { gap: var(--s-4); }
+  
+  #portfolio, #archive, #guides, #framework, #milestones {
+    scroll-margin-top: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container { padding: 0 var(--s-3); }
+}
