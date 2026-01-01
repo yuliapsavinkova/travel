@@ -65,27 +65,27 @@
 
 /* HIDDEN ON MOBILE/TABLET: Prevents layout crowding with the hamburger menu */
 @media (max-width: 1024px) {
-  .app-header { 
-    top: var(--s-3); 
-    padding: 0 var(--s-3); 
+  .app-header {
+    top: var(--s-3);
+    padding: 0 var(--s-3);
   }
-  
+
   /* Strictly hide everything except branding and toggle on smaller screens */
-  .desktop-nav, 
+  .desktop-nav,
   .desktop-only,
   .btn-gold.desktop-only,
-  .nav-action-group .btn-gold { 
-    display: none !important; 
+  .nav-action-group .btn-gold {
+    display: none !important;
   }
-  
-  .mobile-toggle { 
-    display: flex !important; 
+
+  .mobile-toggle {
+    display: flex !important;
   }
-  
-  .glass-island { 
-    height: 64px; 
-    padding: 0 var(--s-4); 
-    min-width: 280px; 
+
+  .glass-island {
+    height: 64px;
+    padding: 0 var(--s-4);
+    min-width: 280px;
   }
 }
 

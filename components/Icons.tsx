@@ -7,11 +7,11 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 /**
  * Base wrapper to ensure all icons share the same aesthetic DNA
  */
-const IconBase: React.FC<IconProps & { children: React.ReactNode }> = ({ 
-  size = 24, 
-  strokeWidth = 2, 
-  children, 
-  ...props 
+const IconBase: React.FC<IconProps & { children: React.ReactNode }> = ({
+  size = 24,
+  strokeWidth = 2,
+  children,
+  ...props
 }) => (
   <svg
     width={size}
@@ -29,7 +29,7 @@ const IconBase: React.FC<IconProps & { children: React.ReactNode }> = ({
   </svg>
 );
 
-export const GTLogo: React.FC<IconProps> = ({ size = 48, className, ...props }) => (
+export const SJLogo: React.FC<IconProps> = ({ size = 48, className, ...props }) => (
   <svg
     width={size}
     height={size}
@@ -47,38 +47,59 @@ export const GTLogo: React.FC<IconProps> = ({ size = 48, className, ...props }) 
         <stop offset="100%" stopColor="#B08D57" />
       </linearGradient>
     </defs>
-    
+
     {/* Outer Ring */}
     <circle cx="50" cy="50" r="46" stroke="url(#logo-gold-gradient)" strokeWidth="2" />
-    
-    {/* Stylized Globe Lines */}
-    <circle cx="50" cy="50" r="38" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" opacity="0.8" />
-    
-    {/* Meridians */}
-    <ellipse cx="50" cy="50" rx="14" ry="38" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
-    <line x1="50" y1="12" x2="50" y2="88" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
-    
-    {/* Equator / Parallels */}
-    <line x1="12" y1="50" x2="88" y2="50" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
-    <path d="M18 35C28 32 72 32 82 35" stroke="url(#logo-gold-gradient)" strokeWidth="1.2" opacity="0.6" />
-    <path d="M18 65C28 68 72 68 82 65" stroke="url(#logo-gold-gradient)" strokeWidth="1.2" opacity="0.6" />
 
-    {/* Subtle GT Integration in the center */}
-    <rect x="42" y="42" width="16" height="16" rx="8" fill="var(--c-obsidian)" />
-    <text
-      x="50"
-      y="52"
-      dominantBaseline="middle"
-      textAnchor="middle"
-      fill="url(#logo-gold-gradient)"
-      fontFamily="var(--f-serif)"
-      fontSize="10"
-      fontWeight="900"
-      fontStyle="italic"
-      letterSpacing="-0.02em"
-    >
-      GT
-    </text>
+    {/* Stylized Globe Lines */}
+    <circle
+      cx="50"
+      cy="50"
+      r="38"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="1.5"
+      opacity="0.8"
+    />
+
+    {/* Meridians (Vertical) */}
+    <ellipse cx="50" cy="50" rx="14" ry="38" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
+    <ellipse
+      cx="50"
+      cy="50"
+      rx="26"
+      ry="38"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="0.8"
+      opacity="0.4"
+    />
+    <line x1="50" y1="12" x2="50" y2="88" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
+
+    {/* Equator / Parallels (Horizontal) */}
+    <line x1="12" y1="50" x2="88" y2="50" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
+    <path
+      d="M18 35C28 32 72 32 82 35"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="1.2"
+      opacity="0.6"
+    />
+    <path
+      d="M18 65C28 68 72 68 82 65"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="1.2"
+      opacity="0.6"
+    />
+    <path
+      d="M25 24C35 22 65 22 75 24"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="0.8"
+      opacity="0.4"
+    />
+    <path
+      d="M25 76C35 78 65 78 75 76"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="0.8"
+      opacity="0.4"
+    />
   </svg>
 );
 

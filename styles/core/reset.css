@@ -1,4 +1,3 @@
-
 html {
   scroll-behavior: smooth;
 }
@@ -11,20 +10,34 @@ html {
 }
 
 /* Explicitly force pointer for interactive elements and their children to override global crosshair */
-a, a *,
-button, button *,
-[role="button"], [role="button"] *,
-.branding-clickable, .branding-clickable *,
-.branding-text, .branding-text *,
-.btn-nav, .btn-nav *,
-.btn-gold, .btn-gold *,
-.secondary-btn, .secondary-btn *,
-.scroll-trigger, .scroll-trigger *,
-.glass-card, .glass-card *,
-.social-icon, .social-icon *,
-.footer-links li, .footer-links li *,
-.mobile-menu-item, .mobile-menu-item *,
-.btn-back, .btn-back * {
+a,
+a *,
+button,
+button *,
+[role="button"],
+[role="button"] *,
+.branding-clickable,
+.branding-clickable *,
+.branding-text,
+.branding-text *,
+.btn-nav,
+.btn-nav *,
+.btn-gold,
+.btn-gold *,
+.secondary-btn,
+.secondary-btn *,
+.scroll-trigger,
+.scroll-trigger *,
+.glass-card,
+.glass-card *,
+.social-icon,
+.social-icon *,
+.footer-links li,
+.footer-links li *,
+.mobile-menu-item,
+.mobile-menu-item *,
+.btn-back,
+.btn-back * {
   cursor: pointer !important;
 }
 

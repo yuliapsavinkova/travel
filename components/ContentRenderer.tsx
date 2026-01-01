@@ -7,7 +7,7 @@ interface ContentRendererProps {
 
 /**
  * This component acts as a bridge for future MDX integration.
- * Currently it handles HTML strings, but is structured to 
+ * Currently it handles HTML strings, but is structured to
  * eventually use MDXProvider and custom component mappings.
  */
 const ContentRenderer: React.FC<ContentRendererProps> = ({ content, className = '' }) => {

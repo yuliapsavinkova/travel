@@ -1,4 +1,3 @@
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -13,7 +12,8 @@
   color: var(--c-text);
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   background: var(--c-glass);
   border: 1px solid var(--c-border);
   padding: var(--s-4);
@@ -30,7 +30,8 @@
   resize: none; /* Removes the manual resize handle for a cleaner UI */
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: var(--c-gold);
 }
 
@@ -41,5 +42,7 @@
 }
 
 @media (max-width: 768px) {
-  .form-grid { grid-template-columns: 1fr; }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }

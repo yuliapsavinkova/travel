@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GLOBAL_STRINGS } from '../constants';
 import { ExternalLinkIcon } from './Icons';
@@ -9,14 +8,25 @@ import { ExternalLinkIcon } from './Icons';
  */
 const ReferralPromo = () => {
   return (
-    <div className="section-divider" style={{ marginTop: 'var(--s-9)', borderTopColor: 'var(--c-border-gold)', textAlign: 'left' }}>
+    <div
+      className="section-divider"
+      style={{ marginTop: 'var(--s-9)', borderTopColor: 'var(--c-border-gold)', textAlign: 'left' }}
+    >
       <div className="detail-content-section text-center" style={{ width: '100%' }}>
         <h3 className="sub-header">{GLOBAL_STRINGS.travelPromoTitle}</h3>
-        <p className="opacity-70" style={{ fontSize: '1rem', marginBottom: 'var(--s-5)', maxWidth: '600px', margin: '0 auto var(--s-5)' }}>
+        <p
+          className="opacity-70"
+          style={{
+            fontSize: '1rem',
+            marginBottom: 'var(--s-5)',
+            maxWidth: '600px',
+            margin: '0 auto var(--s-5)',
+          }}
+        >
           {GLOBAL_STRINGS.travelPromoText}
         </p>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <a 
+          <a
             href={GLOBAL_STRINGS.travelPromoLink}
             target="_blank"
             rel="noopener noreferrer"

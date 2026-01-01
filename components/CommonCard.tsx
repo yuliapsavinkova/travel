@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import { ArrowUpRightIcon, ExternalLinkIcon } from './Icons';
@@ -37,15 +36,19 @@ const CommonCard: React.FC<CommonCardProps> = ({
     </div>
   ) : null;
 
-  const MetadataRow = metadata && metadata.length > 0 ? (
-    <div className="card-metadata" style={{ marginBottom: 'var(--s-2)', marginTop: 'var(--s-2)' }}>
-      {metadata.map((item, idx) => (
-        <span key={idx} className="card-metadata-item">
-          {item.icon} {item.text}
-        </span>
-      ))}
-    </div>
-  ) : null;
+  const MetadataRow =
+    metadata && metadata.length > 0 ? (
+      <div
+        className="card-metadata"
+        style={{ marginBottom: 'var(--s-2)', marginTop: 'var(--s-2)' }}
+      >
+        {metadata.map((item, idx) => (
+          <span key={idx} className="card-metadata-item">
+            {item.icon} {item.text}
+          </span>
+        ))}
+      </div>
+    ) : null;
 
   const label = actionLabel || 'Details';
 
@@ -75,10 +78,10 @@ const CommonCard: React.FC<CommonCardProps> = ({
             </div>
           </div>
         </Link>
-        <a 
-          href={ctaLink} 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href={ctaLink}
+          target="_blank"
+          rel="noopener noreferrer"
           className="claim-link-under"
           aria-label={`Claim discount for ${title}`}
         >
@@ -123,11 +126,7 @@ const CommonCard: React.FC<CommonCardProps> = ({
     );
   }
 
-  return (
-    <div className="glass-card">
-      {renderCardBody()}
-    </div>
-  );
+  return <div className="glass-card">{renderCardBody()}</div>;
 };
 
 export default CommonCard;

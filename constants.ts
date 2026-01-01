@@ -18,8 +18,8 @@ export const SITE_STATS = {
 };
 
 export const SITE_CONFIG = {
-  name: 'Girl Travels',
-  tagline: 'Travel, Housesits and Pet Care',
+  name: 'Sitter Journey',
+  tagline: 'Professional Estate Stewardship & Nomadic Life',
   email: 'girltravels123@hotmail.com',
   socials: {
     instagram: 'https://instagram.com',
@@ -91,7 +91,7 @@ export const REVIEWS: Review[] = [
     date: 'Nov 2024',
     petType: ['Dog'],
     imageUrl:
-      'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=1200',
     text: 'Reliable and deeply respectful of our historic home.',
     sitDescription: 'Historic Victorian stewardship.',
     body: '<p>Managing a historic Pacific Heights Victorian while providing urban socialization for a Standard Poodle.</p>',
@@ -196,7 +196,7 @@ export const REVIEWS: Review[] = [
     date: 'Feb 2024',
     petType: ['Cat'],
     imageUrl:
-      'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200',
     text: 'Handled our Smart Home and cat perfectly.',
     sitDescription: 'Industrial loft stewardship.',
     body: '<p>Oversight of mesh Wi-Fi and industrial building access protocols.</p>',
@@ -211,7 +211,7 @@ export const REVIEWS: Review[] = [
     date: 'Dec 2023',
     petType: ['Cat'],
     imageUrl:
-      'https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=1200',
     text: 'Handled a Chicago winter with grace.',
     sitDescription: 'Historic brownstone winterization.',
     body: '<p>Critical monitoring of pipe freezing and senior cat comfort during sub-zero temps.</p>',

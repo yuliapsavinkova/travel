@@ -11,10 +11,10 @@
   --c-text: var(--c-white);
   --c-text-dim: rgba(255, 255, 255, 0.7);
   --c-text-muted: rgba(255, 255, 255, 0.4);
-  
+
   --c-glass: rgba(255, 255, 255, 0.05);
   --c-glass-heavy: rgba(255, 255, 255, 0.1);
-  
+
   --c-gold-faint: rgba(229, 193, 133, 0.05);
   --c-gold-muted: rgba(229, 193, 133, 0.15);
   --c-gold-rich: rgba(229, 193, 133, 0.3);
@@ -23,7 +23,7 @@
   --c-border: var(--c-gold-muted);
   --c-border-light: rgba(255, 255, 255, 0.1);
   --c-border-gold: var(--c-gold-rich);
-  
+
   /* RHYTHMIC SPACING SCALE */
   --s-1: 4px;
   --s-2: 8px;
@@ -50,6 +50,6 @@
   --z-overlay: 2000;
 
   /* FONTS */
-  --f-serif: 'Playfair Display', serif;
-  --f-main: 'Inter', sans-serif;
+  --f-serif: "Playfair Display", serif;
+  --f-main: "Inter", sans-serif;
 }

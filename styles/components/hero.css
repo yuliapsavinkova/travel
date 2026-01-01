@@ -26,8 +26,7 @@
   position: absolute;
   inset: 0;
   /* Multi-layered gradient: one for overall cinematic depth, one to darken the text area */
-  background: 
-    radial-gradient(circle at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 70%),
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 70%),
     linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.85) 0%,
@@ -51,9 +50,9 @@
 }
 
 .hero-paragraph {
-  font-family: var(--f-serif); 
-  font-style: italic; 
-  font-size: 1.2rem; 
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--c-white); /* Increased contrast from dim to full white */
   max-width: 600px;
@@ -80,7 +79,7 @@
 .hero-stack .media-viewport img {
   animation: hero-floating-zoom 30s infinite alternate ease-in-out;
   transform-origin: center center;
-  width: 110%; 
+  width: 110%;
   height: 110%;
   position: absolute;
   top: -5%;
@@ -88,17 +87,37 @@
 }
 
 @keyframes hero-floating-zoom {
-  0% { transform: scale(1.0) translate(0, 0); }
-  50% { transform: scale(1.08) translate(-1%, 1%); }
-  100% { transform: scale(1.15) translate(-2%, -1%); }
+  0% {
+    transform: scale(1.0) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1%, 1%);
+  }
+  100% {
+    transform: scale(1.15) translate(-2%, -1%);
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-stack { height: 75vh; border-radius: var(--r-lg); }
-  .display-title { font-size: 2.2rem; }
-  .hero-paragraph { font-size: 1.1rem; }
-  .hero-content-overlay { padding-bottom: 100px; }
+  .hero-stack {
+    height: 75vh;
+    border-radius: var(--r-lg);
+  }
+  .display-title {
+    font-size: 2.2rem;
+  }
+  .hero-paragraph {
+    font-size: 1.1rem;
+  }
+  .hero-content-overlay {
+    padding-bottom: 100px;
+  }
   .hero-gradient-overlay {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
   }
 }

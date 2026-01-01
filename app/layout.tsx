@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
@@ -22,15 +21,24 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Girl Travels | Professional Housesitter & Global Nomad',
-  description: 'Elite housesitting portfolio and personal travel journal documenting slow living and estate stewardship across 35+ countries.',
-  keywords: ['Professional Housesitter', 'Solo Female Traveler', 'Estate Stewardship', 'Pet Care Expert', 'Digital Nomad Portfolio'],
-  authors: [{ name: 'Girl Travels' }],
+  title: 'Sitter Journey | Professional Housesitter & Global Nomad',
+  description:
+    'Elite housesitting portfolio and personal travel journal documenting slow living and estate stewardship across 35+ countries.',
+  keywords: [
+    'Professional Housesitter',
+    'Solo Female Traveler',
+    'Estate Stewardship',
+    'Pet Care Expert',
+    'Digital Nomad Portfolio',
+    'Sitter Journey',
+  ],
+  authors: [{ name: 'Sitter Journey' }],
   openGraph: {
-    title: 'Girl Travels | Professional Housesitter',
-    description: '16+ verified high-end house sits across the USA. Expert care for your home and pets.',
-    url: 'https://girltravels.com',
-    siteName: 'Girl Travels',
+    title: 'Sitter Journey | Professional Housesitter',
+    description:
+      '16+ verified high-end house sits across the USA. Expert care for your home and pets.',
+    url: 'https://sitterjourney.com',
+    siteName: 'Sitter Journey',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200',
@@ -43,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Girl Travels | Professional Housesitter',
+    title: 'Sitter Journey | Professional Housesitter',
     description: 'Expert estate stewardship and pet care for the modern nomad.',
     images: ['https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200'],
   },
@@ -55,27 +63,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Girl Travels Housesitting",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200",
-    "description": "Solo female traveler and elite housesitter providing expert estate stewardship and pet care.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Sitter Journey Housesitting',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200',
+    description:
+      'Solo female traveler and elite housesitter providing expert estate stewardship and pet care.',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
     },
-    "review": {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+    review: {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
       },
-      "author": {
-        "@type": "Person",
-        "name": "Verified Homeowners"
-      }
-    }
+      author: {
+        '@type': 'Person',
+        name: 'Verified Homeowners',
+      },
+    },
   };
 
   return (

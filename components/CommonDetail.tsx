@@ -23,7 +23,7 @@ const CommonDetail: React.FC<CommonDetailProps> = ({
   sidebar,
   backLabel = 'Back',
   imageBadge,
-  headerAction
+  headerAction,
 }) => {
   return (
     <div className="container detail-container">
@@ -35,15 +35,15 @@ const CommonDetail: React.FC<CommonDetailProps> = ({
       <div className="media-viewport detail-hero">
         <img src={image} alt={title} />
         {imageBadge && (
-          <div 
-            className="card-badge" 
-            style={{ 
-              top: 'var(--s-5)', 
-              right: 'var(--s-5)', 
-              background: 'rgba(0, 0, 0, 0.4)', 
+          <div
+            className="card-badge"
+            style={{
+              top: 'var(--s-5)',
+              right: 'var(--s-5)',
+              background: 'rgba(0, 0, 0, 0.4)',
               backdropFilter: 'blur(12px) saturate(1.8)',
               border: '1px solid rgba(255, 255, 255, 0.2)',
-              color: 'var(--c-white)'
+              color: 'var(--c-white)',
             }}
           >
             {imageBadge}
@@ -56,34 +56,35 @@ const CommonDetail: React.FC<CommonDetailProps> = ({
         <div>
           <div className="detail-header-block">
             {metadata && (
-              <div className="detail-metadata-row" style={{ marginBottom: headerAction ? 'var(--s-3)' : 'var(--s-5)' }}>
+              <div
+                className="detail-metadata-row"
+                style={{ marginBottom: headerAction ? 'var(--s-3)' : 'var(--s-5)' }}
+              >
                 {metadata.map((item, idx) => (
-                  <span key={idx} className="detail-metadata-item sub-header" style={{ marginBottom: 0 }}>
+                  <span
+                    key={idx}
+                    className="detail-metadata-item sub-header"
+                    style={{ marginBottom: 0 }}
+                  >
                     {item.icon} {item.text}
                   </span>
                 ))}
               </div>
             )}
-            
+
             {headerAction && (
               <div className="detail-header-action" style={{ marginBottom: 'var(--s-4)' }}>
                 {headerAction}
               </div>
             )}
-            
+
             <h1 className="display-title detail-title-text">{title}</h1>
           </div>
 
-          <div className="detail-content-text">
-            {children}
-          </div>
+          <div className="detail-content-text">{children}</div>
         </div>
 
-        {sidebar && (
-          <div className="detail-sidebar">
-            {sidebar}
-          </div>
-        )}
+        {sidebar && <div className="detail-sidebar">{sidebar}</div>}
       </div>
     </div>
   );

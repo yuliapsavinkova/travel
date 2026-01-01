@@ -63,7 +63,7 @@
 .stat-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
   z-index: 2;
 }
 
@@ -108,7 +108,13 @@
 }
 
 @media (max-width: 1024px) {
-  .grid-stats { grid-template-columns: 1fr; }
-  .stat-card-glass { height: 380px; }
-  .gold-stat-number { font-size: 90px; }
+  .grid-stats {
+    grid-template-columns: 1fr;
+  }
+  .stat-card-glass {
+    height: 380px;
+  }
+  .gold-stat-number {
+    font-size: 90px;
+  }
 }

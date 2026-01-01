@@ -1,4 +1,3 @@
-
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
 export interface Review {
@@ -21,7 +20,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
-  body: string; 
+  body: string;
   date: string;
   category: string;
   imageUrl: string;
