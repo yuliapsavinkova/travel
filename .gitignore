@@ -9,6 +9,10 @@ out/
 # production
 build/
 
+# sitemap and robots (generated at build time)
+public/sitemap*.xml
+public/robots.txt
+
 # misc
 .DS_Store
 *.pem
