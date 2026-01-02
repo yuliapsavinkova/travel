@@ -1,4 +1,4 @@
-import { BlogPost, ReferralCategory, Review, TravelGuide, SiteStrings } from './types';
+import { BlogPost, ReferralCategory, Review, SiteStrings, TravelGuide } from './types';
 
 const now = new Date();
 export const CURRENT_YEAR = now.getFullYear();
@@ -10,9 +10,9 @@ export const NEXT_YEAR = ACTIVE_YEAR + 1;
  * GLOBAL SITE STATISTICS
  */
 export const SITE_STATS = {
-  sitsCount: '16',
-  statesCount: '12+',
-  countriesCount: '35+',
+  sitsCount: '32',
+  statesCount: '28',
+  countriesCount: '37',
   clientRating: '5.0',
   satisfactionRate: '100%',
 };
@@ -20,20 +20,90 @@ export const SITE_STATS = {
 export const SITE_CONFIG = {
   name: 'Sitter Journey',
   tagline: 'Professional Estate Stewardship & Nomadic Life',
-  email: 'girltravels123@hotmail.com',
+  email: 'sitterjourney@gmail.com',
   socials: {
     instagram: 'https://instagram.com',
     linkedin: 'https://linkedin.com',
   },
 };
 
+const BODY_THS = `<p>TrustedHousesitters is a global network that connects homeowners with pet sitters, allowing travelers to stay in unique homes for free in exchange for caring for pets and property. It features a robust insurance policy and a community-driven review system that ensures safety and quality for all participants worldwide.</p><p>I rely on this platform because it provides a verified, secure environment for both parties, allowing me to enter high-end homes with a professional reputation already established. The thorough verification process gives homeowners the implicit trust they need to hand over their keys for long-term seasonal stays.</p><p>If you are ready to start your own professional house sitting journey, use my vetted link to get a 25% discount on your annual membership. This helps you save on your nomadic overhead while supporting my continued travels through a membership credit.</p>`;
+
+const BODY_ROVER = `<p>Rover is the leading digital network for on-demand pet services, offering verified drop-in visits, dog walking, and overnight boarding across the United States. It is a critical tool for travelers who need reliable, localized support with the backing of the Rover Guarantee for peace of mind.</p><p>I use Rover as my "transitional bridge" between long-term housesitting assignments when I am moving between states. It allows me to maintain my high professional standards and ensures that localized pet care is always just a few taps away if I need a backup sitter or a temporary gig during travel days.</p><p>Use my referral link to book your first service and get a special credit towards your pet's care. It is the most secure way to ensure your companions are in good hands with a verified professional like me while you are away.</p>`;
+
+const BODY_VISIBLE = `<p>Visible is a modern, digital-first wireless carrier that offers unlimited talk, text, and data on Verizon’s reliable 5G and 4G LTE networks across the United States. It’s designed for mobile professionals who need strong, consistent coverage without the overhead, hidden fees, or long-term contracts that come with traditional carriers.</p><p>Consistent connectivity is the backbone of my business, not a “nice to have.” I work remotely while moving between cities, often relying on my phone as my primary internet connection. Visible’s unlimited hotspot is what makes this possible — whether I’m working from a rental, a client’s home, or on the road. I don’t have to hunt for Wi-Fi, manage multiple plans, or worry about hitting data caps that slow me down mid-workday.</p><p>If you switch to Visible using my referral link, we both receive a discount on our monthly bill. It’s one of the most cost-effective ways to stay connected, secure, and professional while living a nomadic, work-from-anywhere lifestyle within the US.</p>`;
+
+const BODY_PLANET = `<p>Planet Fitness is a large gym franchise known for its "Judgement Free Zone" and affordable nationwide access to wellness facilities. With thousands of locations across the United States, it provides a consistent environment for health and hygiene regardless of which state you are in.</p><p>This membership is my "home base" for wellness and practical needs on travel days between house sitting assignments. With a Black Card membership, I always have a clean, safe place to shower, work out, and recharge my energy while navigating the nomadic lifestyle solo.</p><p>Join using my referral link to receive a special rate on your membership with no long-term commitment. It is an essential tool for any long-term traveler who wants to maintain a healthy routine and stay refreshed on the road.</p>`;
+
+export const REFERRALS: ReferralCategory[] = [
+  {
+    title: 'Nomadic Framework',
+    items: [
+      {
+        id: 'ths',
+        slug: 'trustedhousesitters-referral',
+        name: 'TrustedHousesitters',
+        description: 'The global gold standard for house and pet sitting. Claim your 25% discount.',
+        body: BODY_THS,
+        discountText: '25% Off Membership',
+        link: 'https://trustedhousesitters.com/refer/raf943607',
+        icon: 'home',
+        imageUrl:
+          'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
+        promoNote: 'Claim your 25% discount via my vetted link!',
+      },
+      {
+        id: 'rover',
+        slug: 'rover-pet-care',
+        name: 'Rover',
+        description: 'Vetted localized pet care and boarding backup for transitional periods.',
+        body: BODY_ROVER,
+        discountText: '$20 First Booking',
+        link: 'https://www.rover.com/sit/yulias92191',
+        icon: 'heart',
+        imageUrl:
+          'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=1200',
+        promoNote: 'A vital backup for nomadic pet care standards.',
+      },
+      {
+        id: 'visible',
+        slug: 'visible-connectivity',
+        name: 'Visible',
+        description: 'Unlimited premium data on Verizon’s 5G and 4G LTE networks with hotspot for reliable remote work.',
+        body: BODY_VISIBLE,
+        discountText: '$20 First Month',
+        link: 'https://www.visible.com/get/?66LWM29',
+        icon: 'smartphone',
+        imageUrl:
+          'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1200',
+        promoNote: 'The foundation of my communication standard.',
+      },
+      {
+        id: 'planet-fitness',
+        slug: 'planet-fitness-wellness',
+        name: 'Planet Fitness',
+        description: 'Nationwide access to wellness and reliable amenities while on the road.',
+        body: BODY_PLANET,
+        discountText: '$1 Down Deal',
+        link: 'https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ',
+        icon: 'award',
+        imageUrl:
+          'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200',
+        promoNote: 'My mobile home base for wellness and amenities.',
+      },
+    ],
+  },
+];
+
+const thsReferral = REFERRALS[0].items[0];
+
 export const GLOBAL_STRINGS: SiteStrings = {
   toolkitSectionTitle: 'Nomad Essentials',
   toolkitSectionDescription: `The exact tools, connectivity, and memberships I rely on to maintain a professional standard while traveling solo across ${SITE_STATS.countriesCount} countries.`,
   travelPromoTitle: 'Start Your Own Journey',
-  travelPromoText: `Inspired to explore? Use my vetted link to join the TrustedHousesitters community. Claim your 25% discount so I can get a membership credit too! This is the exact framework I use to stay in high-end homes across the country.`,
-  travelPromoLink: 'https://trustedhousesitters.com/refer/raf943607',
-  travelPromoBtn: 'Claim 25% Discount',
+  travelPromoText: `Inspired to explore? Use my vetted link to join the TrustedHousesitters community. Claim your ${thsReferral.discountText}!`,
+  travelPromoLink: thsReferral.link,
+  travelPromoBtn: thsReferral.discountText || 'Claim Discount',
 };
 
 export const REVIEWS: Review[] = [
@@ -468,7 +538,7 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&q=80&w=1200',
     tags: ['Eco-Design', 'Beaches'],
-    body: '<p>Where brutalist architecture meets lush jungle foliage, Tulum offers a unique study in eco-conscious design. Exploring sustainable luxury in the Yucatan peninsula has shown me how modern life can blend with nature.</p><p>Design that respects the environment is a core value of mine. I spent time documenting how these properties manage resource conservation while providing high-end comfort to their residents.</p><p>The vibrant energy of the jungle and the serene Caribbean coast provide the perfect backdrop for a deep dive into wellness-centric architectural stewardship.</p>',
+    body: '<p>Where brutalist architecture meets lush jungle foliage, Tulum offers a unique study in eco-conscious design. Exploring sustainable luxury in the footer section of the site has shown me how modern life can blend with nature.</p><p>Design that respects the environment is a core value of mine. I spent time documenting how these properties manage resource conservation while providing high-end comfort to their residents.</p><p>The vibrant energy of the jungle and the serene Caribbean coast provide the perfect backdrop for a deep dive into wellness-centric architectural stewardship.</p>',
   },
   {
     id: '7',
@@ -513,65 +583,5 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
       'https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&q=80&w=1200',
     tags: ['Adventure', 'National Parks'],
     body: '<p>A landscape carved by time and the elements, Moab is where I go to reconnect with the raw power of the earth. The red rocks hold a silent power that is unmatched, offering a sanctuary for reflection and adventure.</p><p>National Parks like Arches and Canyonlands provide a playground for the solo traveler who respects the desert. I spent my time navigating the stone arches and watching the sunset over the vast canyons.</p><p>The high desert requires a unique type of preparation and resilience, qualities that have become fundamental to my approach as a professional nomad and property steward.</p>',
-  },
-];
-
-export const REFERRALS: ReferralCategory[] = [
-  {
-    title: 'Nomadic Framework',
-    items: [
-      {
-        id: 'ths',
-        slug: 'trustedhousesitters-referral',
-        name: 'TrustedHousesitters',
-        description: 'The global gold standard for house and pet sitting. Claim your 25% discount.',
-        body: `<p>TrustedHousesitters is a global network that connects homeowners with pet sitters, allowing travelers to stay in unique homes for free in exchange for caring for pets and property. It features a robust insurance policy and a community-driven review system that ensures safety and quality for all participants worldwide.</p><p>I rely on this platform because it provides a verified, secure environment for both parties, allowing me to enter high-end homes with a professional reputation already established. The thorough verification process gives homeowners the implicit trust they need to hand over their keys for long-term seasonal stays.</p><p>If you are ready to start your own professional house sitting journey, use my vetted link to get a 25% discount on your annual membership. This helps you save on your nomadic overhead while supporting my continued travels through a membership credit.</p>`,
-        discountText: '25% Off Membership',
-        link: 'https://trustedhousesitters.com/refer/raf943607',
-        icon: 'home',
-        imageUrl:
-          'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'Claim your 25% discount via my vetted link!',
-      },
-      {
-        id: 'rover',
-        slug: 'rover-pet-care',
-        name: 'Rover',
-        description: 'Vetted localized pet care and boarding backup for transitional periods.',
-        body: `<p>Rover is the leading digital network for on-demand pet services, offering verified drop-in visits, dog walking, and overnight boarding across the United States. It is a critical tool for travelers who need reliable, localized support with the backing of the Rover Guarantee for peace of mind.</p><p>I use Rover as my "transitional bridge" between long-term housesitting assignments when I am moving between states. It allows me to maintain my high professional standards and ensures that localized pet care is always just a few taps away if I need a backup sitter or a temporary gig during travel days.</p><p>Use my referral link to book your first service and get a special credit towards your pet's care. It is the most secure way to ensure your companions are in good hands with a verified professional like me while you are away.</p>`,
-        discountText: '$20 First Booking',
-        link: 'https://www.rover.com/sit/yulias92191',
-        icon: 'heart',
-        imageUrl:
-          'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'A vital backup for nomadic pet care standards.',
-      },
-      {
-        id: 'visible',
-        slug: 'visible-connectivity',
-        name: 'Visible',
-        description: 'Unlimited 5G/4G nomadic data with hotspot for reliable remote work.',
-        body: `<p>Visible is a modern, digital-first wireless carrier that offers unlimited talk, text, and data on Verizon's reliable 5G and 4G LTE networks. It is specifically designed for mobile professionals who demand high-performance connectivity without the complexity of traditional long-term contracts.</p><p>Consistent connectivity is the absolute backbone of my business and stewardship standards. I use Visible because the unlimited hotspot allows me to work from anywhere and send daily high-definition photo and video updates to homeowners without ever worrying about data caps or throttled speeds.</p><p>Switch to Visible using my referral link and we both receive a significant discount on our monthly bill. It is the most cost-effective way to stay connected, secure, and professional while living the nomadic lifestyle across the country.</p>`,
-        discountText: '$20 First Month',
-        link: 'https://www.visible.com/get/?66LWM29',
-        icon: 'smartphone',
-        imageUrl:
-          'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'The foundation of my communication standard.',
-      },
-      {
-        id: 'planet-fitness',
-        slug: 'planet-fitness-wellness',
-        name: 'Planet Fitness',
-        description: 'Nationwide access to wellness and reliable amenities while on the road.',
-        body: `<p>Planet Fitness is a large gym franchise known for its "Judgement Free Zone" and affordable nationwide access to wellness facilities. With thousands of locations across the United States, it provides a consistent environment for health and hygiene regardless of which state you are in.</p><p>This membership is my "home base" for wellness and practical needs on travel days between house sitting assignments. With a Black Card membership, I always have a clean, safe place to shower, work out, and recharge my energy while navigating the nomadic lifestyle solo.</p><p>Join using my referral link to receive a special rate on your membership with no long-term commitment. It is an essential tool for any long-term traveler who wants to maintain a healthy routine and stay refreshed on the road.</p>`,
-        discountText: '$1 Down Deal',
-        link: 'https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ',
-        icon: 'award',
-        imageUrl:
-          'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'My mobile home base for wellness and amenities.',
-      },
-    ],
   },
 ];

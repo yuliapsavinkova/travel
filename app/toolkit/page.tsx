@@ -44,10 +44,10 @@ export default function ToolkitPage() {
           <div className="sub-header hero-sub-header">Nomadic Framework</div>
           <h1 className="display-title">
             The Nomad's <br />
-            <span className="champagne-text">Essential Framework.</span>
+            <span className="champagne-text">Essential Tools.</span>
           </h1>
           <p className="hero-paragraph">
-            A curated selection of the tools, partners, and resources that make a global lifestyle
+            A curated selection of the resources that make a global lifestyle
             possible.
           </p>
           <div className="hero-button-group">
