@@ -7,7 +7,7 @@ import { REVIEWS } from '../../constants';
 
 export default function StaysPage() {
   return (
-    <div className="container">
+    <>
       <section className="hero-stack section-margin">
         <div className="media-viewport">
           <Image
@@ -45,27 +45,29 @@ export default function StaysPage() {
         </Link>
       </section>
 
-      <header className="text-center section-margin" id="portfolio">
-        <div className="sub-header">Professional History</div>
-        <h2 className="display-title display-title-md">
-          My <span className="serif-italic champagne-text">Stays.</span>
-        </h2>
-      </header>
+      <div className="container">
+        <header className="text-center section-margin" id="portfolio">
+          <div className="sub-header">Professional History</div>
+          <h2 className="display-title display-title-md">
+            My <span className="serif-italic champagne-text">Stays.</span>
+          </h2>
+        </header>
 
-      <div className="grid-standard">
-        {REVIEWS.map((sit) => (
-          <CommonCard
-            key={sit.id}
-            image={sit.imageUrl}
-            badge="Verified Stay"
-            metadata={[{ icon: <MapPinIcon size={12} />, text: sit.location }]}
-            title={sit.location}
-            description={sit.text}
-            slug={`/stays/${sit.slug}`}
-            actionLabel="View Details"
-          />
-        ))}
+        <div className="grid-standard">
+          {REVIEWS.map((sit) => (
+            <CommonCard
+              key={sit.id}
+              image={sit.imageUrl}
+              badge="Verified Stay"
+              metadata={[{ icon: <MapPinIcon size={12} />, text: sit.location }]}
+              title={sit.location}
+              description={sit.text}
+              slug={`/stays/${sit.slug}`}
+              actionLabel="View Details"
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

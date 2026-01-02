@@ -58,10 +58,6 @@ body {
   width: 100%;
 }
 
-.main-top-spacing {
-  padding-top: 140px;
-}
-
 /* Scroll Offset for Anchors */
 #portfolio,
 #archive,
@@ -105,9 +101,6 @@ body {
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--s-4);
-  }
-  .main-top-spacing {
-    padding-top: 100px;
   }
   .grid-standard {
     gap: var(--s-4);

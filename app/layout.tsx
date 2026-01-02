@@ -113,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="app-root">
           <div className="studio-depth" />
           <Navigation />
-          <main className="main-viewport main-top-spacing">
+          <main className="main-viewport">
             {children}
             <ReferralPromo />
           </main>

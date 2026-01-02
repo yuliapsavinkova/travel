@@ -6,7 +6,7 @@ import { MapPinIcon, ChevronDownIcon, CompassIcon } from '../../components/Icons
 
 export default function TravelPage() {
   return (
-    <div className="container">
+    <>
       <section className="hero-stack section-margin">
         <div className="media-viewport">
           <img
@@ -40,30 +40,32 @@ export default function TravelPage() {
         </Link>
       </section>
 
-      <header className="text-center section-margin" id="guides">
-        <div className="sub-header">The Archive</div>
-        <h2 className="display-title display-title-md">
-          Curated <span className="serif-italic champagne-text">Guides.</span>
-        </h2>
-      </header>
+      <div className="container">
+        <header className="text-center section-margin" id="guides">
+          <div className="sub-header">The Archive</div>
+          <h2 className="display-title display-title-md">
+            Curated <span className="serif-italic champagne-text">Guides.</span>
+          </h2>
+        </header>
 
-      <div className="grid-standard">
-        {TRAVEL_GUIDES.map((guide) => (
-          <CommonCard
-            key={guide.id}
-            image={guide.imageUrl}
-            badge="Destination"
-            metadata={[
-              { icon: <MapPinIcon size={12} />, text: guide.location },
-              { icon: <CompassIcon size={12} />, text: 'Verified Experience' },
-            ]}
-            title={guide.title}
-            description={guide.excerpt}
-            slug={`/travel/${guide.slug}`}
-            actionLabel="View Guide"
-          />
-        ))}
+        <div className="grid-standard">
+          {TRAVEL_GUIDES.map((guide) => (
+            <CommonCard
+              key={guide.id}
+              image={guide.imageUrl}
+              badge="Destination"
+              metadata={[
+                { icon: <MapPinIcon size={12} />, text: guide.location },
+                { icon: <CompassIcon size={12} />, text: 'Verified Experience' },
+              ]}
+              title={guide.title}
+              description={guide.excerpt}
+              slug={`/travel/${guide.slug}`}
+              actionLabel="View Guide"
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

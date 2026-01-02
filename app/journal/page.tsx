@@ -6,7 +6,7 @@ import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icon
 
 export default function JournalPage() {
   return (
-    <div className="container">
+    <>
       <section className="hero-stack section-margin">
         <div className="media-viewport">
           <img
@@ -40,30 +40,32 @@ export default function JournalPage() {
         </Link>
       </section>
 
-      <header className="text-center section-margin" id="archive">
-        <div className="sub-header">Archive</div>
-        <h2 className="display-title display-title-md">
-          The <span className="serif-italic champagne-text">Journal.</span>
-        </h2>
-      </header>
+      <div className="container">
+        <header className="text-center section-margin" id="archive">
+          <div className="sub-header">Archive</div>
+          <h2 className="display-title display-title-md">
+            The <span className="serif-italic champagne-text">Journal.</span>
+          </h2>
+        </header>
 
-      <div className="grid-standard">
-        {BLOG_POSTS.map((post) => (
-          <CommonCard
-            key={post.id}
-            image={post.imageUrl}
-            badge="Journal"
-            metadata={[
-              { icon: <CalendarIcon size={12} />, text: post.date },
-              { icon: <MapPinIcon size={12} />, text: post.location },
-            ]}
-            title={post.title}
-            description={post.excerpt}
-            slug={`/journal/${post.slug}`}
-            actionLabel="Read Journal"
-          />
-        ))}
+        <div className="grid-standard">
+          {BLOG_POSTS.map((post) => (
+            <CommonCard
+              key={post.id}
+              image={post.imageUrl}
+              badge="Journal"
+              metadata={[
+                { icon: <CalendarIcon size={12} />, text: post.date },
+                { icon: <MapPinIcon size={12} />, text: post.location },
+              ]}
+              title={post.title}
+              description={post.excerpt}
+              slug={`/journal/${post.slug}`}
+              actionLabel="Read Journal"
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

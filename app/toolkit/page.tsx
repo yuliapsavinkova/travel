@@ -30,7 +30,7 @@ export default function ToolkitPage() {
   const allTools = REFERRALS.flatMap((category) => category.items);
 
   return (
-    <div className="container">
+    <>
       <section className="hero-stack section-margin">
         <div className="media-viewport">
           <img
@@ -63,29 +63,31 @@ export default function ToolkitPage() {
         </Link>
       </section>
 
-      <header className="text-center section-margin" id="framework">
-        <div className="sub-header">The Journey Kit</div>
-        <h2 className="display-title display-title-md">
-          Reliable <span className="serif-italic champagne-text">Essentials.</span>
-        </h2>
-      </header>
+      <div className="container">
+        <header className="text-center section-margin" id="framework">
+          <div className="sub-header">The Journey Kit</div>
+          <h2 className="display-title display-title-md">
+            Reliable <span className="serif-italic champagne-text">Essentials.</span>
+          </h2>
+        </header>
 
-      <div className="grid-standard">
-        {allTools.map((item) => (
-          <CommonCard
-            key={item.id}
-            title={item.name}
-            image={item.imageUrl}
-            description={item.description}
-            badge={item.discountText ? 'Recommended' : 'Essential'}
-            metadata={[{ icon: getIcon(item.icon), text: 'Travel Essential' }]}
-            slug={`/toolkit/${item.slug}`}
-            actionLabel="View Details"
-            ctaLink={item.link}
-            ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit Site'}
-          />
-        ))}
+        <div className="grid-standard">
+          {allTools.map((item) => (
+            <CommonCard
+              key={item.id}
+              title={item.name}
+              image={item.imageUrl}
+              description={item.description}
+              badge={item.discountText ? 'Recommended' : 'Essential'}
+              metadata={[{ icon: getIcon(item.icon), text: 'Travel Essential' }]}
+              slug={`/toolkit/${item.slug}`}
+              actionLabel="View Details"
+              ctaLink={item.link}
+              ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit Site'}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
