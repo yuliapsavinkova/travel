@@ -25,14 +25,13 @@
 .hero-gradient-overlay {
   position: absolute;
   inset: 0;
-  /* Multi-layered gradient: one for overall cinematic depth, one to darken the text area */
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 70%),
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 70%),
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.4) 40%,
-      rgba(0, 0, 0, 0.4) 60%,
-      rgba(0, 0, 0, 0.85) 100%
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.2) 40%,
+      rgba(0, 0, 0, 0.2) 60%,
+      rgba(0, 0, 0, 0.8) 100%
     );
   z-index: 2;
 }
@@ -47,6 +46,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Cinematic entrance for content */
+  animation: hero-content-fade-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes hero-content-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-paragraph {
@@ -54,13 +66,12 @@
   font-style: italic;
   font-size: 1.2rem;
   font-weight: 400;
-  color: var(--c-white); /* Increased contrast from dim to full white */
+  color: var(--c-white);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
   letter-spacing: -0.01em;
-  /* Added soft shadow to prevent text-bleeding into light areas of photos */
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8), 0 4px 30px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-button-group {
@@ -76,25 +87,22 @@
   z-index: 1;
 }
 
+/* 
+   Next.js Image will be targeted here. 
+   We apply a Ken Burns effect that starts after a slight delay.
+*/
 .hero-stack .media-viewport img {
-  animation: hero-floating-zoom 30s infinite alternate ease-in-out;
+  animation: hero-reveal-zoom 10s infinite alternate ease-in-out;
   transform-origin: center center;
-  width: 110%;
-  height: 110%;
-  position: absolute;
-  top: -5%;
-  left: -5%;
+  transition: opacity 0.8s ease-in-out;
 }
 
-@keyframes hero-floating-zoom {
+@keyframes hero-reveal-zoom {
   0% {
-    transform: scale(1.0) translate(0, 0);
-  }
-  50% {
-    transform: scale(1.08) translate(-1%, 1%);
+    transform: scale(1.0);
   }
   100% {
-    transform: scale(1.15) translate(-2%, -1%);
+    transform: scale(1.2);
   }
 }
 
@@ -111,13 +119,5 @@
   }
   .hero-content-overlay {
     padding-bottom: 100px;
-  }
-  .hero-gradient-overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.5) 50%,
-      rgba(0, 0, 0, 0.9) 100%
-    );
   }
 }

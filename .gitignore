@@ -31,3 +31,6 @@ yarn-error.log*
 
 # biome
 .biome_cache
+
+
+originals/

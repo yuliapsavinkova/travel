@@ -1,17 +1,22 @@
-import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { REVIEWS } from '../../constants';
+import React from 'react';
 import CommonCard from '../../components/CommonCard';
-import { MapPinIcon, ChevronDownIcon } from '../../components/Icons';
+import { ChevronDownIcon, MapPinIcon } from '../../components/Icons';
+import { REVIEWS } from '../../constants';
 
 export default function StaysPage() {
   return (
     <div className="container">
       <section className="hero-stack section-margin">
         <div className="media-viewport">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=2400"
-            alt="Estate Stewardship"
+            alt="Estate Stewardship Portfolio"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
           />
           <div className="hero-gradient-overlay" />
         </div>

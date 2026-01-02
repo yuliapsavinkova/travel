@@ -1,12 +1,12 @@
-import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import { InquiryTrigger } from '../components/ClientTriggers';
 import {
   AwardIcon,
+  ChevronDownIcon,
   GlobeIcon,
   ShieldCheckIcon,
-  ChevronDownIcon,
-  ArrowUpRightIcon,
   StarIcon,
 } from '../components/Icons';
 import { SITE_STATS } from '../constants';
@@ -16,9 +16,14 @@ export default function HomePage() {
     <div className="container">
       <section className="hero-stack section-margin">
         <div className="media-viewport">
-          <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2400"
-            alt="Sitter Journey Portfolio"
+          <Image
+            src="/home-hero.jpg"
+            alt="Sitter Journey Portfolio Hero"
+            fill
+            priority
+            quality={90}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            style={{ objectFit: 'cover' }}
           />
           <div className="hero-gradient-overlay" />
         </div>
@@ -104,7 +109,13 @@ export default function HomePage() {
             ].map((stat, i) => (
               <div key={i} className="stat-card-glass">
                 <div className="stat-background media-viewport">
-                  <img src={stat.img} alt={stat.label} className="opacity-40" />
+                  <Image
+                    src={stat.img}
+                    alt={stat.label}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    style={{ objectFit: 'cover', opacity: 0.4 }}
+                  />
                   <div className="stat-image-overlay" />
                 </div>
                 <div className="stat-content">
