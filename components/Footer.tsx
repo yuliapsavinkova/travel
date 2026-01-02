@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
+import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR } from '../constants';
 import { InquiryTrigger } from './ClientTriggers';
-import { InstagramIcon, LinkedinIcon, SJLogo, MailIcon } from './Icons';
-// Import ACTIVE_YEAR from constants
-import { CURRENT_YEAR, ACTIVE_YEAR, NEXT_YEAR } from '../constants';
+import { InstagramIcon, LinkedinIcon, MailIcon, SJLogo } from './Icons';
 
 const Footer = () => {
   return (
@@ -24,7 +23,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="footer-tagline serif-italic" style={{ marginTop: 'var(--s-4)' }}>
-              A life lived in the service of quiet homes and happy hearts.
+              Life on the road, guided by full-time travel and trusted home stewardship.
             </p>
             <div className="footer-socials">
               <a href="#" className="social-icon" aria-label="Instagram">
@@ -58,7 +57,7 @@ const Footer = () => {
           <div className="footer-contact-col">
             <div className="sub-header footer-header">Connect</div>
             <p className="footer-contact-promo">
-              Inquiries for seasonal stays are now being accepted for{' '}
+              Accepting inquiries for seasonal stays{' '}
               <span className="footer-year-highlight">
                 {ACTIVE_YEAR}-{NEXT_YEAR}
               </span>
@@ -78,7 +77,7 @@ const Footer = () => {
           </div>
           <div className="footer-credits">
             BASED IN THE <span className="footer-year-highlight">USA</span> &bull; TRAVELING
-            WORLDWIDE
+            FULL-TIME
           </div>
         </div>
       </div>

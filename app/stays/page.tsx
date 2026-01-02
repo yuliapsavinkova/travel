@@ -24,12 +24,11 @@ export default function StaysPage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">Verified Stewardship</div>
           <h1 className="display-title">
-            Stewardship for <br />
-            Homes and <span className="champagne-text">Furry Friends.</span>
+            Attentive Care for your <span className="champagne-text">Home and Pets.</span>
           </h1>
           <p className="hero-paragraph">
-            Providing high-end care and consistent companionship for elite properties and their
-            beloved animal residents.
+            Providing professional stewardship and consistent companionship for properties and their
+            furry residents while I travel full-time.
           </p>
           <div className="hero-button-group">
             <Link href="#portfolio" className="btn-gold">
@@ -47,9 +46,9 @@ export default function StaysPage() {
       </section>
 
       <header className="text-center section-margin" id="portfolio">
-        <div className="sub-header">The Portfolio</div>
+        <div className="sub-header">Professional History</div>
         <h2 className="display-title display-title-md">
-          Verified <span className="serif-italic champagne-text">History.</span>
+          My <span className="serif-italic champagne-text">Stays.</span>
         </h2>
       </header>
 

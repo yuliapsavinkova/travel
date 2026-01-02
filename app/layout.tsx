@@ -20,21 +20,22 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-// A high-resolution, evocative image representing estate stewardship and travel
 const OG_IMAGE_URL =
   'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=1200&h=630';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sitterjourney.com'),
-  title: 'Sitter Journey | Professional Housesitter & Global Nomad',
+  title: 'Sitter Journey | Full-Time Traveler & Professional Steward',
   description:
-    'Elite housesitting portfolio and personal travel journal documenting slow living and estate stewardship across 35+ countries.',
+    'Chronicling the solo female travel journey of Sitter Journey. Exploring global destinations through slow living and intentional stewardship.',
   keywords: [
-    'Professional Housesitter',
+    'Full-Time Traveler',
     'Solo Female Traveler',
-    'Estate Stewardship',
+    'Stewardship Portfolio',
+    'Slow Travel Journey',
     'Pet Care Expert',
     'Digital Nomad Portfolio',
+    'Professional Housesitter',
     'Sitter Journey',
   ],
   authors: [{ name: 'Sitter Journey' }],
@@ -50,9 +51,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Sitter Journey | Professional Housesitter',
-    description:
-      '16+ verified high-end house sits across the USA. Expert care for your home and pets.',
+    title: 'Sitter Journey | Full-Time Traveler',
+    description: 'Expert stewardship for the intentional traveler.',
     url: 'https://sitterjourney.com',
     siteName: 'Sitter Journey',
     images: [
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: 'Sitter Journey Professional Housesitting',
+        alt: 'Sitter Journey Full-Time Traveler Professional Housesitting',
       },
     ],
     locale: 'en_US',
@@ -68,8 +68,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sitter Journey | Professional Housesitter',
-    description: 'Expert estate stewardship and pet care for the modern nomad.',
+    title: 'Sitter Journey | Full-Time Traveler | Professional Housesitting',
+    description: 'A solo female journey lived between destinations and stewardship.',
     images: [OG_IMAGE_URL],
   },
 };
@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Sitter Journey Housesitting',
+    name: 'Sitter Journey Travel',
     image: OG_IMAGE_URL,
     description:
       'Solo female traveler and elite housesitter providing expert estate stewardship and pet care.',

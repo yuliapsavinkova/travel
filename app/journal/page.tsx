@@ -19,11 +19,10 @@ export default function JournalPage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">Stories from the Road</div>
           <h1 className="display-title">
-            The Art of <br />
-            <span className="champagne-text">the Journey.</span>
+            The Art of <span className="champagne-text">the Journey.</span>
           </h1>
           <p className="hero-paragraph">
-            Documenting the intersections of architecture, pet companionship, and the nomadic
+            Documenting the intersections of architecture, pet companionship, and the traveler
             lifestyle.
           </p>
           <div className="hero-button-group">

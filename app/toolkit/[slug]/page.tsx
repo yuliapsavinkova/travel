@@ -4,7 +4,9 @@ import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
 import { ExternalLinkIcon, TagIcon } from '../../../components/Icons';
 
-export default async function ReferralDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ReferralDetailPage({
+  params,
+}: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const allItems = REFERRALS.flatMap((cat) => cat.items);
   const item = allItems.find((i) => i.slug === slug);
@@ -21,7 +23,7 @@ export default async function ReferralDetailPage({ params }: { params: Promise<{
   }
 
   const metadata = [
-    { icon: <TagIcon size={14} />, text: 'Nomad Essential' },
+    { icon: <TagIcon size={14} />, text: 'Traveler Essential' },
     ...(item.discountText
       ? [
           {

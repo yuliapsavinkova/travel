@@ -19,8 +19,7 @@ export default function TravelPage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">Travel Chronicles</div>
           <h1 className="display-title">
-            Global <br />
-            <span className="champagne-text">Footprints.</span>
+            Global <span className="champagne-text">Footprints.</span>
           </h1>
           <p className="hero-paragraph">
             Exploring the intersection of architectural heritage and local rhythms. A curated

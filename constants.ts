@@ -19,7 +19,7 @@ export const SITE_STATS = {
 
 export const SITE_CONFIG = {
   name: 'Sitter Journey',
-  tagline: 'Professional Estate Stewardship & Nomadic Life',
+  tagline: 'Full-Time Traveler & Professional Steward',
   email: 'sitterjourney@gmail.com',
   socials: {
     instagram: 'https://instagram.com',
@@ -27,17 +27,17 @@ export const SITE_CONFIG = {
   },
 };
 
-const BODY_THS = `<p>TrustedHousesitters is a global network that connects homeowners with pet sitters, allowing travelers to stay in unique homes for free in exchange for caring for pets and property. It features a robust insurance policy and a community-driven review system that ensures safety and quality for all participants worldwide.</p><p>I rely on this platform because it provides a verified, secure environment for both parties, allowing me to enter high-end homes with a professional reputation already established. The thorough verification process gives homeowners the implicit trust they need to hand over their keys for long-term seasonal stays.</p><p>If you are ready to start your own professional house sitting journey, use my vetted link to get a 25% discount on your annual membership. This helps you save on your nomadic overhead while supporting my continued travels through a membership credit.</p>`;
+const BODY_THS = `<p>TrustedHousesitters is a global network that connects homeowners with sitters. I rely on this platform because it provides a verified, secure environment, allowing me to enter high-end homes with a professional reputation already established.</p><p>If you are ready to start your own journey, use my vetted link to get a 25% discount on your annual membership. This helps you save on travel overhead while supporting my continued journey through a membership credit.</p>`;
 
-const BODY_ROVER = `<p>Rover is the leading digital network for on-demand pet services, offering verified drop-in visits, dog walking, and overnight boarding across the United States. It is a critical tool for travelers who need reliable, localized support with the backing of the Rover Guarantee for peace of mind.</p><p>I use Rover as my "transitional bridge" between long-term housesitting assignments when I am moving between states. It allows me to maintain my high professional standards and ensures that localized pet care is always just a few taps away if I need a backup sitter or a temporary gig during travel days.</p><p>Use my referral link to book your first service and get a special credit towards your pet's care. It is the most secure way to ensure your companions are in good hands with a verified professional like me while you are away.</p>`;
+const BODY_ROVER = `<p>Rover is a critical tool for travelers who need reliable, localized support with the backing of the Rover Guarantee for peace of mind. I use it as my bridge between long-term stays when I am moving between states.</p>`;
 
-const BODY_VISIBLE = `<p>Visible is a modern, digital-first wireless carrier that offers unlimited talk, text, and data on Verizon’s reliable 5G and 4G LTE networks across the United States. It’s designed for mobile professionals who need strong, consistent coverage without the overhead, hidden fees, or long-term contracts that come with traditional carriers.</p><p>Consistent connectivity is the backbone of my business, not a “nice to have.” I work remotely while moving between cities, often relying on my phone as my primary internet connection. Visible’s unlimited hotspot is what makes this possible — whether I’m working from a rental, a client’s home, or on the road. I don’t have to hunt for Wi-Fi, manage multiple plans, or worry about hitting data caps that slow me down mid-workday.</p><p>If you switch to Visible using my referral link, we both receive a discount on our monthly bill. It’s one of the most cost-effective ways to stay connected, secure, and professional while living a nomadic, work-from-anywhere lifestyle within the US.</p>`;
+const BODY_VISIBLE = `<p>Consistent connectivity is the backbone of my journey. I work remotely while moving between cities. Visible’s unlimited hotspot is what makes this possible — whether I’m working from a rental, a client’s home, or on the road.</p>`;
 
-const BODY_PLANET = `<p>Planet Fitness is a large gym franchise known for its "Judgement Free Zone" and affordable nationwide access to wellness facilities. With thousands of locations across the United States, it provides a consistent environment for health and hygiene regardless of which state you are in.</p><p>This membership is my "home base" for wellness and practical needs on travel days between house sitting assignments. With a Black Card membership, I always have a clean, safe place to shower, work out, and recharge my energy while navigating the nomadic lifestyle solo.</p><p>Join using my referral link to receive a special rate on your membership with no long-term commitment. It is an essential tool for any long-term traveler who wants to maintain a healthy routine and stay refreshed on the road.</p>`;
+const BODY_PLANET = `<p>This membership is my "home base" for wellness and practical needs on travel days between stays. With a Black Card membership, I always have a clean, safe place to recharge while navigating the country solo.</p>`;
 
 export const REFERRALS: ReferralCategory[] = [
   {
-    title: 'Nomadic Framework',
+    title: 'Traveler Framework',
     items: [
       {
         id: 'ths',
@@ -56,20 +56,20 @@ export const REFERRALS: ReferralCategory[] = [
         id: 'rover',
         slug: 'rover-pet-care',
         name: 'Rover',
-        description: 'Vetted localized pet care and boarding backup for transitional periods.',
+        description: 'Vetted localized care and backup for transitional periods.',
         body: BODY_ROVER,
         discountText: '$20 First Booking',
         link: 'https://www.rover.com/sit/yulias92191',
         icon: 'heart',
         imageUrl:
           'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'A vital backup for nomadic pet care standards.',
+        promoNote: 'A vital backup for professional standards.',
       },
       {
         id: 'visible',
         slug: 'visible-connectivity',
         name: 'Visible',
-        description: 'Unlimited premium data on Verizon’s 5G and 4G LTE networks with hotspot for reliable remote work.',
+        description: 'Unlimited 5G/4G data with hotspot for reliable remote work on the road.',
         body: BODY_VISIBLE,
         discountText: '$20 First Month',
         link: 'https://www.visible.com/get/?66LWM29',
@@ -82,7 +82,7 @@ export const REFERRALS: ReferralCategory[] = [
         id: 'planet-fitness',
         slug: 'planet-fitness-wellness',
         name: 'Planet Fitness',
-        description: 'Nationwide access to wellness and reliable amenities while on the road.',
+        description: 'Nationwide access to wellness and amenities while traveling.',
         body: BODY_PLANET,
         discountText: '$1 Down Deal',
         link: 'https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ',
@@ -98,10 +98,11 @@ export const REFERRALS: ReferralCategory[] = [
 const thsReferral = REFERRALS[0].items[0];
 
 export const GLOBAL_STRINGS: SiteStrings = {
-  toolkitSectionTitle: 'Nomad Essentials',
-  toolkitSectionDescription: `The exact tools, connectivity, and memberships I rely on to maintain a professional standard while traveling solo across ${SITE_STATS.countriesCount} countries.`,
+  toolkitSectionTitle: 'Travel Essentials',
+  toolkitSectionDescription:
+    'The exact tools, connectivity, and memberships I rely on to maintain a professional standard while traveling full-time.',
   travelPromoTitle: 'Start Your Own Journey',
-  travelPromoText: `Inspired to explore? Use my vetted link to join the TrustedHousesitters community. Claim your ${thsReferral.discountText}!`,
+  travelPromoText: `Inspired to explore? Use my vetted link to join the TrustedHousesitters community. Claim your ${thsReferral.discountText} and start your own adventure.`,
   travelPromoLink: thsReferral.link,
   travelPromoBtn: thsReferral.discountText || 'Claim Discount',
 };
@@ -119,7 +120,7 @@ export const REVIEWS: Review[] = [
       'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
     text: 'Julia was absolutely incredible. The house was cleaner than we left it, and we got daily photo updates.',
     sitDescription: 'Luxury residence stewardship and senior Golden Retriever care.',
-    body: `<p>Managing this high-end Austin property required a mix of technical home maintenance and compassionate senior pet care. I was responsible for twice-daily insulin injections and monitoring a complex automated landscaping system.</p><p>My stay ensured the owners could travel with total peace of mind, knowing their home was occupied and their pets were on a strict medical schedule. I provided detailed daily reports and high-resolution photos through my nomad data plan.</p><p>This assignment was verified through TrustedHousesitters, where I maintain a perfect record for reliability and property stewardship.</p>`,
+    body: '<p>Managing this high-end Austin property required a mix of technical home maintenance and compassionate senior pet care. I was responsible for twice-daily insulin injections and monitoring a complex automated landscaping system.</p><p>My stay ensured the owners could travel with total peace of mind, knowing their home was occupied and their pets were on a strict medical schedule. I provided detailed daily reports and high-resolution photos through my nomad data plan.</p><p>This assignment was verified through TrustedHousesitters, where I maintain a perfect record for reliability and property stewardship.</p>',
     tags: ['Long-Term', 'Smart Home', 'Senior Care'],
   },
   {
@@ -319,21 +320,6 @@ export const REVIEWS: Review[] = [
   },
   {
     id: '15',
-    slug: 'nashville-cottage',
-    name: 'Emily H.',
-    location: 'Nashville, TN',
-    rating: 5,
-    date: 'Oct 2023',
-    petType: ['Dog'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=1200',
-    text: 'Wonderful with both our home and pets.',
-    sitDescription: 'Historic cottage multi-pet management.',
-    body: '<p>Coordinating schedules for a three-dog household in a historic neighborhood.</p>',
-    tags: ['Historic', 'Multi-Pet'],
-  },
-  {
-    id: '16',
     slug: 'atlanta-residence',
     name: 'The Jacksons',
     location: 'Atlanta, GA',

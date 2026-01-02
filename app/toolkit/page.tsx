@@ -35,27 +35,25 @@ export default function ToolkitPage() {
         <div className="media-viewport">
           <img
             src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=2400"
-            alt="The Nomadic Framework Essentials"
+            alt="Traveler Framework"
           />
           <div className="hero-gradient-overlay" />
         </div>
 
         <div className="hero-content-overlay">
-          <div className="sub-header hero-sub-header">Nomadic Framework</div>
+          <div className="sub-header hero-sub-header">Traveler Framework</div>
           <h1 className="display-title">
-            The Nomad's <br />
-            <span className="champagne-text">Essential Tools.</span>
+            The Traveler's <span className="champagne-text">Toolkit.</span>
           </h1>
           <p className="hero-paragraph">
-            A curated selection of the resources that make a global lifestyle
-            possible.
+            The reliable tools and resources that make a life of full-time travel possible.
           </p>
           <div className="hero-button-group">
             <Link href="#framework" className="btn-gold">
               Explore Tools
             </Link>
-            <Link href="/journal" className="secondary-btn">
-              The Journal
+            <Link href="/stays" className="secondary-btn">
+              My Stays
             </Link>
           </div>
         </div>
@@ -65,26 +63,26 @@ export default function ToolkitPage() {
         </Link>
       </section>
 
-      <header className="text-center section-margin">
-        <div className="sub-header">The Framework</div>
+      <header className="text-center section-margin" id="framework">
+        <div className="sub-header">The Journey Kit</div>
         <h2 className="display-title display-title-md">
-          Essential <span className="serif-italic champagne-text">Toolkit.</span>
+          Reliable <span className="serif-italic champagne-text">Essentials.</span>
         </h2>
       </header>
 
-      <div className="grid-standard" id="framework">
+      <div className="grid-standard">
         {allTools.map((item) => (
           <CommonCard
             key={item.id}
             title={item.name}
             image={item.imageUrl}
             description={item.description}
-            badge={item.discountText ? 'Preferred' : 'Essential'}
-            metadata={[{ icon: getIcon(item.icon), text: 'Nomad Essential' }]}
+            badge={item.discountText ? 'Recommended' : 'Essential'}
+            metadata={[{ icon: getIcon(item.icon), text: 'Travel Essential' }]}
             slug={`/toolkit/${item.slug}`}
-            actionLabel="Review details"
+            actionLabel="View Details"
             ctaLink={item.link}
-            ctaLabel={item.discountText ? `Claim: ${item.discountText}` : 'Visit Site'}
+            ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit Site'}
           />
         ))}
       </div>
