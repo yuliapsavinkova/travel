@@ -1,7 +1,7 @@
 .hero-stack {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height for total immersion */
+  height: 100vh; /* Full immersion */
   border-bottom: 1px solid var(--c-border);
   overflow: hidden;
   margin-top: 0;
@@ -86,10 +86,7 @@
   z-index: 1;
 }
 
-/* 
-   Next.js Image will be targeted here. 
-   We apply a Ken Burns effect that starts after a slight delay.
-*/
+/* Next.js Image Reveal Anim */
 .hero-stack .media-viewport img {
   animation: hero-reveal-zoom 10s infinite alternate ease-in-out;
   transform-origin: center center;
