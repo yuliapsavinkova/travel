@@ -26,9 +26,9 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
   }
 
   const metadata = [
+    { icon: <StarIcon size={14} style={{ color: 'var(--c-gold)' }} />, text: 'Verified 5.0' },
     { icon: <MapPinIcon size={14} />, text: stay.location },
     { icon: <CalendarIcon size={14} />, text: stay.date },
-    { icon: <StarIcon size={14} style={{ color: 'var(--c-gold)' }} />, text: 'Verified 5.0' },
   ];
 
   return (

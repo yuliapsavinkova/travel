@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { ArrowLeftIcon } from './Icons';
 
 interface CommonDetailProps {
@@ -61,6 +61,7 @@ const CommonDetail: React.FC<CommonDetailProps> = ({
                 style={{ marginBottom: headerAction ? 'var(--s-3)' : 'var(--s-5)' }}
               >
                 {metadata.map((item, idx) => (
+                  // biome-ignore lint/suspicious/noArrayIndexKey: static metadata row
                   <span
                     key={idx}
                     className="detail-metadata-item sub-header"
@@ -81,7 +82,16 @@ const CommonDetail: React.FC<CommonDetailProps> = ({
             <h1 className="display-title detail-title-text">{title}</h1>
           </div>
 
-          <div className="detail-content-text">{children}</div>
+          <div className="detail-content-text">
+            {children}
+
+            <div className="detail-footer-nav">
+              <Link href={onBack} className="btn-back">
+                <ArrowLeftIcon size={16} />
+                {backLabel}
+              </Link>
+            </div>
+          </div>
         </div>
 
         {sidebar && <div className="detail-sidebar">{sidebar}</div>}

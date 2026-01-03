@@ -29,7 +29,7 @@ export default function TravelPage() {
             <Link href="#guides" className="btn-gold">
               Explore Guides
             </Link>
-            <Link href="/journal" className="secondary-btn">
+            <Link href="/journal#archive" className="secondary-btn">
               The Journal
             </Link>
           </div>

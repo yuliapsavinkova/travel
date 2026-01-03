@@ -20,11 +20,11 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   }
 
   const metadata = [
-    { icon: <MapPinIcon size={14} />, text: guide.location },
     {
       icon: <CompassIcon size={14} style={{ color: 'var(--c-gold)' }} />,
       text: 'Verified Experience',
     },
+    { icon: <MapPinIcon size={14} />, text: guide.location },
   ];
 
   return (

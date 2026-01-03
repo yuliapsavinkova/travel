@@ -34,7 +34,7 @@ export default function StaysPage() {
             <Link href="#portfolio" className="btn-gold">
               The Portfolio
             </Link>
-            <Link href="/journal" className="secondary-btn">
+            <Link href="/journal#archive" className="secondary-btn">
               The Journal
             </Link>
           </div>
@@ -49,7 +49,7 @@ export default function StaysPage() {
         <header className="text-center section-margin" id="portfolio">
           <div className="sub-header">Professional History</div>
           <h2 className="display-title display-title-md">
-            My <span className="serif-italic champagne-text">Stays.</span>
+            My <span className="serif-italic champagne-text">Private Clients.</span>
           </h2>
         </header>
 

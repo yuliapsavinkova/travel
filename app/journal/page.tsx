@@ -29,7 +29,7 @@ export default function JournalPage() {
             <Link href="#archive" className="btn-gold">
               Read Archive
             </Link>
-            <Link href="/toolkit" className="secondary-btn">
+            <Link href="/toolkit#framework" className="secondary-btn">
               Travel Toolkit
             </Link>
           </div>

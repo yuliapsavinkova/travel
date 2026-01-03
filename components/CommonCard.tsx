@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { ArrowUpRightIcon, ExternalLinkIcon } from './Icons';
 
 interface CommonCardProps {
@@ -43,6 +43,7 @@ const CommonCard: React.FC<CommonCardProps> = ({
         style={{ marginBottom: 'var(--s-2)', marginTop: 'var(--s-2)' }}
       >
         {metadata.map((item, idx) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: Fixed static metadata list
           <span key={idx} className="card-metadata-item">
             {item.icon} {item.text}
           </span>
@@ -52,7 +53,6 @@ const CommonCard: React.FC<CommonCardProps> = ({
 
   const label = actionLabel || 'Details';
 
-  // Helper to render the shared card body content
   const renderCardBody = () => (
     <>
       {CardImage}
@@ -62,10 +62,6 @@ const CommonCard: React.FC<CommonCardProps> = ({
     </>
   );
 
-  // Scenario 1: Toolkit Item with decoupled Multi-Action Layout
-  // Entire card links to internal detail review page.
-  // "Nomad Essential" metadata is now on top of the heading.
-  // Distinct 'Claim Discount' link rendered separately below the card.
   if (ctaLink && slug) {
     return (
       <div className="toolkit-card-wrapper">
@@ -92,7 +88,6 @@ const CommonCard: React.FC<CommonCardProps> = ({
     );
   }
 
-  // Standard Link (Internal - Journal / Stays)
   if (slug) {
     return (
       <Link href={internalPath!} className="glass-card">
@@ -109,7 +104,6 @@ const CommonCard: React.FC<CommonCardProps> = ({
     );
   }
 
-  // Standard Link (External)
   if (externalLink) {
     return (
       <a href={externalLink} target="_blank" rel="noopener noreferrer" className="glass-card">

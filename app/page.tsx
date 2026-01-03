@@ -31,10 +31,10 @@ export default function HomePage() {
             the globe.
           </p>
           <div className="hero-button-group">
-            <Link href="/travel" className="btn-gold">
+            <Link href="/travel#guides" className="btn-gold">
               Destinations
             </Link>
-            <Link href="/stays" className="secondary-btn">
+            <Link href="/stays#portfolio" className="secondary-btn">
               My Stays
             </Link>
           </div>
@@ -112,7 +112,7 @@ export default function HomePage() {
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--s-4)' }}>
               <InquiryTrigger label="Start An Inquiry" className="btn-gold" />
-              <Link href="/stays" className="secondary-btn">
+              <Link href="/stays#portfolio" className="secondary-btn">
                 Explore Portfolio
               </Link>
             </div>

@@ -10,16 +10,16 @@ const ReferralPromo = () => {
   return (
     <div
       className="section-divider"
-      style={{ marginTop: 'var(--s-9)', borderTopColor: 'var(--c-border-gold)', textAlign: 'left' }}
+      style={{ marginTop: 'var(--s-9)', borderTopColor: 'var(--c-border-gold)' }}
     >
-      <div className="detail-content-section text-center" style={{ width: '100%' }}>
+      <div className="detail-content-section promo-card-constrained text-center">
         <h3 className="sub-header">{GLOBAL_STRINGS.travelPromoTitle}</h3>
         <p
           className="opacity-70"
           style={{
             fontSize: '1rem',
             marginBottom: 'var(--s-5)',
-            maxWidth: '600px',
+            maxWidth: '540px',
             margin: '0 auto var(--s-5)',
           }}
         >
@@ -31,7 +31,7 @@ const ReferralPromo = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold"
-            style={{ gap: '12px', minWidth: '280px' }}
+            style={{ gap: '12px', minWidth: '240px' }}
           >
             {GLOBAL_STRINGS.travelPromoBtn}
             <ExternalLinkIcon size={18} />

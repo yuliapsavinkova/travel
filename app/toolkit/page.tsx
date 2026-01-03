@@ -52,7 +52,7 @@ export default function ToolkitPage() {
             <Link href="#framework" className="btn-gold">
               Explore Tools
             </Link>
-            <Link href="/stays" className="secondary-btn">
+            <Link href="/stays#portfolio" className="secondary-btn">
               My Stays
             </Link>
           </div>

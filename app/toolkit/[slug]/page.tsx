@@ -23,7 +23,6 @@ export default async function ReferralDetailPage({
   }
 
   const metadata = [
-    { icon: <TagIcon size={14} />, text: 'Traveler Essential' },
     ...(item.discountText
       ? [
           {
@@ -43,6 +42,7 @@ export default async function ReferralDetailPage({
           },
         ]
       : []),
+    { icon: <TagIcon size={14} />, text: 'Traveler Essential' },
   ];
 
   return (
@@ -59,7 +59,7 @@ export default async function ReferralDetailPage({
           <ContentRenderer content={item.body} className="detail-rich-content" />
 
           {item.discountText && (
-            <div>
+            <div style={{ marginTop: 'var(--s-4)' }}>
               <a
                 href={item.link}
                 target="_blank"

@@ -20,8 +20,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   }
 
   const metadata = [
-    { icon: <CalendarIcon size={14} />, text: post.date },
     { icon: <MapPinIcon size={14} />, text: post.location },
+    { icon: <CalendarIcon size={14} />, text: post.date },
   ];
 
   return (
