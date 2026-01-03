@@ -29,7 +29,7 @@ const CommonDetail: React.FC<CommonDetailProps> = ({
     <div className="container detail-container">
       <Link href={onBack} className="btn-back">
         <ArrowLeftIcon size={16} />
-        {backLabel}
+        <span>{backLabel}</span>
       </Link>
 
       <div className="media-viewport detail-hero">
@@ -88,7 +88,7 @@ const CommonDetail: React.FC<CommonDetailProps> = ({
             <div className="detail-footer-nav">
               <Link href={onBack} className="btn-back">
                 <ArrowLeftIcon size={16} />
-                {backLabel}
+                <span>{backLabel}</span>
               </Link>
             </div>
           </div>

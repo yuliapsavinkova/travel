@@ -1,4 +1,4 @@
-// import { SiteStrings } from './types';
+import { SiteStrings } from './types';
 import { REFERRALS } from './data/referrals';
 
 export * from './data/referrals';
