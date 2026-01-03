@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
-import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR } from '../constants';
+import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR, GLOBAL_STRINGS } from '../constants';
 import { InquiryTrigger } from './ClientTriggers';
-import { InstagramIcon, LinkedinIcon, MailIcon, SJLogo } from './Icons';
+import { InstagramIcon, LinkedinIcon, MailIcon, SJLogo, ExternalLinkIcon } from './Icons';
 
 const Footer = () => {
   return (
@@ -63,11 +63,29 @@ const Footer = () => {
               </span>
               .
             </p>
-            <InquiryTrigger
-              label="Inquire"
-              className="btn-gold btn-footer"
-              style={{ minWidth: '160px' }}
-            />
+            <div className="footer-action-group">
+              <InquiryTrigger
+                label="Inquire"
+                className="btn-gold"
+                style={{ flex: 1, minWidth: '140px' }}
+              />
+              <a
+                href={GLOBAL_STRINGS.travelPromoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="secondary-btn"
+                style={{
+                  flex: 1,
+                  minWidth: '140px',
+                  display: 'inline-flex',
+                  justifyContent: 'center',
+                  gap: '8px',
+                }}
+              >
+                Join
+                <ExternalLinkIcon size={14} />
+              </a>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">

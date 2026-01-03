@@ -3,7 +3,6 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ReferralPromo from '../components/ReferralPromo';
 import '../styles.css';
 
 const inter = Inter({
@@ -113,10 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="app-root">
           <div className="studio-depth" />
           <Navigation />
-          <main className="main-viewport">
-            {children}
-            <ReferralPromo />
-          </main>
+          <main className="main-viewport">{children}</main>
           <Footer />
         </div>
       </body>
