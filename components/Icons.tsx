@@ -1,18 +1,18 @@
-import React from 'react';
+import type { SVGProps, ReactNode } from 'react';
 
-export interface IconProps extends React.SVGProps<SVGSVGElement> {
+export interface IconProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
 }
 
 /**
  * Base wrapper to ensure all icons share the same aesthetic DNA
  */
-const IconBase: React.FC<IconProps & { children: React.ReactNode }> = ({
+const IconBase = ({
   size = 24,
   strokeWidth = 2,
   children,
   ...props
-}) => (
+}: IconProps & { children: ReactNode }) => (
   <svg
     width={size}
     height={size}
@@ -29,7 +29,7 @@ const IconBase: React.FC<IconProps & { children: React.ReactNode }> = ({
   </svg>
 );
 
-export const SJLogo: React.FC<IconProps> = ({ size = 48, className, ...props }) => (
+export const SJLogo = ({ size = 48, className, ...props }: IconProps) => (
   <svg
     width={size}
     height={size}
@@ -40,6 +40,7 @@ export const SJLogo: React.FC<IconProps> = ({ size = 48, className, ...props }) 
     shapeRendering="geometricPrecision"
     {...props}
   >
+    <title>Sitter Journey Logo</title>
     <defs>
       <linearGradient id="logo-gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#FFFFFF" />
@@ -105,7 +106,7 @@ export const SJLogo: React.FC<IconProps> = ({ size = 48, className, ...props }) 
 
 /* --- BRAND & SOCIAL --- */
 
-export const InstagramIcon: React.FC<IconProps> = (props) => (
+export const InstagramIcon = (props: IconProps) => (
   <IconBase {...props}>
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -113,7 +114,7 @@ export const InstagramIcon: React.FC<IconProps> = (props) => (
   </IconBase>
 );
 
-export const LinkedinIcon: React.FC<IconProps> = (props) => (
+export const LinkedinIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
     <rect width="4" height="12" x="2" y="9" />
@@ -121,7 +122,7 @@ export const LinkedinIcon: React.FC<IconProps> = (props) => (
   </IconBase>
 );
 
-export const MailIcon: React.FC<IconProps> = (props) => (
+export const MailIcon = (props: IconProps) => (
   <IconBase {...props}>
     <rect width="20" height="16" x="2" y="4" rx="2" />
     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -130,7 +131,7 @@ export const MailIcon: React.FC<IconProps> = (props) => (
 
 /* --- INTERFACE & NAVIGATION --- */
 
-export const MenuIcon: React.FC<IconProps> = (props) => (
+export const MenuIcon = (props: IconProps) => (
   <IconBase {...props}>
     <line x1="4" x2="20" y1="12" y2="12" />
     <line x1="4" x2="20" y1="6" y2="6" />
@@ -138,27 +139,27 @@ export const MenuIcon: React.FC<IconProps> = (props) => (
   </IconBase>
 );
 
-export const XIcon: React.FC<IconProps> = (props) => (
+export const XIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M18 6 6 18" />
     <path d="m6 6 12 12" />
   </IconBase>
 );
 
-export const ChevronDownIcon: React.FC<IconProps> = (props) => (
+export const ChevronDownIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="m6 9 6 6 6-6" />
   </IconBase>
 );
 
-export const ArrowLeftIcon: React.FC<IconProps> = (props) => (
+export const ArrowLeftIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="m12 19-7-7 7-7" />
     <path d="M19 12H5" />
   </IconBase>
 );
 
-export const ArrowUpRightIcon: React.FC<IconProps> = (props) => (
+export const ArrowUpRightIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M7 7h10v10" />
     <path d="M7 17 17 7" />
@@ -167,14 +168,14 @@ export const ArrowUpRightIcon: React.FC<IconProps> = (props) => (
 
 /* --- FUNCTIONAL & DECORATIVE --- */
 
-export const MapPinIcon: React.FC<IconProps> = (props) => (
+export const MapPinIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
     <circle cx="12" cy="10" r="3" />
   </IconBase>
 );
 
-export const CalendarIcon: React.FC<IconProps> = (props) => (
+export const CalendarIcon = (props: IconProps) => (
   <IconBase {...props}>
     <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
     <line x1="16" x2="16" y1="2" y2="6" />
@@ -183,20 +184,20 @@ export const CalendarIcon: React.FC<IconProps> = (props) => (
   </IconBase>
 );
 
-export const StarIcon: React.FC<IconProps> = (props) => (
+export const StarIcon = (props: IconProps) => (
   <IconBase {...props}>
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
   </IconBase>
 );
 
-export const AwardIcon: React.FC<IconProps> = (props) => (
+export const AwardIcon = (props: IconProps) => (
   <IconBase {...props}>
     <circle cx="12" cy="8" r="6" />
     <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
   </IconBase>
 );
 
-export const GlobeIcon: React.FC<IconProps> = (props) => (
+export const GlobeIcon = (props: IconProps) => (
   <IconBase {...props}>
     <circle cx="12" cy="12" r="10" />
     <line x1="2" x2="22" y1="12" y2="12" />
@@ -204,27 +205,27 @@ export const GlobeIcon: React.FC<IconProps> = (props) => (
   </IconBase>
 );
 
-export const ShieldCheckIcon: React.FC<IconProps> = (props) => (
+export const ShieldCheckIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
     <path d="m9 12 2 2 4-4" />
   </IconBase>
 );
 
-export const HeartIcon: React.FC<IconProps> = (props) => (
+export const HeartIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
   </IconBase>
 );
 
-export const HomeIcon: React.FC<IconProps> = (props) => (
+export const HomeIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
     <polyline points="9 22 9 12 15 12 15 22" />
   </IconBase>
 );
 
-export const SmartphoneIcon: React.FC<IconProps> = (props) => (
+export const SmartphoneIcon = (props: IconProps) => (
   <IconBase {...props}>
     <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
     <line x1="12" x2="12" y1="18" y2="18" />
@@ -234,35 +235,35 @@ export const SmartphoneIcon: React.FC<IconProps> = (props) => (
 /**
  * Added to support financial and payment tool representation.
  */
-export const CreditCardIcon: React.FC<IconProps> = (props) => (
+export const CreditCardIcon = (props: IconProps) => (
   <IconBase {...props}>
     <rect width="20" height="14" x="2" y="5" rx="2" />
     <line x1="2" x2="22" y1="10" y2="10" />
   </IconBase>
 );
 
-export const LeafIcon: React.FC<IconProps> = (props) => (
+export const LeafIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a7 7 0 0 1-10 10Z" />
     <path d="M11 20c-1 0-3-3-3-3" />
   </IconBase>
 );
 
-export const CompassIcon: React.FC<IconProps> = (props) => (
+export const CompassIcon = (props: IconProps) => (
   <IconBase {...props}>
     <circle cx="12" cy="12" r="10" />
     <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
   </IconBase>
 );
 
-export const QuoteIcon: React.FC<IconProps> = (props) => (
+export const QuoteIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 4.48-3.52 8-4 8Z" />
     <path d="M14 21c3 0 7-1 7-8V5h-7v8h4c0 4.48-3.52 8-4 8Z" />
   </IconBase>
 );
 
-export const ExternalLinkIcon: React.FC<IconProps> = (props) => (
+export const ExternalLinkIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
     <polyline points="15 3 21 3 21 9" />
@@ -270,14 +271,14 @@ export const ExternalLinkIcon: React.FC<IconProps> = (props) => (
   </IconBase>
 );
 
-export const TagIcon: React.FC<IconProps> = (props) => (
+export const TagIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z" />
     <line x1="7" x2="7.01" y1="7" y2="7" />
   </IconBase>
 );
 
-export const CheckCircleIcon: React.FC<IconProps> = (props) => (
+export const CheckCircleIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
     <polyline points="22 4 12 14.01 9 11.01" />

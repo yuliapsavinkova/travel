@@ -2,41 +2,46 @@ import React from 'react';
 import { BLOG_POSTS } from '../../../constants';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
-import { CalendarIcon, MapPinIcon } from '../../../components/Icons';
+import { BlogPost } from '../../../types';
+
+export async function generateStaticParams() {
+  return BLOG_POSTS.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const posts = BLOG_POSTS as BlogPost[];
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     return (
       <div className="container text-center section-margin">
-        <h1 className="display-title">Post Not Found</h1>
         <CommonDetail onBack="/journal#archive" image="" title="Not Found">
-          <div className="text-center">The requested journal entry could not be located.</div>
+          <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
+            <h1 className="display-title">Post Not Found</h1>
+            <p className="hero-paragraph">
+              This journal entry appears to have moved or been removed.
+            </p>
+          </div>
         </CommonDetail>
       </div>
     );
   }
 
-  const metadata = [
-    { icon: <MapPinIcon size={14} />, text: post.location },
-    { icon: <CalendarIcon size={14} />, text: post.date },
-  ];
-
   return (
-    <div className="container">
-      <CommonDetail
-        onBack="/journal#archive"
-        image={post.imageUrl}
-        metadata={metadata}
-        title={post.title}
-        backLabel="Return to Archive"
-      >
-        <div className="flex-col flex-gap-lg">
-          <ContentRenderer content={post.body} />
-        </div>
-      </CommonDetail>
-    </div>
+    <CommonDetail
+      onBack="/journal#archive"
+      image={post.imageUrl}
+      title={post.title}
+      date={post.date}
+      ctaLabel={post.ctaLabel}
+      ctaLink={post.ctaLink}
+    >
+      <div className="flex-col flex-gap-lg">
+        <ContentRenderer content={post.body} />
+      </div>
+    </CommonDetail>
   );
 }

@@ -1,100 +1,79 @@
 import Link from 'next/link';
-import React from 'react';
-import { ArrowLeftIcon } from './Icons';
+import type { ReactNode } from 'react';
+import { ArrowLeftIcon, ExternalLinkIcon } from './Icons';
 
 interface CommonDetailProps {
   onBack: string;
   image: string;
-  metadata?: { icon: React.ReactNode; text: React.ReactNode }[];
   title: string;
-  children: React.ReactNode;
-  sidebar?: React.ReactNode;
-  backLabel?: string;
-  imageBadge?: string;
-  headerAction?: React.ReactNode;
+  date?: string;
+  ctaLabel?: string;
+  ctaLink?: string;
+  children: ReactNode;
+  sidebar?: ReactNode;
 }
 
-const CommonDetail: React.FC<CommonDetailProps> = ({
+const CommonDetail = ({
   onBack,
   image,
-  metadata,
   title,
+  date,
+  ctaLabel,
+  ctaLink,
   children,
   sidebar,
-  backLabel = 'Back',
-  imageBadge,
-  headerAction,
-}) => {
+}: CommonDetailProps) => {
   return (
-    <div className="container detail-container">
-      <Link href={onBack} className="btn-back">
-        <ArrowLeftIcon size={16} />
-        <span>{backLabel}</span>
-      </Link>
+    <div className="detail-container">
+      {/* Editorial Header - Centered Typography */}
+      <header className="detail-header-area">
+        {date && <span className="detail-date-label">{date}</span>}
+        <h1 className="detail-title-text">{title}</h1>
+      </header>
 
-      <div className="media-viewport detail-hero">
-        <img src={image} alt={title} />
-        {imageBadge && (
-          <div
-            className="card-badge"
-            style={{
-              top: 'var(--s-5)',
-              right: 'var(--s-5)',
-              background: 'rgba(0, 0, 0, 0.4)',
-              backdropFilter: 'blur(12px) saturate(1.8)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              color: 'var(--c-white)',
-            }}
+      {/* Featured Media - Contained & Rounded with Glass Navigation */}
+      <div className="detail-hero-section">
+        <img src={image} alt={title} className="detail-hero-image" />
+        <div className="detail-hero-overlay" />
+
+        {/* Glass Corner Navigation - Pinned to corners */}
+        <Link
+          href={onBack}
+          className="hero-glass-link hero-back-link"
+          aria-label="Go back to archive"
+        >
+          <ArrowLeftIcon size={12} />
+          <span>Archive</span>
+        </Link>
+
+        {ctaLabel && ctaLink && (
+          <a
+            href={ctaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-glass-link hero-cta-link"
           >
-            {imageBadge}
-          </div>
+            <span>{ctaLabel}</span>
+            <ExternalLinkIcon size={12} />
+          </a>
         )}
-        <div className="detail-hero-gradient" />
       </div>
 
-      <div className={`detail-layout ${sidebar ? 'with-sidebar' : ''}`}>
-        <div>
-          <div className="detail-header-block">
-            {metadata && (
-              <div
-                className="detail-metadata-row"
-                style={{ marginBottom: headerAction ? 'var(--s-3)' : 'var(--s-5)' }}
-              >
-                {metadata.map((item, idx) => (
-                  // biome-ignore lint/suspicious/noArrayIndexKey: static metadata row
-                  <span
-                    key={idx}
-                    className="detail-metadata-item sub-header"
-                    style={{ marginBottom: 0 }}
-                  >
-                    {item.icon} {item.text}
-                  </span>
-                ))}
-              </div>
-            )}
-
-            {headerAction && (
-              <div className="detail-header-action" style={{ marginBottom: 'var(--s-4)' }}>
-                {headerAction}
-              </div>
-            )}
-
-            <h1 className="display-title detail-title-text">{title}</h1>
-          </div>
-
-          <div className="detail-content-text">
+      <div className="detail-layout-container">
+        <div className={`detail-layout ${sidebar ? 'with-sidebar' : ''}`}>
+          <div className="prose-content">
             {children}
 
             <div className="detail-footer-nav">
-              <Link href={onBack} className="btn-back">
-                <ArrowLeftIcon size={16} />
-                <span>{backLabel}</span>
+              <Link href={onBack} className="btn-back-footer">
+                <ArrowLeftIcon size={14} />
+                <span>Return to Journey Archive</span>
               </Link>
             </div>
           </div>
-        </div>
 
-        {sidebar && <div className="detail-sidebar">{sidebar}</div>}
+          {sidebar && <div className="detail-sidebar">{sidebar}</div>}
+        </div>
       </div>
     </div>
   );

@@ -49,7 +49,7 @@ export default function StaysPage() {
         <header className="text-center section-margin" id="portfolio">
           <div className="sub-header">Professional History</div>
           <h2 className="display-title display-title-md">
-            My <span className="serif-italic champagne-text">Private Clients.</span>
+            My <span className="serif-italic champagne-text">Stays.</span>
           </h2>
         </header>
 

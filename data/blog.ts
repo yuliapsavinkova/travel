@@ -1,86 +1,67 @@
 import { BlogPost } from '../types';
-import { txt } from '../utils/content';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: '1',
-    slug: 'how-to-get-your-first-house-sit',
-    title: 'How to Land Your First Luxury Housesit (SEO Guide)',
+    slug: 'get-your-first-house-sit',
+    title: 'How to Get Your First House Sit (Even With No Reviews)',
     excerpt:
-      'The exact framework I used to build a 5-star reputation and secure high-end assignments.',
-    date: 'Feb 10, 2024',
+      'The exact framework I used to go from zero reviews to a professional portfolio of verified stays.',
+    date: 'Feb 24, 2024',
     category: 'Expertise',
     location: 'Strategy',
     imageUrl:
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=1200',
-    body: txt(`Entering the luxury housesitting market is a masterclass in professional branding. I started by treating my profile not as a traveler's bio, but as an estate manager's resume, highlighting technical oversight and specific medical care capabilities that high-value homeowners prioritize.
+      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200',
+    ctaLabel: 'Offer: 25% Off Membership',
+    ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+    body: `
+      <p class="prose-lead">Getting your first house sit is the hardest part of the entire process. Not because it’s impossible — but because people overcomplicate it, apply in the wrong places, and assume rejection means failure. <strong>It doesn’t.</strong></p>
 
-Vetting homeowners is just as important as being vetted yourself. I always look for platforms that offer comprehensive insurance and a verified identity system to ensure the safety of both the property and the sitter during long-term seasonal stays.
+      <p>I got my first sit with zero reviews, by being strategic instead of optimistic. Most people approach housesitting as a vacation search. I approached it as a <strong>stewardship audition.</strong></p>
 
-Joining the right community is the shortcut to success. You can start your own professional journey by joining TrustedHousesitters with a 25% discount using my vetted link below to ensure you have the best start possible.`),
-  },
-  {
-    id: '2',
-    slug: 'smart-home-stewardship',
-    title: 'Smart Home Stewardship: A Professional Protocol',
-    excerpt: 'Why mastering Ring, Lutron, and Nest is the new standard for estate care.',
-    date: 'Feb 15, 2024',
-    category: 'Technical',
-    location: 'Home Tech',
-    imageUrl:
-      'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1200',
-    body: txt(`Modern residency stewardship is increasingly defined by its digital infrastructure. As homes become "smarter," the responsibility of the house sitter evolves to include technical oversight of security grids, environmental controls, and automated landscaping systems.
+      <div class="prose-accent-box">
+        <h3>The Beginner's Trap</h3>
+        <p>Most beginners fail because they target "dream" setups right away. They apply for:</p>
+        <ul>
+          <li>High-tier destinations like NYC, London, or Paris</li>
+          <li>Long-term assignments (over 2 weeks)</li>
+          <li>High-maintenance breeds that require specialized care</li>
+          <li>Peak travel seasons (Christmas, Summer Break)</li>
+        </ul>
+        <p>Your goal is not to win these sits yet. Your goal is to win a <strong>review.</strong></p>
+      </div>
 
-My protocol includes a detailed technical walkthrough of Nest, Ring, and Lutron systems before any sit begins. Ensuring these tools remain online and correctly calibrated is essential for maintaining property security and energy efficiency during month-long homeowner absences.
+      <h2>Step 1: The High-Demand, Low-Competition Filter</h2>
+      <p>This matters more than your profile. I deliberately chose <strong>Austin, Texas</strong> during the peak of summer. Why? Because while it's brutally hot and most travelers are looking for coastal breezes, homeowners in Austin are still traveling, and the sitter pool is 80% smaller.</p>
 
-To maintain 24/7 connectivity for these systems and my daily updates, I rely on the unlimited nomadic data provided by Visible, ensuring I can monitor and update homeowners regardless of the property's local Wi-Fi status.`),
-  },
-  {
-    id: '3',
-    slug: 'solo-female-nomad-safety',
-    title: 'Solo Female Nomad Safety: The Vetted Framework',
-    excerpt: 'Practical, high-intent safety protocols for traveling the USA solo.',
-    date: 'Jan 20, 2024',
-    category: 'Safety',
-    location: 'Nomadic Life',
-    imageUrl:
-      'https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=1200',
-    body: txt(`Safety is the primary barrier for many aspiring solo travelers. Over the course of 35+ countries and 16 assignments, I have developed a multi-layered framework that prioritizes verified accommodation and redundant communication to mitigate risk.
+      <div class="prose-image-block">
+        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80&w=1200" alt="Austin Texas Skyline" />
+        <span class="prose-caption">Strategically picking locations during off-peak times is how you build your initial trust foundation.</span>
+      </div>
 
-My redundant safety kit includes a 24/7 accessible membership like Planet Fitness for safe harbor on travel days and a high-bandwidth data plan through Visible to ensure I am never truly "off-grid" while navigating between states.
+      <h2>Step 2: Cats and Short Sits (The "Low Risk" Entry)</h2>
+      <p>For your very first sit, <strong>cats > dogs. Always.</strong> Cats represent a lower perceived risk for homeowners. There are no multiple daily walks, and the care routines are generally simpler. Homeowners are far more willing to "take a chance" on a review-less sitter if the job is straightforward.</p>
+      
+      <p>Short sits (2–5 days) are even more important. It’s a fast "yes" for a homeowner and, more importantly, a fast review for you. You can stack three short sits in a month and suddenly have more reviews than someone who did one 30-day sit.</p>
 
-Building your nomadic life on a foundation of trust starts with vetting your platforms. I recommend starting with TrustedHousesitters for secure, community-vetted stays across the United States that provide a safe and stable environment.`),
-  },
-  {
-    id: '4',
-    slug: 'senior-pet-medication-guide',
-    title: 'Professional Senior Pet Care: A Clinical Approach',
-    excerpt: 'The exact methodology I use for medical administration and palliative support.',
-    date: 'Jan 15, 2024',
-    category: 'Pet Care',
-    location: 'Wellness',
-    imageUrl:
-      'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200',
-    body: txt(`Specializing in senior pet care requires more than just affection; it requires clinical precision. I utilize digital medical logs to track every dose of insulin or oral medication, providing homeowners with data-backed peace of mind that their companions are thriving.
+      <div class="prose-image-block">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=1200" alt="Cozy Cat in Luxury Interior" />
+      </div>
 
-Patience is the core of palliative care. I spend significant time bonding with senior pets, respecting their specific mobility needs and ensuring their environment remains stress-free and familiar while their family is away.
+      <h2>Step 3: The Communication Framework</h2>
+      <p>I applied to only 3 sits total, rather than "spraying and praying." My message was focused entirely on the homeowner's peace of mind, not my travel dreams.</p>
+      
+      <blockquote class="prose-quote">
+        "I saw your listing for [Pet Names] and would love to provide them with consistent companionship while you're away. As a remote professional, I will be home most of the time, ensuring their routine remains undisturbed."
+      </blockquote>
 
-If you need localized backup during a transition sit or a verified professional in a pinch, I recommend using Rover to find vetted pet professionals who share this commitment to high-standard care.`),
-  },
-  {
-    id: '5',
-    slug: 'pet-emergency-protocol',
-    title: 'The Pet Emergency Protocol: A Steward’s Guide',
-    excerpt: 'Mitigating risk and managing veterinary emergencies with calm precision.',
-    date: 'Jan 10, 2024',
-    category: 'Expertise',
-    location: 'Emergency',
-    imageUrl:
-      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200',
-    body: txt(`Preparation is the antidote to emergency. Before every sit, I pre-vet the nearest 24-hour clinic and establish a signed veterinary directive with the homeowner to ensure no delays in care if an urgent situation arises.
+      <h2>Step 4: The Snowball Effect</h2>
+      <p>Once you get that first sit, everything changes. I got my first review, and suddenly my response rate tripled. Within two months, I was being invited to multi-week stays in high-value properties. <strong>The first sit is simply the gate.</strong></p>
 
-Communication in a crisis must be immediate and clear. Having an unlimited data plan via Visible allows me to provide real-time video consultations with owners or clinics during stressful situations, ensuring the best decisions are made quickly.
-
-By treating housesitting as a professional stewardship, I ensure that the unexpected is managed with a calm, pre-determined plan that protects the pets and the property.`),
+      <div class="referral-bottom-cta">
+        <p class="sub-header">Take the First Step</p>
+        <p>I explain the full system, pros, cons, and realities in my full TrustedHousesitters review — including how I traveled through 30 U.S. states rent-free.</p>
+      </div>
+    `,
   },
 ];

@@ -11,7 +11,7 @@ export interface Review {
   petType: PetType[];
   imageUrl?: string;
   sitDescription: string;
-  body?: string; // MDX content will live here
+  body?: string;
   tags: string[];
 }
 
@@ -25,6 +25,8 @@ export interface BlogPost {
   category: string;
   imageUrl: string;
   location: string;
+  ctaLink?: string;
+  ctaLabel?: string;
 }
 
 export interface TravelGuide {
@@ -36,6 +38,7 @@ export interface TravelGuide {
   body: string;
   imageUrl: string;
   tags: string[];
+  date?: string;
 }
 
 export interface ReferralCategory {
@@ -53,7 +56,7 @@ export interface ReferralItem {
   link: string;
   icon: string;
   imageUrl?: string;
-  promoNote?: string; // Configurable referral message
+  promoNote?: string;
 }
 
 export interface SiteStrings {

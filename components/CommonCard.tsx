@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import React from 'react';
+import type { ReactNode } from 'react';
 import { ArrowUpRightIcon, ExternalLinkIcon } from './Icons';
 
 interface CommonCardProps {
   image?: string;
   badge?: string;
-  metadata?: { icon: React.ReactNode; text: React.ReactNode }[];
+  metadata?: { icon: ReactNode; text: ReactNode }[];
   title: string;
   description: string;
   actionLabel?: string;
@@ -15,7 +15,7 @@ interface CommonCardProps {
   ctaLabel?: string;
 }
 
-const CommonCard: React.FC<CommonCardProps> = ({
+const CommonCard = ({
   image,
   badge,
   metadata,
@@ -26,8 +26,8 @@ const CommonCard: React.FC<CommonCardProps> = ({
   slug,
   ctaLink,
   ctaLabel,
-}) => {
-  const internalPath = slug ? (slug.startsWith('/') ? slug : `/${slug}`) : null;
+}: CommonCardProps) => {
+  const internalPath = slug ? (slug.startsWith('/') ? slug : `/${slug}`) : '';
 
   const CardImage = image ? (
     <div className="card-image-viewport media-viewport">
@@ -62,10 +62,10 @@ const CommonCard: React.FC<CommonCardProps> = ({
     </>
   );
 
-  if (ctaLink && slug) {
+  if (ctaLink && slug && internalPath) {
     return (
       <div className="toolkit-card-wrapper">
-        <Link href={internalPath!} className="glass-card">
+        <Link href={internalPath} className="glass-card">
           {renderCardBody()}
           <div className="card-footer">
             <div className="card-action-link">
@@ -88,9 +88,9 @@ const CommonCard: React.FC<CommonCardProps> = ({
     );
   }
 
-  if (slug) {
+  if (slug && internalPath) {
     return (
-      <Link href={internalPath!} className="glass-card">
+      <Link href={internalPath} className="glass-card">
         {renderCardBody()}
         <div className="card-footer">
           <div className="card-footer-main">

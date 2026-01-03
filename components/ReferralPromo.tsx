@@ -1,4 +1,3 @@
-import React from 'react';
 import { GLOBAL_STRINGS } from '../constants';
 import { ExternalLinkIcon } from './Icons';
 

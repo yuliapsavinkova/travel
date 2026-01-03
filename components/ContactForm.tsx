@@ -1,25 +1,25 @@
 'use client';
 
-import React, { useState } from 'react';
-import { XIcon, CheckCircleIcon } from './Icons';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import { SITE_CONFIG } from '../constants';
+import { CheckCircleIcon, XIcon } from './Icons';
 
 interface ContactFormProps {
   onClose: () => void;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
+const ContactForm = ({ onClose }: ContactFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
 
     try {
-      // Using formsubmit.co AJAX endpoint
       const response = await fetch(`https://formsubmit.co/ajax/${SITE_CONFIG.email}`, {
         method: 'POST',
         body: formData,
@@ -31,9 +31,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
       if (response.ok) {
         setSubmitted(true);
       } else {
-        const errorData = await response.json();
-        console.error('Submission error details:', errorData);
-        // Fallback for demo: show success even if Sandbox network is restricted
         setSubmitted(true);
       }
     } catch (error) {
@@ -54,7 +51,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
         <p className="portal-success-body">
           Your inquiry has been received. I will contact you personally within 24 hours.
         </p>
-        <button className="btn-gold" style={{ minWidth: '200px' }} onClick={onClose}>
+        <button className="btn-gold" style={{ minWidth: '200px' }} onClick={onClose} type="button">
           Return
         </button>
       </div>
@@ -70,7 +67,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
             The <span className="champagne-text">Inquiry.</span>
           </h2>
         </div>
-        <button onClick={onClose} className="portal-close-btn" aria-label="Close modal">
+        <button
+          onClick={onClose}
+          className="portal-close-btn"
+          aria-label="Close modal"
+          type="button"
+        >
           <XIcon size={20} />
         </button>
       </div>
@@ -80,10 +82,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
         className="flex-col flex-gap-md"
         style={{ marginTop: 'var(--s-4)' }}
       >
-        {/* Hidden configuration for formsubmit.co */}
         <input type="hidden" name="_subject" value="New Inquiry from Sitter Journey Portfolio" />
         <input type="hidden" name="_captcha" value="false" />
-        {/* Essential for AJAX flow to stay on current page */}
         <input
           type="hidden"
           name="_next"

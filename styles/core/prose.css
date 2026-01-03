@@ -1,0 +1,138 @@
+/* Prose Content - High-End Editorial Styles */
+.prose-content {
+  color: var(--c-text-dim);
+  font-size: 20px;
+  line-height: 1.9;
+  max-width: 720px;
+  margin: 0 auto;
+  font-weight: 400;
+  padding-top: 0; /* Removed padding to tighten gap with hero/action bar */
+}
+
+.prose-lead {
+  font-size: clamp(24px, 4vw, 30px);
+  color: var(--c-white);
+  line-height: 1.5;
+  margin-bottom: var(--s-8);
+  font-family: var(--f-serif);
+  font-style: italic;
+  letter-spacing: -0.01em;
+  opacity: 0.95;
+}
+
+.prose-content h2 {
+  font-family: var(--f-serif);
+  font-size: clamp(32px, 5vw, 48px);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--c-white);
+  margin-top: var(--s-9);
+  margin-bottom: var(--s-5);
+  line-height: 1.1;
+}
+
+.prose-content h3 {
+  font-family: var(--f-main);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--c-gold);
+  margin-top: var(--s-7);
+  margin-bottom: var(--s-4);
+}
+
+.prose-content p {
+  margin-bottom: var(--s-6);
+  opacity: 0.85;
+}
+
+.prose-content strong {
+  color: var(--c-white);
+  font-weight: 600;
+}
+
+.prose-content ul {
+  list-style: none;
+  margin: var(--s-7) 0;
+  padding-left: 0;
+}
+
+.prose-content li {
+  position: relative;
+  padding-left: var(--s-6);
+  margin-bottom: var(--s-4);
+  font-size: 18px;
+}
+
+.prose-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 14px;
+  height: 1px;
+  background: var(--c-gold-rich);
+}
+
+.prose-accent-box {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 1px solid var(--c-gold-rich);
+  padding: var(--s-7) var(--s-8);
+  margin: var(--s-9) 0;
+}
+
+.prose-image-block {
+  margin: var(--s-9) 0;
+  width: 100%;
+}
+
+.prose-image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-sm);
+  display: block;
+}
+
+.prose-caption {
+  display: block;
+  font-size: 12px;
+  color: var(--c-text-muted);
+  text-align: left;
+  margin-top: var(--s-4);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.prose-quote {
+  padding: var(--s-6) 0;
+  margin: var(--s-9) 0;
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 400;
+  color: var(--c-gold);
+  line-height: 1.3;
+  text-align: left;
+  position: relative;
+}
+
+.prose-quote::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-size: 80px;
+  opacity: 0.1;
+  color: var(--c-gold);
+}
+
+@media (max-width: 768px) {
+  .prose-content {
+    font-size: 18px;
+    padding: 0 var(--s-4);
+  }
+  .prose-quote {
+    font-size: 24px;
+  }
+}

@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
-import React from 'react';
+import type { ReactNode } from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import '../styles.css';
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',

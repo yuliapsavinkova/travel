@@ -1,24 +1,24 @@
 'use client';
 
-import React from 'react';
+import type { CSSProperties } from 'react';
 
 interface InquiryTriggerProps {
   label: string;
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
 /**
  * InquiryTrigger remains a client component because it triggers
  * a global UI state change (opening the modal) that isn't a separate page.
  */
-export const InquiryTrigger: React.FC<InquiryTriggerProps> = ({ label, className, style }) => {
+export const InquiryTrigger = ({ label, className, style }: InquiryTriggerProps) => {
   const handleOpen = () => {
     window.dispatchEvent(new CustomEvent('open-inquiry-portal'));
   };
 
   return (
-    <button className={className} style={style} onClick={handleOpen}>
+    <button className={className} style={style} onClick={handleOpen} type="button">
       {label}
     </button>
   );

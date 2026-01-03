@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import type { ReactNode } from 'react';
 import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR, GLOBAL_STRINGS } from '../constants';
 import { InquiryTrigger } from './ClientTriggers';
 import { InstagramIcon, LinkedinIcon, MailIcon, SJLogo, ExternalLinkIcon } from './Icons';
@@ -17,8 +17,9 @@ const Footer = () => {
             >
               <div className="footer-brand-wordmark">
                 <SJLogo size={40} className="footer-brand-icon" />
-                <span className="footer-brand-name serif-italic champagne-text">
-                  Sitter Journey
+                <span className="footer-brand-name serif-italic">
+                  <span>Sitter </span>
+                  <span className="champagne-text">Journey</span>
                 </span>
               </div>
             </Link>

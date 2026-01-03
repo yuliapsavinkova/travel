@@ -79,7 +79,6 @@ export default function ToolkitPage() {
               image={item.imageUrl}
               description={item.description}
               badge={item.discountText ? 'Recommended' : 'Essential'}
-              metadata={[{ icon: getIcon(item.icon), text: 'Travel Essential' }]}
               slug={`/toolkit/${item.slug}`}
               actionLabel="View Details"
               ctaLink={item.link}

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { InquiryTrigger } from '../components/ClientTriggers';
 import { ChevronDownIcon, GlobeIcon, CompassIcon, MapPinIcon } from '../components/Icons';
 import { SITE_STATS } from '../constants';
@@ -15,7 +14,6 @@ export default function HomePage() {
             alt="Solo Female Traveler"
             fill
             priority
-            quality={90}
             sizes="100vw"
             style={{ objectFit: 'cover' }}
           />

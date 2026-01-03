@@ -2,6 +2,7 @@
 @import "./styles/core/variables.css";
 @import "./styles/core/reset.css";
 @import "./styles/core/typography.css";
+@import "./styles/core/prose.css";
 @import "./styles/core/layout.css";
 
 /* Modular Components */

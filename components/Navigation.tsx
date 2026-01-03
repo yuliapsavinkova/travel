@@ -1,21 +1,45 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import ContactForm from './ContactForm';
-import { SJLogo, MenuIcon, XIcon } from './Icons';
+import { MenuIcon, SJLogo, XIcon } from './Icons';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setIsHidden(false);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 150) {
+        setIsHidden(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   useEffect(() => {
     const handleOpenInquiry = () => setIsContactOpen(true);
     window.addEventListener('open-inquiry-portal', handleOpenInquiry);
     return () => window.removeEventListener('open-inquiry-portal', handleOpenInquiry);
   }, []);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsHidden(false);
+  }, [pathname]);
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -27,11 +51,11 @@ const Navigation = () => {
 
   return (
     <>
-      <header className="app-header">
+      <header className={`app-header ${isHidden ? 'hidden' : ''}`}>
         <div className="nav-wrapper">
           <nav className="glass-island">
             <Link href="/" className="branding-clickable" aria-label="Sitter Journey Home">
-              <SJLogo size={60} />
+              <SJLogo size={50} />
             </Link>
 
             <div className="desktop-nav">
@@ -47,10 +71,15 @@ const Navigation = () => {
             </div>
 
             <div className="nav-action-group">
-              <button className="btn-gold desktop-only" onClick={() => setIsContactOpen(true)}>
+              <button
+                type="button"
+                className="btn-gold desktop-only"
+                onClick={() => setIsContactOpen(true)}
+              >
                 Connect
               </button>
               <button
+                type="button"
                 className="mobile-toggle"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle menu"
@@ -77,6 +106,7 @@ const Navigation = () => {
               </Link>
             ))}
             <button
+              type="button"
               className="mobile-menu-item mobile-menu-cta"
               onClick={() => {
                 setIsMobileMenuOpen(false);
