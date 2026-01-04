@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ArrowLeftIcon, ExternalLinkIcon, ShieldCheckIcon } from './Icons';
+import { ArrowLeftIcon, ArrowUpRightIcon, ExternalLinkIcon, ShieldCheckIcon } from './Icons';
+import type { NavLink } from '../types';
 
 interface CommonDetailProps {
   onBack?: string;
@@ -13,6 +14,8 @@ interface CommonDetailProps {
   isAffiliate?: boolean;
   children: ReactNode;
   sidebar?: ReactNode;
+  prevLink?: NavLink;
+  nextLink?: NavLink;
 }
 
 const CommonDetail = ({
@@ -26,6 +29,8 @@ const CommonDetail = ({
   isAffiliate = false,
   children,
   sidebar,
+  prevLink,
+  nextLink,
 }: CommonDetailProps) => {
   return (
     <div className="detail-container">
@@ -88,6 +93,27 @@ const CommonDetail = ({
         <div className={`detail-layout ${sidebar ? 'with-sidebar' : ''}`}>
           <div className="prose-content">
             {children}
+
+            {(prevLink || nextLink) && (
+              <nav className="article-navigation" aria-label="Related articles">
+                <div className="nav-link-block prev">
+                  {prevLink && (
+                    <Link href={prevLink.href}>
+                      <span className="nav-link-label">Previous Step</span>
+                      <span className="nav-link-title">{prevLink.label}</span>
+                    </Link>
+                  )}
+                </div>
+                <div className="nav-link-block next">
+                  {nextLink && (
+                    <Link href={nextLink.href}>
+                      <span className="nav-link-label">Next Step</span>
+                      <span className="nav-link-title">{nextLink.label}</span>
+                    </Link>
+                  )}
+                </div>
+              </nav>
+            )}
 
             {onBack && (
               <div className="detail-footer-nav">

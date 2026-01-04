@@ -35,38 +35,12 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
       isAffiliate={true}
       ctaLabel="Offer: 25% Off Membership"
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
+      prevLink={{ label: 'Destinations', href: '/travel' }}
+      nextLink={{ label: 'Journal: My First Sit', href: '/journal/get-your-first-house-sit' }}
     >
       <div className="flex-col flex-gap-md">
-        <div className="detail-content-section" style={{ marginTop: 0 }}>
-          <h3 className="sub-header">The Assignment</h3>
-          <p className="detail-content-text lead">{stay.sitDescription}</p>
-        </div>
-
+        <p className="prose-lead">{stay.sitDescription}</p>
         <ContentRenderer content={stay.body} />
-
-        <div
-          className="detail-tag-group"
-          style={{ marginTop: 'var(--s-4)', display: 'flex', gap: 'var(--s-2)', flexWrap: 'wrap' }}
-        >
-          {stay.tags.map((tag) => (
-            <span
-              key={tag}
-              className="detail-tag"
-              style={{
-                background: 'var(--c-glass)',
-                border: '1px solid var(--c-border-light)',
-                padding: '6px 12px',
-                borderRadius: 'var(--r-pill)',
-                fontSize: '10px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                color: 'var(--c-gold)',
-              }}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
       </div>
     </CommonDetail>
   );

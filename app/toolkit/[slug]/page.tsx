@@ -14,7 +14,7 @@ export default async function ReferralDetailPage({
 }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  // Clean look: data is already typed and flattened at the source
+  // Clean logic: data is already typed and flattened at the source
   const item = ALL_REFERRALS.find((i) => i.slug === slug);
 
   if (!item) {
@@ -41,6 +41,8 @@ export default async function ReferralDetailPage({
       isAffiliate={true}
       ctaLabel={item.discountText ? `Offer: ${item.discountText}` : 'Visit Partner'}
       ctaLink={item.link}
+      prevLink={{ label: 'Travel Guides', href: '/travel' }}
+      nextLink={{ label: 'The Journal', href: '/journal' }}
     >
       <div className="flex-col">
         <ContentRenderer content={item.body} className="detail-rich-content" />

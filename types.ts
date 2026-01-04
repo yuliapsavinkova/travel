@@ -1,5 +1,10 @@
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
 export interface Review {
   id: string;
   slug: string;
@@ -13,6 +18,8 @@ export interface Review {
   sitDescription: string;
   body?: string;
   tags: string[];
+  prevLink?: NavLink;
+  nextLink?: NavLink;
 }
 
 export interface BlogPost {
@@ -27,6 +34,8 @@ export interface BlogPost {
   location: string;
   ctaLink?: string;
   ctaLabel?: string;
+  prevLink?: NavLink;
+  nextLink?: NavLink;
 }
 
 export interface TravelGuide {
@@ -39,6 +48,8 @@ export interface TravelGuide {
   imageUrl: string;
   tags: string[];
   date?: string;
+  prevLink?: NavLink;
+  nextLink?: NavLink;
 }
 
 export interface ReferralCategory {
@@ -58,6 +69,8 @@ export interface ReferralItem {
   icon: string;
   imageUrl?: string;
   promoNote?: string;
+  prevLink?: NavLink;
+  nextLink?: NavLink;
 }
 
 export interface SiteStrings {

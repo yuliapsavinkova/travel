@@ -35,41 +35,12 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
       isAffiliate={true}
       ctaLabel="Offer: 25% Off Membership"
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
+      prevLink={{ label: 'My Stays', href: '/stays' }}
+      nextLink={{ label: "Traveler's Toolkit", href: '/toolkit' }}
     >
-      <div className="flex-col flex-gap-lg">
-        <div className="detail-content-section">
-          <h3 className="sub-header">Overview</h3>
-          <p className="detail-content-text lead">{guide.excerpt}</p>
-        </div>
-
+      <div className="flex-col flex-gap-md">
+        <p className="prose-lead">{guide.excerpt}</p>
         <ContentRenderer content={guide.body} />
-
-        <div className="detail-content-section" style={{ marginTop: 'var(--s-6)' }}>
-          <h3 className="sub-header">Guide Highlights</h3>
-          <div
-            className="detail-tag-group"
-            style={{ display: 'flex', gap: 'var(--s-2)', flexWrap: 'wrap' }}
-          >
-            {guide.tags.map((tag) => (
-              <span
-                key={tag}
-                className="detail-tag"
-                style={{
-                  background: 'var(--c-glass)',
-                  border: '1px solid var(--c-border-light)',
-                  padding: '6px 12px',
-                  borderRadius: 'var(--r-pill)',
-                  fontSize: '10px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.1em',
-                  color: 'var(--c-gold)',
-                }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </CommonDetail>
   );
