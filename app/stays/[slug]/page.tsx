@@ -32,6 +32,7 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
       image={stay.imageUrl || ''}
       title={stay.location}
       date={stay.date}
+      isAffiliate={true}
       ctaLabel="Offer: 25% Off Membership"
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
     >

@@ -36,6 +36,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       image={post.imageUrl}
       title={post.title}
       date={post.date}
+      isAffiliate={true}
       ctaLabel={post.ctaLabel}
       ctaLink={post.ctaLink}
     >

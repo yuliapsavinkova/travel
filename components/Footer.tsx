@@ -93,14 +93,22 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-credits">
-            &copy; <span className="footer-year-highlight">{CURRENT_YEAR}</span> SITTER JOURNEY
-            &bull;{' '}
+          <div
+            className="footer-credits"
+            style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}
+          >
+            <span>&copy; {CURRENT_YEAR} SITTER JOURNEY</span>
             <Link
               href="/privacy"
               style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}
             >
-              PRIVACY POLICY
+              PRIVACY
+            </Link>
+            <Link
+              href="/disclosure"
+              style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}
+            >
+              DISCLOSURE
             </Link>
           </div>
           <div className="footer-credits">

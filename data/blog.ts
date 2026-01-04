@@ -8,7 +8,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'How to Get Your First House Sit (Even With No Reviews)',
     excerpt:
       'The exact framework I used to go from zero reviews to a professional portfolio of verified stays.',
-    date: 'Feb 24, 2024',
+    date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
     imageUrl:

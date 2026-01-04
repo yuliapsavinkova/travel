@@ -16,7 +16,7 @@ export const NEXT_YEAR = ACTIVE_YEAR + 1;
  * GLOBAL SITE STATISTICS
  */
 export const SITE_STATS = {
-  sitsCount: '32',
+  sitsCount: '16',
   statesCount: '28',
   countriesCount: '37',
   clientRating: '5.0',

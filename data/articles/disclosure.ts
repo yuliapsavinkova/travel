@@ -1,0 +1,26 @@
+export const disclosureContent = `
+  <p class="prose-lead">Transparency is the foundation of the Sitter Journey community. This page explains how I handle referral and affiliate relationships on this site.</p>
+
+  <h2>Referrals vs. Affiliates</h2>
+  <p>Currently, the links on this site (like TrustedHousesitters) are <strong>Referral Links</strong>. I do not receive cash payments for these. Instead, they operate on a "Give One, Get One" model. For example, you receive a discount on your membership, and I receive a credit (like a free month) added to mine.</p>
+  
+  <p><strong>Affiliate Links</strong> are slightly different and involve a cash commission paid by a brand. While I may incorporate these in the future to help cover site hosting and photography costs, my current focus is solely on the referral programs I personally use every day.</p>
+
+  <h2>Why I Disclose Both</h2>
+  <p>Whether it is a free month of service or a small commission, the law (FTC) and search engines (Google) require disclosure of any "material connection." This ensures you know exactly when a recommendation might be incentivized.</p>
+
+  <h2>My Commitment to You</h2>
+  <p>I completed dozens of house sits across the United States before I ever shared a single link. My reputation as a professional steward is my most valuable asset. I will <strong>never</strong> recommend a tool, service, or membership that I don't personally use and trust, regardless of the referral benefit.</p>
+
+  <div class="prose-accent-box">
+    <h3>Current Referral Partners</h3>
+    <ul>
+      <li><strong>TrustedHousesitters:</strong> Referral (Free Membership Months)</li>
+      <li><strong>Rover:</strong> Referral (Pet Care Credits)</li>
+      <li><strong>Visible:</strong> Referral (Mobile Service Credits)</li>
+      <li><strong>Planet Fitness:</strong> Referral (Wellness Credits)</li>
+    </ul>
+  </div>
+
+  <p>Thank you for using my links—it is a simple, no-cost way to support the free guides and journals I share here.</p>
+`;

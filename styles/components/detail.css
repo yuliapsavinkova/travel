@@ -53,7 +53,7 @@
   max-width: 900px;
   margin: 0 auto var(--s-6) auto;
   aspect-ratio: 16 / 4.2;
-  max-height: 240px; /* Approximately 1/4 of a 13" laptop screen height */
+  max-height: 240px;
   min-height: 180px;
   border-radius: var(--r-md);
   overflow: hidden;
@@ -94,6 +94,51 @@
   pointer-events: none;
 }
 
+/* HERO DISCLOSURE BAR */
+.hero-disclosure-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 10px var(--s-4);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--c-white);
+}
+
+.disclosure-icon {
+  color: var(--c-gold);
+  flex-shrink: 0;
+}
+
+.disclosure-text {
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
+}
+
+.disclosure-link {
+  color: var(--c-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 4px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.disclosure-link:hover {
+  color: var(--c-white);
+  text-decoration-color: transparent;
+}
+
 /* VIBRANT GLASS NAVIGATION */
 .hero-glass-link {
   position: absolute;
@@ -108,7 +153,7 @@
   -webkit-backdrop-filter: blur(25px) saturate(2);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--r-pill);
-  color: var(--c-white);
+  color: var(--c-white) !important;
   font-size: 9px;
   font-weight: 800;
   text-transform: uppercase;
@@ -120,7 +165,7 @@
 .hero-glass-link:hover {
   background: var(--c-gold);
   border-color: var(--c-gold);
-  color: var(--c-black);
+  color: var(--c-black) !important;
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 15px 40px rgba(229, 193, 133, 0.4);
 }
@@ -130,10 +175,6 @@
 }
 .hero-cta-link {
   right: var(--s-4);
-  color: var(--c-gold);
-}
-.hero-cta-link:hover {
-  color: var(--c-black);
 }
 
 .detail-layout-container {
@@ -203,5 +244,13 @@
   }
   .hero-cta-link {
     right: var(--s-3);
+  }
+
+  .hero-disclosure-bar {
+    padding: 8px var(--s-3);
+  }
+
+  .disclosure-text {
+    font-size: 9px;
   }
 }

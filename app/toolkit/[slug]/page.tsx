@@ -37,6 +37,8 @@ export default async function ReferralDetailPage({
       onBack="/toolkit#framework"
       image={item.imageUrl || ''}
       title={item.name}
+      date={item.date}
+      isAffiliate={true}
       ctaLabel={item.discountText ? `Offer: ${item.discountText}` : 'Visit Partner'}
       ctaLink={item.link}
     >

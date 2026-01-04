@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ArrowLeftIcon, ExternalLinkIcon } from './Icons';
+import { ArrowLeftIcon, ExternalLinkIcon, ShieldCheckIcon } from './Icons';
 
 interface CommonDetailProps {
   onBack?: string;
@@ -10,6 +10,7 @@ interface CommonDetailProps {
   date?: string;
   ctaLabel?: string;
   ctaLink?: string;
+  isAffiliate?: boolean;
   children: ReactNode;
   sidebar?: ReactNode;
 }
@@ -22,6 +23,7 @@ const CommonDetail = ({
   date,
   ctaLabel,
   ctaLink,
+  isAffiliate = false,
   children,
   sidebar,
 }: CommonDetailProps) => {
@@ -60,6 +62,25 @@ const CommonDetail = ({
             <span>{ctaLabel}</span>
             <ExternalLinkIcon size={12} />
           </a>
+        )}
+
+        {/* Cinematic Disclosure Overlay - Pinned to bottom of image */}
+        {isAffiliate && (
+          <div className="hero-disclosure-bar">
+            <ShieldCheckIcon size={14} className="disclosure-icon" />
+            <span className="disclosure-text">
+              Disclosure: This post contains referral or affiliate links. If you use them, I may
+              receive a credit or commission at no cost to you.{' '}
+              <Link
+                href="/disclosure"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="disclosure-link"
+              >
+                Read More
+              </Link>
+            </span>
+          </div>
         )}
       </div>
 

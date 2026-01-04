@@ -6,8 +6,8 @@ export default function PrivacyPage() {
   return (
     <CommonDetail
       image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2400"
-      title="Privacy Policy."
-      date="Legal Disclosure"
+      title="Privacy & Legal Disclosure."
+      date="January 2026"
     >
       <div className="flex-col">
         <ContentRenderer content={privacyPolicyContent} />

@@ -32,6 +32,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
       image={guide.imageUrl}
       title={guide.title}
       date={guide.date}
+      isAffiliate={true}
       ctaLabel="Offer: 25% Off Membership"
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
     >

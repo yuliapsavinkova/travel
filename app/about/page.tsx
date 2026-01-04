@@ -7,7 +7,7 @@ import { aboutIntro, aboutBody } from '../../data/articles/about-me';
 
 export default function AboutPage() {
   return (
-    <CommonDetail image="/portrait.png" title="About Yulia." date="The Narrative">
+    <CommonDetail image="/portrait.png" title="About Yulia." date="January 2026">
       <div className="flex-col">
         <p className="prose-lead">{aboutIntro}</p>
 

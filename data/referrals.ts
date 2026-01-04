@@ -10,6 +10,7 @@ export const REFERRALS: ReferralCategory[] = [
         slug: 'trustedhousesitters-referral',
         name: 'TrustedHousesitters',
         description: 'The global gold standard for house and pet sitting. Claim your 25% discount.',
+        date: 'January 2026',
         body: txt(`TrustedHousesitters is a global platform that connects homeowners with travelers who exchange pet care for a place to stay. At its core, it’s simple: you look after someone’s home and pets, and in return you live rent-free. In practice, it’s one of the safest, most structured ways to travel long-term without burning through savings.
 
 What sets TrustedHousesitters apart is the scale and trust layer. It’s a large, established community with identity verification, secure messaging, and—most importantly—detailed reviews from both homeowners and sitters. Those reviews are everything. They tell you exactly what kind of home, pets, and expectations you’re walking into, so you’re not guessing or gambling.
@@ -33,6 +34,7 @@ This isn’t a hack or a loophole. It’s a fair exchange, built on trust, and i
         slug: 'rover-pet-care',
         name: 'Rover',
         description: 'Vetted localized care and backup for transitional periods.',
+        date: 'January 2026',
         body: txt(
           `Rover is a critical tool for travelers who need reliable, localized support with the backing of the Rover Guarantee for peace of mind. I use it as my bridge between long-term stays when I am moving between states.`
         ),
@@ -48,6 +50,7 @@ This isn’t a hack or a loophole. It’s a fair exchange, built on trust, and i
         slug: 'visible-connectivity',
         name: 'Visible',
         description: 'Unlimited 5G/4G data with hotspot for reliable remote work on the road.',
+        date: 'January 2026',
         body: txt(
           `Consistent connectivity is the backbone of my journey. I work remotely while moving between cities. Visible’s unlimited hotspot is what makes this possible — whether I’m working from a rental, a client’s home, or on the road.`
         ),
@@ -63,6 +66,7 @@ This isn’t a hack or a loophole. It’s a fair exchange, built on trust, and i
         slug: 'planet-fitness-wellness',
         name: 'Planet Fitness',
         description: 'Nationwide access to wellness and amenities while traveling.',
+        date: 'January 2026',
         body: txt(
           `This membership is my "home base" for wellness and practical needs on travel days between stays. With a Black Card membership, I always have a clean, safe place to recharge while navigating the country solo.`
         ),
