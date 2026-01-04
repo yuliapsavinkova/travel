@@ -94,8 +94,14 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <div className="footer-credits">
-            &copy; <span className="footer-year-highlight">{CURRENT_YEAR}</span> SITTER JOURNEY. ALL
-            RIGHTS RESERVED.
+            &copy; <span className="footer-year-highlight">{CURRENT_YEAR}</span> SITTER JOURNEY
+            &bull;{' '}
+            <Link
+              href="/privacy"
+              style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}
+            >
+              PRIVACY POLICY
+            </Link>
           </div>
           <div className="footer-credits">
             BASED IN THE <span className="footer-year-highlight">USA</span> &bull; TRAVELING
