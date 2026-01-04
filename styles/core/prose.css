@@ -1,34 +1,33 @@
-/* Prose Content - High-End Editorial Styles */
+/* Prose Content - Clean Editorial Reading */
 .prose-content {
   color: var(--c-text-dim);
-  font-size: 20px;
-  line-height: 1.9;
+  font-size: 18px;
+  line-height: 1.8;
   max-width: 720px;
   margin: 0 auto;
   font-weight: 400;
-  padding-top: 0; /* Removed padding to tighten gap with hero/action bar */
 }
 
 .prose-lead {
-  font-size: clamp(24px, 4vw, 30px);
+  font-size: 1.25rem;
   color: var(--c-white);
-  line-height: 1.5;
-  margin-bottom: var(--s-8);
+  line-height: 1.6;
+  margin-bottom: var(--s-7);
   font-family: var(--f-serif);
   font-style: italic;
-  letter-spacing: -0.01em;
+  font-weight: 400;
   opacity: 0.95;
 }
 
 .prose-content h2 {
   font-family: var(--f-serif);
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: 1.9rem;
   font-style: italic;
   font-weight: 700;
   color: var(--c-white);
-  margin-top: var(--s-9);
-  margin-bottom: var(--s-5);
-  line-height: 1.1;
+  margin-top: var(--s-8);
+  margin-bottom: var(--s-4);
+  line-height: 1.3;
 }
 
 .prose-content h3 {
@@ -36,14 +35,14 @@
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   color: var(--c-gold);
   margin-top: var(--s-7);
-  margin-bottom: var(--s-4);
+  margin-bottom: var(--s-3);
 }
 
 .prose-content p {
-  margin-bottom: var(--s-6);
+  margin-bottom: var(--s-5);
   opacity: 0.85;
 }
 
@@ -52,87 +51,64 @@
   font-weight: 600;
 }
 
-.prose-content ul {
-  list-style: none;
-  margin: var(--s-7) 0;
-  padding-left: 0;
-}
-
-.prose-content li {
-  position: relative;
-  padding-left: var(--s-6);
-  margin-bottom: var(--s-4);
-  font-size: 18px;
-}
-
-.prose-content li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 16px;
-  width: 14px;
-  height: 1px;
-  background: var(--c-gold-rich);
-}
-
 .prose-accent-box {
-  background: rgba(255, 255, 255, 0.02);
-  border-left: 1px solid var(--c-gold-rich);
-  padding: var(--s-7) var(--s-8);
-  margin: var(--s-9) 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--c-border-light);
+  padding: var(--s-6);
+  margin: var(--s-8) 0;
+  border-radius: var(--r-sm);
 }
 
+/* 
+   PROSE IMAGE BLOCK FIX
+   Ensures images inside articles are contained and don't explode vertically.
+*/
 .prose-image-block {
-  margin: var(--s-9) 0;
+  margin: var(--s-8) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
   width: 100%;
 }
 
 .prose-image-block img {
   width: 100%;
-  height: auto;
-  border-radius: var(--r-sm);
-  display: block;
+  max-height: 440px; /* Constraints vertical "humangoes" size */
+  object-fit: cover;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .prose-caption {
-  display: block;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--c-text-muted);
-  text-align: left;
-  margin-top: var(--s-4);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .prose-quote {
-  padding: var(--s-6) 0;
-  margin: var(--s-9) 0;
+  padding: var(--s-7);
+  margin: var(--s-8) 0;
   font-family: var(--f-serif);
   font-style: italic;
-  font-size: clamp(30px, 5vw, 42px);
+  font-size: 1.5rem;
   font-weight: 400;
   color: var(--c-gold);
-  line-height: 1.3;
-  text-align: left;
-  position: relative;
-}
-
-.prose-quote::before {
-  content: '"';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  font-size: 80px;
-  opacity: 0.1;
-  color: var(--c-gold);
+  line-height: 1.5;
+  text-align: center;
+  border-top: 1px solid var(--c-border-light);
+  border-bottom: 1px solid var(--c-border-light);
 }
 
 @media (max-width: 768px) {
   .prose-content {
-    font-size: 18px;
-    padding: 0 var(--s-4);
+    font-size: 17px;
   }
-  .prose-quote {
-    font-size: 24px;
+  .prose-image-block img {
+    max-height: 300px;
   }
 }

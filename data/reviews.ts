@@ -5,60 +5,60 @@ export const REVIEWS: Review[] = [
   {
     id: '1',
     slug: 'austin-stewardship',
-    name: 'Jessica & Mark',
+    name: 'Jessica',
     location: 'Austin, Texas',
     rating: 5,
-    date: 'Oct 2023',
-    petType: ['Dog'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
-    text: 'Julia was absolutely incredible. The house was cleaner than we left it, and we got daily photo updates.',
-    sitDescription: 'Luxury residence stewardship and senior Golden Retriever care.',
-    body: txt(`Managing this high-end Austin property required a mix of technical home maintenance and compassionate senior pet care. I was responsible for twice-daily insulin injections and monitoring a complex automated landscaping system.
-
-My stay ensured the owners could travel with total peace of mind, knowing their home was occupied and their pets were on a strict medical schedule. I provided detailed daily reports and high-resolution photos through my nomad data plan.
-
-This assignment was verified through TrustedHousesitters, where I maintain a perfect record for reliability and property stewardship.`),
-    tags: ['Long-Term', 'Smart Home', 'Senior Care'],
-  },
-  {
-    id: '2',
-    slug: 'dallas-residence',
-    name: 'The Henderson Family',
-    location: 'Dallas, Texas',
-    rating: 5,
-    date: 'July 2024',
-    petType: ['Dog'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1200',
-    text: 'A truly professional experience. Julia managed our home and high-energy rescue pointers with absolute grace.',
-    sitDescription: 'Suburban acreage management and high-energy breed enrichment.',
-    body: txt(`This assignment involved managing 5 acres of property and two high-energy rescue Pointers. I implemented a structured exercise routine and maintained the home's security grid during a month-long absence.
-
-Sprawling suburban properties require constant vigilance. I conducted daily perimeter checks and ensured all security cameras remained online and functional, utilizing my tech toolkit for 24/7 monitoring.
-
-Verified sit history available on my TrustedHousesitters profile, confirming my status as a preferred sitter for large estates.`),
-    tags: ['Acreage', 'Rescue Specialist', 'High-Energy Breeds'],
-  },
-  {
-    id: '3',
-    slug: 'laguna-beach-coastal',
-    name: 'Sarah & Thomas',
-    location: 'Laguna Beach, CA',
-    rating: 5,
-    date: 'August 2024',
+    date: 'May 2025',
     petType: ['Cat'],
     imageUrl:
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200',
-    text: 'Exquisite eye for detail. Our art-filled coastal home and our senior cats were in the best hands.',
-    sitDescription: 'Coastal property oversight and art conservation monitoring.',
-    body: txt(`Coastal environments present unique challenges like humidity and salt-air exposure. I managed internal dehumidification for a private art collection while caring for two senior Siamese cats with complex needs.
-
-The cats required specialized diet prep and oral medications, which were administered with zero missed doses over the month-long stay. I kept the owners updated with daily video check-ins.
-
-Another successful long-term sit completed via my TrustedHousesitters network, reinforcing my expertise in high-value property management.`),
-    tags: ['Coastal', 'Art Care', 'Senior Wellness'],
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
+    text: 'South Austin Black Cat Gem',
+    // review:
+    // 'Yulia has been the best sitter I’ve had so far! Extremely kind and always sending updates about my house and cat. Very grateful to have had her stay at my home and would love to have her stay again soon. Highly recommended.',
+    sitDescription: 'South Austin Black Cat Gem',
+    body: txt(
+      'This assignment was verified through TrustedHousesitters, where I maintain a perfect record for reliability and property stewardship.'
+    ),
+    tags: ['Long-Term'],
   },
+  //   {
+  //     id: '2',
+  //     slug: 'dallas-residence',
+  //     name: 'The Henderson Family',
+  //     location: 'Dallas, Texas',
+  //     rating: 5,
+  //     date: 'July 2024',
+  //     petType: ['Dog'],
+  //     imageUrl:
+  //       'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1200',
+  //     text: 'A truly professional experience. Julia managed our home and high-energy rescue pointers with absolute grace.',
+  //     sitDescription: 'Suburban acreage management and high-energy breed enrichment.',
+  //     body: txt(`This assignment involved managing 5 acres of property and two high-energy rescue Pointers. I implemented a structured exercise routine and maintained the home's security grid during a month-long absence.
+
+  // Sprawling suburban properties require constant vigilance. I conducted daily perimeter checks and ensured all security cameras remained online and functional, utilizing my tech toolkit for 24/7 monitoring.
+
+  // Verified sit history available on my TrustedHousesitters profile, confirming my status as a preferred sitter for large estates.`),
+  //     tags: ['Acreage', 'Rescue Specialist', 'High-Energy Breeds'],
+  //   },
+  //   {
+  //     id: '3',
+  //     slug: 'laguna-beach-coastal',
+  //     name: 'Sarah & Thomas',
+  //     location: 'Laguna Beach, CA',
+  //     rating: 5,
+  //     date: 'August 2024',
+  //     petType: ['Cat'],
+  //     imageUrl:
+  //       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200',
+  //     text: 'Exquisite eye for detail. Our art-filled coastal home and our senior cats were in the best hands.',
+  //     sitDescription: 'Coastal property oversight and art conservation monitoring.',
+  //     body: txt(`Coastal environments present unique challenges like humidity and salt-air exposure. I managed internal dehumidification for a private art collection while caring for two senior Siamese cats with complex needs.
+
+  // The cats required specialized diet prep and oral medications, which were administered with zero missed doses over the month-long stay. I kept the owners updated with daily video check-ins.
+
+  // Another successful long-term sit completed via my TrustedHousesitters network, reinforcing my expertise in high-value property management.`),
+  //     tags: ['Coastal', 'Art Care', 'Senior Wellness'],
+  //   },
   // {
   //   id: '4',
   //   slug: 'sf-pacific-heights',

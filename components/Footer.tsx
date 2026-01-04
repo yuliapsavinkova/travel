@@ -53,6 +53,9 @@ const Footer = () => {
               <li>
                 <Link href="/toolkit">Toolkit</Link>
               </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
             </ul>
           </div>
           <div className="footer-contact-col">

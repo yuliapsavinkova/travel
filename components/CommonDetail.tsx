@@ -3,7 +3,8 @@ import type { ReactNode } from 'react';
 import { ArrowLeftIcon, ExternalLinkIcon } from './Icons';
 
 interface CommonDetailProps {
-  onBack: string;
+  onBack?: string;
+  backLabel?: string;
   image: string;
   title: string;
   date?: string;
@@ -15,6 +16,7 @@ interface CommonDetailProps {
 
 const CommonDetail = ({
   onBack,
+  backLabel = 'Archive',
   image,
   title,
   date,
@@ -37,14 +39,16 @@ const CommonDetail = ({
         <div className="detail-hero-overlay" />
 
         {/* Glass Corner Navigation - Pinned to corners */}
-        <Link
-          href={onBack}
-          className="hero-glass-link hero-back-link"
-          aria-label="Go back to archive"
-        >
-          <ArrowLeftIcon size={12} />
-          <span>Archive</span>
-        </Link>
+        {onBack && (
+          <Link
+            href={onBack}
+            className="hero-glass-link hero-back-link"
+            aria-label={`Go back to ${backLabel}`}
+          >
+            <ArrowLeftIcon size={12} />
+            <span>{backLabel}</span>
+          </Link>
+        )}
 
         {ctaLabel && ctaLink && (
           <a
@@ -64,12 +68,14 @@ const CommonDetail = ({
           <div className="prose-content">
             {children}
 
-            <div className="detail-footer-nav">
-              <Link href={onBack} className="btn-back-footer">
-                <ArrowLeftIcon size={14} />
-                <span>Return to Journey Archive</span>
-              </Link>
-            </div>
+            {onBack && (
+              <div className="detail-footer-nav">
+                <Link href={onBack} className="btn-back-footer">
+                  <ArrowLeftIcon size={14} />
+                  <span>Return to {backLabel}</span>
+                </Link>
+              </div>
+            )}
           </div>
 
           {sidebar && <div className="detail-sidebar">{sidebar}</div>}

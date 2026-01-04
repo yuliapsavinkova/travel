@@ -47,6 +47,7 @@ const Navigation = () => {
     { label: 'Travel', href: '/travel' },
     { label: 'Journal', href: '/journal' },
     { label: 'Toolkit', href: '/toolkit' },
+    { label: 'About', href: '/about' },
   ];
 
   return (
