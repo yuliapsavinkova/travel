@@ -17,7 +17,6 @@ export interface Review {
   imageUrl?: string;
   sitDescription: string;
   body?: string;
-  tags: string[];
   prevLink?: NavLink;
   nextLink?: NavLink;
 }
@@ -46,7 +45,6 @@ export interface TravelGuide {
   excerpt: string;
   body: string;
   imageUrl: string;
-  tags: string[];
   date?: string;
   prevLink?: NavLink;
   nextLink?: NavLink;

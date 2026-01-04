@@ -17,6 +17,5 @@ export const REVIEWS: Review[] = [
     body: txt(
       'This assignment was verified through TrustedHousesitters, where I maintain a perfect record for reliability and property stewardship.'
     ),
-    tags: ['Long-Term', 'Cat Care', 'Plants Care'],
   },
 ];

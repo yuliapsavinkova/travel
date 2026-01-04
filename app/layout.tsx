@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import type { ReactNode } from 'react';
+import Script from 'next/script';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import { SITE_CONFIG } from '../constants';
 import '../styles.css';
 
 const inter = Inter({
@@ -99,6 +101,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     },
   };
 
+  const gaId = SITE_CONFIG.googleAnalyticsId;
+
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
@@ -109,6 +113,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body>
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+
         <div className="app-root">
           <div className="studio-depth" />
           <Navigation />

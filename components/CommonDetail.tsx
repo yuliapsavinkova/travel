@@ -99,7 +99,7 @@ const CommonDetail = ({
                 <div className="nav-link-block prev">
                   {prevLink && (
                     <Link href={prevLink.href}>
-                      <span className="nav-link-label">Previous Step</span>
+                      <span className="nav-link-label">Read previous article</span>
                       <span className="nav-link-title">{prevLink.label}</span>
                     </Link>
                   )}
@@ -107,7 +107,7 @@ const CommonDetail = ({
                 <div className="nav-link-block next">
                   {nextLink && (
                     <Link href={nextLink.href}>
-                      <span className="nav-link-label">Next Step</span>
+                      <span className="nav-link-label">Read next article</span>
                       <span className="nav-link-title">{nextLink.label}</span>
                     </Link>
                   )}

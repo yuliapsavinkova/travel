@@ -27,6 +27,7 @@ export const SITE_CONFIG = {
   name: 'Sitter Journey',
   tagline: 'Full-Time Traveler & Professional Steward',
   email: 'sitterjourney@gmail.com',
+  googleAnalyticsId: 'G-R0920QKYXK',
   socials: {
     instagram: 'https://instagram.com',
     linkedin: 'https://linkedin.com',

@@ -39,8 +39,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       isAffiliate={true}
       ctaLabel={post.ctaLabel}
       ctaLink={post.ctaLink}
-      prevLink={{ label: 'The Framework', href: '/toolkit' }}
-      nextLink={{ label: 'My Stays', href: '/stays' }}
+      prevLink={{ label: "The Traveler's Toolkit", href: '/toolkit' }}
+      nextLink={{ label: 'Explore My Stays', href: '/stays' }}
     >
       <div className="flex-col flex-gap-lg">
         <ContentRenderer content={post.body} />

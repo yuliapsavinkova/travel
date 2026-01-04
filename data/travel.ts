@@ -10,7 +10,6 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
     excerpt: 'A month of intentional living among the terraced rice fields.',
     imageUrl:
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1200',
-    tags: ['Slow Travel', 'Design'],
     date: 'January 2026',
     body: txt(`Ubud is where slow travel becomes a lifestyle. I spent a month reflecting on architecture and intentionality while living in a traditional bamboo home, learning the rhythm of the local community and the art of presence.
 
