@@ -49,10 +49,10 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
           <span className="serif-italic">Message</span> Sent.
         </h2>
         <p className="portal-success-body">
-          Your inquiry has been received. I will contact you personally within 24 hours.
+          Thank you. I have received your message and will get back to you within 24 hours.
         </p>
         <button className="btn-gold" style={{ minWidth: '200px' }} onClick={onClose} type="button">
-          Return
+          Close
         </button>
       </div>
     );
@@ -62,9 +62,9 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
     <div>
       <div className="portal-header-group">
         <div>
-          <div className="sub-header">Professional Connectivity</div>
+          <div className="sub-header">Get In Touch</div>
           <h2 className="display-title display-title-md" style={{ marginBottom: 0 }}>
-            The <span className="champagne-text">Inquiry.</span>
+            <span className="champagne-text">Contact.</span>
           </h2>
         </div>
         <button
@@ -82,7 +82,7 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         className="flex-col flex-gap-md"
         style={{ marginTop: 'var(--s-4)' }}
       >
-        <input type="hidden" name="_subject" value="New Inquiry from Sitter Journey Portfolio" />
+        <input type="hidden" name="_subject" value="New message from Sitter Journey" />
         <input type="hidden" name="_captcha" value="false" />
         <input
           type="hidden"
@@ -93,27 +93,27 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         <div className="form-grid">
           <div className="form-group">
             <label className="form-label" htmlFor="name">
-              Full Name
+              Name
             </label>
             <input
               required
               id="name"
               name="name"
               type="text"
-              placeholder="Jane Smith"
+              placeholder="Your Name"
               className="form-input"
             />
           </div>
           <div className="form-group">
             <label className="form-label" htmlFor="email">
-              Email Address
+              Email
             </label>
             <input
               required
               id="email"
               name="email"
               type="email"
-              placeholder="jane@email.com"
+              placeholder="email@example.com"
               className="form-input"
             />
           </div>
@@ -121,14 +121,14 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
 
         <div className="form-group">
           <label className="form-label" htmlFor="message">
-            Your Message
+            Message
           </label>
           <textarea
             required
             id="message"
             name="message"
             rows={5}
-            placeholder="Tell me how I can help..."
+            placeholder="How can I help you?"
             className="form-textarea"
           />
         </div>

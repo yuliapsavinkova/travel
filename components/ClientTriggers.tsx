@@ -2,19 +2,18 @@
 
 import type { CSSProperties } from 'react';
 
-interface InquiryTriggerProps {
+interface ContactTriggerProps {
   label: string;
   className?: string;
   style?: CSSProperties;
 }
 
 /**
- * InquiryTrigger remains a client component because it triggers
- * a global UI state change (opening the modal) that isn't a separate page.
+ * ContactTrigger triggers the global contact modal.
  */
-export const InquiryTrigger = ({ label, className, style }: InquiryTriggerProps) => {
+export const ContactTrigger = ({ label, className, style }: ContactTriggerProps) => {
   const handleOpen = () => {
-    window.dispatchEvent(new CustomEvent('open-inquiry-portal'));
+    window.dispatchEvent(new CustomEvent('open-contact-portal'));
   };
 
   return (
@@ -23,3 +22,7 @@ export const InquiryTrigger = ({ label, className, style }: InquiryTriggerProps)
     </button>
   );
 };
+
+// Re-export as InquiryTrigger for backward compatibility if needed,
+// but we will update all usages.
+export const InquiryTrigger = ContactTrigger;

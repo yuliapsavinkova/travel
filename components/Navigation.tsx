@@ -31,9 +31,9 @@ const Navigation = () => {
   }, [lastScrollY]);
 
   useEffect(() => {
-    const handleOpenInquiry = () => setIsContactOpen(true);
-    window.addEventListener('open-inquiry-portal', handleOpenInquiry);
-    return () => window.removeEventListener('open-inquiry-portal', handleOpenInquiry);
+    const handleOpenContact = () => setIsContactOpen(true);
+    window.addEventListener('open-contact-portal', handleOpenContact);
+    return () => window.removeEventListener('open-contact-portal', handleOpenContact);
   }, []);
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const Navigation = () => {
                 className="btn-gold desktop-only"
                 onClick={() => setIsContactOpen(true)}
               >
-                Connect
+                Contact
               </button>
               <button
                 type="button"
@@ -114,7 +114,7 @@ const Navigation = () => {
                 setIsContactOpen(true);
               }}
             >
-              Start Inquiry
+              Contact Me
             </button>
           </div>
         </div>

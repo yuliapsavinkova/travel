@@ -1,4 +1,4 @@
-import { InquiryTrigger } from '../../components/ClientTriggers';
+import { ContactTrigger } from '../../components/ClientTriggers';
 import { MailIcon } from '../../components/Icons';
 import { SITE_CONFIG } from '../../constants';
 import CommonDetail from '../../components/CommonDetail';
@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="section-divider" style={{ marginTop: 'var(--s-8)' }}>
           <h3 className="sub-header">Contact</h3>
           <h2 className="display-title-md">
-            Let's <span className="serif-italic champagne-text">Connect.</span>
+            Let's <span className="serif-italic champagne-text">Chat.</span>
           </h2>
           <p
             style={{
@@ -38,7 +38,7 @@ export default function AboutPage() {
               flexWrap: 'wrap',
             }}
           >
-            <InquiryTrigger label="Send an Inquiry" className="btn-gold" />
+            <ContactTrigger label="Contact" className="btn-gold" />
             <a
               href={`mailto:${SITE_CONFIG.email}`}
               className="secondary-btn"

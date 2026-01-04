@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR, GLOBAL_STRINGS } from '../constants';
-import { InquiryTrigger } from './ClientTriggers';
+import { ContactTrigger } from './ClientTriggers';
 import { InstagramIcon, LinkedinIcon, MailIcon, SJLogo, ExternalLinkIcon } from './Icons';
 
 const Footer = () => {
@@ -59,17 +59,17 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-contact-col">
-            <div className="sub-header footer-header">Connect</div>
+            <div className="sub-header footer-header">Contact</div>
             <p className="footer-contact-promo">
-              Accepting inquiries for seasonal stays{' '}
+              Available for housesitting during{' '}
               <span className="footer-year-highlight">
                 {ACTIVE_YEAR}-{NEXT_YEAR}
               </span>
               .
             </p>
             <div className="footer-action-group">
-              <InquiryTrigger
-                label="Inquire"
+              <ContactTrigger
+                label="Contact"
                 className="btn-gold"
                 style={{ flex: 1, minWidth: '140px' }}
               />

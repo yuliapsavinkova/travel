@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { InquiryTrigger } from '../components/ClientTriggers';
+import { ContactTrigger } from '../components/ClientTriggers';
 import { ChevronDownIcon, GlobeIcon, CompassIcon, MapPinIcon } from '../components/Icons';
 import { SITE_STATS } from '../constants';
 
@@ -105,11 +105,10 @@ export default function HomePage() {
             </h2>
             <p className="hero-paragraph" style={{ margin: 'var(--s-4) auto' }}>
               My full-time travel is supported by a foundation of professional stewardship. If you
-              are seeking a trusted traveler to care for your home while you are away, I’d love to
-              connect.
+              are seeking a trusted traveler to care for your home, I’d love to chat.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--s-4)' }}>
-              <InquiryTrigger label="Start An Inquiry" className="btn-gold" />
+              <ContactTrigger label="Contact" className="btn-gold" />
               <Link href="/stays#portfolio" className="secondary-btn">
                 Explore Portfolio
               </Link>
