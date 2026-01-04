@@ -52,6 +52,7 @@ export interface ReferralItem {
   name: string;
   description: string;
   body: string;
+  date?: string;
   discountText?: string;
   link: string;
   icon: string;
