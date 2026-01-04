@@ -1,4 +1,4 @@
-import { ReferralCategory } from '../types';
+import { ReferralCategory, ReferralItem } from '../types';
 import { txt } from '../utils/content';
 
 export const REFERRALS: ReferralCategory[] = [
@@ -80,3 +80,9 @@ This isn’t a hack or a loophole. It’s a fair exchange, built on trust, and i
     ],
   },
 ];
+
+/**
+ * Pre-flattened and explicitly typed list of all referral items.
+ * This prevents type inference issues in components that need to search the entire catalog.
+ */
+export const ALL_REFERRALS: ReferralItem[] = REFERRALS.flatMap((category) => category.items);

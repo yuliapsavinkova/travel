@@ -1,12 +1,10 @@
 import React from 'react';
-import { REFERRALS } from '../../../constants';
+import { ALL_REFERRALS } from '../../../constants';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
-import { ReferralItem } from '../../../types';
 
 export async function generateStaticParams() {
-  const allItems = REFERRALS.flatMap((cat) => cat.items);
-  return allItems.map((item) => ({
+  return ALL_REFERRALS.map((item) => ({
     slug: item.slug,
   }));
 }
@@ -16,9 +14,8 @@ export default async function ReferralDetailPage({
 }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  // Explicit type declaration helps resolve inference issues during the Next.js build step
-  const allItems: ReferralItem[] = REFERRALS.flatMap((cat) => cat.items);
-  const item = allItems.find((i) => i.slug === slug);
+  // Clean look: data is already typed and flattened at the source
+  const item = ALL_REFERRALS.find((i) => i.slug === slug);
 
   if (!item) {
     return (

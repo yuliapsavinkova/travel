@@ -1,34 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { REFERRALS } from '../../constants';
+import { ALL_REFERRALS } from '../../constants';
 import CommonCard from '../../components/CommonCard';
-import {
-  SmartphoneIcon,
-  HomeIcon,
-  HeartIcon,
-  CreditCardIcon,
-  LeafIcon,
-  ChevronDownIcon,
-} from '../../components/Icons';
-
-const getIcon = (iconName: string) => {
-  switch (iconName) {
-    case 'home':
-      return <HomeIcon size={14} />;
-    case 'smartphone':
-      return <SmartphoneIcon size={14} />;
-    case 'leaf':
-      return <LeafIcon size={14} />;
-    case 'heart':
-      return <HeartIcon size={14} />;
-    default:
-      return <CreditCardIcon size={14} />;
-  }
-};
+import { ChevronDownIcon } from '../../components/Icons';
 
 export default function ToolkitPage() {
-  const allTools = REFERRALS.flatMap((category) => category.items);
-
   return (
     <>
       <section className="hero-stack section-margin">
@@ -72,7 +48,7 @@ export default function ToolkitPage() {
         </header>
 
         <div className="grid-standard">
-          {allTools.map((item) => (
+          {ALL_REFERRALS.map((item) => (
             <CommonCard
               key={item.id}
               title={item.name}
