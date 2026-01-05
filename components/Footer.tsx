@@ -48,6 +48,9 @@ const Footer = () => {
                 <Link href="/stays">Stays</Link>
               </li>
               <li>
+                <Link href="/travel">Travel</Link>
+              </li>
+              <li>
                 <Link href="/journal">Journal</Link>
               </li>
               <li>
@@ -60,14 +63,16 @@ const Footer = () => {
           </div>
           <div className="footer-contact-col">
             <div className="sub-header footer-header">Contact</div>
-            <p className="footer-contact-promo">
+            <p className="footer-contact-promo" style={{ display: 'block' }}>
               Available for housesitting during{' '}
-              <span className="footer-year-highlight">
-                {ACTIVE_YEAR}-{NEXT_YEAR}
-              </span>
-              .
+              <span className="footer-year-highlight">{ACTIVE_YEAR}</span>
+              <span style={{ opacity: 0.5, margin: '0 4px' }}>&mdash;</span>
+              <span className="footer-year-highlight">{NEXT_YEAR}</span>.
             </p>
-            <div className="footer-action-group">
+            <div
+              className="footer-action-group"
+              style={{ marginTop: 'var(--s-4)', display: 'flex', gap: 'var(--s-3)' }}
+            >
               <ContactTrigger
                 label="Contact"
                 className="btn-gold"
@@ -93,21 +98,15 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <div
-            className="footer-credits"
-            style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}
-          >
-            <span>&copy; {CURRENT_YEAR} SITTER JOURNEY</span>
-            <Link
-              href="/privacy"
-              style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}
-            >
+          <div className="footer-legal-links">
+            <span className="footer-credits">
+              <span className="copyright-symbol">&copy;</span>{' '}
+              <span className="footer-year-highlight">{CURRENT_YEAR}</span> SITTER JOURNEY
+            </span>
+            <Link href="/privacy" className="footer-legal-link">
               PRIVACY
             </Link>
-            <Link
-              href="/disclosure"
-              style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}
-            >
+            <Link href="/disclosure" className="footer-legal-link">
               DISCLOSURE
             </Link>
           </div>

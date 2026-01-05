@@ -14,4 +14,8 @@
 @import "./styles/components/glass-card.css";
 @import "./styles/components/portal.css";
 @import "./styles/components/form.css";
+
+/* Detail Page Architecture */
 @import "./styles/components/detail.css";
+@import "./styles/components/hero-detail.css";
+@import "./styles/components/article-nav.css";

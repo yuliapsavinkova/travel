@@ -33,7 +33,7 @@
   font-style: italic;
   letter-spacing: -0.02em;
   line-height: 1;
-  color: var(--c-white); /* Base color is white, span handles gold */
+  color: var(--c-white);
 }
 
 .footer-tagline {
@@ -54,9 +54,9 @@
 }
 
 .footer-links li {
-  font-size: 12px;
+  font-size: 11px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -65,7 +65,7 @@
 
 .footer-links li:hover {
   color: var(--c-gold);
-  padding-left: var(--s-2);
+  transform: translateX(8px);
 }
 
 .footer-socials {
@@ -107,10 +107,11 @@
   line-height: 1.6;
 }
 
-.footer-action-group {
-  display: flex;
-  gap: var(--s-3);
-  width: 100%;
+.footer-year-highlight {
+  color: var(--c-gold);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  display: inline;
 }
 
 .footer-bottom {
@@ -121,11 +122,53 @@
   align-items: center;
 }
 
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-legal-link {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--c-text-muted) !important;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-legal-link:hover {
+  color: var(--c-gold) !important;
+  text-decoration-color: var(--c-gold);
+  transform: translateY(-1px);
+}
+
 .footer-credits {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.15em;
   color: var(--c-text-muted);
   text-transform: uppercase;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.copyright-symbol {
+  font-size: 15px; /* Optically matched to height of Inter bold caps */
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  margin-top: -1px; /* Align with uppercase midline */
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
@@ -135,7 +178,11 @@
   }
   .footer-bottom {
     flex-direction: column;
-    gap: var(--s-4);
+    gap: var(--s-5);
     text-align: center;
+    align-items: center;
+  }
+  .footer-legal-links {
+    justify-content: center;
   }
 }

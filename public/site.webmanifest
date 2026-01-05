@@ -1,0 +1,16 @@
+{
+  "name": "Sitter Journey",
+  "short_name": "SitterJourney",
+  "description": "Professional estate stewardship and housesitting portfolio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#e5c185",
+  "icons": [
+    {
+      "src": "/icon",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

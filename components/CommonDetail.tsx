@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ArrowLeftIcon, ArrowUpRightIcon, ExternalLinkIcon, ShieldCheckIcon } from './Icons';
+import {
+  ArrowLeftIcon,
+  ArrowUpRightIcon,
+  ExternalLinkIcon,
+  ShieldCheckIcon,
+  SJLogo,
+} from './Icons';
 import type { NavLink } from '../types';
 
 interface CommonDetailProps {
@@ -34,8 +40,11 @@ const CommonDetail = ({
 }: CommonDetailProps) => {
   return (
     <div className="detail-container">
-      {/* Editorial Header - Centered Typography */}
+      {/* Editorial Header - Centered Typography with Brand Logo */}
       <header className="detail-header-area">
+        <Link href="/" className="detail-brand-link" aria-label="Sitter Journey Home">
+          <SJLogo size={32} className="detail-brand-icon" />
+        </Link>
         {date && <span className="detail-date-label">{date}</span>}
         <h1 className="detail-title-text">{title}</h1>
       </header>

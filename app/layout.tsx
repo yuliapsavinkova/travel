@@ -24,11 +24,18 @@ const playfair = Playfair_Display({
 const OG_IMAGE_URL =
   'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=1200&h=630';
 
+const LOGO_URL = 'https://sitterjourney.com/logo-circle.png'; // Conceptual absolute path
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://sitterjourney.com'),
   title: 'Sitter Journey | Full-Time Traveler & Professional Steward',
   description:
     'Chronicling the solo female travel journey of Sitter Journey. Exploring global destinations through slow living and intentional stewardship.',
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: '/icon',
+    apple: '/icon',
+  },
   keywords: [
     'Full-Time Traveler',
     'Solo Female Traveler',
@@ -80,9 +87,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Sitter Journey Travel',
+    logo: LOGO_URL,
     image: OG_IMAGE_URL,
     description:
       'Solo female traveler and elite housesitter providing expert estate stewardship and pet care.',
+    url: 'https://sitterjourney.com',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'US',
@@ -106,6 +115,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Trusted internal static content
