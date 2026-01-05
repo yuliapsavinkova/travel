@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { ArrowLeftIcon, ExternalLinkIcon, ShieldCheckIcon } from './Icons';
 import type { NavLink } from '../types';
 
@@ -12,7 +12,7 @@ interface CommonDetailProps {
   ctaLabel?: string;
   ctaLink?: string;
   isAffiliate?: boolean;
-  children: ReactNode;
+  children?: ReactNode;
   sidebar?: ReactNode;
   prevLink?: NavLink;
   nextLink?: NavLink;

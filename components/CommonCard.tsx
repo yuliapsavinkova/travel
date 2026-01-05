@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { ArrowUpRightIcon, ExternalLinkIcon } from './Icons';
 
 interface CommonCardProps {
@@ -13,6 +13,7 @@ interface CommonCardProps {
   slug?: string;
   ctaLink?: string;
   ctaLabel?: string;
+  key?: React.Key;
 }
 
 const CommonCard = ({

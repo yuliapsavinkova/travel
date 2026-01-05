@@ -2,17 +2,15 @@ import type { SVGProps, ReactNode } from 'react';
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
+  // Explicitly add common SVG attributes to satisfy strict TypeScript checking
+  className?: string;
+  strokeWidth?: number | string;
 }
 
 /**
  * Base wrapper to ensure all icons share the same aesthetic DNA
  */
-const IconBase = ({
-  size = 24,
-  strokeWidth = 2,
-  children,
-  ...props
-}: IconProps & { children: ReactNode }) => (
+const IconBase = ({ size = 24, strokeWidth = 2, children, ...props }: IconProps) => (
   <svg
     width={size}
     height={size}

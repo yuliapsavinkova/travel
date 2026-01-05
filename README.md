@@ -1,65 +1,57 @@
-# High-Performance Web Architecture
+# Sitter Journey
 
-A high-end, performant web application built with **Next.js 15** and **React 19**, serving as a technical demonstration of modern frontend engineering, modular design systems, and advanced CSS orchestration.
+A personal blog built with **Next.js 15** and **React 19**. This project implements a design system using modular Vanilla CSS and content-driven architecture.
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- **Framework:** [Next.js 15](https://nextjs.org/) (App Router Architecture)
-- **Runtime:** [React 19](https://react.dev/)
-- **Language:** [TypeScript](https://www.typescriptlang.org/) (Strict Mode)
-- **Styling:** Modular Vanilla CSS (Modern CSS Variables, Design System approach)
-- **Tooling:** [Biome](https://biomejs.dev/) (Linting, Formatting, and Import Organization)
-- **Deployment:** Optimized for Vercel/Edge Runtimes
+- **Framework:** Next.js 15 (App Router)
+- **Library:** React 19
+- **Language:** TypeScript
+- **Styling:** CSS Modules / Vanilla CSS Variables
+- **Tooling:** Biome (Linting & Formatting)
 
-## 🏗 Engineering Highlights
+## Technical Architecture
 
-### 1. Advanced CSS Architecture
-The application implements a custom design system without the overhead of heavy utility frameworks.
-- **Rhythmic Spacing:** A scale-based spacing system using CSS variables for consistent padding and margins.
-- **Glassmorphism:** Deep integration of `backdrop-filter` and alpha-channel layering for a cinematic "Studio Depth" UI.
-- **Cinematic Motion:** Hardware-accelerated CSS animations including Ken Burns effects and 3D floating transforms.
+### 1. CSS Design System
+- **Variable-Driven:** Global design tokens for spacing, typography, and color palette defined in `:root`.
+- **Layout:** Standardized Grid and Flexbox implementations for responsive consistency without utility overhead.
+- **Glassmorphism:** Utilization of `backdrop-filter` and `rgba` layering for UI depth.
+- **Hardware Acceleration:** Transitions and animations optimized for GPU processing.
 
-### 2. Modular Component Design
-- **Atomic Icons:** A proprietary SVG icon system built as scalable React components, ensuring minimal bundle size compared to third-party libraries.
-- **Server/Client Boundary Optimization:** Strategic use of Server Components for SEO-critical data and Client Components for interactive portals and animations.
-- **Polymorphic Components:** Generic components like `CommonCard` and `CommonDetail` handle diverse data types through flexible prop interfaces.
+### 2. Component Strategy
+- **Server/Client Boundary:** Strategic use of Server Components for SEO and Client Components for interactive portals (Contact Form, Navigation).
+- **Polymorphic Interfaces:** Reusable generic components (`CommonCard`, `CommonDetail`) driven by strict TypeScript interfaces.
+- **Native SVGs:** Custom SVG icon system implemented as React components to minimize external dependencies.
 
-### 3. Performance & DX
-- **Zero-Dependency Styling:** Leverages native browser capabilities for layout (Grid/Flexbox) and styling, resulting in exceptional Lighthouse scores.
-- **Biome Integration:** replaces Prettier/ESLint with a single, Rust-based tool for sub-millisecond linting and formatting.
-- **Type Safety:** Comprehensive interfaces in `types.ts` ensure data integrity across the content-driven sections.
+### 3. Tooling & DX
+- **Biome:** Unified toolchain for linting and formatting.
+- **Strict Typing:** Centralized type definitions in `types.ts`.
+- **Asset Optimization:** Next.js `Image` component used for AVIF/WebP delivery.
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js >= 20.x
-- pnpm >= 9.x
+## Local Development
 
 ### Installation
 ```bash
-# Install dependencies
 pnpm install
 ```
 
 ### Development
 ```bash
-# Run the development server
 pnpm dev
 ```
 
-### Production Build
+### Build
 ```bash
-# Create an optimized production build
 pnpm build
-
-# Start the production server
 pnpm start
 ```
 
-## 📂 Project Structure
+## Directory Structure
 
-- `/app`: Next.js 15 App Router (Server-side rendering, dynamic routing)
-- `/components`: Modular, reusable UI components
-- `/styles`: Layered CSS architecture (Core variables, reset, layout, and component-specific modules)
-- `constants.ts`: Centralized data management for scalable content updates
+- `/app`: Next.js App Router (Routing and Server Components)
+- `/components`: UI logic and reusable patterns
+- `/styles`: Modular CSS architecture
+- `/data`: Content-driven data structures
+- `/utils`: Helper functions and content transformers
+- `constants.ts`: Global configuration and static strings
 - `types.ts`: Application-wide TypeScript definitions
