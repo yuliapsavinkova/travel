@@ -7,6 +7,7 @@
 
 /* Modular Components */
 @import "./styles/components/buttons.css";
+@import "./styles/components/scroll-trigger.css";
 @import "./styles/components/header.css";
 @import "./styles/components/footer.css";
 @import "./styles/components/hero.css";

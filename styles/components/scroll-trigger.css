@@ -1,0 +1,72 @@
+/* SCROLL TRIGGER - MINIMALIST iOS LIQUID GLASS */
+.scroll-trigger {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-gold);
+  z-index: 10;
+  cursor: pointer;
+  /* Ultra-Clear Liquid Lens */
+  background: transparent;
+  backdrop-filter: blur(4px) saturate(150%);
+  -webkit-backdrop-filter: blur(4px) saturate(150%);
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-trigger::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid var(--c-gold);
+  animation: liquid-pulse 3s infinite ease-out;
+  pointer-events: none;
+}
+
+.scroll-trigger:hover {
+  transform: translateX(-50%) translateY(-4px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px) saturate(180%);
+}
+
+.scroll-icon-anim {
+  animation: micro-float 2.4s infinite ease-in-out;
+  opacity: 0.9;
+}
+
+@keyframes liquid-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes micro-float {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-trigger {
+    width: 44px;
+    height: 44px;
+  }
+}
