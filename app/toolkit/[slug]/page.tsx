@@ -20,7 +20,7 @@ export default async function ReferralDetailPage({
   if (!item) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail onBack="/toolkit#framework" image="" title="Not Found">
+        <CommonDetail onBack="/toolkit#framework" backLabel="Toolkit" image="" title="Not Found">
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Tool Not Found</h1>
             <p className="hero-paragraph">
@@ -35,6 +35,7 @@ export default async function ReferralDetailPage({
   return (
     <CommonDetail
       onBack="/toolkit#framework"
+      backLabel="Toolkit"
       image={item.imageUrl || ''}
       title={item.name}
       date={item.date}

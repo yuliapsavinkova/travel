@@ -18,7 +18,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   if (!post) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail onBack="/journal#archive" image="" title="Not Found">
+        <CommonDetail onBack="/journal#archive" backLabel="Journal" image="" title="Not Found">
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Post Not Found</h1>
             <p className="hero-paragraph">
@@ -33,6 +33,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   return (
     <CommonDetail
       onBack="/journal#archive"
+      backLabel="Journal"
       image={post.imageUrl}
       title={post.title}
       date={post.date}

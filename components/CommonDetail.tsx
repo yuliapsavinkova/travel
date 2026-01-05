@@ -45,7 +45,7 @@ const CommonDetail = ({
         <img src={image} alt={title} className="detail-hero-image" />
         <div className="detail-hero-overlay" />
 
-        {/* Glass Corner Navigation - Pinned to corners */}
+        {/* Glass Corner Navigation - Top Left */}
         {onBack && (
           <Link
             href={onBack}
@@ -57,6 +57,7 @@ const CommonDetail = ({
           </Link>
         )}
 
+        {/* Top-Right CTA (Hero Link) */}
         {ctaLabel && ctaLink && (
           <a
             href={ctaLink}
@@ -69,13 +70,12 @@ const CommonDetail = ({
           </a>
         )}
 
-        {/* Cinematic Disclosure Overlay - Pinned to bottom of image */}
+        {/* Cinematic Disclosure Overlay */}
         {isAffiliate && (
           <div className="hero-disclosure-bar">
             <ShieldCheckIcon size={14} className="disclosure-icon" />
             <span className="disclosure-text">
-              Disclosure: This post contains referral or affiliate links. If you use them, I may
-              receive a credit or commission at no cost to you.{' '}
+              Disclosure: This post contains referral or affiliate links.{' '}
               <Link
                 href="/disclosure"
                 target="_blank"
@@ -94,12 +94,27 @@ const CommonDetail = ({
           <div className="prose-content">
             {children}
 
+            {/* Bottom Referral Link - Simple, Subtle, Right under text */}
+            {ctaLink && ctaLabel && (
+              <div className="detail-minimal-cta">
+                <a
+                  href={ctaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="subtle-referral-link"
+                >
+                  <span className="cta-value-label serif-italic">{ctaLabel}</span>
+                  <ExternalLinkIcon size={12} className="cta-icon" />
+                </a>
+              </div>
+            )}
+
             {(prevLink || nextLink) && (
               <nav className="article-navigation" aria-label="Related articles">
                 <div className="nav-link-block prev">
                   {prevLink && (
                     <Link href={prevLink.href}>
-                      <span className="nav-link-label">Read previous article</span>
+                      <span className="nav-link-label">Previous</span>
                       <span className="nav-link-title">{prevLink.label}</span>
                     </Link>
                   )}
@@ -107,7 +122,7 @@ const CommonDetail = ({
                 <div className="nav-link-block next">
                   {nextLink && (
                     <Link href={nextLink.href}>
-                      <span className="nav-link-label">Read next article</span>
+                      <span className="nav-link-label">Next</span>
                       <span className="nav-link-title">{nextLink.label}</span>
                     </Link>
                   )}

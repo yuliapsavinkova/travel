@@ -16,7 +16,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   if (!guide) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail onBack="/travel#guides" image="" title="Not Found">
+        <CommonDetail onBack="/travel#guides" backLabel="Travel Guides" image="" title="Not Found">
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Guide Not Found</h1>
             <p className="hero-paragraph">The requested travel guide could not be located.</p>
@@ -29,11 +29,12 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   return (
     <CommonDetail
       onBack="/travel#guides"
+      backLabel="Travel Guides"
       image={guide.imageUrl}
       title={guide.title}
       date={guide.date}
       isAffiliate={true}
-      ctaLabel="Offer: 25% Off Membership"
+      ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
       prevLink={{ label: 'My Stays', href: '/stays' }}
       nextLink={{ label: "Traveler's Toolkit", href: '/toolkit' }}
