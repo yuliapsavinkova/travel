@@ -28,6 +28,7 @@ const CommonCard = ({
   ctaLabel,
 }: CommonCardProps) => {
   const internalPath = slug ? (slug.startsWith('/') ? slug : `/${slug}`) : '';
+  const label = actionLabel || 'Details';
 
   const CardImage = image ? (
     <div className="card-image-viewport media-viewport">
@@ -43,7 +44,6 @@ const CommonCard = ({
         style={{ marginBottom: 'var(--s-2)', marginTop: 'var(--s-2)' }}
       >
         {metadata.map((item, idx) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: Fixed static metadata list
           <span key={idx} className="card-metadata-item">
             {item.icon} {item.text}
           </span>
@@ -51,76 +51,56 @@ const CommonCard = ({
       </div>
     ) : null;
 
-  const label = actionLabel || 'Details';
+  return (
+    <div className="card-wrapper">
+      <div className="glass-card">
+        {CardImage}
+        {MetadataRow}
+        <h3 className="serif-italic card-title">{title}</h3>
+        <p className="card-description">{description}</p>
 
-  const renderCardBody = () => (
-    <>
-      {CardImage}
-      {MetadataRow}
-      <h3 className="serif-italic card-title">{title}</h3>
-      <p className="card-description">{description}</p>
-    </>
-  );
-
-  if (ctaLink && slug && internalPath) {
-    return (
-      <div className="toolkit-card-wrapper">
-        <Link href={internalPath} className="glass-card">
-          {renderCardBody()}
-          <div className="card-footer">
-            <div className="card-action-link">
-              <span className="card-action-label">Review Details</span>
-              <ArrowUpRightIcon size={18} style={{ color: 'var(--c-gold)' }} />
-            </div>
+        {ctaLink && (
+          <div className="card-internal-cta">
+            <a
+              href={ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="subtle-referral-link"
+              aria-label={ctaLabel || 'Claim Offer'}
+            >
+              <span className="serif-italic">
+                {ctaLabel ? `Offer: ${ctaLabel.replace('Get: ', '')}` : 'Claim Discount'}
+              </span>
+              <ExternalLinkIcon size={12} className="cta-icon" />
+            </a>
           </div>
-        </Link>
-        <a
-          href={ctaLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="claim-link-under"
-          aria-label={`Claim discount for ${title}`}
-        >
-          <span className="claim-link-text">{ctaLabel || 'Claim Discount'}</span>
-          <ExternalLinkIcon size={14} style={{ color: 'var(--c-gold)' }} />
-        </a>
+        )}
+
+        <div className="card-footer">
+          {internalPath ? (
+            <Link href={internalPath} className="card-action-link stretched-link">
+              <span className="card-action-label">{label}</span>
+              <ArrowUpRightIcon size={18} className="action-arrow" />
+            </Link>
+          ) : externalLink ? (
+            <a
+              href={externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-action-link stretched-link"
+            >
+              <span className="card-action-label">{label}</span>
+              <ArrowUpRightIcon size={18} className="action-arrow" />
+            </a>
+          ) : (
+            <div className="card-action-link static">
+              <span className="card-action-label">{label}</span>
+            </div>
+          )}
+        </div>
       </div>
-    );
-  }
-
-  if (slug && internalPath) {
-    return (
-      <Link href={internalPath} className="glass-card">
-        {renderCardBody()}
-        <div className="card-footer">
-          <div className="card-footer-main">
-            <div className="card-action-link">
-              <span className="card-action-label">{label}</span>
-              <ArrowUpRightIcon size={18} style={{ color: 'var(--c-gold)' }} />
-            </div>
-          </div>
-        </div>
-      </Link>
-    );
-  }
-
-  if (externalLink) {
-    return (
-      <a href={externalLink} target="_blank" rel="noopener noreferrer" className="glass-card">
-        {renderCardBody()}
-        <div className="card-footer">
-          <div className="card-footer-main">
-            <div className="card-action-link">
-              <span className="card-action-label">{label}</span>
-              <ArrowUpRightIcon size={18} style={{ color: 'var(--c-gold)' }} />
-            </div>
-          </div>
-        </div>
-      </a>
-    );
-  }
-
-  return <div className="glass-card">{renderCardBody()}</div>;
+    </div>
+  );
 };
 
 export default CommonCard;
