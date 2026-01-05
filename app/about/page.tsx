@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="section-divider" style={{ marginTop: 'var(--s-8)' }}>
           <h3 className="sub-header">Contact</h3>
           <h2 className="display-title-md">
-            Let's <span className="serif-italic champagne-text">Chat.</span>
+            Let's <span className="serif-italic shimmer-text">Chat.</span>
           </h2>
           <p
             style={{

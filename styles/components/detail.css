@@ -36,17 +36,6 @@
   filter: drop-shadow(0 0 15px rgba(229, 193, 133, 0.4));
 }
 
-.detail-title-text {
-  font-family: var(--f-serif) !important;
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: -0.015em;
-  line-height: 1.15;
-  color: var(--c-white);
-  margin: 0 auto;
-}
-
 .detail-date-label {
   display: block;
   font-size: 10px;
