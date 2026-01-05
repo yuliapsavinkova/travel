@@ -11,23 +11,22 @@ export default function TravelPage() {
         <div className="media-viewport">
           <img
             src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=2400"
-            alt="Travel Chronicles"
+            alt="Travel"
           />
           <div className="hero-gradient-overlay" />
         </div>
 
         <div className="hero-content-overlay">
-          <div className="sub-header hero-sub-header">Travel Chronicles</div>
+          <div className="sub-header hero-sub-header">Destinations</div>
           <h1 className="display-title">
-            Global <span className="shimmer-text">Footprints.</span>
+            Travel <span className="shimmer-text">Guides.</span>
           </h1>
           <p className="hero-paragraph">
-            Exploring the intersection of architectural heritage and local rhythms. A curated
-            collection of guides from {SITE_STATS.countriesCount} countries.
+            Guides and stories from the {SITE_STATS.countriesCount} countries I've visited.
           </p>
           <div className="hero-button-group">
             <Link href="#guides" className="btn-gold">
-              Explore Guides
+              View Guides
             </Link>
             <Link href="/journal#archive" className="secondary-btn">
               The Journal
@@ -42,9 +41,9 @@ export default function TravelPage() {
 
       <div className="container">
         <header className="text-center section-margin" id="guides">
-          <div className="sub-header">The Archive</div>
+          <div className="sub-header">Where to go</div>
           <h2 className="display-title display-title-md">
-            Curated <span className="serif-italic shimmer-text">Guides.</span>
+            My <span className="serif-italic shimmer-text">Guides.</span>
           </h2>
         </header>
 
@@ -53,15 +52,15 @@ export default function TravelPage() {
             <CommonCard
               key={guide.id}
               image={guide.imageUrl}
-              badge="Destination"
+              badge="Guide"
               metadata={[
                 { icon: <MapPinIcon size={12} />, text: guide.location },
-                { icon: <CompassIcon size={12} />, text: 'Verified Experience' },
+                { icon: <CompassIcon size={12} />, text: 'Verified' },
               ]}
               title={guide.title}
               description={guide.excerpt}
               slug={`/travel/${guide.slug}`}
-              actionLabel="View Guide"
+              actionLabel="Read Guide"
             />
           ))}
         </div>

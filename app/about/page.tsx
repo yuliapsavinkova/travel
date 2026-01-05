@@ -13,41 +13,24 @@ export default function AboutPage() {
 
         <ContentRenderer content={aboutBody} />
 
-        <div className="section-divider" style={{ marginTop: 'var(--s-8)' }}>
-          <h3 className="sub-header">Contact</h3>
-          <h2 className="display-title-md">
-            Let's <span className="serif-italic shimmer-text">Chat.</span>
-          </h2>
-          <p
-            style={{
-              maxWidth: '500px',
-              margin: '0 auto var(--s-5)',
-              opacity: 0.7,
-              textAlign: 'center',
-              fontSize: '16px',
-            }}
+        <div
+          style={{
+            marginTop: 'var(--s-6)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 'var(--s-4)',
+            flexWrap: 'wrap',
+          }}
+        >
+          <ContactTrigger label="Contact" className="btn-gold" />
+          <a
+            href={`mailto:${SITE_CONFIG.email}`}
+            className="secondary-btn"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
           >
-            If you have questions or stories to share, I'd love to hear from you.
-          </p>
-
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: 'var(--s-4)',
-              flexWrap: 'wrap',
-            }}
-          >
-            <ContactTrigger label="Contact" className="btn-gold" />
-            <a
-              href={`mailto:${SITE_CONFIG.email}`}
-              className="secondary-btn"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
-            >
-              <MailIcon size={16} />
-              {SITE_CONFIG.email}
-            </a>
-          </div>
+            <MailIcon size={16} />
+            {SITE_CONFIG.email}
+          </a>
         </div>
       </div>
     </CommonDetail>

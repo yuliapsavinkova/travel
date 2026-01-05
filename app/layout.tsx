@@ -24,43 +24,32 @@ const playfair = Playfair_Display({
 const OG_IMAGE_URL =
   'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=1200&h=630';
 
-const LOGO_URL = 'https://sitterjourney.com/logo-circle.png'; // Conceptual absolute path
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://sitterjourney.com'),
-  title: 'Sitter Journey | Full-Time Traveler & Professional Steward',
-  description:
-    'Chronicling the solo female travel journey of Sitter Journey. Exploring global destinations through slow living and intentional stewardship.',
+  title: 'Sitter Journey | Professional House Sitter & Traveler',
+  description: 'A blog about full-time travel, professional house sitting, and pet care by Yulia.',
   manifest: '/site.webmanifest',
   icons: {
     icon: '/icon',
     apple: '/icon',
   },
   keywords: [
-    'Full-Time Traveler',
-    'Solo Female Traveler',
-    'Stewardship Portfolio',
-    'Slow Travel Journey',
-    'Pet Care Expert',
-    'Digital Nomad Portfolio',
+    'Traveler',
+    'Solo Female Travel',
+    'House Sitting',
+    'Pet Care',
     'Professional Housesitter',
+    'Travel Blog',
     'Sitter Journey',
   ],
   authors: [{ name: 'Sitter Journey' }],
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   openGraph: {
-    title: 'Sitter Journey | Full-Time Traveler',
-    description: 'Expert stewardship for the intentional traveler.',
+    title: 'Sitter Journey',
+    description: 'Professional house sitting, pet care, and travel blog.',
     url: 'https://sitterjourney.com',
     siteName: 'Sitter Journey',
     images: [
@@ -68,7 +57,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: 'Sitter Journey Full-Time Traveler Professional Housesitting',
+        alt: 'Sitter Journey',
       },
     ],
     locale: 'en_US',
@@ -76,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sitter Journey | Full-Time Traveler | Professional Housesitting',
-    description: 'A solo female journey lived between destinations and stewardship.',
+    title: 'Sitter Journey',
+    description: 'Professional house sitting, pet care, and travel blog.',
     images: [OG_IMAGE_URL],
   },
 };
@@ -85,29 +74,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'Sitter Journey Travel',
-    logo: LOGO_URL,
-    image: OG_IMAGE_URL,
-    description:
-      'Solo female traveler and elite housesitter providing expert estate stewardship and pet care.',
+    '@type': 'Blog',
+    name: 'Sitter Journey',
     url: 'https://sitterjourney.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Person',
-        name: 'Verified Homeowners',
-      },
-    },
   };
 
   const gaId = SITE_CONFIG.googleAnalyticsId;
@@ -118,7 +87,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
           type="application/ld+json"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: Trusted internal static content
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>

@@ -11,26 +11,25 @@ export default function JournalPage() {
         <div className="media-viewport">
           <img
             src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=2400"
-            alt="Travel Journaling"
+            alt="Journal"
           />
           <div className="hero-gradient-overlay" />
         </div>
 
         <div className="hero-content-overlay">
-          <div className="sub-header hero-sub-header">Stories from the Road</div>
+          <div className="sub-header hero-sub-header">My Blog</div>
           <h1 className="display-title">
-            The Art of <span className="shimmer-text">the Journey.</span>
+            The <span className="shimmer-text">Journal.</span>
           </h1>
           <p className="hero-paragraph">
-            Documenting the intersections of architecture, pet companionship, and the traveler
-            lifestyle.
+            Writing about life on the road and what I've learned along the way.
           </p>
           <div className="hero-button-group">
             <Link href="#archive" className="btn-gold">
-              Read Archive
+              Read Blog
             </Link>
             <Link href="/toolkit#framework" className="secondary-btn">
-              Travel Toolkit
+              Toolkit
             </Link>
           </div>
         </div>
@@ -42,9 +41,9 @@ export default function JournalPage() {
 
       <div className="container">
         <header className="text-center section-margin" id="archive">
-          <div className="sub-header">Archive</div>
+          <div className="sub-header">Posts</div>
           <h2 className="display-title display-title-md">
-            The <span className="serif-italic shimmer-text">Journal.</span>
+            The <span className="serif-italic shimmer-text">Archive.</span>
           </h2>
         </header>
 
@@ -53,7 +52,7 @@ export default function JournalPage() {
             <CommonCard
               key={post.id}
               image={post.imageUrl}
-              badge="Journal"
+              badge="Post"
               metadata={[
                 { icon: <CalendarIcon size={12} />, text: post.date },
                 { icon: <MapPinIcon size={12} />, text: post.location },
@@ -61,7 +60,7 @@ export default function JournalPage() {
               title={post.title}
               description={post.excerpt}
               slug={`/journal/${post.slug}`}
-              actionLabel="Read Journal"
+              actionLabel="Read Post"
             />
           ))}
         </div>

@@ -12,7 +12,7 @@ export default function StaysPage() {
         <div className="media-viewport">
           <Image
             src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=2400"
-            alt="Estate Stewardship Portfolio"
+            alt="My Stays"
             fill
             priority
             sizes="100vw"
@@ -22,17 +22,16 @@ export default function StaysPage() {
         </div>
 
         <div className="hero-content-overlay">
-          <div className="sub-header hero-sub-header">Verified Stewardship</div>
+          <div className="sub-header hero-sub-header">House Sitting</div>
           <h1 className="display-title">
-            Attentive Care for your <span className="shimmer-text">Home and Pets.</span>
+            Caring for <span className="shimmer-text">Homes & Pets.</span>
           </h1>
           <p className="hero-paragraph">
-            Providing professional stewardship and consistent companionship for properties and their
-            furry residents while I travel full-time.
+            A look at the places I've stayed and the pets I've cared for while traveling.
           </p>
           <div className="hero-button-group">
             <Link href="#portfolio" className="btn-gold">
-              The Portfolio
+              My Stays
             </Link>
             <Link href="/journal#archive" className="secondary-btn">
               The Journal
@@ -47,7 +46,7 @@ export default function StaysPage() {
 
       <div className="container">
         <header className="text-center section-margin" id="portfolio">
-          <div className="sub-header">Professional History</div>
+          <div className="sub-header">Where I've Been</div>
           <h2 className="display-title display-title-md">
             My <span className="serif-italic shimmer-text">Stays.</span>
           </h2>
@@ -58,7 +57,7 @@ export default function StaysPage() {
             <CommonCard
               key={sit.id}
               image={sit.imageUrl}
-              badge="Verified Stay"
+              badge="Stay"
               metadata={[{ icon: <MapPinIcon size={12} />, text: sit.location }]}
               title={sit.location}
               description={sit.text}

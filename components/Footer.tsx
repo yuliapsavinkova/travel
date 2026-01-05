@@ -23,9 +23,6 @@ const Footer = () => {
                 </span>
               </div>
             </Link>
-            <p className="footer-tagline serif-italic" style={{ marginTop: 'var(--s-4)' }}>
-              Life on the road, guided by full-time travel and trusted home stewardship.
-            </p>
             <div className="footer-socials">
               <a href="#" className="social-icon" aria-label="Instagram">
                 <InstagramIcon />
@@ -64,7 +61,7 @@ const Footer = () => {
           <div className="footer-contact-col">
             <div className="sub-header footer-header">Contact</div>
             <p className="footer-contact-promo" style={{ display: 'block' }}>
-              Available for housesitting during{' '}
+              Available for house sitting during{' '}
               <span className="footer-year-highlight">{ACTIVE_YEAR}</span>
               <span style={{ opacity: 0.5, margin: '0 4px' }}>&mdash;</span>
               <span className="footer-year-highlight">{NEXT_YEAR}</span>.
@@ -111,8 +108,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="footer-credits">
-            BASED IN THE <span className="footer-year-highlight">USA</span> &bull; TRAVELING
-            FULL-TIME
+            BASED IN THE <span className="footer-year-highlight">USA</span> • TRAVELING FULL-TIME
           </div>
         </div>
       </div>

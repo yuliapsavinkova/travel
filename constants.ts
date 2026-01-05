@@ -25,7 +25,7 @@ export const SITE_STATS = {
 
 export const SITE_CONFIG = {
   name: 'Sitter Journey',
-  tagline: 'Full-Time Traveler & Professional Steward',
+  tagline: 'Full-Time Traveler',
   email: 'sitterjourney@gmail.com',
   googleAnalyticsId: 'G-R0920QKYXK',
   socials: {
@@ -37,11 +37,10 @@ export const SITE_CONFIG = {
 const thsReferral = REFERRALS[0].items[0];
 
 export const GLOBAL_STRINGS: SiteStrings = {
-  toolkitSectionTitle: 'Travel Essentials',
-  toolkitSectionDescription:
-    'The exact tools, connectivity, and memberships I rely on to maintain a professional standard while traveling full-time.',
-  travelPromoTitle: 'Start Your Own Journey',
-  travelPromoText: `Inspired to explore? Use my vetted link to join the TrustedHousesitters community. Claim your ${thsReferral.discountText} and start your own adventure.`,
+  toolkitSectionTitle: 'Toolkit',
+  toolkitSectionDescription: 'The tools and services I use while traveling full-time.',
+  travelPromoTitle: 'Join Me',
+  travelPromoText: `Ready to travel? Use my link to join TrustedHousesitters. You'll get ${thsReferral.discountText} off your membership.`,
   travelPromoLink: thsReferral.link,
   travelPromoBtn: thsReferral.discountText || 'Claim Discount',
 };

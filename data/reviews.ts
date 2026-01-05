@@ -13,9 +13,9 @@ export const REVIEWS: Review[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
     text: 'South Austin Black Cat Gem',
-    sitDescription: 'Luxury residence stewardship and senior Golden Retriever care.',
+    sitDescription: 'Professional house sitting and care for an active Cat.',
     body: txt(
-      'This assignment was verified through TrustedHousesitters, where I maintain a perfect record for reliability and property stewardship.'
+      'This assignment was verified through TrustedHousesitters, where I maintain a perfect record for reliability and professional house sitting.'
     ),
   },
 ];
