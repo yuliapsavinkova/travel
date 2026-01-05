@@ -16,6 +16,8 @@ interface CommonDetailProps {
   sidebar?: ReactNode;
   prevLink?: NavLink;
   nextLink?: NavLink;
+  prevNavLabel?: string;
+  nextNavLabel?: string;
 }
 
 const CommonDetail = ({
@@ -31,52 +33,56 @@ const CommonDetail = ({
   sidebar,
   prevLink,
   nextLink,
+  prevNavLabel = 'Previous',
+  nextNavLabel = 'Next',
 }: CommonDetailProps) => {
+  // Clean the label for the footer to avoid "Return to Back to..."
+  const footerLabel = backLabel ? backLabel.replace('Back to ', '') : '';
+
   return (
     <div className="detail-container">
-      {/* Editorial Header - Centered Typography */}
       <header className="detail-header-area">
-        {date && <span className="detail-date-label">{date}</span>}
-        <h1 className="detail-title-text">{title}</h1>
+        <div className="container text-center">
+          {date && <span className="detail-date-label">{date}</span>}
+          <h1 className="detail-title-text">{title}</h1>
+        </div>
       </header>
 
-      {/* Featured Media - Contained & Rounded with Glass Navigation */}
       <div className="detail-hero-section">
-        <img src={image} alt={title} className="detail-hero-image" />
-        <div className="detail-hero-overlay" />
+        <div className="media-viewport">
+          <img src={image} alt={title} className="detail-hero-image" />
+          {/* Overlay removed to ensure full brightness as title is above image */}
+        </div>
 
-        {/* Glass Corner Navigation - Top Left */}
         {onBack && (
-          <Link href={onBack} className="hero-glass-link hero-back-link" aria-label={`Go back`}>
-            <ArrowLeftIcon size={12} />
+          <Link href={onBack} className="hero-glass-link hero-back-link glass-pill">
+            <ArrowLeftIcon size={14} />
             <span>{backLabel}</span>
           </Link>
         )}
 
-        {/* Top-Right CTA (Hero Link) */}
         {ctaLabel && ctaLink && (
           <a
             href={ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-glass-link hero-cta-link"
+            className="hero-glass-link hero-cta-link glass-pill"
           >
             <span>{ctaLabel}</span>
-            <ExternalLinkIcon size={12} />
+            <ExternalLinkIcon size={14} />
           </a>
         )}
 
-        {/* Cinematic Disclosure Overlay - Positioned Bottom of Image */}
         {isAffiliate && (
           <div className="hero-disclosure-bar">
-            <ShieldCheckIcon size={14} className="disclosure-icon" />
+            <ShieldCheckIcon size={16} className="disclosure-icon" />
             <span className="disclosure-text">
-              Disclosure: This post contains referral or affiliate links.{' '}
+              Disclosure: This post contains referral or affiliate links.
               <Link
                 href="/disclosure"
+                className="disclosure-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="disclosure-link"
               >
                 Read More
               </Link>
@@ -90,17 +96,11 @@ const CommonDetail = ({
           <div className="prose-content">
             {children}
 
-            {/* Bottom Referral Link - Simple, Subtle, Right under text */}
             {ctaLink && ctaLabel && (
               <div className="detail-minimal-cta">
-                <a
-                  href={ctaLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="subtle-referral-link"
-                >
-                  <span className="cta-value-label serif-italic">{ctaLabel}</span>
-                  <ExternalLinkIcon size={12} className="cta-icon" />
+                <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="glass-pill">
+                  <span className="serif-italic">{ctaLabel}</span>
+                  <ExternalLinkIcon size={14} className="cta-icon" />
                 </a>
               </div>
             )}
@@ -110,7 +110,7 @@ const CommonDetail = ({
                 <div className="nav-link-block prev">
                   {prevLink && (
                     <Link href={prevLink.href}>
-                      <span className="nav-link-label">Previous</span>
+                      <span className="nav-link-label">{prevNavLabel}</span>
                       <span className="nav-link-title">{prevLink.label}</span>
                     </Link>
                   )}
@@ -118,7 +118,7 @@ const CommonDetail = ({
                 <div className="nav-link-block next">
                   {nextLink && (
                     <Link href={nextLink.href}>
-                      <span className="nav-link-label">Next</span>
+                      <span className="nav-link-label">{nextNavLabel}</span>
                       <span className="nav-link-title">{nextLink.label}</span>
                     </Link>
                   )}
@@ -129,8 +129,8 @@ const CommonDetail = ({
             {onBack && (
               <div className="detail-footer-nav">
                 <Link href={onBack} className="btn-back-footer">
-                  <ArrowLeftIcon size={14} />
-                  <span>Return to {backLabel}</span>
+                  <ArrowLeftIcon size={16} />
+                  <span>Return to {footerLabel}</span>
                 </Link>
               </div>
             )}

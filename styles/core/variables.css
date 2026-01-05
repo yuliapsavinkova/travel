@@ -1,33 +1,90 @@
 :root {
   /* CORE PALETTE */
-  --c-black: #000000;
+  --c-black: #050505;
   --c-obsidian: #0d0d0e;
   --c-white: #ffffff;
-  --c-gold: #e5c185;
-  --c-gold-deep: #b08d57;
-  --c-gold-hover: #d4af37;
 
-  /* GRADIENTS */
-  --g-champagne: linear-gradient(135deg, #ffffff 0%, #e5c185 45%, #b08d57 100%);
+  /* VIBRANT GOLD */
+  --c-gold: #ffcf87;
+  --c-gold-deep: #c59d5f;
+  --c-gold-bright: #fff3e0;
+  --c-gold-rich: rgba(255, 207, 135, 0.5);
+  --c-gold-muted: rgba(197, 157, 95, 0.15);
 
-  /* SEMANTIC ALPHA COLORS */
+  /* GLASS SYSTEM */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-heavy: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(12px);
+
+  /* 
+     DARKNESS & READABILITY MASTER CONTROLS
+  */
+  --bg-surface-glow: 0.02; /* Subtle top-down wash (0 to 1) */
+  --hero-veil-opacity: 0.35; /* Dimming of hero images - Reduced for brightness */
+  --img-base-opacity: 0.85; /* Visibility of the actual image asset */
+  --cinematic-overlay-intensity: 0.7; /* Strength of bottom-heavy card fades */
+
+  /* 
+     STANDARDIZED GRADIENTS - SOURCE OF TRUTH 
+  */
+
+  /* 1. Global Background Depth */
+  --g-surface-wash: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, var(--bg-surface-glow)) 0%,
+    transparent 40%,
+    transparent 100%
+  );
+
+  /* 2. Hero & Image Readability Veil - Lightened center */
+  --g-hero-veil: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, calc(var(--hero-veil-opacity) + 0.15)) 0%,
+    rgba(0, 0, 0, var(--hero-veil-opacity)) 40%,
+    rgba(0, 0, 0, var(--hero-veil-opacity)) 60%,
+    rgba(0, 0, 0, calc(var(--hero-veil-opacity) + 0.15)) 100%
+  );
+
+  /* 3. Luxury Gold Button & Accents */
+  --g-gold-btn: linear-gradient(
+    135deg,
+    var(--c-gold-bright) 0%,
+    var(--c-gold) 50%,
+    var(--c-gold-deep) 100%
+  );
+
+  /* 4. Glass Surface Depth */
+  --g-card-glass: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+
+  /* 5. Bottom Cinematic Fade - Variable driven */
+  --g-overlay-cinematic: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, var(--cinematic-overlay-intensity)) 100%
+  );
+
+  /* 6. Text Shimmer */
+  --g-champagne: linear-gradient(135deg, #ffffff 0%, var(--c-gold) 50%, var(--c-gold-deep) 100%);
+
+  /* Z-INDEX SCALE */
+  --z-back: -10;
+  --z-base: 1;
+  --z-overlay: 10;
+  --z-content: 50;
+  --z-nav: 100;
+  --z-portal: 200;
+
+  /* SEMANTIC COLORS */
   --c-text: var(--c-white);
-  --c-text-dim: rgba(255, 255, 255, 0.7);
-  --c-text-muted: rgba(255, 255, 255, 0.4);
+  --c-text-dim: rgba(255, 255, 255, 0.9);
+  --c-text-muted: rgba(255, 255, 255, 0.6);
 
-  --c-glass: rgba(255, 255, 255, 0.05);
-  --c-glass-heavy: rgba(255, 255, 255, 0.1);
-
-  --c-gold-faint: rgba(229, 193, 133, 0.05);
-  --c-gold-muted: rgba(229, 193, 133, 0.15);
-  --c-gold-rich: rgba(229, 193, 133, 0.3);
-  --c-gold-overlay: rgba(0, 0, 0, 0.8);
-
-  --c-border: var(--c-gold-muted);
-  --c-border-light: rgba(255, 255, 255, 0.1);
-  --c-border-gold: var(--c-gold-rich);
-
-  /* RHYTHMIC SPACING SCALE */
+  /* SYSTEM SPACING */
   --s-1: 4px;
   --s-2: 8px;
   --s-3: 16px;
@@ -37,20 +94,10 @@
   --s-7: 64px;
   --s-8: 96px;
   --s-9: 128px;
-  --s-huge: 200px;
-
-  /* RADIUS */
   --r-sm: 12px;
   --r-md: 24px;
   --r-lg: 32px;
-  --r-xl: 48px;
   --r-pill: 100px;
-
-  /* Z-INDEX */
-  --z-back: -1;
-  --z-base: 1;
-  --z-nav: 1000;
-  --z-overlay: 2000;
 
   /* FONTS */
   --f-serif: "Playfair Display", serif;

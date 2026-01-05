@@ -1,27 +1,31 @@
-/* Enforce a minimum width globally to prevent layout collapse or squishing */
 .app-root {
   min-width: 320px;
   overflow-x: hidden;
+  position: relative;
+  background: var(--c-black);
 }
 
-body {
-  min-width: 320px;
-}
-
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 var(--s-6);
-  box-sizing: border-box;
-  /* Protect content from squishing */
-  min-width: 300px;
+.main-viewport {
+  position: relative;
+  z-index: var(--z-base);
 }
 
 .studio-depth {
   position: fixed;
   inset: 0;
   z-index: var(--z-back);
-  background: radial-gradient(circle at 50% 0%, #111112 0%, var(--c-black) 90%);
+  background: var(--g-surface-wash), var(--c-black);
+  pointer-events: none;
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
 }
 
 .media-viewport {
@@ -29,18 +33,51 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .media-viewport img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center;
+  animation: ken-burns 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes ken-burns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.overlay-hero {
+  position: absolute;
+  inset: 0;
+  background: var(--g-hero-veil);
+  z-index: var(--z-overlay);
+  pointer-events: none;
+}
+
+.content-layer {
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--s-6);
 }
 
 .grid-standard {
   display: grid;
-  /* Minmax floor ensures cards don't shrink past a point of legibility */
   grid-template-columns: repeat(auto-fill, minmax(clamp(280px, 100%, 400px), 1fr));
   gap: var(--s-5);
   width: 100%;
@@ -49,80 +86,12 @@ body {
 .text-center {
   text-align: center;
 }
-
-.section-divider {
-  text-align: center;
-  margin: var(--s-8) 0 var(--s-6);
-  padding-top: var(--s-6);
-  border-top: 1px solid var(--c-border-light);
-  width: 100%;
-}
-
-/* Ensure no top spacing for the main viewport so hero sections can be immersive */
-.main-viewport {
-  padding-top: 0;
-  margin-top: 0;
-}
-
-/* Scroll Offset for Anchors */
-#portfolio,
-#archive,
-#guides,
-#framework,
-#milestones {
-  scroll-margin-top: 140px;
-}
-
-.margin-bottom-sm {
-  margin-bottom: var(--s-4);
-}
-.margin-bottom-md {
-  margin-bottom: var(--s-5);
-}
-.margin-bottom-lg {
-  margin-bottom: var(--s-6);
-}
-.margin-bottom-xl {
-  margin-bottom: var(--s-8);
-}
-
 .section-margin {
   margin-bottom: var(--s-8);
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-.flex-gap-md {
-  gap: var(--s-4);
-}
-.flex-gap-lg {
-  gap: var(--s-6);
-}
-.flex-gap-xl {
-  gap: var(--s-8);
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--s-4);
-  }
-  .grid-standard {
-    gap: var(--s-4);
-  }
-
-  #portfolio,
-  #archive,
-  #guides,
-  #framework,
-  #milestones {
-    scroll-margin-top: 100px;
-  }
-}
-
-@media (max-width: 400px) {
-  .container {
-    padding: 0 var(--s-3);
   }
 }

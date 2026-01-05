@@ -7,7 +7,15 @@ import { aboutIntro, aboutBody } from '../../data/articles/about-me';
 
 export default function AboutPage() {
   return (
-    <CommonDetail image="/portrait.png" title="About Yulia." date="January 2026">
+    <CommonDetail
+      image="/portrait.png"
+      title="About Yulia."
+      date="January 2026"
+      prevLink={{ label: 'Journal', href: '/journal' }}
+      nextLink={{ label: 'Toolkit', href: '/toolkit' }}
+      prevNavLabel="Go to"
+      nextNavLabel="Go to"
+    >
       <div className="flex-col">
         <p className="prose-lead">{aboutIntro}</p>
 

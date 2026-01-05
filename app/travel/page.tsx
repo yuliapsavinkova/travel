@@ -8,15 +8,15 @@ export default function TravelPage() {
   return (
     <>
       <section className="hero-stack section-margin">
-        <div className="media-viewport">
+        <div className="hero-media-container media-viewport">
           <img
             src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=2400"
             alt="Travel"
           />
-          <div className="hero-gradient-overlay" />
+          <div className="overlay-hero" />
         </div>
 
-        <div className="hero-content-overlay">
+        <div className="hero-content-overlay content-layer">
           <div className="sub-header hero-sub-header">Destinations</div>
           <h1 className="display-title">
             Travel <span className="shimmer-text">Guides.</span>
@@ -34,7 +34,7 @@ export default function TravelPage() {
           </div>
         </div>
 
-        <Link href="#guides" className="scroll-trigger" aria-label="Scroll to guides">
+        <Link href="#guides" className="scroll-trigger content-layer" aria-label="Scroll to guides">
           <ChevronDownIcon size={28} className="scroll-icon-anim" />
         </Link>
       </section>

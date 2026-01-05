@@ -5,6 +5,8 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
   // Explicitly add common SVG attributes to satisfy strict TypeScript checking
   className?: string;
   strokeWidth?: number | string;
+  // Add children property to support nested SVG content
+  children?: ReactNode;
 }
 
 /**

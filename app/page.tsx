@@ -8,19 +8,21 @@ export default function HomePage() {
   return (
     <>
       <section className="hero-stack section-margin">
-        <div className="media-viewport">
+        <div className="hero-media-container media-viewport">
           <Image
             src="/home-hero.jpg"
             alt="Yulia on the road"
             fill
             priority
+            unoptimized
             sizes="100vw"
             style={{ objectFit: 'cover' }}
           />
-          <div className="hero-gradient-overlay" />
+          <div className="overlay-hero" />
         </div>
-        <div className="hero-content-overlay">
-          <div className="sub-header hero-sub-header">Life on the road</div>
+
+        <div className="hero-content-overlay content-layer">
+          <div className="sub-header">Life on the road</div>
           <h1 className="display-title">
             Chronicles of a <span className="shimmer-text">Traveler.</span>
           </h1>
@@ -37,7 +39,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <Link href="#perspective" className="scroll-trigger" aria-label="Scroll down">
+        <Link href="#perspective" className="scroll-trigger content-layer" aria-label="Scroll down">
           <ChevronDownIcon size={28} className="scroll-icon-anim" />
         </Link>
       </section>
@@ -50,10 +52,9 @@ export default function HomePage() {
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
             I've visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states.
-            My travels have taught me to slow down and appreciate the little things.
           </p>
 
-          <div className="grid-standard grid-stats">
+          <div className="grid-standard">
             {[
               {
                 label: 'Countries',
@@ -74,21 +75,37 @@ export default function HomePage() {
                 img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
               },
             ].map((stat, i) => (
-              <div key={i} className="stat-card-glass">
-                <div className="stat-background media-viewport">
+              <div key={i} className="glass-card stat-card">
+                <div className="card-image-viewport media-viewport">
                   <Image
                     src={stat.img}
                     alt={stat.label}
                     fill
+                    unoptimized
                     sizes="(max-width: 1024px) 100vw, 33vw"
-                    style={{ objectFit: 'cover', opacity: 0.4 }}
+                    style={{ objectFit: 'cover' }}
                   />
-                  <div className="stat-image-overlay" />
+                  <div className="overlay-layer" />
+                  <div
+                    className="stat-icon-overlay content-layer"
+                    style={{
+                      position: 'absolute',
+                      top: '20px',
+                      left: '20px',
+                      color: 'var(--c-gold)',
+                    }}
+                  >
+                    {stat.icon}
+                  </div>
                 </div>
-                <div className="stat-content">
-                  <div className="stat-icon-circle">{stat.icon}</div>
-                  <div className="gold-stat-number">{stat.value}</div>
-                  <div className="sub-header no-margin opacity-90">{stat.label}</div>
+                <div className="content-layer">
+                  <div
+                    className="display-title-md"
+                    style={{ color: 'var(--c-gold)', marginBottom: 'var(--s-1)' }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div className="sub-header">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -96,21 +113,22 @@ export default function HomePage() {
         </section>
 
         <section className="section-margin text-center">
-          <div className="section-divider">
-            <div className="sub-header">Get in Touch</div>
-            <h2 className="display-title display-title-md">
-              Let's <span className="serif-italic shimmer-text">Connect.</span>
-            </h2>
-            <p className="hero-paragraph" style={{ margin: 'var(--s-4) auto' }}>
-              I'm always looking for new places to stay and pets to care for. If you need a house
-              sitter, let's talk.
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--s-4)' }}>
-              <ContactTrigger label="Contact" className="btn-gold" />
-              <Link href="/stays#portfolio" className="secondary-btn">
-                My Stays
-              </Link>
-            </div>
+          <div className="sub-header">Get in Touch</div>
+          <h2 className="display-title display-title-md">
+            Let's <span className="serif-italic shimmer-text">Connect.</span>
+          </h2>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 'var(--s-4)',
+              marginTop: 'var(--s-5)',
+            }}
+          >
+            <ContactTrigger label="Contact" className="btn-gold" />
+            <Link href="/stays#portfolio" className="secondary-btn">
+              My Stays
+            </Link>
           </div>
         </section>
       </div>

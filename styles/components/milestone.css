@@ -1,10 +1,10 @@
 .milestone-gallery-section {
   position: relative;
   padding: var(--s-8) 0;
-  background: radial-gradient(circle at center, #1a1a1c 0%, #0d0d0e 100%);
-  border-radius: var(--r-xl);
+  background: var(--c-obsidian);
+  border-radius: var(--r-md);
   margin: var(--s-8) 0;
-  border: 1px solid var(--c-border-light);
+  border: 1px solid var(--glass-border);
   overflow: hidden;
 }
 
@@ -23,9 +23,9 @@
 
 .stat-card-glass {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: var(--g-card-glass);
   backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   border-radius: var(--r-md);
   padding: var(--s-7) var(--s-5);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -51,19 +51,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: var(--img-base-opacity); /* Using variable instead of hardcoded 0.4 */
   transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
 }
 
 .stat-card-glass:hover .stat-background img {
-  opacity: 0.55;
+  opacity: 1;
   transform: scale(1.1);
 }
 
 .stat-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: var(--g-overlay-cinematic); /* Variable driven */
   z-index: 2;
 }
 
@@ -74,7 +74,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(229, 193, 133, 0.1);
+  background: var(--c-gold-muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +101,7 @@
   font-family: var(--f-serif);
   line-height: 1.0;
   margin-bottom: var(--s-3);
-  background: linear-gradient(135deg, #fff 0%, var(--c-gold) 100%);
+  background: var(--g-champagne);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;

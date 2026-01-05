@@ -8,15 +8,15 @@ export default function JournalPage() {
   return (
     <>
       <section className="hero-stack section-margin">
-        <div className="media-viewport">
+        <div className="hero-media-container media-viewport">
           <img
             src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=2400"
             alt="Journal"
           />
-          <div className="hero-gradient-overlay" />
+          <div className="overlay-hero" />
         </div>
 
-        <div className="hero-content-overlay">
+        <div className="hero-content-overlay content-layer">
           <div className="sub-header hero-sub-header">My Blog</div>
           <h1 className="display-title">
             The <span className="shimmer-text">Journal.</span>
@@ -34,7 +34,11 @@ export default function JournalPage() {
           </div>
         </div>
 
-        <Link href="#archive" className="scroll-trigger" aria-label="Scroll to archive">
+        <Link
+          href="#archive"
+          className="scroll-trigger content-layer"
+          aria-label="Scroll to archive"
+        >
           <ChevronDownIcon size={28} className="scroll-icon-anim" />
         </Link>
       </section>

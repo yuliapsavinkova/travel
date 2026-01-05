@@ -9,7 +9,7 @@ export default function StaysPage() {
   return (
     <>
       <section className="hero-stack section-margin">
-        <div className="media-viewport">
+        <div className="hero-media-container media-viewport">
           <Image
             src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=2400"
             alt="My Stays"
@@ -18,10 +18,10 @@ export default function StaysPage() {
             sizes="100vw"
             style={{ objectFit: 'cover' }}
           />
-          <div className="hero-gradient-overlay" />
+          <div className="overlay-hero" />
         </div>
 
-        <div className="hero-content-overlay">
+        <div className="hero-content-overlay content-layer">
           <div className="sub-header hero-sub-header">House Sitting</div>
           <h1 className="display-title">
             Caring for <span className="shimmer-text">Homes & Pets.</span>
@@ -39,7 +39,11 @@ export default function StaysPage() {
           </div>
         </div>
 
-        <Link href="#portfolio" className="scroll-trigger" aria-label="Scroll to portfolio">
+        <Link
+          href="#portfolio"
+          className="scroll-trigger content-layer"
+          aria-label="Scroll to portfolio"
+        >
           <ChevronDownIcon size={28} className="scroll-icon-anim" />
         </Link>
       </section>

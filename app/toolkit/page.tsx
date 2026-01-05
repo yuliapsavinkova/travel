@@ -8,15 +8,15 @@ export default function ToolkitPage() {
   return (
     <>
       <section className="hero-stack section-margin">
-        <div className="media-viewport">
+        <div className="hero-media-container media-viewport">
           <img
             src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=2400"
             alt="Toolkit"
           />
-          <div className="hero-gradient-overlay" />
+          <div className="overlay-hero" />
         </div>
 
-        <div className="hero-content-overlay">
+        <div className="hero-content-overlay content-layer">
           <div className="sub-header hero-sub-header">Resources</div>
           <h1 className="display-title">
             My <span className="shimmer-text">Toolkit.</span>
@@ -34,7 +34,11 @@ export default function ToolkitPage() {
           </div>
         </div>
 
-        <Link href="#framework" className="scroll-trigger" aria-label="Scroll to toolkit">
+        <Link
+          href="#framework"
+          className="scroll-trigger content-layer"
+          aria-label="Scroll to toolkit"
+        >
           <ChevronDownIcon size={28} className="scroll-icon-anim" />
         </Link>
       </section>

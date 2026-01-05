@@ -100,10 +100,20 @@ const Footer = () => {
               <span className="copyright-symbol">&copy;</span>{' '}
               <span className="footer-year-highlight">{CURRENT_YEAR}</span> SITTER JOURNEY
             </span>
-            <Link href="/privacy" className="footer-legal-link">
+            <Link
+              href="/privacy"
+              className="footer-legal-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               PRIVACY
             </Link>
-            <Link href="/disclosure" className="footer-legal-link">
+            <Link
+              href="/disclosure"
+              className="footer-legal-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               DISCLOSURE
             </Link>
           </div>
