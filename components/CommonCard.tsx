@@ -15,7 +15,7 @@ interface CommonCardProps {
   ctaLabel?: string;
 }
 
-const CommonCard = ({
+const CommonCard: React.FC<CommonCardProps> = ({
   image,
   badge,
   metadata,
@@ -26,7 +26,7 @@ const CommonCard = ({
   slug,
   ctaLink,
   ctaLabel,
-}: CommonCardProps) => {
+}) => {
   const internalPath = slug ? (slug.startsWith('/') ? slug : `/${slug}`) : '';
   const label = actionLabel || 'Explore';
 
@@ -65,7 +65,9 @@ const CommonCard = ({
                 aria-label={ctaLabel || 'Claim Offer'}
               >
                 <span className="serif-italic">
-                  {ctaLabel ? `Offer: ${ctaLabel.replace('Get: ', '')}` : 'Claim Discount'}
+                  {ctaLabel
+                    ? `Offer: ${ctaLabel.replace('Get: ', '').replace('Offer: ', '')}`
+                    : 'Claim Discount'}
                 </span>
                 <ExternalLinkIcon size={14} className="cta-icon" />
               </a>

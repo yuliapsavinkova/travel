@@ -1,5 +1,6 @@
 import { BlogPost } from '../types';
-import { firstHouseSitContent } from './articles/first-house-sit';
+import { firstHouseSitContent } from './articles/ths/first-house-sit';
+import { thsProfileTipsContent } from './articles/ths/profile-tips';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -16,5 +17,25 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Offer: 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: firstHouseSitContent,
+    nextLink: {
+      label: 'Stellar Profile Tips',
+      href: '/journal/stellar-trustedhousesitters-profile-tips',
+    },
+  },
+  {
+    id: '2',
+    slug: 'stellar-trustedhousesitters-profile-tips',
+    title: 'How to Create a Stellar TrustedHousesitters Profile (Tips for Sitters)',
+    excerpt:
+      'Learn how to create a trusted TrustedHousesitters sitter profile that gets more invites. Photo rules, profile tips, reviews, and what owners actually look for.',
+    date: 'January 2026',
+    category: 'Expertise',
+    location: 'Profile Strategy',
+    imageUrl:
+      'https://images.unsplash.com/photo-1517125591588-3a29b2182219?q=80&w=2073&auto=format&fit=crop',
+    ctaLabel: 'Get 25% Off Membership',
+    ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+    body: thsProfileTipsContent,
+    prevLink: { label: 'Getting Your First Sit', href: '/journal/get-your-first-house-sit' },
   },
 ];

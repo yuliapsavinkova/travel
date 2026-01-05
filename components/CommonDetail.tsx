@@ -51,7 +51,6 @@ const CommonDetail = ({
       <div className="detail-hero-section">
         <div className="media-viewport">
           <img src={image} alt={title} className="detail-hero-image" />
-          {/* Overlay removed to ensure full brightness as title is above image */}
         </div>
 
         {onBack && (
@@ -95,15 +94,6 @@ const CommonDetail = ({
         <div className={`detail-layout ${sidebar ? 'with-sidebar' : ''}`}>
           <div className="prose-content">
             {children}
-
-            {ctaLink && ctaLabel && (
-              <div className="detail-minimal-cta">
-                <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="glass-pill">
-                  <span className="serif-italic">{ctaLabel}</span>
-                  <ExternalLinkIcon size={14} className="cta-icon" />
-                </a>
-              </div>
-            )}
 
             {(prevLink || nextLink) && (
               <nav className="article-navigation" aria-label="Related articles">
