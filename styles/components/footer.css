@@ -56,7 +56,7 @@
 .footer-links li {
   font-size: 11px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -64,14 +64,20 @@
 }
 
 .footer-links li:hover {
-  color: var(--c-gold);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: translateX(8px);
 }
 
 .footer-socials {
   display: flex;
+  flex-direction: row; /* Force horizontal alignment */
+  flex-wrap: nowrap;
   gap: var(--s-4);
   margin-top: var(--s-6);
+  align-items: center;
 }
 
 .social-icon {
@@ -136,16 +142,15 @@
   letter-spacing: 0.15em;
   text-decoration: underline;
   text-underline-offset: 4px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   color: var(--c-text-muted) !important;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
 }
 
 .footer-legal-link:hover {
-  color: var(--c-gold) !important;
-  text-decoration-color: var(--c-gold);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: translateY(-1px);
 }
 
@@ -154,35 +159,17 @@
   letter-spacing: 0.15em;
   color: var(--c-text-muted);
   text-transform: uppercase;
-  line-height: 1;
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
-.copyright-symbol {
-  font-size: 15px; /* Optically matched to height of Inter bold caps */
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
-  margin-top: -1px; /* Align with uppercase midline */
-  vertical-align: middle;
-}
-
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: var(--s-7);
   }
   .footer-bottom {
     flex-direction: column;
     gap: var(--s-5);
-    text-align: center;
-    align-items: center;
-  }
-  .footer-legal-links {
-    justify-content: center;
   }
 }

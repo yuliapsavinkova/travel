@@ -64,7 +64,7 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         <div>
           <div className="sub-header">Get In Touch</div>
           <h2 className="display-title display-title-md" style={{ marginBottom: 0 }}>
-            <span className="champagne-text">Contact.</span>
+            <span className="shimmer-text">Contact.</span>
           </h2>
         </div>
         <button

@@ -103,11 +103,15 @@
 
 .subtle-referral-link:hover {
   opacity: 1;
-  color: var(--c-white);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtle-referral-link:hover .cta-icon {
   opacity: 1;
+  color: var(--c-gold);
   transform: translate(2px, -2px);
 }
 

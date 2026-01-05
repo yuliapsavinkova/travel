@@ -92,7 +92,10 @@
 }
 
 .disclosure-link:hover {
-  color: var(--c-white);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration-color: transparent;
 }
 
@@ -125,6 +128,12 @@
   color: var(--c-black) !important;
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 15px 40px rgba(229, 193, 133, 0.4);
+}
+
+/* Override hover color for hero links to ensure black text doesn't conflict with text gradient */
+.hero-glass-link:hover span {
+  background: none;
+  -webkit-text-fill-color: var(--c-black);
 }
 
 .hero-back-link {

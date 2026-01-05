@@ -7,6 +7,9 @@
   --c-gold-deep: #b08d57;
   --c-gold-hover: #d4af37;
 
+  /* GRADIENTS */
+  --g-champagne: linear-gradient(135deg, #ffffff 0%, #e5c185 45%, #b08d57 100%);
+
   /* SEMANTIC ALPHA COLORS */
   --c-text: var(--c-white);
   --c-text-dim: rgba(255, 255, 255, 0.7);

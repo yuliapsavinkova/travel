@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">A Solo Female Journey</div>
           <h1 className="display-title">
-            Chronicles of a <span className="champagne-text">Traveler.</span>
+            Chronicles of a <span className="shimmer-text">Traveler.</span>
           </h1>
           <p className="hero-paragraph">
             I travel full time. From the hidden corners of the United States to the far reaches of
@@ -47,7 +47,7 @@ export default function HomePage() {
         <section className="section-margin text-center" id="perspective">
           <div className="sub-header">Global Narrative</div>
           <h2 className="display-title display-title-md">
-            Unbound <span className="serif-italic champagne-text">& Intentional.</span>
+            Unbound <span className="serif-italic shimmer-text">& Intentional.</span>
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
             Across {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states, my
@@ -101,7 +101,7 @@ export default function HomePage() {
           <div className="section-divider">
             <div className="sub-header">Collaborations</div>
             <h2 className="display-title display-title-md">
-              The <span className="serif-italic champagne-text">Connection.</span>
+              The <span className="serif-italic shimmer-text">Connection.</span>
             </h2>
             <p className="hero-paragraph" style={{ margin: 'var(--s-4) auto' }}>
               My full-time travel is supported by a foundation of professional stewardship. If you

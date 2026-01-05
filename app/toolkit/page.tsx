@@ -19,7 +19,7 @@ export default function ToolkitPage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">Traveler Framework</div>
           <h1 className="display-title">
-            The Traveler's <span className="champagne-text">Toolkit.</span>
+            The Traveler's <span className="shimmer-text">Toolkit.</span>
           </h1>
           <p className="hero-paragraph">
             The reliable tools and resources that make a life of full-time travel possible.
@@ -43,7 +43,7 @@ export default function ToolkitPage() {
         <header className="text-center section-margin" id="framework">
           <div className="sub-header">The Journey Kit</div>
           <h2 className="display-title display-title-md">
-            Reliable <span className="serif-italic champagne-text">Essentials.</span>
+            Reliable <span className="serif-italic shimmer-text">Essentials.</span>
           </h2>
         </header>
 

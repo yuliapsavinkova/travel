@@ -19,7 +19,7 @@ export default function TravelPage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">Travel Chronicles</div>
           <h1 className="display-title">
-            Global <span className="champagne-text">Footprints.</span>
+            Global <span className="shimmer-text">Footprints.</span>
           </h1>
           <p className="hero-paragraph">
             Exploring the intersection of architectural heritage and local rhythms. A curated
@@ -44,7 +44,7 @@ export default function TravelPage() {
         <header className="text-center section-margin" id="guides">
           <div className="sub-header">The Archive</div>
           <h2 className="display-title display-title-md">
-            Curated <span className="serif-italic champagne-text">Guides.</span>
+            Curated <span className="serif-italic shimmer-text">Guides.</span>
           </h2>
         </header>
 

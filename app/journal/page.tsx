@@ -19,7 +19,7 @@ export default function JournalPage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">Stories from the Road</div>
           <h1 className="display-title">
-            The Art of <span className="champagne-text">the Journey.</span>
+            The Art of <span className="shimmer-text">the Journey.</span>
           </h1>
           <p className="hero-paragraph">
             Documenting the intersections of architecture, pet companionship, and the traveler
@@ -44,7 +44,7 @@ export default function JournalPage() {
         <header className="text-center section-margin" id="archive">
           <div className="sub-header">Archive</div>
           <h2 className="display-title display-title-md">
-            The <span className="serif-italic champagne-text">Journal.</span>
+            The <span className="serif-italic shimmer-text">Journal.</span>
           </h2>
         </header>
 

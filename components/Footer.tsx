@@ -19,7 +19,7 @@ const Footer = () => {
                 <SJLogo size={40} className="footer-brand-icon" />
                 <span className="footer-brand-name serif-italic">
                   <span>Sitter </span>
-                  <span className="champagne-text">Journey</span>
+                  <span className="shimmer-text">Journey</span>
                 </span>
               </div>
             </Link>

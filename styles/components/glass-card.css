@@ -14,10 +14,9 @@
   color: var(--c-text);
   position: relative;
   overflow: hidden;
-  cursor: pointer; /* Whole card is clickable */
+  cursor: pointer;
 }
 
-/* Entire card hover effect - Shift restored */
 .glass-card:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--c-gold-rich);
@@ -77,11 +76,10 @@
   margin-bottom: var(--s-4);
 }
 
-/* SUBTLE REFERRAL LINK - Sit above the stretched link */
 .card-internal-cta {
   margin-bottom: var(--s-5);
   position: relative;
-  z-index: 10; /* Ensures it stays above the stretched link layer */
+  z-index: 10;
 }
 
 .subtle-referral-link {
@@ -99,7 +97,10 @@
 
 .subtle-referral-link:hover {
   opacity: 1;
-  color: var(--c-white);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: translateX(2px);
 }
 
@@ -110,6 +111,7 @@
 
 .subtle-referral-link:hover .cta-icon {
   opacity: 1;
+  color: var(--c-gold);
   transform: translate(2px, -2px);
 }
 
@@ -162,14 +164,13 @@
   width: 100%;
 }
 
-/* STRETCHED LINK PATTERN - Makes whole card clickable */
 .stretched-link::after {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1; /* Lowest interactive layer */
+  z-index: 1;
   content: "";
 }
 
@@ -179,7 +180,6 @@
   align-items: center;
   width: 100%;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .card-action-label {
@@ -196,19 +196,21 @@
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Specific animations for the "View Details" part on card hover */
 .glass-card:hover .card-action-label {
-  color: var(--c-white);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: translateX(6px);
 }
 
 .glass-card:hover .action-arrow {
-  color: var(--c-white);
+  color: var(--c-gold-hover);
   transform: translate(6px, -6px);
 }
 
 @media (max-width: 768px) {
   .glass-card:hover {
-    transform: none; /* Reduce complexity on mobile touch */
+    transform: none;
   }
 }

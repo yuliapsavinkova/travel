@@ -24,7 +24,7 @@ export default function StaysPage() {
         <div className="hero-content-overlay">
           <div className="sub-header hero-sub-header">Verified Stewardship</div>
           <h1 className="display-title">
-            Attentive Care for your <span className="champagne-text">Home and Pets.</span>
+            Attentive Care for your <span className="shimmer-text">Home and Pets.</span>
           </h1>
           <p className="hero-paragraph">
             Providing professional stewardship and consistent companionship for properties and their
@@ -49,7 +49,7 @@ export default function StaysPage() {
         <header className="text-center section-margin" id="portfolio">
           <div className="sub-header">Professional History</div>
           <h2 className="display-title display-title-md">
-            My <span className="serif-italic champagne-text">Stays.</span>
+            My <span className="serif-italic shimmer-text">Stays.</span>
           </h2>
         </header>
 

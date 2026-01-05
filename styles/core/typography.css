@@ -52,12 +52,25 @@ body {
   font-style: italic;
 }
 
-/* Beautiful White-to-Gold Shimmer */
-.champagne-text {
-  color: var(--c-gold); /* Fallback */
-  background: linear-gradient(135deg, #ffffff 0%, #e5c185 45%, #b08d57 100%);
+/* 
+   CHAMPAGNE SHIMMER UTILITIES 
+   Standardized logic for background-clipped text gradients
+*/
+.shimmer-text {
+  background: var(--g-champagne);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline;
+  display: inline-block;
+}
+
+.hover-shimmer {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-shimmer:hover {
+  background: var(--g-champagne);
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
