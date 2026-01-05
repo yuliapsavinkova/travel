@@ -155,9 +155,10 @@
 }
 
 .copyright-symbol {
-  font-size: 16px; /* Significantly increased size as requested */
+  font-size: 1.3rem; /* Enlarged significantly for legibility */
   line-height: 1;
-  color: var(--c-text-muted);
+  color: var(--c-gold); /* Match theme color */
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {

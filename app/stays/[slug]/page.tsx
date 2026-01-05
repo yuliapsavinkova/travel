@@ -16,7 +16,12 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
   if (!stay) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail onBack="/stays#portfolio" backLabel="Stays" image="" title="Not Found">
+        <CommonDetail
+          onBack="/stays#portfolio"
+          backLabel="Back to Stays"
+          image=""
+          title="Not Found"
+        >
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Stay Not Found</h1>
             <p className="hero-paragraph">The requested stay could not be located.</p>
@@ -29,7 +34,7 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
   return (
     <CommonDetail
       onBack="/stays#portfolio"
-      backLabel="Stays"
+      backLabel="Back to Stays"
       image={stay.imageUrl || ''}
       title={stay.location}
       date={stay.date}

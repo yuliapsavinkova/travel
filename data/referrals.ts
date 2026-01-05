@@ -13,7 +13,7 @@ export const REFERRALS: ReferralCategory[] = [
         date: 'January 2026',
         body: txt(`TrustedHousesitters is the main platform I use to travel. I look after someone’s home and pets, and in return, I stay for free. It’s built on trust and reviews, which makes it much safer than trying to find sits on social media.
 
-I've used it to stay in over 25 states. It's perfect if you work remotely and love animals. If you're interested, my link gets you 25% off your first year.`),
+I've used it to stay in many states across the country. It's perfect if you work remotely and love animals. If you're interested, my link gets you 25% off your first year.`),
         discountText: '25% Off',
         link: 'https://trustedhousesitters.com/refer/raf943607',
         icon: 'home',

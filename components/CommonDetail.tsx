@@ -20,7 +20,7 @@ interface CommonDetailProps {
 
 const CommonDetail = ({
   onBack,
-  backLabel = 'Archive',
+  backLabel,
   image,
   title,
   date,
@@ -47,11 +47,7 @@ const CommonDetail = ({
 
         {/* Glass Corner Navigation - Top Left */}
         {onBack && (
-          <Link
-            href={onBack}
-            className="hero-glass-link hero-back-link"
-            aria-label={`Go back to ${backLabel}`}
-          >
+          <Link href={onBack} className="hero-glass-link hero-back-link" aria-label={`Go back`}>
             <ArrowLeftIcon size={12} />
             <span>{backLabel}</span>
           </Link>
@@ -70,7 +66,7 @@ const CommonDetail = ({
           </a>
         )}
 
-        {/* Cinematic Disclosure Overlay */}
+        {/* Cinematic Disclosure Overlay - Positioned Bottom of Image */}
         {isAffiliate && (
           <div className="hero-disclosure-bar">
             <ShieldCheckIcon size={14} className="disclosure-icon" />

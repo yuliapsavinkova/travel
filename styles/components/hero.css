@@ -18,19 +18,19 @@
   letter-spacing: 0.3em;
   color: var(--c-gold);
   margin-bottom: var(--s-4);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 70%),
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 70%),
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.9) 0% /* Darker top for header legibility */,
-      rgba(0, 0, 0, 0.45) 40%,
-      rgba(0, 0, 0, 0.45) 60%,
-      rgba(0, 0, 0, 0.9) 100%
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.05) 40%,
+      rgba(0, 0, 0, 0.05) 60%,
+      rgba(0, 0, 0, 0.5) 100%
     );
   z-index: 2;
 }
@@ -70,7 +70,7 @@
   margin: 0 auto;
   line-height: 1.6;
   letter-spacing: -0.01em;
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
 }
 
 .hero-button-group {
@@ -88,7 +88,7 @@
 
 /* Next.js Image Reveal Anim */
 .hero-stack .media-viewport img {
-  animation: hero-reveal-zoom 10s infinite alternate ease-in-out;
+  animation: hero-reveal-zoom 15s infinite alternate ease-in-out;
   transform-origin: center center;
   transition: opacity 0.8s ease-in-out;
 }
@@ -98,7 +98,7 @@
     transform: scale(1.0);
   }
   100% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -108,6 +108,7 @@
   }
   .display-title {
     font-size: 2.2rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
   .hero-paragraph {
     font-size: 1.1rem;
