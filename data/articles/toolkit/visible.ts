@@ -7,7 +7,7 @@ export const visibleContent = `
   <p>It uses a major network so the coverage is excellent even in more remote areas. For a digital nomad or anyone living a mobile lifestyle, having one less thing to worry about is a huge relief.</p>
 
   <div class="prose-accent-box">
-    <h3>Upgrade your plan</h3>
-    <p>If you are looking for a simple and affordable phone plan, you can get a discount on your first month using my referral code.</p>
+    <h3>Staying connected</h3>
+    <p>If you're looking for a simple and reliable mobile plan for your own travels, you can get a discount on your first month of service through the link below.</p>
   </div>
 `;

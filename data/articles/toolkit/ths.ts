@@ -9,7 +9,7 @@ export const thsContent = `
   <p>It’s also a great way to connect with people who love animals as much as you do. Most homeowners are incredibly welcoming and appreciate the peace of mind that comes with knowing their home is in good hands.</p>
 
   <div class="prose-accent-box">
-    <h3>Interested in trying it?</h3>
-    <p>If you would like to try it for yourself, my referral link gives you 25% off your first year of membership.</p>
+    <h3>Start your journey</h3>
+    <p>If you're interested in exploring the world through house sitting, you can use my personal referral link to claim a 25% discount on your first year of membership.</p>
   </div>
 `;

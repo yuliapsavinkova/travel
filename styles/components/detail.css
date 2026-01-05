@@ -1,5 +1,3 @@
-/* Existing Detail Styles ... */
-
 .detail-container {
   padding-bottom: var(--s-9);
   width: 100%;
@@ -9,7 +7,6 @@
   flex-direction: column;
 }
 
-/* Header Area - Editorial Masthead */
 .detail-header-area {
   padding-top: calc(var(--s-9) + var(--s-3));
   padding-bottom: var(--s-4);
@@ -19,21 +16,6 @@
   width: 100%;
   padding-left: var(--s-6);
   padding-right: var(--s-6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--s-4);
-}
-
-.detail-brand-icon {
-  margin-bottom: var(--s-2);
-  transition: transform 0.4s ease;
-  filter: drop-shadow(0 0 10px rgba(229, 193, 133, 0.2));
-}
-
-.detail-brand-link:hover .detail-brand-icon {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 15px rgba(229, 193, 133, 0.4));
 }
 
 .detail-date-label {
@@ -43,31 +25,19 @@
   text-transform: uppercase;
   letter-spacing: 0.6em;
   color: var(--c-gold);
-  opacity: 0.8;
+  margin-bottom: var(--s-3);
 }
 
 .detail-layout-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 var(--s-6);
-  position: relative;
 }
 
-.detail-layout {
-  display: block;
-}
-
-.detail-sidebar {
-  margin-top: var(--s-7);
-  padding-top: var(--s-6);
-  border-top: 1px solid var(--c-border-light);
-}
-
-/* Minimal Subtle CTA Styles - TIGHT TO TEXT, NO BORDERS */
+/* Elegant Text CTA */
 .detail-minimal-cta {
-  margin-top: 0;
-  padding-top: 0;
-  border: none;
+  margin-top: var(--s-4);
+  padding-bottom: var(--s-6);
   display: flex;
   justify-content: flex-start;
 }
@@ -75,48 +45,29 @@
 .subtle-referral-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   color: var(--c-gold);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   text-decoration: none;
   transition: all 0.3s ease;
-  padding: 4px 0;
-  opacity: 0.8;
-}
-
-.cta-icon {
-  opacity: 0.6;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding: 8px 0;
+  border-bottom: 1px solid transparent;
 }
 
 .subtle-referral-link:hover {
-  opacity: 1;
-  background: var(--g-champagne);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--c-white);
+  border-bottom-color: var(--c-gold);
+}
+
+.cta-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .subtle-referral-link:hover .cta-icon {
-  opacity: 1;
-  color: var(--c-gold);
-  transform: translate(2px, -2px);
-}
-
-@media (min-width: 1200px) {
-  .detail-layout.with-sidebar {
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: var(--s-8);
-  }
-  .detail-sidebar {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-    border-left: 1px solid var(--c-border-light);
-    padding-left: var(--s-6);
-  }
+  transform: translate(4px, -4px);
 }
 
 @media (max-width: 768px) {

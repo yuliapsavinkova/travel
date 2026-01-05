@@ -7,7 +7,7 @@ export const roverContent = `
   <p>Whether you need someone to walk your dog or you are looking to earn a little extra while traveling, it is a solid platform that focuses on the well-being of the pets.</p>
 
   <div class="prose-accent-box">
-    <h3>Need pet care?</h3>
-    <p>If you need pet care or want to start sitting yourself, my link gives you a discount on your first booking.</p>
+    <h3>Finding care</h3>
+    <p>If you need someone to look after your pets or want to start sitting yourself, this link will give you a credit toward your first booking on the platform.</p>
   </div>
 `;

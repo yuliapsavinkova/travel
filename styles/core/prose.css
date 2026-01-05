@@ -31,14 +31,13 @@
 }
 
 .prose-content h3 {
-  font-family: var(--f-main);
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  font-family: var(--f-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 600;
   color: var(--c-gold);
-  margin-top: var(--s-7);
-  margin-bottom: var(--s-3);
+  margin-top: var(--s-4);
+  margin-bottom: var(--s-2);
 }
 
 .prose-content p {
@@ -46,22 +45,24 @@
   opacity: 0.85;
 }
 
-.prose-content strong {
-  color: var(--c-white);
-  font-weight: 600;
+.prose-accent-box {
+  background: rgba(229, 193, 133, 0.03);
+  border-top: 1px solid var(--c-gold-muted);
+  border-bottom: 1px solid var(--c-gold-muted);
+  padding: var(--s-6) 0;
+  margin: var(--s-8) 0 0 0;
+  position: relative;
 }
 
-.prose-accent-box {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--c-border-light);
-  padding: var(--s-6);
-  margin: var(--s-8) 0;
-  border-radius: var(--r-sm);
+.prose-accent-box p {
+  margin-bottom: 0;
+  font-style: italic;
+  color: var(--c-text-dim);
+  font-size: 16px;
 }
 
 /* 
-   PROSE IMAGE BLOCK FIX
-   Ensures images inside articles are contained and don't explode vertically.
+   PROSE IMAGE BLOCK 
 */
 .prose-image-block {
   margin: var(--s-8) 0;
@@ -73,11 +74,10 @@
 
 .prose-image-block img {
   width: 100%;
-  max-height: 440px; /* Constraints vertical "humangoes" size */
+  max-height: 440px;
   object-fit: cover;
   border-radius: var(--r-md);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .prose-caption {
@@ -86,29 +86,10 @@
   text-align: center;
   font-style: italic;
   letter-spacing: 0.02em;
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.prose-quote {
-  padding: var(--s-7);
-  margin: var(--s-8) 0;
-  font-family: var(--f-serif);
-  font-style: italic;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--c-gold);
-  line-height: 1.5;
-  text-align: center;
-  border-top: 1px solid var(--c-border-light);
-  border-bottom: 1px solid var(--c-border-light);
 }
 
 @media (max-width: 768px) {
   .prose-content {
     font-size: 17px;
-  }
-  .prose-image-block img {
-    max-height: 300px;
   }
 }

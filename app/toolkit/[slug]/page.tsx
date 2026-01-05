@@ -47,8 +47,8 @@ export default async function ReferralDetailPage({
       isAffiliate={true}
       ctaLabel={item.discountText ? `Offer: ${item.discountText}` : 'Visit Partner'}
       ctaLink={item.link}
-      prevLink={{ label: 'Travel Guides', href: '/travel' }}
-      nextLink={{ label: 'The Journal', href: '/journal' }}
+      prevLink={item.prevLink}
+      nextLink={item.nextLink}
     >
       <div className="flex-col">
         <ContentRenderer content={item.body} className="detail-rich-content" />

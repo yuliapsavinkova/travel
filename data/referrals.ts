@@ -21,6 +21,8 @@ export const REFERRALS: ReferralCategory[] = [
         imageUrl:
           'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
         promoNote: '25% discount link.',
+        prevLink: { label: 'Planet Fitness', href: '/toolkit/planet-fitness-wellness' },
+        nextLink: { label: 'Rover', href: '/toolkit/rover-pet-care' },
       },
       {
         id: 'rover',
@@ -35,6 +37,8 @@ export const REFERRALS: ReferralCategory[] = [
         imageUrl:
           'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
         promoNote: 'Useful for shorter stays.',
+        prevLink: { label: 'TrustedHousesitters', href: '/toolkit/trustedhousesitters-referral' },
+        nextLink: { label: 'Visible', href: '/toolkit/visible-connectivity' },
       },
       {
         id: 'visible',
@@ -49,6 +53,8 @@ export const REFERRALS: ReferralCategory[] = [
         imageUrl:
           'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200',
         promoNote: 'Great for remote work.',
+        prevLink: { label: 'Rover', href: '/toolkit/rover-pet-care' },
+        nextLink: { label: 'Planet Fitness', href: '/toolkit/planet-fitness-wellness' },
       },
       {
         id: 'planet-fitness',
@@ -63,6 +69,8 @@ export const REFERRALS: ReferralCategory[] = [
         imageUrl:
           'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200',
         promoNote: 'Good for travel days.',
+        prevLink: { label: 'Visible', href: '/toolkit/visible-connectivity' },
+        nextLink: { label: 'TrustedHousesitters', href: '/toolkit/trustedhousesitters-referral' },
       },
     ],
   },

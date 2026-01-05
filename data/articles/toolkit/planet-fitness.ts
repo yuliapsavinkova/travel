@@ -7,7 +7,7 @@ export const planetFitnessContent = `
   <p>It is one of the most practical investments for a full-time traveler. Having a "home base" gym that feels the same regardless of the state you are in provides a sense of comfort and stability.</p>
 
   <div class="prose-accent-box">
-    <h3>Join the club</h3>
-    <p>If you are thinking about joining, my link helps you get started with a lower sign-up fee.</p>
+    <h3>Routine on the road</h3>
+    <p>Starting a routine is easier with a good home base. You can join the club with a special sign-up offer using the referral link below.</p>
   </div>
 `;
