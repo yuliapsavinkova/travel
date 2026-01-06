@@ -29,29 +29,8 @@ export const firstHouseSitContent = `
 
   <div class="prose-accent-box">
     <h3>Begin your travel journey</h3>
-    <p>Ready to apply for your first sit? Use this link to join the TrustedHousesitters community and save 25% on your annual membership.</p>
-  </div>
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
+    <p>Ready to apply for your first sit? Use the link below to join the TrustedHousesitters community and save 25% on your annual membership.</p>
   </div>
 
-  <div class="prose-faq">
-    <h2>F.A.Q.</h2>
-    <div class="faq-item">
-      <strong>How do I make my profile look trustworthy without reviews?</strong>
-      <p>Focus on professional photos and clear descriptions of your responsibility. <a href="/journal/stellar-trustedhousesitters-profile-tips">Read my profile setup guide.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>Where do you find the best house sits?</strong>
-      <p>I use one specific platform for 99% of my travel stays across the country. <a href="/toolkit/trustedhousesitters-referral">Learn more about my favorite tool.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>How do you handle internet and phone data while sitting?</strong>
-      <p>Working remotely requires a stable connection, even when the home WiFi is spotty. <a href="/toolkit/visible-connectivity">See the mobile plan I use.</a></p>
-    </div>
-  </div>
-
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
-  </div>
+  <p>If you want your first house sit faster: Apply off-season, avoid over-saturated destinations, choose cats over dogs, and write calm, specific messages. This isn’t luck — it’s strategy.</p>
 `;

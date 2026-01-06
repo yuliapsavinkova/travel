@@ -10,27 +10,4 @@ export const roverContent = `
     <h3>Finding care</h3>
     <p>If you need someone to look after your pets or want to start sitting yourself, this link will give you a credit toward your first booking on the platform.</p>
   </div>
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
-  </div>
-
-  <div class="prose-faq">
-    <h2>F.A.Q.</h2>
-    <div class="faq-item">
-      <strong>How do you find your primary long-term house sits?</strong>
-      <p>While I use Rover for gaps, I use a different platform for stays. <a href="/toolkit/trustedhousesitters-referral">Learn more about TrustedHousesitters.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>What do you do for internet when sitting in remote areas?</strong>
-      <p>I use a specific plan for unlimited hotspot data. <a href="/toolkit/visible-connectivity">Read my connectivity guide.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>How did you get started with professional pet care?</strong>
-      <p>I built my portfolio from scratch using a specific framework. <a href="/journal/get-your-first-house-sit">See how I got my first sit.</a></p>
-    </div>
-  </div>
-
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
-  </div>
 `;

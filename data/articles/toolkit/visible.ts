@@ -10,27 +10,4 @@ export const visibleContent = `
     <h3>Staying connected</h3>
     <p>If you're looking for a simple and reliable mobile plan for your own travels, you can get a discount on your first month of service through the link below.</p>
   </div>
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
-  </div>
-
-  <div class="prose-faq">
-    <h2>F.A.Q.</h2>
-    <div class="faq-item">
-      <strong>Where do you use this connection most often?</strong>
-      <p>I rely on it during long-term stays in new neighborhoods. <a href="/toolkit/trustedhousesitters-referral">See how I find my house sits.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>How do you stay fresh and healthy while traveling?</strong>
-      <p>Gym access is my secret for showers and routine. <a href="/toolkit/planet-fitness-wellness">Check out my fitness setup.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>What's the first step to starting a nomadic lifestyle?</strong>
-      <p>It all begins with getting that first verified experience. <a href="/journal/get-your-first-house-sit">Read about landing your first sit.</a></p>
-    </div>
-  </div>
-
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
-  </div>
 `;

@@ -20,9 +20,13 @@ export const REFERRALS: ReferralCategory[] = [
         icon: 'home',
         imageUrl:
           'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
-        promoNote: '25% discount link.',
-        prevLink: { label: 'Planet Fitness', href: '/toolkit/planet-fitness-wellness' },
-        nextLink: { label: 'Rover', href: '/toolkit/rover-pet-care' },
+        faqIds: ['ths-beginner-difficulty', 'trusted-profile-tips', 'ths-internet-remote'],
+        prevLink: {
+          label: 'Previous',
+          title: 'Planet Fitness',
+          href: '/toolkit/planet-fitness-wellness',
+        },
+        nextLink: { label: 'Next', title: 'Rover', href: '/toolkit/rover-pet-care' },
       },
       {
         id: 'rover',
@@ -36,9 +40,13 @@ export const REFERRALS: ReferralCategory[] = [
         icon: 'heart',
         imageUrl:
           'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'Useful for shorter stays.',
-        prevLink: { label: 'TrustedHousesitters', href: '/toolkit/trustedhousesitters-referral' },
-        nextLink: { label: 'Visible', href: '/toolkit/visible-connectivity' },
+        faqIds: ['best-platform-travel', 'ths-internet-remote', 'ths-beginner-difficulty'],
+        prevLink: {
+          label: 'Previous',
+          title: 'TrustedHousesitters',
+          href: '/toolkit/trustedhousesitters-referral',
+        },
+        nextLink: { label: 'Next', title: 'Visible', href: '/toolkit/visible-connectivity' },
       },
       {
         id: 'visible',
@@ -52,9 +60,13 @@ export const REFERRALS: ReferralCategory[] = [
         icon: 'smartphone',
         imageUrl:
           'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'Great for remote work.',
-        prevLink: { label: 'Rover', href: '/toolkit/rover-pet-care' },
-        nextLink: { label: 'Planet Fitness', href: '/toolkit/planet-fitness-wellness' },
+        faqIds: ['ths-internet-remote', 'travel-wellness-gym', 'best-platform-travel'],
+        prevLink: { label: 'Previous', title: 'Rover', href: '/toolkit/rover-pet-care' },
+        nextLink: {
+          label: 'Next',
+          title: 'Planet Fitness',
+          href: '/toolkit/planet-fitness-wellness',
+        },
       },
       {
         id: 'planet-fitness',
@@ -68,9 +80,13 @@ export const REFERRALS: ReferralCategory[] = [
         icon: 'award',
         imageUrl:
           'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200',
-        promoNote: 'Good for travel days.',
-        prevLink: { label: 'Visible', href: '/toolkit/visible-connectivity' },
-        nextLink: { label: 'TrustedHousesitters', href: '/toolkit/trustedhousesitters-referral' },
+        faqIds: ['travel-wellness-gym', 'best-platform-travel', 'remote-work-internet'],
+        prevLink: { label: 'Previous', title: 'Visible', href: '/toolkit/visible-connectivity' },
+        nextLink: {
+          label: 'Next',
+          title: 'TrustedHousesitters',
+          href: '/toolkit/trustedhousesitters-referral',
+        },
       },
     ],
   },

@@ -36,8 +36,8 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
       isAffiliate={true}
       ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
-      prevLink={{ label: 'My Stays', href: '/stays' }}
-      nextLink={{ label: "Traveler's Toolkit", href: '/toolkit' }}
+      prevLink={{ label: 'Previous', title: 'My Stays', href: '/stays' }}
+      nextLink={{ label: 'Next', title: 'Toolkit', href: '/toolkit' }}
     >
       <div className="flex-col flex-gap-md">
         <p className="prose-lead">{guide.excerpt}</p>

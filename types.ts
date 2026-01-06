@@ -1,8 +1,19 @@
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
 export interface NavLink {
-  label: string;
+  label: string; // e.g. "Previous Guide" or "Next Step"
+  title: string; // e.g. "Landing Your First Sit"
   href: string;
+}
+
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+  link?: {
+    label: string;
+    href: string;
+  };
 }
 
 export interface Review {
@@ -17,6 +28,7 @@ export interface Review {
   imageUrl?: string;
   sitDescription: string;
   body?: string;
+  sortOrder?: number;
   prevLink?: NavLink;
   nextLink?: NavLink;
 }
@@ -31,10 +43,12 @@ export interface BlogPost {
   category: string;
   imageUrl: string;
   location: string;
+  sortOrder?: number;
   ctaLink?: string;
   ctaLabel?: string;
   prevLink?: NavLink;
   nextLink?: NavLink;
+  faqIds?: string[];
 }
 
 export interface TravelGuide {
@@ -46,13 +60,10 @@ export interface TravelGuide {
   body: string;
   imageUrl: string;
   date?: string;
+  sortOrder?: number;
   prevLink?: NavLink;
   nextLink?: NavLink;
-}
-
-export interface ReferralCategory {
-  title: string;
-  items: ReferralItem[];
+  faqIds?: string[];
 }
 
 export interface ReferralItem {
@@ -67,8 +78,15 @@ export interface ReferralItem {
   icon: string;
   imageUrl?: string;
   promoNote?: string;
+  sortOrder?: number;
   prevLink?: NavLink;
   nextLink?: NavLink;
+  faqIds?: string[];
+}
+
+export interface ReferralCategory {
+  title: string;
+  items: ReferralItem[];
 }
 
 export interface SiteStrings {

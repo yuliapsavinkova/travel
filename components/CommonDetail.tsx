@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React, { type ReactNode } from 'react';
 import { ArrowLeftIcon, ExternalLinkIcon, ShieldCheckIcon } from './Icons';
-import type { NavLink } from '../types';
+import FAQSection from './FAQSection';
+import type { NavLink, FAQItem } from '../types';
 
 interface CommonDetailProps {
   onBack?: string;
@@ -18,6 +19,7 @@ interface CommonDetailProps {
   nextLink?: NavLink;
   prevNavLabel?: string;
   nextNavLabel?: string;
+  faqs?: FAQItem[];
 }
 
 const CommonDetail = ({
@@ -33,10 +35,8 @@ const CommonDetail = ({
   sidebar,
   prevLink,
   nextLink,
-  prevNavLabel = 'Previous',
-  nextNavLabel = 'Next',
+  faqs,
 }: CommonDetailProps) => {
-  // Clean the label for the footer to avoid "Return to Back to..."
   const footerLabel = backLabel ? backLabel.replace('Back to ', '') : '';
 
   return (
@@ -95,24 +95,30 @@ const CommonDetail = ({
           <div className="prose-content">
             {children}
 
+            {ctaLink && ctaLabel && (
+              <div className="prose-cta-row">
+                <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="glass-pill">
+                  {ctaLabel}
+                </a>
+              </div>
+            )}
+
+            {faqs && faqs.length > 0 && <FAQSection items={faqs} />}
+
             {(prevLink || nextLink) && (
               <nav className="article-navigation" aria-label="Related articles">
-                <div className="nav-link-block prev">
-                  {prevLink && (
-                    <Link href={prevLink.href}>
-                      <span className="nav-link-label">{prevNavLabel}</span>
-                      <span className="nav-link-title">{prevLink.label}</span>
-                    </Link>
-                  )}
-                </div>
-                <div className="nav-link-block next">
-                  {nextLink && (
-                    <Link href={nextLink.href}>
-                      <span className="nav-link-label">{nextNavLabel}</span>
-                      <span className="nav-link-title">{nextLink.label}</span>
-                    </Link>
-                  )}
-                </div>
+                {prevLink && (
+                  <Link href={prevLink.href} className="nav-link-item prev">
+                    <span className="nav-link-label">{prevLink.label}</span>
+                    <span className="nav-link-title">{prevLink.title}</span>
+                  </Link>
+                )}
+                {nextLink && (
+                  <Link href={nextLink.href} className="nav-link-item next">
+                    <span className="nav-link-label">{nextLink.label}</span>
+                    <span className="nav-link-title">{nextLink.title}</span>
+                  </Link>
+                )}
               </nav>
             )}
 

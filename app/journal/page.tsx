@@ -5,6 +5,8 @@ import CommonCard from '../../components/CommonCard';
 import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icons';
 
 export default function JournalPage() {
+  const sortedPosts = [...BLOG_POSTS].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+
   return (
     <>
       <section className="hero-stack section-margin">
@@ -52,7 +54,7 @@ export default function JournalPage() {
         </header>
 
         <div className="grid-standard">
-          {BLOG_POSTS.map((post) => (
+          {sortedPosts.map((post) => (
             <CommonCard
               key={post.id}
               image={post.imageUrl}

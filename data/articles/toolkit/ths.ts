@@ -12,27 +12,4 @@ export const thsContent = `
     <h3>Start your journey</h3>
     <p>If you're interested in exploring the world through house sitting, you can use my personal referral link to claim a 25% discount on your first year of membership.</p>
   </div>
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
-  </div>
-
-  <div class="prose-faq">
-    <h2>F.A.Q.</h2>
-    <div class="faq-item">
-      <strong>Is it hard to get accepted for your first house sit?</strong>
-      <p>It takes strategy to beat the competition. <a href="/journal/get-your-first-house-sit">Read my guide on landing your first sit.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>How do you make your profile stand out to homeowners?</strong>
-      <p>Specific details and professional photos are key. <a href="/journal/stellar-trustedhousesitters-profile-tips">Check out my profile optimization tips.</a></p>
-    </div>
-    <div class="faq-item">
-      <strong>What phone plan do you use for remote work on sits?</strong>
-      <p>Unlimited data is a must for reliable hotspotting. <a href="/toolkit/visible-connectivity">See my recommended mobile carrier.</a></p>
-    </div>
-  </div>
-
-  <div class="prose-cta-row">
-    <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" rel="noopener noreferrer" class="glass-pill">Get 25% Off Membership</a>
-  </div>
 `;

@@ -78,12 +78,16 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: var(--s-5);
+  font-family: var(--f-main);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .faq-item {
-  margin-bottom: var(--s-5);
+  margin-bottom: var(--s-6);
 }
 
 .faq-item:last-child {
@@ -93,20 +97,33 @@
 .faq-item strong {
   display: block;
   color: var(--c-white);
-  margin-bottom: var(--s-1);
+  margin-bottom: var(--s-2);
   font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .faq-item p {
   font-size: 0.95rem;
-  margin-bottom: 0;
+  margin-bottom: var(--s-3);
+  opacity: 0.8;
 }
 
-.faq-item a {
+.faq-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--c-gold) !important;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.faq-action-link:hover {
+  transform: translateX(4px);
+  filter: brightness(1.2);
 }
 
 /* 
