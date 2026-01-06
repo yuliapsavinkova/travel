@@ -25,17 +25,17 @@
 }
 
 .detail-layout-container {
-  max-width: 900px;
+  max-width: var(--w-prose); /* Configurable in variables.css */
   margin: 0 auto;
   padding: var(--s-6);
 }
 
 /* Elegant Text CTA transformed into Glass Pill */
 .detail-minimal-cta {
-  margin-top: var(--s-4); /* Reduced margin to tuck it under text */
+  margin-top: var(--s-4);
   padding-bottom: var(--s-4);
   display: flex;
-  justify-content: flex-start; /* Left aligned as requested */
+  justify-content: flex-start;
   width: 100%;
 }
 

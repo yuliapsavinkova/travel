@@ -26,6 +26,11 @@
   --cinematic-overlay-intensity: 0.7; /* Strength of bottom-heavy card fades */
 
   /* 
+     LAYOUT & READABILITY 
+  */
+  --w-prose: 720px; /* Centralized "Sweet Spot" for reading width */
+
+  /* 
      STANDARDIZED GRADIENTS - SOURCE OF TRUTH 
   */
 

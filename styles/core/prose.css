@@ -3,7 +3,7 @@
   color: var(--c-text-dim);
   font-size: 18px;
   line-height: 1.8;
-  max-width: 720px;
+  max-width: var(--w-prose); /* Configurable in variables.css */
   margin: 0 auto;
   font-weight: 400;
 }
@@ -49,9 +49,13 @@
   background: rgba(229, 193, 133, 0.03);
   border-top: 1px solid var(--c-gold-muted);
   border-bottom: 1px solid var(--c-gold-muted);
-  padding: var(--s-6) 0;
-  margin: var(--s-8) 0 0 0;
+  padding: var(--s-6) var(--s-4);
+  margin: var(--s-8) 0;
   position: relative;
+}
+
+.prose-accent-box h3 {
+  margin-top: 0;
 }
 
 .prose-accent-box p {
@@ -80,7 +84,7 @@
   -webkit-text-fill-color: transparent;
   font-size: 1.2rem;
   margin-bottom: var(--s-5);
-  font-family: var(--f-main);
+  font-family: var(--f-main) !important;
   font-weight: 900;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -131,8 +135,9 @@
 */
 .prose-cta-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Aligned left to keep reading flow consistent */
   margin: var(--s-6) 0;
+  width: 100%;
 }
 
 /* 
