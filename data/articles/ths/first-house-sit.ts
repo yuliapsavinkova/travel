@@ -64,7 +64,7 @@ export const firstHouseSitContent = `
       <li>Applied to 3 local cat sits</li>
       <li>Accepted for a 2-day sit in Austin</li>
       <li>Completed the sit successfully</li>
-      <li>Received my first positive review immediately after</li>
+      <li>Received my first positive review after</li>
     </ol>
   </div>
 
