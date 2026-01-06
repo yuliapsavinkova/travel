@@ -17,8 +17,6 @@ interface CommonDetailProps {
   sidebar?: ReactNode;
   prevLink?: NavLink;
   nextLink?: NavLink;
-  prevNavLabel?: string;
-  nextNavLabel?: string;
   faqs?: FAQItem[];
 }
 
@@ -38,6 +36,17 @@ const CommonDetail = ({
   faqs,
 }: CommonDetailProps) => {
   const footerLabel = backLabel ? backLabel.replace('Back to ', '') : '';
+
+  const renderCTA = () => {
+    if (!ctaLink || !ctaLabel) return null;
+    return (
+      <div className="prose-cta-row">
+        <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="glass-pill">
+          {ctaLabel}
+        </a>
+      </div>
+    );
+  };
 
   return (
     <div className="detail-container">
@@ -95,15 +104,16 @@ const CommonDetail = ({
           <div className="prose-content">
             {children}
 
-            {ctaLink && ctaLabel && (
-              <div className="prose-cta-row">
-                <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="glass-pill">
-                  {ctaLabel}
-                </a>
-              </div>
-            )}
+            {/* Primary CTA before FAQs */}
+            {renderCTA()}
 
-            {faqs && faqs.length > 0 && <FAQSection items={faqs} />}
+            {faqs && faqs.length > 0 && (
+              <>
+                <FAQSection items={faqs} />
+                {/* Secondary CTA after FAQs */}
+                {renderCTA()}
+              </>
+            )}
 
             {(prevLink || nextLink) && (
               <nav className="article-navigation" aria-label="Related articles">
