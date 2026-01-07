@@ -1,6 +1,6 @@
 import { TravelGuide } from '../types';
-import { txt } from '../utils/content';
-import { giliIslandsContent } from './articles/travel/gili-islands';
+import { content as ubudContent } from './articles/bali-ubud-slow-travel';
+import { content as giliIslandsContent } from './articles/gili-trawangan-slow-travel';
 
 export const TRAVEL_GUIDES: TravelGuide[] = [
   {
@@ -12,11 +12,7 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1200',
     date: 'January 2026',
-    body: txt(`Ubud is where slow travel becomes a lifestyle. I spent a month reflecting on architecture and intentionality while living in a traditional bamboo home, learning the rhythm of the local community and the art of presence.
-
-The morning light in Bali dictates the pace of the day. It taught me the importance of being fully present in a destination, a skill that translates directly to the attentive care and technical stewardship I provide on every sit.
-
-Exploring the intersection of ancient traditions and modern nomadic life has been a defining chapter of my global journey across 35+ countries and continues to influence my professional standards.`),
+    body: ubudContent,
     nextLink: {
       label: 'Next Guide',
       title: 'Gili Trawangan',

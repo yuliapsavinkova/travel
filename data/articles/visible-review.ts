@@ -1,4 +1,5 @@
-export const visibleContent = `
+
+export const content = `
   <p class="prose-lead">Working while traveling requires a reliable internet connection. Visible is the phone plan I use because it offers unlimited data and a mobile hotspot that actually works across the country.</p>
 
   <h2>Staying connected on the road</h2>

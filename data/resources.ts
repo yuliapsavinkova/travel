@@ -1,8 +1,8 @@
 import { ResourceCategory, ResourceItem } from '../types';
-import { thsContent } from './articles/toolkit/ths';
-import { roverContent } from './articles/toolkit/rover';
-import { visibleContent } from './articles/toolkit/visible';
-import { planetFitnessContent } from './articles/toolkit/planet-fitness';
+import { content as thsContent } from './articles/trusted-housesitters-review';
+import { content as roverContent } from './articles/rover-review';
+import { content as visibleContent } from './articles/visible-review';
+import { content as planetFitnessContent } from './articles/planet-fitness-review';
 
 export const RESOURCES: ResourceCategory[] = [
   {

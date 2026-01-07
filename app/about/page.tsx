@@ -3,7 +3,7 @@ import { MailIcon } from '../../components/Icons';
 import { SITE_CONFIG } from '../../constants';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
-import { aboutIntro, aboutBody } from '../../data/articles/about-me';
+import { intro as aboutIntro, body as aboutBody } from '../../data/articles/about';
 
 export default function AboutPage() {
   return (

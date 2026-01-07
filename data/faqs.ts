@@ -80,7 +80,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'Photos and clear communication are the most important elements. You want to remove all anxiety the owner might have.',
     link: {
       label: 'Check Out My Profile Tips',
-      href: '/blog/trusted-housesitters-profile-tips-secure-more-sits',
+      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
 ];

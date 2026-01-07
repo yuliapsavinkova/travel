@@ -1,4 +1,5 @@
-export const roverContent = `
+
+export const content = `
   <p class="prose-lead">Rover is a helpful tool when I have short gaps between my house sits. It allows me to find local pet care opportunities that do not necessarily require an overnight stay. It is a great way to meet more animals and help out pet owners in the local community.</p>
 
   <h2>Filling the gaps between sits</h2>

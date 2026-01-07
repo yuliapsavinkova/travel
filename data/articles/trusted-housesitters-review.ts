@@ -1,4 +1,5 @@
-export const thsContent = `
+
+export const content = `
   <p class="prose-lead">TrustedHousesitters is the main platform I use to travel. Instead of booking traditional accommodation, I stay in people’s homes for free while taking care of their pets. It’s a simple, honest exchange: I get a place to stay, and they get a reliable pet sitter who truly cares.</p>
 
   <h2>How to use a TrustedHousesitters Discount Code</h2>

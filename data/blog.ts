@@ -1,6 +1,6 @@
 import { BlogPost } from '../types';
-import { firstHouseSitContent } from './articles/ths/first-house-sit';
-import { thsProfileTipsContent } from './articles/ths/profile-tips';
+import { content as firstHouseSitContent } from './articles/how-to-get-your-first-house-sit-no-reviews';
+import { content as thsProfileTipsContent } from './articles/trusted-housesitters-profile-tips-how-to-secure-more-sits';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -22,7 +22,7 @@ export const BLOG_POSTS: BlogPost[] = [
     nextLink: {
       label: 'Next',
       title: 'Profile Tips',
-      href: '/blog/trusted-housesitters-profile-tips-secure-more-sits',
+      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
     seoTitle: 'How to Get Your First House Sit with No Reviews | Sitter Journey',
     seoDescription:
@@ -36,7 +36,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: '2',
-    slug: 'trusted-housesitters-profile-tips-secure-more-sits',
+    slug: 'trusted-housesitters-profile-tips-how-to-secure-more-sits',
     title: 'TrustedHousesitters Profile Tips: How to Secure More Sits',
     excerpt:
       'Learn how to create a trusted TrustedHousesitters sitter profile that helps you secure more sits. Photo rules, profile tips, reviews, and what owners actually look for.',

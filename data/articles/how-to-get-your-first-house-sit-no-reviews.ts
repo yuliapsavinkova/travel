@@ -1,4 +1,4 @@
-export const firstHouseSitContent = `
+export const content = `
   <p class="prose-lead">Your first house sit is the hardest one to get. After that, it gets exponentially easier. The reason most people never get past this stage isn’t a lack of qualifications — it’s a bad strategy.</p>
 
   <p>I got my first house sit with zero reviews by stacking the odds in my favor instead of competing where everyone else applies. Here’s exactly how I did it, step by step.</p>
@@ -64,7 +64,7 @@ export const firstHouseSitContent = `
       <li>Applied to 3 local cat sits</li>
       <li>Accepted for a 2-day sit in Austin</li>
       <li>Completed the sit successfully</li>
-      <li>Received my first positive review after</li>
+      <li>Received my first positive review immediately after</li>
     </ol>
   </div>
 

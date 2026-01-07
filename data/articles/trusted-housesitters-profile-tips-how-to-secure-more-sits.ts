@@ -1,4 +1,4 @@
-export const thsProfileTipsContent = `
+export const content = `
   <p class="prose-lead">If you want to secure more sits on TrustedHousesitters, your profile needs to instantly build trust. Owners skim fast. They decide faster. Your goal is simple: look reliable, clear, and easy to say yes to.</p>
 
   <p>A strong TrustedHousesitters profile does one thing well: it makes an owner feel trusted. Trusted enough to hand you their home and their pet. This isn’t about telling your life story — it’s about clarity, trust, and proof that you’re responsible.</p>
