@@ -1,8 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { BLOG_POSTS } from '../../constants';
 import CommonCard from '../../components/CommonCard';
 import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icons';
+
+export const metadata: Metadata = {
+  title: 'The Sitter Blog: Expert Tips & House Sitting Stories | Sitter Journey',
+  description:
+    'Practical guides on landing your first house sit, professional pet care tips, and stories from a full-time solo female traveler.',
+  alternates: {
+    canonical: '/blog',
+  },
+};
 
 export default function BlogPage() {
   const sortedPosts = [...BLOG_POSTS].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));

@@ -23,6 +23,9 @@ export async function generateMetadata({
     title: post.seoTitle || `${post.title} | Sitter Journey Blog`,
     description: post.seoDescription || post.excerpt,
     keywords: post.seoKeywords || [],
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.seoTitle || post.title,
       description: post.seoDescription || post.excerpt,

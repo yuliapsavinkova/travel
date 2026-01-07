@@ -1,9 +1,19 @@
+import type { Metadata } from 'next';
 import { ContactTrigger } from '../../components/ClientTriggers';
 import { MailIcon } from '../../components/Icons';
 import { SITE_CONFIG } from '../../constants';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
 import { intro as aboutIntro, body as aboutBody } from '../../data/articles/about';
+
+export const metadata: Metadata = {
+  title: 'About Yulia: Full-Time Housesitter & Traveler | Sitter Journey',
+  description:
+    'Learn more about my journey as a solo female housesitter and how I travel intentionally across the United States.',
+  alternates: {
+    canonical: '/about',
+  },
+};
 
 export default function AboutPage() {
   return (

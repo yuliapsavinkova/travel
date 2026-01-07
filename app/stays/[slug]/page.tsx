@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { REVIEWS, GLOBAL_STRINGS } from '../../../constants';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
@@ -7,6 +8,28 @@ export async function generateStaticParams() {
   return REVIEWS.map((stay) => ({
     slug: stay.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const stay = REVIEWS.find((s) => s.slug === slug);
+
+  if (!stay) return { title: 'Stay Not Found' };
+
+  return {
+    title: `Housesitting in ${stay.location} | Sitter Journey`,
+    description: stay.sitDescription,
+    alternates: {
+      canonical: `/stays/${stay.slug}`,
+    },
+    openGraph: {
+      title: `Housesitting in ${stay.location}`,
+      description: stay.sitDescription,
+      images: stay.imageUrl ? [{ url: stay.imageUrl }] : [],
+    },
+  };
 }
 
 export default async function StayDetailPage({ params }: { params: Promise<{ slug: string }> }) {

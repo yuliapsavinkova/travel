@@ -19,12 +19,13 @@ export async function generateMetadata({
 
   if (!item) return { title: 'Resource Not Found' };
 
-  // This logic is now generic: if a specific SEO Title is provided in data, use it.
-  // This makes it easy to update discount percentages without changing this code.
   return {
     title: item.seoTitle || `${item.name} | Sitter Journey Resources`,
     description: item.seoDescription || item.description,
     keywords: item.seoKeywords || [],
+    alternates: {
+      canonical: `/resources/${item.slug}`,
+    },
     openGraph: {
       title: item.seoTitle || `${item.name}: My Recommended Travel Tool`,
       description: item.seoDescription || item.description,
@@ -65,7 +66,6 @@ export default async function ResourceDetailPage({
 
   const faqs = item.faqIds ? getFaqsByIds(item.faqIds) : [];
 
-  // Structured Data for Google (JSON-LD) - now data-driven
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -74,7 +74,7 @@ export default async function ResourceDetailPage({
     image: item.imageUrl,
     offers: {
       '@type': 'Offer',
-      price: '0', // Most are referral/discount-based
+      price: '0',
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       url: item.link,

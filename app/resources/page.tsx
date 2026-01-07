@@ -1,8 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { ALL_RESOURCES } from '../../constants';
 import CommonCard from '../../components/CommonCard';
 import { ChevronDownIcon } from '../../components/Icons';
+
+export const metadata: Metadata = {
+  title: 'Travel Resources & Discounts: My Trusted Toolkit | Sitter Journey',
+  description:
+    'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
+  alternates: {
+    canonical: '/resources',
+  },
+};
 
 export default function ResourcesPage() {
   return (
