@@ -1,32 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-import { ALL_REFERRALS } from '../../constants';
+import { ALL_RESOURCES } from '../../constants';
 import CommonCard from '../../components/CommonCard';
 import { ChevronDownIcon } from '../../components/Icons';
 
-export default function ToolkitPage() {
+export default function ResourcesPage() {
   return (
     <>
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
           <img
             src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=2400"
-            alt="Toolkit"
+            alt="Resources"
           />
           <div className="overlay-hero" />
         </div>
 
         <div className="hero-content-overlay content-layer">
-          <div className="sub-header hero-sub-header">Resources</div>
+          <div className="sub-header hero-sub-header">Tools & Services</div>
           <h1 className="display-title">
-            My <span className="shimmer-text">Toolkit.</span>
+            Travel <span className="shimmer-text">Resources.</span>
           </h1>
           <p className="hero-paragraph">
             The tools and services I use every day to live and work on the road.
           </p>
           <div className="hero-button-group">
-            <Link href="#framework" className="btn-gold">
-              View Tools
+            <Link href="#archive" className="btn-gold">
+              View Resources
             </Link>
             <Link href="/stays#portfolio" className="secondary-btn">
               My Stays
@@ -35,31 +35,31 @@ export default function ToolkitPage() {
         </div>
 
         <Link
-          href="#framework"
+          href="#archive"
           className="scroll-trigger content-layer"
-          aria-label="Scroll to toolkit"
+          aria-label="Scroll to resources"
         >
           <ChevronDownIcon size={28} className="scroll-icon-anim" />
         </Link>
       </section>
 
       <div className="container">
-        <header className="text-center section-margin" id="framework">
-          <div className="sub-header">Tools I Use</div>
+        <header className="text-center section-margin" id="archive">
+          <div className="sub-header">My Toolkit</div>
           <h2 className="display-title display-title-md">
-            My <span className="serif-italic shimmer-text">Toolkit.</span>
+            The <span className="serif-italic shimmer-text">Resources.</span>
           </h2>
         </header>
 
         <div className="grid-standard">
-          {ALL_REFERRALS.map((item) => (
+          {ALL_RESOURCES.map((item) => (
             <CommonCard
               key={item.id}
               title={item.name}
               image={item.imageUrl}
               description={item.description}
               badge={item.discountText ? 'Promo' : 'Tool'}
-              slug={`/toolkit/${item.slug}`}
+              slug={`/resources/${item.slug}`}
               actionLabel="Details"
               ctaLink={item.link}
               ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit'}

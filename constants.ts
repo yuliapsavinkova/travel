@@ -1,7 +1,7 @@
 import { SiteStrings } from './types';
-import { REFERRALS } from './data/referrals';
+import { RESOURCES } from './data/resources';
 
-export * from './data/referrals';
+export * from './data/resources';
 export * from './data/reviews';
 export * from './data/blog';
 export * from './data/travel';
@@ -11,6 +11,18 @@ export const CURRENT_YEAR = now.getFullYear();
 export const ACTIVE_YEAR =
   now.getMonth() === 11 && now.getDate() >= 25 ? CURRENT_YEAR + 1 : CURRENT_YEAR;
 export const NEXT_YEAR = ACTIVE_YEAR + 1;
+
+/**
+ * GLOBAL NAVIGATION CONFIGURATION
+ */
+export const NAV_ITEMS = [
+  { label: 'Home', href: '/' },
+  // { label: 'Stays', href: '/stays' },
+  // { label: 'Travel', href: '/travel' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Resources', href: '/resources' },
+  { label: 'About', href: '/about' },
+];
 
 /**
  * GLOBAL SITE STATISTICS
@@ -34,13 +46,13 @@ export const SITE_CONFIG = {
   },
 };
 
-const thsReferral = REFERRALS[0].items[0];
+const thsResource = RESOURCES[0].items[0];
 
 export const GLOBAL_STRINGS: SiteStrings = {
-  toolkitSectionTitle: 'Toolkit',
+  toolkitSectionTitle: 'Resources',
   toolkitSectionDescription: 'The tools and services I use while traveling full-time.',
   travelPromoTitle: 'Join Me',
-  travelPromoText: `Ready to travel? Use my link to join TrustedHousesitters. You'll get ${thsReferral.discountText} off your membership.`,
-  travelPromoLink: thsReferral.link,
-  travelPromoBtn: thsReferral.discountText || 'Claim Discount',
+  travelPromoText: `Ready to travel? Use my link to join TrustedHousesitters. You'll get ${thsResource.discountText} off your membership.`,
+  travelPromoLink: thsResource.link,
+  travelPromoBtn: thsResource.discountText || 'Claim Discount',
 };

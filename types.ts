@@ -66,7 +66,7 @@ export interface TravelGuide {
   faqIds?: string[];
 }
 
-export interface ReferralItem {
+export interface ResourceItem {
   id: string;
   slug: string;
   name: string;
@@ -84,9 +84,9 @@ export interface ReferralItem {
   faqIds?: string[];
 }
 
-export interface ReferralCategory {
+export interface ResourceCategory {
   title: string;
-  items: ReferralItem[];
+  items: ResourceItem[];
 }
 
 export interface SiteStrings {

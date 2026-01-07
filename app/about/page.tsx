@@ -11,8 +11,8 @@ export default function AboutPage() {
       image="/portrait.png"
       title="About Yulia."
       date="January 2026"
-      prevLink={{ label: 'Go to', title: 'Journal', href: '/journal' }}
-      nextLink={{ label: 'Go to', title: 'Toolkit', href: '/toolkit' }}
+      prevLink={{ label: 'Go to', title: 'Blog', href: '/blog' }}
+      nextLink={{ label: 'Go to', title: 'Resources', href: '/resources' }}
     >
       <div className="flex-col">
         <p className="prose-lead">{aboutIntro}</p>

@@ -33,8 +33,8 @@ export default function StaysPage() {
             <Link href="#portfolio" className="btn-gold">
               My Stays
             </Link>
-            <Link href="/journal#archive" className="secondary-btn">
-              The Journal
+            <Link href="/blog#archive" className="secondary-btn">
+              The Blog
             </Link>
           </div>
         </div>

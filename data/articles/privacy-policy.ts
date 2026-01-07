@@ -7,8 +7,8 @@ export const privacyPolicyContent = `
   <h2>2. Cookies and Tracking</h2>
   <p>This site may use standard cookies to improve user experience. Additionally, third-party services like <strong>Google Analytics</strong> or <strong>Google Search Console</strong> may collect anonymous data about your visit, such as your IP address, browser type, and pages viewed, to help me understand how the site is used.</p>
 
-  <h2>3. Affiliate and Referral Links</h2>
-  <p>As disclosed throughout the site, I use referral and affiliate links (e.g., TrustedHousesitters, Rover). If you click these links, the third-party provider may use cookies to track your purchase for the purpose of assigning a referral credit. I am not responsible for the privacy practices of these external sites.</p>
+  <h2>3. Resource and Affiliate Links</h2>
+  <p>As disclosed throughout the site, I use resource and affiliate links (e.g., TrustedHousesitters, Rover). If you click these links, the third-party provider may use cookies to track your purchase for the purpose of assigning a resource credit. I am not responsible for the privacy practices of these external sites.</p>
 
   <h2>4. Data Security</h2>
   <p>I implement reasonable security measures to protect your personal information. However, no method of transmission over the internet is 100% secure, and I cannot guarantee absolute security.</p>

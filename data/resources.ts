@@ -1,16 +1,16 @@
-import { ReferralCategory, ReferralItem } from '../types';
+import { ResourceCategory, ResourceItem } from '../types';
 import { thsContent } from './articles/toolkit/ths';
 import { roverContent } from './articles/toolkit/rover';
 import { visibleContent } from './articles/toolkit/visible';
 import { planetFitnessContent } from './articles/toolkit/planet-fitness';
 
-export const REFERRALS: ReferralCategory[] = [
+export const RESOURCES: ResourceCategory[] = [
   {
     title: 'My Toolkit',
     items: [
       {
         id: 'ths',
-        slug: 'trustedhousesitters-referral',
+        slug: 'trustedhousesitters-resource',
         name: 'TrustedHousesitters',
         description: 'Where I find almost all of my house sits. Use my link for a 25% discount.',
         date: 'January 2026',
@@ -24,9 +24,9 @@ export const REFERRALS: ReferralCategory[] = [
         prevLink: {
           label: 'Previous',
           title: 'Planet Fitness',
-          href: '/toolkit/planet-fitness-wellness',
+          href: '/resources/planet-fitness-wellness',
         },
-        nextLink: { label: 'Next', title: 'Rover', href: '/toolkit/rover-pet-care' },
+        nextLink: { label: 'Next', title: 'Rover', href: '/resources/rover-pet-care' },
       },
       {
         id: 'rover',
@@ -44,9 +44,9 @@ export const REFERRALS: ReferralCategory[] = [
         prevLink: {
           label: 'Previous',
           title: 'TrustedHousesitters',
-          href: '/toolkit/trustedhousesitters-referral',
+          href: '/resources/trustedhousesitters-resource',
         },
-        nextLink: { label: 'Next', title: 'Visible', href: '/toolkit/visible-connectivity' },
+        nextLink: { label: 'Next', title: 'Visible', href: '/resources/visible-connectivity' },
       },
       {
         id: 'visible',
@@ -61,11 +61,11 @@ export const REFERRALS: ReferralCategory[] = [
         imageUrl:
           'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200',
         faqIds: ['ths-internet-remote', 'travel-wellness-gym', 'best-platform-travel'],
-        prevLink: { label: 'Previous', title: 'Rover', href: '/toolkit/rover-pet-care' },
+        prevLink: { label: 'Previous', title: 'Rover', href: '/resources/rover-pet-care' },
         nextLink: {
           label: 'Next',
           title: 'Planet Fitness',
-          href: '/toolkit/planet-fitness-wellness',
+          href: '/resources/planet-fitness-wellness',
         },
       },
       {
@@ -81,15 +81,15 @@ export const REFERRALS: ReferralCategory[] = [
         imageUrl:
           'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200',
         faqIds: ['travel-wellness-gym', 'best-platform-travel', 'remote-work-internet'],
-        prevLink: { label: 'Previous', title: 'Visible', href: '/toolkit/visible-connectivity' },
+        prevLink: { label: 'Previous', title: 'Visible', href: '/resources/visible-connectivity' },
         nextLink: {
           label: 'Next',
           title: 'TrustedHousesitters',
-          href: '/toolkit/trustedhousesitters-referral',
+          href: '/resources/trustedhousesitters-resource',
         },
       },
     ],
   },
 ];
 
-export const ALL_REFERRALS: ReferralItem[] = REFERRALS.flatMap((category) => category.items);
+export const ALL_RESOURCES: ResourceItem[] = RESOURCES.flatMap((category) => category.items);

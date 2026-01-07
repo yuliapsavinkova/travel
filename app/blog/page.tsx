@@ -4,7 +4,7 @@ import { BLOG_POSTS } from '../../constants';
 import CommonCard from '../../components/CommonCard';
 import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icons';
 
-export default function JournalPage() {
+export default function BlogPage() {
   const sortedPosts = [...BLOG_POSTS].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
 
   return (
@@ -13,15 +13,15 @@ export default function JournalPage() {
         <div className="hero-media-container media-viewport">
           <img
             src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=2400"
-            alt="Journal"
+            alt="Blog"
           />
           <div className="overlay-hero" />
         </div>
 
         <div className="hero-content-overlay content-layer">
-          <div className="sub-header hero-sub-header">My Blog</div>
+          <div className="sub-header hero-sub-header">My Journey</div>
           <h1 className="display-title">
-            The <span className="shimmer-text">Journal.</span>
+            The <span className="shimmer-text">Blog.</span>
           </h1>
           <p className="hero-paragraph">
             Writing about life on the road and what I've learned along the way.
@@ -30,8 +30,8 @@ export default function JournalPage() {
             <Link href="#archive" className="btn-gold">
               Read Blog
             </Link>
-            <Link href="/toolkit#framework" className="secondary-btn">
-              Toolkit
+            <Link href="/resources#archive" className="secondary-btn">
+              Resources
             </Link>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function JournalPage() {
               ]}
               title={post.title}
               description={post.excerpt}
-              slug={`/journal/${post.slug}`}
+              slug={`/blog/${post.slug}`}
               actionLabel="Read Post"
             />
           ))}

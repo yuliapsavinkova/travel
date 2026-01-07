@@ -22,7 +22,7 @@ export const BLOG_POSTS: BlogPost[] = [
     nextLink: {
       label: 'Next',
       title: 'Profile Tips',
-      href: '/journal/stellar-trustedhousesitters-profile-tips',
+      href: '/blog/stellar-trustedhousesitters-profile-tips',
     },
   },
   {
@@ -40,11 +40,18 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Get 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: thsProfileTipsContent,
-    faqIds: ['ths-photo-aspect', 'ths-reviews-starting', 'ths-profile-length'],
+    faqIds: [
+      'ths-photo-aspect',
+      'ths-reviews-starting',
+      'ths-profile-length',
+      'ths-owner-priorities',
+      'ths-cleanliness-mention',
+      'ths-long-term-preference',
+    ],
     prevLink: {
       label: 'Previous',
       title: 'Your First Sit',
-      href: '/journal/get-your-first-house-sit',
+      href: '/blog/get-your-first-house-sit',
     },
   },
 ];

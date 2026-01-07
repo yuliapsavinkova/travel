@@ -28,8 +28,8 @@ export default function TravelPage() {
             <Link href="#guides" className="btn-gold">
               View Guides
             </Link>
-            <Link href="/journal#archive" className="secondary-btn">
-              The Journal
+            <Link href="/resources#archive" className="secondary-btn">
+              Resources
             </Link>
           </div>
         </div>

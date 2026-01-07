@@ -20,15 +20,14 @@ export async function generateMetadata({
 
   if (!post) return { title: 'Post Not Found' };
 
-  // SEO Best Practice: Keep titles under 60 chars and descriptions under 160
   return {
-    title: `${post.title} | Sitter Journey`,
+    title: `${post.title} | Sitter Journey Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
-      publishedTime: post.date, // Helpful for Google "Freshness" algorithm
+      publishedTime: post.date,
       images: [
         {
           url: post.imageUrl,
@@ -54,17 +53,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   if (!post) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail
-          onBack="/journal#archive"
-          backLabel="Back to Journal"
-          image=""
-          title="Not Found"
-        >
+        <CommonDetail onBack="/blog#archive" backLabel="Back to Blog" image="" title="Not Found">
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Post Not Found</h1>
-            <p className="hero-paragraph">
-              This journal entry appears to have moved or been removed.
-            </p>
+            <p className="hero-paragraph">This blog entry appears to have moved or been removed.</p>
           </div>
         </CommonDetail>
       </div>
@@ -75,8 +67,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   return (
     <CommonDetail
-      onBack="/journal#archive"
-      backLabel="Back to Journal"
+      onBack="/blog#archive"
+      backLabel="Back to Blog"
       image={post.imageUrl}
       title={post.title}
       date={post.date}

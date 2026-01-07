@@ -42,7 +42,7 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
       ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
       prevLink={{ label: 'Previous', title: 'Destinations', href: '/travel' }}
-      nextLink={{ label: 'Next', title: 'First Sit', href: '/journal/get-your-first-house-sit' }}
+      nextLink={{ label: 'Next', title: 'First Sit', href: '/blog/get-your-first-house-sit' }}
     >
       <div className="flex-col flex-gap-md">
         <p className="prose-lead">{stay.sitDescription}</p>

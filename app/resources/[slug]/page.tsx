@@ -1,12 +1,12 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { ALL_REFERRALS } from '../../../constants';
+import { ALL_RESOURCES } from '../../../constants';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
 import { getFaqsByIds } from '../../../data/faqs';
 
 export async function generateStaticParams() {
-  return ALL_REFERRALS.map((item) => ({
+  return ALL_RESOURCES.map((item) => ({
     slug: item.slug,
   }));
 }
@@ -15,12 +15,12 @@ export async function generateMetadata({
   params,
 }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const item = ALL_REFERRALS.find((i) => i.slug === slug);
+  const item = ALL_RESOURCES.find((i) => i.slug === slug);
 
-  if (!item) return { title: 'Tool Not Found' };
+  if (!item) return { title: 'Resource Not Found' };
 
   return {
-    title: `${item.name} | Sitter Journey Toolkit`,
+    title: `${item.name} | Sitter Journey Resources`,
     description: item.description,
     openGraph: {
       title: `${item.name}: My Recommended Travel Tool`,
@@ -36,26 +36,24 @@ export async function generateMetadata({
   };
 }
 
-export default async function ReferralDetailPage({
+export default async function ResourceDetailPage({
   params,
 }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const item = ALL_REFERRALS.find((i) => i.slug === slug);
+  const item = ALL_RESOURCES.find((i) => i.slug === slug);
 
   if (!item) {
     return (
       <div className="container text-center section-margin">
         <CommonDetail
-          onBack="/toolkit#framework"
-          backLabel="Back to Toolkit"
+          onBack="/resources#archive"
+          backLabel="Back to Resources"
           image=""
           title="Not Found"
         >
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
-            <h1 className="display-title">Tool Not Found</h1>
-            <p className="hero-paragraph">
-              The requested tool could not be located in our archive.
-            </p>
+            <h1 className="display-title">Resource Not Found</h1>
+            <p className="hero-paragraph">The requested resource could not be located.</p>
           </div>
         </CommonDetail>
       </div>
@@ -66,8 +64,8 @@ export default async function ReferralDetailPage({
 
   return (
     <CommonDetail
-      onBack="/toolkit#framework"
-      backLabel="Back to Toolkit"
+      onBack="/resources#archive"
+      backLabel="Back to Resources"
       image={item.imageUrl || ''}
       title={item.name}
       date={item.date}

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { NAV_ITEMS } from '../constants';
 import ContactForm from './ContactForm';
 import { MenuIcon, SJLogo, XIcon } from './Icons';
 
@@ -41,15 +42,6 @@ const Navigation = () => {
     setIsHidden(false);
   }, [pathname]);
 
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Stays', href: '/stays' },
-    { label: 'Travel', href: '/travel' },
-    { label: 'Journal', href: '/journal' },
-    { label: 'Toolkit', href: '/toolkit' },
-    { label: 'About', href: '/about' },
-  ];
-
   return (
     <>
       <header className={`app-header ${isHidden ? 'hidden' : ''}`}>
@@ -60,7 +52,7 @@ const Navigation = () => {
             </Link>
 
             <div className="desktop-nav">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -96,7 +88,7 @@ const Navigation = () => {
         <div className="mobile-menu-content">
           <div className="sub-header margin-bottom-sm">Navigation</div>
           <div className="mobile-nav-stack">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

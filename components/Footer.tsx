@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR, GLOBAL_STRINGS } from '../constants';
+import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR, GLOBAL_STRINGS, NAV_ITEMS } from '../constants';
 import { ContactTrigger } from './ClientTriggers';
 import { InstagramIcon, LinkedinIcon, MailIcon, SJLogo, ExternalLinkIcon } from './Icons';
 
@@ -38,24 +38,11 @@ const Footer = () => {
           <div className="footer-nav-col">
             <div className="sub-header footer-header">Explore</div>
             <ul className="footer-links">
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/stays">Stays</Link>
-              </li>
-              <li>
-                <Link href="/travel">Travel</Link>
-              </li>
-              <li>
-                <Link href="/journal">Journal</Link>
-              </li>
-              <li>
-                <Link href="/toolkit">Toolkit</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
+              {NAV_ITEMS.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href}>{item.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="footer-contact-col">
