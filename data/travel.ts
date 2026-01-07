@@ -38,6 +38,6 @@ Exploring the intersection of ancient traditions and modern nomadic life has bee
       title: 'Bali Ubud',
       href: '/travel/bali-ubud-slow-travel',
     },
-    nextLink: { label: 'Go to', title: 'Toolkit', href: '/toolkit' },
+    nextLink: { label: 'Go to', title: 'Resources', href: '/resources' },
   },
 ];

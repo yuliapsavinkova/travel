@@ -12,7 +12,7 @@ export const MASTER_FAQS: FAQItem[] = [
     question: 'Do I need reviews to get my first TrustedHousesitters sit?',
     answer:
       'No. Many sitters get their first sit without reviews. What matters is that your profile clearly explains your experience, responsibility, and availability. External pet care or house care experience still counts — describe it clearly.',
-    link: { label: 'First Sit Guide', href: '/blog/get-your-first-house-sit' },
+    link: { label: 'First Sit Guide', href: '/blog/how-to-get-your-first-house-sit-no-reviews' },
   },
   {
     id: 'ths-profile-length',
@@ -43,35 +43,35 @@ export const MASTER_FAQS: FAQItem[] = [
     question: 'What phone plan do you use for remote work on sits?',
     answer:
       'Unlimited data is a must for reliable hotspotting, especially when the home WiFi is spotty. I use Visible for its unlimited hotspot feature.',
-    link: { label: 'View Connectivity Kit', href: '/toolkit/visible-connectivity' },
+    link: { label: 'View Connectivity Kit', href: '/resources/visible-review' },
   },
   {
     id: 'ths-beginner-difficulty',
     question: 'Is it hard to get accepted for your first house sit?',
     answer:
       'It takes strategy to beat the competition. Most beginners fail by applying to high-competition sits first. I recommend starting with shorter local sits.',
-    link: { label: 'First Sit Strategy', href: '/blog/get-your-first-house-sit' },
+    link: { label: 'First Sit Strategy', href: '/blog/how-to-get-your-first-house-sit-no-reviews' },
   },
   {
     id: 'travel-wellness-gym',
     question: 'How do you stay fresh and healthy while traveling between sits?',
     answer:
       'I maintain a nationwide gym membership for consistent workouts and reliable showers during travel days. Planet Fitness is my go-to.',
-    link: { label: 'Travel Wellness Kit', href: '/toolkit/planet-fitness-wellness' },
+    link: { label: 'Travel Wellness Kit', href: '/resources/planet-fitness-review' },
   },
   {
     id: 'best-platform-travel',
     question: 'What is the best platform for traveling long-term?',
     answer:
       'I find almost all my month-long stays through house sitting. It is by far the most sustainable way to see the country.',
-    link: { label: 'My Primary Travel Tool', href: '/toolkit/trustedhousesitters-resource' },
+    link: { label: 'My Primary Travel Tool', href: '/resources/trusted-housesitters-review' },
   },
   {
     id: 'remote-work-internet',
     question: 'How do you handle remote work internet while on the road?',
     answer:
       'A reliable mobile hotspot is essential for nomadic life, as you can never fully trust public or even home WiFi in new places.',
-    link: { label: 'Read My Phone Plan Guide', href: '/toolkit/visible-connectivity' },
+    link: { label: 'Read My Phone Plan Guide', href: '/resources/visible-review' },
   },
   {
     id: 'trusted-profile-tips',
@@ -80,7 +80,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'Photos and clear communication are the most important elements. You want to remove all anxiety the owner might have.',
     link: {
       label: 'Check Out My Profile Tips',
-      href: '/blog/stellar-trustedhousesitters-profile-tips',
+      href: '/blog/trusted-housesitters-profile-tips-secure-more-sits',
     },
   },
 ];

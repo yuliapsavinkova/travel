@@ -49,6 +49,10 @@ export interface BlogPost {
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqIds?: string[];
+  // SEO Configuration
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string[];
 }
 
 export interface TravelGuide {
@@ -82,6 +86,10 @@ export interface ResourceItem {
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqIds?: string[];
+  // SEO Configuration
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string[];
 }
 
 export interface ResourceCategory {
@@ -90,8 +98,8 @@ export interface ResourceCategory {
 }
 
 export interface SiteStrings {
-  toolkitSectionTitle: string;
-  toolkitSectionDescription: string;
+  resourcesSectionTitle: string;
+  resourcesSectionDescription: string;
   travelPromoTitle: string;
   travelPromoText: string;
   travelPromoLink: string;

@@ -45,7 +45,7 @@ export default function ResourcesPage() {
 
       <div className="container">
         <header className="text-center section-margin" id="archive">
-          <div className="sub-header">My Toolkit</div>
+          <div className="sub-header">My Resources</div>
           <h2 className="display-title display-title-md">
             The <span className="serif-italic shimmer-text">Resources.</span>
           </h2>

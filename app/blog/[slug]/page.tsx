@@ -4,7 +4,6 @@ import { BLOG_POSTS } from '../../../constants';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
 import { getFaqsByIds } from '../../../data/faqs';
-import { BlogPost } from '../../../types';
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -21,11 +20,12 @@ export async function generateMetadata({
   if (!post) return { title: 'Post Not Found' };
 
   return {
-    title: `${post.title} | Sitter Journey Blog`,
-    description: post.excerpt,
+    title: post.seoTitle || `${post.title} | Sitter Journey Blog`,
+    description: post.seoDescription || post.excerpt,
+    keywords: post.seoKeywords || [],
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle || post.title,
+      description: post.seoDescription || post.excerpt,
       type: 'article',
       publishedTime: post.date,
       images: [
@@ -39,8 +39,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle || post.title,
+      description: post.seoDescription || post.excerpt,
       images: [post.imageUrl],
     },
   };
@@ -56,7 +56,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <CommonDetail onBack="/blog#archive" backLabel="Back to Blog" image="" title="Not Found">
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Post Not Found</h1>
-            <p className="hero-paragraph">This blog entry appears to have moved or been removed.</p>
+            <p className="hero-paragraph">
+              This blog entry appears to have moved or been removed. Please check the archive.
+            </p>
           </div>
         </CommonDetail>
       </div>
@@ -65,23 +67,43 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   const faqs = post.faqIds ? getFaqsByIds(post.faqIds) : [];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.imageUrl,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Yulia',
+      url: 'https://sitterjourney.com/about',
+    },
+  };
+
   return (
-    <CommonDetail
-      onBack="/blog#archive"
-      backLabel="Back to Blog"
-      image={post.imageUrl}
-      title={post.title}
-      date={post.date}
-      isAffiliate={true}
-      ctaLabel={post.ctaLabel}
-      ctaLink={post.ctaLink}
-      prevLink={post.prevLink}
-      nextLink={post.nextLink}
-      faqs={faqs}
-    >
-      <div className="flex-col flex-gap-lg">
-        <ContentRenderer content={post.body} />
-      </div>
-    </CommonDetail>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <CommonDetail
+        onBack="/blog#archive"
+        backLabel="Back to Blog"
+        image={post.imageUrl}
+        title={post.title}
+        date={post.date}
+        isAffiliate={true}
+        ctaLabel={post.ctaLabel}
+        ctaLink={post.ctaLink}
+        prevLink={post.prevLink}
+        nextLink={post.nextLink}
+        faqs={faqs}
+      >
+        <div className="flex-col flex-gap-lg">
+          <ContentRenderer content={post.body} />
+        </div>
+      </CommonDetail>
+    </>
   );
 }

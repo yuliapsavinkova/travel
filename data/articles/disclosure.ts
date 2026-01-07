@@ -2,7 +2,7 @@ export const disclosureContent = `
   <p class="prose-lead">Transparency is the foundation of the Sitter Journey community. This page explains how I handle resource and affiliate relationships on this site.</p>
 
   <h2>Resources vs. Affiliates</h2>
-  <p>Currently, many of the links in my toolkit (like TrustedHousesitters) are <strong>Resource Links</strong>. I do not receive cash payments for these. Instead, they operate on a "Give One, Get One" model. For example, you receive a discount on your membership, and I receive a credit (like a free month) added to mine.</p>
+  <p>Currently, many of the links in my resources (like TrustedHousesitters) are <strong>Resource Links</strong>. I do not receive cash payments for these. Instead, they operate on a "Give One, Get One" model. For example, you receive a discount on your membership, and I receive a credit (like a free month) added to mine.</p>
   
   <p><strong>Affiliate Links</strong> are slightly different and involve a cash commission paid by a brand. While I may incorporate these in the future to help cover site hosting and photography costs, my current focus is solely on the resource programs I personally use every day.</p>
 

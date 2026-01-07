@@ -24,7 +24,9 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
         >
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Stay Not Found</h1>
-            <p className="hero-paragraph">The requested stay could not be located.</p>
+            <p className="hero-paragraph">
+              The requested stay could not be located in our portfolio.
+            </p>
           </div>
         </CommonDetail>
       </div>
@@ -41,8 +43,12 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
       isAffiliate={true}
       ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
-      prevLink={{ label: 'Previous', title: 'Destinations', href: '/travel' }}
-      nextLink={{ label: 'Next', title: 'First Sit', href: '/blog/get-your-first-house-sit' }}
+      prevLink={{ label: 'Go to', title: 'Destinations', href: '/travel' }}
+      nextLink={{
+        label: 'Next Step',
+        title: 'Landing Your First Sit',
+        href: '/blog/how-to-get-your-first-house-sit-no-reviews',
+      }}
     >
       <div className="flex-col flex-gap-md">
         <p className="prose-lead">{stay.sitDescription}</p>

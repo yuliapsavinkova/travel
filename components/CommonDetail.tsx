@@ -57,47 +57,59 @@ const CommonDetail = ({
         </div>
       </header>
 
-      <div className="detail-hero-section">
-        <div className="media-viewport">
-          <img src={image} alt={title} className="detail-hero-image" />
-        </div>
+      {image && (
+        <div className="detail-hero-section">
+          <div className="media-viewport">
+            <img src={image} alt={title} className="detail-hero-image" />
+          </div>
 
-        {onBack && (
-          <Link href={onBack} className="hero-glass-link hero-back-link glass-pill">
+          {onBack && (
+            <Link href={onBack} className="hero-glass-link hero-back-link glass-pill">
+              <ArrowLeftIcon size={14} />
+              <span>{backLabel}</span>
+            </Link>
+          )}
+
+          {ctaLabel && ctaLink && (
+            <a
+              href={ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-glass-link hero-cta-link glass-pill"
+            >
+              <span>{ctaLabel}</span>
+              <ExternalLinkIcon size={14} />
+            </a>
+          )}
+
+          {isAffiliate && (
+            <div className="hero-disclosure-bar">
+              <ShieldCheckIcon size={16} className="disclosure-icon" />
+              <span className="disclosure-text">
+                Disclosure: This post contains referral or affiliate links.
+                <Link
+                  href="/disclosure"
+                  className="disclosure-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read More
+                </Link>
+              </span>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Fallback back button if no image is present (e.g. 404 state) */}
+      {!image && onBack && (
+        <div className="container text-center" style={{ marginBottom: 'var(--s-6)' }}>
+          <Link href={onBack} className="glass-pill">
             <ArrowLeftIcon size={14} />
             <span>{backLabel}</span>
           </Link>
-        )}
-
-        {ctaLabel && ctaLink && (
-          <a
-            href={ctaLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-glass-link hero-cta-link glass-pill"
-          >
-            <span>{ctaLabel}</span>
-            <ExternalLinkIcon size={14} />
-          </a>
-        )}
-
-        {isAffiliate && (
-          <div className="hero-disclosure-bar">
-            <ShieldCheckIcon size={16} className="disclosure-icon" />
-            <span className="disclosure-text">
-              Disclosure: This post contains referral or affiliate links.
-              <Link
-                href="/disclosure"
-                className="disclosure-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read More
-              </Link>
-            </span>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="detail-layout-container">
         <div className={`detail-layout ${sidebar ? 'with-sidebar' : ''}`}>

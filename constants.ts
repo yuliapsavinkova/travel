@@ -49,10 +49,10 @@ export const SITE_CONFIG = {
 const thsResource = RESOURCES[0].items[0];
 
 export const GLOBAL_STRINGS: SiteStrings = {
-  toolkitSectionTitle: 'Resources',
-  toolkitSectionDescription: 'The tools and services I use while traveling full-time.',
+  resourcesSectionTitle: 'Resources',
+  resourcesSectionDescription: 'The tools and services I use while traveling full-time.',
   travelPromoTitle: 'Join Me',
-  travelPromoText: `Ready to travel? Use my link to join TrustedHousesitters. You'll get ${thsResource.discountText} off your membership.`,
+  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount code to get ${thsResource.discountText} off your membership.`,
   travelPromoLink: thsResource.link,
-  travelPromoBtn: thsResource.discountText || 'Claim Discount',
+  travelPromoBtn: 'Get 25% Discount',
 };

@@ -27,14 +27,14 @@ export default function HomePage() {
             Chronicles of a <span className="shimmer-text">Traveler.</span>
           </h1>
           <p className="hero-paragraph">
-            I travel full time. From the United States to the far reaches of the globe.
+            I travel full time. Sharing my professional journey as a house sitter and solo traveler.
           </p>
           <div className="hero-button-group">
-            <Link href="/travel#guides" className="btn-gold">
-              Travel Guides
+            <Link href="/blog" className="btn-gold">
+              Sitter Blog
             </Link>
-            <Link href="/stays#portfolio" className="secondary-btn">
-              My Stays
+            <Link href="/resources" className="secondary-btn">
+              Resources
             </Link>
           </div>
         </div>
@@ -51,7 +51,8 @@ export default function HomePage() {
             Travel <span className="serif-italic shimmer-text">& Life.</span>
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
-            I've visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states.
+            I've visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states
+            while house sitting.
           </p>
 
           <div className="grid-standard">
@@ -126,8 +127,8 @@ export default function HomePage() {
             }}
           >
             <ContactTrigger label="Contact" className="btn-gold" />
-            <Link href="/stays#portfolio" className="secondary-btn">
-              My Stays
+            <Link href="/blog" className="secondary-btn">
+              Read the Blog
             </Link>
           </div>
         </section>
