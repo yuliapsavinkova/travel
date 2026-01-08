@@ -1,3 +1,4 @@
+import { ROVER_DISCOUNT } from '../../types';
 
 export const content = `
   <p class="prose-lead">Rover is a helpful tool when I have short gaps between my house sits. It allows me to find local pet care opportunities that do not necessarily require an overnight stay. It is a great way to meet more animals and help out pet owners in the local community.</p>
@@ -7,8 +8,11 @@ export const content = `
 
   <p>Whether you need someone to walk your dog or you are looking to earn a little extra while traveling, it is a solid platform that focuses on the well-being of the pets. While my primary stays are through long-term house sitting, having Rover as a backup ensures I'm never without a connection to the pet community.</p>
 
-  <div class="prose-accent-box">
-    <h3>Finding care</h3>
-    <p>If you need someone to look after your pets or want to start sitting yourself, this link will give you a credit toward your first booking on the platform.</p>
+  <div class="prose-accent-box" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+    <h3 style="margin-top: 0;">Claim Your ${ROVER_DISCOUNT} Discount</h3>
+    <p style="margin-bottom: 10px;">Ready to start? Use this referral link to claim your ${ROVER_DISCOUNT} credit toward your first booking on the platform.</p>
+    <a href="https://www.rover.com/sit/yulias92191" target="_blank" rel="noopener noreferrer" class="btn-gold" style="min-width: 280px;">
+      Claim ${ROVER_DISCOUNT} Discount Link
+    </a>
   </div>
 `;

@@ -1,4 +1,4 @@
-import { SiteStrings } from './types';
+import { SiteStrings, THS_DISCOUNT } from './types';
 import { RESOURCES } from './data/resources';
 
 export * from './data/resources';
@@ -42,7 +42,7 @@ export const SITE_CONFIG = {
   googleAnalyticsId: 'G-R0920QKYXK',
   socials: {
     instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com',
+    linkein: 'https://linkedin.com',
   },
 };
 
@@ -52,7 +52,7 @@ export const GLOBAL_STRINGS: SiteStrings = {
   resourcesSectionTitle: 'Resources',
   resourcesSectionDescription: 'The tools and services I use while traveling full-time.',
   travelPromoTitle: 'Join Me',
-  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount code to get ${thsResource.discountText} off your membership.`,
+  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount code to get ${THS_DISCOUNT} off your membership.`,
   travelPromoLink: thsResource.link,
-  travelPromoBtn: 'Get 25% Discount',
+  travelPromoBtn: `Get ${THS_DISCOUNT} Discount`,
 };

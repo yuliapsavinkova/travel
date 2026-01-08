@@ -1,4 +1,3 @@
-
 export const disclosureContent = `
   <p class="prose-lead">Transparency is the foundation of the Sitter Journey community. This page explains how I handle resource and affiliate relationships on this site.</p>
 

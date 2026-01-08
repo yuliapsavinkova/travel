@@ -93,6 +93,7 @@ export default async function ResourceDetailPage({
         backLabel="Back to Resources"
         image={item.imageUrl || ''}
         title={item.name}
+        subtitle={item.subtitle}
         date={item.date}
         isAffiliate={true}
         ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit Partner'}

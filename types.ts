@@ -1,5 +1,14 @@
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
+/**
+ * GLOBAL CONFIGURATION CONSTANTS
+ * Use these for values that change frequently to avoid hardcoding in prose.
+ */
+export const THS_DISCOUNT = '25%';
+export const ROVER_DISCOUNT = '$20';
+export const VISIBLE_DISCOUNT = '$20';
+export const PF_DISCOUNT = '$1';
+
 export interface NavLink {
   label: string; // e.g. "Previous Guide" or "Next Step"
   title: string; // e.g. "Landing Your First Sit"
@@ -37,6 +46,7 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: string;
+  subtitle?: string;
   excerpt: string;
   body: string;
   date: string;
@@ -74,6 +84,7 @@ export interface ResourceItem {
   id: string;
   slug: string;
   name: string;
+  subtitle?: string;
   description: string;
   body: string;
   date?: string;

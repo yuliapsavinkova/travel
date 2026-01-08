@@ -9,6 +9,7 @@ interface CommonDetailProps {
   backLabel?: string;
   image: string;
   title: string;
+  subtitle?: string;
   date?: string;
   ctaLabel?: string;
   ctaLink?: string;
@@ -25,6 +26,7 @@ const CommonDetail = ({
   backLabel,
   image,
   title,
+  subtitle,
   date,
   ctaLabel,
   ctaLink,
@@ -37,23 +39,13 @@ const CommonDetail = ({
 }: CommonDetailProps) => {
   const footerLabel = backLabel ? backLabel.replace('Back to ', '') : '';
 
-  const renderCTA = () => {
-    if (!ctaLink || !ctaLabel) return null;
-    return (
-      <div className="prose-cta-row">
-        <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="glass-pill">
-          {ctaLabel}
-        </a>
-      </div>
-    );
-  };
-
   return (
     <div className="detail-container">
       <header className="detail-header-area">
         <div className="container text-center">
           {date && <span className="detail-date-label">{date}</span>}
           <h1 className="detail-title-text">{title}</h1>
+          {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
         </div>
       </header>
 
@@ -116,16 +108,7 @@ const CommonDetail = ({
           <div className="prose-content">
             {children}
 
-            {/* Primary CTA before FAQs */}
-            {renderCTA()}
-
-            {faqs && faqs.length > 0 && (
-              <>
-                <FAQSection items={faqs} />
-                {/* Secondary CTA after FAQs */}
-                {renderCTA()}
-              </>
-            )}
+            {faqs && faqs.length > 0 && <FAQSection items={faqs} />}
 
             {(prevLink || nextLink) && (
               <nav className="article-navigation" aria-label="Related articles">
