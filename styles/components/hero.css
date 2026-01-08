@@ -52,6 +52,7 @@
     align-items: stretch;
     max-width: 300px;
     margin: var(--s-6) auto 0;
+    gap: var(--s-3); /* Reduced from s-5 for tighter mobile layout */
   }
   .hero-paragraph {
     font-size: 1.05rem;

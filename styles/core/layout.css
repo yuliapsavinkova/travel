@@ -18,6 +18,16 @@
   pointer-events: none;
 }
 
+/* FLEX UTILITIES */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-gap-md {
+  gap: var(--s-4);
+}
+
 .stretched-link::after {
   position: absolute;
   top: 0;

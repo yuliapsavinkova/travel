@@ -20,7 +20,7 @@
 }
 
 .glass-island {
-  background: rgba(13, 13, 14, 0.6);
+  background: rgba(13, 13, 14, 0.8);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--r-pill);
@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--s-4) 0 var(--s-6);
-  height: 72px; /* Slightly slimmer */
+  height: 72px;
   pointer-events: auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -89,12 +89,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Ensure items start from top for scrolling */
   transform: translateY(-100%);
   visibility: hidden;
   pointer-events: none;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
-  padding: var(--s-6);
+  padding: var(--s-9) var(--s-6);
+  overflow-y: auto; /* Allow scroll on small phones */
 }
 
 .mobile-menu-overlay.open {
@@ -103,24 +104,34 @@
   pointer-events: auto;
 }
 
+.mobile-menu-content {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mobile-nav-stack {
   display: flex;
   flex-direction: column;
-  gap: var(--s-5);
+  gap: var(--s-4);
   width: 100%;
   align-items: center;
 }
 
 .mobile-menu-item {
   font-family: var(--f-serif);
-  font-size: 42px;
+  font-size: 28px; /* Reduced from 42px to fit iPhone SE / smaller screens */
   font-style: italic;
   font-weight: 700;
   color: var(--c-text);
   opacity: 0.5;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
-  padding: 0 20px;
+  padding: var(--s-2) var(--s-5);
+  text-align: center;
+  width: 100%;
 }
 
 .mobile-menu-item.active {
@@ -128,14 +139,14 @@
   color: var(--c-gold);
 }
 
-.mobile-menu-item.active::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 80%;
-  background: var(--c-gold);
-  border-radius: var(--r-pill);
+.mobile-menu-item:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.mobile-menu-cta {
+  margin-top: var(--s-6);
+  color: var(--c-gold);
+  border-top: 1px solid var(--c-border);
+  padding-top: var(--s-6);
 }

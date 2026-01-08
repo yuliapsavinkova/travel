@@ -10,7 +10,6 @@
 
 .prose-content a {
   color: var(--c-gold);
-  text-decoration: underline;
   text-underline-offset: 4px;
   transition: opacity 0.3s ease;
 }

@@ -17,12 +17,16 @@
   --glass-border: rgba(255, 255, 255, 0.2);
   --glass-blur: blur(12px);
 
+  /* SEMANTIC SURFACES */
+  --c-border: rgba(255, 255, 255, 0.12);
+  --c-glass: rgba(255, 255, 255, 0.04);
+
   /* 
      DARKNESS & READABILITY MASTER CONTROLS
   */
   --bg-surface-glow: 0.02; /* Subtle top-down wash (0 to 1) */
-  --hero-veil-opacity: 0.55; /* Dimming of hero images - Increased for better contrast */
-  --img-base-opacity: 0.75; /* Visibility of the actual image asset - Lowered for depth */
+  --hero-veil-opacity: 0.55; /* Dimming of hero images */
+  --img-base-opacity: 0.75; /* Visibility of the actual image asset */
   --cinematic-overlay-intensity: 0.8; /* Strength of bottom-heavy card fades */
 
   /* 
@@ -42,7 +46,7 @@
     transparent 100%
   );
 
-  /* 2. Hero & Image Readability Veil - Lightened center */
+  /* 2. Hero & Image Readability Veil */
   --g-hero-veil: linear-gradient(
     to bottom,
     rgba(0, 0, 0, calc(var(--hero-veil-opacity) + 0.15)) 0%,
@@ -66,7 +70,7 @@
     rgba(255, 255, 255, 0.02) 100%
   );
 
-  /* 5. Bottom Cinematic Fade - Variable driven */
+  /* 5. Bottom Cinematic Fade */
   --g-overlay-cinematic: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,

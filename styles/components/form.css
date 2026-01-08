@@ -5,44 +5,55 @@
 }
 
 .form-label {
-  font-size: 9px;
-  font-weight: 900;
+  font-size: 10px;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.4em;
-  color: var(--c-text);
+  letter-spacing: 0.25em;
+  color: var(--c-gold);
+  margin-left: var(--s-1);
 }
 
 .form-input,
 .form-textarea {
-  background: var(--c-glass);
-  border: 1px solid var(--c-border);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1.5px solid var(--c-border);
   padding: var(--s-4);
   border-radius: var(--r-sm);
-  color: var(--c-text);
+  color: var(--c-white);
   font-size: 16px;
-  font-family: inherit; /* Ensures consistent typography across all form elements */
+  font-family: inherit;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   width: 100%;
 }
 
-.form-textarea {
-  resize: none; /* Removes the manual resize handle for a cleaner UI */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--c-text-muted);
+  opacity: 0.5;
 }
 
 .form-input:focus,
 .form-textarea:focus {
   border-color: var(--c-gold);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(229, 193, 133, 0.1);
+}
+
+.form-textarea {
+  resize: none;
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--s-4);
+  margin-bottom: var(--s-4); /* Ensures space before the Message group */
 }
 
 @media (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;
+    margin-bottom: var(--s-4);
   }
 }
