@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { type ReactNode } from 'react';
-import { ArrowLeftIcon, ExternalLinkIcon, ShieldCheckIcon } from './Icons';
+import { ArrowLeftIcon, ShieldCheckIcon, ExternalLinkIcon } from './Icons';
 import FAQSection from './FAQSection';
 import type { NavLink, FAQItem } from '../types';
 
@@ -11,14 +11,14 @@ interface CommonDetailProps {
   title: string;
   subtitle?: string;
   date?: string;
-  ctaLabel?: string;
-  ctaLink?: string;
   isAffiliate?: boolean;
   children?: ReactNode;
   sidebar?: ReactNode;
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqs?: FAQItem[];
+  ctaLabel?: string;
+  ctaLink?: string;
 }
 
 const CommonDetail = ({
@@ -28,14 +28,14 @@ const CommonDetail = ({
   title,
   subtitle,
   date,
-  ctaLabel,
-  ctaLink,
   isAffiliate = false,
   children,
   sidebar,
   prevLink,
   nextLink,
   faqs,
+  ctaLabel,
+  ctaLink,
 }: CommonDetailProps) => {
   const footerLabel = backLabel ? backLabel.replace('Back to ', '') : '';
 
@@ -93,7 +93,6 @@ const CommonDetail = ({
         </div>
       )}
 
-      {/* Fallback back button if no image is present (e.g. 404 state) */}
       {!image && onBack && (
         <div className="container text-center" style={{ marginBottom: 'var(--s-6)' }}>
           <Link href={onBack} className="glass-pill">

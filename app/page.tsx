@@ -22,8 +22,18 @@ export default function HomePage() {
         </div>
 
         <div className="hero-content-overlay content-layer">
-          <div className="sub-header">Life on the road</div>
           <h1 className="display-title">
+            <span
+              className="sub-header"
+              style={{
+                display: 'block',
+                marginBottom: 'var(--s-2)',
+                color: 'var(--c-white)',
+                opacity: 0.8,
+              }}
+            >
+              Life on the road
+            </span>
             Chronicles of a <span className="shimmer-text">Traveler.</span>
           </h1>
           <p className="hero-paragraph">

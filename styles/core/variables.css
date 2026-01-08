@@ -21,9 +21,9 @@
      DARKNESS & READABILITY MASTER CONTROLS
   */
   --bg-surface-glow: 0.02; /* Subtle top-down wash (0 to 1) */
-  --hero-veil-opacity: 0.35; /* Dimming of hero images - Reduced for brightness */
-  --img-base-opacity: 0.85; /* Visibility of the actual image asset */
-  --cinematic-overlay-intensity: 0.7; /* Strength of bottom-heavy card fades */
+  --hero-veil-opacity: 0.55; /* Dimming of hero images - Increased for better contrast */
+  --img-base-opacity: 0.75; /* Visibility of the actual image asset - Lowered for depth */
+  --cinematic-overlay-intensity: 0.8; /* Strength of bottom-heavy card fades */
 
   /* 
      LAYOUT & READABILITY 

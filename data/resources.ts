@@ -42,6 +42,7 @@ export const RESOURCES: ResourceCategory[] = [
           'trusted-housesitters review',
           'trusted-housesitters discount code',
           'house sitting tips',
+          'Is TrustedHousesitters worth it',
         ],
       },
       {

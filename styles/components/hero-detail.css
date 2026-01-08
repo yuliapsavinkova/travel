@@ -22,7 +22,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 1 !important; /* Force 100% brightness for detail headers */
+  opacity: var(--img-base-opacity) !important; /* Respect global dimming */
 }
 
 /* Integrated Hero Navigation Links - Sharing .glass-pill styling */

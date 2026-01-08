@@ -96,7 +96,7 @@ export default async function ResourceDetailPage({
         subtitle={item.subtitle}
         date={item.date}
         isAffiliate={true}
-        ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit Partner'}
+        ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit'}
         ctaLink={item.link}
         prevLink={item.prevLink}
         nextLink={item.nextLink}
