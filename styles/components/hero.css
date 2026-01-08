@@ -26,13 +26,15 @@
 }
 
 .hero-paragraph {
-  font-family: var(--f-serif);
-  font-style: italic;
-  font-size: 1.35rem;
+  font-family: var(--f-main); /* Changed to Sans-Serif for better reading */
+  font-size: 1.15rem; /* Slightly smaller for tighter layout */
+  font-weight: 400;
   color: var(--c-white);
-  max-width: 700px;
+  max-width: 640px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7; /* Increased for breathability */
+  letter-spacing: 0.01em;
+  opacity: 0.9;
   /* Stronger shadow for better readability on complex images */
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
@@ -52,6 +54,6 @@
     margin: var(--s-6) auto 0;
   }
   .hero-paragraph {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 }

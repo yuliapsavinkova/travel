@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ContactTrigger } from '../components/ClientTriggers';
-import { ChevronDownIcon, GlobeIcon, CompassIcon, MapPinIcon } from '../components/Icons';
+import { ChevronDownIcon, GlobeIcon, CompassIcon, MapPinIcon, StarIcon } from '../components/Icons';
 import { SITE_STATS } from '../constants';
 
 export default function HomePage() {
@@ -37,7 +37,7 @@ export default function HomePage() {
             Chronicles of a <span className="shimmer-text">Traveler.</span>
           </h1>
           <p className="hero-paragraph">
-            I travel full time. Sharing my professional journey as a house sitter and solo traveler.
+            I travel full time. I share my professional journey as a house sitter and solo traveler.
           </p>
           <div className="hero-button-group">
             <Link href="/blog" className="btn-gold">
@@ -61,8 +61,8 @@ export default function HomePage() {
             Travel <span className="serif-italic shimmer-text">& Life.</span>
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
-            I've visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states
-            while house sitting.
+            I have visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states
+            while house sitting professionally.
           </p>
 
           <div className="grid-standard">
@@ -120,6 +120,45 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="section-margin text-center">
+          <div
+            className="glass-card"
+            style={{ maxWidth: '800px', margin: '0 auto', padding: 'var(--s-7)' }}
+          >
+            <div className="sub-header">Growth Roadmap</div>
+            <h2 className="display-title display-title-md">
+              The Road <span className="serif-italic shimmer-text">Ahead.</span>
+            </h2>
+            <p
+              className="hero-paragraph"
+              style={{ fontSize: '1.1rem', marginBottom: 'var(--s-5)' }}
+            >
+              I am just starting this chronicle. Please check back often as the content grows. I
+              will be sharing packing hacks, budget breakdowns, and the technical secrets of
+              professional house sitting.
+            </p>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                gap: 'var(--s-4)',
+                flexWrap: 'wrap',
+                opacity: 0.6,
+              }}
+            >
+              <span className="metadata-item">
+                <StarIcon size={14} /> Packing Lists
+              </span>
+              <span className="metadata-item">
+                <StarIcon size={14} /> Sitter Hacks
+              </span>
+              <span className="metadata-item">
+                <StarIcon size={14} /> Safety Tips
+              </span>
+            </div>
           </div>
         </section>
 

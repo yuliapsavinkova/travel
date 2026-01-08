@@ -1,47 +1,35 @@
 import { THS_DISCOUNT } from '../../types';
 
 export const content = `
-  <p class="prose-lead">TrustedHousesitters is the main platform I use to travel. 
-  The idea is simple and honest: I stay in people’s homes for free while taking 
-  care of their pets. In exchange, the owners get reliable care for their beloved 
-  animals. There is no money involved, and I am treated as a guest, not an employee. 
-  The hosts usually open up their entire homes, and it is a genuine exchange 
-  of trust and care.</p>
+  <p class="prose-lead">TrustedHousesitters is the main platform I use to travel full-time. 
+  The concept is simple: I stay in homes for free while taking care of pets. In exchange, 
+  owners get reliable care for their animals. There is no money involved, and I am treated 
+  as a guest rather than an employee.</p>
 
-  <h2>Why I Love TrustedHousesitters for Traveling</h2>
-  <p>The platform is built on trust and reviews, which makes it easy to choose 
-  the right sit. I always read reviews carefully before committing to a stay. 
-  That step is important to make sure it is a good fit for everyone involved.</p>
+  <h2>Why I Use This Platform</h2>
+  <p>The platform is built on verified reviews, which makes it easy to choose the right fit. 
+  I always read previous reviews carefully before committing to a stay. This ensures that 
+  the expectations of both the homeowner and myself are aligned before the sit begins.</p>
   
-  <p>I paid for a year-long prime membership with a sign-up discount, and it was 
-  worth every penny. By using TrustedHousesitters, I didn’t pay for accommodations 
-  for an entire year. Even if you estimate $100 per night for a hotel, that could 
-  add up to $36,000 if you travel full time like I did. For occasional travelers, 
-  the membership pays for itself if you plan to stay at least a couple of days a year. 
-  Most of the homes I stayed in were far more comfortable, spacious, and 
-  interesting than typical hotel room.</p>
+  <p>I paid for a year-long membership with a sign-up discount and it was worth the 
+  investment. By using this service, I didn’t pay for any accommodations for an entire year. 
+  Even at a conservative estimate of one hundred dollars per night for a hotel, that adds 
+  up to thirty-six thousand dollars in annual savings.</p>
   
-  <p>I have used TrustedHousesitters in many different states. It works 
-  especially well if you work remotely or simply enjoy spending time with animals. 
-  You get to experience new places, live like a local in real neighborhoods, 
-  and spend quality time with pets who genuinely appreciate your company.</p>
+  <p>I have used the platform in many different states. It works exceptionally well if you 
+  work remotely or simply enjoy spending time with animals. You get to live like a local 
+  in real neighborhoods and experience life in a way that hotels can't offer.</p>
   
-  <p>Many homeowners are warm and welcoming. They often go out of their way to 
-  show their appreciation, sometimes inviting you to dinner or taking time to 
-  get to know you before the sit begins. It is rewarding to know their homes 
-  and pets are in good hands, and that they value the care you provide.</p>
-  
-  <p>TrustedHousesitters is not just about saving money or having a place to stay. 
-  It is about experiencing life differently, connecting with animals and people, 
-  and having the freedom to travel without the constant expense of hotels. 
-  If you love pets and want a meaningful way to travel, this platform is unmatched.</p>
+  <p>Many homeowners are incredibly warm. They often go out of their way to show 
+  appreciation, sometimes inviting you for a meal or sharing their local secrets. It is 
+  rewarding to know that a home and a pet are in good hands while the owners are away.</p>
 
   <div class="prose-accent-box" style="text-align: center; display: flex; 
     flex-direction: column; align-items: center; gap: 20px;">
     <h3 style="margin-top: 0;">Claim Your ${THS_DISCOUNT} Membership Discount</h3>
-    <p style="margin-bottom: 10px;">Ready to start? Use this referral link to 
-      claim your ${THS_DISCOUNT} discount. The savings are applied automatically 
-      at checkout for any of their annual membership tiers.</p>
+    <p style="margin-bottom: 10px;">Ready to start your own journey? Use this referral 
+    link to claim your ${THS_DISCOUNT} discount. The savings apply to any of their 
+    annual membership tiers.</p>
     <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" 
       rel="noopener noreferrer" class="btn-gold" style="min-width: 280px;">
       Claim ${THS_DISCOUNT} Discount Link

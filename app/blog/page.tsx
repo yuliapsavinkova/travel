@@ -7,8 +7,7 @@ import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icon
 
 export const metadata: Metadata = {
   title: 'The Sitter Blog: Expert Tips & House Sitting Stories | Sitter Journey',
-  description:
-    'Practical guides on landing your first house sit, professional pet care tips, and stories from a full-time solo female traveler.',
+  description: 'Practical guides on landing your first house sit and solo travel tips.',
   alternates: {
     canonical: '/blog',
   },
@@ -34,7 +33,7 @@ export default function BlogPage() {
             The <span className="shimmer-text">Blog.</span>
           </h1>
           <p className="hero-paragraph">
-            Writing about life on the road and what I've learned along the way.
+            I share stories from my life on the road and the lessons learned.
           </p>
           <div className="hero-button-group">
             <Link href="#archive" className="btn-gold">
@@ -56,11 +55,22 @@ export default function BlogPage() {
       </section>
 
       <div className="container">
-        <header className="text-center section-margin" id="archive">
-          <div className="sub-header">Posts</div>
+        <header
+          className="text-center section-margin"
+          id="archive"
+          style={{ maxWidth: '800px', margin: '0 auto var(--s-8) auto' }}
+        >
+          <div className="sub-header">Journal Entry</div>
           <h2 className="display-title display-title-md">
             The <span className="serif-italic shimmer-text">Archive.</span>
           </h2>
+          <p
+            className="hero-paragraph"
+            style={{ fontSize: '1rem', opacity: 0.8, marginTop: 'var(--s-3)' }}
+          >
+            I am currently documenting my journey. While the archive is growing, please check back
+            often for new hacks, packing essentials, and stories from the road.
+          </p>
         </header>
 
         <div className="grid-standard">

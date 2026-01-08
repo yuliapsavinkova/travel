@@ -8,7 +8,8 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'how-to-get-your-first-house-sit-no-reviews',
     title: 'How to Get Your First House Sit (Even With No Reviews)',
     excerpt:
-      'The exact framework I used to go from zero reviews to a professional portfolio of verified stays.',
+      'The exact framework I used to go from zero reviews to a professional portfolio of ' +
+      'verified stays.',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
@@ -26,7 +27,8 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     seoTitle: 'How to Get Your First House Sit with No Reviews | Sitter Journey',
     seoDescription:
-      'Proven strategy to land your first house sitting job on TrustedHousesitters without previous reviews. Step-by-step guide for beginners.',
+      'Proven strategy to land your first house sitting job on TrustedHousesitters ' +
+      'without previous reviews. Step-by-step guide for beginners.',
     seoKeywords: [
       'how to get first house sit',
       'trusted-housesitters no reviews',
@@ -39,7 +41,8 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'trusted-housesitters-profile-tips-how-to-secure-more-sits',
     title: 'TrustedHousesitters Profile Tips: How to Secure More Sits',
     excerpt:
-      'Learn how to create a trusted TrustedHousesitters sitter profile that helps you secure more sits. Photo rules, profile tips, reviews, and what owners actually look for.',
+      'Master your TrustedHousesitters profile with expert guidance. Learn photo rules, ' +
+      'strategy, and how to build immediate trust with homeowners.',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Profile Strategy',
@@ -64,7 +67,8 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     seoTitle: 'TrustedHousesitters Profile Tips: How to Secure More Sits | Sitter Journey',
     seoDescription:
-      'Master your TrustedHousesitters profile with these expert tips. Learn photo requirements, writing strategies, and how to build trust with owners.',
+      'Master your TrustedHousesitters profile with these expert tips. Learn ' +
+      'photo requirements, writing strategies, and how to build trust with owners.',
     seoKeywords: [
       'trusted-housesitters profile tips',
       'secure more house sits',

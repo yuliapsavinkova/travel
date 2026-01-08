@@ -9,14 +9,14 @@
 }
 
 .prose-lead {
+  font-family: var(--f-main); /* Changed to Sans-Serif for readability */
   font-size: 1.25rem;
   color: var(--c-white);
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: var(--s-7);
-  font-family: var(--f-serif);
-  font-style: italic;
   font-weight: 400;
-  opacity: 0.95;
+  opacity: 0.9;
+  letter-spacing: 0.01em;
 }
 
 .prose-content h2 {
@@ -83,6 +83,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.2rem;
+  font-style: normal;
   margin-bottom: var(--s-5);
   font-family: var(--f-main) !important;
   font-weight: 900;
