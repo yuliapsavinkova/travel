@@ -62,7 +62,7 @@ export default function HomePage() {
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
             I have visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states
-            while house sitting professionally.
+            while house sitting.
           </p>
 
           <div className="grid-standard">

@@ -8,6 +8,17 @@
   font-weight: 400;
 }
 
+.prose-content a {
+  color: var(--c-gold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.prose-content a:hover {
+  opacity: 0.8;
+}
+
 .prose-lead {
   font-family: var(--f-main); /* Changed to Sans-Serif for readability */
   font-size: 1.25rem;
