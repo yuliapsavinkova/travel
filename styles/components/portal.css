@@ -1,11 +1,13 @@
 .portal-overlay {
   position: fixed;
   inset: 0;
-  z-index: var(--z-overlay);
+  z-index: var(--z-portal); /* High z-index to stay above nav */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--s-4);
+  /* Use dynamic viewport height for mobile browsers */
+  height: 100dvh;
 }
 
 .portal-bg {
@@ -24,8 +26,14 @@
   border: 1px solid var(--c-border);
   padding: var(--s-7);
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
-  max-height: 90vh;
+  /* Constraints to prevent overflow on mobile */
+  max-height: calc(100dvh - var(--s-6));
   overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.portal-modal::-webkit-scrollbar {
+  display: none;
 }
 
 .portal-header-group {
@@ -84,5 +92,19 @@
 @media (max-width: 768px) {
   .portal-modal {
     padding: var(--s-5);
+    border-radius: var(--r-md);
+  }
+  .portal-header-group {
+    margin-bottom: var(--s-4);
+  }
+}
+
+@media (max-height: 600px) {
+  /* Ultra-compact for landscape mobile or very small screens */
+  .portal-modal {
+    padding: var(--s-3);
+  }
+  .portal-header-group {
+    margin-bottom: var(--s-2);
   }
 }
