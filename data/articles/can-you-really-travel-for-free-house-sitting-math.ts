@@ -1,7 +1,7 @@
 import { THS_DISCOUNT } from '../../types';
 
 export const content = `
-  <p class="prose-lead">“Free travel” sounds like influencer bait—and in most cases, it is. 
+  <p class="prose-lead">“Free travel” sounds like influencer bait and in most cases, it is. 
   House sitting is different, but only if you understand the math, the tradeoffs, 
   and the actual constraints of the lifestyle.</p>
 

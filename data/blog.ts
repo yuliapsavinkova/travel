@@ -12,7 +12,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'can-you-really-travel-for-free-house-sitting-math',
     title: 'Can You Really Travel for Free with House Sitting? Real Examples & Math',
     excerpt:
-      'Is "free travel" a scam? We look at real itineraries, nomad math, and the hidden costs of house sitting.',
+      'Is "free travel" a scam? We look at real numbers, and the hidden costs of house sitting.',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Financial',
@@ -48,7 +48,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'why-trusted-housesitters-applications-get-rejected',
     title: 'Top Reasons Why Trusted-Housesitters Applications Get Rejected',
     excerpt:
-      'It is frustrating to be rejected, but it happens even to experts. Learn the fixable and unfixable reasons to move on and succeed.',
+      'Rejections happen all the time. Learn the fixable and unfixable reasons to move on and succeed.',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
@@ -84,8 +84,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: '1',
     slug: 'how-to-get-your-first-house-sit-no-reviews',
     title: 'How to Get Your First House Sit (Even With No Reviews)',
-    excerpt:
-      'The exact framework I used to go from zero reviews to a professional portfolio of verified stays.',
+    excerpt: 'Proven tips on how to go from zero reviews to getting accepted for your first sit',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
@@ -121,8 +120,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: '2',
     slug: 'trusted-housesitters-profile-tips-how-to-secure-more-sits',
     title: 'Trusted-Housesitters Profile Tips: How to Secure More Sits',
-    excerpt:
-      'Master your profile with expert guidance. Learn photo rules, strategy, and how to build immediate trust with homeowners.',
+    excerpt: 'Master your profile with practical tips, including photo rules and proven examples.',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Profile Strategy',
@@ -159,7 +157,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'is-trusted-housesitters-worth-it-for-sitters',
     title: 'Is Trusted-Housesitters Worth It for Sitters? Honest Pros, Cons, and Real Costs',
     excerpt:
-      'A deep dive into the costs, real savings, and pros/cons of being a professional house sitter.',
+      'A deep dive into the costs, real savings, and pros/cons of house sitting while traveling.',
     date: 'January 2026',
     category: 'Review',
     location: 'Financial',
@@ -196,7 +194,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'trusted-housesitters-membership-cost-levels',
     title: 'Sitter Guide: Trusted-Housesitters Membership Cost & Levels',
     excerpt:
-      'Breaking down Basic, Standard, and Premium sitter memberships to find the right fit for your travel needs.',
+      'Breaking down Basic, Standard, and Premium sitter memberships to find the right fit for you.',
     date: 'January 2026',
     category: 'Sitter Guide',
     location: 'Financial',
