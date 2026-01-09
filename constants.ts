@@ -19,8 +19,8 @@ export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   // { label: 'Stays', href: '/stays' },
   // { label: 'Travel', href: '/travel' },
-  { label: 'FAQ', href: '/faq' },
   { label: 'Blog', href: '/blog' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Resources', href: '/resources' },
   { label: 'About', href: '/about' },
 ];
