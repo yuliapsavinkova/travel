@@ -35,11 +35,11 @@ export const content = `
   a homeowner cancels on you at the last minute. It also includes two global airport lounge
   passes, adding a touch of luxury to your transit days between sits.</p>
 
-  <div class="prose-accent-box" style="text-align: center;">
-    <h3 style="margin-top: 0;">Get Started with a Discount</h3>
-    <p style="margin-bottom: var(--s-5);">Ready to build your profile and start sitting? You can get a massive head start on your first year of travel with a special offer for my readers.</p>
+  <div class="prose-accent-box variant-cta">
+    <h3>Get Started with a Discount</h3>
+    <p>Ready to build your profile and start sitting? You can get a massive head start on your first year of travel with a special offer for my readers.</p>
     <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" 
-      rel="noopener noreferrer" class="btn-gold" style="min-width: 280px;">
+      rel="noopener noreferrer" class="btn-gold">
       Claim your ${THS_DISCOUNT} Discount
     </a>
   </div>

@@ -17,10 +17,9 @@ export const content = `
   It's not just about the equipment—it's about the consistency 
   of a routine.</p>
 
-  <div class="prose-accent-box" style="text-align: center; display: flex; 
-    flex-direction: column; align-items: center; gap: 20px;">
-    <h3 style="margin-top: 0;">Claim Your ${PF_DISCOUNT} Down Discount</h3>
-    <p style="margin-bottom: 10px;">Ready to start? Use this referral link 
+  <div class="prose-accent-box variant-cta">
+    <h3>Claim Your ${PF_DISCOUNT} Down Discount</h3>
+    <p>Ready to start? Use this referral link 
       to join for just ${PF_DISCOUNT} down and maintain your routine 
       on the road.</p>
     <a href="https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ" 

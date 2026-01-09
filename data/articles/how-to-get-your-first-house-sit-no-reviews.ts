@@ -66,7 +66,7 @@ export const content = `
   <p>Your message is not about convincing someone you’re amazing. It’s about making them 
   feel calm about leaving. Here’s the exact type of message I used:</p>
   
-  <blockquote class="prose-quote" style="font-size: 1.1rem; text-align: left; font-style: normal;">
+  <blockquote class="prose-quote variant-plain">
     "Hi [Name], I saw your listing in Austin and would love to care for your cats while 
     you’re away. I work remotely and am usually home, so they’d have consistent attention 
     and care. I’ve spent a lot of time around cats and am very comfortable with feeding 
@@ -90,8 +90,8 @@ export const content = `
   first sit is simply the entry point.</p>
 
   <div class="prose-accent-box">
-    <h3 style="margin-top: 0;">My exact first-sit timeline:</h3>
-    <ul style="opacity: 1; font-style: normal;">
+    <h3>My exact first-sit timeline:</h3>
+    <ul>
       <li>Created my profile</li>
       <li>Applied to 3 local cat sits</li>
       <li>Accepted for a 2-day sit</li>
@@ -108,9 +108,9 @@ export const content = `
   full realities in my <a href="/blog/is-trusted-housesitters-worth-it-for-sitters">full 
   TrustedHousesitters review</a>.</p>
 
-  <div class="prose-accent-box" style="text-align: center;">
-    <h3 style="margin-top: 0;">Get Started with a Discount</h3>
-    <p style="margin-bottom: var(--s-5);">Ready to build your profile and start sitting? You 
+  <div class="prose-accent-box variant-cta">
+    <h3>Get Started with a Discount</h3>
+    <p>Ready to build your profile and start sitting? You 
     can get a massive head start on your first year of travel with a special offer.</p>
     <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" 
       rel="noopener noreferrer" class="btn-gold" style="min-width: 280px;">

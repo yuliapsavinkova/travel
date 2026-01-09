@@ -1,3 +1,4 @@
+
 export const content = `
   <p class="prose-lead">Ubud is where slow travel becomes a lifestyle. I spent a month reflecting on architecture and intentionality while living in a traditional bamboo home, learning the rhythm of the local community and the art of presence.</p>
 

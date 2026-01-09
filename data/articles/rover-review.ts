@@ -17,10 +17,9 @@ export const content = `
   house sitting, having Rover as a backup ensures I'm never without a 
   connection to the pet community.</p>
 
-  <div class="prose-accent-box" style="text-align: center; display: flex; 
-    flex-direction: column; align-items: center; gap: 20px;">
-    <h3 style="margin-top: 0;">Claim Your ${ROVER_DISCOUNT} Discount</h3>
-    <p style="margin-bottom: 10px;">Ready to start? Use this referral link 
+  <div class="prose-accent-box variant-cta">
+    <h3>Claim Your ${ROVER_DISCOUNT} Discount</h3>
+    <p>Ready to start? Use this referral link 
       to claim your ${ROVER_DISCOUNT} credit toward your first booking 
       on the platform.</p>
     <a href="https://www.rover.com/sit/yulias92191" target="_blank" 

@@ -1,3 +1,4 @@
+
 export const content = `
   <p class="prose-lead">After three months in Bali, I needed a break from the constant noise 
   of motorbikes. I chose Gili Trawangan for its slower pace and the unique absence of 

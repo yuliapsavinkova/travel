@@ -1,3 +1,4 @@
+
 export const privacyPolicyContent = `
   <p class="prose-lead">Your privacy is important to me. This policy explains how Sitter Journey collects, uses, and protects your information when you visit this site.</p>
 

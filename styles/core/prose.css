@@ -3,23 +3,58 @@
   color: var(--c-text-dim);
   font-size: 18px;
   line-height: 1.8;
-  max-width: var(--w-prose); /* 720px from variables.css */
+  max-width: var(--w-prose); /* 720px for optimal readability */
   margin: 0 auto;
   font-weight: 400;
 }
 
-/* Breakout Utility for wide tables/boxes (matches image width) */
+/* 
+   PROSE BREAKOUT (e.g. Pro/Cons Grid)
+   Maintains a wider 900px footprint to allow side-by-side columns to breathe.
+*/
 .prose-breakout {
   width: 100%;
-  margin: var(--s-7) 0;
+  margin: var(--s-8) 0;
+  position: relative;
 }
 
 @media (min-width: 1024px) {
   .prose-breakout {
     width: 900px;
-    /* Math: (900 - 720) / 2 = 90px pull to the left to center */
-    margin-left: -90px !important;
+    margin-left: -90px !important; /* (900 - 720) / 2 = 90px pull */
+    z-index: 5;
   }
+}
+
+/* 
+   PROSE IMAGES 
+   Aligned with the article text (720px) per user request.
+*/
+.prose-image-block {
+  width: 100%;
+  margin: var(--s-8) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.prose-image-block img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Global List Styling */
+.prose-content ul,
+.prose-content ol {
+  padding-left: var(--s-6);
+  margin-bottom: var(--s-6);
+}
+
+.prose-content li {
+  margin-bottom: var(--s-2);
 }
 
 .prose-content a {
@@ -69,123 +104,169 @@
   opacity: 0.85;
 }
 
+/* PROSE ACCENT BOXES */
 .prose-accent-box {
   background: rgba(229, 193, 133, 0.03);
   border-top: 1px solid var(--c-gold-muted);
   border-bottom: 1px solid var(--c-gold-muted);
-  padding: var(--s-6) var(--s-4);
+  padding: var(--s-5) var(--s-5);
   margin: var(--s-8) 0;
   position: relative;
+}
+
+/* Minimalist list indentation inside narrow pro/con columns */
+.prose-accent-box ul,
+.prose-accent-box ol {
+  padding-left: var(--s-4);
 }
 
 .prose-accent-box h3 {
   margin-top: 0;
 }
 
-.prose-accent-box p {
-  margin-bottom: 0;
-  font-style: italic;
-  color: var(--c-text-dim);
-  font-size: 16px;
+.prose-accent-box.variant-pros {
+  background: rgba(229, 193, 133, 0.05);
+  margin: 0;
+}
+.prose-accent-box.variant-pros h3 {
+  color: var(--c-white);
 }
 
-/* PROSE FAQ SECTION */
-.prose-faq {
-  margin: var(--s-8) 0;
-  padding: var(--s-6);
+.prose-accent-box.variant-cons {
   background: rgba(255, 255, 255, 0.02);
-  border-left: 3px solid var(--c-gold);
-  border-radius: 0 var(--r-md) var(--r-md) 0;
+  margin: 0;
+}
+.prose-accent-box.variant-cons h3 {
+  color: var(--c-text-muted);
 }
 
-.prose-faq h2 {
-  margin-top: 0;
-  background: var(--g-champagne);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.2rem;
-  font-style: normal;
-  margin-bottom: var(--s-5);
-  font-family: var(--f-main) !important;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+.prose-accent-box.variant-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-7) var(--s-6);
 }
 
-.faq-item {
+.prose-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--s-4);
+}
+
+/* FINANCIAL FLIP COMPONENT */
+.financial-flip-container {
+  text-align: center;
+  padding: var(--s-8) var(--s-6);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-gold-muted);
+  position: relative;
+  overflow: hidden;
+}
+
+.financial-flip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-6);
   margin-bottom: var(--s-6);
 }
 
-.faq-item:last-child {
-  margin-bottom: 0;
+.financial-flip-col .amount {
+  font-size: 24px;
+  font-weight: 700;
+}
+.financial-flip-col.old .amount {
+  color: var(--c-text-muted);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.financial-flip-col.new .amount {
+  color: var(--c-white);
+}
+.financial-flip-col .calculation {
+  font-size: 11px;
+  margin-top: 4px;
+  opacity: 0.5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.financial-flip-col.new .calculation {
+  color: var(--c-gold);
+  opacity: 0.8;
+}
+
+.financial-flip-results {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--s-6);
+  position: relative;
+}
+
+.financial-flip-results .badge {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d0d0e;
+  padding: 0 16px;
+  color: var(--c-gold);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.financial-flip-results .total-amount {
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  line-height: 1;
+  margin: 0;
+}
+
+/* F.A.Q. SECTION */
+.prose-faq {
+  margin-top: var(--s-9);
+  padding-left: var(--s-7);
+  border-left: 3px solid var(--c-gold);
+}
+
+.prose-faq h2 {
+  font-family: var(--f-main) !important;
+  font-style: normal !important;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--c-gold);
+  margin-top: 0;
+  margin-bottom: var(--s-6);
+}
+
+.faq-item {
+  margin-bottom: var(--s-7);
 }
 
 .faq-item strong {
   display: block;
+  font-size: 1.1rem;
   color: var(--c-white);
   margin-bottom: var(--s-2);
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-
-.faq-item p {
-  font-size: 0.95rem;
-  margin-bottom: var(--s-3);
-  opacity: 0.8;
 }
 
 .faq-action-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
   color: var(--c-gold) !important;
-  font-size: 0.85rem;
-  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  transition: all 0.3s ease;
-  text-decoration: none !important;
+  letter-spacing: 0.05em;
+  margin-top: var(--s-1);
 }
 
-.faq-action-link:hover {
-  transform: translateX(4px);
-  filter: brightness(1.2);
-}
-
-/* PROSE CTA ROW */
-.prose-cta-row {
-  display: flex;
-  justify-content: flex-start;
-  margin: var(--s-6) 0;
-  width: 100%;
-}
-
-/* PROSE IMAGE BLOCK */
-.prose-image-block {
-  margin: var(--s-8) 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-3);
-  width: 100%;
-}
-
-.prose-image-block img {
-  width: 100%;
-  max-height: 440px;
-  object-fit: cover;
-  border-radius: var(--r-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.prose-caption {
-  font-size: 11px;
-  color: var(--c-text-muted);
-  text-align: center;
-  font-style: italic;
-  letter-spacing: 0.02em;
-}
-
+/* MISC PROSE */
 .prose-quote {
   padding: var(--s-7);
   margin: var(--s-8) 0;
@@ -200,8 +281,29 @@
   border-bottom: 1px solid var(--c-border-light);
 }
 
-@media (max-width: 768px) {
+.prose-quote.variant-plain {
+  text-align: left;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.prose-caption {
+  font-size: 11px;
+  color: var(--c-text-muted);
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin-top: var(--s-3);
+}
+
+@media (max-width: 1024px) {
   .prose-content {
     font-size: 17px;
+  }
+  .financial-flip-grid {
+    grid-template-columns: 1fr;
+  }
+  .prose-faq {
+    padding-left: var(--s-5);
   }
 }

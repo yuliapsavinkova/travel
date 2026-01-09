@@ -1,5 +1,5 @@
 export const intro =
-  'Hi, I’m Yulia. I travel full-time across the U.S., living a lifestyle that blends ' +
+  'Hi, I’m Yulia. I travel full-time across the globe, living a lifestyle that blends ' +
   'house sitting, minimalism, and intentional travel.';
 
 export const body = `

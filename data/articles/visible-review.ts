@@ -16,10 +16,9 @@ export const content = `
   having one less thing to worry about is a huge relief. Whether I'm 
   in a rural farmhouse or a city apartment, my hotspot is my safety net.</p>
 
-  <div class="prose-accent-box" style="text-align: center; display: flex; 
-    flex-direction: column; align-items: center; gap: 20px;">
-    <h3 style="margin-top: 0;">Claim Your ${VISIBLE_DISCOUNT} Discount</h3>
-    <p style="margin-bottom: 10px;">Ready to start? Use this referral link 
+  <div class="prose-accent-box variant-cta">
+    <h3>Claim Your ${VISIBLE_DISCOUNT} Discount</h3>
+    <p>Ready to start? Use this referral link 
       to claim your ${VISIBLE_DISCOUNT} credit and get your first month 
       of unlimited data for just $5.</p>
     <a href="https://www.visible.com/get/?66LWM29" target="_blank" 

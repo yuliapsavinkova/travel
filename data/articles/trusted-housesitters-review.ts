@@ -24,10 +24,9 @@ export const content = `
   appreciation, sometimes inviting you for a meal or sharing their local secrets. It is 
   rewarding to know that a home and a pet are in good hands while the owners are away.</p>
 
-  <div class="prose-accent-box" style="text-align: center; display: flex; 
-    flex-direction: column; align-items: center; gap: 20px;">
-    <h3 style="margin-top: 0;">Claim Your ${THS_DISCOUNT} Membership Discount</h3>
-    <p style="margin-bottom: 10px;">Ready to start your own journey? Use this referral 
+  <div class="prose-accent-box variant-cta">
+    <h3>Claim Your ${THS_DISCOUNT} Membership Discount</h3>
+    <p>Ready to start your own journey? Use this referral 
     link to claim your ${THS_DISCOUNT} discount. The savings apply to any of their 
     annual membership tiers.</p>
     <a href="https://trustedhousesitters.com/refer/raf943607" target="_blank" 
