@@ -2,10 +2,47 @@ import { BlogPost } from '../types';
 import { content as firstHouseSitContent } from './articles/how-to-get-your-first-house-sit-no-reviews';
 import { content as thsProfileTipsContent } from './articles/trusted-housesitters-profile-tips-how-to-secure-more-sits';
 import { content as worthItContent } from './articles/is-trusted-housesitters-worth-it';
+import { content as mathContent } from './articles/can-you-really-travel-for-free-house-sitting-math';
 import { content as costLevelsContent } from './articles/trusted-housesitters-membership-cost-levels';
 import { content as rejectionReasonsContent } from './articles/why-trusted-housesitters-applications-get-rejected';
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: '6',
+    slug: 'can-you-really-travel-for-free-house-sitting-math',
+    title: 'Can You Really Travel for Free with House Sitting? Real Examples & Math',
+    excerpt:
+      'Is "free travel" a scam? We look at real itineraries, nomad math, and the hidden costs of house sitting.',
+    date: 'January 2026',
+    category: 'Expertise',
+    location: 'Financial',
+    sortOrder: 4,
+    imageUrl:
+      'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
+    ctaLabel: 'Claim 25% Off Membership',
+    ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+    body: mathContent,
+    faqIds: ['ths-beginner-difficulty', 'ths-internet-remote', 'ths-owner-priorities'],
+    prevLink: {
+      label: 'Previous',
+      title: 'Is It Worth It?',
+      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+    },
+    nextLink: {
+      label: 'Next',
+      title: 'Membership Costs',
+      href: '/blog/trusted-housesitters-membership-cost-levels',
+    },
+    seoTitle: 'Can You Really Travel for Free? House Sitting Math & Reality',
+    seoDescription:
+      'Discover the truth about "free travel." We break down house sitting itineraries and math for slow travelers and full-time nomads.',
+    seoKeywords: [
+      'free travel math',
+      'house sitting costs',
+      'trustedhousesitters worth it',
+      'nomad lifestyle budget',
+    ],
+  },
   {
     id: '5',
     slug: 'why-trusted-housesitters-applications-get-rejected',
@@ -24,8 +61,8 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-rejection-personal', 'ths-rejection-resemblance', 'ths-rejection-fix'],
     prevLink: {
       label: 'Previous',
-      title: 'Is It Worth It?',
-      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+      title: 'Membership Costs',
+      href: '/blog/trusted-housesitters-membership-cost-levels',
     },
     nextLink: {
       label: 'Next',
@@ -140,8 +177,8 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     nextLink: {
       label: 'Next',
-      title: 'Membership Costs',
-      href: '/blog/trusted-housesitters-membership-cost-levels',
+      title: 'Free Travel Math',
+      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
     },
     seoTitle: 'Is Trusted-Housesitters Worth It for Sitters? Pros, Cons & Costs',
     seoDescription:
@@ -163,7 +200,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'January 2026',
     category: 'Sitter Guide',
     location: 'Financial',
-    sortOrder: 4,
+    sortOrder: 5,
     imageUrl:
       'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=1200',
     ctaLabel: 'Claim 25% Off Code',
@@ -172,8 +209,8 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-long-term-preference', 'ths-owner-priorities', 'ths-internet-remote'],
     prevLink: {
       label: 'Previous',
-      title: 'Is It Worth It?',
-      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+      title: 'Free Travel Math',
+      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
     },
     nextLink: {
       label: 'Next',
