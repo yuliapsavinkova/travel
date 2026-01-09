@@ -3,9 +3,23 @@
   color: var(--c-text-dim);
   font-size: 18px;
   line-height: 1.8;
-  max-width: var(--w-prose); /* Configurable in variables.css */
+  max-width: var(--w-prose); /* 720px from variables.css */
   margin: 0 auto;
   font-weight: 400;
+}
+
+/* Breakout Utility for wide tables/boxes (matches image width) */
+.prose-breakout {
+  width: 100%;
+  margin: var(--s-7) 0;
+}
+
+@media (min-width: 1024px) {
+  .prose-breakout {
+    width: 900px;
+    /* Math: (900 - 720) / 2 = 90px pull to the left to center */
+    margin-left: -90px !important;
+  }
 }
 
 .prose-content a {
@@ -19,7 +33,7 @@
 }
 
 .prose-lead {
-  font-family: var(--f-main); /* Changed to Sans-Serif for readability */
+  font-family: var(--f-main);
   font-size: 1.25rem;
   color: var(--c-white);
   line-height: 1.7;
@@ -75,9 +89,7 @@
   font-size: 16px;
 }
 
-/* 
-   PROSE FAQ SECTION
-*/
+/* PROSE FAQ SECTION */
 .prose-faq {
   margin: var(--s-8) 0;
   padding: var(--s-6);
@@ -141,19 +153,15 @@
   filter: brightness(1.2);
 }
 
-/* 
-   PROSE CTA ROW
-*/
+/* PROSE CTA ROW */
 .prose-cta-row {
   display: flex;
-  justify-content: flex-start; /* Aligned left to keep reading flow consistent */
+  justify-content: flex-start;
   margin: var(--s-6) 0;
   width: 100%;
 }
 
-/* 
-   PROSE IMAGE BLOCK 
-*/
+/* PROSE IMAGE BLOCK */
 .prose-image-block {
   margin: var(--s-8) 0;
   display: flex;
