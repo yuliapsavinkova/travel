@@ -48,10 +48,9 @@ const Footer = () => {
           <div className="footer-contact-col">
             <div className="sub-header footer-header">Contact</div>
             <p className="footer-contact-promo" style={{ display: 'block' }}>
-              Available for house sitting during{' '}
-              <span className="footer-year-highlight">{ACTIVE_YEAR}</span>
+              Available for sits: <span className="footer-year-highlight">{ACTIVE_YEAR}</span>
               <span style={{ opacity: 0.5, margin: '0 4px' }}>&mdash;</span>
-              <span className="footer-year-highlight">{NEXT_YEAR}</span>.
+              <span className="footer-year-highlight">{NEXT_YEAR}</span>
             </p>
             <div
               className="footer-action-group"

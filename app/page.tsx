@@ -37,7 +37,7 @@ export default function HomePage() {
             Chronicles of a <span className="shimmer-text">Traveler.</span>
           </h1>
           <p className="hero-paragraph">
-            I travel full time. I share my professional journey as a house sitter and solo traveler.
+            I travel full time. I share my personal journey as a house sitter and solo traveler.
           </p>
           <div className="hero-button-group">
             <Link href="/blog" className="btn-gold">
