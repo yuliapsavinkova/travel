@@ -41,8 +41,8 @@ export const RESOURCES: ResourceCategory[] = [
         seoKeywords: [
           'trusted-housesitters review',
           'trusted-housesitters discount code',
-          'house sitting tips',
-          'Is TrustedHousesitters worth it',
+          'free accommodation travel',
+          'pet sitting world',
         ],
       },
       {
@@ -67,7 +67,13 @@ export const RESOURCES: ResourceCategory[] = [
         nextLink: { label: 'Next', title: 'Visible', href: '/resources/visible-review' },
         seoTitle: `Rover Review 2026: Get ${ROVER_DISCOUNT} Off Your First Pet Stay`,
         seoDescription: `Honest Rover review by an active sitter. Use this referral link to get a ${ROVER_DISCOUNT} credit towards your first pet sitting booking.`,
-        seoKeywords: ['rover review', 'rover promo code', 'pet sitting discount'],
+        seoKeywords: [
+          'rover app review',
+          'pet sitting promo code',
+          'dog walking services',
+          'rover vs trustedhousesitters',
+          'side hustle travel',
+        ],
       },
       {
         id: 'visible',
@@ -91,7 +97,13 @@ export const RESOURCES: ResourceCategory[] = [
         },
         seoTitle: 'Visible Wireless Review: Best Unlimited Plan for Travelers',
         seoDescription: `Personal review of Visible Wireless for nomadic life. Get your first month of unlimited data for just ${VISIBLE_DISCOUNT}.`,
-        seoKeywords: ['visible wireless review', 'nomad internet tips', 'visible mobile discount'],
+        seoKeywords: [
+          'visible wireless nomad review',
+          'unlimited hotspot for travelers',
+          'best nomad phone plan',
+          'visible mobile discount',
+          'remote work internet',
+        ],
       },
       {
         id: 'planet-fitness',
@@ -115,7 +127,13 @@ export const RESOURCES: ResourceCategory[] = [
         },
         seoTitle: 'Planet Fitness Review: Essential for Full-Time Travel',
         seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${PF_DISCOUNT} down.`,
-        seoKeywords: ['planet-fitness review', 'travel gym tips', 'planet fitness showers'],
+        seoKeywords: [
+          'planet fitness traveler review',
+          'gym membership for nomads',
+          'planet fitness showers',
+          'travel health and fitness',
+          'gym discount code',
+        ],
       },
     ],
   },

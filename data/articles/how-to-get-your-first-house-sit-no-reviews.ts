@@ -14,7 +14,6 @@ export const content = `
     <li>Apply in popular destinations</li>
     <li>Apply during peak season</li>
     <li>Go for long sits</li>
-    <li>Prefer dog sits</li>
     <li>Send generic applications</li>
   </ul>
   
@@ -38,7 +37,7 @@ export const content = `
       <li>Cold cities in winter</li>
       <li>Less “Instagram-famous” locations</li>
     </ul>
-    <p>You don’t need Paris. You need a place other sitters are skipping.</p>
+    <p>You need a place other sitters are skipping.</p>
   </div>
 
   <h2>Step 2: Start with cats and short sits</h2>
@@ -57,8 +56,8 @@ export const content = `
     driving from Austin to Dallas.</span>
   </div>
 
-  <h2>Step 3: Apply selectively — not massively</h2>
-  <p>I applied to only 3 sits total. Not 20. Not 50. High-quality applications beat volume, 
+  <h2>Step 3: Apply strategically</h2>
+  <p>I applied to 3 sits total. Not 20. Not 50. High-quality applications beat volume, 
   especially when you’re new. One of those three accepted me. That conversion rate is not 
   luck — it’s positioning.</p>
 
@@ -83,6 +82,10 @@ export const content = `
   someone applied earlier, someone had previous reviews, or plans changed. This is not 
   feedback on you. Most people quit too early because they assume silence means failure. 
   It doesn’t.</p>
+  
+  <p>If you're seeing a lot of "declined" notifications, read my guide on the 
+  <a href="/blog/why-trusted-housesitters-applications-get-rejected">top reasons 
+  applications get rejected</a> to understand which factors you can't control.</p>
 
   <h2>Step 6: Once you get one sit, momentum kicks in</h2>
   <p>After my first sit, I received my first review, homeowners started responding more, 
@@ -106,7 +109,7 @@ export const content = `
 
   <p>If you’re still deciding whether house sitting is right for you, I break down the 
   full realities in my <a href="/blog/is-trusted-housesitters-worth-it-for-sitters">full 
-  TrustedHousesitters review</a>.</p>
+  Trusted-Housesitters review</a>.</p>
 
   <div class="prose-accent-box variant-cta">
     <h3>Get Started with a Discount</h3>
