@@ -325,6 +325,32 @@
   color: var(--c-gold);
 }
 
+.faq-footer {
+  margin-top: var(--s-5);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.faq-read-all-link {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  color: var(--c-text-muted) !important;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  opacity: 0.8;
+}
+
+.faq-read-all-link:hover {
+  color: var(--c-gold) !important;
+  opacity: 1;
+  transform: translateX(4px);
+}
+
 @media (max-width: 768px) {
   .prose-content {
     font-size: 17px;

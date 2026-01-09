@@ -107,7 +107,7 @@ const CommonDetail = ({
           <div className="prose-content">
             {children}
 
-            {faqs && faqs.length > 0 && <FAQSection items={faqs} />}
+            {faqs && faqs.length > 0 && <FAQSection items={faqs} showReadAll={true} />}
 
             {(prevLink || nextLink) && (
               <nav className="article-navigation" aria-label="Related articles">

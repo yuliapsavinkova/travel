@@ -5,9 +5,10 @@ import { ArrowUpRightIcon } from './Icons';
 
 interface FAQSectionProps {
   items: FAQItem[];
+  showReadAll?: boolean;
 }
 
-const FAQSection = ({ items }: FAQSectionProps) => {
+const FAQSection = ({ items, showReadAll = false }: FAQSectionProps) => {
   if (!items || items.length === 0) return null;
 
   return (
@@ -32,6 +33,15 @@ const FAQSection = ({ items }: FAQSectionProps) => {
           </div>
         </Link>
       ))}
+
+      {showReadAll && (
+        <div className="faq-footer">
+          <Link href="/faq" className="faq-read-all-link">
+            <span>Read All FAQ</span>
+            <ArrowUpRightIcon size={12} />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
