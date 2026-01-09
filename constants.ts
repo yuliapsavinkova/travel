@@ -19,6 +19,7 @@ export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   // { label: 'Stays', href: '/stays' },
   // { label: 'Travel', href: '/travel' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Blog', href: '/blog' },
   { label: 'Resources', href: '/resources' },
   { label: 'About', href: '/about' },
@@ -42,7 +43,7 @@ export const SITE_CONFIG = {
   googleAnalyticsId: 'G-R0920QKYXK',
   socials: {
     instagram: 'https://instagram.com',
-    linkein: 'https://linkedin.com',
+    linkedin: 'https://linkedin.com',
   },
 };
 

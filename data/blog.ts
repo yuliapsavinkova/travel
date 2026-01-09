@@ -22,7 +22,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Claim 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: mathContent,
-    faqIds: ['ths-beginner-difficulty', 'ths-internet-remote', 'ths-owner-priorities'],
+    faqIds: ['travel-savings', 'travel-hidden-costs', 'ths-membership-worth-it'],
     prevLink: {
       label: 'Previous',
       title: 'Is It Worth It?',
@@ -58,7 +58,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Claim 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: rejectionReasonsContent,
-    faqIds: ['ths-rejection-personal', 'ths-rejection-resemblance', 'ths-rejection-fix'],
+    faqIds: ['ths-rejection-personal', 'ths-rejection-fix', 'ths-rejection-common'],
     prevLink: {
       label: 'Previous',
       title: 'Membership Costs',
@@ -94,7 +94,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Offer: 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: firstHouseSitContent,
-    faqIds: ['ths-beginner-difficulty', 'ths-reviews-starting', 'ths-internet-remote'],
+    faqIds: ['ths-beginner-difficulty', 'ths-reviews-starting', 'travel-experience-needed'],
     prevLink: {
       label: 'Previous',
       title: 'Handling Rejections',
@@ -130,7 +130,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Get 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: thsProfileTipsContent,
-    faqIds: ['ths-photo-aspect', 'ths-cleanliness-mention', 'ths-profile-length'],
+    faqIds: ['ths-photo-aspect', 'ths-profile-length', 'trusted-profile-tips'],
     prevLink: {
       label: 'Previous',
       title: 'Your First Sit',
@@ -167,7 +167,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Claim 25% Off Code',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: worthItContent,
-    faqIds: ['best-platform-travel', 'ths-beginner-difficulty', 'ths-owner-priorities'],
+    faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
     prevLink: {
       label: 'Previous',
       title: 'Profile Strategy',
@@ -204,7 +204,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Claim 25% Off Code',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: costLevelsContent,
-    faqIds: ['ths-long-term-preference', 'ths-owner-priorities', 'ths-internet-remote'],
+    faqIds: ['ths-membership-worth-it', 'ths-experience-level-sits', 'ths-membership-try'],
     prevLink: {
       label: 'Previous',
       title: 'Free Travel Math',

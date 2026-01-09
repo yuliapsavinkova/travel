@@ -29,7 +29,11 @@ export const RESOURCES: ResourceCategory[] = [
         icon: 'home',
         imageUrl:
           'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
-        faqIds: ['ths-beginner-difficulty', 'trusted-profile-tips', 'ths-internet-remote'],
+        faqIds: [
+          'ths-membership-worth-it',
+          'ths-membership-discounts',
+          'ths-experience-level-sits',
+        ],
         prevLink: {
           label: 'Previous',
           title: 'Planet Fitness',
@@ -58,7 +62,7 @@ export const RESOURCES: ResourceCategory[] = [
         icon: 'heart',
         imageUrl:
           'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
-        faqIds: ['best-platform-travel', 'ths-internet-remote', 'ths-beginner-difficulty'],
+        faqIds: ['ths-experience-level-sits', 'travel-experience-needed', 'first-sit-easy'],
         prevLink: {
           label: 'Previous',
           title: 'TrustedHousesitters',
@@ -88,7 +92,7 @@ export const RESOURCES: ResourceCategory[] = [
         icon: 'smartphone',
         imageUrl:
           'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200',
-        faqIds: ['ths-internet-remote', 'travel-wellness-gym', 'best-platform-travel'],
+        faqIds: ['ths-internet-remote', 'remote-work-internet', 'travel-wellness-gym'],
         prevLink: { label: 'Previous', title: 'Rover', href: '/resources/rover-review' },
         nextLink: {
           label: 'Next',
@@ -118,7 +122,7 @@ export const RESOURCES: ResourceCategory[] = [
         icon: 'award',
         imageUrl:
           'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200',
-        faqIds: ['travel-wellness-gym', 'best-platform-travel', 'remote-work-internet'],
+        faqIds: ['travel-wellness-gym', 'ths-internet-remote', 'remote-work-internet'],
         prevLink: { label: 'Previous', title: 'Visible', href: '/resources/visible-review' },
         nextLink: {
           label: 'Next',

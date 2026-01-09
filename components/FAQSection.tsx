@@ -14,16 +14,23 @@ const FAQSection = ({ items }: FAQSectionProps) => {
     <div className="prose-faq">
       <h2>F.A.Q.</h2>
       {items.map((item) => (
-        <div key={item.id} className="faq-item">
-          <strong>{item.question}</strong>
-          <p>{item.answer}</p>
-          {item.link && (
-            <Link href={item.link.href} className="faq-action-link">
-              <span>{item.link.label}</span>
-              <ArrowUpRightIcon size={14} />
-            </Link>
-          )}
-        </div>
+        <Link
+          key={item.id}
+          href={item.link?.href || '#'}
+          className="faq-item-wrapper"
+          aria-label={`Read more about: ${item.question}`}
+        >
+          <div className="faq-item">
+            <strong>{item.question}</strong>
+            <p>{item.answer}</p>
+            {item.link && (
+              <div className="faq-action-row">
+                <span>{item.link.label}</span>
+                <ArrowUpRightIcon size={14} />
+              </div>
+            )}
+          </div>
+        </Link>
       ))}
     </div>
   );
