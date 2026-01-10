@@ -1,8 +1,9 @@
+import { ReactNode } from 'react';
+
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
 /**
  * GLOBAL CONFIGURATION CONSTANTS
- * Use these for values that change frequently to avoid hardcoding in prose.
  */
 export const THS_DISCOUNT = '25%';
 export const ROVER_DISCOUNT = '$20';
@@ -10,8 +11,8 @@ export const VISIBLE_DISCOUNT = '$20';
 export const PF_DISCOUNT = '$1';
 
 export interface NavLink {
-  label: string; // e.g. "Previous Guide" or "Next Step"
-  title: string; // e.g. "Landing Your First Sit"
+  label: string;
+  title: string;
   href: string;
 }
 
@@ -36,7 +37,7 @@ export interface Review {
   petType: PetType[];
   imageUrl?: string;
   sitDescription: string;
-  body?: string;
+  body?: string | ReactNode;
   sortOrder?: number;
   prevLink?: NavLink;
   nextLink?: NavLink;
@@ -48,7 +49,7 @@ export interface BlogPost {
   title: string;
   subtitle?: string;
   excerpt: string;
-  body: string;
+  body: string | ReactNode;
   date: string;
   category: string;
   imageUrl: string;
@@ -59,7 +60,6 @@ export interface BlogPost {
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqIds?: string[];
-  // SEO Configuration
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string[];
@@ -71,7 +71,7 @@ export interface TravelGuide {
   title: string;
   location: string;
   excerpt: string;
-  body: string;
+  body: string | ReactNode;
   imageUrl: string;
   date?: string;
   sortOrder?: number;
@@ -86,7 +86,7 @@ export interface ResourceItem {
   name: string;
   subtitle?: string;
   description: string;
-  body: string;
+  body: string | ReactNode;
   date?: string;
   discountText?: string;
   link: string;
@@ -97,7 +97,6 @@ export interface ResourceItem {
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqIds?: string[];
-  // SEO Configuration
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string[];

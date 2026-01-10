@@ -9,7 +9,7 @@ import {
 import { content as thsContent } from './articles/trusted-housesitters-review';
 import { content as roverContent } from './articles/rover-review';
 import { content as visibleContent } from './articles/visible-review';
-import { content as planetFitnessContent } from './articles/planet-fitness-review';
+import { content as planetFitnessContent } from './articles/toolkit-planet-fitness';
 
 export const RESOURCES: ResourceCategory[] = [
   {
@@ -47,6 +47,9 @@ export const RESOURCES: ResourceCategory[] = [
           'trusted-housesitters discount code',
           'free accommodation travel',
           'pet sitting world',
+          'housesitting app review',
+          'how to travel for free',
+          'nomad housing hacks',
         ],
       },
       {
@@ -77,6 +80,8 @@ export const RESOURCES: ResourceCategory[] = [
           'dog walking services',
           'rover vs trustedhousesitters',
           'side hustle travel',
+          'pet care discounts',
+          'earn money housesitting',
         ],
       },
       {
@@ -100,13 +105,15 @@ export const RESOURCES: ResourceCategory[] = [
           href: '/resources/planet-fitness-review',
         },
         seoTitle: 'Visible Wireless Review: Best Unlimited Plan for Travelers',
-        seoDescription: `Personal review of Visible Wireless for nomadic life. Get your first month of unlimited data for just ${VISIBLE_DISCOUNT}.`,
+        seoDescription: `Personal review of Visible Wireless for nomadic life. Get your first month of unlimited data for just ${VISIBLE_DISCOUNT} with referral code.`,
         seoKeywords: [
           'visible wireless nomad review',
           'unlimited hotspot for travelers',
           'best nomad phone plan',
           'visible mobile discount',
           'remote work internet',
+          'mobile hotspot for digital nomads',
+          'travel data hacks',
         ],
       },
       {
@@ -130,13 +137,15 @@ export const RESOURCES: ResourceCategory[] = [
           href: '/resources/trusted-housesitters-review',
         },
         seoTitle: 'Planet Fitness Review: Essential for Full-Time Travel',
-        seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${PF_DISCOUNT} down.`,
+        seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${PF_DISCOUNT} down with referral code.`,
         seoKeywords: [
           'planet fitness traveler review',
           'gym membership for nomads',
           'planet fitness showers',
           'travel health and fitness',
           'gym discount code',
+          'cross-country gym access',
+          'nomad wellness',
         ],
       },
     ],
