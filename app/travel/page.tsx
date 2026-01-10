@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { TRAVEL_GUIDES, SITE_STATS } from '../../constants';
 import CommonCard from '../../components/CommonCard';
 import { MapPinIcon, ChevronDownIcon, CompassIcon } from '../../components/Icons';
@@ -9,9 +10,13 @@ export default function TravelPage() {
     <>
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=2400"
             alt="Travel"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
           />
           <div className="overlay-hero" />
         </div>

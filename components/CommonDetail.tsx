@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { type ReactNode } from 'react';
 import { ArrowLeftIcon, ShieldCheckIcon, ExternalLinkIcon } from './Icons';
 import FAQSection from './FAQSection';
@@ -52,7 +53,15 @@ const CommonDetail = ({
       {image && (
         <div className="detail-hero-section">
           <div className="media-viewport">
-            <img src={image} alt={title} className="detail-hero-image" />
+            <Image
+              src={image}
+              alt={title}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 900px"
+              className="detail-hero-image"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
 
           {onBack && (

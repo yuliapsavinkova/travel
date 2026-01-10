@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ALL_RESOURCES } from '../../constants';
 import CommonCard from '../../components/CommonCard';
@@ -19,9 +20,13 @@ export default function ResourcesPage() {
     <>
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=2400"
             alt="Resources"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
           />
           <div className="overlay-hero" />
         </div>

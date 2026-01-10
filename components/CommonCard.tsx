@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { type ReactNode } from 'react';
 import { ArrowUpRightIcon, ExternalLinkIcon } from './Icons';
 
@@ -35,7 +36,14 @@ const CommonCard: React.FC<CommonCardProps> = ({
       <div className="glass-card">
         {image && (
           <div className="card-image-viewport media-viewport">
-            <img src={image} alt={title} loading="lazy" className="card-main-image" />
+            <Image
+              src={image}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+              className="card-main-image"
+              style={{ objectFit: 'cover' }}
+            />
             {badge && <div className="card-badge glass-pill">{badge}</div>}
             <div className="card-image-overlay" />
           </div>
