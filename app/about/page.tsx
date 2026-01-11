@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Learn more about my journey as a solo female housesitter and how I travel intentionally across the United States.',
   alternates: {
-    canonical: '/about',
+    canonical: 'https://sitterjourney.com/about',
   },
 };
 

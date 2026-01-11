@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Common questions about house sitting, TrustedHousesitters, and traveling full-time.',
   alternates: {
-    canonical: '/faq',
+    canonical: 'https://sitterjourney.com/faq',
   },
 };
 

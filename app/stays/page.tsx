@@ -1,9 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import type { Metadata } from 'next';
 import CommonCard from '../../components/CommonCard';
 import { ChevronDownIcon, MapPinIcon } from '../../components/Icons';
 import { REVIEWS } from '../../constants';
+
+export const metadata: Metadata = {
+  title: 'My House Sitting Stays | Sitter Journey',
+  description: 'Explore the homes and pets I have cared for across the United States.',
+  alternates: {
+    canonical: 'https://sitterjourney.com/stays',
+  },
+};
 
 export default function StaysPage() {
   return (

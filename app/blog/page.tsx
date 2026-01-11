@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'The Sitter Blog: Expert Tips & House Sitting Stories | Sitter Journey',
   description: 'Practical guides on landing your first house sit and solo travel tips.',
   alternates: {
-    canonical: '/blog',
+    canonical: 'https://sitterjourney.com/blog',
   },
 };
 

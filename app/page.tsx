@@ -1,8 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { ContactTrigger } from '../components/ClientTriggers';
 import { ChevronDownIcon, GlobeIcon, CompassIcon, MapPinIcon, StarIcon } from '../components/Icons';
 import { SITE_STATS } from '../constants';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://sitterjourney.com/',
+  },
+};
 
 export default function HomePage() {
   return (
@@ -62,7 +69,7 @@ export default function HomePage() {
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
             I have visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states
-            while house sitting.
+            while house sitting professionally.
           </p>
 
           <div className="grid-standard">

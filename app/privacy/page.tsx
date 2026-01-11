@@ -1,6 +1,15 @@
+import type { Metadata } from 'next';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
 import { privacyPolicyContent } from '../../data/articles/privacy-policy';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Sitter Journey',
+  description: 'Learn how Sitter Journey protects your personal information.',
+  alternates: {
+    canonical: 'https://sitterjourney.com/privacy',
+  },
+};
 
 export default function PrivacyPage() {
   return (

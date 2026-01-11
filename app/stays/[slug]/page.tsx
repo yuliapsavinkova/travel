@@ -22,7 +22,7 @@ export async function generateMetadata({
     title: `Housesitting in ${stay.location} | Sitter Journey`,
     description: stay.sitDescription,
     alternates: {
-      canonical: `/stays/${stay.slug}`,
+      canonical: `https://sitterjourney.com/stays/${stay.slug}`,
     },
     openGraph: {
       title: `Housesitting in ${stay.location}`,

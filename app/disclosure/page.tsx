@@ -1,6 +1,16 @@
+import type { Metadata } from 'next';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
 import { disclosureContent } from '../../data/articles/disclosure';
+
+export const metadata: Metadata = {
+  title: 'Referral & Affiliate Disclosure | Sitter Journey',
+  description:
+    'Transparency regarding resource links and affiliate relationships on Sitter Journey.',
+  alternates: {
+    canonical: 'https://sitterjourney.com/disclosure',
+  },
+};
 
 export default function DisclosurePage() {
   return (

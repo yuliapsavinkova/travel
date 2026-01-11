@@ -4,6 +4,15 @@ import Image from 'next/image';
 import { TRAVEL_GUIDES, SITE_STATS } from '../../constants';
 import CommonCard from '../../components/CommonCard';
 import { MapPinIcon, ChevronDownIcon, CompassIcon } from '../../components/Icons';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Travel Guides & Destinations | Sitter Journey',
+  description: 'Explore guides and stories from the countries I have visited.',
+  alternates: {
+    canonical: 'https://sitterjourney.com/travel',
+  },
+};
 
 export default function TravelPage() {
   return (

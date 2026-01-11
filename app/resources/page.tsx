@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
   alternates: {
-    canonical: '/resources',
+    canonical: 'https://sitterjourney.com/resources',
   },
 };
 
