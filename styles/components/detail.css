@@ -14,6 +14,7 @@
   display: block;
 }
 
+/* Constrain header content to match the hero image width */
 .detail-header-area .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -71,4 +72,13 @@
 .glass-pill:hover .cta-icon {
   transform: translate(3px, -3px);
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .detail-header-area {
+    padding-top: 120px;
+  }
+  .detail-layout-container {
+    padding: var(--s-5) var(--s-4);
+  }
 }

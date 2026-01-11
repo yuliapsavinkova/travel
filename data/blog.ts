@@ -5,8 +5,43 @@ import { content as worthItContent } from './articles/is-trusted-housesitters-wo
 import { content as mathContent } from './articles/can-you-really-travel-for-free-house-sitting-math';
 import { content as costLevelsContent } from './articles/trusted-housesitters-membership-cost-levels';
 import { content as rejectionReasonsContent } from './articles/why-trusted-housesitters-applications-get-rejected';
+import { content as reportingProcessContent } from './articles/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it';
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: '7',
+    slug: 'trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+    title: 'What Happens If a Sit Goes Wrong and How to Report It',
+    excerpt:
+      'Understand the reporting process, common triggers for disputes, and how to protect yourself through documentation.',
+    date: 'February 2026',
+    category: 'Expertise',
+    location: 'Safety',
+    sortOrder: -1,
+    imageUrl:
+      'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&q=80&w=1200',
+    ctaLabel: 'Claim 25% Off Membership',
+    ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+    body: reportingProcessContent,
+    faqIds: ['ths-rejection-common', 'ths-owner-priorities', 'ths-reviews-starting'],
+    prevLink: { label: 'Go to', title: 'Blog', href: '/blog' },
+    nextLink: {
+      label: 'Next',
+      title: 'Handling Rejections',
+      href: '/blog/why-trusted-housesitters-applications-get-rejected',
+    },
+    seoTitle: 'What Happens If a Sit Goes Wrong and how to report it | Sitter Journey',
+    seoDescription:
+      'A clear guide to the Trusted-Housesitters reporting process and dispute resolution. Learn how to handle expectation mismatches and pet care concerns.',
+    seoKeywords: [
+      'trusted housesitters reported sit',
+      'ths dispute resolution',
+      'house sitting safety tips',
+      'what happens if homeowner cancels',
+      'pet sitting problems',
+      'house sitting boundaries',
+    ],
+  },
   {
     id: '5',
     slug: 'why-trusted-housesitters-applications-get-rejected',
@@ -25,15 +60,15 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-rejection-personal', 'ths-rejection-fix', 'ths-rejection-common'],
     prevLink: {
       label: 'Previous',
-      title: 'Membership Costs',
-      href: '/blog/trusted-housesitters-membership-cost-levels',
+      title: 'Reporting Process',
+      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
     nextLink: {
       label: 'Next',
       title: 'Your First Sit',
       href: '/blog/how-to-get-your-first-house-sit-no-reviews',
     },
-    seoTitle: 'Why Trusted-Housesitters Applications Get Rejected | Rejection Tips',
+    seoTitle: 'Why Trusted-Housesitters Applications Get Rejected | Sitter Journey',
     seoDescription:
       'Discover why Trusted-Housesitters applications get declined. Learn the psychological reasons owners pick sitters and how to beat the 5-app rule.',
     seoKeywords: [
@@ -221,11 +256,7 @@ export const BLOG_POSTS: BlogPost[] = [
       title: 'Free Travel Math',
       href: '/blog/can-you-really-travel-for-free-house-sitting-math',
     },
-    nextLink: {
-      label: 'Next',
-      title: 'Handling Rejections',
-      href: '/blog/why-trusted-housesitters-applications-get-rejected',
-    },
+    nextLink: { label: 'Next', title: 'Blog', href: '/blog' },
     seoTitle: 'TrustedHousesitters Membership Cost & Tiers Explained',
     seoDescription:
       'Compare Basic, Standard, and Premium sitter tiers on TrustedHousesitters. Learn about accident protection and cancellation insurance.',

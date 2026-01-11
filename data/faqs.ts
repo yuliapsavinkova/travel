@@ -2,6 +2,36 @@ import { FAQItem } from '../types';
 
 export const MASTER_FAQS: FAQItem[] = [
   {
+    id: 'ths-reporting-safety',
+    question: 'What should I do if I feel unsafe or the home is not as described?',
+    answer:
+      'If you ever feel unsafe, document the issues with photos immediately and contact TrustedHousesitters support via their member safety line. Their team can help mediate or advise on next steps if the home condition poses a genuine risk.',
+    link: {
+      label: 'View Safety Guide',
+      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+    },
+  },
+  {
+    id: 'ths-reporting-documentation',
+    question: 'How do I document a problem during a sit?',
+    answer:
+      'Take clear photos or videos of the issue, and ensure all critical communication with the homeowner happens via the in-app messaging system. This creates a timestamped record that TrustedHousesitters can use if a formal report is ever filed.',
+    link: {
+      label: 'Documentation Tips',
+      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+    },
+  },
+  {
+    id: 'ths-reporting-resolution',
+    question: 'Can a sit issue be resolved without a formal report?',
+    answer:
+      'Yes, most issues are resolved through direct, polite communication. If a misunderstanding occurs, referring back to the original listing or your initial messages often clears things up without involving platform support.',
+    link: {
+      label: 'Conflict Resolution',
+      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+    },
+  },
+  {
     id: 'ths-rejection-personal',
     question: 'Should I take a Trusted-Housesitters rejection personally?',
     answer:

@@ -9,6 +9,8 @@
   max-width: var(--w-prose);
   margin: 0 auto;
   font-weight: 400;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* 
@@ -358,5 +360,15 @@
   .prose-breakout {
     width: 100%;
     margin-left: 0 !important;
+  }
+  .financial-flip-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+  .financial-flip-grid::after {
+    display: none;
+  }
+  .financial-flip-col .amount {
+    font-size: 2rem;
   }
 }

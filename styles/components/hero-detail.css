@@ -80,7 +80,8 @@
 @media (max-width: 768px) {
   .detail-hero-section {
     aspect-ratio: 16 / 9;
-    width: calc(100% - var(--s-4));
+    width: calc(100% - var(--s-4) * 2);
+    min-height: auto;
   }
   .hero-glass-link span {
     display: none;

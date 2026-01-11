@@ -9,7 +9,7 @@ import {
 import { content as thsContent } from './articles/trusted-housesitters-review';
 import { content as roverContent } from './articles/rover-review';
 import { content as visibleContent } from './articles/visible-review';
-import { content as planetFitnessContent } from './articles/toolkit-planet-fitness';
+import { content as planetFitnessContent } from './articles/planet-fitness-review';
 
 export const RESOURCES: ResourceCategory[] = [
   {
