@@ -6,9 +6,9 @@ export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
  * GLOBAL CONFIGURATION CONSTANTS
  */
 export const THS_DISCOUNT = '25%';
-export const ROVER_DISCOUNT = '$20';
 export const VISIBLE_DISCOUNT = '$20';
 export const PF_DISCOUNT = '$1';
+export const ROVER_DISCOUNT = '$20';
 
 export interface NavLink {
   label: string;

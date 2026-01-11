@@ -24,13 +24,13 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {ROVER_DISCOUNT} Discount</h3>
-      <p>
-        Ready to start? Use this referral link to claim your {ROVER_DISCOUNT} credit toward your
-        first booking on the platform.
+      <h3>Claim Your {ROVER_DISCOUNT} Credit</h3>
+      <p style={{ marginBottom: 'var(--s-4)', fontSize: '1.1rem', fontStyle: 'italic' }}>
+        Sign up to become a sitter on Rover and earn money caring for dogs and cats in your
+        neighborhood. You'll also get a {ROVER_DISCOUNT} credit to book a sitter for your own pets.
       </p>
       <a
-        href="https://www.rover.com/sit/yulias92191"
+        href="https://www.rover.com/ambas-refer-a-friend/Q93GankN"
         target="_blank"
         rel="noopener noreferrer"
         className="btn-gold"

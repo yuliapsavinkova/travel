@@ -2,9 +2,9 @@ import {
   ResourceCategory,
   ResourceItem,
   THS_DISCOUNT,
-  ROVER_DISCOUNT,
   VISIBLE_DISCOUNT,
   PF_DISCOUNT,
+  ROVER_DISCOUNT,
 } from '../types';
 import { content as thsContent } from './articles/trusted-housesitters-review';
 import { content as roverContent } from './articles/rover-review';
@@ -57,11 +57,11 @@ export const RESOURCES: ResourceCategory[] = [
         slug: 'rover-review',
         name: 'Rover Review',
         subtitle: '(Written by an active sitter)',
-        description: 'For finding local pet care or filling gaps between sits.',
+        description: `Earn money as a pet sitter and get a ${ROVER_DISCOUNT} credit for your own pets.`,
         date: 'January 2026',
         body: roverContent,
-        discountText: `${ROVER_DISCOUNT} Off`,
-        link: 'https://www.rover.com/sit/yulias92191',
+        discountText: `${ROVER_DISCOUNT} Credit`,
+        link: 'https://www.rover.com/ambas-refer-a-friend/Q93GankN',
         icon: 'heart',
         imageUrl:
           'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
@@ -72,16 +72,16 @@ export const RESOURCES: ResourceCategory[] = [
           href: '/resources/trusted-housesitters-review',
         },
         nextLink: { label: 'Next', title: 'Visible', href: '/resources/visible-review' },
-        seoTitle: `Rover Review 2026: Get ${ROVER_DISCOUNT} Off Your First Pet Stay`,
-        seoDescription: `Honest Rover review by an active sitter. Use this referral link to get a ${ROVER_DISCOUNT} credit towards your first pet sitting booking.`,
+        seoTitle: `Rover Review 2026: Claim Your ${ROVER_DISCOUNT} Credit Today`,
+        seoDescription: `Honest Rover review by an active sitter. Sign up to earn money as a sitter and get a ${ROVER_DISCOUNT} credit for your own pet care.`,
         seoKeywords: [
           'rover app review',
           'pet sitting promo code',
           'dog walking services',
-          'rover vs trustedhousesitters',
-          'side hustle travel',
-          'pet care discounts',
+          'rover referral link',
           'earn money housesitting',
+          'rover sitter credit',
+          'how to become a pet sitter',
         ],
       },
       {

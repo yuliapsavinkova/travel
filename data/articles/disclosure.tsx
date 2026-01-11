@@ -56,7 +56,7 @@ export const disclosureContent = (
         <li>
           <strong>
             <a
-              href="https://www.rover.com/sit/yulias92191"
+              href="https://www.rover.com/ambas-refer-a-friend/Q93GankN"
               target="_blank"
               rel="noopener noreferrer"
             >
