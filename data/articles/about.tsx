@@ -1,11 +1,12 @@
 import React from 'react';
 
-export const intro =
-  'Hi, I’m Yulia. I travel full-time across the globe, living a lifestyle that blends ' +
-  'house sitting, minimalism, and intentional travel.';
-
 export const body = (
   <>
+    <p className="prose-lead">
+      Hi, I’m Yulia. I travel full-time across the globe, living a lifestyle that blends house
+      sitting, minimalism, and intentional travel.
+    </p>
+
     <p>
       I focus on long-term house sits, often staying for a month or more at a time. This allows me
       to fully immerse myself in new surroundings without the stress of constant moving. For me,

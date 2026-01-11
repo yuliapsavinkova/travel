@@ -4,7 +4,7 @@ import { MailIcon } from '../../components/Icons';
 import { SITE_CONFIG } from '../../constants';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
-import { intro as aboutIntro, body as aboutBody } from '../../data/articles/about';
+import { body as aboutBody } from '../../data/articles/about';
 
 export const metadata: Metadata = {
   title: 'About Yulia: Full-Time Housesitter & Traveler | Sitter Journey',
@@ -25,8 +25,6 @@ export default function AboutPage() {
       nextLink={{ label: 'Go to', title: 'Resources', href: '/resources' }}
     >
       <div className="flex-col">
-        <p className="prose-lead">{aboutIntro}</p>
-
         <ContentRenderer content={aboutBody} />
 
         <div
