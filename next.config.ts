@@ -13,7 +13,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Individual page redirects
+      // --- Individual page redirects ---
+      {
+        source: '/blog/ths-reporting-process',
+        destination:
+          '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+        permanent: true,
+      },
       {
         source: '/resources/toolkit-planet-fitness',
         destination: '/resources/planet-fitness-review',
@@ -50,7 +56,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // Folder-level redirects
+      // --- Folder-level redirects ---
       {
         source: '/journal/:path*',
         destination: '/blog/:path*',
@@ -62,10 +68,34 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // Redirect homepage variants to canonical (optional)
+      // --- Homepage / root normalization ---
+      // redirect www variants to canonical HTTPS non-www for clean Analytics data
       {
-        source: '/sitterjourney.com',
-        destination: '/',
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.sitterjourney.com',
+          },
+        ],
+        destination: 'https://sitterjourney.com/:path*',
+        permanent: true,
+      },
+      // redirect HTTP to HTTPS specifically for the main domain
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'sitterjourney.com',
+          },
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        destination: 'https://sitterjourney.com/:path*',
         permanent: true,
       },
     ];
