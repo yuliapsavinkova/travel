@@ -1,5 +1,5 @@
 import React from 'react';
-import { VISIBLE_DISCOUNT } from '../../types';
+import { VISIBLE_DISCOUNT, VISIBLE_LINK } from '../../types';
 
 export const content = (
   <>
@@ -23,19 +23,18 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {VISIBLE_DISCOUNT} Discount</h3>
+      <h3>Claim Your {VISIBLE_DISCOUNT} Offer</h3>
       <p>
-        Ready to start? Use this referral link to claim your {VISIBLE_DISCOUNT} credit and get your
-        first month of unlimited data for just $5.
+        Ready to start? Use this referral link to {VISIBLE_DISCOUNT} and get your first month of
+        unlimited data for just $5.
       </p>
       <a
-        href="https://www.visible.com/get/?66LWM29"
+        href={VISIBLE_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-gold"
-        style={{ minWidth: '280px' }}
+        className="btn-gold btn-wide"
       >
-        Claim {VISIBLE_DISCOUNT} Discount Link
+        Discount: {VISIBLE_DISCOUNT}
       </a>
     </div>
   </>

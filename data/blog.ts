@@ -256,7 +256,11 @@ export const BLOG_POSTS: BlogPost[] = [
       title: 'Free Travel Math',
       href: '/blog/can-you-really-travel-for-free-house-sitting-math',
     },
-    nextLink: { label: 'Next', title: 'Blog', href: '/blog' },
+    nextLink: {
+      label: 'Previous',
+      title: 'Reporting Process',
+      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+    },
     seoTitle: 'TrustedHousesitters Membership Cost & Tiers Explained',
     seoDescription:
       'Compare Basic, Standard, and Premium sitter tiers on TrustedHousesitters. Learn about accident protection and cancellation insurance.',

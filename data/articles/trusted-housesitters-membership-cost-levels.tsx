@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleImage from '../../components/ArticleImage';
-import { THS_DISCOUNT } from '../../types';
+import { THS_DISCOUNT, THS_LINK } from '../../types';
 
 export const content = (
   <>
@@ -42,17 +42,10 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Join with a Discount</h3>
-      <p>
-        Ready to choose your tier? Use my referral link to get {THS_DISCOUNT} off your first year.
-      </p>
-      <a
-        href="https://trustedhousesitters.com/refer/raf943607"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-      >
-        Claim your {THS_DISCOUNT} Discount
+      <h3>Join with {THS_DISCOUNT}</h3>
+      <p>Ready to choose your tier? Use my referral link to get {THS_DISCOUNT} your first year.</p>
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {THS_DISCOUNT}
       </a>
     </div>
   </>

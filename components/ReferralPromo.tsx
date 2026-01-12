@@ -1,4 +1,4 @@
-import { GLOBAL_STRINGS } from '../constants';
+import { GLOBAL_STRINGS, THS_LINK, THS_DISCOUNT } from '../constants';
 import { ExternalLinkIcon } from './Icons';
 
 /**
@@ -26,13 +26,13 @@ const ReferralPromo = () => {
         </p>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <a
-            href={GLOBAL_STRINGS.travelPromoLink}
+            href={THS_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold"
-            style={{ gap: '12px', minWidth: '240px' }}
+            className="btn-gold btn-wide"
+            style={{ gap: '12px' }}
           >
-            {GLOBAL_STRINGS.travelPromoBtn}
+            Discount: {THS_DISCOUNT}
             <ExternalLinkIcon size={18} />
           </a>
         </div>

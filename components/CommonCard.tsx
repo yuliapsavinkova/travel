@@ -31,6 +31,13 @@ const CommonCard: React.FC<CommonCardProps> = ({
   const internalPath = slug ? (slug.startsWith('/') ? slug : `/${slug}`) : '';
   const label = actionLabel || 'Explore';
 
+  // Strictly enforce "Discount: [Value]" pattern
+  const formattedCtaLabel = ctaLabel
+    ? ctaLabel.startsWith('Discount:')
+      ? ctaLabel
+      : `Discount: ${ctaLabel.replace(/Offer: |Get: |Claim: |Claim your |Your /gi, '').trim()}`
+    : 'Claim Discount';
+
   return (
     <div className="card-wrapper">
       <div className="glass-card">
@@ -70,13 +77,9 @@ const CommonCard: React.FC<CommonCardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="subtle-referral-link"
-                aria-label={ctaLabel || 'Claim Offer'}
+                aria-label={formattedCtaLabel}
               >
-                <span className="serif-italic">
-                  {ctaLabel
-                    ? `Offer: ${ctaLabel.replace('Get: ', '').replace('Offer: ', '')}`
-                    : 'Claim Discount'}
-                </span>
+                <span className="serif-italic">{formattedCtaLabel}</span>
                 <ExternalLinkIcon size={14} className="cta-icon" />
               </a>
             </div>

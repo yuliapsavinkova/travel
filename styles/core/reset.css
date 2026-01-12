@@ -9,6 +9,11 @@ html {
   cursor: crosshair;
 }
 
+/* Fix for fixed header obscuring anchor targets */
+[id] {
+  scroll-margin-top: 140px;
+}
+
 /* Explicitly force pointer for interactive elements and their children to override global crosshair */
 a,
 a *,

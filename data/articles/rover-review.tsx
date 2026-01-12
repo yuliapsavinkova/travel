@@ -1,5 +1,5 @@
 import React from 'react';
-import { ROVER_DISCOUNT } from '../../types';
+import { ROVER_DISCOUNT, ROVER_LINK } from '../../types';
 
 export const content = (
   <>
@@ -24,19 +24,13 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {ROVER_DISCOUNT} Credit</h3>
+      <h3>Claim Your {ROVER_DISCOUNT}</h3>
       <p style={{ marginBottom: 'var(--s-4)', fontSize: '1.1rem', fontStyle: 'italic' }}>
-        Sign up to become a sitter on Rover and earn money caring for dogs and cats in your
-        neighborhood. You'll also get a {ROVER_DISCOUNT} credit to book a sitter for your own pets.
+        "Sign up to become a sitter on Rover and earn money caring for dogs and cats in your
+        neighborhood. You'll also get a {ROVER_DISCOUNT} to book a sitter for your own pets."
       </p>
-      <a
-        href="https://www.rover.com/ambas-refer-a-friend/Q93GankN"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-        style={{ minWidth: '280px' }}
-      >
-        Claim {ROVER_DISCOUNT} Discount Link
+      <a href={ROVER_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {ROVER_DISCOUNT}
       </a>
     </div>
   </>

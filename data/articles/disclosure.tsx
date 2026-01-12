@@ -1,4 +1,5 @@
 import React from 'react';
+import { ROVER_LINK, THS_LINK, VISIBLE_LINK, PF_LINK } from '../../types';
 
 export const disclosureContent = (
   <>
@@ -42,11 +43,7 @@ export const disclosureContent = (
       <ul>
         <li>
           <strong>
-            <a
-              href="https://trustedhousesitters.com/refer/raf943607"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
               TrustedHousesitters
             </a>
             :
@@ -55,11 +52,7 @@ export const disclosureContent = (
         </li>
         <li>
           <strong>
-            <a
-              href="https://www.rover.com/ambas-refer-a-friend/Q93GankN"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={ROVER_LINK} target="_blank" rel="noopener noreferrer">
               Rover
             </a>
             :
@@ -68,11 +61,7 @@ export const disclosureContent = (
         </li>
         <li>
           <strong>
-            <a
-              href="https://www.visible.com/get/?66LWM29"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={VISIBLE_LINK} target="_blank" rel="noopener noreferrer">
               Visible
             </a>
             :
@@ -81,11 +70,7 @@ export const disclosureContent = (
         </li>
         <li>
           <strong>
-            <a
-              href="https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={PF_LINK} target="_blank" rel="noopener noreferrer">
               Planet Fitness
             </a>
             :

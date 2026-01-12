@@ -1,5 +1,5 @@
 import React from 'react';
-import { PF_DISCOUNT } from '../../types';
+import { PF_DISCOUNT, PF_LINK } from '../../types';
 
 export const content = (
   <>
@@ -23,19 +23,13 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {PF_DISCOUNT} Down Discount</h3>
+      <h3>Claim Your {PF_DISCOUNT} Offer</h3>
       <p>
-        Ready to maintain your health on the road? Use this referral link to join for just{' '}
-        {PF_DISCOUNT} down and start your fitness journey today.
+        Ready to maintain your health on the road? Use this referral link to join for {PF_DISCOUNT}{' '}
+        and start your fitness journey today.
       </p>
-      <a
-        href="https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-        style={{ minWidth: '280px' }}
-      >
-        Claim {PF_DISCOUNT} Discount Link
+      <a href={PF_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {PF_DISCOUNT}
       </a>
     </div>
   </>

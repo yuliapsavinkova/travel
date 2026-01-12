@@ -1,6 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import ArticleImage from '../../components/ArticleImage';
-import { THS_DISCOUNT } from '../../types';
+import { THS_DISCOUNT, THS_LINK } from '../../types';
 
 export const content = (
   <>
@@ -100,6 +101,14 @@ export const content = (
       Most people quit too early because they assume silence means failure. It doesn’t.
     </p>
 
+    <p>
+      If you're seeing rejections, check my guide on the:{' '}
+      <Link href="/blog/why-trusted-housesitters-applications-get-rejected">
+        top reasons applications get rejected
+      </Link>{' '}
+      to understand what's in your control.
+    </p>
+
     <h2>Step 6: Once you get one sit, momentum kicks in</h2>
     <p>
       After my first sit, I received my first review, homeowners started responding more, and longer
@@ -125,19 +134,13 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Get Started with a Discount</h3>
+      <h3>Get Started with {THS_DISCOUNT}</h3>
       <p>
         Ready to build your profile and start sitting? You can get a massive head start on your
-        first year of travel with a special offer.
+        first year of travel with this special offer.
       </p>
-      <a
-        href="https://trustedhousesitters.com/refer/raf943607"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-        style={{ minWidth: '280px' }}
-      >
-        Claim your {THS_DISCOUNT} Discount
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {THS_DISCOUNT}
       </a>
     </div>
   </>

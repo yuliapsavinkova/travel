@@ -1,5 +1,5 @@
 import React from 'react';
-import { THS_DISCOUNT } from '../../types';
+import { THS_DISCOUNT, THS_LINK } from '../../types';
 
 export const content = (
   <>
@@ -121,18 +121,13 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Start Your Redesign</h3>
+      <h3>Start Your Journey</h3>
       <p>
-        If you're ready to stop paying for hotels and start sitting, use my referral link to save{' '}
+        If you're ready to stop paying for hotels and start sitting, use my referral link to get{' '}
         {THS_DISCOUNT} on your membership.
       </p>
-      <a
-        href="https://trustedhousesitters.com/refer/raf943607"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-      >
-        Claim {THS_DISCOUNT} Discount Link
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {THS_DISCOUNT}
       </a>
     </div>
   </>

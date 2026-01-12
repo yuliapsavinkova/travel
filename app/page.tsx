@@ -47,10 +47,10 @@ export default function HomePage() {
             I travel full time. I share my personal journey as a house sitter and solo traveler.
           </p>
           <div className="hero-button-group">
-            <Link href="/blog" className="btn-gold">
+            <Link href="/blog#archive" className="btn-gold">
               Sitter Blog
             </Link>
-            <Link href="/resources" className="secondary-btn">
+            <Link href="/resources#archive" className="secondary-btn">
               Resources
             </Link>
           </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
             }}
           >
             <ContactTrigger label="Contact" className="btn-gold" />
-            <Link href="/blog" className="secondary-btn">
+            <Link href="/blog#archive" className="secondary-btn">
               Read the Blog
             </Link>
           </div>

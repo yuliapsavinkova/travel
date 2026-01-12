@@ -77,7 +77,7 @@ export default function ResourcesPage() {
               slug={`/resources/${item.slug}`}
               actionLabel="Details"
               ctaLink={item.link}
-              ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit'}
+              ctaLabel={item.discountText ? `Discount: ${item.discountText}` : 'Visit'}
             />
           ))}
         </div>

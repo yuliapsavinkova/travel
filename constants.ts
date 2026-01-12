@@ -1,4 +1,6 @@
-import { SiteStrings, THS_DISCOUNT } from './types';
+// Re-export constants from types to ensure they are available through this barrel file
+import { SiteStrings, THS_DISCOUNT, THS_LINK } from './types';
+export { THS_DISCOUNT, THS_LINK };
 import { RESOURCES } from './data/resources';
 
 export * from './data/resources';
@@ -47,13 +49,11 @@ export const SITE_CONFIG = {
   },
 };
 
-const thsResource = RESOURCES[0].items[0];
-
 export const GLOBAL_STRINGS: SiteStrings = {
   resourcesSectionTitle: 'Resources',
   resourcesSectionDescription: 'The tools and services I use while traveling full-time.',
   travelPromoTitle: 'Join Me',
-  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount code to get ${THS_DISCOUNT} off your membership.`,
-  travelPromoLink: thsResource.link,
-  travelPromoBtn: `Get ${THS_DISCOUNT} Discount`,
+  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount link to get ${THS_DISCOUNT} your membership.`,
+  travelPromoLink: THS_LINK,
+  travelPromoBtn: `Get ${THS_DISCOUNT} Now`,
 };

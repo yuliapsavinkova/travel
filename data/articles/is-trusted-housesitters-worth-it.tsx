@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import { THS_DISCOUNT } from '../../types';
+import { THS_DISCOUNT, THS_LINK } from '../../types';
 
 export const content = (
   <>
     <p className="prose-lead">
       If you love pets and want to travel at no cost, TrustedHousesitters (THS) is one of the few
-      platforms that can actually make it happen.
-      <strong>But here is the catch:</strong> House sitting doesn’t make flights free—it just
-      eliminates the single biggest cost of travel: accommodation.
+      platforms that can actually make it happen. <strong>But here is the catch:</strong> House
+      sitting doesn’t make flights free—it just eliminates the single biggest cost of travel:
+      accommodation.
     </p>
 
     <h2>Is it actually legit?</h2>
@@ -71,7 +71,7 @@ export const content = (
     </ul>
     <p>
       Everything after those first 2 nights is net savings. Even for one short trip a year, the
-      platform usually pays for itself. If you're curious about specific plans, read my guide on{' '}
+      platform usually pays for itself. If you're curious about specific plans, read my guide on:{' '}
       <Link href="/blog/trusted-housesitters-membership-cost-levels">
         membership cost and different levels
       </Link>
@@ -100,18 +100,13 @@ export const content = (
     </div>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Join with a Discount</h3>
+      <h3>Join with {THS_DISCOUNT}</h3>
       <p>
-        If you're ready to start your journey, don't pay full price. Use my verified link to claim
-        your {THS_DISCOUNT} discount on any annual sitter membership.
+        If you're ready to start your journey, don't pay full price. Use my verified link to get
+        {THS_DISCOUNT} on any annual sitter membership.
       </p>
-      <a
-        href="https://trustedhousesitters.com/refer/raf943607"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-      >
-        Claim {THS_DISCOUNT} Discount Link
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {THS_DISCOUNT}
       </a>
     </div>
   </>

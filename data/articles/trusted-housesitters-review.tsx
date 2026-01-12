@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { THS_DISCOUNT } from '../../types';
+import { THS_DISCOUNT, THS_LINK } from '../../types';
 
 export const content = (
   <>
@@ -22,7 +22,7 @@ export const content = (
       using this service, I didn’t pay for any accommodations for an entire year I traveled
       full-time across the US. Even at a very low estimate of one hundred dollars per night for a
       hotel, that adds up to thirty-six thousand dollars in annual savings. You can read my full
-      breakdown of the math in my guide:{' '}
+      breakdown of the math in my guide:
       <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
         Is TrustedHousesitters worth it for sitters?
       </Link>
@@ -42,19 +42,13 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {THS_DISCOUNT} Membership Discount</h3>
+      <h3>Claim Your {THS_DISCOUNT} Sitter Membership</h3>
       <p>
-        Ready to start your own journey? Use this referral link to claim your {THS_DISCOUNT}{' '}
-        discount. The savings apply to any of their annual membership tiers.
+        Ready to start your own journey? Use this referral link to get {THS_DISCOUNT} your annual
+        membership. The savings apply to any of their annual membership tiers.
       </p>
-      <a
-        href="https://trustedhousesitters.com/refer/raf943607"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-        style={{ minWidth: '280px' }}
-      >
-        Claim {THS_DISCOUNT} Discount Link
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {THS_DISCOUNT}
       </a>
     </div>
   </>

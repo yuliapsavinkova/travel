@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { THS_DISCOUNT } from '../../types';
+import { THS_DISCOUNT, THS_LINK } from '../../types';
 
 export const content = (
   <>
@@ -18,7 +18,7 @@ export const content = (
     <ul>
       <li>
         <strong>Limited Reviews:</strong> Without verified proof on the platform, you are seen as a
-        higher risk. Focus on building your base with local assignments first. Read my
+        higher risk. Focus on building your base with local assignments first. Read my:{' '}
         <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
           guide for landing your first sit
         </Link>
@@ -30,7 +30,7 @@ export const content = (
       </li>
       <li>
         <strong>Profile Quality:</strong> If your photos are not clear or your bio feels generic,
-        homeowners will likely pass you over. You can fix this immediately using my
+        homeowners will likely pass you over. You can fix this immediately using my:{' '}
         <Link href="/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits">
           profile mastery tips
         </Link>
@@ -78,17 +78,11 @@ export const content = (
     <div className="prose-accent-box variant-cta">
       <h3>Ready to Build a Better Profile?</h3>
       <p>
-        Don't let the rejections stop your travel journey. Use my discount to join and start
-        applying smarter, not harder.
+        Don't let the rejections stop your travel journey. Use my discount to join and get
+        {THS_DISCOUNT} your membership.
       </p>
-      <a
-        href="https://trustedhousesitters.com/refer/raf943607"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-        style={{ minWidth: '280px' }}
-      >
-        Claim your {THS_DISCOUNT} Discount
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
+        Discount: {THS_DISCOUNT}
       </a>
     </div>
   </>

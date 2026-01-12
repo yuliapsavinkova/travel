@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleImage from '../../components/ArticleImage';
-import { THS_DISCOUNT } from '../../types';
+import { THS_DISCOUNT, THS_LINK } from '../../types';
 
 export const content = (
   <>
@@ -131,13 +131,7 @@ export const content = (
         Ready to build your profile and start sitting? Use my discount to join and start applying
         smarter, not harder.
       </p>
-      <a
-        href="https://trustedhousesitters.com/refer/raf943607"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-gold"
-        style={{ minWidth: '280px' }}
-      >
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
         Claim your {THS_DISCOUNT} Discount
       </a>
     </div>
