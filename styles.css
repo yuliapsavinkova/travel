@@ -16,6 +16,11 @@
 @import "./styles/components/portal.css";
 @import "./styles/components/form.css";
 
+/* Prose Extras */
+@import "./styles/components/faq.css";
+@import "./styles/components/financial-flip.css";
+@import "./styles/components/accent-box.css";
+
 /* Detail Page Architecture */
 @import "./styles/components/detail.css";
 @import "./styles/components/hero-detail.css";

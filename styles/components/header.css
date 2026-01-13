@@ -1,17 +1,12 @@
 .app-header {
   position: fixed;
-  top: var(--s-5);
+  top: 1.5rem;
   left: 0;
   right: 0;
   z-index: var(--z-nav);
-  padding: 0 var(--s-6);
+  padding: 0 var(--pad-page);
   pointer-events: none;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
-}
-
-.app-header.hidden {
-  transform: translateY(-120%);
-  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-wrapper {
@@ -20,118 +15,82 @@
 }
 
 .glass-island {
-  background: rgba(13, 13, 14, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 13, 14, 0.45);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--r-pill);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--s-4) 0 var(--s-6);
-  height: 72px;
+  height: var(--h-nav);
   pointer-events: auto;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.branding-clickable {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .desktop-nav {
   display: flex;
-  gap: var(--s-1);
-}
-
-.nav-action-group {
-  display: flex;
-  align-items: center;
-  gap: var(--s-4);
+  gap: var(--s-2);
 }
 
 .mobile-toggle {
   display: none;
-  background: transparent;
   color: var(--c-gold);
-  z-index: calc(var(--z-overlay) + 1);
-  pointer-events: auto;
+  padding: 8px;
   cursor: pointer;
-  width: 44px;
-  height: 44px;
-  justify-content: center;
-  align-items: center;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
 }
 
-@media (max-width: 1024px) {
-  .app-header {
-    top: var(--s-3);
-    padding: 0 var(--s-3);
-  }
-  .desktop-nav,
-  .desktop-only {
-    display: none !important;
-  }
-  .mobile-toggle {
-    display: flex !important;
-  }
-  .glass-island {
-    height: 60px;
-  }
+.mobile-toggle:active {
+  transform: scale(0.9);
 }
 
+/* MOBILE MENU OVERLAY */
 .mobile-menu-overlay {
   position: fixed;
   inset: 0;
   background: var(--c-black);
-  z-index: var(--z-overlay);
+  /* Ensure it is high enough but toggle button remains accessible */
+  z-index: calc(var(--z-nav) - 1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Ensure items start from top for scrolling */
+  justify-content: center;
+  padding: var(--s-9) var(--pad-page-mobile);
   transform: translateY(-100%);
   visibility: hidden;
-  pointer-events: none;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
-  padding: var(--s-9) var(--s-6);
-  overflow-y: auto; /* Allow scroll on small phones */
 }
 
 .mobile-menu-overlay.open {
   transform: translateY(0);
   visibility: visible;
-  pointer-events: auto;
 }
 
 .mobile-menu-content {
   width: 100%;
   max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  padding-top: var(--h-header);
 }
 
 .mobile-nav-stack {
   display: flex;
   flex-direction: column;
-  gap: var(--s-4);
-  width: 100%;
-  align-items: center;
+  gap: var(--s-5);
+  margin-top: var(--s-6);
 }
 
 .mobile-menu-item {
   font-family: var(--f-serif);
-  font-size: 28px; /* Reduced from 42px to fit iPhone SE / smaller screens */
+  font-size: 2.2rem;
   font-style: italic;
   font-weight: 700;
-  color: var(--c-text);
-  opacity: 0.5;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  padding: var(--s-2) var(--s-5);
-  text-align: center;
-  width: 100%;
+  color: var(--c-white);
+  opacity: 0.6;
+  transition: all 0.3s ease;
 }
 
 .mobile-menu-item.active {
@@ -139,14 +98,38 @@
   color: var(--c-gold);
 }
 
-.mobile-menu-item:hover {
-  opacity: 1;
-  transform: scale(1.05);
+.mobile-menu-cta {
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--c-gold);
+  font-size: 1.5rem;
 }
 
-.mobile-menu-cta {
-  margin-top: var(--s-6);
-  color: var(--c-gold);
-  border-top: 1px solid var(--c-border);
-  padding-top: var(--s-6);
+@media (max-width: 1024px) {
+  .app-header {
+    top: 1rem;
+    padding: 0 var(--pad-page-mobile);
+  }
+  .glass-island {
+    height: 3.75rem;
+  }
+  .desktop-nav,
+  .desktop-only {
+    display: none;
+  }
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-toggle {
+    display: none;
+  }
+  .mobile-menu-overlay {
+    display: none;
+  }
 }

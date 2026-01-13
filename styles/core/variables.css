@@ -1,114 +1,81 @@
 :root {
-  /* CORE PALETTE */
+  /* BREAKPOINTS - Source of truth for layout shifts */
+  --bp-desktop: 1024px;
+  --bp-tablet: 768px;
+  --bp-mobile: 480px;
+
+  /* COLOR PALETTE */
   --c-black: #050505;
   --c-obsidian: #0d0d0e;
   --c-white: #ffffff;
-
-  /* VIBRANT GOLD */
-  --c-gold: #ffcf87;
-  --c-gold-deep: #c59d5f;
-  --c-gold-bright: #fff3e0;
-  --c-gold-rich: rgba(255, 207, 135, 0.5);
-  --c-gold-muted: rgba(197, 157, 95, 0.15);
-
-  /* GLASS SYSTEM */
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-bg-heavy: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-blur: blur(12px);
-
-  /* SEMANTIC SURFACES */
-  --c-border: rgba(255, 255, 255, 0.12);
-  --c-glass: rgba(255, 255, 255, 0.04);
-
-  /* 
-     DARKNESS & READABILITY MASTER CONTROLS
-  */
-  --bg-surface-glow: 0.02; /* Subtle top-down wash (0 to 1) */
-  --hero-veil-opacity: 0.55; /* Dimming of hero images */
-  --img-base-opacity: 0.75; /* Visibility of the actual image asset */
-  --cinematic-overlay-intensity: 0.8; /* Strength of bottom-heavy card fades */
-
-  /* 
-     LAYOUT & READABILITY 
-  */
-  --w-prose: 720px; /* Centralized "Sweet Spot" for reading width */
-
-  /* 
-     STANDARDIZED GRADIENTS - SOURCE OF TRUTH 
-  */
-
-  /* 1. Global Background Depth */
-  --g-surface-wash: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, var(--bg-surface-glow)) 0%,
-    transparent 40%,
-    transparent 100%
-  );
-
-  /* 2. Hero & Image Readability Veil */
-  --g-hero-veil: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, calc(var(--hero-veil-opacity) + 0.15)) 0%,
-    rgba(0, 0, 0, var(--hero-veil-opacity)) 40%,
-    rgba(0, 0, 0, var(--hero-veil-opacity)) 60%,
-    rgba(0, 0, 0, calc(var(--hero-veil-opacity) + 0.15)) 100%
-  );
-
-  /* 3. Luxury Gold Button & Accents */
-  --g-gold-btn: linear-gradient(
-    135deg,
-    var(--c-gold-bright) 0%,
-    var(--c-gold) 50%,
-    var(--c-gold-deep) 100%
-  );
-
-  /* 4. Glass Surface Depth */
-  --g-card-glass: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-
-  /* 5. Bottom Cinematic Fade */
-  --g-overlay-cinematic: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, var(--cinematic-overlay-intensity)) 100%
-  );
-
-  /* 6. Text Shimmer */
-  --g-champagne: linear-gradient(135deg, #ffffff 0%, var(--c-gold) 50%, var(--c-gold-deep) 100%);
-
-  /* Z-INDEX SCALE */
-  --z-back: -10;
-  --z-base: 1;
-  --z-overlay: 10;
-  --z-content: 50;
-  --z-nav: 100;
-  --z-portal: 200;
-
-  /* SEMANTIC COLORS */
   --c-text: var(--c-white);
   --c-text-dim: rgba(255, 255, 255, 0.9);
   --c-text-muted: rgba(255, 255, 255, 0.6);
+  --c-prose-body: rgba(255, 255, 255, 0.72); /* Optimized for reading comfort */
 
-  /* SYSTEM SPACING */
-  --s-1: 4px;
-  --s-2: 8px;
-  --s-3: 16px;
-  --s-4: 24px;
-  --s-5: 32px;
-  --s-6: 48px;
-  --s-7: 64px;
-  --s-8: 96px;
-  --s-9: 128px;
-  --r-sm: 12px;
-  --r-md: 24px;
-  --r-lg: 32px;
-  --r-pill: 100px;
+  --c-gold: #ffcf87;
+  --c-gold-deep: #c59d5f;
+  --c-gold-rich: rgba(255, 207, 135, 0.5);
+  --c-gold-muted: rgba(197, 157, 95, 0.15);
+  --c-border: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.15);
 
-  /* FONTS */
+  /* UTILITY */
+  --img-base-opacity: 0.85;
+
+  /* HEADER & NAV */
+  --h-nav: 4.5rem;
+  --h-header: 6.5rem;
+
+  /* SPACING SCALE (Scale foundations) */
+  --s-1: 0.25rem; /* 4px */
+  --s-2: 0.5rem; /* 8px */
+  --s-3: 0.75rem; /* 12px */
+  --s-4: 1rem; /* 16px */
+  --s-5: 1.25rem; /* 20px */
+  --s-6: 1.5rem; /* 24px */
+  --s-7: 2rem; /* 32px */
+  --s-8: 3rem; /* 48px */
+  --s-9: 4rem; /* 64px */
+
+  /* SEMANTIC LAYOUT TOKENS - Use these for UI consistency */
+  --pad-page: var(--s-7);
+  --pad-page-mobile: var(--s-4);
+  --gap-section: var(--s-9);
+  --gap-section-mobile: var(--s-7);
+  --gap-grid: var(--s-6);
+  --gap-element: var(--s-4);
+  --gap-text: var(--s-2);
+  --w-prose: 44rem;
+
+  /* RADIUS */
+  --r-sm: 0.75rem;
+  --r-md: 1.25rem;
+  --r-lg: 2rem;
+  --r-pill: 9999px;
+
+  /* TYPOGRAPHY */
   --f-serif: "Playfair Display", serif;
   --f-main: "Inter", sans-serif;
+  --f-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+
+  /* Z-INDEX HIERARCHY */
+  --z-back: -10;
+  --z-base: 1;
+  --z-mobile-menu: 900;
+  --z-nav: 1000;
+  --z-overlay: 1100;
+  --z-portal: 1200;
+
+  /* GRADIENTS */
+  --g-champagne: linear-gradient(135deg, #ffffff 0%, var(--c-gold) 50%, var(--c-gold-deep) 100%);
+  --g-hero-veil: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  --g-overlay-cinematic: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  --g-gold-btn: linear-gradient(135deg, #fff3e0 0%, var(--c-gold) 50%, var(--c-gold-deep) 100%);
 }

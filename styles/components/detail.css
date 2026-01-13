@@ -1,39 +1,35 @@
 .detail-container {
-  padding-bottom: var(--s-9);
-  width: 100%;
+  padding-bottom: var(--gap-section);
   background: var(--c-black);
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Header Area - Increased padding-top for fixed nav clearance */
 .detail-header-area {
-  padding-top: 160px; /* Clear the 104px header + 56px breathing room */
-  padding-bottom: var(--s-5);
-  display: block;
+  padding-top: calc(var(--h-header) + var(--s-7));
+  padding-bottom: var(--s-6);
+  text-align: center;
+  color: var(--c-white);
 }
 
-/* Constrain header content to match the hero image width */
 .detail-header-area .container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .detail-date-label {
   display: block;
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
+  font-family: var(--f-mono);
   color: var(--c-gold);
-  margin-bottom: 6px; /* Balanced spacing */
-  opacity: 0.9;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--s-4);
 }
 
 .detail-title-text {
-  margin: 0 !important;
-  display: block;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--c-white);
 }
 
 .detail-subtitle-text {
@@ -41,44 +37,17 @@
   font-size: 1.15rem;
   font-style: italic;
   color: var(--c-text-muted);
-  margin-top: 6px; /* Balanced spacing to match date-label below */
-  opacity: 0.7;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  letter-spacing: 0.02em;
+  margin-top: var(--gap-text);
 }
 
 .detail-layout-container {
   max-width: var(--w-prose);
   margin: 0 auto;
-  padding: var(--s-6);
-}
-
-/* Elegant Text CTA transformed into Glass Pill */
-.detail-minimal-cta {
-  margin-top: var(--s-4);
-  padding-bottom: var(--s-4);
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.cta-icon {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0.8;
-}
-
-.glass-pill:hover .cta-icon {
-  transform: translate(3px, -3px);
-  opacity: 1;
+  padding: 0 var(--pad-page-mobile);
 }
 
 @media (max-width: 768px) {
   .detail-header-area {
-    padding-top: 120px;
-  }
-  .detail-layout-container {
-    padding: var(--s-5) var(--s-4);
+    padding-top: calc(var(--h-header) + var(--s-4));
   }
 }

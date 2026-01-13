@@ -22,7 +22,7 @@ export const content = (
       using this service, I didn’t pay for any accommodations for an entire year I traveled
       full-time across the US. Even at a very low estimate of one hundred dollars per night for a
       hotel, that adds up to thirty-six thousand dollars in annual savings. You can read my full
-      breakdown of the math in my guide:
+      breakdown of the math in my guide:{' '}
       <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
         Is TrustedHousesitters worth it for sitters?
       </Link>

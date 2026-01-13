@@ -1,0 +1,28 @@
+.prose-accent-box {
+  background: rgba(229, 193, 133, 0.03);
+  border-top: 1px solid var(--c-gold-muted);
+  border-bottom: 1px solid var(--c-gold-muted);
+  padding: var(--s-6);
+  margin: var(--s-6) 0;
+}
+
+.prose-accent-box.variant-pros {
+  background: rgba(229, 193, 133, 0.06);
+  border-color: var(--c-gold-deep);
+}
+.prose-accent-box.variant-cons {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--c-border);
+}
+
+.prose-accent-box.variant-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-6);
+  background: var(--c-obsidian);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+}

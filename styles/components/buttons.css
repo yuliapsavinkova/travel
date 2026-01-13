@@ -48,7 +48,7 @@
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--c-white) !important;
+  color: var(--c-white);
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -98,10 +98,15 @@
   filter: brightness(1.1);
 }
 
+/* Wide Button Utility */
+.btn-wide {
+  min-width: 280px;
+}
+
 .secondary-btn {
   border: 1.5px solid var(--c-gold-rich);
   padding: 12px 24px;
-  color: var(--c-white) !important;
+  color: var(--c-white);
   border-radius: var(--r-pill);
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(15px);

@@ -9,12 +9,11 @@ html {
   cursor: crosshair;
 }
 
-/* Fix for fixed header obscuring anchor targets */
+/* Clear fixed header precisely */
 [id] {
-  scroll-margin-top: 140px;
+  scroll-margin-top: calc(var(--h-header) + 20px);
 }
 
-/* Explicitly force pointer for interactive elements and their children to override global crosshair */
 a,
 a *,
 button,
@@ -23,8 +22,6 @@ button *,
 [role="button"] *,
 .branding-clickable,
 .branding-clickable *,
-.branding-text,
-.branding-text *,
 .btn-nav,
 .btn-nav *,
 .btn-gold,
@@ -43,7 +40,7 @@ button *,
 .mobile-menu-item *,
 .btn-back,
 .btn-back * {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 body {
