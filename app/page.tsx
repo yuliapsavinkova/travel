@@ -93,37 +93,39 @@ export default function HomePage() {
                 img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
               },
             ].map((stat, i) => (
-              <div key={i} className="glass-card stat-card">
-                <div className="card-image-viewport media-viewport">
-                  <Image
-                    src={stat.img}
-                    alt={stat.label}
-                    fill
-                    unoptimized
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    style={{ objectFit: 'cover' }}
-                  />
-                  <div className="overlay-layer" />
-                  <div
-                    className="stat-icon-overlay content-layer"
-                    style={{
-                      position: 'absolute',
-                      top: '20px',
-                      left: '20px',
-                      color: 'var(--c-gold)',
-                    }}
-                  >
-                    {stat.icon}
+              <div key={i} className="card-wrapper">
+                <div className="glass-card stat-card">
+                  <div className="card-image-viewport media-viewport">
+                    <Image
+                      src={stat.img}
+                      alt={stat.label}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div className="overlay-layer" />
+                    <div
+                      className="stat-icon-overlay content-layer"
+                      style={{
+                        position: 'absolute',
+                        top: '20px',
+                        left: '20px',
+                        color: 'var(--c-gold)',
+                      }}
+                    >
+                      {stat.icon}
+                    </div>
                   </div>
-                </div>
-                <div className="content-layer">
-                  <div
-                    className="display-title-md"
-                    style={{ color: 'var(--c-gold)', marginBottom: 'var(--s-1)' }}
-                  >
-                    {stat.value}
+                  <div className="content-layer">
+                    <div
+                      className="display-title-md"
+                      style={{ color: 'var(--c-gold)', marginBottom: 'var(--s-1)' }}
+                    >
+                      {stat.value}
+                    </div>
+                    <div className="sub-header">{stat.label}</div>
                   </div>
-                  <div className="sub-header">{stat.label}</div>
                 </div>
               </div>
             ))}
