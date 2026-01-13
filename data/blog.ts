@@ -25,8 +25,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: vsOtherContent,
     prevLink: {
-      label: 'Go to',
-      title: 'Reporting Process',
+      label: 'Previous',
+      title: 'Reporting',
       href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
     nextLink: {
@@ -143,7 +143,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     nextLink: {
       label: 'Next',
-      title: 'Membership Costs',
+      title: 'Cost Levels',
       href: '/blog/trusted-housesitters-membership-cost-levels',
     },
     seoTitle: 'Can You Really Travel for Free? House Sitting Math & Reality',
@@ -176,12 +176,12 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-membership-worth-it', 'ths-experience-level-sits', 'ths-membership-try'],
     prevLink: {
       label: 'Previous',
-      title: 'Free Travel Math',
+      title: 'Travel Math',
       href: '/blog/can-you-really-travel-for-free-house-sitting-math',
     },
     nextLink: {
       label: 'Next',
-      title: 'Profile Strategy',
+      title: 'Profile Tips',
       href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
     seoTitle: 'TrustedHousesitters Membership Cost & Tiers Explained',
@@ -212,12 +212,12 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-photo-aspect', 'ths-profile-length', 'trusted-profile-tips'],
     prevLink: {
       label: 'Previous',
-      title: 'Membership Costs',
+      title: 'Cost Levels',
       href: '/blog/trusted-housesitters-membership-cost-levels',
     },
     nextLink: {
       label: 'Next',
-      title: 'Your First Sit',
+      title: 'First Sit',
       href: '/blog/how-to-get-your-first-house-sit-no-reviews',
     },
     seoTitle: 'TrustedHousesitters Profile Tips | How to Build a 5-Star Profile',
@@ -248,12 +248,12 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-beginner-difficulty', 'ths-reviews-starting', 'travel-experience-needed'],
     prevLink: {
       label: 'Previous',
-      title: 'Profile Strategy',
+      title: 'Profile Tips',
       href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
     nextLink: {
       label: 'Next',
-      title: 'Handling Rejections',
+      title: 'Rejections',
       href: '/blog/why-trusted-housesitters-applications-get-rejected',
     },
     seoTitle: 'How to Get Your First House Sit with No Reviews | Sitter Journey',
@@ -286,12 +286,12 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-rejection-personal', 'ths-rejection-fix', 'ths-rejection-common'],
     prevLink: {
       label: 'Previous',
-      title: 'Your First Sit',
+      title: 'First Sit',
       href: '/blog/how-to-get-your-first-house-sit-no-reviews',
     },
     nextLink: {
       label: 'Next',
-      title: 'Reporting Process',
+      title: 'Reporting',
       href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
     seoTitle: 'Why Trusted-Housesitters Applications Get Rejected | Sitter Journey',
@@ -324,11 +324,11 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-rejection-common', 'ths-owner-priorities', 'ths-reviews-starting'],
     prevLink: {
       label: 'Previous',
-      title: 'Handling Rejections',
+      title: 'Rejections',
       href: '/blog/why-trusted-housesitters-applications-get-rejected',
     },
     nextLink: {
-      label: 'Go to',
+      label: 'Next',
       title: 'THS vs Others',
       href: '/blog/trusted-housesitters-vs-other-house-sitting-websites',
     },

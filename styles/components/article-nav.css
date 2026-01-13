@@ -14,6 +14,7 @@
   flex-direction: column;
   text-decoration: none;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: 0; /* Critical for truncation in flex/grid */
 }
 
 .nav-link-item:hover {
@@ -21,41 +22,41 @@
 }
 
 .nav-link-item.prev {
-  grid-column: 1; /* Pin to left corner */
   text-align: left;
   align-items: flex-start;
 }
 
 .nav-link-item.next {
-  grid-column: 2; /* Pin to right corner */
   text-align: right;
   align-items: flex-end;
 }
 
 .nav-link-label {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.3em;
   color: var(--c-gold);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   display: block;
   line-height: 1;
 }
 
 .nav-link-title {
   font-family: var(--f-serif);
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: 700;
   line-height: 1.2;
-  /* Premium Champagne Shimmer */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
   background: var(--g-champagne);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  padding-bottom: 2px;
+  display: block;
 }
 
 .nav-link-item:hover .nav-link-title {
@@ -64,14 +65,17 @@
 
 @media (max-width: 768px) {
   .article-navigation {
-    grid-template-columns: 1fr;
-    gap: var(--s-6);
+    grid-template-columns: 1fr 1fr; /* Force side-by-side */
+    gap: var(--s-2);
   }
-  .nav-link-item.prev,
-  .nav-link-item.next {
-    grid-column: 1; /* Reset for mobile stack */
-    text-align: left;
-    align-items: flex-start;
+
+  .nav-link-title {
+    font-size: 0.8rem; /* Shrink to fit */
+  }
+
+  .nav-link-label {
+    font-size: 8px;
+    letter-spacing: 0.2em;
   }
 }
 

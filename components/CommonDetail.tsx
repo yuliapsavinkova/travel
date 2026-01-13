@@ -85,18 +85,20 @@ const CommonDetail = ({
 
           {isAffiliate && (
             <div className="hero-disclosure-bar">
-              <ShieldCheckIcon size={16} className="disclosure-icon" />
-              <span className="disclosure-text">
-                Disclosure: This post contains referral or affiliate links.
-                <Link
-                  href="/disclosure"
-                  className="disclosure-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read More
-                </Link>
-              </span>
+              <div className="disclosure-main-group">
+                <ShieldCheckIcon size={14} className="disclosure-icon" />
+                <span className="disclosure-text">
+                  Disclosure: This post contains referral or affiliate links.
+                </span>
+              </div>
+              <Link
+                href="/disclosure"
+                className="disclosure-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read More
+              </Link>
             </div>
           )}
         </div>
@@ -122,13 +124,13 @@ const CommonDetail = ({
               <nav className="article-navigation" aria-label="Related articles">
                 {prevLink && (
                   <Link href={prevLink.href} className="nav-link-item prev">
-                    <span className="nav-link-label">{prevLink.label}</span>
+                    <span className="nav-link-label">Previous</span>
                     <span className="nav-link-title">{prevLink.title}</span>
                   </Link>
                 )}
                 {nextLink && (
                   <Link href={nextLink.href} className="nav-link-item next">
-                    <span className="nav-link-label">{nextLink.label}</span>
+                    <span className="nav-link-label">Next</span>
                     <span className="nav-link-title">{nextLink.title}</span>
                   </Link>
                 )}

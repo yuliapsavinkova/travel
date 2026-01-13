@@ -66,10 +66,10 @@ export default async function StayDetailPage({ params }: { params: Promise<{ slu
       isAffiliate={true}
       ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
-      prevLink={{ label: 'Go to', title: 'Destinations', href: '/travel' }}
+      prevLink={{ label: 'Previous', title: 'Travel', href: '/travel' }}
       nextLink={{
-        label: 'Next Step',
-        title: 'Landing Your First Sit',
+        label: 'Next',
+        title: 'First Sit',
         href: '/blog/how-to-get-your-first-house-sit-no-reviews',
       }}
     >

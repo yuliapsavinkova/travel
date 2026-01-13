@@ -46,17 +46,25 @@
   left: 0;
   right: 0;
   z-index: 10;
-  padding: 20px 24px;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(25px) saturate(150%);
-  -webkit-backdrop-filter: blur(25px) saturate(150%);
+  padding: 18px 24px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
   border-top: 1px solid var(--glass-border);
   color: rgba(255, 255, 255, 0.9);
   font-size: 11px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
+  flex-wrap: wrap; /* Essential for mobile wrapping */
+}
+
+.disclosure-main-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 .disclosure-icon {
@@ -65,8 +73,7 @@
 }
 
 .disclosure-text {
-  line-height: 1.5;
-  text-align: center;
+  line-height: 1.4;
 }
 
 .disclosure-link {
@@ -74,7 +81,11 @@
   text-decoration: underline;
   text-underline-offset: 4px;
   font-weight: 800;
-  margin-left: 6px;
+  transition: opacity 0.3s ease;
+}
+
+.disclosure-link:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 768px) {
@@ -89,9 +100,34 @@
   .hero-glass-link {
     padding: 12px;
   }
+
   .hero-disclosure-bar {
-    padding: 16px 20px;
-    flex-direction: column;
-    gap: 8px;
+    padding: 12px var(--s-4);
+    gap: 6px;
+  }
+
+  .disclosure-main-group {
+    width: 100%;
+    justify-content: center;
+    white-space: normal; /* Allow text to wrap if it absolutely must, but keep icon next to it */
+    text-align: center;
+  }
+
+  .disclosure-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .disclosure-text {
+    font-size: 9px;
+    letter-spacing: 0.01em;
+  }
+
+  .disclosure-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 2px;
   }
 }

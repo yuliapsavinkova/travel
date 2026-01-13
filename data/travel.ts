@@ -15,14 +15,10 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
     body: ubudContent,
     prevLink: {
       label: 'Previous',
-      title: 'Gili Trawangan',
+      title: 'Gili Islands',
       href: '/travel/gili-trawangan-slow-travel',
     },
-    nextLink: {
-      label: 'Next Guide',
-      title: 'Gili Trawangan',
-      href: '/travel/gili-trawangan-slow-travel',
-    },
+    nextLink: { label: 'Next', title: 'Gili Islands', href: '/travel/gili-trawangan-slow-travel' },
   },
   {
     id: '2',
@@ -34,11 +30,7 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
       'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&q=80&w=1200',
     date: 'January 2026',
     body: giliIslandsContent,
-    prevLink: {
-      label: 'Previous Guide',
-      title: 'Bali Ubud',
-      href: '/travel/bali-ubud-slow-travel',
-    },
-    nextLink: { label: 'Next Guide', title: 'Bali Ubud', href: '/travel/bali-ubud-slow-travel' },
+    prevLink: { label: 'Previous', title: 'Bali Ubud', href: '/travel/bali-ubud-slow-travel' },
+    nextLink: { label: 'Next', title: 'Bali Ubud', href: '/travel/bali-ubud-slow-travel' },
   },
 ];

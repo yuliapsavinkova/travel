@@ -20,7 +20,7 @@ export default function FAQPage() {
       image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=2400"
       title="Common Questions."
       date="January 2026"
-      prevLink={{ label: 'Previous', title: 'Blog Archive', href: '/blog' }}
+      prevLink={{ label: 'Previous', title: 'Blog', href: '/blog' }}
       nextLink={{ label: 'Next', title: 'Resources', href: '/resources' }}
     >
       <div className="flex-col">
