@@ -162,9 +162,29 @@
 }
 
 @media (max-width: 768px) {
+  .refined-footer {
+    padding: var(--s-8) 0 var(--s-5) 0;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: var(--s-6);
+    gap: var(--s-7);
+    text-align: center;
+  }
+  .footer-brand-col {
+    align-items: center;
+  }
+  .footer-brand-wordmark {
+    justify-content: center;
+  }
+  .footer-socials {
+    justify-content: center;
+  }
+  .footer-contact-col {
+    text-align: center;
+  }
+  .footer-action-group {
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .footer-bottom {
     flex-direction: column;
@@ -172,6 +192,9 @@
     text-align: center;
   }
   .footer-legal-links {
+    justify-content: center;
+  }
+  .footer-credits {
     justify-content: center;
   }
 }

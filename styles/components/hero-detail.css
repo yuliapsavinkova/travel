@@ -46,10 +46,10 @@
   left: 0;
   right: 0;
   z-index: 10;
-  padding: 18px 24px;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  padding: 16px 24px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(25px) saturate(160%);
+  -webkit-backdrop-filter: blur(25px) saturate(160%);
   border-top: 1px solid var(--glass-border);
   color: rgba(255, 255, 255, 0.9);
   font-size: 11px;
@@ -57,19 +57,21 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex-wrap: wrap; /* Essential for mobile wrapping */
+  flex-wrap: wrap;
 }
 
 .disclosure-main-group {
   display: flex;
   align-items: center;
   gap: 8px;
-  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .disclosure-icon {
   color: var(--c-gold);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
 .disclosure-text {
@@ -82,10 +84,13 @@
   text-underline-offset: 4px;
   font-weight: 800;
   transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.disclosure-link:hover {
-  opacity: 0.7;
+.disclosure-mobile-icon {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -102,15 +107,16 @@
   }
 
   .hero-disclosure-bar {
-    padding: 12px var(--s-4);
-    gap: 6px;
+    padding: 10px 16px;
+    gap: 8px;
+    flex-wrap: nowrap; /* Keep on one line if possible, or controlled wrap */
+    justify-content: center;
   }
 
   .disclosure-main-group {
-    width: 100%;
     justify-content: center;
-    white-space: normal; /* Allow text to wrap if it absolutely must, but keep icon next to it */
-    text-align: center;
+    flex-shrink: 1; /* Allow text to squeeze */
+    min-width: 0;
   }
 
   .disclosure-icon {
@@ -119,15 +125,28 @@
   }
 
   .disclosure-text {
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 0.01em;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .disclosure-link {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 10px;
-    margin-top: 2px;
+    text-decoration: none;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .disclosure-link-text {
+    display: none; /* Hide 'Read More' text */
+  }
+
+  .disclosure-mobile-icon {
+    display: flex;
+    color: var(--c-gold);
   }
 }

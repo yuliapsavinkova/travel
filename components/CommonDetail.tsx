@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { type ReactNode } from 'react';
-import { ArrowLeftIcon, ShieldCheckIcon, ExternalLinkIcon } from './Icons';
+import { ArrowLeftIcon, ShieldCheckIcon, ExternalLinkIcon, ArrowUpRightIcon } from './Icons';
 import FAQSection from './FAQSection';
 import type { NavLink, FAQItem } from '../types';
 
@@ -96,8 +96,10 @@ const CommonDetail = ({
                 className="disclosure-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Read Disclosure"
               >
-                Read More
+                <span className="disclosure-link-text">Read More</span>
+                <ArrowUpRightIcon size={14} className="disclosure-mobile-icon" />
               </Link>
             </div>
           )}

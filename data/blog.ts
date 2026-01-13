@@ -13,7 +13,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '8',
     slug: 'trusted-housesitters-vs-other-house-sitting-websites',
-    title: 'Trusted-Housesitters vs Other House Sitting Websites: Which Is Actually Best?',
+    title: 'TrustedHousesitters vs Other House Sitting Websites: Which Is Actually Best?',
     excerpt: 'Comparing THS against Nomador, MindMyHouse, and others. Which one wins?',
     date: 'January 2026',
     category: 'Review',
@@ -49,7 +49,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '9',
     slug: 'trusted-housesitters-vs-rover-comparison',
-    title: 'Trusted-Housesitters vs Rover: What People Get Wrong When Comparing Them',
+    title: 'TrustedHousesitters vs Rover: What People Get Wrong When Comparing Them',
     excerpt: 'One is an exchange, the other is a transaction. Which one fits your lifestyle?',
     date: 'January 2026',
     category: 'Review',
@@ -85,7 +85,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '3',
     slug: 'is-trusted-housesitters-worth-it-for-sitters',
-    title: 'Is Trusted-Housesitters Worth It for Sitters? Honest Pros, Cons, and Real Costs',
+    title: 'Is TrustedHousesitters Worth It for Sitters? Honest Pros, Cons, and Real Costs',
     excerpt:
       'A deep dive into the costs, real savings, and pros/cons of house sitting while traveling.',
     date: 'January 2026',
@@ -161,7 +161,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '4',
     slug: 'trusted-housesitters-membership-cost-levels',
-    title: 'Sitter Guide: Trusted-Housesitters Membership Cost & Levels',
+    title: 'Sitter Guide: TrustedHousesitters Membership Cost & Levels',
     excerpt:
       'Breaking down Basic, Standard, and Premium sitter memberships to find the right fit for you.',
     date: 'January 2026',
@@ -198,7 +198,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '2',
     slug: 'trusted-housesitters-profile-tips-how-to-secure-more-sits',
-    title: 'Trusted-Housesitters Profile Tips: How to Secure More Sits',
+    title: 'TrustedHousesitters Profile Tips: How to Secure More Sits',
     excerpt: 'Master your profile with practical tips, including photo rules and proven examples.',
     date: 'January 2026',
     category: 'Expertise',
@@ -217,7 +217,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     nextLink: {
       label: 'Next',
-      title: 'First Sit',
+      title: 'First Sit Guide',
       href: '/blog/how-to-get-your-first-house-sit-no-reviews',
     },
     seoTitle: 'TrustedHousesitters Profile Tips | How to Build a 5-Star Profile',
@@ -271,7 +271,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '5',
     slug: 'why-trusted-housesitters-applications-get-rejected',
-    title: 'Top Reasons Why Trusted-Housesitters Applications Get Rejected',
+    title: 'Top Reasons Why TrustedHousesitters Applications Get Rejected',
     excerpt:
       'Rejections happen all the time. Learn the fixable and unfixable reasons to move on and succeed.',
     date: 'January 2026',
@@ -286,7 +286,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqIds: ['ths-rejection-personal', 'ths-rejection-fix', 'ths-rejection-common'],
     prevLink: {
       label: 'Previous',
-      title: 'First Sit',
+      title: 'First Sit Guide',
       href: '/blog/how-to-get-your-first-house-sit-no-reviews',
     },
     nextLink: {
@@ -294,9 +294,9 @@ export const BLOG_POSTS: BlogPost[] = [
       title: 'Reporting',
       href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
-    seoTitle: 'Why Trusted-Housesitters Applications Get Rejected | Sitter Journey',
+    seoTitle: 'Why TrustedHousesitters Applications Get Rejected | Sitter Journey',
     seoDescription:
-      'Discover why Trusted-Housesitters applications get declined and how to beat the 5-app rule.',
+      'Discover why TrustedHousesitters applications get declined and how to beat the 5-app rule.',
     seoKeywords: [
       'trustedhousesitters rejection reasons',
       'why ths applications get declined',
@@ -334,7 +334,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     seoTitle: 'What Happens If a Sit Goes Wrong | Sitter Journey',
     seoDescription:
-      'A clear guide to the Trusted-Housesitters reporting process and dispute resolution.',
+      'A clear guide to the TrustedHousesitters reporting process and dispute resolution.',
     seoKeywords: [
       'trustedhousesitters reporting process',
       'what if a house sit goes wrong',
