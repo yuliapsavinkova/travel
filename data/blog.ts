@@ -6,8 +6,82 @@ import { content as mathContent } from './articles/can-you-really-travel-for-fre
 import { content as costLevelsContent } from './articles/trusted-housesitters-membership-cost-levels';
 import { content as rejectionReasonsContent } from './articles/why-trusted-housesitters-applications-get-rejected';
 import { content as reportingProcessContent } from './articles/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it';
+import { content as vsOtherContent } from './articles/trusted-housesitters-vs-other-house-sitting-websites';
+import { content as vsRoverContent } from './articles/trusted-housesitters-vs-rover-comparison';
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: '8',
+    slug: 'trusted-housesitters-vs-other-house-sitting-websites',
+    title: 'Trusted-Housesitters vs Other House Sitting Websites: Which Is Actually Best?',
+    excerpt: 'Comparing THS against Nomador, MindMyHouse, and others. Which one wins?',
+    date: 'February 2026',
+    category: 'Review',
+    location: 'Comparison',
+    sortOrder: 1,
+    imageUrl:
+      'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1200',
+    ctaLabel: 'Claim 25% Off THS',
+    ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+    body: vsOtherContent,
+    prevLink: {
+      label: 'Go to',
+      title: 'Reporting Process',
+      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+    },
+    nextLink: {
+      label: 'Next',
+      title: 'THS vs Rover',
+      href: '/blog/trusted-housesitters-vs-rover-comparison',
+    },
+    seoTitle: 'TrustedHousesitters vs Other Sites: 2026 Comparison',
+    seoDescription:
+      'Is THS actually the best house sitting site? We compare it to Nomador, MindMyHouse and more.',
+    seoKeywords: [
+      'ths vs nomador',
+      'trustedhousesitters alternatives',
+      'best house sitting website',
+      'mindmyhouse review',
+      'housesittersamerica vs ths',
+      'international house sitting platforms',
+    ],
+  },
+  {
+    id: '9',
+    slug: 'trusted-housesitters-vs-rover-comparison',
+    title: 'Trusted-Housesitters vs Rover: What People Get Wrong When Comparing Them',
+    excerpt: 'One is an exchange, the other is a transaction. Which one fits your lifestyle?',
+    date: 'February 2026',
+    category: 'Review',
+    location: 'Comparison',
+    sortOrder: 2,
+    imageUrl:
+      'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
+    ctaLabel: 'Earn with Rover',
+    ctaLink: 'https://www.rover.com/ambas-refer-a-friend/Q93GankN',
+    body: vsRoverContent,
+    prevLink: {
+      label: 'Previous',
+      title: 'THS vs Others',
+      href: '/blog/trusted-housesitters-vs-other-house-sitting-websites',
+    },
+    nextLink: {
+      label: 'Next',
+      title: 'Is It Worth It?',
+      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+    },
+    seoTitle: 'THS vs Rover: Professional Pet Care Comparison',
+    seoDescription:
+      'Stop comparing Rover and TrustedHousesitters. One is a job, one is a lifestyle.',
+    seoKeywords: [
+      'ths vs rover',
+      'pet sitting exchange vs paid',
+      'house sitting vs dog walking',
+      'is rover better than ths',
+      'free travel vs gig work',
+      'professional pet care comparison',
+    ],
+  },
   {
     id: '3',
     slug: 'is-trusted-housesitters-worth-it-for-sitters',
@@ -17,7 +91,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'January 2026',
     category: 'Review',
     location: 'Financial',
-    sortOrder: 1,
+    sortOrder: 3,
     imageUrl:
       'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2060&auto=format&fit=crop',
     ctaLabel: 'Claim 25% Off Code',
@@ -25,9 +99,9 @@ export const BLOG_POSTS: BlogPost[] = [
     body: worthItContent,
     faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
     prevLink: {
-      label: 'Go to',
-      title: 'Reporting Process',
-      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+      label: 'Previous',
+      title: 'THS vs Rover',
+      href: '/blog/trusted-housesitters-vs-rover-comparison',
     },
     nextLink: {
       label: 'Next',
@@ -38,13 +112,12 @@ export const BLOG_POSTS: BlogPost[] = [
     seoDescription:
       'An honest review of TrustedHousesitters for sitters. Is the membership fee worth the travel savings? We break down the 2-night breakeven math.',
     seoKeywords: [
-      'trustedhousesitters pros and cons',
-      'house sitting review 2026',
-      'is ths membership worth it',
-      'free travel accommodation',
-      'sitter experience review',
-      'trusted housesitters legit',
-      'long term travel housing',
+      'is trustedhousesitters worth it',
+      'ths sitter review 2026',
+      'house sitting pros and cons',
+      'trusted housesitters legitimacy',
+      'save money on travel accommodation',
+      'sitter membership value',
     ],
   },
   {
@@ -56,7 +129,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'January 2026',
     category: 'Expertise',
     location: 'Financial',
-    sortOrder: 2,
+    sortOrder: 4,
     imageUrl:
       'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
     ctaLabel: 'Claim 25% Off Membership',
@@ -75,15 +148,14 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     seoTitle: 'Can You Really Travel for Free? House Sitting Math & Reality',
     seoDescription:
-      'Discover the truth about "free travel." We break down house sitting itineraries and math for nomads saving over $30k per year.',
+      'Discover the truth about "free travel." We break down house sitting itineraries and math for nomads.',
     seoKeywords: [
-      'free travel math',
-      'house sitting costs',
-      'trustedhousesitters worth it',
-      'nomad budget breakdown',
-      'how to travel for free',
-      'financial independence travel',
-      'save on accommodation',
+      'travel for free math',
+      'house sitting cost breakdown',
+      'how to travel without paying for hotels',
+      'nomad budget planning',
+      'trustedhousesitters savings calculator',
+      'financial freedom through travel',
     ],
   },
   {
@@ -95,7 +167,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'January 2026',
     category: 'Sitter Guide',
     location: 'Financial',
-    sortOrder: 3,
+    sortOrder: 5,
     imageUrl:
       'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=1200',
     ctaLabel: 'Claim 25% Off Code',
@@ -113,16 +185,14 @@ export const BLOG_POSTS: BlogPost[] = [
       href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
     seoTitle: 'TrustedHousesitters Membership Cost & Tiers Explained',
-    seoDescription:
-      'Compare Basic, Standard, and Premium sitter tiers on TrustedHousesitters. Learn about accident protection and cancellation insurance.',
+    seoDescription: 'Compare Basic, Standard, and Premium sitter tiers on TrustedHousesitters.',
     seoKeywords: [
-      'ths membership tiers',
-      'house sitting cancellation insurance',
-      'standard vs premium sitter',
-      'trusted housesitters price',
-      'sitter insurance coverage',
-      'discount for trusted housesitters',
-      'ths cost breakdown',
+      'ths membership levels',
+      'trustedhousesitters cost 2026',
+      'ths basic vs standard vs premium',
+      'sitter cancellation insurance',
+      'trusted housesitters pricing guide',
+      'is ths premium worth it',
     ],
   },
   {
@@ -133,7 +203,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'January 2026',
     category: 'Expertise',
     location: 'Profile Strategy',
-    sortOrder: 4,
+    sortOrder: 6,
     imageUrl:
       'https://images.unsplash.com/photo-1517125591588-3a29b2182219?q=80&w=2073&auto=format&fit=crop',
     ctaLabel: 'Get 25% Off Membership',
@@ -151,16 +221,14 @@ export const BLOG_POSTS: BlogPost[] = [
       href: '/blog/how-to-get-your-first-house-sit-no-reviews',
     },
     seoTitle: 'TrustedHousesitters Profile Tips | How to Build a 5-Star Profile',
-    seoDescription:
-      'Master your TrustedHousesitters profile with these photo and bio tips. Learn about the 3:2 photo aspect ratio and trust-building language.',
+    seoDescription: 'Master your TrustedHousesitters profile with these photo and bio tips.',
     seoKeywords: [
-      'ths profile photos',
+      'trustedhousesitters profile tips',
+      'how to get more house sits',
       'house sitting bio examples',
-      'trust building tips',
-      'housesitting for digital nomads',
-      'professional housesitter profile',
-      'trusted housesitters review',
-      'sitter profile guide',
+      'ths profile photo size',
+      'winning sitter application strategy',
+      'trust building for sitters',
     ],
   },
   {
@@ -171,7 +239,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
-    sortOrder: 5,
+    sortOrder: 7,
     imageUrl:
       'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200',
     ctaLabel: 'Offer: 25% Off Membership',
@@ -190,15 +258,14 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     seoTitle: 'How to Get Your First House Sit with No Reviews | Sitter Journey',
     seoDescription:
-      'Step-by-step guide to landing your first house sit on TrustedHousesitters without reviews. Learn how to choose locations and cats over dogs.',
+      'Step-by-step guide to landing your first house sit on TrustedHousesitters without reviews.',
     seoKeywords: [
-      'first house sit tips',
-      'trustedhousesitters no reviews',
-      'solo female travel hacks',
-      'how to build a housesitting profile',
-      'nomad lifestyle for beginners',
-      'cat sitting travel',
-      'house sitting strategies',
+      'get first house sit no reviews',
+      'beginner house sitting guide',
+      'how to start house sitting',
+      'trustedhousesitters for beginners',
+      'landing sits without experience',
+      'first time sitter tips',
     ],
   },
   {
@@ -210,7 +277,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
-    sortOrder: 6,
+    sortOrder: 8,
     imageUrl:
       'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2070&auto=format&fit=crop',
     ctaLabel: 'Claim 25% Off Membership',
@@ -229,15 +296,14 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     seoTitle: 'Why Trusted-Housesitters Applications Get Rejected | Sitter Journey',
     seoDescription:
-      'Discover why Trusted-Housesitters applications get declined. Learn the psychological reasons owners pick sitters and how to beat the 5-app rule.',
+      'Discover why Trusted-Housesitters applications get declined and how to beat the 5-app rule.',
     seoKeywords: [
-      'ths rejection reasons',
-      'trustedhousesitters 5 app rule',
-      'house sitting competition',
-      'sitter application tips',
-      'how to get a house sit',
-      'trusted housesitters review 2026',
-      'nomad lifestyle strategy',
+      'trustedhousesitters rejection reasons',
+      'why ths applications get declined',
+      'ths 5 application rule',
+      'beating house sitting competition',
+      'house sitting application tips',
+      'owner pet preferences',
     ],
   },
   {
@@ -249,7 +315,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'February 2026',
     category: 'Expertise',
     location: 'Safety',
-    sortOrder: 7,
+    sortOrder: 9,
     imageUrl:
       'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&q=80&w=1200',
     ctaLabel: 'Claim 25% Off Membership',
@@ -262,20 +328,20 @@ export const BLOG_POSTS: BlogPost[] = [
       href: '/blog/why-trusted-housesitters-applications-get-rejected',
     },
     nextLink: {
-      label: 'Next',
-      title: 'Is It Worth It?',
-      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+      label: 'Go to',
+      title: 'THS vs Others',
+      href: '/blog/trusted-housesitters-vs-other-house-sitting-websites',
     },
-    seoTitle: 'What Happens If a Sit Goes Wrong and how to report it | Sitter Journey',
+    seoTitle: 'What Happens If a Sit Goes Wrong | Sitter Journey',
     seoDescription:
-      'A clear guide to the Trusted-Housesitters reporting process and dispute resolution. Learn how to handle expectation mismatches and pet care concerns.',
+      'A clear guide to the Trusted-Housesitters reporting process and dispute resolution.',
     seoKeywords: [
-      'trusted housesitters reported sit',
+      'trustedhousesitters reporting process',
+      'what if a house sit goes wrong',
       'ths dispute resolution',
-      'house sitting safety tips',
-      'what happens if homeowner cancels',
-      'pet sitting problems',
-      'house sitting boundaries',
+      'reporting a homeowner on ths',
+      'house sitting safety guide',
+      'sitter protection policy',
     ],
   },
 ];
