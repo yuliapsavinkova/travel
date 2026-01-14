@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { NAV_ITEMS } from '../constants';
 import ContactForm from './ContactForm';
 import { MenuIcon, SJLogo, XIcon } from './Icons';
@@ -11,25 +11,28 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+      // Scrolling UP or at the top: Show header
+      if (currentScrollY < lastScrollY.current || currentScrollY < 100) {
         setIsHidden(false);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 150) {
+      }
+      // Scrolling DOWN and past threshold: Hide header
+      else if (currentScrollY > lastScrollY.current && currentScrollY > 150) {
         setIsHidden(true);
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   useEffect(() => {
     const handleOpenContact = () => setIsContactOpen(true);
