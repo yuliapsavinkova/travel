@@ -41,14 +41,12 @@ export default function HomePage() {
             >
               Life on the road
             </span>
-            Chronicles of a <span className="shimmer-text">Traveler.</span>
+            Chronicles <span className="shimmer-text">of a Traveler</span>
           </h1>
-          <p className="hero-paragraph">
-            I travel full time. I share my personal journey as a house sitter and solo traveler.
-          </p>
+          <p className="hero-paragraph">Lessons learned along the way as a full-time traveler</p>
           <div className="hero-button-group">
             <Link href="/blog#archive" className="btn-gold">
-              Sitter Blog
+              Read the Blog
             </Link>
             <Link href="/resources#archive" className="secondary-btn">
               Resources
@@ -69,7 +67,7 @@ export default function HomePage() {
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
             I have visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states
-            while house sitting professionally.
+            while working remote and house sitting.
           </p>
 
           <div className="grid-standard">
@@ -145,9 +143,9 @@ export default function HomePage() {
               className="hero-paragraph"
               style={{ fontSize: '1.1rem', marginBottom: 'var(--s-5)' }}
             >
-              I am just starting this chronicle. Please check back often as the content grows. I
-              will be sharing packing hacks, budget breakdowns, and the technical secrets of
-              professional house sitting.
+              I’m just getting started here, so check back as the site grows. I’ll be sharing
+              packing hacks, real budget breakdowns, and the technical details of traveling full
+              time efficiently and sustainably.
             </p>
             <div
               style={{
