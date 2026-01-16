@@ -63,11 +63,11 @@ export default function HomePage() {
         <section className="section-margin text-center" id="perspective">
           <div className="sub-header">My Journey</div>
           <h2 className="display-title display-title-md">
-            Travel <span className="serif-italic shimmer-text">& Life.</span>
+            Travel <span className="serif-italic shimmer-text">& Life</span>
           </h2>
           <p className="hero-paragraph" style={{ marginBottom: 'var(--s-6)' }}>
             I have visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount} states
-            while working remote and house sitting.
+            while working remote and house sitting
           </p>
 
           <div className="grid-standard">
@@ -137,7 +137,7 @@ export default function HomePage() {
           >
             <div className="sub-header">Growth Roadmap</div>
             <h2 className="display-title display-title-md">
-              The Road <span className="serif-italic shimmer-text">Ahead.</span>
+              The Road <span className="serif-italic shimmer-text">Ahead</span>
             </h2>
             <p
               className="hero-paragraph"
@@ -145,7 +145,7 @@ export default function HomePage() {
             >
               I’m just getting started here, so check back as the site grows. I’ll be sharing
               packing hacks, real budget breakdowns, and the technical details of traveling full
-              time efficiently and sustainably.
+              time efficiently and sustainably
             </p>
             <div
               style={{
@@ -172,7 +172,7 @@ export default function HomePage() {
         <section className="section-margin text-center">
           <div className="sub-header">Get in Touch</div>
           <h2 className="display-title display-title-md">
-            Let's <span className="serif-italic shimmer-text">Connect.</span>
+            Let's <span className="serif-italic shimmer-text">Connect</span>
           </h2>
           <div
             style={{
