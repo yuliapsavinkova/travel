@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.sitterjourney.com" }],
+      "destination": "https://sitterjourney.com/$1",
+      "permanent": true
+    }
+  ]
+}
