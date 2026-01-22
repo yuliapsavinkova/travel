@@ -7,141 +7,106 @@ export const content = (
   <>
     <p className="prose-lead">
       Your first house sit is the hardest one to get. After that, it gets exponentially easier. The
-      reason most people never get past this stage isn’t lack of qualifications — it’s bad strategy.
+      reason most people never get past this stage isn’t lack of qualifications, it’s bad strategy.
+      I will share exactly how I went from zero reviews to a fully booked schedule.
     </p>
 
     <p>
       I got my first house sit with zero reviews by stacking the odds in my favor instead of
-      competing where everyone else applies. Here’s exactly how I did it, step by step.
+      competing where everyone else applies. You must understand that for your first sit, it might
+      not be a dream sit, your goal is to do a great job and get a positive review.
     </p>
 
-    <h2>Why most beginners get stuck</h2>
-    <p>New sitters usually:</p>
+    <h2>1. The Strategy of Risk Removal</h2>
+    <p>
+      New sitters usually fail because they apply to popular destinations for long stays with
+      generic messages.
+    </p>
+
+    <h2>2. Choose High Demand, Low Competition Locations</h2>
     <ul>
-      <li>Apply in popular destinations</li>
-      <li>Apply during peak season</li>
-      <li>Go for long sits</li>
-      <li>Send generic applications</li>
+      <li>
+        <strong>Off Season Cities:</strong> I chose Austin, Texas in the middle of summer. It was
+        brutal heat, so competition was low, but homeowners were desperate for sitters while they
+        fled to cooler climates.
+      </li>
+      <li>
+        <strong>Less Famous Areas:</strong> Target local suburbs or smaller cities where the
+        "Instagram" crowd isn't looking.
+      </li>
+      <li>
+        <strong>Peak Travel Windows:</strong> Apply for sits during major holidays when every owner
+        is looking for help at the same time.
+      </li>
     </ul>
-
-    <p>
-      Then they panic when no one responds. That’s not a you problem. That’s a competition problem.
-      Homeowners don’t want to take risks when they have options. Your job for the first sit is to
-      remove risk and reduce competition.
-    </p>
-
-    <h2>Step 1: Choose a high-demand, low-competition location</h2>
-    <p>
-      I intentionally chose Austin, Texas for my first sit. Not because it’s glamorous — but because
-      it’s strategic. I applied during peak summer, when temperatures are brutal and many sitters
-      avoid the area.
-    </p>
-
-    <p>
-      At the same time, Austin has a large and highly mobile tech community, which means people
-      travel frequently, often on short notice, even during off-season months. Fewer sitters +
-      plenty of homeowners = opportunity.
-    </p>
 
     <div className="prose-accent-box">
       <p>This approach works in:</p>
       <ul>
         <li>Hot cities in summer</li>
         <li>Cold cities in winter</li>
-        <li>Less “Instagram-famous” locations</li>
+        <li>Suburban local neighborhoods</li>
       </ul>
-      <p>You don’t need Paris. You need a place other sitters are skipping.</p>
+      <p>You don’t need a destination; you need a review.</p>
     </div>
 
-    <h2>Step 2: Start with cats and short sits</h2>
+    <h2>3. If you like Cats, start with Cats and Short Stays</h2>
     <p>
-      For your first sit, cats are easier than dogs and short stays are easier than long ones. Cats
-      represent lower perceived responsibility, no rigid walking schedules, and homeowners generally
-      feel more flexible.
-    </p>
-
-    <p>
-      I specifically applied to cat sits only and short trips (2–5 days). Short sits are less
-      commitment and lower risk—the ideal “yes” for a homeowner choosing someone without reviews.
+      Cats are usually much easier to care for and fewer things can go wrong. Homeowners generally
+      feel more flexible about who they hire for a 3 day cat sit compared to a 3 week multi dog
+      assignment.
     </p>
 
     <ArticleImage
       src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=1200"
       alt="Cat in a sunlit home"
-      caption="My first sit was 2 days and 2 cats for a homeowner driving from Austin to Dallas."
+      caption="Short cat sits are the ideal entry point for building a trustworthy profile."
       aspectRatio="3/2"
     />
 
-    <h2>Step 3: Apply strategically</h2>
-    <p>
-      I applied to 3 sits total. Not 20. Not 50. High-quality applications beat volume, especially
-      when you’re new. One of those three accepted me. That conversion rate is not luck — it’s
-      positioning.
-    </p>
-
-    <h2>Step 4: Write an application that removes homeowner anxiety</h2>
+    <h2>4. Write Applications that Remove Anxiety</h2>
     <p>
       Your message is not about convincing someone you’re amazing. It’s about making them feel calm
-      about leaving. Here’s the exact type of message I used:
+      about leaving. Avoid long travel manifestos.
     </p>
 
     <blockquote className="prose-quote variant-plain">
-      "Hi [Name], I saw your listing in Austin and would love to care for your cats while you’re
-      away. I work remotely and am usually home, so they’d have consistent attention and care. I’ve
-      spent a lot of time around cats and am very comfortable with feeding routines, litter care,
-      and respecting their space. Since your trip is short, I’m happy to do a quick video call
-      beforehand if that helps you feel comfortable. I know leaving pets can be stressful, and I’m
-      happy to answer any questions. Best, Yulia"
+      <strong>Pro Tip:</strong> Always address the pets by name in your message.
     </blockquote>
 
-    <h2>Step 5: Expect rejection — it’s normal and meaningless</h2>
-    <p>
-      Even with a solid application, you will get declined or ignored. Reasons include: someone
-      applied earlier, someone had previous reviews, or plans changed. This is not feedback on you.
-      Most people quit too early because they assume silence means failure. It doesn’t.
-    </p>
+    <ul>
+      <li>
+        <strong>Mention Home Presence:</strong> If you work remotely, state it clearly. Owners love
+        knowing someone is physically there for the pets.
+      </li>
+      <li>
+        <strong>Offer a Video Call:</strong> Proactively offering a call shows transparency and
+        responsibility.
+      </li>
+      <li>
+        <strong>Relevant Experience:</strong> Mention your background with animals even if it wasn't
+        through a formal house sitting app.
+      </li>
+    </ul>
 
+    <h2>5. Expect Rejection</h2>
     <p>
-      If you're seeing rejections, check my guide on the:{' '}
+      Even with a solid application, you will be ignored. Most rejections are due to returning
+      sitters or timing. For more on this, read my guide on:{' '}
       <Link href="/blog/why-trusted-housesitters-applications-get-rejected">
-        top reasons applications get rejected
-      </Link>{' '}
-      to understand what's in your control.
+        why applications get rejected
+      </Link>
+      .
     </p>
 
-    <h2>Step 6: Once you get one sit, momentum kicks in</h2>
-    <p>
-      After my first sit, I received my first review, homeowners started responding more, and longer
-      sits became realistic. House sitting has a clear snowball effect. The first sit is simply the
-      entry point.
-    </p>
-
-    <div className="prose-accent-box">
-      <h3>My exact first-sit timeline:</h3>
-      <ul>
-        <li>Created my profile</li>
-        <li>Applied to 3 local cat sits</li>
-        <li>Accepted for a 2-day sit</li>
-        <li>Completed the sit successfully</li>
-        <li>Received my first positive review immediately after</li>
-      </ul>
-    </div>
-
-    <p>
-      If you want your first house sit faster: apply off-season, avoid over-saturated destinations,
-      choose cats over dogs, and write calm, specific messages. Be selective, not desperate. This
-      isn’t luck — it’s strategy.
-    </p>
-
-    <div className="prose-accent-box variant-cta">
-      <h3>Get Started with {THS_DISCOUNT}</h3>
-      <p>
-        Ready to build your profile and start sitting? You can get a massive head start on your
-        first year of travel with this special offer.
-      </p>
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Discount: {THS_DISCOUNT}
+    <p className="prose-end">
+      House sitting has a powerful snowball effect. Once you get that first five star review, the
+      world opens up. Focus on the strategy, stay consistent, and land that first sit.
+      <br />
+      <br />
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
+        Save {THS_DISCOUNT} on your membership using my verified referral link.
       </a>
-    </div>
+    </p>
   </>
 );

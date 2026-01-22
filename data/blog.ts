@@ -234,8 +234,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '1',
     slug: 'how-to-get-your-first-house-sit-no-reviews',
-    title: 'How to Get Your First House Sit (Even With No Reviews)',
-    excerpt: 'Proven tips on how to go from zero reviews to getting accepted for your first sit',
+    title: 'How to Get Your First House Sit, No Reviews',
+    excerpt: 'Proven tips on how to go from zero reviews to getting accepted for your first sit.',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
@@ -277,8 +277,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Expertise',
     location: 'Strategy',
     sortOrder: 8,
-    imageUrl:
-      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2070&fit=crop',
     ctaLabel: 'Claim 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: rejectionReasonsContent,
