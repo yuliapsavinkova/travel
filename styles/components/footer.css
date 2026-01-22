@@ -125,6 +125,12 @@
   flex-wrap: wrap;
 }
 
+.footer-policy-group {
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+}
+
 .footer-legal-link {
   font-size: 11px;
   font-weight: 700;
@@ -192,6 +198,11 @@
     text-align: center;
   }
   .footer-legal-links {
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--s-2);
+  }
+  .footer-policy-group {
     justify-content: center;
   }
   .footer-credits {

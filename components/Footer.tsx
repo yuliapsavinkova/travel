@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ACTIVE_YEAR, CURRENT_YEAR, NEXT_YEAR, GLOBAL_STRINGS, NAV_ITEMS } from '../constants';
+import {
+  ACTIVE_YEAR,
+  CURRENT_YEAR,
+  NEXT_YEAR,
+  GLOBAL_STRINGS,
+  NAV_ITEMS,
+  SITE_CONFIG,
+} from '../constants';
 import { ContactTrigger } from './ClientTriggers';
 import { InstagramIcon, LinkedinIcon, MailIcon, SJLogo, ExternalLinkIcon } from './Icons';
 
@@ -24,13 +31,25 @@ const Footer = () => {
               </div>
             </Link>
             <div className="footer-socials">
-              <a href="#" className="social-icon" aria-label="Instagram">
+              <a
+                href={SITE_CONFIG.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label="Instagram"
+              >
                 <InstagramIcon />
               </a>
-              <a href="#" className="social-icon" aria-label="LinkedIn">
+              <a
+                href={SITE_CONFIG.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label="LinkedIn"
+              >
                 <LinkedinIcon />
               </a>
-              <a href="#" className="social-icon" aria-label="Email">
+              <a href={`mailto:${SITE_CONFIG.email}`} className="social-icon" aria-label="Email">
                 <MailIcon size={20} />
               </a>
             </div>
@@ -82,26 +101,28 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <div className="footer-legal-links">
-            <span className="footer-credits">
+            <span className="footer-credits copyright-block">
               <span className="copyright-symbol">&copy;</span>{' '}
               <span className="footer-year-highlight">{CURRENT_YEAR}</span> SITTER JOURNEY
             </span>
-            <Link
-              href="/privacy"
-              className="footer-legal-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              PRIVACY
-            </Link>
-            <Link
-              href="/disclosure"
-              className="footer-legal-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DISCLOSURE
-            </Link>
+            <div className="footer-policy-group">
+              <Link
+                href="/privacy"
+                className="footer-legal-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                PRIVACY
+              </Link>
+              <Link
+                href="/disclosure"
+                className="footer-legal-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DISCLOSURE
+              </Link>
+            </div>
           </div>
           <div className="footer-credits">
             BASED IN THE <span className="footer-year-highlight">USA</span> • TRAVELING FULL-TIME
