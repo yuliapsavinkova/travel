@@ -4,7 +4,7 @@ export { THS_DISCOUNT, THS_LINK };
 import { RESOURCES } from './data/resources';
 
 export * from './data/resources';
-export * from './data/reviews';
+export * from './data/stays';
 export * from './data/blog';
 export * from './data/travel';
 

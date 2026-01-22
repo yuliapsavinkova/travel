@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <CommonDetail
-      image="/portrait.png"
+      image="/portrait-map.jpeg"
       title="About Yulia"
       date="January 2026"
       prevLink={{ label: 'Go to', title: 'Blog', href: '/blog' }}

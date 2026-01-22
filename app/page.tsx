@@ -46,7 +46,7 @@ export default function HomePage() {
           <p className="hero-paragraph">Lessons learned along the way as a full-time traveler</p>
           <div className="hero-button-group">
             <Link href="/blog#archive" className="btn-gold">
-              Read the Blog
+              Read Blog
             </Link>
             <Link href="/resources#archive" className="secondary-btn">
               Resources
@@ -184,7 +184,7 @@ export default function HomePage() {
           >
             <ContactTrigger label="Contact" className="btn-gold" />
             <Link href="/blog#archive" className="secondary-btn">
-              Read the Blog
+              Read Blog
             </Link>
           </div>
         </section>

@@ -33,11 +33,7 @@ export const RESOURCES: ResourceCategory[] = [
         icon: 'home',
         imageUrl:
           'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
-        faqIds: [
-          'ths-membership-worth-it',
-          'ths-membership-discounts',
-          'ths-experience-level-sits',
-        ],
+        faqIds: ['ths-membership-worth-it', 'travel-savings', 'ths-experience-level-sits'],
         prevLink: {
           label: 'Previous',
           title: 'Planet Fitness',

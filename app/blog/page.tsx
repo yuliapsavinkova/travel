@@ -22,10 +22,11 @@ export default function BlogPage() {
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
           <Image
-            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=2400"
+            src="/remote-house.avif"
             alt="Blog"
             fill
             priority
+            unoptimized
             sizes="100vw"
             style={{ objectFit: 'cover' }}
           />
@@ -33,12 +34,12 @@ export default function BlogPage() {
         </div>
 
         <div className="hero-content-overlay content-layer">
-          <div className="sub-header hero-sub-header">My Journey</div>
+          <div className="sub-header hero-sub-header">House Sitting</div>
           <h1 className="display-title">
             The <span className="shimmer-text">Blog.</span>
           </h1>
           <p className="hero-paragraph">
-            I share stories from my life on the road and the lessons learned.
+            I share how to travel sustainably while caring for homes and pets.
           </p>
           <div className="hero-button-group">
             <Link href="#archive" className="btn-gold">
@@ -65,7 +66,7 @@ export default function BlogPage() {
           id="archive"
           style={{ maxWidth: '800px', margin: '0 auto var(--s-8) auto' }}
         >
-          <div className="sub-header">Journal Entry</div>
+          <div className="sub-header">Lessons Learned</div>
           <h2 className="display-title display-title-md">
             The <span className="serif-italic shimmer-text">Archive.</span>
           </h2>

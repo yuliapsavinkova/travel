@@ -11,23 +11,27 @@
   font-weight: 400;
 }
 
-/* Targeted Inline Links: Only apply to actual article text containers */
+/* Targeted Inline Links: Consistent Italic Serif Style */
 .prose-content p a,
 .prose-content li a,
 .prose-content .prose-lead a,
-.prose-content blockquote a {
+.prose-content blockquote a,
+.prose-content .prose-end a {
   color: var(--c-gold);
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
   font-weight: 500;
+  font-family: var(--f-serif);
+  font-style: italic;
   transition: opacity 0.3s ease;
 }
 
 .prose-content p a:hover,
 .prose-content li a:hover,
 .prose-content .prose-lead a:hover,
-.prose-content blockquote a:hover {
+.prose-content blockquote a:hover,
+.prose-content .prose-end a:hover {
   opacity: 0.75;
 }
 
@@ -36,6 +40,18 @@
   color: var(--c-white);
   line-height: 1.6;
   margin-bottom: var(--s-7);
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.prose-end {
+  font-size: 1.15rem;
+  color: var(--c-white);
+  line-height: 1.6;
+  margin-top: var(--s-8);
+  margin-bottom: var(--s-4);
   font-family: var(--f-serif);
   font-style: italic;
   font-weight: 400;

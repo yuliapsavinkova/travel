@@ -88,7 +88,7 @@ const CommonDetail = ({
               <div className="disclosure-main-group">
                 <ShieldCheckIcon size={14} className="disclosure-icon" />
                 <span className="disclosure-text">
-                  Disclosure: This post contains referral or affiliate links.
+                  Disclosure: This post may contain referral or affiliate links.
                 </span>
               </div>
               <Link

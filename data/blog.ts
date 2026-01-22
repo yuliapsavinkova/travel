@@ -87,7 +87,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'is-trusted-housesitters-worth-it-for-sitters',
     title: 'Is TrustedHousesitters Worth It for Sitters? Honest Pros, Cons, and Real Costs',
     excerpt:
-      'A deep dive into the costs, real savings, and pros/cons of house sitting while traveling.',
+      'A deep dive into the costs, real savings, and pros and cons of house sitting while traveling.',
     date: 'January 2026',
     category: 'Review',
     location: 'Financial',
@@ -135,7 +135,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Claim 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: mathContent,
-    faqIds: ['travel-savings', 'travel-hidden-costs', 'ths-membership-worth-it'],
+    faqIds: ['ths-membership-worth-it', 'ths-beginner-difficulty', 'best-platform-travel'],
     prevLink: {
       label: 'Previous',
       title: 'Is It Worth It?',
@@ -173,7 +173,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Claim 25% Off Code',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: costLevelsContent,
-    faqIds: ['ths-membership-worth-it', 'ths-experience-level-sits', 'ths-membership-try'],
+    faqIds: ['travel-savings', 'ths-experience-level-sits', 'ths-membership-try'],
     prevLink: {
       label: 'Previous',
       title: 'Travel Math',
@@ -209,7 +209,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Get 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: thsProfileTipsContent,
-    faqIds: ['ths-photo-aspect', 'ths-profile-length', 'trusted-profile-tips'],
+    faqIds: ['ths-beginner-difficulty', 'ths-rejection-common', 'ths-reporting-safety'],
     prevLink: {
       label: 'Previous',
       title: 'Cost Levels',
@@ -245,7 +245,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Offer: 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: firstHouseSitContent,
-    faqIds: ['ths-beginner-difficulty', 'ths-reviews-starting', 'travel-experience-needed'],
+    faqIds: ['trusted-profile-tips', 'ths-rejection-common', 'travel-savings'],
     prevLink: {
       label: 'Previous',
       title: 'Profile Tips',
@@ -271,9 +271,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: '5',
     slug: 'why-trusted-housesitters-applications-get-rejected',
-    title: 'Top Reasons Why TrustedHousesitters Applications Get Rejected',
-    excerpt:
-      'Rejections happen all the time. Learn the fixable and unfixable reasons to move on and succeed.',
+    title: 'Why My House Sit Application Got Rejected',
+    excerpt: 'Rejections happen. Here’s what you can control and what you cannot.',
     date: 'January 2026',
     category: 'Expertise',
     location: 'Strategy',
@@ -283,7 +282,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaLabel: 'Claim 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: rejectionReasonsContent,
-    faqIds: ['ths-rejection-personal', 'ths-rejection-fix', 'ths-rejection-common'],
+    faqIds: ['ths-rejection-fix', 'ths-reviews-starting', 'ths-reporting-safety'],
     prevLink: {
       label: 'Previous',
       title: 'First Sit Guide',

@@ -6,17 +6,17 @@ export const MASTER_FAQS: FAQItem[] = [
   // =====================================================
   {
     id: 'best-platform-travel',
-    question: 'What is the best platform for traveling long-term?',
+    question: 'What is the best platform for traveling long term?',
     answer:
-      'I find almost all my month-long stays through house sitting. It is by far the most ' +
+      'I find almost all my month long stays through house sitting. It is by far the most ' +
       'sustainable way to see the country.',
     link: { label: 'My Primary Travel Tool', href: '/resources/trusted-housesitters-review' },
   },
   {
     id: 'travel-savings',
-    question: 'How much can you actually save with house-sitting?',
+    question: 'How much can you actually save with house sitting?',
     answer:
-      'House-sitting eliminates lodging costs, the largest travel expense. Depending on ' +
+      'House sitting eliminates lodging costs, the largest travel expense. Depending on ' +
       'the stay, you can save thousands per year.',
     link: {
       label: 'Real Examples & Math',
@@ -25,7 +25,7 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'travel-hidden-costs',
-    question: 'Is house-sitting really free, or are there hidden costs?',
+    question: 'Is house sitting really free, or are there hidden costs?',
     answer:
       'Mostly free, but you cover transport, groceries, and personal items. Planning ' +
       'ensures these remain minimal.',
@@ -36,7 +36,7 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'travel-experience-needed',
-    question: 'Do you need prior experience to start house-sitting?',
+    question: 'Do you need prior experience to start house sitting?',
     answer:
       'Not necessarily. Start with small local assignments. Focus on building a ' +
       'trustworthy profile and clear communication.',
@@ -70,7 +70,7 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'ths-membership-try',
-    question: 'Can I try house-sitting without paying for membership?',
+    question: 'Can I try house sitting without paying for membership?',
     answer:
       'No, membership is required to contact owners. My discount link makes the ' +
       'initial investment significantly cheaper.',
@@ -87,7 +87,7 @@ export const MASTER_FAQS: FAQItem[] = [
     id: 'ths-beginner-difficulty',
     question: 'Is it hard to get accepted for your first house sit?',
     answer:
-      'It takes strategy. Most beginners fail by applying to high-competition sits first. ' +
+      'It takes strategy. Most beginners fail by applying to high competition sits first. ' +
       'Start with shorter local sits.',
     link: { label: 'First Sit Strategy', href: '/blog/how-to-get-your-first-house-sit-no-reviews' },
   },
@@ -96,7 +96,7 @@ export const MASTER_FAQS: FAQItem[] = [
     question: 'What type of first sit is easiest to get?',
     answer:
       'Short local sits, weekends, or houses with fewer pets are easiest. Avoid ' +
-      'competitive, long-term sits at first.',
+      'competitive, long term sits at first.',
     link: {
       label: 'Profile Tips',
       href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
@@ -104,7 +104,7 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'ths-reviews-starting',
-    question: 'Do I need reviews to get my first Trusted-Housesitters sit?',
+    question: 'Do I need reviews to get my first TrustedHousesitters sit?',
     answer:
       'No. Many sitters get their first sit without reviews. What matters is a profile that ' +
       'clearly explains your experience, responsibility, and availability.',
@@ -138,9 +138,9 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'ths-profile-length',
-    question: 'How long should my Trusted-Housesitters profile be?',
+    question: 'How long should my TrustedHousesitters profile be?',
     answer:
-      'Short and focused. Owners skim. Well-structured sections explaining your care ' +
+      'Short and focused. Owners skim. Well structured sections explaining your care ' +
       'standards and home treatment work better than long personal stories.',
     link: {
       label: 'Writing Your Bio',
@@ -149,9 +149,9 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'ths-photo-aspect',
-    question: 'What kind of photos work best on a Trusted-Housesitters profile?',
+    question: 'What kind of photos work best on a TrustedHousesitters profile?',
     answer:
-      'Clear, well-lit photos showing your face are essential. Your main photo should be ' +
+      'Clear, well lit photos showing your face are essential. Your main photo should be ' +
       '3:2 (e.g., 900×600) and ideally include you with a pet.',
     link: {
       label: 'Photo Requirements',
@@ -182,10 +182,10 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'ths-long-term-preference',
-    question: 'Are long-term sits more attractive to owners?',
+    question: 'Are long term sits more attractive to owners?',
     answer:
       'It depends, but many owners prefer sitters who stay longer to reduce disruption ' +
-      'for pets. If you prefer long-term sits, mention it clearly.',
+      'for pets. If you prefer long term sits, mention it clearly.',
     link: {
       label: 'Strategic Applications',
       href: '/blog/how-to-get-your-first-house-sit-no-reviews',
@@ -197,9 +197,9 @@ export const MASTER_FAQS: FAQItem[] = [
   // =====================================================
   {
     id: 'ths-rejection-common',
-    question: 'Is it normal to get rejected on Trusted-Housesitters?',
+    question: 'Is it normal to get rejected on TrustedHousesitters?',
     answer:
-      'Extremely normal. Even top-tier sitters with dozens of reviews get rejected. It is ' +
+      'Extremely normal. Even top tier sitters with dozens of reviews get rejected. It is ' +
       'often a matter of timing, demographics, or a returning sitter applying.',
     link: {
       label: 'Success Strategy',
@@ -208,7 +208,7 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'ths-rejection-personal',
-    question: 'Should I take a Trusted-Housesitters rejection personally?',
+    question: 'Should I take a TrustedHousesitters rejection personally?',
     answer:
       'Absolutely not. Most rejections are due to factors outside your control, such as ' +
       'returning sitters or specific demographic preferences. Always move on immediately.',
@@ -230,7 +230,7 @@ export const MASTER_FAQS: FAQItem[] = [
   },
   {
     id: 'ths-rejection-fix',
-    question: 'How can I stop getting rejected on Trusted-Housesitters?',
+    question: 'How can I stop getting rejected on TrustedHousesitters?',
     answer:
       'Focus on what you can control: get 3 reviews through short local sits, update photos ' +
       'to 3:2 ratio, and ensure your application mentions the pets by name.',
@@ -264,7 +264,7 @@ export const MASTER_FAQS: FAQItem[] = [
     question: 'How do you stay fresh and healthy while traveling between sits?',
     answer:
       'I maintain a nationwide gym membership for consistent workouts and reliable showers. ' +
-      'Planet Fitness is my go-to.',
+      'Planet Fitness is my go to.',
     link: { label: 'Travel Wellness Kit', href: '/resources/planet-fitness-review' },
   },
 
