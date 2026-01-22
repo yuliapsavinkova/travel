@@ -23,6 +23,21 @@
   height: 100%;
   object-fit: cover;
   opacity: var(--img-base-opacity);
+  transition: opacity 0.6s ease;
+  animation: detail-ken-burns 40s infinite alternate linear;
+}
+
+@keyframes detail-ken-burns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.detail-hero-section:hover .detail-hero-image {
+  opacity: 1;
 }
 
 /* Integrated Hero Navigation Links */
@@ -109,14 +124,15 @@
   .hero-disclosure-bar {
     padding: 10px 16px;
     gap: 8px;
-    flex-wrap: nowrap; /* Keep on one line if possible, or controlled wrap */
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
   .disclosure-main-group {
-    justify-content: center;
-    flex-shrink: 1; /* Allow text to squeeze */
+    justify-content: flex-start;
+    flex-shrink: 1;
     min-width: 0;
+    gap: 6px;
   }
 
   .disclosure-icon {
@@ -125,24 +141,22 @@
   }
 
   .disclosure-text {
-    font-size: 8px;
-    letter-spacing: 0.01em;
+    font-size: 8.5px;
+    letter-spacing: 0;
     line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .disclosure-link {
     text-decoration: none;
-    padding: 6px;
+    padding: 8px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--r-pill);
     flex-shrink: 0;
   }
 
   .disclosure-link-text {
-    display: none; /* Hide 'Read More' text */
+    display: none;
   }
 
   .disclosure-mobile-icon {

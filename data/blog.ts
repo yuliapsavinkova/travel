@@ -105,7 +105,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     nextLink: {
       label: 'Next',
-      title: 'Free Travel Math',
+      title: 'Travel Math',
       href: '/blog/can-you-really-travel-for-free-house-sitting-math',
     },
     seoTitle: 'Is TrustedHousesitters Worth It? 2026 Sitter Review & Savings',
