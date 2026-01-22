@@ -85,7 +85,7 @@ export const content = (
 
     <div className="prose-breakout">
       <div className="prose-accent-box variant-cons">
-        <h3>Typical Scenarios for Prospection Members</h3>
+        <h3>Typical Scenarios for Prospective Members</h3>
         <p>
           <strong>Scenario A:</strong> A sitter feels pet care is more demanding than implied.
           <em>(Evaluation: How was the routine described in writing?)</em>

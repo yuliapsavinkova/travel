@@ -11,7 +11,7 @@ export const content = (
     </p>
 
     <blockquote className="prose-quote variant-plain">
-      <strong>Personal advice:</strong> NEVER take it personally.
+      <strong>Advice:</strong> NEVER take it personally.
     </blockquote>
 
     <h2>1. Rejection Factors You Can Control</h2>
@@ -50,27 +50,32 @@ export const content = (
 
     <ul>
       <li>
-        <strong>The Returning Sitter:</strong> A previous sitter responded to the same listing. They
+        <strong>The Returning Sitter:</strong> A previous sitter applied to the same listing. They
         almost always get priority because the owners already trust them and the pet already knows
         them.
       </li>
       <li>
-        <strong>Demographic Preferences:</strong> Some homeowners look specifically for solo female
-        sitters or retired couples. If you do not fit that specific vision, it is completely out of
-        your hands.
+        <strong>Demographic Preferences:</strong> Some homeowners specifically look for solo female
+        sitters or retired couples. If you do not fit that vision, it is completely out of your
+        hands.
       </li>
       <li>
-        <strong>Age Range Filters:</strong> Some owners specifically seek an age range—for example,
-        "a retired couple over 55"—to match the pace of their lifestyle or neighborhood.
+        <strong>Age Range Filters:</strong> Some owners seek a specific age range - for example, “a
+        retired couple over 55” - to match the pace of their lifestyle or neighborhood.
       </li>
       <li>
-        <strong>Subconscious Resemblance:</strong> Owners often subconsciously pick a sitter who
-        resembles themselves. They believe the pet will adjust more easily if the new human looks or
-        moves in a way that feels familiar to the pet.
+        <strong>Subconscious Resemblance:</strong> Owners often subconsciously choose a sitter who
+        resembles themselves. They believe the pet will adjust more easily to someone who feels
+        familiar.
+      </li>
+      <li>
+        <strong>Sitter Location:</strong> Even though the platform is travel-based, many owners
+        prefer a sitter from their own town. This often leads to rejections that have nothing to do
+        with your profile or experience.
       </li>
     </ul>
 
-    <p>
+    <p className="prose-lead">
       Success in house sitting is about finding the right match, not about being perfect for every
       home. Stay focused and keep your strategy sharp.
     </p>
