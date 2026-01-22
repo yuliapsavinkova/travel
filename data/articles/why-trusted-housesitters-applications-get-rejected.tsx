@@ -75,14 +75,13 @@ export const content = (
       </li>
     </ul>
 
-    <p className="prose-end">
+    <div className="prose-end">
       Success in house sitting is about finding the right match, not about being perfect for every
       home. Stay focused and keep your strategy sharp.
-      <span style={{ display: 'block', marginTop: 'var(--s-4)' }}>
-        <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
-          Save {THS_DISCOUNT} on your membership using my verified referral link.
-        </a>
-      </span>
-    </p>
+      <br />
+      <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
+        Save {THS_DISCOUNT} on your membership
+      </a>
+    </div>
   </>
 );

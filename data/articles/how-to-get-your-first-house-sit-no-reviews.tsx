@@ -99,14 +99,13 @@ export const content = (
       .
     </p>
 
-    <p className="prose-end">
+    <div className="prose-end">
       House sitting has a powerful snowball effect. Once you get that first five star review, the
       world opens up. Focus on the strategy, stay consistent, and land that first sit.
       <br />
-      <br />
       <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
-        Save {THS_DISCOUNT} on your membership using my verified referral link.
+        Save {THS_DISCOUNT} on your membership
       </a>
-    </p>
+    </div>
   </>
 );
