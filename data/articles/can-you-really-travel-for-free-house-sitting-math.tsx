@@ -1,5 +1,5 @@
 import React from 'react';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
@@ -16,14 +16,16 @@ export const content = (
     </p>
 
     <h2>What “Free Travel” Actually Means (And Doesn't)</h2>
-    <p>
-      <strong>It does NOT mean:</strong> Free flights, luxury vacations on demand, or zero
-      responsibility.
-    </p>
-    <p>
-      <strong>It DOES mean:</strong> $0 accommodation costs, stable housing while traveling, and
-      predictable food/living expenses instead of nightly hotel rates.
-    </p>
+    <ul>
+      <li>
+        <strong>It does NOT mean:</strong> Free flights, luxury vacations on demand, or zero
+        responsibility.
+      </li>
+      <li>
+        <strong>It DOES mean:</strong> $0 accommodation costs, stable housing while traveling, and
+        predictable food/living expenses instead of nightly hotel rates.
+      </li>
+    </ul>
 
     <h2>Scenario #1: The Slow Traveler (1–2 Sits/Month)</h2>
     <p>
@@ -31,18 +33,10 @@ export const content = (
       moving on.
     </p>
     <ul>
-      <li>
-        <strong>Assumption:</strong> 14 nights per sit, 10 months per year.
-      </li>
-      <li>
-        <strong>Hotel alternative ($100/night):</strong> $14,000 total.
-      </li>
-      <li>
-        <strong>Membership cost:</strong> ~$200.
-      </li>
-      <li>
-        <strong>Net savings:</strong> ~$13,800/year.
-      </li>
+      <li>Assumption: 14 nights per sit, 10 months per year.</li>
+      <li>Hotel alternative ($100/night): $14,000 total.</li>
+      <li>Membership cost: ~$200.</li>
+      <li>Net savings: ~$13,800/year.</li>
     </ul>
     <p>
       Even if you spend $2,000 extra on transport and occasional buffer hotels, you are still over
@@ -106,28 +100,21 @@ export const content = (
       </li>
     </ul>
 
-    <div className="prose-accent-box variant-cons">
-      <h3>Why Most People Fail</h3>
-      <p>
-        They treat it like Airbnb. They apply late, only want the top-tier "Instagram" cities, or
-        have weak profiles. Success rewards flexibility, reliability, and clear communication.
-      </p>
-    </div>
-
+    <h2>Why Most People Fail</h2>
     <p>
+      They treat it like Airbnb. They apply late, only want the top-tier "Instagram" cities, or have
+      weak profiles. Success rewards flexibility, reliability, and clear communication.
+    </p>
+
+    <div className="prose-end">
+      <strong>The Bottom Line</strong>
       So, is it really “free travel”? If by “free” you mean no accommodation costs and radically
       cheaper long-term travel, then absolutely. It doesn't make you rich; it makes travel
       sustainable.
-    </p>
-
-    <div className="prose-accent-box variant-cta">
-      <h3>Start Your Journey</h3>
-      <p>
-        If you're ready to stop paying for hotels and start sitting, use my referral link to get{' '}
-        {THS_DISCOUNT} on your membership.
-      </p>
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Discount: {THS_DISCOUNT}
+      <br />
+      <br />
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        {REFERRALS.THS.label}
       </a>
     </div>
   </>

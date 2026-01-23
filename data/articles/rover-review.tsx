@@ -1,36 +1,48 @@
 import React from 'react';
-import { ROVER_DISCOUNT, ROVER_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
     <p className="prose-lead">
-      Rover is a helpful tool when I have short gaps between my house sits. It allows me to find
-      local pet care opportunities that do not necessarily require an overnight stay. It is a great
-      way to meet more animals and help out pet owners in the local community.
+      Rover is the ultimate side-gig for animal lovers and a vital tool for filling scheduling gaps
+      in a nomadic lifestyle. It allows you to earn while you travel.
     </p>
 
-    <h2>Filling the gaps between sits</h2>
+    <h2>Turning Animal Care into Income</h2>
     <p>
-      I use it to keep my schedule full and stay active with animals even when I am just passing
-      through a city for a few days. It is reliable and the app makes communication with pet owners
-      very easy and transparent.
+      Unlike house sitting exchanges, Rover is a marketplace for paid pet services. I use it
+      primarily for overnight house sitting and drop-in visits. It’s an excellent way to monetize
+      your skills as a responsible sitter while you move between long-term sits.
     </p>
 
-    <p>
-      Whether you need someone to walk your dog or you are looking to earn a little extra while
-      traveling, it is a solid platform that focuses on the well-being of the pets. While my primary
-      stays are through long-term house sitting, having Rover as a backup ensures I'm never without
-      a connection to the pet community.
-    </p>
+    <div className="prose-accent-box variant-pros">
+      <span className="accent-box-label">Why it works for travelers:</span>
+      <ul>
+        <li>
+          <strong>Flexibility:</strong> Set your own rates and availability.
+        </li>
+        <li>
+          <strong>Demand:</strong> High demand in almost every US city.
+        </li>
+        <li>
+          <strong>Safety:</strong> The Rover Guarantee and 24/7 support.
+        </li>
+      </ul>
+    </div>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {ROVER_DISCOUNT}</h3>
-      <p style={{ marginBottom: 'var(--s-4)', fontSize: '1.1rem', fontStyle: 'italic' }}>
-        "Sign up to become a sitter on Rover and earn money caring for dogs and cats in your
-        neighborhood. You'll also get a {ROVER_DISCOUNT} to book a sitter for your own pets."
+      <span className="accent-box-label">Claim Your {REFERRALS.ROVER.discount}</span>
+      <p>
+        Sign up to become a sitter on Rover and start earning. If you use my link, you also get a{' '}
+        {REFERRALS.ROVER.discount} credit for your own pet care needs.
       </p>
-      <a href={ROVER_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Discount: {ROVER_DISCOUNT}
+      <a
+        href={REFERRALS.ROVER.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-gold btn-wide"
+      >
+        {REFERRALS.ROVER.cta}
       </a>
     </div>
   </>

@@ -1,40 +1,48 @@
 import React from 'react';
-import { VISIBLE_DISCOUNT, VISIBLE_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
     <p className="prose-lead">
-      Working while traveling requires a reliable internet connection. Visible is the phone plan I
-      use because it offers unlimited data and a mobile hotspot that actually works across the
-      country.
+      For a digital nomad, internet is oxygen. Visible is the single most important tool in my
+      connectivity kit, providing the reliable unlimited hotspot I need for remote work.
     </p>
 
-    <h2>Staying connected on the road</h2>
+    <h2>The Unlimited Hotspot Hack</h2>
     <p>
-      In my experience, having a predictable monthly cost and the ability to work from almost
-      anywhere makes it an essential part of my resources. I do not have to worry about data caps or
-      finding public WiFi when I am in a new location.
+      Most "unlimited" plans have a hidden hotspot cap. Visible is different. They offer unlimited
+      mobile hotspot data, which has allowed me to work from rural mountain cabins, beachfronts, and
+      suburban homes without a single worry about data overages.
     </p>
 
-    <p>
-      It uses a major network so the coverage is excellent even in more remote areas. For a digital
-      nomad or anyone living a mobile lifestyle, having one less thing to worry about is a huge
-      relief. Whether I'm in a rural farmhouse or a city apartment, my hotspot is my safety net.
-    </p>
+    <div className="prose-accent-box">
+      <span className="accent-box-label">Why I use it:</span>
+      <ul>
+        <li>
+          <strong>Truly Unlimited:</strong> No data caps on your phone or hotspot.
+        </li>
+        <li>
+          <strong>Price:</strong> Simple, flat monthly rate (even lower with a referral).
+        </li>
+        <li>
+          <strong>Network:</strong> Runs on Verizon’s 5G/LTE network—the best in the US.
+        </li>
+      </ul>
+    </div>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {VISIBLE_DISCOUNT} Offer</h3>
+      <span className="accent-box-label">Claim Your {REFERRALS.VISIBLE.discount}</span>
       <p>
-        Ready to start? Use this referral link to {VISIBLE_DISCOUNT} and get your first month of
-        unlimited data for just $5.
+        Get your first month of service for just $5 and save {REFERRALS.VISIBLE.discount} using my
+        verified referral link. It's the best investment a remote worker can make.
       </p>
       <a
-        href={VISIBLE_LINK}
+        href={REFERRALS.VISIBLE.link}
         target="_blank"
         rel="noopener noreferrer"
         className="btn-gold btn-wide"
       >
-        Discount: {VISIBLE_DISCOUNT}
+        {REFERRALS.VISIBLE.cta}
       </a>
     </div>
   </>

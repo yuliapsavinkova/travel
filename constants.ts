@@ -1,12 +1,13 @@
-// Re-export constants from types to ensure they are available through this barrel file
-import { SiteStrings, THS_DISCOUNT, THS_LINK } from './types';
-export { THS_DISCOUNT, THS_LINK };
-import { RESOURCES } from './data/resources';
+import { SiteStrings, REFERRALS } from './types';
 
-export * from './data/resources';
-export * from './data/stays';
-export * from './data/blog';
-export * from './data/travel';
+export { REFERRALS };
+
+// Explicit imports from data files
+import { RESOURCES, ALL_RESOURCES } from './data/resources';
+import { BLOG_POSTS } from './data/blog';
+import { TRAVEL_GUIDES } from './data/travel';
+
+export { RESOURCES, ALL_RESOURCES, BLOG_POSTS, TRAVEL_GUIDES };
 
 const now = new Date();
 export const CURRENT_YEAR = now.getFullYear();
@@ -19,8 +20,6 @@ export const NEXT_YEAR = ACTIVE_YEAR + 1;
  */
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
-  // { label: 'Stays', href: '/stays' },
-  // { label: 'Travel', href: '/travel' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Resources', href: '/resources' },
@@ -29,9 +28,9 @@ export const NAV_ITEMS = [
 
 /**
  * GLOBAL SITE STATISTICS
+ * Removed hardcoded sitsCount to avoid weekly manual updates.
  */
 export const SITE_STATS = {
-  sitsCount: '16',
   statesCount: '28',
   countriesCount: '37',
   clientRating: '5.0',
@@ -53,7 +52,7 @@ export const GLOBAL_STRINGS: SiteStrings = {
   resourcesSectionTitle: 'Resources',
   resourcesSectionDescription: 'The tools and services I use while traveling full-time.',
   travelPromoTitle: 'Join Me',
-  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount link to get ${THS_DISCOUNT} your membership.`,
-  travelPromoLink: THS_LINK,
-  travelPromoBtn: `Get ${THS_DISCOUNT} Now`,
+  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount link to get ${REFERRALS.THS.discount} your membership.`,
+  travelPromoLink: REFERRALS.THS.link,
+  travelPromoBtn: `Get ${REFERRALS.THS.discount} Now`,
 };

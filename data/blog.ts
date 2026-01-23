@@ -241,7 +241,7 @@ export const BLOG_POSTS: BlogPost[] = [
     location: 'Strategy',
     sortOrder: 7,
     imageUrl:
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1655992108235-b9bbf5bb18cc?auto=format&fit=crop&q=80&w=2400',
     ctaLabel: 'Offer: 25% Off Membership',
     ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
     body: firstHouseSitContent,

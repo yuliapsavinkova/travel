@@ -1,18 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
     <p className="prose-lead">
-      It is frustrating to be rejected, and it happens more often than you think, even to
-      experienced sitters. You should never take it personally, because most of the time, it has
-      nothing to do with you. I will share the top reasons why applications get rejected:
+      I am a solo female housesitter and petsitter. I’ve completed dozens of sits across the United
+      States, and one thing I know for sure is that rejection is just part of the experience. My
+      advice has always been: don't take it personally.
     </p>
 
-    <blockquote className="prose-quote variant-plain">
-      <strong>Advice:</strong> NEVER take it personally.
-    </blockquote>
+    <p>
+      Even after so many successful sits, I still get rejected. Most of the time, the "no" has
+      absolutely nothing to do with you. Here is a breakdown of the factors I've identified—the ones
+      you can influence and the ones that are completely out of your hands.
+    </p>
 
     <h2>1. Rejection Factors You Can Control</h2>
     <ul>
@@ -26,7 +28,8 @@ export const content = (
       </li>
       <li>
         <strong>Volume of Competition:</strong> Even if you have several reviews, there are often
-        sitters with dozens more applying for the same high demand homes.
+        sitters with dozens more applying for the same high-demand homes. You can improve your odds
+        by applying quickly to new listings.
       </li>
       <li>
         <strong>Profile Quality:</strong> If your photos are not clear or your bio feels generic,
@@ -60,6 +63,16 @@ export const content = (
         hands.
       </li>
       <li>
+        <strong>The "Mirror" Effect:</strong> Owners often pick sitters who reflect their own
+        lifestyle. A young active couple might pick a young active couple. A retired solo homeowner
+        might feel more comfortable with a solo female sitter.
+      </li>
+      <li>
+        <strong>Solo vs Couple:</strong> Some owners believe a couple provides more "security" or
+        better care for multiple pets. Others prefer a solo person because they have a small guest
+        room or want less wear-and-tear on their home.
+      </li>
+      <li>
         <strong>Age Range Filters:</strong> Some owners seek a specific age range, for example, “a
         retired couple over 55”, to match the pace of their lifestyle or neighborhood.
       </li>
@@ -75,12 +88,27 @@ export const content = (
       </li>
     </ul>
 
+    <blockquote className="prose-quote">
+      "A rejection is never a reflection of your worth as a sitter. Usually, it just means the owner
+      found a specific 'type' of person they had pictured in their head."
+    </blockquote>
+
+    <div className="prose-accent-box">
+      <span className="accent-box-label">My approach:</span>
+      <p>
+        I send my application and I move on. I don't spend time wondering why I wasn't picked. The
+        right sit is always the one that says "yes."
+      </p>
+    </div>
+
     <div className="prose-end">
-      Success in house sitting is about finding the right match, not about being perfect for every
-      home. Stay focused and keep your strategy sharp.
+      <strong>Keep going</strong>
+      Every "no" brings you closer to the next great experience. Don't let the process discourage
+      you—just keep being yourself.
       <br />
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
-        Save {THS_DISCOUNT} on your membership
+      <br />
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        {REFERRALS.THS.label}
       </a>
     </div>
   </>

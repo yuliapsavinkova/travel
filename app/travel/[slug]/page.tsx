@@ -59,7 +59,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
       isAffiliate={true}
       ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
-      prevLink={{ label: 'Previous', title: 'My Stays', href: '/stays' }}
+      prevLink={{ label: 'Previous', title: 'The Blog', href: '/blog' }}
       nextLink={{ label: 'Next', title: 'Resources', href: '/resources' }}
     >
       <div className="flex-col flex-gap-md">

@@ -1,6 +1,5 @@
 /* 
    PROSE CONTENT - Consistently Muted for Reading Comfort 
-   Target: .prose-content
 */
 .prose-content {
   color: var(--c-prose-body);
@@ -11,7 +10,6 @@
   font-weight: 400;
 }
 
-/* Targeted Inline Links: Consistent Italic Serif Style */
 .prose-content p a,
 .prose-content li a,
 .prose-content .prose-lead a,
@@ -46,7 +44,28 @@
   opacity: 0.9;
 }
 
-/* The Sign-off Section (Replaces Conclusion) */
+/* Image blocks and captions */
+.prose-image-block {
+  margin: var(--s-8) 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prose-caption {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--f-main);
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 85%;
+  letter-spacing: 0.01em;
+}
+
 .prose-end {
   margin-top: var(--s-9);
   padding: var(--s-8) var(--s-6);
@@ -60,7 +79,6 @@
   color: var(--c-text-dim);
 }
 
-/* Elegant Brand Flourish (Divider) */
 .prose-end::before {
   content: "";
   position: absolute;
@@ -72,7 +90,6 @@
   background: var(--c-gold-rich);
 }
 
-/* Decorative Glyph */
 .prose-end::after {
   content: "✦";
   position: absolute;
@@ -86,16 +103,17 @@
   font-size: 14px;
 }
 
+/* Sign-off Label - standardized to proper header style */
 .prose-end strong:first-child {
   display: block;
-  font-family: var(--f-main);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--c-gold);
-  margin-bottom: var(--s-4);
+  margin-bottom: var(--s-3);
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .prose-content h2 {
@@ -111,8 +129,8 @@
 
 .prose-content h3 {
   font-family: var(--f-serif);
-  font-size: 1.2rem;
   font-style: italic;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--c-gold);
   margin-top: var(--s-4);
@@ -143,30 +161,6 @@
   text-align: center;
   border-top: 1px solid var(--c-gold-muted);
   border-bottom: 1px solid var(--c-gold-muted);
-}
-
-.prose-image-block {
-  margin: var(--s-8) 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-3);
-  width: 100%;
-}
-
-.prose-image-block img {
-  width: 100%;
-  max-height: 440px;
-  object-fit: cover;
-  border-radius: var(--r-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.prose-caption {
-  font-size: 11px;
-  color: var(--c-text-muted);
-  text-align: center;
-  font-style: italic;
-  letter-spacing: 0.02em;
 }
 
 @media (max-width: 768px) {

@@ -1,110 +1,78 @@
 import React from 'react';
 import Link from 'next/link';
 import ArticleImage from '../../components/ArticleImage';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
     <p className="prose-lead">
-      Your first house sit is the hardest one to get. After that, it gets exponentially easier. The
-      reason most people never get past this stage isn’t lack of qualifications, it’s bad strategy.
-      I will share exactly how I went from zero reviews to a fully booked schedule.
+      I remember trying to get my very first house sit and feeling like it was impossible. Now that
+      I've done sits all over the country, I can see that the first one is definitely the hardest
+      hurdle.
     </p>
 
     <p>
-      I got my first house sit with zero reviews by stacking the odds in my favor instead of
-      competing where everyone else applies. You must understand that for your first sit, it might
-      not be a dream sit, your goal is to do a great job and get a positive review.
+      When you have zero reviews, it’s hard to convince someone to give you their keys. I learned
+      pretty quickly that I couldn't just apply for the "dream" houses in places like NYC or
+      California right away. I had to find a way to show I was trustworthy without having a list of
+      stars on my profile yet.
     </p>
 
-    <h2>1. The Strategy of Risk Removal</h2>
+    <h2>The Austin Story</h2>
     <p>
-      New sitters usually fail because they apply to popular destinations for long stays with
-      generic messages.
+      One of the first sits I landed was in Austin, Texas, right in the middle of the summer. It was
+      105 degrees every single day and most people were trying to leave the city, not go to it.
+      Because competition was low, the homeowners were willing to take a chance on someone new like
+      me. I just wanted that first five-star review, so I was happy to be there even in the heat.
     </p>
-
-    <h2>2. Choose High Demand, Low Competition Locations</h2>
-    <ul>
-      <li>
-        <strong>Off Season Cities:</strong> I chose Austin, Texas in the middle of summer. It was
-        brutal heat, so competition was low, but homeowners were desperate for sitters while they
-        fled to cooler climates.
-      </li>
-      <li>
-        <strong>Less Famous Areas:</strong> Target local suburbs or smaller cities where the
-        "Instagram" crowd isn't looking.
-      </li>
-      <li>
-        <strong>Peak Travel Windows:</strong> Apply for sits during major holidays when every owner
-        is looking for help at the same time.
-      </li>
-    </ul>
 
     <div className="prose-accent-box">
-      <p>This approach works in:</p>
-      <ul>
-        <li>Hot cities in summer</li>
-        <li>Cold cities in winter</li>
-        <li>Suburban local neighborhoods</li>
-      </ul>
-      <p>You don’t need a destination; you need a review.</p>
+      <span className="accent-box-label">What I stumbled upon:</span>
+      <p>
+        If you're just starting, don't look for the perfect vacation spot. Look for a review. Once
+        you have a couple of people saying you did a good job, it gets much easier to go wherever
+        you want.
+      </p>
     </div>
 
-    <h2>3. If you like Cats, start with Cats and Short Stays</h2>
-    <p>
-      Cats are usually much easier to care for and fewer things can go wrong. Homeowners generally
-      feel more flexible about who they hire for a 3 day cat sit compared to a 3 week multi dog
-      assignment.
-    </p>
+    <h2>A few things that worked for me:</h2>
+    <ul>
+      <li>
+        <strong>I looked for short stays:</strong> People are usually less worried about a 2-day cat
+        sit than a month-long stay with three dogs. Short sits are a great way to build up your
+        profile fast.
+      </li>
+      <li>
+        <strong>I was honest about being new:</strong> I didn't try to hide that this was my first
+        time. I told them I worked from home and would be with their pets all day, which helped them
+        feel better.
+      </li>
+      <li>
+        <strong>I used the pets' names:</strong> It sounds small, but I always made sure to talk
+        about their pets specifically in my message so they knew I actually read their post.
+      </li>
+    </ul>
 
     <ArticleImage
       src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=1200"
-      alt="Cat in a sunlit home"
-      caption="Short cat sits are the ideal entry point for building a trustworthy profile."
+      alt="Cat in a house"
+      caption="Starting with simple cat sits helped me build the trust I needed for bigger assignments later."
       aspectRatio="3/2"
     />
 
-    <h2>4. Write Applications that Remove Anxiety</h2>
-    <p>
-      Your message is not about convincing someone you’re amazing. It’s about making them feel calm
-      about leaving. Avoid long travel manifestos.
-    </p>
-
-    <blockquote className="prose-quote variant-plain">
-      <strong>Pro Tip:</strong> Always address the pets by name in your message.
+    <blockquote className="prose-quote">
+      "You aren't trying to be a pro on day one. You're just showing a homeowner that you care about
+      their pets and will keep their house clean."
     </blockquote>
 
-    <ul>
-      <li>
-        <strong>Mention Home Presence:</strong> If you work remotely, state it clearly. Owners love
-        knowing someone is physically there for the pets.
-      </li>
-      <li>
-        <strong>Offer a Video Call:</strong> Proactively offering a call shows transparency and
-        responsibility.
-      </li>
-      <li>
-        <strong>Relevant Experience:</strong> Mention your background with animals even if it wasn't
-        through a formal house sitting app.
-      </li>
-    </ul>
-
-    <h2>5. Expect Rejection</h2>
-    <p>
-      Even with a solid application, you will be ignored. Most rejections are due to returning
-      sitters or timing. For more on this, read my guide on:{' '}
-      <Link href="/blog/why-trusted-housesitters-applications-get-rejected">
-        why applications get rejected
-      </Link>
-      .
-    </p>
-
     <div className="prose-end">
-      House sitting has a powerful snowball effect. Once you get that first five star review, the
-      world opens up. Focus on the strategy, stay consistent, and land that first sit.
+      <strong>Keep trying</strong>
+      It can be a bit discouraging at first, but don't give up. Once you get that first "yes," the
+      whole world opens up. I hope these simple things I found out help you land your first sit too.
       <br />
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
-        Save {THS_DISCOUNT} on your membership
+      <br />
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        {REFERRALS.THS.label}
       </a>
     </div>
   </>

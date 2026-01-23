@@ -1,51 +1,62 @@
 import React from 'react';
 import ArticleImage from '../../components/ArticleImage';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
     <p className="prose-lead">
       Understanding the different membership tiers for sitters on TrustedHousesitters is key to
-      choosing the plan that fits your travel style and safety needs.
+      choosing the plan that fits your risk tolerance and travel style.
     </p>
 
     <p>
-      TrustedHousesitters offers three main levels of membership specifically for
-      <strong>sitters</strong>: Basic, Standard, and Premium. These are separate from owner
-      memberships.
+      TrustedHousesitters offers three main tiers for sitters. Each comes with the same core ability
+      to apply for unlimited sits, but the differences in insurance and perks are significant.
     </p>
 
     <ArticleImage
       src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200"
       alt="Happy dog in a well-maintained home"
-      caption="Choosing the right sitter membership level depends on how often you plan to sit."
+      caption="Choosing the right sitter membership level depends on your frequency of travel."
       aspectRatio="3/2"
     />
 
     <h2>1. The Basic Sitter Plan</h2>
     <p>
-      The entry-level plan. It gives you access to unlimited sits worldwide and allows you to build
-      your professional sitter profile. Ideal for budget-conscious sitters.
+      The entry-level plan. Best for local sitters or those who only plan to sit once or twice a
+      year. It includes: Unlimited sits worldwide and basic profile verification.
     </p>
 
     <h2>2. The Standard Sitter Plan</h2>
     <p>
-      The most popular choice. It includes everything in Basic, plus{' '}
-      <strong>Accident & Liability Protection</strong> and a 24/7 Vet Line, which is vital in
-      unfamiliar locations.
+      The most popular choice and the one I recommend. It includes everything in Basic, plus:
+      <strong>Accident & Third Party Liability Protection</strong>, 24/7 Vet Line, and basic
+      identity verification. This is essential for long-term travel.
     </p>
 
     <h2>3. The Premium Sitter Plan</h2>
     <p>
-      For full-time nomads. It includes <strong>Sit Cancellation Insurance</strong> (to help cover
-      hotels if owners cancel) and global airport lounge passes.
+      For full-time nomads who rely on house sitting for housing. It includes:
+      <strong>Sit Cancellation Insurance</strong> (which covers hotel costs if an owner cancels last
+      minute), 24/7 Priority Support, and Global Airport Lounge passes.
     </p>
 
-    <div className="prose-accent-box variant-cta">
-      <h3>Join with {THS_DISCOUNT}</h3>
-      <p>Ready to choose your tier? Use my referral link to get {THS_DISCOUNT} your first year.</p>
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Discount: {THS_DISCOUNT}
+    <div className="prose-accent-box">
+      <h3>Which should you choose?</h3>
+      <p>
+        I personally use the <strong>Standard</strong> plan. The liability protection provides peace
+        of mind when staying in expensive homes with beloved pets.
+      </p>
+    </div>
+
+    <div className="prose-end">
+      <strong>Ready to Join?</strong>
+      Whichever plan you choose, you can use my referral link to get {REFERRALS.THS.discount} your
+      first year.
+      <br />
+      <br />
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        {REFERRALS.THS.label}
       </a>
     </div>
   </>

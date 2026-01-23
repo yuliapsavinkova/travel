@@ -1,5 +1,5 @@
 import React from 'react';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
@@ -21,34 +21,26 @@ export const content = (
       <li>Unclear responsibilities</li>
       <li>Different interpretations of what was agreed</li>
     </ul>
-
-    <p className="prose-quote variant-plain">
-      In other words: <strong>misalignment, not misconduct.</strong>
-    </p>
-
     <p>
-      TrustedHousesitters is a matching platform, so its processes are built around what was
-      described, agreed to, and documented.
+      In other words: <strong>misalignment, not misconduct.</strong> TrustedHousesitters is a
+      matching platform, so its processes are built around what was described, agreed to, and
+      documented.
     </p>
 
     <h2>Can a sit be reported?</h2>
     <p>
-      <strong>Yes.</strong> Either party — the sitter or the homeowner — can report a sit.
-    </p>
-    <p>
-      Reports can be made during the sit (if the issue is ongoing) or after the sit ends. Reporting
-      exists to formally document an issue when it can’t be resolved directly.
+      Yes. Either party — the sitter or the homeowner — can report a sit. Reports can be made during
+      the sit (if the issue is ongoing) or after the sit ends. Reporting exists to formally document
+      an issue when it can’t be resolved directly.
     </p>
 
-    <div className="prose-accent-box">
-      <h3>When do people usually report a sit?</h3>
-      <ul>
-        <li>The pet care routine differs from what was described</li>
-        <li>The home condition or amenities are not as expected</li>
-        <li>There’s disagreement about time commitments or boundaries</li>
-        <li>A safety, welfare, or access concern appears</li>
-      </ul>
-    </div>
+    <h2>When do people usually report a sit?</h2>
+    <ul>
+      <li>The pet care routine differs from what was described</li>
+      <li>The home condition or amenities are not as expected</li>
+      <li>There’s disagreement about time commitments or boundaries</li>
+      <li>A safety, welfare, or access concern appears</li>
+    </ul>
 
     <h2>Why written documentation matters</h2>
     <p>TrustedHousesitters relies primarily on written information inside the platform:</p>
@@ -64,49 +56,40 @@ export const content = (
     </p>
 
     <h2>Common types of reported situations</h2>
-
-    <h3>1. Expectation mismatches</h3>
     <p>
-      These usually come down to how specific the listing was. Examples include a pet requiring more
-      time than implied, or additional pets not being mentioned clearly.
+      <strong>1. Expectation mismatches:</strong> These usually come down to how specific the
+      listing was. Examples include a pet requiring more time than implied, or additional pets not
+      being mentioned clearly.
+    </p>
+    <p>
+      <strong>2. Responsibility or boundary questions:</strong> Common disagreements involve
+      cleaning expectations, how long pets can be left alone, or undisclosed use of cameras. These
+      are evaluated against what was explicitly stated.
+    </p>
+    <p>
+      <strong>3. Safety or welfare concerns:</strong> Health issues, unsafe living conditions, or
+      undisclosed surveillance are usually raised as soon as they are noticed.
     </p>
 
-    <h3>2. Responsibility or boundary questions</h3>
-    <p>
-      Common disagreements involve cleaning expectations, how long pets can be left alone, or
-      undisclosed use of cameras. These are evaluated against what was explicitly stated.
-    </p>
-
-    <h3>3. Safety or welfare concerns</h3>
-    <p>
-      Health issues, unsafe living conditions, or undisclosed surveillance are usually raised as
-      soon as they are noticed.
-    </p>
-
-    <div className="prose-breakout">
-      <div className="prose-accent-box variant-cons">
-        <h3>Typical Scenarios for Prospective Members</h3>
-        <p>
-          <strong>Scenario A:</strong> A sitter feels pet care is more demanding than implied.
-          <em>(Evaluation: How was the routine described in writing?)</em>
-        </p>
-
-        <p>
-          <strong>Scenario B:</strong> A sitter is unhappy with home cleanliness.
-          <em>(Evaluation: How was the home described and when was the concern raised?)</em>
-        </p>
-
-        <p>
-          <strong>Scenario C:</strong> Disagreement about "alone time" for pets.
-          <em>(Evaluation: Was a specific hour limit confirmed in messages?)</em>
-        </p>
-
-        <p>
-          <strong>Scenario D:</strong> Undisclosed cameras are found.
-          <em>(Evaluation: Transparency upfront is a recurring requirement.)</em>
-        </p>
-      </div>
-    </div>
+    <h2>Typical Scenarios for Prospective Members</h2>
+    <ul>
+      <li>
+        <strong>Scenario A:</strong> A sitter feels pet care is more demanding than implied.
+        (Evaluation: How was the routine described in writing?)
+      </li>
+      <li>
+        <strong>Scenario B:</strong> A sitter is unhappy with home cleanliness. (Evaluation: How was
+        the home described and when was the concern raised?)
+      </li>
+      <li>
+        <strong>Scenario C:</strong> Disagreement about "alone time" for pets. (Evaluation: Was a
+        specific hour limit confirmed in messages?)
+      </li>
+      <li>
+        <strong>Scenario D:</strong> Undisclosed cameras are found. (Evaluation: Transparency
+        upfront is a recurring requirement.)
+      </li>
+    </ul>
 
     <h2>How members reduce risk</h2>
     <p>Although reporting exists, most experienced members focus on prevention by:</p>
@@ -116,20 +99,15 @@ export const content = (
       <li>Documenting important details early if something feels off</li>
     </ul>
 
-    <p>
-      <strong>Key takeaway:</strong> If a sit goes wrong, the process centers on what was documented
-      and agreed to, not on assumptions. For most, issues are uncommon — and clarity and
-      communication matter more than anything else.
-    </p>
-
-    <div className="prose-accent-box variant-cta">
-      <h3>Join a Trusted Community</h3>
-      <p>
-        Ready to start sitting with confidence? Use my verified referral link to get
-        {THS_DISCOUNT} your annual membership.
-      </p>
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Discount: {THS_DISCOUNT}
+    <div className="prose-end">
+      <strong>Key Takeaway</strong>
+      If a sit goes wrong, the process centers on what was documented and agreed to, not on
+      assumptions. For most, issues are uncommon — and clarity and communication matter more than
+      anything else.
+      <br />
+      <br />
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        {REFERRALS.THS.label}
       </a>
     </div>
   </>

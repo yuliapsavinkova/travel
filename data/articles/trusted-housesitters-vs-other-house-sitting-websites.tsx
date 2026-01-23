@@ -1,7 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import ArticleImage from '../../components/ArticleImage';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
@@ -23,17 +22,14 @@ export const content = (
       <li>Trust and reputation matter more than platform features.</li>
       <li>Availability depends heavily on geography.</li>
     </ul>
-
-    <div className="prose-accent-box">
-      <p>
-        Every platform lives or dies on sit volume and trust mechanisms. That’s where the real
-        differences are.
-      </p>
-    </div>
+    <p>
+      Every platform lives or dies on sit volume and trust mechanisms. That’s where the real
+      differences are.
+    </p>
 
     <h2>1. TrustedHousesitters (THS)</h2>
     <p>
-      <strong>What it does well</strong>
+      <strong>What it does well:</strong>
     </p>
     <ul>
       <li>By far the largest number of listings worldwide</li>
@@ -41,28 +37,22 @@ export const content = (
       <li>Structured applications and sit histories</li>
       <li>High adoption in expensive cities (NYC, London, Sydney)</li>
     </ul>
-
     <p>
-      <strong>Real drawbacks</strong>
+      <strong>Real drawbacks:</strong>
     </p>
     <ul>
       <li>Annual membership fee (higher than competitors)</li>
       <li>Popular sits get competitive</li>
       <li>Not friendly to last-minute planners</li>
     </ul>
-
     <p>
-      <strong>THS works best if:</strong>
+      THS works best if you want international or major-city sits, you’re planning ahead, and you
+      plan to use it long term.
     </p>
-    <ul>
-      <li>You want international or major-city sits</li>
-      <li>You’re planning ahead</li>
-      <li>You plan to use it long term</li>
-    </ul>
 
     <ArticleImage
       src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1200"
-      alt="Solo female traveler planning a trip on a laptop with her dog"
+      alt="Solo female traveler planning a trip"
       caption="Choosing the right platform depends on your travel goals and how much you plan ahead."
       aspectRatio="3/2"
     />
@@ -89,38 +79,25 @@ export const content = (
       </li>
     </ul>
 
-    <div className="prose-accent-box variant-plain">
-      <h3>Which one is actually best?</h3>
-      <p>
-        For most people, TrustedHousesitters wins because more sits equals more chances to land a
-        match. It offers the best long-term ROI if you actually travel frequently.
-      </p>
-    </div>
+    <h2>Which one is actually best?</h2>
+    <p>
+      For most people, TrustedHousesitters wins because more sits equals more chances to land a
+      match. It offers the best long-term ROI if you actually travel frequently.
+    </p>
 
     <p>
       If you’re still unsure whether house sitting itself makes sense for you—and not just the
       platform—you might be comparing it to paid options like Rover.
     </p>
 
-    <Link
-      href="/blog/trusted-housesitters-vs-rover-comparison"
-      className="faq-action-row"
-      style={{
-        marginTop: 'var(--s-4)',
-        border: 'none',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <span>THS vs Rover: What People Get Wrong</span>
-      <span>→</span>
-    </Link>
-
-    <div className="prose-accent-box variant-cta">
-      <h3>Join the Global Leader</h3>
-      <p>Ready to access the largest network of sits? Use my link for {THS_DISCOUNT} off.</p>
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Discount: {THS_DISCOUNT}
+    <div className="prose-end">
+      <strong>Make your choice</strong>
+      The right platform is the one that has the most sits where you actually want to go. For me,
+      that has consistently been TrustedHousesitters.
+      <br />
+      <br />
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        {REFERRALS.THS.label}
       </a>
     </div>
   </>

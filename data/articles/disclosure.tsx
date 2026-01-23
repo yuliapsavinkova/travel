@@ -1,5 +1,6 @@
 import React from 'react';
-import { ROVER_LINK, THS_LINK, VISIBLE_LINK, PF_LINK } from '../../types';
+// Correcting imports: use REFERRALS instead of individual missing constants
+import { REFERRALS } from '../../types';
 
 export const disclosureContent = (
   <>
@@ -43,7 +44,7 @@ export const disclosureContent = (
       <ul>
         <li>
           <strong>
-            <a href={THS_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
               TrustedHousesitters
             </a>
             :
@@ -52,7 +53,7 @@ export const disclosureContent = (
         </li>
         <li>
           <strong>
-            <a href={ROVER_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={REFERRALS.ROVER.link} target="_blank" rel="noopener noreferrer">
               Rover
             </a>
             :
@@ -61,7 +62,7 @@ export const disclosureContent = (
         </li>
         <li>
           <strong>
-            <a href={VISIBLE_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={REFERRALS.VISIBLE.link} target="_blank" rel="noopener noreferrer">
               Visible
             </a>
             :
@@ -70,7 +71,7 @@ export const disclosureContent = (
         </li>
         <li>
           <strong>
-            <a href={PF_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={REFERRALS.PF.link} target="_blank" rel="noopener noreferrer">
               Planet Fitness
             </a>
             :

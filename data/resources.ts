@@ -1,15 +1,4 @@
-import {
-  ResourceCategory,
-  ResourceItem,
-  THS_DISCOUNT,
-  VISIBLE_DISCOUNT,
-  PF_DISCOUNT,
-  ROVER_DISCOUNT,
-  ROVER_LINK,
-  THS_LINK,
-  VISIBLE_LINK,
-  PF_LINK,
-} from '../types';
+import { ResourceCategory, ResourceItem, REFERRALS } from '../types';
 import { content as thsContent } from './articles/trusted-housesitters-review';
 import { content as roverContent } from './articles/rover-review';
 import { content as visibleContent } from './articles/visible-review';
@@ -28,8 +17,8 @@ export const RESOURCES: ResourceCategory[] = [
           'Where I find almost all of my house sits. Use my link for a membership discount.',
         date: 'January 2026',
         body: thsContent,
-        discountText: THS_DISCOUNT,
-        link: THS_LINK,
+        discountText: REFERRALS.THS.discount,
+        link: REFERRALS.THS.link,
         icon: 'home',
         imageUrl:
           'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
@@ -40,8 +29,8 @@ export const RESOURCES: ResourceCategory[] = [
           href: '/resources/planet-fitness-review',
         },
         nextLink: { label: 'Next', title: 'Rover', href: '/resources/rover-review' },
-        seoTitle: `TrustedHousesitters Review 2026: ${THS_DISCOUNT} Membership Discount Code`,
-        seoDescription: `Verified TrustedHousesitters review for 2026 by an active sitter. Get ${THS_DISCOUNT} on your annual membership with this referral link.`,
+        seoTitle: `TrustedHousesitters Review 2026: ${REFERRALS.THS.discount} Membership Discount Code`,
+        seoDescription: `Verified TrustedHousesitters review for 2026 by an active sitter. Get ${REFERRALS.THS.discount} on your annual membership with this referral link.`,
         seoKeywords: [
           'trusted-housesitters review',
           'trusted-housesitters discount code',
@@ -57,11 +46,11 @@ export const RESOURCES: ResourceCategory[] = [
         slug: 'rover-review',
         name: 'Rover Review',
         subtitle: '(Written by an active sitter)',
-        description: `Earn money as a pet sitter and get a ${ROVER_DISCOUNT} for your own pets.`,
+        description: `Earn money as a pet sitter and get a ${REFERRALS.ROVER.discount} for your own pets.`,
         date: 'January 2026',
         body: roverContent,
-        discountText: ROVER_DISCOUNT,
-        link: ROVER_LINK,
+        discountText: REFERRALS.ROVER.discount,
+        link: REFERRALS.ROVER.link,
         icon: 'heart',
         imageUrl:
           'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
@@ -72,8 +61,8 @@ export const RESOURCES: ResourceCategory[] = [
           href: '/resources/trusted-housesitters-review',
         },
         nextLink: { label: 'Next', title: 'Visible', href: '/resources/visible-review' },
-        seoTitle: `Rover Review 2026: Claim Your ${ROVER_DISCOUNT} Today`,
-        seoDescription: `Honest Rover review by an active sitter. Sign up to earn money as a sitter and get a ${ROVER_DISCOUNT} for your own pet care.`,
+        seoTitle: `Rover Review 2026: Claim Your ${REFERRALS.ROVER.discount} Today`,
+        seoDescription: `Honest Rover review by an active sitter. Sign up to earn money as a sitter and get a ${REFERRALS.ROVER.discount} for your own pet care.`,
         seoKeywords: [
           'rover app review',
           'pet sitting promo code',
@@ -92,8 +81,8 @@ export const RESOURCES: ResourceCategory[] = [
         description: 'The phone plan I use for unlimited data and hotspot.',
         date: 'January 2026',
         body: visibleContent,
-        discountText: VISIBLE_DISCOUNT,
-        link: VISIBLE_LINK,
+        discountText: REFERRALS.VISIBLE.discount,
+        link: REFERRALS.VISIBLE.link,
         icon: 'smartphone',
         imageUrl:
           'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200',
@@ -105,7 +94,7 @@ export const RESOURCES: ResourceCategory[] = [
           href: '/resources/planet-fitness-review',
         },
         seoTitle: 'Visible Wireless Review: Best Unlimited Plan for Travelers',
-        seoDescription: `Personal review of Visible Wireless for nomadic life. Get your first month of unlimited data and ${VISIBLE_DISCOUNT} with referral code.`,
+        seoDescription: `Personal review of Visible Wireless for nomadic life. Get your first month of unlimited data and ${REFERRALS.VISIBLE.discount} with referral code.`,
         seoKeywords: [
           'visible wireless nomad review',
           'unlimited hotspot for travelers',
@@ -124,8 +113,8 @@ export const RESOURCES: ResourceCategory[] = [
         description: 'Gym access across the country for workouts and showers.',
         date: 'January 2026',
         body: planetFitnessContent,
-        discountText: PF_DISCOUNT,
-        link: PF_LINK,
+        discountText: REFERRALS.PF.discount,
+        link: REFERRALS.PF.link,
         icon: 'award',
         imageUrl:
           'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200',
@@ -137,7 +126,7 @@ export const RESOURCES: ResourceCategory[] = [
           href: '/resources/trusted-housesitters-review',
         },
         seoTitle: 'Planet Fitness Review: Essential for Full-Time Travel',
-        seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${PF_DISCOUNT} with referral code.`,
+        seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${REFERRALS.PF.discount} with referral code.`,
         seoKeywords: [
           'planet fitness traveler review',
           'gym membership for nomads',

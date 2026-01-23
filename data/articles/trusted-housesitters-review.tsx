@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
@@ -8,6 +8,13 @@ export const content = (
       TrustedHousesitters is the main platform I use to travel full-time. The concept is simple: I
       stay in homes for free. In exchange, owners get reliable care for their beloved furry family
       members. There is no money involved, and I am treated as a guest rather than an employee.
+    </p>
+
+    <p>
+      As a solo female housesitter and petsitter, I have completed numerous sits across the United
+      States. I can say with confidence that this is the single most effective way to travel
+      sustainably. It is not just about a free place to stay; it is about a mutual exchange of trust
+      that benefits both the sitter and the pet owner.
     </p>
 
     <h2>Why I Use This Platform</h2>
@@ -38,17 +45,26 @@ export const content = (
     <p>
       Many homeowners are incredibly warm. They often go out of their way to show appreciation and
       make you comfortable; they even sometimes invite you out for a meal or leave thoughtful gifts
-      on your arrival.
+      on your arrival. What sets TrustedHousesitters apart is the sense of community. You aren't
+      just a guest; you are a temporary steward of a home. I've built lasting relationships with
+      homeowners who appreciate knowing their pets are happy and their home is safe while they are
+      away.
     </p>
 
     <div className="prose-accent-box variant-cta">
-      <h3>Claim Your {THS_DISCOUNT} Sitter Membership</h3>
+      <h3>Claim Your {REFERRALS.THS.discount} Sitter Membership</h3>
       <p>
-        Ready to start your own journey? Use this referral link to get {THS_DISCOUNT} your annual
-        membership. The savings apply to any of their annual membership tiers.
+        Ready to start your own journey? Use my verified referral link to get{' '}
+        {REFERRALS.THS.discount} your annual sitter membership. The savings apply to any of their
+        annual membership tiers.
       </p>
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Discount: {THS_DISCOUNT}
+      <a
+        href={REFERRALS.THS.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-gold btn-wide"
+      >
+        Discount: {REFERRALS.THS.discount}
       </a>
     </div>
   </>

@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleImage from '../../components/ArticleImage';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const content = (
   <>
@@ -23,7 +23,7 @@ export const content = (
     </p>
 
     <div className="prose-accent-box">
-      <h3>Image rules for success:</h3>
+      <span className="accent-box-label">Image rules for success:</span>
       <ul>
         <li>Show your face clearly in your main profile photo</li>
         <li>Include at least one photo of you with a pet (dog or cat both work)</li>
@@ -39,10 +39,9 @@ export const content = (
       <li>Examples: 900 × 600, 1500 × 1000, 3000 × 2000</li>
       <li>The width of your photo should always be 1.5 times the height</li>
     </ul>
-
     <p>
       If you upload a square or vertical image, TrustedHousesitters will shrink it and it won’t
-      display full-size. That immediately looks sloppy and unprofessional. authentic, well-lit
+      display full-size. That immediately looks sloppy and unprofessional. Authentic, well-lit
       photos with animals build immediate rapport.
     </p>
 
@@ -53,7 +52,9 @@ export const content = (
       aspectRatio="3/2"
     />
 
-    <h3>Additional photos to include:</h3>
+    <p>
+      <strong>Additional photos to include:</strong>
+    </p>
     <ul>
       <li>You interacting with animals (playing, walking, cuddling)</li>
       <li>Natural settings — homes, gardens, outdoors</li>
@@ -68,7 +69,7 @@ export const content = (
     </p>
 
     <div className="prose-accent-box variant-cons">
-      <h3>What NOT to do:</h3>
+      <span className="accent-box-label">What NOT to do:</span>
       <ul>
         <li>Long childhood stories about your first hamster</li>
         <li>Travel manifestos about your "soul searching" journey</li>
@@ -76,15 +77,11 @@ export const content = (
       </ul>
     </div>
 
-    <h3>What to do instead:</h3>
-    <ul>
-      <li>Make it easy for an owner to picture you in their home</li>
-      <li>Answer their unspoken questions quickly</li>
-      <li>
-        Focus on: What pets you’ve cared for, how you structure your day around animals, and what
-        kind of sitter you are in practical terms.
-      </li>
-    </ul>
+    <p>
+      <strong>What to do instead:</strong> Make it easy for an owner to picture you in their home.
+      Answer their unspoken questions quickly. Focus on: What pets you’ve cared for, how you
+      structure your day around animals, and what kind of sitter you are in practical terms.
+    </p>
 
     <h2>3. Responsibility and Cleanliness</h2>
     <p>
@@ -125,14 +122,14 @@ export const content = (
       updates signal that you are active and engaged.
     </p>
 
-    <div className="prose-accent-box variant-cta">
-      <h3>Get Started with a Discount</h3>
-      <p>
-        Ready to build your profile and start sitting? Use my discount to join and start applying
-        smarter, not harder.
-      </p>
-      <a href={THS_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold btn-wide">
-        Claim your {THS_DISCOUNT} Discount
+    <div className="prose-end">
+      <strong>Build your foundation</strong>
+      Once your profile is solid, you're ready to start applying. The first sit is the hardest, but
+      a clear profile makes it much more likely.
+      <br />
+      <br />
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        {REFERRALS.THS.label}
       </a>
     </div>
   </>

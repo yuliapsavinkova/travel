@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import CommonDetail from '../../components/CommonDetail';
 import FAQSection from '../../components/FAQSection';
 import { MASTER_FAQS } from '../../data/faqs';
-import { THS_DISCOUNT, THS_LINK } from '../../types';
+import { REFERRALS } from '../../types';
 
 export const metadata: Metadata = {
   title: 'FAQ: House Sitting & Nomadic Travel | Sitter Journey',
@@ -34,18 +34,18 @@ export default function FAQPage() {
         </div>
 
         <div className="prose-accent-box variant-cta" style={{ marginTop: 'var(--s-9)' }}>
-          <h3>Get {THS_DISCOUNT} Membership</h3>
+          <span className="accent-box-label">Get {REFERRALS.THS.discount} Membership</span>
           <p>
             Ready to start your journey? Use my verified referral link to get
-            {THS_DISCOUNT} your annual membership.
+            {REFERRALS.THS.discount} your annual membership.
           </p>
           <a
-            href={THS_LINK}
+            href={REFERRALS.THS.link}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold btn-wide"
           >
-            Discount: {THS_DISCOUNT}
+            Discount: {REFERRALS.THS.discount}
           </a>
         </div>
       </div>

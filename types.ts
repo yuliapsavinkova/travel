@@ -3,20 +3,34 @@ import { ReactNode } from 'react';
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
 /**
- * GLOBAL CONFIGURATION CONSTANTS - Descriptive labels for UI display
+ * SINGLE SOURCE OF TRUTH FOR REFERRALS
  */
-export const THS_DISCOUNT = '25% Off';
-export const VISIBLE_DISCOUNT = 'Save $20';
-export const PF_DISCOUNT = '$1 Down';
-export const ROVER_DISCOUNT = '$20 Credit';
-
-/**
- * SINGLE SOURCE OF TRUTH FOR LINKS
- */
-export const THS_LINK = 'https://trustedhousesitters.com/refer/raf943607';
-export const ROVER_LINK = 'https://www.rover.com/ambas-refer-a-friend/Q93GankN';
-export const VISIBLE_LINK = 'https://www.visible.com/get/?66LWM29';
-export const PF_LINK = 'https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ';
+export const REFERRALS = {
+  THS: {
+    link: 'https://trustedhousesitters.com/refer/raf943607',
+    discount: '25% Off',
+    label: 'Claim 25% Off Membership',
+    cta: '25% Off Membership',
+  },
+  ROVER: {
+    link: 'https://www.rover.com/ambas-refer-a-friend/Q93GankN',
+    discount: '$20 Credit',
+    label: 'Claim $20 Rover Credit',
+    cta: '$20 Sitter Credit',
+  },
+  VISIBLE: {
+    link: 'https://www.visible.com/get/?66LWM29',
+    discount: 'Save $20',
+    label: 'Save $20 on Mobile Service',
+    cta: 'Save $20 Now',
+  },
+  PF: {
+    link: 'https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ',
+    discount: '$1 Down',
+    label: 'Join for $1 Down',
+    cta: '$1 Down Promo',
+  },
+};
 
 export interface NavLink {
   label: string;
@@ -32,23 +46,6 @@ export interface FAQItem {
     label: string;
     href: string;
   };
-}
-
-export interface Review {
-  id: string;
-  slug: string;
-  name: string;
-  location: string;
-  rating: number;
-  date: string;
-  text: string;
-  petType: PetType[];
-  imageUrl?: string;
-  sitDescription: string;
-  body?: string | ReactNode;
-  sortOrder?: number;
-  prevLink?: NavLink;
-  nextLink?: NavLink;
 }
 
 export interface BlogPost {
