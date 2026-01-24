@@ -63,6 +63,7 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: string;
+  navTitle?: string; // Shortened title for UI components
   subtitle?: string;
   excerpt: string;
   body: string | ReactNode;

@@ -51,7 +51,9 @@ export async function generateMetadata({
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const sortedPosts = [...BLOG_POSTS].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+  const postIndex = sortedPosts.findIndex((p) => p.slug === slug);
+  const post = sortedPosts[postIndex];
 
   if (!post) {
     return (
@@ -67,6 +69,25 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       </div>
     );
   }
+
+  // Circular logic for navigation
+  const prevIndex = (postIndex - 1 + sortedPosts.length) % sortedPosts.length;
+  const nextIndex = (postIndex + 1) % sortedPosts.length;
+
+  const prevPost = sortedPosts[prevIndex];
+  const nextPost = sortedPosts[nextIndex];
+
+  const prevLink = {
+    label: 'Previous',
+    title: prevPost.navTitle || prevPost.title,
+    href: `/blog/${prevPost.slug}`,
+  };
+
+  const nextLink = {
+    label: 'Next',
+    title: nextPost.navTitle || nextPost.title,
+    href: `/blog/${nextPost.slug}`,
+  };
 
   const faqs = post.faqIds ? getFaqsByIds(post.faqIds) : [];
 
@@ -99,8 +120,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         isAffiliate={true}
         ctaLabel={post.ctaLabel}
         ctaLink={post.ctaLink}
-        prevLink={post.prevLink}
-        nextLink={post.nextLink}
+        prevLink={prevLink}
+        nextLink={nextLink}
         faqs={faqs}
       >
         <div className="flex-col flex-gap-lg">
