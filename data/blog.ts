@@ -259,8 +259,8 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     nextLink: {
       label: 'Next',
-      title: 'Rejections',
-      href: '/blog/why-trusted-housesitters-applications-get-rejected',
+      title: 'Is It Worth It?',
+      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
     },
     seoTitle: 'THS vs Rover: Professional Pet Care Comparison',
     seoDescription:

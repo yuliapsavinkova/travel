@@ -43,8 +43,8 @@ export default function ResourcesPage() {
             <Link href="#archive" className="btn-gold">
               View Resources
             </Link>
-            <Link href="/stays#portfolio" className="secondary-btn">
-              My Stays
+            <Link href="/blog#archive" className="secondary-btn">
+              Read Blog
             </Link>
           </div>
         </div>

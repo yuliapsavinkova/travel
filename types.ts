@@ -48,6 +48,17 @@ export interface FAQItem {
   };
 }
 
+export interface Review {
+  id: string;
+  ownerName: string;
+  location: string;
+  petNames: string;
+  date: string;
+  rating: number;
+  content: string;
+  imageUrl?: string;
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
