@@ -115,7 +115,6 @@ export const post: BlogPost = {
       <p>
         The AI will pull owner and pet names, address special requirements, flag deal-breakers, and
         give you a ready-to-send message.{' '}
-        <strong className="text-gold">Time: 10-15 seconds.</strong>
       </p>
 
       <h2>Step 3: Configure Filters and Alerts</h2>
@@ -141,7 +140,6 @@ export const post: BlogPost = {
           <strong>Copy and send</strong> → Done
         </li>
       </ol>
-
       <p>
         The manual work is copying the listing - everything else should be ready to go.{' '}
         <strong className="text-gold">I read the full listing AFTER I apply.</strong>
@@ -149,9 +147,9 @@ export const post: BlogPost = {
 
       <h2>What If You Missed Something?</h2>
       <p>
-        After applying, I always read the full listing carefully. If I discover a major requirement
-        I missed or something that needs clarification, I send one brief follow-up (but only if
-        truly necessary):
+        After applying, I always read the full listing carefully. You’re in for consideration, so
+        there’s no rush. If I notice a major requirement I missed or something that needs
+        clarification, I send one brief follow-up (but only if truly necessary):
       </p>
       <div className="prose-accent-box variant-cons">
         <p className="text-mono serif-italic">

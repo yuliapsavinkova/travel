@@ -22,8 +22,8 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         If you love pets and want to travel at no cost, TrustedHousesitters (THS) is one of the few
-        platforms that can actually make it happen. But here is the catch: House sitting doesn’t
-        make flights free—it just eliminates the single biggest cost of travel: accommodation.
+        platforms that can actually make it happen. But here is the catch: House sitting eliminates
+        the single biggest cost of travel: accommodation.
       </p>
 
       <h2>Is it actually legit?</h2>
@@ -31,7 +31,12 @@ export const post: BlogPost = {
         Yes. Based on my numerous successful sits across the country, I can confirm it is a robust,
         safe, and highly functional community. It is a global platform connecting homeowners with
         sitters who care for pets and homes while owners are away. Sitters pay an annual
-        subscription, then can stay in homes around the world—no accommodation cost, just pet care.
+        subscription, then can stay in homes around the world at no accommodation cost. You can read
+        more in my detailed breakdown of{' '}
+        <Link href="/blog/trusted-housesitters-membership-cost-levels">
+          membership costs and different levels
+        </Link>
+        .
       </p>
 
       <div className="prose-breakout">
@@ -42,7 +47,7 @@ export const post: BlogPost = {
               <strong>Massive Volume:</strong> Thousands of active sits across the globe.
             </li>
             <li>
-              <strong>Zero Rent:</strong> Eliminates your primary travel expense.
+              <strong>Zero Hotel Cost:</strong> Eliminates your primary travel expense.
             </li>
             <li>
               <strong>Home Comforts:</strong> Full kitchens, workspaces, and cozy living rooms.
@@ -56,35 +61,53 @@ export const post: BlogPost = {
           <span className="accent-box-label">The Cons</span>
           <ul>
             <li>
-              <strong>Upfront Cost:</strong> You must pay the annual fee to apply.
+              <strong>Upfront Cost:</strong> You must pay an annual fee to apply. I recommend
+              checking the{' '}
+              <Link href="/blog/trusted-housesitters-membership-cost-levels">
+                different membership levels
+              </Link>{' '}
+              before signing up.
             </li>
             <li>
-              <strong>Responsibility:</strong> This is a job, not a vacation. Pets need you.
+              <strong>Responsibility:</strong> You need to keep up with pets' routines and keep
+              homes clean. Works best for slow travel, as most of the time you can't leave dogs for
+              more than 4 hours. Cats are usually a bit more flexible.
             </li>
             <li>
-              <strong>Competition:</strong> Popular cities like NYC or London move fast.
+              <strong>Competition:</strong> Popular sits move fast, but I have a solution for you on{' '}
+              <Link href="/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
+                how to beat the competition using AI
+              </Link>
+              .
             </li>
             <li>
-              <strong>Learning Curve:</strong> Your first few sits take strategy to land.
+              <strong>Learning Curve:</strong> Your first few sits take strategy to land. Here is my{' '}
+              <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+                guide on getting sits with no reviews
+              </Link>
+              .
             </li>
           </ul>
         </div>
       </div>
 
       <h2>The 2-Night Breakeven Math</h2>
-      <p>People often hesitate at the $129-$259 annual fee. But let’s look at the math:</p>
+      <p>
+        People often hesitate at the steep annual fee. But let’s look at the math (rounding the
+        numbers to simplify):
+      </p>
       <ul>
-        <li>Standard Sitter membership: ~$169/year (with discount)</li>
-        <li>Average hotel/Airbnb cost (conservative): $85/night</li>
+        <li>Standard Sitter membership: ~$200/year</li>
+        <li>Average hotel/Airbnb cost (conservative): ~$100/night</li>
         <li>
-          <strong>Breakeven: 2 hotel nights = your entire year paid for.</strong>
+          <strong>Breakeven: 2 hotel or Airbnb nights = your entire year paid for.</strong>
         </li>
       </ul>
       <p>
         Everything after those first 2 nights is net savings. For a full-time traveler, this is
-        easily the most powerful financial lever available. Read more about:{' '}
-        <Link href="/blog/trusted-housesitters-membership-cost-levels">
-          Sitter guide: membership cost and different levels
+        easily the most powerful financial lever available. Read more about the{' '}
+        <Link href="/blog/can-you-really-travel-for-free-house-sitting-math">
+          travel math for a full-time sitter
         </Link>
         .
       </p>
