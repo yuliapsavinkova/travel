@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
-import { privacyPolicyContent } from '../../data/articles/privacy-policy';
+import { privacyPolicyContent } from '../../data/privacy-policy';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Sitter Journey',

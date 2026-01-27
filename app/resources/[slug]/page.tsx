@@ -44,7 +44,11 @@ export default async function ResourceDetailPage({
   params,
 }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const item = ALL_RESOURCES.find((i) => i.slug === slug);
+
+  // Dynamic navigation logic - Ensure items are sorted by sortOrder before finding index
+  const sortedItems = [...ALL_RESOURCES].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+  const itemIndex = sortedItems.findIndex((i) => i.slug === slug);
+  const item = sortedItems[itemIndex];
 
   if (!item) {
     return (
@@ -64,30 +68,29 @@ export default async function ResourceDetailPage({
     );
   }
 
-  const faqs = item.faqIds ? getFaqsByIds(item.faqIds) : [];
+  // Circular logic for navigation
+  const prevIndex = (itemIndex - 1 + sortedItems.length) % sortedItems.length;
+  const nextIndex = (itemIndex + 1) % sortedItems.length;
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: item.name,
-    description: item.description,
-    image: item.imageUrl,
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      url: item.link,
-      description: item.discountText ? `Benefit: ${item.discountText}` : `Check out ${item.name}`,
-    },
+  const prevItem = sortedItems[prevIndex];
+  const nextItem = sortedItems[nextIndex];
+
+  const prevLink = {
+    label: 'Previous',
+    title: prevItem.navTitle || prevItem.name,
+    href: `/resources/${prevItem.slug}`,
   };
+
+  const nextLink = {
+    label: 'Next',
+    title: nextItem.navTitle || nextItem.name,
+    href: `/resources/${nextItem.slug}`,
+  };
+
+  const faqs = item.faqIds ? getFaqsByIds(item.faqIds) : [];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <CommonDetail
         onBack="/resources#archive"
         backLabel="Back to Resources"
@@ -96,10 +99,10 @@ export default async function ResourceDetailPage({
         subtitle={item.subtitle}
         date={item.date}
         isAffiliate={true}
-        ctaLabel={item.discountText ? `Get: ${item.discountText}` : 'Visit'}
+        ctaLabel={item.discountText ? `Discount: ${item.discountText}` : 'Visit'}
         ctaLink={item.link}
-        prevLink={item.prevLink}
-        nextLink={item.nextLink}
+        prevLink={prevLink}
+        nextLink={nextLink}
         faqs={faqs}
       >
         <div className="flex-col">

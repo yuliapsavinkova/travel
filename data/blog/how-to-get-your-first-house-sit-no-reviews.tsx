@@ -15,21 +15,8 @@ export const post: BlogPost = {
   imageUrl:
     'https://images.unsplash.com/photo-1655992108235-b9bbf5bb18cc?auto=format&fit=crop&q=80&w=2400',
   ctaLabel: 'Offer: 25% Off Membership',
-  ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+  ctaLink: REFERRALS.THS.link,
   faqIds: ['trusted-profile-tips', 'ths-rejection-common', 'travel-savings'],
-  seoTitle: 'How to Get Your First House Sit with No Reviews | Sitter Journey',
-  seoDescription:
-    'Step-by-step guide to landing your first house sit on TrustedHousesitters without reviews. Learn the Austin strategy.',
-  seoKeywords: [
-    'get first house sit no reviews',
-    'beginner house sitting guide',
-    'how to start house sitting',
-    'trustedhousesitters for beginners',
-    'landing sits without experience',
-    'first time sitter tips',
-    'how to get reviews on ths',
-    'house sitting application for beginners',
-  ],
   body: (
     <>
       <p className="prose-lead">
@@ -87,11 +74,6 @@ export const post: BlogPost = {
         caption="Starting with simple cat sits helped me build the trust I needed for bigger assignments later."
         aspectRatio="3/2"
       />
-
-      <blockquote className="prose-quote">
-        "You aren't trying to be a pro on day one. You're just showing a homeowner that you care
-        about their pets and will keep their house clean."
-      </blockquote>
 
       <div className="prose-end">
         <strong>Keep trying</strong>

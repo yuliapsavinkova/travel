@@ -51,7 +51,7 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         <p className="portal-success-body">
           Thank you. I have received your message and will get back to you within 24 hours.
         </p>
-        <button className="btn-gold" style={{ minWidth: '200px' }} onClick={onClose} type="button">
+        <button className="btn-gold btn-wide" onClick={onClose} type="button">
           Close
         </button>
       </div>
@@ -59,11 +59,11 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
   }
 
   return (
-    <div>
+    <div className="portal-form-wrapper">
       <div className="portal-header-group">
         <div>
           <div className="sub-header">Get In Touch</div>
-          <h2 className="display-title display-title-md" style={{ marginBottom: 0 }}>
+          <h2 className="display-title display-title-md portal-title-flush">
             <span className="shimmer-text">Contact.</span>
           </h2>
         </div>
@@ -77,11 +77,7 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         </button>
       </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex-col flex-gap-md"
-        style={{ marginTop: 'var(--s-4)' }}
-      >
+      <form onSubmit={handleSubmit} className="flex-col flex-gap-md portal-form-top">
         <input type="hidden" name="_subject" value="New message from Sitter Journey" />
         <input type="hidden" name="_captcha" value="false" />
         <input
@@ -133,11 +129,10 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
           />
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 'var(--s-4)' }}>
+        <div className="form-actions-centered">
           <button
             type="submit"
-            className={`btn-gold btn-center ${isSubmitting ? 'opacity-50' : ''}`}
-            style={{ minWidth: '240px' }}
+            className={`btn-gold btn-wide ${isSubmitting ? 'opacity-50' : ''}`}
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}

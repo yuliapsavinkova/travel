@@ -14,7 +14,7 @@ export const post: BlogPost = {
   sortOrder: 8,
   imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2070&fit=crop',
   ctaLabel: 'Claim 25% Off Membership',
-  ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+  ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-rejection-fix', 'ths-reviews-starting', 'ths-reporting-safety'],
   seoTitle: 'Why TrustedHousesitters Applications Get Rejected | Sitter Journey',
   seoDescription:
@@ -120,13 +120,11 @@ export const post: BlogPost = {
         owner found a specific 'type' of person they had pictured in their head."
       </blockquote>
 
-      <div className="prose-accent-box">
-        <span className="accent-box-label">My approach:</span>
-        <p>
-          I send my application and I move on. I don't spend time wondering why I wasn't picked. The
-          right sit is always the one that says "yes."
-        </p>
-      </div>
+      <h2>My approach:</h2>
+      <p>
+        I send my application and I move on. I don't spend time wondering why I wasn't picked. The
+        right sit is always the one that says "yes."
+      </p>
 
       <div className="prose-end">
         <strong>Keep going</strong>

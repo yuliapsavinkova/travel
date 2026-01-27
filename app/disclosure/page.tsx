@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
-import { disclosureContent } from '../../data/articles/disclosure';
+import { disclosureContent } from '../../data/disclosure';
 
 export const metadata: Metadata = {
   title: 'Referral & Affiliate Disclosure | Sitter Journey',

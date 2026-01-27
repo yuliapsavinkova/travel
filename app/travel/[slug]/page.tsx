@@ -22,7 +22,7 @@ export async function generateMetadata({
     title: `${guide.title} | Travel Guide | Sitter Journey`,
     description: guide.excerpt,
     alternates: {
-      canonical: `/travel/${guide.slug}`,
+      canonical: `https://sitterjourney.com/travel/${guide.slug}`,
     },
     openGraph: {
       title: guide.title,
@@ -34,7 +34,11 @@ export async function generateMetadata({
 
 export default async function TravelDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const guide = TRAVEL_GUIDES.find((g) => g.slug === slug);
+
+  // Dynamic navigation logic (Circular)
+  const sortedGuides = [...TRAVEL_GUIDES].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+  const guideIndex = sortedGuides.findIndex((g) => g.slug === slug);
+  const guide = sortedGuides[guideIndex];
 
   if (!guide) {
     return (
@@ -49,6 +53,25 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
     );
   }
 
+  // Circular logic for navigation
+  const prevIndex = (guideIndex - 1 + sortedGuides.length) % sortedGuides.length;
+  const nextIndex = (guideIndex + 1) % sortedGuides.length;
+
+  const prevGuide = sortedGuides[prevIndex];
+  const nextGuide = sortedGuides[nextIndex];
+
+  const prevLink = {
+    label: 'Previous',
+    title: prevGuide.title, // TravelGuide type doesn't have navTitle currently, using title
+    href: `/travel/${prevGuide.slug}`,
+  };
+
+  const nextLink = {
+    label: 'Next',
+    title: nextGuide.title,
+    href: `/travel/${nextGuide.slug}`,
+  };
+
   return (
     <CommonDetail
       onBack="/travel#guides"
@@ -59,8 +82,8 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
       isAffiliate={true}
       ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
       ctaLink={GLOBAL_STRINGS.travelPromoLink}
-      prevLink={{ label: 'Previous', title: 'The Blog', href: '/blog' }}
-      nextLink={{ label: 'Next', title: 'Resources', href: '/resources' }}
+      prevLink={prevLink}
+      nextLink={nextLink}
     >
       <div className="flex-col flex-gap-md">
         <p className="prose-lead">{guide.excerpt}</p>

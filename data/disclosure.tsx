@@ -1,6 +1,5 @@
 import React from 'react';
-// Correcting imports: use REFERRALS instead of individual missing constants
-import { REFERRALS } from '../../types';
+import { REFERRALS } from '../types';
 
 export const disclosureContent = (
   <>
@@ -29,14 +28,6 @@ export const disclosureContent = (
       Whether it is a free month of service or a small commission, the law (FTC) and search engines
       (Google) require disclosure of any "material connection." This ensures you know exactly when a
       recommendation might be incentivized.
-    </p>
-
-    <h2>My Commitment to You</h2>
-    <p>
-      I completed dozens of house sits across the United States before I ever shared a single link.
-      My reputation as a professional steward is my most valuable asset. I will
-      <strong>never</strong> recommend a tool, resource, or membership that I don't personally use
-      and trust, regardless of the referral benefit.
     </p>
 
     <div className="prose-accent-box">
@@ -80,10 +71,5 @@ export const disclosureContent = (
         </li>
       </ul>
     </div>
-
-    <p>
-      Thank you for using my links—it is a simple, no-cost way to support the free guides and blog
-      entries I share here.
-    </p>
   </>
 );

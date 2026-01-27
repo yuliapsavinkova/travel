@@ -1,13 +1,11 @@
 import { SiteStrings, REFERRALS } from './types';
 
-export { REFERRALS };
+// Domain registries
+import { BLOG_POSTS } from './data/blog/blog';
+import { TRAVEL_GUIDES } from './data/travel/travel';
+import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
 
-// Explicit imports from data files
-import { RESOURCES, ALL_RESOURCES } from './data/resources';
-import { BLOG_POSTS } from './data/blog';
-import { TRAVEL_GUIDES } from './data/travel';
-
-export { RESOURCES, ALL_RESOURCES, BLOG_POSTS, TRAVEL_GUIDES };
+export { REFERRALS, BLOG_POSTS, TRAVEL_GUIDES, ALL_RESOURCES, RESOURCES };
 
 const now = new Date();
 export const CURRENT_YEAR = now.getFullYear();
@@ -28,7 +26,6 @@ export const NAV_ITEMS = [
 
 /**
  * GLOBAL SITE STATISTICS
- * Removed hardcoded sitsCount to avoid weekly manual updates.
  */
 export const SITE_STATS = {
   statesCount: '28',

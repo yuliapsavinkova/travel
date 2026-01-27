@@ -63,7 +63,7 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: string;
-  navTitle?: string; // Shortened title for UI components
+  navTitle?: string;
   subtitle?: string;
   excerpt: string;
   body: string | ReactNode;
@@ -86,6 +86,7 @@ export interface TravelGuide {
   id: string;
   slug: string;
   title: string;
+  navTitle?: string;
   location: string;
   excerpt: string;
   body: string | ReactNode;
@@ -101,6 +102,7 @@ export interface ResourceItem {
   id: string;
   slug: string;
   name: string;
+  navTitle?: string;
   subtitle?: string;
   description: string;
   body: string | ReactNode;

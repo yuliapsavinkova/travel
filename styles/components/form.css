@@ -16,8 +16,8 @@
 
 .form-input,
 .form-textarea {
-  background: rgba(255, 255, 255, 0.05); /* Lighter background for better contrast */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Sharper border */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: var(--s-3) var(--s-4);
   border-radius: var(--r-sm);
   color: var(--c-white);
@@ -30,7 +30,7 @@
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4); /* Clearer but distinct from typed text */
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .form-input:hover,
@@ -43,7 +43,7 @@
 .form-textarea:focus {
   border-color: var(--c-gold);
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 0 4px rgba(255, 207, 135, 0.15); /* Soft gold focus ring */
+  box-shadow: 0 0 0 4px rgba(255, 207, 135, 0.15);
 }
 
 .form-textarea {
@@ -54,6 +54,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--s-4);
+}
+
+.form-actions-centered {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--s-4);
+  width: 100%;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {

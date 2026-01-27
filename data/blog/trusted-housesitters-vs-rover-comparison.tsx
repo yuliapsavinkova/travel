@@ -16,7 +16,7 @@ export const post: BlogPost = {
   imageUrl:
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: 'Earn with Rover',
-  ctaLink: 'https://www.rover.com/ambas-refer-a-friend/Q93GankN',
+  ctaLink: REFERRALS.ROVER.link,
   seoTitle: 'THS vs Rover: Professional Pet Care Comparison',
   seoDescription:
     'Stop comparing Rover and TrustedHousesitters. One is a job, one is a lifestyle. Learn which fits your 2026 travel goals.',

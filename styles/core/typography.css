@@ -1,7 +1,7 @@
 html,
 body {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: var(--c-text);
 }
@@ -39,7 +39,7 @@ h6 {
 
 .detail-title-text {
   font-family: var(--f-serif) !important;
-  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   font-weight: 700;
   font-style: italic;
   letter-spacing: -0.015em;
@@ -81,4 +81,18 @@ h6 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+/* UTILITY CLASSES */
+.text-gold {
+  color: var(--c-gold);
+}
+
+.text-mono {
+  font-family: var(--f-mono);
+  white-space: pre-wrap;
+}
+
+.text-bold {
+  font-weight: 800;
 }
