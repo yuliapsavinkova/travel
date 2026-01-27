@@ -22,8 +22,8 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         If you love pets and want to travel at no cost, TrustedHousesitters (THS) is one of the few
-        platforms that can actually make it happen. But here is the catch: House sitting eliminates
-        the single biggest cost of travel: accommodation.
+        platforms that can actually make it happen. House sitting eliminates the single biggest cost
+        of travel: accommodation.
       </p>
 
       <h2>Is it actually legit?</h2>
@@ -70,8 +70,9 @@ export const post: BlogPost = {
             </li>
             <li>
               <strong>Responsibility:</strong> You need to keep up with pets' routines and keep
-              homes clean. Works best for slow travel, as most of the time you can't leave dogs for
-              more than 4 hours. Cats are usually a bit more flexible.
+              homes clean. Works best for slow travel, as most dog sits require potty breaks every 4
+              hours (meaning you need to return home regularly throughout the day). Cat sits are
+              usually more flexible.
             </li>
             <li>
               <strong>Competition:</strong> Popular sits move fast, but I have a solution for you on{' '}

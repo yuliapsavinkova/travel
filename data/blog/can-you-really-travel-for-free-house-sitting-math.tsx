@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { BlogPost, REFERRALS } from '../../types';
 
 export const post: BlogPost = {
@@ -33,18 +34,22 @@ export const post: BlogPost = {
   body: (
     <>
       <p className="prose-lead">
-        “Free travel” sounds like influencer bait and in most cases, it is. House sitting is
+        "Free travel" sounds like influencer bait and in most cases, it is. House sitting is
         different, but only if you understand the math, the tradeoffs, and the actual constraints of
         the lifestyle.
       </p>
 
       <p>
-        This article breaks down exactly when house sitting is effectively free, when it’s not, and
+        This article breaks down exactly when house sitting is effectively free, when it's not, and
         why most people fail to make it work. Accommodation is typically 40–70% of travel costs.
-        Removing it changes everything.
+        Removing it changes everything. If you're still deciding whether to join,{' '}
+        <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
+          read my honest breakdown of whether TrustedHousesitters is worth it
+        </Link>
+        .
       </p>
 
-      <h2>What “Free Travel” Actually Means (And Doesn't)</h2>
+      <h2>What "Free Travel" Actually Means (And Doesn't)</h2>
       <ul>
         <li>
           <strong>It does NOT mean:</strong> Free flights, luxury vacations on demand, or zero
@@ -74,7 +79,7 @@ export const post: BlogPost = {
 
       <h2>Scenario #2: Full-Time Nomad (365 Days)</h2>
       <p>
-        Skeptics usually say: “Sure, but you’ll never cover the whole year.” In practice, many
+        Skeptics usually say: "Sure, but you'll never cover the whole year." In practice, many
         sitters do—especially if they are flexible with location and apply strategically.
       </p>
 
@@ -114,6 +119,11 @@ export const post: BlogPost = {
         longer you do it and the stronger your reviews, the easier it becomes to string sits
         together back-to-back.
       </p>
+      <p>
+        <strong>The math:</strong> That's $17,400 in hotel costs I didn't pay (180 nights × $100)
+        for the cost of 6 nights ($600) plus my membership. Total savings: ~$16,600 in just six
+        months.
+      </p>
 
       <h2>The Hidden Costs</h2>
       <p>House sitting is not magic. Costs still exist:</p>
@@ -131,13 +141,25 @@ export const post: BlogPost = {
 
       <h2>Why Most People Fail</h2>
       <p>
-        They treat it like Airbnb. They apply late, only want the top-tier "Instagram" cities, or
-        have weak profiles. Success rewards flexibility, reliability, and clear communication.
+        They treat it like Airbnb—browsing casually and applying whenever they feel like it. Success
+        requires a different approach: strategic applications, flexibility with location, and a
+        profile that builds trust instantly.
+      </p>
+      <p>
+        If you're struggling to land sits, read my guides on{' '}
+        <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+          getting your first sit with no reviews
+        </Link>{' '}
+        and{' '}
+        <Link href="/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits">
+          building a strong profile
+        </Link>
+        .
       </p>
 
       <div className="prose-end">
         <strong>The Bottom Line</strong>
-        So, is it really “free travel”? If by “free” you mean no accommodation costs and radically
+        So, is it really "free travel"? If by "free" you mean no accommodation costs and radically
         cheaper long-term travel, then absolutely. It doesn't make you rich; it makes travel
         sustainable.
         <br />

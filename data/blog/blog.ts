@@ -9,6 +9,7 @@ import { post as vsRover } from './trusted-housesitters-vs-rover-comparison';
 import { post as rejections } from './why-trusted-housesitters-applications-get-rejected';
 import { post as reporting } from './trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it';
 import { post as aiStrategy } from './trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai';
+import { post as hiddenPerks } from './hidden-perks-of-house-sitting-nobody-talks-about';
 
 export const BLOG_POSTS: BlogPost[] = [
   worthIt,
@@ -21,4 +22,5 @@ export const BLOG_POSTS: BlogPost[] = [
   rejections,
   reporting,
   aiStrategy,
+  hiddenPerks,
 ];
