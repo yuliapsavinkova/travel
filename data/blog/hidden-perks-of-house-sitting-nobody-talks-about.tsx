@@ -14,7 +14,7 @@ export const post: BlogPost = {
   location: 'Lifestyle',
   sortOrder: 11,
   imageUrl:
-    'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1597714026720-8f74c62310ba?q=80&w=2070&auto=format&fit=crop',
   ctaLabel: 'Claim 25% Off Membership',
   ctaLink: REFERRALS.THS.link,
   seoTitle: 'Hidden Perks of House Sitting: Real Benefits Beyond Free Accommodation',
@@ -87,11 +87,16 @@ export const post: BlogPost = {
         wasting money on full bottles you can't take with you when you leave.
       </p>
 
-      <p>
-        <strong>Important note:</strong> Always be respectful of what's available for use. What you
-        can use is typically mentioned in the welcome guide. Never take food or supplies if the
-        owner hasn't specifically given permission.
-      </p>
+      <div className="prose-accent-box variant-highlight">
+        <span className="accent-box-label">Important Note</span>
+        <p className="serif-italic">
+          Always be respectful of what's available for use. What you can use is typically mentioned
+          in the welcome guide.{' '}
+          <strong>
+            Never take food or supplies if the owner hasn't specifically given permission.
+          </strong>
+        </p>
+      </div>
 
       <h2>Entertainment & Subscriptions</h2>
       <p>Every home I've stayed in includes some of the following:</p>
@@ -116,6 +121,14 @@ export const post: BlogPost = {
             for me as an EV driver)
           </li>
           <li>
+            <strong>Use of Cars:</strong> Some sits allow sitters to use the homeowner's vehicle
+            during the stay
+          </li>
+          <li>
+            <strong>Cleaning Services:</strong> Biweekly or weekly cleaning included (a personal
+            favorite!)
+          </li>
+          <li>
             <strong>Parking Passes:</strong> Valuable in cities where parking costs add up quickly
           </li>
           <li>
@@ -130,6 +143,10 @@ export const post: BlogPost = {
           </li>
           <li>
             <strong>Equipment Use:</strong> Bicycles, kayaks, paddleboards, or sporting gear
+          </li>
+          <li>
+            <strong>Guests & Pets:</strong> Some sits allow you to bring friends, family, or your
+            own pets
           </li>
         </ul>
       </div>
