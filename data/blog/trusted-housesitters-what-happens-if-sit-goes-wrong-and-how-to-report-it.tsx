@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { BlogPost, REFERRALS } from '../../types';
 
 export const post: BlogPost = {
@@ -15,7 +16,7 @@ export const post: BlogPost = {
   imageUrl:
     'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: 'Claim 25% Off Membership',
-  ctaLink: 'https://trustedhousesitters.com/refer/raf943607',
+  ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-rejection-common', 'ths-owner-priorities', 'ths-reviews-starting'],
   seoTitle: 'What Happens If a Sit Goes Wrong | Sitter Journey',
   seoDescription:
@@ -33,8 +34,8 @@ export const post: BlogPost = {
   body: (
     <>
       <p className="prose-lead">
-        If you’re considering joining TrustedHousesitters, one common question comes up early: What
-        actually happens if a sit doesn’t go as planned — or if someone reports a problem?
+        If you're considering joining TrustedHousesitters, one common question comes up early: What
+        actually happens if a sit doesn't go as planned — or if someone reports a problem?
       </p>
 
       <p>
@@ -43,7 +44,7 @@ export const post: BlogPost = {
         whether to join.
       </p>
 
-      <h2>First: what “going wrong” usually means</h2>
+      <h2>First: what "going wrong" usually means</h2>
       <p>Most reported sits are not emergencies or extreme situations. They usually involve:</p>
       <ul>
         <li>A mismatch between expectations and reality</li>
@@ -60,14 +61,14 @@ export const post: BlogPost = {
       <p>
         Yes. Either party — the sitter or the homeowner — can report a sit. Reports can be made
         during the sit (if the issue is ongoing) or after the sit ends. Reporting exists to formally
-        document an issue when it can’t be resolved directly.
+        document an issue when it can't be resolved directly.
       </p>
 
       <h2>When do people usually report a sit?</h2>
       <ul>
         <li>The pet care routine differs from what was described</li>
         <li>The home condition or amenities are not as expected</li>
-        <li>There’s disagreement about time commitments or boundaries</li>
+        <li>There's disagreement about time commitments or boundaries</li>
         <li>A safety, welfare, or access concern appears</li>
       </ul>
 
@@ -128,11 +129,23 @@ export const post: BlogPost = {
         <li>Documenting important details early if something feels off</li>
       </ul>
 
+      {/* <h2>Prevention Is Better Than Resolution</h2>
+      <p>
+        The best way to avoid issues is to start strong from your very first sit. If you're new to
+        house sitting, read my{' '}
+        <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+          guide on getting your first sit
+        </Link>{' '}
+        to understand how to set clear expectations, ask the right questions, and document
+        agreements properly from the beginning. Building good habits early prevents most problems
+        before they start.
+      </p> */}
+
       <div className="prose-end">
         <strong>Key Takeaway</strong>
         If a sit goes wrong, the process centers on what was documented and agreed to, not on
-        assumptions. For most, issues are uncommon — and clarity and communication matter more than
-        anything else.
+        assumptions. For most sitters, issues are uncommon. Clarity and communication matter more
+        than anything else.
         <br />
         <br />
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">

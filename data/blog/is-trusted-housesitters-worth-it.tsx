@@ -26,6 +26,14 @@ export const post: BlogPost = {
         of travel: accommodation.
       </p>
 
+      <p>
+        If you're comparing TrustedHousesitters to paid platforms like Rover, read my{' '}
+        <Link href="/blog/trusted-housesitters-vs-rover-comparison">
+          breakdown of the key differences
+        </Link>
+        . They solve different problems.
+      </p>
+
       <h2>Is it actually legit?</h2>
       <p>
         Yes. Based on my numerous successful sits across the country, I can confirm it is a robust,
@@ -94,7 +102,7 @@ export const post: BlogPost = {
 
       <h2>The 2-Night Breakeven Math</h2>
       <p>
-        People often hesitate at the steep annual fee. But let’s look at the math (rounding the
+        People often hesitate at the steep annual fee. But let's look at the math (rounding the
         numbers to simplify):
       </p>
       <ul>
@@ -111,6 +119,14 @@ export const post: BlogPost = {
           travel math for a full-time sitter
         </Link>
         .
+      </p>
+
+      <p>
+        Beyond the obvious cost savings, house sitting comes with{' '}
+        <Link href="/blog/hidden-perks-of-house-sitting-nobody-talks-about">
+          dozens of unexpected perks
+        </Link>{' '}
+        that compound the value even further.
       </p>
 
       <div className="prose-end">

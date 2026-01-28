@@ -150,7 +150,12 @@ export const post: BlogPost = {
       </p>
       <p>
         Configure alerts for your preferred locations, pet types, and date ranges. Turn on push
-        notifications on your phone so you never miss a high-demand sit.
+        notifications on your phone so you never miss a high-demand sit. For a detailed breakdown of
+        how I configure my alerts, check out my{' '}
+        <Link href="/blog/trusted-housesitters-how-to-set-up-alerts-and-filters">
+          alert strategy guide
+        </Link>
+        .
       </p>
 
       <h2>The Application Process</h2>
