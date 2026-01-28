@@ -22,14 +22,14 @@ export const post: BlogPost = {
   seoDescription:
     'Compare Basic, Standard, and Premium sitter tiers. Understand what each level offers and which one fits your travel frequency and risk tolerance.',
   seoKeywords: [
-    'ths membership levels',
-    'trustedhousesitters sitter cost 2026',
-    'ths basic vs standard vs premium',
-    'sitter cancellation insurance',
-    'trusted housesitters pricing guide',
-    'is ths premium worth it',
-    'house sitting insurance sitter',
-    'which ths plan to choose',
+    'trustedhousesitters membership fee insurance',
+    'trustedhousesitters higher-tier membership perks',
+    'trustedhousesitters membership price 2026',
+    'trustedhousesitters ths basic vs standard vs premium plans',
+    'trustedhousesitters is ths premium worth it',
+    'trustedhousesitters which ths plan to choose',
+    'is trustedhousesitter free',
+    'how much does it cost to join trusted house sitters',
   ],
   body: (
     <>
