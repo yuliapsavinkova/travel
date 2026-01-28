@@ -47,8 +47,8 @@ export const post: BlogPost = {
       <h2>1. The Strategy of Risk Removal</h2>
       <p>
         New sitters usually fail because they apply to popular destinations for long stays with
-        generic messages. You're competing against sitters with 20+ five-star reviews. You will lose
-        every time.
+        generic messages. You're competing against sitters with dozens of five-star reviews. You
+        will lose every time.
       </p>
 
       <p>
@@ -62,9 +62,9 @@ export const post: BlogPost = {
 
       <ul>
         <li>
-          <strong>Off-Season Cities:</strong> I chose Austin, Texas in the middle of summer. It was
-          brutal heat (105°F daily), so competition was low, but homeowners were desperate for
-          sitters while they fled to cooler climates.
+          <strong>Off-Season Cities:</strong> I happened to be in Austin, Texas for a work project
+          during the middle of summer. It was brutal heat, so competition was low, but homeowners
+          were desperate for sitters while they fled to cooler climates. It was perfect timing.
         </li>
         <li>
           <strong>Less Famous Areas:</strong> Target local suburbs or smaller cities where the
@@ -160,9 +160,8 @@ export const post: BlogPost = {
         <div className="prose-accent-box variant-pros">
           <span className="accent-box-label">✅ Instead Say:</span>
           <p className="serif-italic">
-            "I'm new to TrustedHousesitters but have cared for dogs/cats for [X years]. I work
-            remotely and will be home with [pet names] throughout the day. I'd love to start
-            building my profile with sits in the [location] area."
+            "I'm new to TrustedHousesitters but have cared for dogs/cats for several years. I work
+            remotely and will be home with [pet names] throughout the day."
           </p>
         </div>
       </div>
@@ -191,8 +190,13 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        Don't be discouraged by rejections. Even experienced sitters get rejected regularly. Keep
-        applying to the right types of sits (short, less competitive, off-season).
+        Don't be discouraged by rejections. Even experienced sitters get rejected regularly. Read my
+        article on{' '}
+        <Link href="/blog/why-trusted-housesitters-applications-get-rejected">
+          why applications get rejected
+        </Link>{' '}
+        to understand the factors (many of which are completely outside your control). Keep applying
+        to the right types of sits (short, less competitive, off-season).
       </p>
 
       <h2>The Snowball Effect</h2>
@@ -201,12 +205,11 @@ export const post: BlogPost = {
         <li>You have a verified five-star review</li>
         <li>You can reference specific experience in applications</li>
         <li>Owners see you're trusted by others</li>
-        <li>Your profile appears in search results with better ranking</li>
       </ul>
 
       <p>
-        After 2-3 sits, you'll notice the dynamics completely shift. Suddenly you're competitive for
-        better locations and longer assignments.
+        After a few sits, you'll notice the dynamics completely shift. Suddenly you're competitive
+        for better locations and longer assignments.
       </p>
 
       <div className="prose-end">
