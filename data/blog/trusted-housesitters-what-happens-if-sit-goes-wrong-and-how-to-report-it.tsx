@@ -15,7 +15,7 @@ export const post: BlogPost = {
   sortOrder: 9,
   imageUrl:
     'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&q=80&w=1200',
-  ctaLabel: 'Claim 25% Off Membership',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-rejection-common', 'ths-owner-priorities', 'ths-reviews-starting'],
   seoTitle: 'What Happens If a Sit Goes Wrong | Sitter Journey',
@@ -129,7 +129,7 @@ export const post: BlogPost = {
         <li>Documenting important details early if something feels off</li>
       </ul>
 
-      {/* <h2>Prevention Is Better Than Resolution</h2>
+      <h2>Prevention Is Better Than Resolution</h2>
       <p>
         The best way to avoid issues is to start strong from your very first sit. If you're new to
         house sitting, read my{' '}
@@ -139,7 +139,7 @@ export const post: BlogPost = {
         to understand how to set clear expectations, ask the right questions, and document
         agreements properly from the beginning. Building good habits early prevents most problems
         before they start.
-      </p> */}
+      </p>
 
       <div className="prose-end">
         <strong>Key Takeaway</strong>

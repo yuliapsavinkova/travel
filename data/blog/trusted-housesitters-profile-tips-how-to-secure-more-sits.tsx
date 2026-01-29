@@ -15,7 +15,7 @@ export const post: BlogPost = {
   sortOrder: 5,
   imageUrl:
     'https://images.unsplash.com/photo-1517125591588-3a29b2182219?q=80&w=2073&auto=format&fit=crop',
-  ctaLabel: 'Get 25% Off Membership',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-beginner-difficulty', 'ths-rejection-common', 'ths-reporting-safety'],
   seoTitle: 'TrustedHousesitters Profile Tips | How to Build a 5-Star Profile',

@@ -15,7 +15,7 @@ export const post: BlogPost = {
   sortOrder: 3,
   imageUrl:
     'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=1200',
-  ctaLabel: 'Claim 25% Off Code',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['travel-savings', 'ths-experience-level-sits', 'ths-membership-try'],
   seoTitle: 'Which TrustedHousesitters Sitter Membership Should You Choose? | Decision Guide',

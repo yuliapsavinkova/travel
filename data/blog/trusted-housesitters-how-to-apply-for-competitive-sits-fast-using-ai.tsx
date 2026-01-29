@@ -13,7 +13,7 @@ export const post: BlogPost = {
   location: 'Strategy',
   sortOrder: 10,
   imageUrl: '/fast-running-dog.jpg',
-  ctaLabel: 'Claim 25% Off Code',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   seoTitle: 'How to Apply for Competitive TrustedHousesitters Sits Fast: AI Strategy & Templates',
   seoDescription:

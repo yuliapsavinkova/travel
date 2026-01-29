@@ -13,7 +13,7 @@ export const post: BlogPost = {
   location: 'Strategy',
   sortOrder: 8,
   imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2070&fit=crop',
-  ctaLabel: 'Claim 25% Off Membership',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-rejection-fix', 'ths-reviews-starting', 'ths-reporting-safety'],
   seoTitle: 'Why TrustedHousesitters Applications Get Rejected | Sitter Journey',

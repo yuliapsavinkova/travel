@@ -15,7 +15,7 @@ export const post: BlogPost = {
   sortOrder: 4,
   imageUrl:
     'https://images.unsplash.com/photo-1655992108235-b9bbf5bb18cc?auto=format&fit=crop&q=80&w=2400',
-  ctaLabel: 'Claim 25% Off Membership',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['trusted-profile-tips', 'ths-rejection-common', 'travel-savings'],
   seoTitle: 'How to Get Your First House Sit with No Reviews | Proven Strategy',

@@ -15,7 +15,7 @@ export const post: BlogPost = {
   sortOrder: 2,
   imageUrl:
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
-  ctaLabel: 'Claim 25% Off Membership',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-membership-worth-it', 'ths-beginner-difficulty', 'best-platform-travel'],
   seoTitle: 'Can You Really Travel for Free? House Sitting Math & Reality',

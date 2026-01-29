@@ -15,7 +15,7 @@ export const post: BlogPost = {
   sortOrder: 6,
   imageUrl:
     'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1200',
-  ctaLabel: 'Claim 25% Off THS',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   seoTitle: 'TrustedHousesitters vs Other House Sitting Sites: 2026 Comparison',
   seoDescription:

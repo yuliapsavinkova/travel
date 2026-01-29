@@ -14,8 +14,8 @@ export const post: BlogPost = {
   location: 'Strategy',
   sortOrder: 11,
   imageUrl:
-    'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1200',
-  ctaLabel: 'Claim 25% Off Membership',
+    'https://images.unsplash.com/photo-1741061963486-a56144a73791?q=80&w=2070&auto=format&fit=crop',
+  ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   seoTitle: 'TrustedHousesitters Alert Strategy | Real Sitter Examples',
   seoDescription:
