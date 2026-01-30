@@ -38,9 +38,7 @@ export default function BlogPage() {
           <h1 className="display-title">
             The <span className="shimmer-text">Blog.</span>
           </h1>
-          <p className="hero-paragraph">
-            I share how to travel sustainably while caring for homes and pets.
-          </p>
+          <p className="hero-paragraph">I share how to travel sustainably through housesitting.</p>
           <div className="hero-button-group">
             <Link href="#archive" className="btn-gold">
               Read Blog

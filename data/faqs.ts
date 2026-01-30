@@ -301,6 +301,116 @@ export const MASTER_FAQS: FAQItem[] = [
       href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
   },
+
+  //  is-ths-worth-it
+  {
+    id: 'ths-worth-breakeven',
+    question: 'Is the TrustedHousesitters membership fee actually worth it?',
+    answer:
+      'Yes, if you do more than 2 nights of house sitting per year. The breakeven is 2 nights ' +
+      'at ~$100/night. Everything after that is pure savings. For full-time travelers, this math ' +
+      'is hard to beat.',
+    link: {
+      label: 'See The Breakeven Math',
+      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+    },
+  },
+  {
+    id: 'ths-worth-competition',
+    question: 'How do I deal with competition on popular sits?',
+    answer:
+      'Competition is real for desirable locations. The key is applying within minutes of ' +
+      'posting. I use an AI system to personalize applications in under 30 seconds, which ' +
+      'gives me a massive edge.',
+    link: {
+      label: 'My AI Application Strategy',
+      href: '/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
+    },
+  },
+  {
+    id: 'ths-worth-not-for',
+    question: 'Who should NOT join TrustedHousesitters?',
+    answer:
+      "People who don't genuinely love pets. For me, having animals around adds warmth and " +
+      "routine. If pets feel like a chore rather than companionship, this isn't for you.",
+    link: {
+      label: 'Read Honest Assessment',
+      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+    },
+  },
+
+  // travel-math
+  {
+    id: 'travel-math-full-time',
+    question: 'Can you actually cover an entire year with house sitting?',
+    answer:
+      "Yes. I paid for only 6 nights of hotels in 6 months (180 days). That's $17,400 in " +
+      "hotel costs I didn't pay. The longer you do it, the easier it becomes to string sits " +
+      'back-to-back.',
+    link: {
+      label: 'See My Real Numbers',
+      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+    },
+  },
+  {
+    id: 'travel-math-hidden-costs',
+    question: 'What are the hidden costs of house sitting?',
+    answer:
+      "Transport (flights/fuel), groceries, and time spent applying. House sitting doesn't " +
+      'make flights free, but eliminating accommodation (40-70% of travel costs) changes everything.',
+    link: {
+      label: 'Full Cost Breakdown',
+      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+    },
+  },
+  {
+    id: 'travel-math-compound',
+    question: 'Why do most people fail at house sitting?',
+    answer:
+      'They treat it like Airbnb—browsing casually and applying randomly. Success requires ' +
+      'strategic applications, a strong profile, and understanding that the first sit is the ' +
+      'hardest. After that, it compounds.',
+    link: {
+      label: 'Why People Fail',
+      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+    },
+  },
+
+  // membership-cost-levels
+  {
+    id: 'membership-which-tier',
+    question: 'Which TrustedHousesitters membership level should I choose?',
+    answer:
+      "Standard for most people (liability protection + vet line). Premium if you're full-time " +
+      'with no backup housing (sit cancellation insurance is critical). Basic only if testing ' +
+      'with 1-2 sits per year.',
+    link: {
+      label: 'Membership Decision Guide',
+      href: '/blog/trusted-housesitters-membership-cost-levels',
+    },
+  },
+  {
+    id: 'membership-premium-worth',
+    question: 'Is Premium membership worth it for full-time sitters?',
+    answer:
+      "Yes, if you're doing 10+ sits per year. No per-sit booking fees save money quickly, and " +
+      'sit cancellation insurance is essential when you have no backup housing plan.',
+    link: {
+      label: 'Premium Tier Breakdown',
+      href: '/blog/trusted-housesitters-membership-cost-levels',
+    },
+  },
+  {
+    id: 'membership-basic-fees',
+    question: 'What are the per-sit booking fees for Basic and Standard?',
+    answer:
+      'Both Basic and Standard charge per-sit booking fees for each confirmed sit. Only Premium ' +
+      "has zero booking fees. If you're doing many sits, Premium breaks even around 8 sits per year.",
+    link: {
+      label: 'Fee Structure Explained',
+      href: '/blog/trusted-housesitters-membership-cost-levels',
+    },
+  },
 ];
 
 export const getFaqsByIds = (ids: string[]): FAQItem[] => {

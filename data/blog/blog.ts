@@ -11,6 +11,7 @@ import { post as reporting } from './trusted-housesitters-what-happens-if-sit-go
 import { post as aiStrategy } from './trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai';
 import { post as hiddenPerks } from './hidden-perks-of-house-sitting-nobody-talks-about';
 import { post as alertsAndFilters } from './trusted-housesitters-how-to-set-up-alerts-and-filters';
+import { post as updatingOwners } from './how-to-update-homeowners-while-house-sitting';
 
 export const BLOG_POSTS: BlogPost[] = [
   worthIt,
@@ -25,4 +26,5 @@ export const BLOG_POSTS: BlogPost[] = [
   aiStrategy,
   hiddenPerks,
   alertsAndFilters,
+  updatingOwners,
 ];
