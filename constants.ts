@@ -7,9 +7,7 @@ import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
 
 export { REFERRALS, BLOG_POSTS, TRAVEL_GUIDES, ALL_RESOURCES, RESOURCES };
 
-// ENVIRONMENT CONFIG
-// Set to true to expose the Roadmap/Map dictionary in the nav
-export const IS_DEV = false;
+export const IS_DEV = process.env.NODE_ENV === 'development';
 
 const now = new Date();
 export const CURRENT_YEAR = now.getFullYear();
@@ -17,10 +15,6 @@ export const ACTIVE_YEAR =
   now.getMonth() === 11 && now.getDate() >= 25 ? CURRENT_YEAR + 1 : CURRENT_YEAR;
 export const NEXT_YEAR = ACTIVE_YEAR + 1;
 
-/**
- * GLOBAL NAVIGATION CONFIGURATION
- * Map is filtered out in production builds
- */
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Blog', href: '/blog' },
