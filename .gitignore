@@ -33,5 +33,5 @@ yarn-error.log*
 .biome_cache
 
 
-originals/
+untracked/
 data/blog/_map

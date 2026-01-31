@@ -166,6 +166,21 @@ export const ArrowUpRightIcon = (props: IconProps) => (
   </IconBase>
 );
 
+export const LinkIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+  </IconBase>
+);
+
+export const HelpCircleIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <circle cx="12" cy="12" r="10" />
+    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+    <line x1="12" x2="12.01" y1="17" y2="17" />
+  </IconBase>
+);
+
 /* --- FUNCTIONAL & DECORATIVE --- */
 
 export const MapPinIcon = (props: IconProps) => (
@@ -229,6 +244,28 @@ export const SmartphoneIcon = (props: IconProps) => (
   <IconBase {...props}>
     <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
     <line x1="12" x2="12" y1="18" y2="18" />
+  </IconBase>
+);
+
+export const LayoutIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+    <line x1="3" x2="21" y1="9" y2="9" />
+    <line x1="9" x2="9" y1="21" y2="9" />
+  </IconBase>
+);
+
+export const ZapIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+  </IconBase>
+);
+
+export const AlertCircleIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <circle cx="12" cy="12" r="10" />
+    <line x1="12" x2="12" y1="8" y2="12" />
+    <line x1="12" x2="12.01" y1="16" y2="16" />
   </IconBase>
 );
 

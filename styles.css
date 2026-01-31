@@ -25,3 +25,6 @@
 @import "./styles/components/detail.css";
 @import "./styles/components/hero-detail.css";
 @import "./styles/components/article-nav.css";
+
+/* Roadmap Architecture */
+@import "./styles/components/roadmap.css";

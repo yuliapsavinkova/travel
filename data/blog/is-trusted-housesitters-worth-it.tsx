@@ -18,6 +18,16 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
+  roadmap: {
+    clusterId: 'ths-core',
+    status: 'published',
+    linksTo: [
+      'trusted-housesitters-membership-cost-levels',
+      'can-you-really-travel-for-free-house-sitting-math',
+      'how-to-get-your-first-house-sit-no-reviews',
+    ],
+    backbone: 'The primary entry point for new sitters. Validates the platform exists and is safe.',
+  },
   body: (
     <>
       <p className="prose-lead">
