@@ -9,7 +9,7 @@ export { REFERRALS, BLOG_POSTS, TRAVEL_GUIDES, ALL_RESOURCES, RESOURCES };
 
 // ENVIRONMENT CONFIG
 // Set to true to expose the Roadmap/Map dictionary in the nav
-export const IS_DEV = true;
+export const IS_DEV = false;
 
 const now = new Date();
 export const CURRENT_YEAR = now.getFullYear();
