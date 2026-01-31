@@ -13,9 +13,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // --- Individual page redirects ---
       {
-        source: '/blog/',
+        source: '/blog/:path+',
         destination: '/blog',
         permanent: true,
       },
@@ -60,8 +59,6 @@ const nextConfig: NextConfig = {
         destination: '/resources/trusted-housesitters-review',
         permanent: true,
       },
-
-      // --- Folder-level redirects ---
       {
         source: '/journal/:path*',
         destination: '/blog/:path*',
