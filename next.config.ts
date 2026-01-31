@@ -14,11 +14,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/blog/:path+',
-        destination: '/blog',
-        permanent: true,
-      },
-      {
         source: '/blog/ths-reporting-process',
         destination:
           '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
