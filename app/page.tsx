@@ -39,8 +39,8 @@ export default function HomePage() {
 
         <div className="hero-content-overlay content-layer">
           <h1 className="display-title">
-            <span className="sub-header home-hero-sub-header">Sitter Journey</span>
-            One Year <span className="shimmer-text">Across The United States.</span>
+            <span className="sub-header home-hero-sub-header">One Year</span>
+            My Journey <span className="shimmer-text">Across The United States</span>
           </h1>
           <p className="hero-paragraph">
             I am embarking on a one-year adventure using housesitting to slow-travel through every
@@ -64,9 +64,9 @@ export default function HomePage() {
       <div className="container">
         {/* SECTION: MISSION / TOP ARTICLES */}
         <section className="home-section-wrap text-center" id="mission">
-          <div className="sub-header">The Mission Started May 2025</div>
+          <div className="sub-header">Started May 2025</div>
           <h2 className="display-title display-title-md">
-            Seeing the U.S. through <span className="serif-italic shimmer-text">Local Eyes.</span>
+            Seeing the U.S. through <span className="serif-italic shimmer-text">Local Eyes</span>
           </h2>
           <p className="hero-paragraph home-section-intro">
             Top 3 articles to get you started on your own journey
@@ -134,12 +134,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* SECTION: LESSONS / DOCUMENTATION */}
-        <section className="home-section-wrap text-center">
+        {/* SECTION: LESSONS / DOCUMENTATION (WITH GLASS BACKGROUND) */}
+        <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
           <div className="glass-card home-feature-card">
             <div className="sub-header">Ongoing Documentation</div>
             <h2 className="display-title display-title-md">
-              Lessons <span className="serif-italic shimmer-text">from the Road.</span>
+              Lessons <span className="serif-italic shimmer-text">from the Journey</span>
             </h2>
             <p className="hero-paragraph home-feature-paragraph">
               I am documenting every mishap, success, and technical detail here. Whether you want to
@@ -176,7 +176,7 @@ export default function HomePage() {
       </div>
 
       {/* SECTION: PERSPECTIVE / STATS (TINTED) */}
-      <div className="home-section-tinted">
+      <div className="home-section-divider home-section-tinted">
         <div className="container">
           <section className="home-section-wrap text-center" id="perspective">
             <div className="sub-header">My Journey</div>
@@ -236,8 +236,8 @@ export default function HomePage() {
       </div>
 
       <div className="container">
-        {/* SECTION: ROADMAP */}
-        <section className="home-section-wrap text-center">
+        {/* SECTION: ROADMAP (WITH GLASS BACKGROUND) */}
+        <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
           <div className="glass-card home-feature-card-compact">
             <div className="sub-header">Growth Roadmap</div>
             <h2 className="display-title display-title-md">
@@ -246,7 +246,7 @@ export default function HomePage() {
             <p className="hero-paragraph home-feature-paragraph">
               I’m just getting started here, so check back as the site grows. I’ll be sharing
               packing hacks, real budget breakdowns, and the technical details of traveling full
-              time efficiently and sustainably
+              time efficiently and sustainably.
             </p>
             <div className="home-metadata-group-dim">
               <span className="metadata-item">
