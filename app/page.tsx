@@ -111,6 +111,13 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="home-section-footer">
+            <Link href="/blog#archive" className="home-footer-link">
+              <span>or read my </span>
+              <span className="serif-italic shimmer-text">entire blog here &rarr;</span>
+            </Link>
+          </div>
         </section>
 
         {/* SECTION: LESSONS / DOCUMENTATION */}

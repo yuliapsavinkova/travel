@@ -141,6 +141,24 @@
   margin-top: var(--s-5);
 }
 
+.home-section-footer {
+  margin-top: var(--s-7);
+}
+
+.home-footer-link {
+  font-size: 1rem;
+  color: var(--c-text-muted);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.home-footer-link:hover {
+  color: var(--c-white);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .home-section-wrap {
     padding: var(--s-8) 0;
