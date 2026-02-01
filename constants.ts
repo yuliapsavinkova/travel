@@ -29,7 +29,7 @@ export const NAV_ITEMS = [
  */
 export const SITE_STATS = {
   statesCount: '28',
-  countriesCount: '37',
+  countriesCount: '42',
   clientRating: '5.0',
   satisfactionRate: '100%',
 };
@@ -37,6 +37,7 @@ export const SITE_STATS = {
 export const SITE_CONFIG = {
   name: 'Sitter Journey',
   tagline: 'Full-Time Traveler',
+  missionStart: 'May 2025',
   email: 'sitterjourney@gmail.com',
   googleAnalyticsId: 'G-R0920QKYXK',
   socials: {

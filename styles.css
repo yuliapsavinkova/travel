@@ -16,6 +16,9 @@
 @import "./styles/components/portal.css";
 @import "./styles/components/form.css";
 
+/* Home Specific */
+@import "./styles/components/home.css";
+
 /* Prose Extras */
 @import "./styles/components/faq.css";
 @import "./styles/components/financial-flip.css";
