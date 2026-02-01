@@ -79,6 +79,7 @@ export default function HomePage() {
                 title: 'Expense Breakdowns',
                 desc: 'Real numbers on food, gas, and hidden costs of living on the road.',
                 icon: <CreditCardIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/can-you-really-travel-for-free-house-sitting-math',
               },
               {
@@ -86,6 +87,7 @@ export default function HomePage() {
                 title: 'How to do this too',
                 desc: 'Everything I’ve learned about landing sits and managing life on the move.',
                 icon: <ZapIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/how-to-get-your-first-house-sit-no-reviews',
               },
               {
@@ -93,13 +95,25 @@ export default function HomePage() {
                 title: 'Local Living',
                 desc: `Stories from ${SITE_STATS.statesCount} states and the pets who made them home.`,
                 icon: <HomeIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=800',
                 link: '/blog',
               },
             ].map((pillar, i) => (
               <div key={i} className="card-wrapper">
                 <div className="glass-card stat-card">
+                  <div className="home-pillar-media media-viewport">
+                    <Image
+                      src={pillar.img}
+                      alt={pillar.title}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div className="home-stat-overlay" />
+                    <div className="home-pillar-icon-overlay">{pillar.icon}</div>
+                  </div>
                   <div className="content-layer home-pillar-content">
-                    <div className="home-pillar-icon">{pillar.icon}</div>
                     <div className="sub-header">{pillar.label}</div>
                     <h3 className="serif-italic home-pillar-title">{pillar.title}</h3>
                     <p className="home-pillar-desc">{pillar.desc}</p>

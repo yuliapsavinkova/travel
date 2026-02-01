@@ -53,13 +53,25 @@
 }
 
 /* Pillar Card Styles */
-.home-pillar-content {
-  padding: var(--s-4) 0;
+.home-pillar-media {
+  position: relative;
+  height: 200px;
+  margin-bottom: var(--s-5);
+  border-radius: var(--r-sm);
+  overflow: hidden;
 }
 
-.home-pillar-icon {
+.home-pillar-content {
+  padding: 0 var(--s-2) var(--s-4) var(--s-2);
+}
+
+.home-pillar-icon-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
   color: var(--c-gold);
-  margin-bottom: var(--s-4);
+  z-index: 5;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .home-pillar-title {
@@ -71,6 +83,7 @@
   font-size: 0.9rem;
   color: var(--c-text-muted);
   margin-bottom: var(--s-5);
+  line-height: 1.6;
 }
 
 /* Centered Documentation/Growth Cards */
@@ -176,5 +189,9 @@
   .home-cta-group {
     flex-direction: column;
     align-items: center;
+  }
+
+  .home-pillar-media {
+    height: 180px;
   }
 }
