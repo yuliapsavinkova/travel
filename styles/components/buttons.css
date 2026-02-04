@@ -1,10 +1,10 @@
 .btn-nav {
   color: var(--c-text);
   opacity: 0.65;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   padding: 10px 16px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -22,13 +22,15 @@
   height: 2px;
   background: var(--c-gold);
   transform: scaleX(0);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: center;
+  box-shadow: 0 0 10px var(--c-gold-rich);
 }
 
 .btn-nav.active {
   opacity: 1;
   color: var(--c-gold);
+  text-shadow: 0 0 12px rgba(255, 207, 135, 0.3);
 }
 
 .btn-nav.active::after {
@@ -37,10 +39,7 @@
 
 .btn-nav:hover:not(.active) {
   opacity: 1;
-  background: var(--g-champagne);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--c-white);
 }
 
 .glass-pill {
@@ -78,7 +77,7 @@
   color: var(--c-black) !important;
   border-radius: var(--r-pill);
   padding: 12px 24px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -111,7 +110,7 @@
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;

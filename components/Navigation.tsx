@@ -45,6 +45,13 @@ const Navigation = () => {
     setIsHidden(false);
   }, [pathname]);
 
+  // Logic to determine if a link is active, including sub-paths
+  const checkActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    // Match exact path OR if the current path is a sub-page of the link (e.g., /blog/post-slug matches /blog)
+    return pathname === href || pathname.startsWith(href + '/');
+  };
+
   return (
     <>
       <header className={`app-header ${isHidden ? 'hidden' : ''}`}>
@@ -59,7 +66,7 @@ const Navigation = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`btn-nav ${pathname === item.href ? 'active' : ''}`}
+                  className={`btn-nav ${checkActive(item.href) ? 'active' : ''}`}
                 >
                   {item.label}
                 </Link>
@@ -95,7 +102,7 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`mobile-menu-item ${pathname === item.href ? 'active' : ''}`}
+                className={`mobile-menu-item ${checkActive(item.href) ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
