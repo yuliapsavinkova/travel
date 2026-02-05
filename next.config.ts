@@ -14,61 +14,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: '/blog/ths-reporting-process',
-        destination:
-          '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
-        permanent: true,
-      },
-      {
-        source: '/resources/toolkit-planet-fitness',
-        destination: '/resources/planet-fitness-review',
-        permanent: true,
-      },
-      {
-        source: '/blog/is-trusted-housesitters-worth-it',
-        destination: '/blog/is-trusted-housesitters-worth-it-for-sitters',
-        permanent: true,
-      },
-      {
-        source: '/resources/ths-review',
-        destination: '/resources/trusted-housesitters-review',
-        permanent: true,
-      },
-      {
-        source: '/resources/planet-fitness',
-        destination: '/resources/planet-fitness-review',
-        permanent: true,
-      },
-      {
-        source: '/resources/ths',
-        destination: '/resources/trusted-housesitters-review',
-        permanent: true,
-      },
-      {
-        source: '/blog/ths-rejection-reasons',
-        destination: '/blog/why-trusted-housesitters-applications-get-rejected',
-        permanent: true,
-      },
-      {
-        source: '/toolkit/trustedhousesitters-referral',
-        destination: '/resources/trusted-housesitters-review',
-        permanent: true,
-      },
-      {
-        source: '/journal/:path*',
-        destination: '/blog/:path*',
-        permanent: true,
-      },
-      {
-        source: '/toolkit/:path*',
-        destination: '/resources/:path*',
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
