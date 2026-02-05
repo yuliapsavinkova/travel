@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  skipTrailingSlashRedirect: true,
   trailingSlash: false,
   images: {
     unoptimized: true, // Crucial for preview environments to prevent hangs
