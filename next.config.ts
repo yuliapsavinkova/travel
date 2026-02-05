@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  trailingSlash: false,
   images: {
     unoptimized: true, // Crucial for preview environments to prevent hangs
     formats: ['image/avif', 'image/webp'],
