@@ -91,7 +91,7 @@ export default function HomePage() {
                 link: '/blog/how-to-get-your-first-house-sit-no-reviews',
               },
               {
-                label: 'The Stays',
+                label: 'The Lifestyle',
                 title: 'Local Living',
                 desc: `Stories from ${SITE_STATS.statesCount} states and the pets who made them home.`,
                 icon: <HomeIcon size={28} />,

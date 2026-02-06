@@ -36,7 +36,7 @@ export default function BlogPage() {
         <div className="hero-content-overlay content-layer">
           <div className="sub-header hero-sub-header">House Sitting</div>
           <h1 className="display-title">
-            The <span className="shimmer-text">Blog.</span>
+            My <span className="shimmer-text">Experiences</span>
           </h1>
           <p className="hero-paragraph">I share how to travel sustainably through housesitting.</p>
           <div className="hero-button-group">
@@ -66,7 +66,7 @@ export default function BlogPage() {
         >
           <div className="sub-header">Lessons Learned</div>
           <h2 className="display-title display-title-md">
-            The <span className="serif-italic shimmer-text">Archive.</span>
+            The <span className="serif-italic shimmer-text">Archive</span>
           </h2>
           <p
             className="hero-paragraph"
