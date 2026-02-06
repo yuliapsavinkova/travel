@@ -84,7 +84,7 @@ export default function BlogPage() {
               image={post.imageUrl}
               badge="Post"
               metadata={[
-                { icon: <CalendarIcon size={12} />, text: post.date },
+                // { icon: <CalendarIcon size={12} />, text: post.date },
                 { icon: <MapPinIcon size={12} />, text: post.location },
               ]}
               title={post.title}

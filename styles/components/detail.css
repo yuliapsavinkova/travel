@@ -24,6 +24,10 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: var(--s-4);
+
+  svg {
+    vertical-align: text-top;
+  }
 }
 
 .detail-title-text {

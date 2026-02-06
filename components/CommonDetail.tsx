@@ -4,6 +4,7 @@ import React, { type ReactNode } from 'react';
 import { ArrowLeftIcon, ShieldCheckIcon, ExternalLinkIcon, ArrowUpRightIcon } from './Icons';
 import FAQSection from './FAQSection';
 import type { NavLink, FAQItem } from '../types';
+import { CalendarIcon } from './Icons';
 
 interface CommonDetailProps {
   onBack?: string;
@@ -44,7 +45,11 @@ const CommonDetail = ({
     <div className="detail-container">
       <header className="detail-header-area">
         <div className="container text-center">
-          {date && <span className="detail-date-label">{date}</span>}
+          {date && (
+            <span className="detail-date-label">
+              <CalendarIcon size={12} /> {date}
+            </span>
+          )}
           <h1 className="detail-title-text">{title}</h1>
           {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
         </div>
