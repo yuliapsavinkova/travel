@@ -237,7 +237,7 @@ export default function HomePage() {
 
       {/* SECTION: ROADMAP (WITH GLASS BACKGROUND) */}
       <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
-        <div className="glass-card home-feature-card-compact">
+        <div className="glass-card home-feature-card">
           <div className="sub-header">Growth Roadmap</div>
           <h2 className="display-title display-title-md">
             The Road <span className="serif-italic shimmer-text">Ahead</span>
