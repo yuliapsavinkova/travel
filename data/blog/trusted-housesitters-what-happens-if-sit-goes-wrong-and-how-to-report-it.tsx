@@ -11,7 +11,7 @@ export const post: BlogPost = {
     'Understand the reporting process, common triggers for disputes, and how to protect yourself through documentation.',
   date: 'January 2026',
   category: 'Expertise',
-  location: 'Safety',
+  location: 'Lifestyle',
   sortOrder: 9,
   imageUrl:
     'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&q=80&w=1200',
