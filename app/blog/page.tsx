@@ -36,7 +36,7 @@ export default function BlogPage() {
         <div className="hero-content-overlay content-layer">
           <div className="sub-header hero-sub-header">House Sitting</div>
           <h1 className="display-title">
-            My <span className="shimmer-text">Experiences</span>
+            Lessons from<span className="shimmer-text">My Journey as a Housesitter</span>
           </h1>
           <p className="hero-paragraph">I share how to travel sustainably through housesitting.</p>
           <div className="hero-button-group">
