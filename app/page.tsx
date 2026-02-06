@@ -69,31 +69,31 @@ export default function HomePage() {
             Seeing the U.S. through <span className="serif-italic shimmer-text">Local Eyes</span>
           </h2>
           <p className="hero-paragraph home-section-intro">
-            Top 3 articles to get you started on your own journey
+            Top 3 Articles to Get You Started on Your Own Journey
           </p>
 
           <div className="grid-standard">
             {[
               {
-                label: 'The Math',
-                title: 'Expense Breakdowns',
-                desc: 'Real numbers on food, gas, and hidden costs of living on the road.',
+                label: 'Financials',
+                title: 'How much do I need to save?',
+                desc: 'What I Budgeted vs. What I Needed',
                 icon: <CreditCardIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/can-you-really-travel-for-free-house-sitting-math',
               },
               {
-                label: 'The Strategy',
-                title: 'How to do this too',
-                desc: 'Everything I’ve learned about landing sits and managing life on the move.',
+                label: 'Strategy',
+                title: 'How can I do this too?',
+                desc: 'My Strategies That Made It Possible',
                 icon: <ZapIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/how-to-get-your-first-house-sit-no-reviews',
               },
               {
-                label: 'The Lifestyle',
-                title: 'Local Living',
-                desc: `Stories from ${SITE_STATS.statesCount} states and the pets who made them home.`,
+                label: 'Lifestyle',
+                title: 'Is it really worth it?',
+                desc: 'What I Expected vs. What Happened',
                 icon: <HomeIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=800',
                 link: '/blog',
@@ -139,19 +139,19 @@ export default function HomePage() {
           <div className="glass-card home-feature-card">
             <div className="sub-header">Ongoing Documentation</div>
             <h2 className="display-title display-title-md">
-              Lessons <span className="serif-italic shimmer-text">from the Journey</span>
+              Lessons <span className="serif-italic shimmer-text">from My Journey</span>
             </h2>
             <p className="hero-paragraph home-feature-paragraph">
-              I am documenting every mishap, success, and technical detail here. Whether you want to
-              travel for a month or a year, these guides are built from the real-world experience of
-              a solo female traveler.
+              I am documenting every lesson, success, and technical detail here. Whether you want to
+              travel for a few days, a month, or a year, hope my insights from experience as a solo
+              female traveler will help you plan yours.
             </p>
             <div className="home-metadata-group">
               <span className="metadata-item">
                 <StarIcon size={14} /> 5.0 Sitter Rating
               </span>
               <span className="metadata-item">
-                <StarIcon size={14} /> Full Expense Transparency
+                <StarIcon size={14} /> Full Transparency
               </span>
               <span className="metadata-item">
                 <StarIcon size={14} /> Solo Safety Guides
@@ -161,7 +161,7 @@ export default function HomePage() {
         </section>
 
         {/* SECTION: QUESTIONS / CONNECT */}
-        <section className="home-section-wrap text-center">
+        {/* <section className="home-section-wrap text-center">
           <div className="sub-header">Have Questions?</div>
           <h2 className="display-title display-title-md">
             Connect <span className="serif-italic shimmer-text">With Me</span>
@@ -172,7 +172,7 @@ export default function HomePage() {
               Read Blog
             </Link>
           </div>
-        </section>
+        </section> */}
       </div>
 
       {/* SECTION: PERSPECTIVE / STATS (TINTED) */}
@@ -184,8 +184,8 @@ export default function HomePage() {
               Travel <span className="serif-italic shimmer-text">& Life</span>
             </h2>
             <p className="hero-paragraph home-section-intro">
-              I have visited {SITE_STATS.countriesCount} countries and {SITE_STATS.statesCount}{' '}
-              states while working remote
+              I Have Visited {SITE_STATS.countriesCount} Countries and {SITE_STATS.statesCount}{' '}
+              States While Working Remote
             </p>
 
             <div className="grid-standard">
@@ -235,33 +235,31 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="container">
-        {/* SECTION: ROADMAP (WITH GLASS BACKGROUND) */}
-        <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
-          <div className="glass-card home-feature-card-compact">
-            <div className="sub-header">Growth Roadmap</div>
-            <h2 className="display-title display-title-md">
-              The Road <span className="serif-italic shimmer-text">Ahead</span>
-            </h2>
-            <p className="hero-paragraph home-feature-paragraph">
-              I’m just getting started here, so check back as the site grows. I’ll be sharing
-              packing hacks, real budget breakdowns, and the technical details of traveling full
-              time efficiently and sustainably.
-            </p>
-            <div className="home-metadata-group-dim">
-              <span className="metadata-item">
-                <StarIcon size={14} /> Packing Lists
-              </span>
-              <span className="metadata-item">
-                <StarIcon size={14} /> Sitter Hacks
-              </span>
-              <span className="metadata-item">
-                <StarIcon size={14} /> Safety Tips
-              </span>
-            </div>
+      {/* SECTION: ROADMAP (WITH GLASS BACKGROUND) */}
+      <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
+        <div className="glass-card home-feature-card-compact">
+          <div className="sub-header">Growth Roadmap</div>
+          <h2 className="display-title display-title-md">
+            The Road <span className="serif-italic shimmer-text">Ahead</span>
+          </h2>
+          <p className="hero-paragraph home-feature-paragraph">
+            I’m just getting started here, so check back as the site grows. I’ll be sharing packing
+            hacks, real budget breakdowns, and the technical details of traveling full time
+            efficiently and sustainably.
+          </p>
+          <div className="home-metadata-group-dim">
+            <span className="metadata-item">
+              <StarIcon size={14} /> Packing Lists
+            </span>
+            <span className="metadata-item">
+              <StarIcon size={14} /> Sitter Hacks
+            </span>
+            <span className="metadata-item">
+              <StarIcon size={14} /> Safety Tips
+            </span>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

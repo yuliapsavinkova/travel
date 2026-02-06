@@ -20,7 +20,13 @@ export const NAV_ITEMS = [
   { label: 'Blog', href: '/blog' },
   { label: 'Resources', href: '/resources' },
   { label: 'FAQ', href: '/faq' },
-  ...(IS_DEV ? [{ label: 'Map', href: '/roadmap' }] : []),
+  ...(IS_DEV
+    ? [
+        { label: 'Map', href: '/roadmap' },
+        { label: 'Pins', href: '/pinterest' },
+        { label: 'Expenses', href: '/blog/can-you-really-travel-for-free-house-sitting-math' },
+      ]
+    : []),
   { label: 'About', href: '/about' },
 ];
 

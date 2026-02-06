@@ -31,3 +31,6 @@
 
 /* Roadmap Architecture */
 @import "./styles/components/roadmap.css";
+
+/* Pinterest Tool */
+@import "./styles/components/pinterest-render.css";
