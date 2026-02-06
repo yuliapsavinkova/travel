@@ -100,7 +100,7 @@ export default function HomePage() {
               },
             ].map((pillar, i) => (
               <div key={i} className="card-wrapper">
-                <div className="glass-card stat-card">
+                <div className="glass-card">
                   <div className="home-pillar-media media-viewport">
                     <Image
                       src={pillar.img}
@@ -210,7 +210,7 @@ export default function HomePage() {
                 },
               ].map((stat, i) => (
                 <div key={i} className="card-wrapper">
-                  <div className="glass-card stat-card">
+                  <div className="glass-card">
                     <div className="card-image-viewport media-viewport home-stat-media">
                       <Image
                         src={stat.img}
