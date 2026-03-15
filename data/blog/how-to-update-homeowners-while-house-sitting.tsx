@@ -110,17 +110,21 @@ export const post: BlogPost = {
       <h2>4. Examples of Good Updates</h2>
       <div className="prose-accent-box variant-pros">
         <span className="accent-box-label">Why These Work:</span>
+
         <p className="serif-italic">
-          “Both cats ate well today, litter boxes were normal, and they spent most of the afternoon
-          sleeping in the sun. Added a few photos from their window watch.”
+          “Quiet, cozy day here. Both cats spent a good part of the afternoon watching birds from
+          the window and later settled in for a long nap on the couch. They were very relaxed and
+          kept me company while I worked. I added a couple photos.”
           <br />
-          <strong>(Clear, calm, visual)</strong>
+          <strong>(Calm, descriptive, reassuring)</strong>
         </p>
+
         <p className="serif-italic" style={{ marginTop: 'var(--s-4)' }}>
-          “Everything went smoothly today—feeding, meds, and playtime as discussed. Park walk video
-          attached.”
+          “Fun afternoon today—lots of playtime and a few zoomies around the house. After burning
+          off all that energy, she completely crashed and slept next to me on the couch. Added a few
+          photos.”
           <br />
-          <strong>(Efficient and professional)</strong>
+          <strong>(Warm, personal, easy to picture)</strong>
         </p>
       </div>
 
