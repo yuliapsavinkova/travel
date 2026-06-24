@@ -10,6 +10,7 @@ interface CommonDetailProps {
   onBack?: string;
   backLabel?: string;
   image: string;
+  topic?: string;
   title: string;
   subtitle?: string;
   date?: string;
@@ -27,6 +28,7 @@ const CommonDetail = ({
   onBack,
   backLabel,
   image,
+  topic,
   title,
   subtitle,
   date,
@@ -45,6 +47,7 @@ const CommonDetail = ({
     <div className="detail-container">
       <header className="detail-header-area">
         <div className="container text-center">
+          {topic && <span className="detail-topic-label"> {topic} </span>}
           {date && (
             <span className="detail-date-label">
               <CalendarIcon size={12} /> {date}

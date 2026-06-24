@@ -6,7 +6,8 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '2',
   slug: 'trusted-housesitters-profile-tips-how-to-secure-more-sits',
-  title: 'TrustedHousesitters Profile Tips: How to Secure More Sits',
+  topic: 'TrustedHousesitters',
+  title: 'Profile Tips: How to Secure More Sits',
   navTitle: 'Profile Tips',
   excerpt: 'Master your profile with practical tips, including photo rules and proven examples.',
   date: 'January 2026',

@@ -95,6 +95,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
+    topic: post.topic,
     description: post.excerpt,
     image: post.imageUrl,
     datePublished: post.date,
@@ -116,6 +117,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         backLabel="Back to Blog"
         image={post.imageUrl}
         title={post.title}
+        topic={post.topic}
         date={post.date}
         isAffiliate={true}
         ctaLabel={post.ctaLabel}

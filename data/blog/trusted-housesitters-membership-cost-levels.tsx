@@ -5,11 +5,12 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '4',
   slug: 'trusted-housesitters-membership-cost-levels',
-  title: 'Which TrustedHousesitters Sitter Membership Level Should You Choose?',
+  topic: 'TrustedHousesitters',
+  title: 'Which Membership Level Should You Choose?',
   navTitle: 'Membership Guide',
   excerpt:
     'Breaking down Basic, Standard, and Premium sitter memberships to find the right fit for your travel style.',
-  date: 'January 2026',
+  date: 'June 2026',
   category: 'Sitter Guide',
   location: 'Financial',
   sortOrder: 3,
@@ -34,9 +35,9 @@ export const post: BlogPost = {
   body: (
     <>
       <p className="prose-lead">
-        TrustedHousesitters offers three membership levels for sitters (not pet owners - that's a
-        different pricing structure). The question isn't "what do they cost?" (you can check that on
-        their site). The question is: which one actually fits your situation?
+        TrustedHousesitters offers three membership levels for <strong>sitters</strong>. The
+        question isn't "what do they cost?" (you can check that on their site). The question is:
+        which one actually fits your situation?
       </p>
 
       <p>

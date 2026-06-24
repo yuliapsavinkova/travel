@@ -73,12 +73,13 @@ export interface Review {
 export interface BlogPost {
   id: string;
   slug: string;
+  topic?: string;
   title: string;
   navTitle?: string;
   subtitle?: string;
   excerpt: string;
   body: string | ReactNode;
-  date: string;
+  date?: string;
   category: string;
   imageUrl: string;
   location: string;
@@ -91,7 +92,7 @@ export interface BlogPost {
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string[];
-  roadmap?: RoadmapMetadata; // Technical dictionary info
+  roadmap?: RoadmapMetadata;
 }
 
 export interface TravelGuide {
