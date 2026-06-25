@@ -140,7 +140,6 @@ export const post: BlogPost = {
           Premium covers emergency hotel costs.
         </li>
       </ul>
-      ```jsx
       <h2>How to Decide</h2>
       <p>Ask yourself these questions:</p>
       <ol>
