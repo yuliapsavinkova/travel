@@ -59,61 +59,70 @@ const CommonDetail = ({
         </div>
       </header>
 
-      {image && (
-        <div className="detail-hero-section">
-          <div className="media-viewport">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 900px"
-              className="detail-hero-image"
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
+      <div>
+        {(onBack || (ctaLabel && ctaLink)) && (
+          <div className="detail-hero-nav-wrapper">
+            <div className="detail-hero-nav">
+              {onBack && (
+                <Link href={onBack} className="hero-nav-link hero-back-link">
+                  <ArrowLeftIcon className="nav-icon" />
+                  <span>{backLabel}</span>
+                </Link>
+              )}
 
-          {onBack && (
-            <Link href={onBack} className="hero-glass-link hero-back-link glass-pill">
-              <ArrowLeftIcon size={14} />
-              <span>{backLabel}</span>
-            </Link>
-          )}
-
-          {ctaLabel && ctaLink && (
-            <a
-              href={ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-glass-link hero-cta-link glass-pill"
-            >
-              <span>{ctaLabel}</span>
-              <ExternalLinkIcon size={14} />
-            </a>
-          )}
-
-          {isAffiliate && (
-            <div className="hero-disclosure-bar">
-              <div className="disclosure-main-group">
-                <ShieldCheckIcon size={14} className="disclosure-icon" />
-
-                <span className="disclosure-text">
-                  <a
-                    href="/disclosure"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="disclosure-link-inline"
-                  >
-                    Disclosure
-                  </a>
-                  : This post may contain referral or affiliate links.
-                </span>
-              </div>
+              {ctaLabel && ctaLink && (
+                <a
+                  href={ctaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-nav-link hero-cta-link"
+                >
+                  <span>{ctaLabel}</span>
+                  <ArrowUpRightIcon className="nav-icon" />
+                </a>
+              )}
             </div>
-          )}
-        </div>
-      )}
+          </div>
+        )}
 
+        {/* Hero Section Container */}
+        {image && (
+          <div className="detail-hero-section">
+            <div className="media-viewport">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 900px"
+                className="detail-hero-image"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+
+            {isAffiliate && (
+              <div className="hero-disclosure-bar">
+                <div className="disclosure-main-group">
+                  <ShieldCheckIcon size={14} className="disclosure-icon" />
+                  <span className="disclosure-text">
+                    <a
+                      href="/disclosure"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="disclosure-link-inline"
+                    >
+                      Disclosure
+                    </a>
+                    : This post may contain referral or affiliate links.
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* TODO: review if still needed */}
       {!image && onBack && (
         <div className="container text-center" style={{ marginBottom: 'var(--s-6)' }}>
           <Link href={onBack} className="glass-pill">

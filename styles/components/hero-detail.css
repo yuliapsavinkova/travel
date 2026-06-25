@@ -1,6 +1,55 @@
+/* ==========================================================================
+   1. Standardized Hero Navigation (Matches your .btn-back-footer style)
+   ========================================================================== */
+
+.detail-hero-nav-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.detail-hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-4) 4px; /* Matches your structure while staying flush with the image edge */
+}
+
+/* Inherits your clean, muted uppercase styling */
+.hero-nav-link {
+  color: var(--c-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-nav-link:hover {
+  color: var(--c-gold);
+}
+
+/* Vector icon alignment matches footer text layout natively */
+.hero-nav-link .nav-icon {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Hero Image Section Container
+   ========================================================================== */
+
 .detail-hero-section {
   position: relative;
-  width: calc(100% - var(--s-8));
   max-width: 900px;
   margin: 0 auto var(--s-6) auto;
   aspect-ratio: 21 / 9;
@@ -40,22 +89,10 @@
   opacity: 1;
 }
 
-/* Integrated Hero Navigation Links */
-.hero-glass-link {
-  position: absolute;
-  top: 24px;
-  z-index: 30;
-}
+/* ==========================================================================
+   Disclosure Bar (Bottom of Image)
+   ========================================================================== */
 
-.hero-back-link {
-  left: 24px;
-}
-
-.hero-cta-link {
-  right: 24px;
-}
-
-/* Disclosure bar */
 .hero-disclosure-bar {
   position: absolute;
   bottom: 0;
@@ -70,7 +107,6 @@
 
   border-top: 1px solid var(--glass-border);
   color: rgba(255, 255, 255, 0.9);
-
   font-size: 11px;
 
   display: flex;
@@ -96,7 +132,6 @@
   line-height: 1.3;
 }
 
-/* Inline link */
 .disclosure-link-inline {
   color: var(--c-gold);
   text-decoration: underline;
@@ -109,19 +144,36 @@
   opacity: 0.8;
 }
 
+/* ==========================================================================
+   Responsive Breakpoints (iPhones / Mobile)
+   ========================================================================== */
+
 @media (max-width: 768px) {
+  .detail-hero-nav-wrapper {
+    margin: 0 var(--s-4);
+  }
+
+  .detail-hero-nav {
+    padding: var(--s-2) 0; /* Brings down the line spacing slightly on mobile */
+  }
+
+  /* Compact scaling rules to protect small mobile screens from crowding */
+  .hero-nav-link {
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    gap: var(--s-2);
+  }
+
+  .hero-nav-link .nav-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Original Hero Image Layout on Mobile */
   .detail-hero-section {
+    margin: 0 var(--s-4);
     aspect-ratio: 16 / 9;
-    width: calc(100% - var(--s-4) * 2);
     min-height: auto;
-  }
-
-  .hero-glass-link span {
-    display: none;
-  }
-
-  .hero-glass-link {
-    padding: 12px;
   }
 
   .hero-disclosure-bar {
