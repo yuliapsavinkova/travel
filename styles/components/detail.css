@@ -32,18 +32,13 @@
 }
 
 .detail-topic-label {
-  display: block;
   font-family: var(--f-serif);
-  color: var(--c-gold);
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: var(--s-2);
-}
-
-.detail-title-text {
-  margin: 0;
-  line-height: 1.1;
-  color: var(--c-white);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .detail-subtitle-text {
