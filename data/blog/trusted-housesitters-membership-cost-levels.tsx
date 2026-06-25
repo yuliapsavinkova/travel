@@ -42,7 +42,6 @@ export const post: BlogPost = {
         </a>{' '}
         website for current pricing.) The real question is which one fits your situation.
       </p>
-
       <p>
         Before diving into the tiers, understand this: if you're still deciding whether house
         sitting is even worth it,{' '}
@@ -52,7 +51,6 @@ export const post: BlogPost = {
         . Once you know you're joining, the membership decision becomes about risk tolerance and
         travel frequency.
       </p>
-
       <h2>Understanding the Three Sitter Tiers</h2>
       <p>All three levels let you apply for unlimited sits worldwide. The differences are in:</p>
       <ul>
@@ -61,14 +59,11 @@ export const post: BlogPost = {
         <li>Support priority</li>
         <li>Additional perks (vet line, airport lounges, etc.)</li>
       </ul>
-
       <p>
-        <strong>Critical to understand:</strong> Both Basic and Standard charge a per-sit booking
-        fee for every confirmed sit. Only Premium has no booking fees.
+        <strong>Critical to understand:</strong> Both the Basic and Standard tiers charge a booking
+        fee for every confirmed sit. Only the Premium tier has no booking fees.
       </p>
-
       <h2>Basic: The Bare Minimum</h2>
-
       <div className="prose-accent-box variant-cons">
         <span className="accent-box-label">What You Get:</span>
         <ul>
@@ -78,20 +73,16 @@ export const post: BlogPost = {
           <li>Basic support</li>
         </ul>
       </div>
-
       <p>
-        <strong>Best for:</strong> Someone testing house sitting for the very first time who plans
-        to do only 1-2 sits per year and is comfortable with minimal protection.
+        <strong>Best for:</strong> Someone new to house sitting who plans to do just 1–2 sits per
+        year and is comfortable with minimal protection.
       </p>
-
       <p>
         <strong>The reality:</strong> No liability protection means if you're found negligent in an
         incident, you have no coverage. The per-sit fees also add up quickly if you do more than a
         couple sits.
       </p>
-
       <h2>Standard: The Middle Ground</h2>
-
       <div className="prose-accent-box">
         <span className="accent-box-label">What You Get:</span>
         <ul>
@@ -102,32 +93,27 @@ export const post: BlogPost = {
           <li>Dedicated support</li>
         </ul>
       </div>
-
       <p>
         <strong>Best for:</strong> Regular sitters who do several sits per year and want liability
         protection but have backup housing if a sit cancels.
       </p>
-
       <p>
         <strong>Why it matters:</strong> The liability protection covers you if someone gets injured
         on the property while you're sitting, or if you're found negligent in an incident. The vet
         line is also incredibly helpful when you're in an unfamiliar area and need urgent pet
         advice.
       </p>
-
       <p>
         <strong>The math:</strong> Standard costs more upfront than Basic, but the added protection
         is significant. However, you still pay per-sit fees, which add up if you're doing many sits.
       </p>
-
       <h2>Premium: For Full-Time Nomads</h2>
-
       <div className="prose-accent-box variant-pros">
         <span className="accent-box-label">What You Get:</span>
         <ul>
           <li>Unlimited access to apply for sits</li>
           <li>
-            <strong>No per-sit booking fees</strong>
+            <span className="underline">No</span> per-sit booking fees
           </li>
           <li>Accident and third-party liability protection</li>
           <li>Sit cancellation insurance</li>
@@ -137,84 +123,86 @@ export const post: BlogPost = {
           <li>Premium badge on profile</li>
         </ul>
       </div>
-
       <p>
         <strong>Best for:</strong> Full-time nomads who rely on house sitting as their primary
         housing and do many sits per year.
       </p>
-
       <p>
         <strong>The two key features:</strong>
       </p>
       <ul>
         <li>
-          <strong>No booking fees:</strong> If you're doing 10+ sits per year, this alone makes
-          Premium worth it financially
+          <strong>No booking fees:</strong> If you're doing 10+ sits per year, this alone can make
+          Premium worth it financially.
         </li>
         <li>
-          <strong>Sit cancellation insurance:</strong> If an owner cancels last-minute and you have
-          no backup housing, Premium covers emergency hotel costs
+          <strong>Sit cancellation insurance:</strong> If an owner cancels at the last minute,
+          Premium covers emergency hotel costs.
         </li>
       </ul>
-
+      ```jsx
       <h2>How to Decide</h2>
-
       <p>Ask yourself these questions:</p>
-
       <ol>
         <li>
-          <strong>How many sits will you do per year?</strong>
+          {' '}
+          <strong>How many sits will you do per year?</strong>{' '}
           <ul>
-            <li>1-2 sits → Basic or Standard (calculate total with booking fees)</li>
-            <li>3-5 sits → Standard makes sense</li>
-            <li>6+ sits → Premium becomes cost-effective due to no booking fees</li>
-            <li>Full-time (10+ sits) → Premium is the clear winner</li>
-          </ul>
+            {' '}
+            <li>
+              1-2 sits → Choose Basic unless you want the extra protection that comes with Standard
+            </li>{' '}
+            <li>3-5 sits → Standard is usually the best value</li>{' '}
+            <li>6-7 sits → Premium is worth considering</li>{' '}
+            <li>
+              8+ sits → Premium usually becomes the better financial choice because there are no
+              booking fees
+            </li>{' '}
+            <li>Full-time (10+ sits) → Premium is the clear winner</li>{' '}
+          </ul>{' '}
         </li>
+
         <li>
           <strong>Do you have backup housing if a sit cancels?</strong>
           <ul>
-            <li>Yes → Standard might be enough</li>
-            <li>No → Premium protects you</li>
+            <li>Yes → Standard may be enough</li>
+            <li>No → Premium's sit cancellation insurance can be invaluable</li>
           </ul>
         </li>
+
         <li>
           <strong>What's your comfort level with risk?</strong>
           <ul>
-            <li>Willing to go without liability coverage → Basic</li>
+            <li>Comfortable without liability coverage → Basic</li>
             <li>Want liability protection → Standard or Premium</li>
-            <li>Want full protection + no booking fees → Premium</li>
+            <li>Want the most protection and no booking fees → Premium</li>
           </ul>
         </li>
       </ol>
-
       <h2>The Break-Even Math</h2>
       <p>
-        <strong>At current pricing (check TrustedHousesitters for updates):</strong>
+        <strong>At current pricing (check the TrustedHousesitters website for updates):</strong>
       </p>
       <ul>
-        <li>Basic: Annual fee + (per-sit fee × number of sits)</li>
-        <li>Standard: Annual fee + (per-sit fee × number of sits)</li>
-        <li>Premium: Annual fee only (no per-sit fees)</li>
+        <li>Basic: Annual membership + booking fees for each confirmed sit</li>
+        <li>Standard: Annual membership + booking fees for each confirmed sit</li>
+        <li>Premium: Annual membership only (no booking fees)</li>
       </ul>
       <p>
-        Premium breaks even with Standard at around 8 sits per year. After that, Premium is cheaper.
+        Premium typically breaks even with Standard at around <strong>8 sits per year</strong>.
+        After that, it generally becomes the less expensive option.
       </p>
-
       <h2>My Recommendation</h2>
-
       <p>
-        I use <strong>Premium</strong> because I travel full-time and house sitting is my primary
-        housing. The sit cancellation insurance is worth it when you have no backup plan, and the no
-        booking fees save money when you're doing many sits throughout the year.
+        I use <strong>Premium</strong> because I travel full-time. The sit cancellation insurance is
+        worth it when you have no backup plan, and the lack of booking fees saves money when you're
+        doing many sits throughout the year.
       </p>
-
       <p>
         For most people who house sit regularly but have other housing options, Standard provides
         the liability protection you need. Basic only makes sense if you're truly just testing the
         waters with 1-2 sits.
       </p>
-
       <p>
         For a deeper look at whether the membership investment makes sense at all, read my{' '}
         <Link href="/blog/can-you-really-travel-for-free-house-sitting-math">
@@ -222,7 +210,6 @@ export const post: BlogPost = {
         </Link>
         .
       </p>
-
       <div className="prose-end">
         <strong>Ready to Join?</strong>
         Whichever plan you choose, you can use my referral link to get {REFERRALS.THS.discount} your

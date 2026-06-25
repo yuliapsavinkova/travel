@@ -73,3 +73,9 @@
 .prose-accent-box.variant-cta .btn-gold {
   margin-top: var(--s-2);
 }
+
+/* TODO: reorganize */
+.underline {
+  text-decoration: underline;
+  font-weight: 600;
+}
