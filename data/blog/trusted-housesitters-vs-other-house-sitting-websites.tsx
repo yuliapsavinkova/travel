@@ -7,8 +7,9 @@ export const post: BlogPost = {
   id: '8',
   slug: 'trusted-housesitters-vs-other-house-sitting-websites',
   title: 'TrustedHousesitters vs Other House Sitting Websites: Which Is Actually Best?',
-  navTitle: 'THS vs Others',
-  excerpt: 'Comparing THS against Nomador, MindMyHouse, and others. Which one wins?',
+  navTitle: 'TrustedHousesitters vs Others',
+  excerpt:
+    'Comparing TrustedHousesitters against Nomador, MindMyHouse, and others. Which one wins?',
   date: 'January 2026',
   category: 'Review',
   location: 'Comparison',
@@ -19,13 +20,13 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   seoTitle: 'TrustedHousesitters vs Other House Sitting Sites: 2026 Comparison',
   seoDescription:
-    'Is THS actually the best house sitting site? We compare it to Nomador, MindMyHouse, HouseSittersAmerica and more.',
+    'Is TrustedHousesitters actually the best house sitting site? We compare it to Nomador, MindMyHouse, HouseSittersAmerica and more.',
   seoKeywords: [
-    'ths vs nomador',
+    'TrustedHousesitters vs nomador',
     'trustedhousesitters alternatives',
     'best house sitting website',
     'house sitting platforms comparison',
-    'nomador vs ths',
+    'nomador vs TrustedHousesitters',
     'mindmyhouse review',
     'which house sitting site is best',
   ],
@@ -117,7 +118,8 @@ export const post: BlogPost = {
 
       <p>
         <strong>Best for:</strong> Sitters focused primarily on Europe. If you're planning extended
-        European travel, Nomador can complement THS or serve as your primary platform.
+        European travel, Nomador can complement TrustedHousesitters or serve as your primary
+        platform.
       </p>
 
       <p>
@@ -160,7 +162,7 @@ export const post: BlogPost = {
 
       <p>
         <strong>The reality:</strong> Regional platforms work best as supplements, not replacements.
-        You'll likely still need THS for consistent opportunities.
+        You'll likely still need TrustedHousesitters for consistent opportunities.
       </p>
 
       <h2>The Multi-Platform Strategy</h2>
@@ -198,7 +200,7 @@ export const post: BlogPost = {
         <li>
           <strong>How often will you house sit?</strong>
           <ul>
-            <li>Full-time → THS (volume matters)</li>
+            <li>Full-time → TrustedHousesitters (volume matters)</li>
             <li>Occasional → Smaller platform might work</li>
           </ul>
         </li>
@@ -220,9 +222,9 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        I haven't needed a secondary platform because THS keeps me fully scheduled. If I were
-        focused exclusively on Europe, I'd consider adding Nomador. But for general travel across
-        multiple continents, THS wins on sheer volume.
+        I haven't needed a secondary platform because TrustedHousesitters keeps me fully scheduled.
+        If I were focused exclusively on Europe, I'd consider adding Nomador. But for general travel
+        across multiple continents, TrustedHousesitters wins on sheer volume.
       </p>
 
       <p>

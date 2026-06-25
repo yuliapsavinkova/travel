@@ -28,7 +28,7 @@ export const post: BlogPost = {
     'house sitting with no experience',
     'new sitter strategy',
     'first time house sitter tips',
-    'ths no reviews',
+    'TrustedHousesitters no reviews',
     'breaking into house sitting',
   ],
   body: (

@@ -20,10 +20,10 @@ export const post: BlogPost = {
     'Learn how to win competitive house sits on TrustedHousesitters using an AI system. Apply within minutes and beat the competition with high-quality personalization.',
   seoKeywords: [
     'trustedhousesitters application speed',
-    'ths ai strategy',
+    'TrustedHousesitters ai strategy',
     'winning competitive house sits',
     'house sitting automation',
-    'apply fast ths',
+    'apply fast TrustedHousesitters',
     'pet sitting application template',
     'apply to house sits using ai',
     'trusted housesitters speed strategy',

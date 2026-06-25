@@ -24,11 +24,11 @@ export const post: BlogPost = {
   seoKeywords: [
     'trustedhousesitters reporting process',
     'what if a house sit goes wrong',
-    'ths dispute resolution',
-    'reporting a homeowner on ths',
+    'TrustedHousesitters dispute resolution',
+    'reporting a homeowner on TrustedHousesitters',
     'house sitting safety guide',
     'sitter protection policy',
-    'ths customer support safety',
+    'TrustedHousesitters customer support safety',
     'house sitting insurance claims',
   ],
   body: (

@@ -21,8 +21,8 @@ export const post: BlogPost = {
     'Discover why TrustedHousesitters applications get declined and how to beat the 5-app rule. Understand homeowner psychology.',
   seoKeywords: [
     'trustedhousesitters rejection reasons',
-    'why ths applications get declined',
-    'ths 5 application rule',
+    'why TrustedHousesitters applications get declined',
+    'TrustedHousesitters 5 application rule',
     'beating house sitting competition',
     'house sitting application tips',
     'owner pet preferences',

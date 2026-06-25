@@ -26,7 +26,7 @@ export const post: BlogPost = {
     'trustedhousesitters profile tips',
     'how to get more house sits',
     'house sitting bio examples',
-    'ths profile photo size',
+    'TrustedHousesitters profile photo size',
     'winning sitter application strategy',
     'trust building for sitters',
     'house sitting profile checklist',

@@ -22,9 +22,9 @@ export const post: BlogPost = {
     'Real examples of how an experienced sitter configures TrustedHousesitters alerts. Learn a strategic approach that actually works.',
   seoKeywords: [
     'trustedhousesitters alerts strategy',
-    'ths notification setup',
+    'TrustedHousesitters notification setup',
     'house sitting alert examples',
-    'how to use ths filters',
+    'how to use TrustedHousesitters filters',
     'competitive sit notifications',
     'house sitting search strategy',
   ],

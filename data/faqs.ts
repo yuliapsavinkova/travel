@@ -76,7 +76,8 @@ export const MASTER_FAQS: FAQItem[] = [
       'initial investment significantly cheaper.',
     link: {
       label: 'Get My Discount',
-      href: '/resources/trusted-housesitters-review',
+      // TODO: hardcoded link, should be dynamic from REFERRALS.THS.link
+      href: 'https://trustedhousesitters.com/refer/raf943607',
     },
   },
 

@@ -7,7 +7,7 @@ export const post: BlogPost = {
   id: '9',
   slug: 'trusted-housesitters-vs-rover-comparison',
   title: 'TrustedHousesitters vs Rover: What People Get Wrong When Comparing Them',
-  navTitle: 'THS vs Rover',
+  navTitle: 'TrustedHousesitters vs Rover',
   excerpt: 'One is an exchange, the other is a transaction. Which one fits your lifestyle?',
   date: 'January 2026',
   category: 'Review',
@@ -17,17 +17,17 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  seoTitle: 'THS vs Rover: Professional Pet Care Comparison',
+  seoTitle: 'TrustedHousesitters vs Rover: Professional Pet Care Comparison',
   seoDescription:
     'Stop comparing Rover and TrustedHousesitters. One is a job, one is a lifestyle. Learn which fits your 2026 travel goals.',
   seoKeywords: [
-    'ths vs rover',
+    'TrustedHousesitters vs rover',
     'pet sitting exchange vs paid',
     'house sitting vs dog walking',
     'is rover better than ths',
     'free travel vs gig work',
     'professional pet care comparison',
-    'rover sitter income vs ths savings',
+    'rover sitter income vs TrustedHousesitters savings',
     'best pet sitting app 2026',
   ],
   body: (
@@ -89,7 +89,7 @@ export const post: BlogPost = {
       <ArticleImage
         src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200"
         alt="Solo female sitting with a dog in a home setting"
-        caption="Rover is a professional pet care gig; THS is a lifestyle choice based on mutual exchange."
+        caption="Rover is a professional pet care gig; TrustedHousesitters is a lifestyle choice based on mutual exchange."
         aspectRatio="3/2"
       />
 
@@ -109,8 +109,8 @@ export const post: BlogPost = {
       </ul>
 
       <p>
-        THS is not casual. It rewards people who plan and commit. If you’re curious how issues are
-        actually handled, see the breakdown of:{' '}
+        TrustedHousesitters is not casual. It rewards people who plan and commit. If you’re curious
+        how issues are actually handled, see the breakdown of:{' '}
         <Link href="/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it">
           what happens when a sit is reported on TrustedHousesitters
         </Link>
@@ -146,7 +146,7 @@ export const post: BlogPost = {
       <div className="prose-end">
         <strong>Your choice</strong>
         One is a side-hustle, one is a gateway to travel. I use both to maintain my life on the
-        road, but for housing, THS is the clear winner.
+        road, but for housing, TrustedHousesitters is the clear winner.
         <br />
         <br />
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
