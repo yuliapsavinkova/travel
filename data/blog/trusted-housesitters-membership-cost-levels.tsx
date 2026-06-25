@@ -10,7 +10,7 @@ export const post: BlogPost = {
   navTitle: 'Membership Guide',
   excerpt:
     'Breaking down Basic, Standard, and Premium sitter memberships to find the right fit for your travel style.',
-  date: 'Updated: June 24, 2026',
+  date: 'Updated: June 25, 2026',
   category: 'Sitter Guide',
   location: 'Financial',
   sortOrder: 3,

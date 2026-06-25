@@ -23,6 +23,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  margin-top: var(--s-4);
   margin-bottom: var(--s-4);
 
   svg {
