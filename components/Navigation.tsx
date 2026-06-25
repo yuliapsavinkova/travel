@@ -58,9 +58,9 @@ const Navigation = () => {
         <div className="nav-wrapper">
           <nav className="glass-island">
             <Link href="/" className="branding-clickable" aria-label="Sitter Journey Home">
-              <SJLogo size={50} />
+              <SJLogo className="branding-logo" size={44} />
+              <span className="branding-text">Sitter Journey</span>
             </Link>
-
             <div className="desktop-nav">
               {NAV_ITEMS.map((item) => (
                 <Link
