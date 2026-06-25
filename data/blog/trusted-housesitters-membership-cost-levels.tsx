@@ -36,15 +36,18 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         TrustedHousesitters offers three membership levels for <strong>sitters</strong>. The
-        question isn't "what do they cost?" (you can check that on their site). The question is:
-        which one actually fits your situation?
+        question isn't "what do they cost?" (Check the{' '}
+        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+          TrustedHousesitters
+        </a>{' '}
+        website for current pricing.) The real question is which one fits your situation.
       </p>
 
       <p>
         Before diving into the tiers, understand this: if you're still deciding whether house
         sitting is even worth it,{' '}
         <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
-          read my breakdown on whether THS is worth the investment
+          read my breakdown on whether TrustedHousesitters is worth the investment
         </Link>
         . Once you know you're joining, the membership decision becomes about risk tolerance and
         travel frequency.
@@ -187,7 +190,7 @@ export const post: BlogPost = {
 
       <h2>The Break-Even Math</h2>
       <p>
-        <strong>At current pricing (check THS for updates):</strong>
+        <strong>At current pricing (check TrustedHousesitters for updates):</strong>
       </p>
       <ul>
         <li>Basic: Annual fee + (per-sit fee × number of sits)</li>
