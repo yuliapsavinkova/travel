@@ -96,20 +96,19 @@ const CommonDetail = ({
             <div className="hero-disclosure-bar">
               <div className="disclosure-main-group">
                 <ShieldCheckIcon size={14} className="disclosure-icon" />
+
                 <span className="disclosure-text">
-                  Disclosure: This post may contain referral or affiliate links.
+                  <a
+                    href="/disclosure"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="disclosure-link-inline"
+                  >
+                    Disclosure
+                  </a>
+                  : This post may contain referral or affiliate links.
                 </span>
               </div>
-              <Link
-                href="/disclosure"
-                className="disclosure-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Read Disclosure"
-              >
-                <span className="disclosure-link-text">Read More</span>
-                <ArrowUpRightIcon size={14} className="disclosure-mobile-icon" />
-              </Link>
             </div>
           )}
         </div>
