@@ -10,7 +10,7 @@ export const post: BlogPost = {
   navTitle: 'Membership Guide',
   excerpt:
     'Breaking down Basic, Standard, and Premium sitter memberships to find the right fit for your travel style.',
-  date: 'Updated: June 25, 2026',
+  date: 'Updated: June 26, 2026',
   category: 'Sitter Guide',
   location: 'Financial',
   sortOrder: 3,
@@ -35,12 +35,11 @@ export const post: BlogPost = {
   body: (
     <>
       <p className="prose-lead">
-        TrustedHousesitters offers three membership levels for <strong>sitters</strong>. The
-        question isn't "what do they cost?" (Check the{' '}
+        TrustedHousesitters offers three membership levels for <strong>sitters</strong>. (Check the{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           TrustedHousesitters
         </a>{' '}
-        website for current pricing.) The real question is which one fits your situation.
+        website for current pricing.)
       </p>
       <p>
         Before diving into the tiers, understand this: if you're still deciding whether house
@@ -77,11 +76,6 @@ export const post: BlogPost = {
         <strong>Best for:</strong> Someone new to house sitting who plans to do just 1–2 sits per
         year and is comfortable with minimal protection.
       </p>
-      <p>
-        <strong>The reality:</strong> No liability protection means if you're found negligent in an
-        incident, you have no coverage. The per-sit fees also add up quickly if you do more than a
-        couple sits.
-      </p>
       <h2>Standard: The Middle Ground</h2>
       <div className="prose-accent-box">
         <span className="accent-box-label">What You Get:</span>
@@ -107,7 +101,7 @@ export const post: BlogPost = {
         <strong>The math:</strong> Standard costs more upfront than Basic, but the added protection
         is significant. However, you still pay per-sit fees, which add up if you're doing many sits.
       </p>
-      <h2>Premium: For Full-Time Nomads</h2>
+      <h2>Premium: Frequent Sitters</h2>
       <div className="prose-accent-box variant-pros">
         <span className="accent-box-label">What You Get:</span>
         <ul>
@@ -125,15 +119,19 @@ export const post: BlogPost = {
       </div>
       <p>
         <strong>Best for:</strong> Full-time nomads who rely on house sitting as their primary
-        housing and do many sits per year.
+        accommodation, frequent sitters, and anyone who wants maximum protection.
       </p>
       <p>
         <strong>The two key features:</strong>
       </p>
       <ul>
         <li>
-          <strong>No booking fees:</strong> If you're doing 10+ sits per year, this alone can make
-          Premium worth it financially.
+          <strong>No booking fees:</strong> If you're doing 8+ sits per year at regular pricing (or
+          6+ with a{' '}
+          <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+            25% referral discount
+          </a>
+          ), this alone can make Premium worth it financially.
         </li>
         <li>
           <strong>Sit cancellation insurance:</strong> If an owner cancels at the last minute,
@@ -144,64 +142,87 @@ export const post: BlogPost = {
       <p>Ask yourself these questions:</p>
       <ol>
         <li>
-          {' '}
-          <strong>How many sits will you do per year?</strong>{' '}
+          <strong>How many sits will you do per year?</strong>
           <ul>
-            {' '}
             <li>
-              1-2 sits → Choose Basic unless you want the extra protection that comes with Standard
-            </li>{' '}
-            <li>3-5 sits → Standard is usually the best value</li>{' '}
-            <li>6-7 sits → Premium is worth considering</li>{' '}
+              1-2 sits → Choose Basic unless you want the extra protection that comes with Standard.
+            </li>
+            <li>3-7 sits → Standard is usually the best value.</li>
             <li>
-              8+ sits → Premium usually becomes the better financial choice because there are no
-              booking fees
-            </li>{' '}
-            <li>Full-time (10+ sits) → Premium is the clear winner</li>{' '}
-          </ul>{' '}
+              8+ sits → Premium generally becomes the better financial choice because there are no
+              booking fees.
+            </li>
+          </ul>
         </li>
 
         <li>
           <strong>Do you have backup housing if a sit cancels?</strong>
           <ul>
-            <li>Yes → Standard may be enough</li>
-            <li>No → Premium's sit cancellation insurance can be invaluable</li>
+            <li>Yes → Standard may be enough.</li>
+            <li>No → Premium's sit cancellation insurance can be invaluable.</li>
           </ul>
         </li>
 
         <li>
           <strong>What's your comfort level with risk?</strong>
           <ul>
-            <li>Comfortable without liability coverage → Basic</li>
-            <li>Want liability protection → Standard or Premium</li>
-            <li>Want the most protection and no booking fees → Premium</li>
+            <li>Comfortable without liability coverage → Basic.</li>
+            <li>Want liability protection → Standard or Premium.</li>
+            <li>Want the most protection and no booking fees → Premium.</li>
           </ul>
         </li>
       </ol>
+
+      <p>
+        If you plan to use TrustedHousesitters regularly throughout the year, Premium generally
+        offers the best long-term value.
+      </p>
+
       <h2>The Break-Even Math</h2>
+
       <p>
-        <strong>At current pricing (check the TrustedHousesitters website for updates):</strong>
+        <strong>
+          At current pricing as of June 26, 2026 (check the{' '}
+          <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+            TrustedHousesitters
+          </a>{' '}
+          website for updates):
+        </strong>
       </p>
+
       <ul>
-        <li>Basic: Annual membership + booking fees for each confirmed sit</li>
-        <li>Standard: Annual membership + booking fees for each confirmed sit</li>
-        <li>Premium: Annual membership only (no booking fees)</li>
+        <li>Basic: $129 annual membership + $12 booking fee for each confirmed sit.</li>
+        <li>Standard: $169 annual membership + $12 booking fee for each confirmed sit.</li>
+        <li>Premium: $259 annual membership only (no booking fees).</li>
       </ul>
+
       <p>
-        Premium typically breaks even with Standard at around <strong>8 sits per year</strong>.
-        After that, it generally becomes the less expensive option.
+        Premium becomes the less expensive option starting with your 8th confirmed sit. New members
+        using my{' '}
+        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+          referral link
+        </a>{' '}
+        receive <strong>25% off</strong> their first year's membership. That brings the prices to
+        approximately <strong>$97</strong> for Basic, <strong>$127</strong> for Standard, and{' '}
+        <strong>$194</strong> for Premium. With discounted pricing, Premium becomes the less
+        expensive option starting with your 6th confirmed sit.
       </p>
+
       <h2>My Recommendation</h2>
+
       <p>
-        I use <strong>Premium</strong> because I travel full-time. The sit cancellation insurance is
-        worth it when you have no backup plan, and the lack of booking fees saves money when you're
-        doing many sits throughout the year.
+        I average around 20 house sits per year, so <strong>Premium</strong> is an easy choice for
+        me. At that volume, the lower cost per sit, included cancellation protection, and lack of
+        booking fees more than justify the higher membership price.
       </p>
+
       <p>
-        For most people who house sit regularly but have other housing options, Standard provides
-        the liability protection you need. Basic only makes sense if you're truly just testing the
-        waters with 1-2 sits.
+        If you only do a handful of sits each year, <strong>Standard</strong> is likely the better
+        value. It includes the liability protection most regular sitters need without paying for
+        features you may never use. <strong>Basic</strong> only really makes sense if you're trying
+        house sitting for the first time and expect to complete just one or two sits.
       </p>
+
       <p>
         For a deeper look at whether the membership investment makes sense at all, read my{' '}
         <Link href="/blog/can-you-really-travel-for-free-house-sitting-math">
