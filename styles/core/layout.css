@@ -1,7 +1,3 @@
-.container {
-  padding: 0 var(--pad-page);
-}
-
 /* Flex-based layout for consistent card sizing and centering */
 .grid-standard {
   display: flex;
@@ -16,9 +12,6 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 var(--pad-page-mobile);
-  }
   .section-margin {
     margin-bottom: var(--gap-section-mobile);
   }

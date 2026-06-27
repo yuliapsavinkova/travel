@@ -1,8 +1,13 @@
 .refined-footer {
   border-top: 1px solid var(--c-border);
   padding: var(--s-9) 0 var(--s-6) 0;
-  margin-top: var(--gap-section);
   background: var(--c-black);
+}
+
+.refined-footer .footer-grid,
+.refined-footer .footer-bottom {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .footer-grid {
@@ -111,7 +116,6 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--c-border);
   padding-top: var(--s-6);
   display: flex;
   justify-content: space-between;

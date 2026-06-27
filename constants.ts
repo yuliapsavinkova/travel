@@ -47,8 +47,8 @@ export const SITE_CONFIG = {
   email: 'sitterjourney@gmail.com',
   googleAnalyticsId: 'G-R0920QKYXK',
   socials: {
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com/sitterjourney',
+    facebook: 'https://facebook.com/sitterjourney',
   },
 };
 
