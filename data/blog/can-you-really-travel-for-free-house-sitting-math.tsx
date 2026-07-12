@@ -142,7 +142,7 @@ export const post: BlogPost = {
       <h2>The Hidden Benefits</h2>
       <p>
         While we're being honest about costs, it's worth mentioning that house sitting comes with{' '}
-        <Link href="/blog/hidden-perks-of-house-sitting-nobody-talks-about">
+        <Link href="/blog/hidden-perks-of-house-sitting">
           unexpected perks beyond just free accommodation
         </Link>
         . Zero utilities, stocked homes, and location-specific benefits all add value that's hard to

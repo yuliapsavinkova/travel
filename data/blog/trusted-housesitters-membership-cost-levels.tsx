@@ -156,10 +156,10 @@ export const post: BlogPost = {
         </li>
 
         <li>
-          <strong>Do you have backup housing if a sit cancels?</strong>
+          <strong>Do you have backup housing if a sit gets canceled?</strong>
           <ul>
-            <li>Yes → Standard may be enough.</li>
-            <li>No → Premium's sit cancellation insurance can be invaluable.</li>
+            <li>Yes → Basic or Standard is likely enough.</li>
+            <li>No → Premium's sit cancellation insurance is incredibly valuable.</li>
           </ul>
         </li>
 

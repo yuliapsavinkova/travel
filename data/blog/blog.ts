@@ -9,7 +9,7 @@ import { post as vsRover } from './trusted-housesitters-vs-rover-comparison';
 import { post as rejections } from './why-trusted-housesitters-applications-get-rejected';
 import { post as reporting } from './trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it';
 import { post as aiStrategy } from './trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai';
-import { post as hiddenPerks } from './hidden-perks-of-house-sitting-nobody-talks-about';
+import { post as hiddenPerks } from './hidden-perks-of-house-sitting';
 import { post as alertsAndFilters } from './trusted-housesitters-how-to-set-up-alerts-and-filters';
 import { post as updatingOwners } from './how-to-update-homeowners-while-house-sitting';
 
