@@ -21,7 +21,7 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   seoTitle: 'Hidden Perks of House Sitting: Real Benefits Beyond Free Accommodation',
   seoDescription:
-    'Discover the unexpected benefits of house sitting: zero utilities, stocked pantries, entertainment subscriptions, and more.',
+    'Discover the unexpected benefits of house sitting: zero utilities, well-prepared kitchens, entertainment subscriptions, and more.',
   seoKeywords: [
     'house sitting benefits',
     'hidden perks of house sitting',
@@ -42,19 +42,17 @@ export const post: BlogPost = {
         they focus on free accommodation. But there are dozens of unexpected benefits that compound
         the value far beyond just a place to stay while you care for someone's beloved pets.
       </p>
-      <h2>Perks I've Noticed Come Up Often</h2>
+      <p>Here's where that value actually shows up.</p>
+      <h2>Perks I've Encountered Often</h2>
 
       <h3>Thoughtful Touches Around the House</h3>
-      <p>
-        Most homeowners are surprisingly generous when it comes to preparing their homes for
-        sitters. Here are a few things I've come across along the way:
-      </p>
+      <p>Here are a few perks homeowners offered me along the way:</p>
 
       <p>In the kitchen, you might find:</p>
       <ul>
         <li>Pantries with spices, oils, and cooking basics</li>
         <li>Coffee, tea, and snacks</li>
-        <li>Sometimes a fridge or freezer with a few things in it</li>
+        <li>Sometimes a fridge or freezer with a few treats in it, whether sweet or savory</li>
       </ul>
 
       <p>In the bathroom, you might find:</p>
@@ -88,10 +86,11 @@ export const post: BlogPost = {
         <li>Netflix, Prime Video, Apple TV, or other streaming services</li>
         <li>Cable or satellite packages</li>
         <li>Music streaming accounts</li>
+        <li>Books, board games, or video games</li>
       </ul>
       <p>
-        Some homes also have home gym equipment, pools, hot tubs, or game rooms, and sitters are
-        often welcome to use them during the stay.
+        Some homes have hot tubs, pools or home theaters, and sitters are often welcome to use them
+        during the stay.
       </p>
 
       <h3>The Intangibles</h3>
@@ -136,10 +135,8 @@ export const post: BlogPost = {
       />
 
       <p>
-        <strong>Important:</strong> These gestures are NOT common and should never be expected.
-        House sitting is an exchange of care for accommodation. The real reward is the trust
-        homeowners place in you to care for their beloved pets. But when these gestures do happen,
-        they're always a pleasant surprise.
+        <strong>Important:</strong> These gestures, although somewhat common, should never be
+        expected. When these gestures do happen, they're often a pleasant surprise.
       </p>
 
       <h2>Extra Perks for Frequent Sitters</h2>
@@ -149,7 +146,7 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-accent-box variant-pros">
-        <span className="accent-box-label">Perks I've Actually Received</span>
+        <span className="accent-box-label">Access & Amenities</span>
         <ul>
           <li>
             <strong>EV Charging:</strong> Free electric car charging (huge savings for me as an EV
@@ -171,6 +168,19 @@ export const post: BlogPost = {
             communities
           </li>
           <li>
+            <strong>Gym or Fitness Studio Access:</strong> Tied to the home or its building
+          </li>
+          <li>
+            <strong>Home Office Setup:</strong> A real desk, monitor, and reliable internet if you
+            work remotely
+          </li>
+        </ul>
+      </div>
+
+      <div className="prose-accent-box variant-pros">
+        <span className="accent-box-label">Gear & Passes</span>
+        <ul>
+          <li>
             <strong>National Park Passes:</strong> Some owners share their annual passes with
             sitters
           </li>
@@ -178,26 +188,19 @@ export const post: BlogPost = {
             <strong>Beach Access:</strong> Private beach access or resort privileges
           </li>
           <li>
-            <strong>Equipment Use:</strong> Bicycles, kayaks, paddleboards, or sporting gear
-          </li>
-          <li>
             <strong>Free Passes:</strong> Zoo, Aquarium, or Museum passes for sitters to enjoy
             during their stay
           </li>
           <li>
-            <strong>Some Gear:</strong> Beach chairs, bicycles, and other extras left out for guests
-            to use
+            <strong>Equipment & Gear:</strong> Bicycles, kayaks, paddleboards, beach chairs, or
+            other sporting gear left out for sitters to use
           </li>
-          <li>
-            <strong>Gym or Fitness Studio Access:</strong> Tied to the home or its building
-          </li>
-          <li>
-            <strong>Home Office Setup:</strong> A real desk, monitor, and reliable internet if you
-            work remotely
-          </li>
-          <li>
-            <strong>Book, Game, or Puzzle Collections:</strong> Left out for guests
-          </li>
+        </ul>
+      </div>
+
+      <div className="prose-accent-box variant-pros">
+        <span className="accent-box-label">Community</span>
+        <ul>
           <li>
             <strong>Referrals to Future Sits:</strong> Homeowners often recommend you to friends or
             neighbors who also need a sitter
@@ -215,8 +218,8 @@ export const post: BlogPost = {
         benefits:
       </p>
       <ul>
-        <li>Fresh lemons, oranges, or pomegranates from fruit trees</li>
-        <li>Vegetables like tomatoes or herbs from garden beds</li>
+        <li>Vegetables like tomatoes or herbs from garden beds, lettuces, carrots</li>
+        <li>Fresh berries, lemons, oranges, apples, pears, pomegranates</li>
         <li>Fresh eggs if you're caring for chickens (yes, this happens!)</li>
       </ul>
       <p>
@@ -226,9 +229,8 @@ export const post: BlogPost = {
 
       <h2>If You're Sitting Full-Time (No Rent, No Bills)</h2>
       <p>
-        This is where the math really changes. If you travel occasionally and keep your own home,
-        this section doesn't apply to you. But for those of us who live this lifestyle full-time,
-        the biggest hidden perk is one line item: <strong>zero utilities.</strong>
+        This is where the math really changes for those of us who live this lifestyle full-time; the
+        biggest hidden perk is one line item: <strong>zero utilities.</strong>
       </p>
       <ul>
         <li>
@@ -242,10 +244,8 @@ export const post: BlogPost = {
         </li>
       </ul>
       <p>
-        These costs can easily add $100 to $200 per month when renting. With full-time house
-        sitting, it's all included in your exchange of caring for their pets and home. The wifi is
-        already connected, the heat and AC work, and you focus on the animals rather than worrying
-        about bills.
+        These costs can easily add up per month when renting. With full-time house sitting, it's all
+        included as part of caring for their pets and home.
       </p>
 
       <h2>Set the Right Expectations</h2>
