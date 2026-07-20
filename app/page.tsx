@@ -64,7 +64,7 @@ export default function HomePage() {
       <div className="container">
         {/* SECTION: MISSION / TOP ARTICLES */}
         <section className="home-section-wrap text-center" id="mission">
-          <div className="sub-header">Started May 2025</div>
+          <div className="sub-header">Start Here</div>
           <h2 className="display-title display-title-md">
             Seeing the U.S. through <span className="serif-italic shimmer-text">Local Eyes</span>
           </h2>
@@ -99,7 +99,7 @@ export default function HomePage() {
                 link: '/blog/is-trusted-housesitters-worth-it-for-sitters',
               },
             ].map((pillar, i) => (
-              <div key={i} className="card-wrapper">
+              <Link key={i} href={pillar.link} className="card-wrapper card-wrapper-link">
                 <div className="glass-card">
                   <div className="home-pillar-media media-viewport">
                     <Image
@@ -117,12 +117,12 @@ export default function HomePage() {
                     <div className="sub-header">{pillar.label}</div>
                     <h3 className="serif-italic home-pillar-title">{pillar.title}</h3>
                     <p className="home-pillar-desc">{pillar.desc}</p>
-                    <Link href={pillar.link} className="btn-nav" style={{ padding: 0 }}>
-                      Read Article &rarr;{/* Explore &rarr; */}
-                    </Link>
+                    <span className="btn-nav" style={{ padding: 0 }}>
+                      Read Article &rarr;
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
