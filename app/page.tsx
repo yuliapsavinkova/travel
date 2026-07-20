@@ -96,7 +96,7 @@ export default function HomePage() {
                 desc: 'What I Expected vs. What Happened',
                 icon: <HomeIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=800',
-                link: '/blog',
+                link: '/blog/is-trusted-housesitters-worth-it-for-sitters',
               },
             ].map((pillar, i) => (
               <div key={i} className="card-wrapper">
@@ -118,7 +118,7 @@ export default function HomePage() {
                     <h3 className="serif-italic home-pillar-title">{pillar.title}</h3>
                     <p className="home-pillar-desc">{pillar.desc}</p>
                     <Link href={pillar.link} className="btn-nav" style={{ padding: 0 }}>
-                      Coming Soon &rarr;{/* Explore &rarr; */}
+                      Read Article &rarr;{/* Explore &rarr; */}
                     </Link>
                   </div>
                 </div>
