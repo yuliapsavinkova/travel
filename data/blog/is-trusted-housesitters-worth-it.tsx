@@ -5,11 +5,12 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '3',
   slug: 'is-trusted-housesitters-worth-it-for-sitters',
+  topic: 'TrustedHousesitters',
   title: 'Is TrustedHousesitters Worth It for Sitters? Honest Pros, Cons, and Real Costs',
   navTitle: 'Is It Worth It?',
   excerpt:
     'TrustedHousesitters removes the biggest cost of travel by exchanging pet care for real homes around the world.',
-  date: 'January 2026',
+  date: 'Updated: July 20, 2026',
   category: 'Review',
   location: 'Financial',
   sortOrder: 1,
@@ -98,19 +99,32 @@ export const post: BlogPost = {
         </div>
       </div>
 
-      <h2>The 2-Night Breakeven Math</h2>
-      <p>Most hesitation comes from the annual fee. Here’s the reality:</p>
+      <h2>The Real 2026 Breakeven Math</h2>
+      <p>Most hesitation comes from the annual fee. Here's the current reality:</p>
       <ul>
-        <li>Average sitter membership: roughly $200/year</li>
-        <li>Conservative hotel or Airbnb cost: ~$100/night</li>
         <li>
-          <strong>Two nights of paid accommodation cover the entire year.</strong>
+          <strong>Basic:</strong> $129/year, plus a $12 booking fee per confirmed sit
         </li>
+        <li>
+          <strong>Standard:</strong> $169/year, plus the same $12 per-sit fee
+        </li>
+        <li>
+          <strong>Premium:</strong> $259/year, with no per-sit fee at all
+        </li>
+        <li>Conservative hotel or Airbnb cost: ~$100/night</li>
       </ul>
+      <p>
+        <strong>
+          Even on the cheapest tier, one weekend in a hotel covers the entire annual fee.
+        </strong>{' '}
+        After that, every stay is pure savings. If you plan to do more than five or six sits a year,
+        the math tips toward Premium: the flat cost usually works out cheaper than paying the
+        per-sit fee repeatedly on Basic or Standard, and it also includes sit-cancellation coverage
+        in case a booking falls through.
+      </p>
 
       <p>
-        After that, every stay is pure savings. Make sure you use a discount when signing up to
-        lower the fee even further —{' '}
+        Make sure you use a discount when signing up to lower the fee even further —{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           this link applies one automatically
         </a>
@@ -122,25 +136,45 @@ export const post: BlogPost = {
         <Link href="/blog/can-you-really-travel-for-free-house-sitting-math">
           full house sitting cost breakdown
         </Link>
-        .
+        , and in my{' '}
+        <Link href="/blog/trusted-housesitters-membership-cost-levels">
+          tier-by-tier membership comparison
+        </Link>{' '}
+        if you're deciding which plan fits your travel pace.
       </p>
+
+      <h2>Who Tends to Succeed at This?</h2>
+      <p>
+        House sitting rewards people with flexible schedules and a genuine love of animals more than
+        any particular background. In practice, the sitters who do best tend to be remote workers
+        who can settle in and work from anywhere, retirees with open calendars, people between
+        leases or in transition, and long-term travelers trying to stretch a budget further. If your
+        schedule can bend around a sit's dates, you're already most of the way there.
+      </p>
+
       <h2>Who Is It Not For?</h2>
       <p>
         It is not for people who do not genuinely love pets. For me, having pets around adds warmth,
         routine, and companionship. It turns a temporary place into a home and enhances the
         experience.
       </p>
+
       <h2>What to Be Aware Of</h2>
       <p>
-        The real friction in house sitting is rarely the pets. It can be the homeowners. Most hosts
-        are fantastic, but some fail to understand that this is an exchange, not employment. That’s
-        why I only apply to sits with strong, consistent reviews and clear expectations. Done right,
-        this eliminates the issue almost entirely.
+        The real skill in house sitting isn't caring for pets — it's picking the right sit. Like any
+        exchange between people, expectations can vary from host to host, and a mismatch in
+        communication style is the most common source of friction. The good news is this is largely
+        avoidable: I look for hosts with a strong, consistent review history and a clear, detailed
+        listing before I apply. When both sides go in with aligned expectations, the exchange tends
+        to run smoothly for everyone.
       </p>
+
       <div className="prose-end">
         <strong>Final Verdict</strong>
-        For the cost of two nights in a mediocre hotel, you unlock a year of staying in beautiful
-        homes with pets you'll love. It is the single most effective trade a traveler can make.
+        For about the cost of a weekend in an average hotel, you unlock a full year of opportunities
+        to stay in beautiful homes around the world, with wonderful furry companions along the way.
+        In my experience, it's one of the best ways to travel on a budget while experiencing places
+        like a local.
         <br />
         <br />
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
