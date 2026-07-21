@@ -10,7 +10,7 @@ export const post: BlogPost = {
   navTitle: 'Is It Worth It?',
   excerpt:
     'TrustedHousesitters removes the biggest cost of travel by exchanging pet care for real homes around the world.',
-  date: 'Updated: July 20, 2026',
+  date: 'Updated: July 21, 2026',
   category: 'Review',
   location: 'Financial',
   sortOrder: 1,
@@ -100,7 +100,14 @@ export const post: BlogPost = {
       </div>
 
       <h2>The Real 2026 Breakeven Math</h2>
-      <p>Most hesitation comes from the annual fee. Here's the current reality:</p>
+      <p>
+        Most hesitation comes from the annual fee. Here's the current reality — and if you want to
+        dig deeper into which tier fits your travel pace, I break it all down in{' '}
+        <Link href="/blog/trusted-housesitters-membership-cost-levels">
+          my membership levels article
+        </Link>
+        :
+      </p>
       <ul>
         <li>
           <strong>Basic:</strong> $129/year, plus a $12 booking fee per confirmed sit
@@ -111,6 +118,10 @@ export const post: BlogPost = {
         <li>
           <strong>Premium:</strong> $259/year, with no per-sit fee at all
         </li>
+      </ul>
+
+      <p>Here is the current reality of lodging cost:</p>
+      <ul>
         <li>Conservative hotel or Airbnb cost: ~$100/night</li>
       </ul>
       <p>
@@ -126,7 +137,7 @@ export const post: BlogPost = {
       <p>
         Make sure you use a discount when signing up to lower the fee even further —{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          this link applies one automatically
+          this link applies 25% off automatically
         </a>
         .
       </p>
@@ -163,18 +174,18 @@ export const post: BlogPost = {
       <p>
         The real skill in house sitting isn't caring for pets — it's picking the right sit. Like any
         exchange between people, expectations can vary from host to host, and a mismatch in
-        communication style is the most common source of friction. The good news is this is largely
-        avoidable: I look for hosts with a strong, consistent review history and a clear, detailed
-        listing before I apply. When both sides go in with aligned expectations, the exchange tends
-        to run smoothly for everyone.
+        communication style is the most common source of friction, not the animals. The good news,
+        this is largely avoidable; I look for hosts with a strong, consistent review history and a
+        clear, detailed listing before I ever apply. When both sides go in with aligned
+        expectations, the exchange tends to run smoothly for everyone.
       </p>
 
       <div className="prose-end">
         <strong>Final Verdict</strong>
-        For about the cost of a weekend in an average hotel, you unlock a full year of opportunities
-        to stay in beautiful homes around the world, with wonderful furry companions along the way.
-        In my experience, it's one of the best ways to travel on a budget while experiencing places
-        like a local.
+        For the cost of a single weekend in a mediocre hotel, you unlock the opportunity to find
+        sits in beautiful homes for the full length of your membership, with the company of new
+        furry friends along the way. In my experience, it's one of the most effective ways to see
+        the world on a budget — and to immerse yourself and live like a local.
         <br />
         <br />
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
