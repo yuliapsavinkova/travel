@@ -75,12 +75,12 @@ export default function HomePage() {
           <div className="grid-standard">
             {[
               {
-                label: 'Financials',
-                title: 'How much do I need to save?',
-                desc: 'What I Budgeted vs. What I Needed',
-                icon: <CreditCardIcon size={28} />,
-                img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
-                link: '/blog/can-you-really-travel-for-free-house-sitting-math',
+                label: 'Lifestyle',
+                title: 'Is it really worth it?',
+                desc: 'What I Expected vs. What Happened',
+                icon: <HomeIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=800',
+                link: '/blog/is-trusted-housesitters-worth-it-for-sitters',
               },
               {
                 label: 'Strategy',
@@ -91,12 +91,12 @@ export default function HomePage() {
                 link: '/blog/how-to-get-your-first-house-sit-no-reviews',
               },
               {
-                label: 'Lifestyle',
-                title: 'Is it really worth it?',
-                desc: 'What I Expected vs. What Happened',
-                icon: <HomeIcon size={28} />,
-                img: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=800',
-                link: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+                label: 'Financials',
+                title: 'How much do I need to save?',
+                desc: 'What I Budgeted vs. What I Needed',
+                icon: <CreditCardIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
+                link: '/blog/can-you-really-travel-for-free-house-sitting-math',
               },
             ].map((pillar, i) => (
               <Link key={i} href={pillar.link} className="card-wrapper card-wrapper-link">
