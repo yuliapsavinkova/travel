@@ -39,12 +39,12 @@ export default function HomePage() {
 
         <div className="hero-content-overlay content-layer">
           <h1 className="display-title">
-            <span className="sub-header home-hero-sub-header">One Year</span>
+            <span className="sub-header home-hero-sub-header">Slow Travel</span>
             My Journey <span className="shimmer-text">Across The United States</span>
           </h1>
           <p className="hero-paragraph">
-            I am embarking on a one-year adventure using housesitting to slow-travel through every
-            state and see the country through local eyes.
+            I am embarking on an adventure using housesitting to slow-travel through every state and
+            see the country through local eyes.
           </p>
           <div className="hero-button-group">
             <Link href="/blog#archive" className="btn-gold">
