@@ -176,10 +176,16 @@ export const post: BlogPost = {
         situation. Or, if you built a good relationship with the homeowner during the sit, send a
         short, friendly message such as:
       </p>
-      <blockquote>
-        Hi! I hope you're settling back in. If you have a moment, I'd really appreciate a review
-        before the review window closes. It would help me a lot. Thanks again!
-      </blockquote>
+      <div className="prose-accent-box">
+        <p className="text-mono serif-italic">
+          Hi [HOMEOWNER_NAME],{'\n\n'}I hope you're settling back in! It was a pleasure caring for
+          [PET_NAMES]. If you have a moment, I'd really appreciate a review before the review window
+          closes. It would mean a lot and help me with future sits.{'\n\n'}
+          Thanks again for trusting me with your home and pets!{'\n\n'}
+          Best,{'\n'}
+          [YOUR_NAME]
+        </p>
+      </div>
       <h2>The Snowball Effect</h2>
       <p>Here's what changes after your first sit:</p>
       <ul>
