@@ -169,7 +169,7 @@ export const post: BlogPost = {
       <p>
         If some time passes and nothing shows up, and you know the sit went well, don't hesitate to
         follow up. Homeowners have just returned from their trip and are settling back into daily
-        life, so it's easy for writing a review to slip their mind. It's rarely personal.
+        life, it's easy for writing a review to slip their mind. It's rarely personal.
       </p>
       <p>
         TrustedHousesitters has a built-in <strong>Request Review</strong> feature for exactly this
