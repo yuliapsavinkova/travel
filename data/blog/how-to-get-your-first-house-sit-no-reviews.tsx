@@ -71,8 +71,8 @@ export const post: BlogPost = {
         </ul>
       </div>
       <p>
-        Avoid long travel manifestos about your bucket list or life philosophy. For a much deeper
-        dive into writing a complete, standout profile, read{' '}
+        Avoid long travel manifestos about your bucket list or life philosophy. For a deep dive into
+        writing a complete, standout profile, read{' '}
         <Link href="/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits">
           my full profile tips article
         </Link>
