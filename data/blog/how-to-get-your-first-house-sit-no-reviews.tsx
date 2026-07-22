@@ -88,7 +88,7 @@ export const post: BlogPost = {
       <p>
         If you're not in a rush to travel, consider completing a few sits close to home first. Local
         homeowners are often more comfortable choosing someone who can meet in person before the
-        sit, so you're not competing with every long-distance traveler for those listings.
+        sit, you're not competing with every long-distance traveler for those listings.
       </p>{' '}
       <h2>3. Start with Cats and Short Stays</h2>
       <p>
@@ -116,9 +116,9 @@ export const post: BlogPost = {
       <ul>
         <li>
           <strong>Off-Season Cities:</strong> I happened to be in Austin, Texas for a work project
-          during the middle of summer. It was brutally hot, so competition was low and homeowners
-          had fewer applicants while many locals escaped to cooler destinations. The timing worked
-          in my favor.
+          during the middle of summer. It was brutally hot, competition was low and homeowners had
+          fewer applicants while many locals escaped to cooler destinations. The timing worked in my
+          favor.
         </li>
         <li>
           <strong>Less Famous Areas:</strong> Target local suburbs or smaller cities where fewer
