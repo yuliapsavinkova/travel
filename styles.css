@@ -33,3 +33,6 @@
 
 /* Pinterest Tool */
 @import "./styles/components/pinterest-render.css";
+
+/* Conversion Features */
+@import "./styles/components/sticky-cta.css";

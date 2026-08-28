@@ -41,8 +41,10 @@ const Navigation = () => {
   }, []);
 
   useEffect(() => {
-    setIsMobileMenuOpen(false);
-    setIsHidden(false);
+    if (pathname) {
+      setIsMobileMenuOpen(false);
+      setIsHidden(false);
+    }
   }, [pathname]);
 
   // Logic to determine if a link is active, including sub-paths

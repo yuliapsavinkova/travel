@@ -1,8 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { BLOG_POSTS } from '../../../constants';
+import { BLOG_POSTS, REFERRALS } from '../../../constants';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
+import StickyReaderCta from '../../../components/StickyReaderCta';
 import { getFaqsByIds } from '../../../data/faqs';
 
 export async function generateStaticParams() {
@@ -130,6 +131,15 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           <ContentRenderer content={post.body} />
         </div>
       </CommonDetail>
+
+      <StickyReaderCta
+        promoLink={post.ctaLink || REFERRALS.THS.link}
+        discountText={REFERRALS.THS.discount}
+        title="Claim 25% Off TrustedHousesitters"
+        subtitle="Verified reader discount • Applied automatically at checkout"
+        buttonLabel="Claim 25% Off"
+        badge="25% OFF"
+      />
     </>
   );
 }
