@@ -134,11 +134,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
       <StickyReaderCta
         promoLink={post.ctaLink || REFERRALS.THS.link}
-        discountText={REFERRALS.THS.discount}
-        title="Claim 25% Off TrustedHousesitters"
-        subtitle="Verified reader discount • Applied automatically at checkout"
+        text="Get 25% off TrustedHousesitters"
         buttonLabel="Claim 25% Off"
-        badge="25% OFF"
       />
     </>
   );
