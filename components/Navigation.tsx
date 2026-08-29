@@ -16,23 +16,29 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // If mobile menu is open, never hide the header
+      if (isMobileMenuOpen) {
+        setIsHidden(false);
+        return;
+      }
+
       const currentScrollY = window.scrollY;
 
-      // Scrolling UP or at the top: Show header
-      if (currentScrollY < lastScrollY.current || currentScrollY < 100) {
+      // Always show header at or near the top of the page, or when scrolling UP
+      if (currentScrollY <= 60 || currentScrollY < lastScrollY.current) {
         setIsHidden(false);
       }
-      // Scrolling DOWN and past threshold: Hide header
+      // Scrolling DOWN and well past top hero threshold: Hide header
       else if (currentScrollY > lastScrollY.current && currentScrollY > 150) {
         setIsHidden(true);
       }
 
-      lastScrollY.current = currentScrollY;
+      lastScrollY.current = Math.max(0, currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const handleOpenContact = () => setIsContactOpen(true);
@@ -98,7 +104,6 @@ const Navigation = () => {
 
       <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <div className="sub-header margin-bottom-sm">Navigation</div>
           <div className="mobile-nav-stack">
             {NAV_ITEMS.map((item) => (
               <Link

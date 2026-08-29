@@ -1,5 +1,9 @@
 {
   "name": "Sitter Journey",
   "description": "Professional house sitting, pet care, and full-time travel blog by Yulia.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
+

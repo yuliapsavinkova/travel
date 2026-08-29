@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
@@ -6,6 +6,12 @@ import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import { SITE_CONFIG } from '../constants';
 import '../styles.css';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 const inter = Inter({
   subsets: ['latin'],

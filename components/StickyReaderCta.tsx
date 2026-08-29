@@ -87,22 +87,37 @@ export default function StickyReaderCta({
       aria-label="Reader discount offer"
     >
       {isCollapsed ? (
-        /* Collapsed Floating Corner Badge */
-        <button
-          type="button"
-          onClick={handleToggleCollapse}
-          className="sticky-cta-collapsed-badge"
-          aria-label="Show 25% discount offer"
-          title="Show discount offer"
-        >
-          <span className="sticky-collapsed-sparkle" aria-hidden="true">
-            ✨
-          </span>
-          <span className="sticky-collapsed-label">25% Off THS</span>
-          <ChevronUpIcon size={14} className="sticky-collapsed-chevron" />
-        </button>
+        /* Collapsed Floating Corner Badge with direct promo link and separate expand button */
+        <div className="sticky-cta-collapsed-badge">
+          <a
+            href={promoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sticky-collapsed-link"
+            id="sticky-collapsed-link"
+            aria-label="Get 25% off TrustedHousesitters Membership"
+            title="Get 25% off TrustedHousesitters Membership"
+          >
+            <span className="sticky-collapsed-sparkle" aria-hidden="true">
+              ✨
+            </span>
+            <span className="sticky-collapsed-label">25% off</span>
+          </a>
+
+          <div className="sticky-collapsed-divider" aria-hidden="true" />
+
+          <button
+            type="button"
+            onClick={handleToggleCollapse}
+            className="sticky-collapsed-expand-btn"
+            aria-label="Expand discount details"
+            title="Expand discount details"
+          >
+            <ChevronUpIcon size={15} className="sticky-collapsed-chevron" />
+          </button>
+        </div>
       ) : (
-        /* Expanded Full Floating Pill */
+        /* Expanded Floating Pill anchored in bottom right */
         <div className="sticky-cta-inner">
           <a
             href={promoLink}
@@ -124,11 +139,10 @@ export default function StickyReaderCta({
             type="button"
             onClick={handleToggleCollapse}
             className="sticky-cta-toggle-btn"
-            aria-label="Hide offer"
-            title="Hide offer"
+            aria-label="Collapse offer"
+            title="Collapse offer"
           >
-            <span className="sticky-cta-toggle-text">Hide</span>
-            <ChevronDownIcon size={14} />
+            <ChevronDownIcon size={16} className="sticky-toggle-icon" />
           </button>
         </div>
       )}
