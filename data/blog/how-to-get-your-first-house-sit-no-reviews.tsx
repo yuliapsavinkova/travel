@@ -10,7 +10,7 @@ export const post: BlogPost = {
   title: 'How to Get Your First House Sit (Even With No Reviews)',
   navTitle: 'First Sit Guide',
   excerpt: 'Proven strategies to go from zero reviews to getting accepted for your first sit.',
-  date: 'Updated: July 21, 2026',
+  date: 'July 21, 2026',
   category: 'Expertise',
   location: 'Strategy',
   sortOrder: 4,

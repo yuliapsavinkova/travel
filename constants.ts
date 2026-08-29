@@ -1,11 +1,26 @@
-import { SiteStrings, REFERRALS } from './types';
+import {
+  SiteStrings,
+  REFERRALS,
+  YULIA_SITTER_JOURNEY,
+  YULIA_SITTER_JOURNEY_URL,
+  YULIA_SITTER_JOURNEY_DISPLAY,
+} from './types';
 
 // Domain registries
 import { BLOG_POSTS } from './data/blog/blog';
 import { TRAVEL_GUIDES } from './data/travel/travel';
 import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
 
-export { REFERRALS, BLOG_POSTS, TRAVEL_GUIDES, ALL_RESOURCES, RESOURCES };
+export {
+  REFERRALS,
+  YULIA_SITTER_JOURNEY,
+  YULIA_SITTER_JOURNEY_URL,
+  YULIA_SITTER_JOURNEY_DISPLAY,
+  BLOG_POSTS,
+  TRAVEL_GUIDES,
+  ALL_RESOURCES,
+  RESOURCES,
+};
 export const TRUSTED_HOUSESITTERS_REF_LINK = REFERRALS.THS.link;
 
 export const IS_DEV = process.env.NODE_ENV === 'development';

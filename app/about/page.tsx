@@ -20,7 +20,7 @@ export default function AboutPage() {
     <CommonDetail
       image="/yulia-with-dog.jpg"
       title="About Yulia"
-      date="Updated: August 29, 2026"
+      date="August 29, 2026"
       prevLink={{ label: 'Go to', title: 'Blog', href: '/blog' }}
       nextLink={{ label: 'Go to', title: 'Resources', href: '/resources' }}
     >

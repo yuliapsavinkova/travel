@@ -5,6 +5,7 @@ import { ArrowLeftIcon, ShieldCheckIcon, ExternalLinkIcon, ArrowUpRightIcon } fr
 import FAQSection from './FAQSection';
 import type { NavLink, FAQItem } from '../types';
 import { CalendarIcon } from './Icons';
+import { formatArticleDate } from '../utils/content';
 
 interface CommonDetailProps {
   onBack?: string;
@@ -52,7 +53,7 @@ const CommonDetail = ({
           <h1 className="detail-title-text">{title}</h1>
           {date && (
             <span className="detail-date-label">
-              <CalendarIcon size={12} /> {date}
+              <CalendarIcon size={12} /> {formatArticleDate(date)}
             </span>
           )}
           {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}

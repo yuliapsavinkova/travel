@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { BLOG_POSTS } from '../../constants';
 import CommonCard from '../../components/CommonCard';
 import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icons';
+import { formatCardDate } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'The Sitter Blog: Expert Tips & House Sitting Stories | Sitter Journey',
@@ -84,7 +85,7 @@ export default function BlogPage() {
               image={post.imageUrl}
               badge="Post"
               metadata={[
-                // { icon: <CalendarIcon size={12} />, text: post.date },
+                { icon: <CalendarIcon size={12} />, text: formatCardDate(post.date) },
                 { icon: <MapPinIcon size={12} />, text: post.location },
               ]}
               title={post.title}

@@ -43,6 +43,16 @@ export const REFERRALS = {
   },
 };
 
+/**
+ * PROFESSIONAL HOUSESITTING SERVICES LINK
+ */
+export const YULIA_SITTER_JOURNEY = {
+  link: 'https://yulia.sitterjourney.com/',
+  display: 'yulia.sitterjourney.com',
+};
+export const YULIA_SITTER_JOURNEY_URL = YULIA_SITTER_JOURNEY.link;
+export const YULIA_SITTER_JOURNEY_DISPLAY = YULIA_SITTER_JOURNEY.display;
+
 export interface NavLink {
   label: string;
   title: string;

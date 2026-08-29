@@ -11,7 +11,7 @@ export const post: BlogPost = {
   navTitle: 'Hidden Perks',
   excerpt:
     'Beyond free accommodation, house sitting comes with dozens of unexpected benefits that compound the value.',
-  date: 'Updated: July 12, 2026',
+  date: 'July 12, 2026',
   category: 'Expertise',
   location: 'Lifestyle',
   sortOrder: 11,

@@ -1,11 +1,11 @@
 import React from 'react';
-import { REFERRALS } from '../types';
+import { REFERRALS, YULIA_SITTER_JOURNEY } from '../types';
 
 export const body = (
   <>
     <p className="prose-lead">
-      Hi, I’m Yulia. I travel across the globe, living a lifestyle that blends house sitting,
-      minimalism, and intentional travel.
+      Hi, I’m Yulia. I travel across the globe, living a lifestyle that blends house
+      sitting, minimalism, and intentional travel.
     </p>
 
     <p>
@@ -32,8 +32,12 @@ export const body = (
       Recently, I made California my home base and started housesitting professionally. If you or
       anyone you know could benefit from a trusted, dedicated house sitter, you can find my
       services, client testimonials, and booking inquiries on my website:{' '}
-      <a href="https://yulia.sitterjourney.com/" target="_blank" rel="noopener noreferrer">
-        yulia.sitterjourney.com
+      <a
+        href={YULIA_SITTER_JOURNEY.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {YULIA_SITTER_JOURNEY.display}
       </a>
       .
     </p>

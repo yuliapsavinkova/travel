@@ -81,20 +81,27 @@
 
 .card-metadata {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   gap: var(--gap-element);
   margin-bottom: var(--s-2);
 }
 
 .metadata-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--c-gold);
   opacity: 0.8;
+}
+
+.metadata-item:last-child {
+  margin-left: auto;
 }
 
 .card-title {

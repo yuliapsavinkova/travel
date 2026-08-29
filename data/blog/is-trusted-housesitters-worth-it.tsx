@@ -10,7 +10,7 @@ export const post: BlogPost = {
   navTitle: 'Is It Worth It?',
   excerpt:
     'TrustedHousesitters removes the biggest cost of travel by exchanging pet care for real homes around the world.',
-  date: 'Updated: July 21, 2026',
+  date: 'July 21, 2026',
   category: 'Review',
   location: 'Financial',
   sortOrder: 1,
