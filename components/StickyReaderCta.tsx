@@ -12,7 +12,7 @@ interface StickyReaderCtaProps {
 
 export default function StickyReaderCta({
   promoLink = REFERRALS.THS.link,
-  text = 'Get 25% off TrustedHousesitters Membership',
+  text = 'Get 25% off TrustedHousesitters',
   showAfterScroll = 350,
 }: StickyReaderCtaProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -95,8 +95,8 @@ export default function StickyReaderCta({
             rel="noopener noreferrer"
             className="sticky-collapsed-link"
             id="sticky-collapsed-link"
-            aria-label="Get 25% off TrustedHousesitters Membership"
-            title="Get 25% off TrustedHousesitters Membership"
+            aria-label="Get 25% off TrustedHousesitters"
+            title="Get 25% off TrustedHousesitters"
           >
             <span className="sticky-collapsed-sparkle" aria-hidden="true">
               ✨
@@ -149,4 +149,3 @@ export default function StickyReaderCta({
     </aside>
   );
 }
-
