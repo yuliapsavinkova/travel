@@ -7,14 +7,12 @@ import { ArrowUpRightIcon, XIcon } from './Icons';
 interface StickyReaderCtaProps {
   promoLink?: string;
   text?: string;
-  buttonLabel?: string;
   showAfterScroll?: number;
 }
 
 export default function StickyReaderCta({
   promoLink = REFERRALS.THS.link,
-  text = 'Get 25% off TrustedHousesitters',
-  buttonLabel = 'Claim 25% Off',
+  text = 'Get 25% off TrustedHousesitters Membership',
   showAfterScroll = 350,
 }: StickyReaderCtaProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -41,7 +39,8 @@ export default function StickyReaderCta({
     };
   }, [showAfterScroll]);
 
-  const handleDismiss = () => {
+  const handleDismiss = (e: React.MouseEvent) => {
+    e.stopPropagation();
     setIsDismissed(true);
     setIsVisible(false);
   };
@@ -55,33 +54,27 @@ export default function StickyReaderCta({
       aria-label="Reader discount offer"
     >
       <div className="sticky-cta-inner">
-        <div className="sticky-cta-left">
+        <a
+          href={promoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sticky-cta-link"
+          id="sticky-cta-link"
+        >
           <span className="sticky-cta-icon" aria-hidden="true">✨</span>
           <span className="sticky-cta-text">{text}</span>
-        </div>
+          <ArrowUpRightIcon size={14} className="sticky-link-icon" />
+        </a>
 
-        <div className="sticky-cta-right">
-          <a
-            href={promoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold sticky-cta-btn"
-            id="sticky-cta-claim-btn"
-          >
-            <span>{buttonLabel}</span>
-            <ArrowUpRightIcon size={13} className="sticky-btn-icon" />
-          </a>
-
-          <button
-            type="button"
-            onClick={handleDismiss}
-            className="sticky-cta-dismiss-btn"
-            aria-label="Close offer"
-            title="Close"
-          >
-            <XIcon size={14} />
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={handleDismiss}
+          className="sticky-cta-dismiss-btn"
+          aria-label="Close offer"
+          title="Close"
+        >
+          <XIcon size={14} />
+        </button>
       </div>
     </aside>
   );

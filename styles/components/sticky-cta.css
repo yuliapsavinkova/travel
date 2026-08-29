@@ -5,12 +5,13 @@
 
 .sticky-reader-cta {
   position: fixed;
-  bottom: 24px;
+  bottom: max(20px, env(safe-area-inset-bottom, 20px));
   left: 50%;
   transform: translateX(-50%) translateY(140%);
   z-index: var(--z-portal);
-  width: auto;
-  max-width: 90vw;
+  width: max-content;
+  max-width: calc(100vw - 24px);
+  box-sizing: border-box;
   pointer-events: none;
   opacity: 0;
   transition:
@@ -27,68 +28,75 @@
 .sticky-cta-inner {
   display: flex;
   align-items: center;
-  gap: 16px;
-  background: rgba(18, 18, 20, 0.92);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 207, 135, 0.22);
+  gap: 6px;
+  background: rgba(18, 18, 20, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 207, 135, 0.28);
   border-radius: 9999px;
-  padding: 8px 10px 8px 18px;
+  padding: 6px 8px 6px 14px;
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.6),
     0 0 16px rgba(255, 207, 135, 0.08);
-  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.sticky-cta-left {
-  display: flex;
+.sticky-cta-inner:hover {
+  border-color: rgba(255, 207, 135, 0.5);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.7),
+    0 0 22px rgba(255, 207, 135, 0.16);
+}
+
+.sticky-cta-link {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--c-gold);
+  padding: 3px 4px;
+  border-radius: 9999px;
+  min-width: 0;
+  flex: 1;
+  transition: opacity 0.25s ease;
 }
 
 .sticky-cta-icon {
   font-size: 0.95rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .sticky-cta-text {
   font-family: var(--f-main);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  color: var(--c-white);
+  color: var(--c-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.25s ease;
 }
 
-.sticky-cta-right {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.sticky-link-icon {
+  color: var(--c-gold);
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
 
-.sticky-cta-btn {
-  padding: 8px 16px !important;
-  font-size: 0.84rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.01em !important;
-  border-radius: 9999px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 5px !important;
-  white-space: nowrap !important;
-  box-shadow: 0 2px 10px rgba(255, 207, 135, 0.25) !important;
-  transition: all 0.2s ease !important;
+/* Hover State: Matches other links on the website */
+.sticky-cta-link:hover {
+  opacity: 0.75;
 }
 
-.sticky-cta-btn:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 16px rgba(255, 207, 135, 0.4) !important;
-}
-
-.sticky-btn-icon {
-  transition: transform 0.2s ease;
-}
-
-.sticky-cta-btn:hover .sticky-btn-icon {
+.sticky-cta-link:hover .sticky-link-icon {
   transform: translate(2px, -2px);
 }
 
@@ -102,35 +110,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   transition: all 0.2s ease;
 }
 
 .sticky-cta-dismiss-btn:hover {
   color: var(--c-white);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
 }
 
-/* Mobile Responsiveness */
+/* Mobile & iPhone Responsiveness */
 @media (max-width: 600px) {
   .sticky-reader-cta {
-    bottom: 16px;
-    width: calc(100% - 24px);
-    max-width: 420px;
+    bottom: max(14px, env(safe-area-inset-bottom, 14px));
+    width: auto;
+    max-width: calc(100vw - 20px);
   }
 
   .sticky-cta-inner {
-    padding: 8px 8px 8px 14px;
-    gap: 10px;
-    justify-content: space-between;
+    padding: 5px 6px 5px 12px;
+    gap: 4px;
+  }
+
+  .sticky-cta-link {
+    gap: 5px;
+    padding: 2px 2px;
   }
 
   .sticky-cta-text {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
+    text-underline-offset: 2.5px;
   }
 
-  .sticky-cta-btn {
-    padding: 7px 12px !important;
-    font-size: 0.78rem !important;
+  .sticky-cta-icon {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .sticky-reader-cta {
+    max-width: calc(100vw - 16px);
+  }
+
+  .sticky-cta-inner {
+    padding: 4px 4px 4px 10px;
+    gap: 2px;
+  }
+
+  .sticky-cta-text {
+    font-size: 0.74rem;
   }
 }
 

@@ -120,6 +120,12 @@ export const FacebookIcon = (props: IconProps) => (
   </IconBase>
 );
 
+export const TikTokIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </IconBase>
+);
+
 // export const LinkedinIcon = (props: IconProps) => (
 //   <IconBase {...props}>
 //     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -313,6 +319,8 @@ export const ExternalLinkIcon = (props: IconProps) => (
     <line x1="10" x2="21" y1="14" y2="3" />
   </IconBase>
 );
+
+export const ExternalLink = ExternalLinkIcon;
 
 export const TagIcon = (props: IconProps) => (
   <IconBase {...props}>

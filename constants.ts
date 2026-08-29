@@ -6,6 +6,7 @@ import { TRAVEL_GUIDES } from './data/travel/travel';
 import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
 
 export { REFERRALS, BLOG_POSTS, TRAVEL_GUIDES, ALL_RESOURCES, RESOURCES };
+export const TRUSTED_HOUSESITTERS_REF_LINK = REFERRALS.THS.link;
 
 export const IS_DEV = process.env.NODE_ENV === 'development';
 
@@ -49,6 +50,7 @@ export const SITE_CONFIG = {
   socials: {
     instagram: 'https://instagram.com/sitterjourney',
     facebook: 'https://facebook.com/sitterjourney',
+    tiktok: 'https://tiktok.com/@sitterjourney',
   },
 };
 

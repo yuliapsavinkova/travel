@@ -1,15 +1,11 @@
 import Link from 'next/link';
-import type { ReactNode } from 'react';
 import {
-  ACTIVE_YEAR,
   CURRENT_YEAR,
-  NEXT_YEAR,
-  GLOBAL_STRINGS,
   NAV_ITEMS,
   SITE_CONFIG,
+  TRUSTED_HOUSESITTERS_REF_LINK,
 } from '../constants';
-import { ContactTrigger } from './ClientTriggers';
-import { InstagramIcon, FacebookIcon, MailIcon, SJLogo, ExternalLinkIcon } from './Icons';
+import { InstagramIcon, FacebookIcon, TikTokIcon, MailIcon, SJLogo, ExternalLink } from './Icons';
 
 const Footer = () => {
   return (
@@ -48,6 +44,15 @@ const Footer = () => {
             >
               <FacebookIcon />
             </a>
+            <a
+              href={SITE_CONFIG.socials.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              aria-label="TikTok"
+            >
+              <TikTokIcon />
+            </a>
             <a href={`mailto:${SITE_CONFIG.email}`} className="social-icon" aria-label="Email">
               <MailIcon size={20} />
             </a>
@@ -63,47 +68,39 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="footer-contact-col">
-          <div className="sub-header footer-header">Contact</div>
-          <p className="footer-contact-promo" style={{ display: 'block' }}>
-            Available for sits: <span className="footer-year-highlight">{ACTIVE_YEAR}</span>
-            <span style={{ opacity: 0.5, margin: '0 4px' }}>&mdash;</span>
-            <span className="footer-year-highlight">{NEXT_YEAR}</span>
-          </p>
-          <div
-            className="footer-action-group"
-            style={{ marginTop: 'var(--s-4)', display: 'flex', gap: 'var(--s-3)' }}
-          >
-            <ContactTrigger
-              label="Contact"
-              className="btn-gold"
-              style={{ flex: 1, minWidth: '140px' }}
-            />
-            <a
-              href={GLOBAL_STRINGS.travelPromoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="secondary-btn"
-              style={{
-                flex: 1,
-                minWidth: '140px',
-                display: 'inline-flex',
-                justifyContent: 'center',
-                gap: '8px',
-              }}
-            >
-              Join
-              <ExternalLinkIcon size={14} />
-            </a>
-          </div>
+        <div className="footer-col footer-col-ext" id="footer-ext-col">
+          <div className="sub-header footer-header footer-col-title">External Networks</div>
+          <ul className="footer-links footer-links-list">
+            <li>
+              <a
+                href="https://yulia.sitterjourney.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                House &amp; Pet Sitting Services <ExternalLink size={12} />
+              </a>
+            </li>
+            <li>
+              <a
+                href={TRUSTED_HOUSESITTERS_REF_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TrustedHousesitters <ExternalLink size={12} />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="footer-legal-links">
+        <div className="footer-legal-bar">
           <span className="footer-credits copyright-block">
             <span className="copyright-symbol">&copy;</span>{' '}
-            <span className="footer-year-highlight">{CURRENT_YEAR}</span> SITTER JOURNEY
+            <span className="footer-year-highlight">{CURRENT_YEAR}</span> sitterjourney.com
           </span>
+          <span className="footer-dot-divider" aria-hidden="true">&middot;</span>
+          <span className="footer-credits">All Rights Reserved</span>
+          <span className="footer-dot-divider" aria-hidden="true">&middot;</span>
           <div className="footer-policy-group">
             <Link
               href="/privacy"
@@ -111,7 +108,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              PRIVACY
+              Privacy
             </Link>
             <Link
               href="/disclosure"
@@ -119,12 +116,9 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              DISCLOSURE
+              Disclosure
             </Link>
           </div>
-        </div>
-        <div className="footer-credits">
-          BASED IN THE <span className="footer-year-highlight">USA</span> • TRAVELING FULL-TIME
         </div>
       </div>
     </footer>

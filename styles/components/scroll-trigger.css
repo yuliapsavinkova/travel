@@ -64,7 +64,8 @@
 
 @media (max-width: 768px) {
   .scroll-trigger {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
+    bottom: max(1.25rem, env(safe-area-inset-bottom, 16px));
   }
 }
