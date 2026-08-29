@@ -9,7 +9,7 @@ import { InstagramIcon, FacebookIcon, TikTokIcon, MailIcon, SJLogo, ExternalLink
 
 const Footer = () => {
   return (
-    <footer className="refined-footer">
+    <footer className="refined-footer" id="site-footer">
       <div className="footer-grid">
         <div className="footer-brand-col">
           <Link

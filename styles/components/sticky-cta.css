@@ -1,62 +1,88 @@
 /* ==========================================================================
    STICKY READER CTA BAR
-   Sweet, minimal floating pill on blog posts
+   Collapsible floating offer pill with footer auto-avoidance
    ========================================================================== */
 
 .sticky-reader-cta {
   position: fixed;
   bottom: max(20px, env(safe-area-inset-bottom, 20px));
-  left: 50%;
-  transform: translateX(-50%) translateY(140%);
   z-index: var(--z-portal);
-  width: max-content;
-  max-width: calc(100vw - 24px);
   box-sizing: border-box;
   pointer-events: none;
   opacity: 0;
   transition:
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.35s ease,
+    left 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sticky-reader-cta.is-visible {
+/* Expanded State: Centered Bottom */
+.sticky-reader-cta.is-expanded {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%) translateY(140%);
+  width: max-content;
+  max-width: calc(100vw - 24px);
+}
+
+.sticky-reader-cta.is-expanded.is-visible {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
   pointer-events: auto;
 }
 
+/* Collapsed State: Bottom-Right Corner Badge */
+.sticky-reader-cta.is-collapsed {
+  left: auto;
+  right: max(20px, env(safe-area-inset-right, 20px));
+  transform: translateY(140%);
+  width: auto;
+  max-width: calc(100vw - 40px);
+}
+
+.sticky-reader-cta.is-collapsed.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   EXPANDED INNER PILL
+   ========================================================================== */
+
 .sticky-cta-inner {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: rgba(18, 18, 20, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 207, 135, 0.28);
+  border: 1px solid rgba(255, 207, 135, 0.3);
   border-radius: 9999px;
   padding: 6px 8px 6px 14px;
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.6),
-    0 0 16px rgba(255, 207, 135, 0.08);
+    0 0 16px rgba(255, 207, 135, 0.1);
   max-width: 100%;
   box-sizing: border-box;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .sticky-cta-inner:hover {
-  border-color: rgba(255, 207, 135, 0.5);
+  border-color: rgba(255, 207, 135, 0.55);
   box-shadow:
     0 14px 36px rgba(0, 0, 0, 0.7),
-    0 0 22px rgba(255, 207, 135, 0.16);
+    0 0 22px rgba(255, 207, 135, 0.18);
 }
 
 .sticky-cta-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   text-decoration: none;
   color: var(--c-gold);
-  padding: 3px 4px;
+  padding: 4px 6px;
   border-radius: 9999px;
   min-width: 0;
   flex: 1;
@@ -91,49 +117,127 @@
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
 
-/* Hover State: Matches other links on the website */
 .sticky-cta-link:hover {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .sticky-cta-link:hover .sticky-link-icon {
   transform: translate(2px, -2px);
 }
 
-.sticky-cta-dismiss-btn {
+/* Safe Divider between Link and Hide control */
+.sticky-cta-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 207, 135, 0.22);
+  flex-shrink: 0;
+}
+
+/* Dedicated Hide / Collapse Button */
+.sticky-cta-toggle-btn {
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   color: var(--c-text-muted);
   cursor: pointer;
-  padding: 6px;
-  border-radius: 50%;
-  display: flex;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
   flex-shrink: 0;
+  font-family: var(--f-main);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   transition: all 0.2s ease;
+  user-select: none;
 }
 
-.sticky-cta-dismiss-btn:hover {
+.sticky-cta-toggle-text {
+  display: inline-block;
+}
+
+.sticky-cta-toggle-btn:hover {
   color: var(--c-white);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Mobile & iPhone Responsiveness */
+/* ==========================================================================
+   COLLAPSED FLOATING BADGE (CORNER)
+   ========================================================================== */
+
+.sticky-cta-collapsed-badge {
+  background: rgba(18, 18, 20, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 207, 135, 0.4);
+  border-radius: 9999px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--c-gold);
+  font-family: var(--f-main);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.6),
+    0 0 16px rgba(255, 207, 135, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.sticky-collapsed-sparkle {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.sticky-collapsed-label {
+  white-space: nowrap;
+}
+
+.sticky-collapsed-chevron {
+  color: var(--c-gold);
+  transition: transform 0.2s ease;
+}
+
+.sticky-cta-collapsed-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 207, 135, 0.7);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.7),
+    0 0 22px rgba(255, 207, 135, 0.22);
+}
+
+.sticky-cta-collapsed-badge:hover .sticky-collapsed-chevron {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVENESS
+   ========================================================================== */
+
 @media (max-width: 600px) {
-  .sticky-reader-cta {
+  .sticky-reader-cta.is-expanded {
     bottom: max(14px, env(safe-area-inset-bottom, 14px));
-    width: auto;
     max-width: calc(100vw - 20px);
+  }
+
+  .sticky-reader-cta.is-collapsed {
+    bottom: max(14px, env(safe-area-inset-bottom, 14px));
+    right: max(12px, env(safe-area-inset-right, 12px));
   }
 
   .sticky-cta-inner {
     padding: 5px 6px 5px 12px;
-    gap: 4px;
+    gap: 6px;
   }
 
   .sticky-cta-link {
-    gap: 5px;
+    gap: 6px;
     padding: 2px 2px;
   }
 
@@ -142,23 +246,38 @@
     text-underline-offset: 2.5px;
   }
 
-  .sticky-cta-icon {
-    font-size: 0.85rem;
+  .sticky-cta-toggle-btn {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+
+  .sticky-cta-collapsed-badge {
+    padding: 7px 12px;
+    font-size: 11.5px;
   }
 }
 
 @media (max-width: 380px) {
-  .sticky-reader-cta {
+  .sticky-reader-cta.is-expanded {
     max-width: calc(100vw - 16px);
   }
 
   .sticky-cta-inner {
     padding: 4px 4px 4px 10px;
-    gap: 2px;
+    gap: 4px;
   }
 
   .sticky-cta-text {
     font-size: 0.74rem;
   }
+
+  .sticky-cta-toggle-text {
+    display: none;
+  }
+
+  .sticky-cta-toggle-btn {
+    padding: 4px;
+  }
 }
+
 

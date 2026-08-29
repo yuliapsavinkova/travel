@@ -3,7 +3,7 @@ import React from 'react';
 export const body = (
   <>
     <p className="prose-lead">
-      Hi, I’m Yulia. I travel full-time across the globe, living a lifestyle that blends house
+      Hi, I’m Yulia. I travel across the globe, living a lifestyle that blends house
       sitting, minimalism, and intentional travel.
     </p>
 
@@ -18,6 +18,21 @@ export const body = (
       first house sit, what you should expect during a stay, and how to navigate solo travel safely.
       It also explores the philosophy of intentional living: focusing on what really matters while
       letting go of the rest.
+    </p>
+
+    <h2>Professional House Sitting</h2>
+    <p>
+      Recently, I made California my home base and started housesitting professionally. If you or
+      anyone you know could benefit from a trusted, dedicated house sitter, you can find my
+      services, client testimonials, and booking inquiries on my website:{' '}
+      <a
+        href="https://yulia.sitterjourney.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        yulia.sitterjourney.com
+      </a>
+      .
     </p>
 
     <h2>Why Trust This Site</h2>
