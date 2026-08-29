@@ -1,16 +1,23 @@
 import React from 'react';
+import { REFERRALS } from '../types';
 
 export const body = (
   <>
     <p className="prose-lead">
-      Hi, I’m Yulia. I travel across the globe, living a lifestyle that blends house
-      sitting, minimalism, and intentional travel.
+      Hi, I’m Yulia. I travel across the globe, living a lifestyle that blends house sitting,
+      minimalism, and intentional travel.
     </p>
 
     <p>
       I focus on long-term house sits, often staying for a month or more at a time. This allows me
       to fully immerse myself in new surroundings without the stress of constant moving. For me,
-      travel is about settling in and understanding the rhythm of a place.
+      travel is about settling in and understanding the rhythm of a place. I primarily use the
+      TrustedHousesitters platform for finding my sits. If you're looking to start your own journey,
+      you can use my link for{' '}
+      <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+        25% off your membership
+      </a>
+      .
     </p>
 
     <p>
@@ -25,11 +32,7 @@ export const body = (
       Recently, I made California my home base and started housesitting professionally. If you or
       anyone you know could benefit from a trusted, dedicated house sitter, you can find my
       services, client testimonials, and booking inquiries on my website:{' '}
-      <a
-        href="https://yulia.sitterjourney.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://yulia.sitterjourney.com/" target="_blank" rel="noopener noreferrer">
         yulia.sitterjourney.com
       </a>
       .
