@@ -16,7 +16,6 @@ const ContentRenderer = ({ content, className = '' }: ContentRendererProps) => {
   // Fallback for existing legacy string-based HTML content
   return (
     <div className={`prose-content ${className}`}>
-      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Trusted internal static content */}
       <div dangerouslySetInnerHTML={{ __html: content as string }} />
     </div>
   );

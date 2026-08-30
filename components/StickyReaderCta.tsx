@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { REFERRALS } from '../constants';
-import { ArrowUpRightIcon, ChevronDownIcon, ChevronUpIcon } from './Icons';
+import { ArrowUpRightIcon } from './Icons';
 
 interface StickyReaderCtaProps {
   promoLink?: string;
@@ -12,17 +12,13 @@ interface StickyReaderCtaProps {
 
 export default function StickyReaderCta({
   promoLink = REFERRALS.THS.link,
-  text = 'Get 25% off TrustedHousesitters',
+  text = 'Get 25% off TrustedHousesitters Membership',
   showAfterScroll = 350,
 }: StickyReaderCtaProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isNearFooter, setIsNearFooter] = useState<boolean>(false);
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
 
   useEffect(() => {
-    // Reset state on mount
-    setIsCollapsed(false);
-
     const checkVisibility = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
@@ -69,83 +65,27 @@ export default function StickyReaderCta({
     };
   }, [showAfterScroll]);
 
-  const handleToggleCollapse = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsCollapsed((prev) => !prev);
-  };
-
   // If not scrolled enough or if user has scrolled all the way to the footer, hide it smoothly
   const shouldRender = isVisible && !isNearFooter;
 
   return (
     <aside
       id="sticky-reader-cta"
-      className={`sticky-reader-cta ${shouldRender ? 'is-visible' : ''} ${
-        isCollapsed ? 'is-collapsed' : 'is-expanded'
-      }`}
+      className={`sticky-reader-cta ${shouldRender ? 'is-visible' : ''}`}
       aria-label="Reader discount offer"
     >
-      {isCollapsed ? (
-        /* Collapsed Floating Corner Badge with direct promo link and separate expand button */
-        <div className="sticky-cta-collapsed-badge">
-          <a
-            href={promoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sticky-collapsed-link"
-            id="sticky-collapsed-link"
-            aria-label="Get 25% off TrustedHousesitters"
-            title="Get 25% off TrustedHousesitters"
-          >
-            <span className="sticky-collapsed-sparkle" aria-hidden="true">
-              ✨
-            </span>
-            <span className="sticky-collapsed-label">25% off</span>
-          </a>
-
-          <div className="sticky-collapsed-divider" aria-hidden="true" />
-
-          <button
-            type="button"
-            onClick={handleToggleCollapse}
-            className="sticky-collapsed-expand-btn"
-            aria-label="Expand discount details"
-            title="Expand discount details"
-          >
-            <ChevronUpIcon size={15} className="sticky-collapsed-chevron" />
-          </button>
-        </div>
-      ) : (
-        /* Expanded Floating Pill anchored in bottom right */
-        <div className="sticky-cta-inner">
-          <a
-            href={promoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sticky-cta-link"
-            id="sticky-cta-link"
-          >
-            <span className="sticky-cta-icon" aria-hidden="true">
-              ✨
-            </span>
-            <span className="sticky-cta-text">{text}</span>
-            <ArrowUpRightIcon size={14} className="sticky-link-icon" />
-          </a>
-
-          <div className="sticky-cta-divider" aria-hidden="true" />
-
-          <button
-            type="button"
-            onClick={handleToggleCollapse}
-            className="sticky-cta-toggle-btn"
-            aria-label="Collapse offer"
-            title="Collapse offer"
-          >
-            <ChevronDownIcon size={16} className="sticky-toggle-icon" />
-          </button>
-        </div>
-      )}
+      <div className="sticky-cta-inner">
+        <a
+          href={promoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sticky-cta-link"
+          id="sticky-cta-link"
+        >
+          <span className="sticky-cta-text">{text}</span>
+          <ArrowUpRightIcon size={14} className="sticky-link-icon" />
+        </a>
+      </div>
     </aside>
   );
 }

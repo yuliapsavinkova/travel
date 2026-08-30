@@ -1,93 +1,78 @@
 /* ==========================================================================
    STICKY READER CTA BAR
-   Collapsible floating offer pill anchored to bottom-right corner
+   Simplified floating offer pill centered at the bottom
    ========================================================================== */
 
 .sticky-reader-cta {
   position: fixed;
   bottom: max(20px, env(safe-area-inset-bottom, 20px));
-  right: max(20px, env(safe-area-inset-right, 20px));
-  left: auto;
+  left: 50%;
+  right: auto;
   z-index: var(--z-portal);
   box-sizing: border-box;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(140%);
-  transform-origin: bottom right;
+  transform: translate(-50%, 140%);
+  transform-origin: center bottom;
   transition:
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.3s ease;
+  max-width: min(calc(100vw - 32px), 560px);
+  width: max-content;
 }
 
 .sticky-reader-cta.is-visible {
-  transform: translateY(0);
+  transform: translate(-50%, 0);
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Expanded State */
-.sticky-reader-cta.is-expanded {
-  width: auto;
-  max-width: min(calc(100vw - 40px), 540px);
-}
-
-/* Collapsed State */
-.sticky-reader-cta.is-collapsed {
-  width: auto;
-  max-width: calc(100vw - 40px);
-}
-
 /* ==========================================================================
-   EXPANDED INNER PILL
+   INNER PILL & LINK
    ========================================================================== */
 
 .sticky-cta-inner {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
   background: rgba(18, 18, 20, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 207, 135, 0.32);
+  border: 1px solid rgba(255, 207, 135, 0.35);
   border-radius: 9999px;
-  padding: 6px 6px 6px 14px;
+  padding: 8px 18px;
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.6),
     0 0 16px rgba(255, 207, 135, 0.1);
   max-width: 100%;
   box-sizing: border-box;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
 
 .sticky-cta-inner:hover {
-  border-color: rgba(255, 207, 135, 0.55);
+  border-color: rgba(255, 207, 135, 0.6);
   box-shadow:
     0 14px 36px rgba(0, 0, 0, 0.7),
-    0 0 22px rgba(255, 207, 135, 0.18);
+    0 0 22px rgba(255, 207, 135, 0.2);
+  transform: translateY(-1px);
 }
 
 .sticky-cta-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   text-decoration: none;
   color: var(--c-gold);
-  padding: 4px 4px;
+  padding: 2px 4px;
   border-radius: 9999px;
   min-width: 0;
-  flex: 1;
   transition: opacity 0.25s ease;
-}
-
-.sticky-cta-icon {
-  font-size: 0.95rem;
-  line-height: 1;
-  flex-shrink: 0;
 }
 
 .sticky-cta-text {
   font-family: var(--f-main);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--c-gold);
   text-decoration: underline;
@@ -98,7 +83,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: opacity 0.25s ease;
 }
 
 .sticky-link-icon {
@@ -108,223 +92,43 @@
 }
 
 .sticky-cta-link:hover {
-  opacity: 0.82;
+  opacity: 0.88;
 }
 
 .sticky-cta-link:hover .sticky-link-icon {
   transform: translate(2px, -2px);
 }
 
-/* Safe Divider between Link and Collapse icon */
-.sticky-cta-divider {
-  width: 1px;
-  height: 18px;
-  background: rgba(255, 207, 135, 0.22);
-  flex-shrink: 0;
-}
-
-/* Dedicated Collapse Icon Button */
-.sticky-cta-toggle-btn {
-  background: transparent;
-  border: 1px solid transparent;
-  color: var(--c-text-muted);
-  cursor: pointer;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.2s ease;
-  user-select: none;
-  padding: 0;
-}
-
-.sticky-toggle-icon {
-  color: var(--c-text-muted);
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.sticky-cta-toggle-btn:hover {
-  color: var(--c-gold);
-  background: rgba(255, 207, 135, 0.12);
-  border-color: rgba(255, 207, 135, 0.25);
-}
-
-.sticky-cta-toggle-btn:hover .sticky-toggle-icon {
-  color: var(--c-gold);
-  transform: translateY(1px);
-}
-
 /* ==========================================================================
-   COLLAPSED FLOATING BADGE (CORNER)
-   ========================================================================== */
-
-.sticky-cta-collapsed-badge {
-  background: rgba(18, 18, 20, 0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 207, 135, 0.35);
-  border-radius: 9999px;
-  padding: 5px 6px 5px 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.6),
-    0 0 16px rgba(255, 207, 135, 0.12);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
-}
-
-.sticky-cta-collapsed-badge:hover {
-  border-color: rgba(255, 207, 135, 0.6);
-  box-shadow:
-    0 12px 32px rgba(0, 0, 0, 0.65),
-    0 0 20px rgba(255, 207, 135, 0.2);
-}
-
-.sticky-collapsed-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--c-gold);
-  text-decoration: none;
-  font-family: var(--f-main);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  padding: 3px 2px;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.sticky-collapsed-link:hover {
-  opacity: 0.82;
-  text-decoration: none;
-}
-
-.sticky-collapsed-link:hover .sticky-collapsed-label {
-  text-decoration: underline;
-  text-underline-offset: 2.5px;
-  text-decoration-thickness: 1px;
-}
-
-.sticky-collapsed-sparkle {
-  font-size: 0.9rem;
-  line-height: 1;
-}
-
-.sticky-collapsed-label {
-  white-space: nowrap;
-}
-
-.sticky-collapsed-divider {
-  width: 1px;
-  height: 16px;
-  background: rgba(255, 207, 135, 0.2);
-  flex-shrink: 0;
-}
-
-.sticky-collapsed-expand-btn {
-  background: transparent;
-  border: 1px solid transparent;
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.2s ease;
-  padding: 0;
-}
-
-.sticky-collapsed-chevron {
-  color: var(--c-text-muted);
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.sticky-collapsed-expand-btn:hover {
-  color: var(--c-gold);
-  background: rgba(255, 207, 135, 0.12);
-  border-color: rgba(255, 207, 135, 0.25);
-}
-
-.sticky-collapsed-expand-btn:hover .sticky-collapsed-chevron {
-  color: var(--c-gold);
-  transform: translateY(-1px);
-}
-
-/* ==========================================================================
-   MOBILE & RESPONSIVENESS
+   MOBILE RESPONSIVENESS
    ========================================================================== */
 
 @media (max-width: 600px) {
   .sticky-reader-cta {
     bottom: max(14px, env(safe-area-inset-bottom, 14px));
-    right: max(12px, env(safe-area-inset-right, 12px));
-  }
-
-  .sticky-reader-cta.is-expanded {
-    max-width: calc(100vw - 24px);
-  }
-
-  .sticky-reader-cta.is-collapsed {
     max-width: calc(100vw - 24px);
   }
 
   .sticky-cta-inner {
-    padding: 5px 5px 5px 12px;
-    gap: 6px;
-  }
-
-  .sticky-cta-link {
-    gap: 6px;
-    padding: 2px 2px;
+    padding: 7px 14px;
   }
 
   .sticky-cta-text {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     text-underline-offset: 2.5px;
-  }
-
-  .sticky-cta-toggle-btn {
-    width: 24px;
-    height: 24px;
-  }
-
-  .sticky-cta-collapsed-badge {
-    padding: 4px 5px 4px 10px;
-    gap: 5px;
-  }
-
-  .sticky-collapsed-link {
-    font-size: 12px;
-  }
-
-  .sticky-collapsed-expand-btn {
-    width: 22px;
-    height: 22px;
   }
 }
 
 @media (max-width: 380px) {
-  .sticky-reader-cta.is-expanded {
+  .sticky-reader-cta {
     max-width: calc(100vw - 16px);
   }
 
   .sticky-cta-inner {
-    padding: 4px 4px 4px 10px;
-    gap: 4px;
+    padding: 6px 12px;
   }
 
   .sticky-cta-text {
-    font-size: 0.74rem;
+    font-size: 0.76rem;
   }
 }
-
-
