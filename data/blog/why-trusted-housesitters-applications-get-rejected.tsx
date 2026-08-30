@@ -127,14 +127,9 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Keep going</strong>
+        <strong>Final Verdict</strong>
         Every "no" brings you closer to the next great experience. Don't let the process discourage
         you—just keep being yourself.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

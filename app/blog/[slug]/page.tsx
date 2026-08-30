@@ -115,14 +115,12 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       />
       <CommonDetail
         onBack="/blog#archive"
-        backLabel="Back to Blog"
+        backLabel="Return to Blog"
         image={post.imageUrl}
         title={post.title}
         topic={post.topic}
         date={post.date}
         isAffiliate={true}
-        ctaLabel={post.ctaLabel}
-        ctaLink={post.ctaLink}
         prevLink={prevLink}
         nextLink={nextLink}
         faqs={faqs}

@@ -231,14 +231,9 @@ export const post: BlogPost = {
         .
       </p>
       <div className="prose-end">
-        <strong>Ready to Join?</strong>
-        Whichever plan you choose, you can use my referral link to get {REFERRALS.THS.discount} your
-        first year.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
+        <strong>Final Verdict</strong>
+        Whichever plan you choose, pick the tier that best aligns with your expected travel frequency,
+        sit volume, and need for cancellation protection.
       </div>
     </>
   ),

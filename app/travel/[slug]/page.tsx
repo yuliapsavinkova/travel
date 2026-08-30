@@ -75,13 +75,11 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   return (
     <CommonDetail
       onBack="/travel#guides"
-      backLabel="Back to Travel"
+      backLabel="Return to Travel"
       image={guide.imageUrl}
       title={guide.title}
       date={guide.date}
       isAffiliate={true}
-      ctaLabel={GLOBAL_STRINGS.travelPromoBtn}
-      ctaLink={GLOBAL_STRINGS.travelPromoLink}
       prevLink={prevLink}
       nextLink={nextLink}
     >

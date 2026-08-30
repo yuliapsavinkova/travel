@@ -166,14 +166,9 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>The Bottom Line</strong>
+        <strong>Final Verdict</strong>
         Good communication while house sitting isn’t about volume—it’s about clarity, consistency,
         and judgment. Do this well, and most sits run smoothly with very little friction.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

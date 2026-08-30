@@ -93,14 +93,12 @@ export default async function ResourceDetailPage({
     <>
       <CommonDetail
         onBack="/resources#archive"
-        backLabel="Back to Resources"
+        backLabel="Return to Resources"
         image={item.imageUrl || ''}
         title={item.name}
         subtitle={item.subtitle}
         date={item.date}
         isAffiliate={true}
-        ctaLabel={item.discountText ? `Discount: ${item.discountText}` : 'Visit'}
-        ctaLink={item.link}
         prevLink={prevLink}
         nextLink={nextLink}
         faqs={faqs}

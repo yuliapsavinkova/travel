@@ -3,17 +3,6 @@ import { ReactNode } from 'react';
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
 /**
- * ROADMAP METADATA
- * Used for internal content tracking and the technical dictionary.
- */
-export interface RoadmapMetadata {
-  clusterId: 'ths-core' | 'operational-strategy' | 'safety-support' | 'nomad-toolkit' | 'legal';
-  linksTo?: string[]; // Slugs this article links to
-  backbone?: string; // Internal notes on purpose/goal of this piece
-  status?: 'published' | 'draft' | 'needs-update';
-}
-
-/**
  * SINGLE SOURCE OF TRUTH FOR REFERRALS
  */
 export const REFERRALS = {
@@ -102,7 +91,6 @@ export interface BlogPost {
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string[];
-  roadmap?: RoadmapMetadata;
 }
 
 export interface TravelGuide {
@@ -119,7 +107,6 @@ export interface TravelGuide {
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqIds?: string[];
-  roadmap?: RoadmapMetadata;
 }
 
 export interface ResourceItem {
@@ -143,7 +130,6 @@ export interface ResourceItem {
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string[];
-  roadmap?: RoadmapMetadata;
 }
 
 export interface ResourceCategory {

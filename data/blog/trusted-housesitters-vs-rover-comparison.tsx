@@ -144,14 +144,9 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Your choice</strong>
+        <strong>Final Verdict</strong>
         One is a side-hustle, one is a gateway to travel. I use both to maintain my life on the
         road, but for housing, TrustedHousesitters is the clear winner.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

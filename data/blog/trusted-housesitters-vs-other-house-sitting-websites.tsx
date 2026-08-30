@@ -237,15 +237,10 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>The Bottom Line</strong>
+        <strong>Final Verdict</strong>
         TrustedHousesitters wins on volume, which is what matters most when you need consistent
         sits. Alternatives work for specific regions or as supplements, but THS is the platform that
         can actually keep you booked year-round.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

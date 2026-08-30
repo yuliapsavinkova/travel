@@ -217,22 +217,11 @@ export const post: BlogPost = {
         </p>
       </div>
 
-      <h2>The Bottom Line</h2>
-      <p>
-        High-demand sits require speed. Templates aren't unprofessional - they're necessary. AI
-        helps you personalize at scale without sacrificing quality.
-      </p>
-      <p>Set up your system once. Apply in seconds. Win competitive sits.</p>
-      <p>I hope it helps you land your next great sit.</p>
-
       <div className="prose-end">
-        <strong>Speed is strategy</strong>
-        The right system turns a stressful race into a simple routine.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
+        <strong>Final Verdict</strong>
+        High-demand sits require speed. Templates aren't unprofessional—they're necessary, and AI
+        helps you personalize at scale without sacrificing quality. Set up your system once, apply
+        in seconds, and turn a stressful race into a simple routine.
       </div>
     </>
   ),

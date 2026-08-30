@@ -266,15 +266,10 @@ export const post: BlogPost = {
       </ul>
 
       <div className="prose-end">
-        <strong>The Bottom Line</strong>
+        <strong>Final Verdict</strong>
         House sitting isn't just about free accommodation. It's about living comfortably while
         caring for pets and homes — with everyday comforts, occasional extras, and, for full-timers,
         real savings on top.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

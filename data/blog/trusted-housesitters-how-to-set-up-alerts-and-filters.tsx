@@ -204,15 +204,10 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>The Bottom Line</strong>
+        <strong>Final Verdict</strong>
         Alerts save time and catch opportunities you'd otherwise miss. Start simple, adjust as you
         learn what you actually want. And yes, browsing sits is addictive, but at least it's more
         useful than scrolling social media.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

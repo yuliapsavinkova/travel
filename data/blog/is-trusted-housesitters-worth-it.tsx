@@ -19,16 +19,6 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
-  roadmap: {
-    clusterId: 'ths-core',
-    status: 'published',
-    linksTo: [
-      'trusted-housesitters-membership-cost-levels',
-      'can-you-really-travel-for-free-house-sitting-math',
-      'how-to-get-your-first-house-sit-no-reviews',
-    ],
-    backbone: 'The primary entry point for new sitters. Validates the platform exists and is safe.',
-  },
   body: (
     <>
       <p className="prose-lead">
@@ -186,11 +176,6 @@ export const post: BlogPost = {
         sits in beautiful homes for the full length of your membership, with the company of new
         furry friends along the way. In my experience, it's one of the most effective ways to see
         the world on a budget — and to immerse yourself and live like a local.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

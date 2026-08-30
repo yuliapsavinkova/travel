@@ -142,15 +142,10 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Key Takeaway</strong>
+        <strong>Final Verdict</strong>
         If a sit goes wrong, the process centers on what was documented and agreed to, not on
         assumptions. For most sitters, issues are uncommon. Clarity and communication matter more
         than anything else.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

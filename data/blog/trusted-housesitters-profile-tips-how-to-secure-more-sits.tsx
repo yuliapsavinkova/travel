@@ -234,14 +234,10 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>The Bottom Line</strong>A clear, professional profile removes barriers for owners to
-        say "yes." Get your photos right, write for their concerns, and show you're responsible.
-        That's what converts views into confirmed sits.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
+        <strong>Final Verdict</strong>
+        A clear, professional profile removes barriers for owners to say "yes." Get your photos
+        right, write for their concerns, and show you're responsible. That's what converts views into
+        confirmed sits.
       </div>
     </>
   ),

@@ -28,11 +28,5 @@
 @import "./styles/components/hero-detail.css";
 @import "./styles/components/article-nav.css";
 
-/* Roadmap Architecture */
-@import "./styles/components/roadmap.css";
-
-/* Pinterest Tool */
-@import "./styles/components/pinterest-render.css";
-
 /* Conversion Features */
 @import "./styles/components/sticky-cta.css";

@@ -168,15 +168,10 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>The Bottom Line</strong>
+        <strong>Final Verdict</strong>
         So, is it really "free travel"? If by "free" you mean no accommodation costs and radically
         cheaper long-term travel, then absolutely. It doesn't make you rich; it makes travel
         sustainable.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),

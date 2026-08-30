@@ -199,16 +199,11 @@ export const post: BlogPost = {
         more popular destinations.
       </p>
       <div className="prose-end">
-        <strong>The Bottom Line</strong>
+        <strong>Final Verdict</strong>
         Getting your first house sit requires strategy, not luck. Build a profile that removes
         doubt, invest a little time upfront in references and local sits, and focus on short,
         low-competition opportunities until you earn that first five-star review. Once you have that
         first review, many more opportunities become available.
-        <br />
-        <br />
-        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          {REFERRALS.THS.label}
-        </a>
       </div>
     </>
   ),
