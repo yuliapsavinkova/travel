@@ -21,13 +21,37 @@ export async function generateMetadata({
   return {
     title: `${guide.title} | Travel Guide | Sitter Journey`,
     description: guide.excerpt,
+    keywords: [
+      guide.location,
+      `${guide.location} travel guide`,
+      'house sitting destinations',
+      'slow travel',
+      'nomad travel guide',
+    ],
     alternates: {
       canonical: `https://sitterjourney.com/travel/${guide.slug}`,
     },
     openGraph: {
-      title: guide.title,
+      title: `${guide.title} | Travel Guide`,
       description: guide.excerpt,
-      images: guide.imageUrl ? [{ url: guide.imageUrl }] : [],
+      type: 'article',
+      publishedTime: guide.date,
+      images: guide.imageUrl
+        ? [
+            {
+              url: guide.imageUrl,
+              width: 1200,
+              height: 630,
+              alt: guide.title,
+            },
+          ]
+        : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${guide.title} | Travel Guide`,
+      description: guide.excerpt,
+      images: guide.imageUrl ? [guide.imageUrl] : [],
     },
   };
 }
@@ -43,7 +67,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   if (!guide) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail onBack="/travel#guides" backLabel="Back to Travel" image="" title="Not Found">
+        <CommonDetail onBack="/travel#guides" backLabel="Return to Travel" image="" title="Not Found">
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Guide Not Found</h1>
             <p className="hero-paragraph">The requested travel guide could not be located.</p>
@@ -62,7 +86,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
 
   const prevLink = {
     label: 'Previous',
-    title: prevGuide.title, // TravelGuide type doesn't have navTitle currently, using title
+    title: prevGuide.title,
     href: `/travel/${prevGuide.slug}`,
   };
 
@@ -72,21 +96,84 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
     href: `/travel/${nextGuide.slug}`,
   };
 
+  const guideUrl = `https://sitterjourney.com/travel/${guide.slug}`;
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${guideUrl}#article`,
+        headline: guide.title,
+        description: guide.excerpt,
+        image: guide.imageUrl?.startsWith('http') ? guide.imageUrl : `https://sitterjourney.com${guide.imageUrl}`,
+        datePublished: guide.date,
+        dateModified: guide.date,
+        mainEntityOfPage: guideUrl,
+        about: {
+          '@type': 'Place',
+          name: guide.location,
+        },
+        author: {
+          '@type': 'Person',
+          '@id': 'https://sitterjourney.com/#author',
+          name: 'Yulia',
+          url: 'https://sitterjourney.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          '@id': 'https://sitterjourney.com/#organization',
+          name: 'Sitter Journey',
+          logo: 'https://sitterjourney.com/icon.svg',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${guideUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://sitterjourney.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Travel Guides',
+            item: 'https://sitterjourney.com/travel',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: guide.title,
+            item: guideUrl,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
-    <CommonDetail
-      onBack="/travel#guides"
-      backLabel="Return to Travel"
-      image={guide.imageUrl}
-      title={guide.title}
-      date={guide.date}
-      isAffiliate={true}
-      prevLink={prevLink}
-      nextLink={nextLink}
-    >
-      <div className="flex-col flex-gap-md">
-        <p className="prose-lead">{guide.excerpt}</p>
-        <ContentRenderer content={guide.body} />
-      </div>
-    </CommonDetail>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <CommonDetail
+        onBack="/travel#guides"
+        backLabel="Return to Travel"
+        image={guide.imageUrl}
+        title={guide.title}
+        date={guide.date}
+        isAffiliate={true}
+        prevLink={prevLink}
+        nextLink={nextLink}
+      >
+        <div className="flex-col flex-gap-md">
+          <p className="prose-lead">{guide.excerpt}</p>
+          <ContentRenderer content={guide.body} />
+        </div>
+      </CommonDetail>
+    </>
   );
 }

@@ -92,26 +92,88 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   const faqs = post.faqIds ? getFaqsByIds(post.faqIds) : [];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    topic: post.topic,
-    description: post.excerpt,
-    image: post.imageUrl,
-    datePublished: post.date,
-    author: {
-      '@type': 'Person',
-      name: 'Yulia',
-      url: 'https://sitterjourney.com/about',
+  const postUrl = `https://sitterjourney.com/blog/${post.slug}`;
+  const graphEntities: any[] = [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${postUrl}#article`,
+      isPartOf: {
+        '@type': 'Blog',
+        '@id': 'https://sitterjourney.com/blog',
+        name: 'Sitter Journey Blog',
+      },
+      headline: post.title,
+      description: post.seoDescription || post.excerpt,
+      image: post.imageUrl.startsWith('http') ? post.imageUrl : `https://sitterjourney.com${post.imageUrl}`,
+      datePublished: post.date,
+      dateModified: post.date,
+      mainEntityOfPage: postUrl,
+      articleSection: post.category,
+      keywords: post.seoKeywords?.join(', '),
+      author: {
+        '@type': 'Person',
+        '@id': 'https://sitterjourney.com/#author',
+        name: 'Yulia',
+        url: 'https://sitterjourney.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        '@id': 'https://sitterjourney.com/#organization',
+        name: 'Sitter Journey',
+        logo: 'https://sitterjourney.com/icon.svg',
+      },
     },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${postUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://sitterjourney.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Blog',
+          item: 'https://sitterjourney.com/blog',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: post.title,
+          item: postUrl,
+        },
+      ],
+    },
+  ];
+
+  if (faqs.length > 0) {
+    graphEntities.push({
+      '@type': 'FAQPage',
+      '@id': `${postUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': graphEntities,
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <CommonDetail
         onBack="/blog#archive"

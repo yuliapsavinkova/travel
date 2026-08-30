@@ -89,8 +89,92 @@ export default async function ResourceDetailPage({
 
   const faqs = item.faqIds ? getFaqsByIds(item.faqIds) : [];
 
+  const resourceUrl = `https://sitterjourney.com/resources/${item.slug}`;
+  const graphEntities: any[] = [
+    {
+      '@type': 'Review',
+      '@id': `${resourceUrl}#review`,
+      headline: item.seoTitle || item.name,
+      description: item.seoDescription || item.description,
+      image: item.imageUrl?.startsWith('http') ? item.imageUrl : item.imageUrl ? `https://sitterjourney.com${item.imageUrl}` : undefined,
+      datePublished: item.date,
+      dateModified: item.date,
+      mainEntityOfPage: resourceUrl,
+      itemReviewed: {
+        '@type': 'Product',
+        name: item.name,
+        description: item.description,
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+      },
+      author: {
+        '@type': 'Person',
+        '@id': 'https://sitterjourney.com/#author',
+        name: 'Yulia',
+        url: 'https://sitterjourney.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        '@id': 'https://sitterjourney.com/#organization',
+        name: 'Sitter Journey',
+        logo: 'https://sitterjourney.com/icon.svg',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${resourceUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://sitterjourney.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Travel Resources',
+          item: 'https://sitterjourney.com/resources',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: item.name,
+          item: resourceUrl,
+        },
+      ],
+    },
+  ];
+
+  if (faqs.length > 0) {
+    graphEntities.push({
+      '@type': 'FAQPage',
+      '@id': `${resourceUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': graphEntities,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <CommonDetail
         onBack="/resources#archive"
         backLabel="Return to Resources"

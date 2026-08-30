@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { type ReactNode } from 'react';
-import { ArrowLeftIcon, ShieldCheckIcon, CalendarIcon } from './Icons';
+import { ShieldCheckIcon, CalendarIcon } from './Icons';
 import FAQSection from './FAQSection';
+import ReturnButton from './ReturnButton';
 import type { NavLink, FAQItem } from '../types';
 import { formatArticleDate } from '../utils/content';
 
@@ -39,23 +40,10 @@ const CommonDetail = ({
   nextLink,
   faqs,
 }: CommonDetailProps) => {
-  const returnLabel = backLabel
-    ? backLabel.replace(/^Back to /i, '').replace(/^Return to /i, '')
-    : '';
-
   return (
     <div className="detail-container">
       <header className="detail-header-area">
         <div className="container text-center">
-          {onBack && (
-            <div className="detail-top-breadcrumb">
-              <Link href={onBack} className="top-breadcrumb-link">
-                <ArrowLeftIcon size={12} />
-                <span>Return to {returnLabel || 'blog'}</span>
-              </Link>
-            </div>
-          )}
-
           {topic && <span className="detail-topic-label"> {topic} </span>}
 
           <h1 className="detail-title-text">{title}</h1>
@@ -64,6 +52,13 @@ const CommonDetail = ({
               <CalendarIcon size={12} /> {formatArticleDate(date)}
             </span>
           )}
+
+          {onBack && (
+            <div className="detail-back-top">
+              <ReturnButton href={onBack} label={backLabel} />
+            </div>
+          )}
+
           {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
         </div>
       </header>
@@ -130,15 +125,6 @@ const CommonDetail = ({
         )}
       </div>
 
-      {!image && onBack && (
-        <div className="container text-center" style={{ marginBottom: 'var(--s-6)' }}>
-          <Link href={onBack} className="glass-pill">
-            <ArrowLeftIcon size={14} />
-            <span>Return to {returnLabel || 'overview'}</span>
-          </Link>
-        </div>
-      )}
-
       <div className="detail-layout-container">
         <div className={`detail-layout ${sidebar ? 'with-sidebar' : ''}`}>
           <div className="prose-content">
@@ -166,11 +152,8 @@ const CommonDetail = ({
 
             {/* Return to blog / archive link */}
             {onBack && (
-              <div className="detail-footer-nav">
-                <Link href={onBack} className="btn-back-footer">
-                  <ArrowLeftIcon size={16} />
-                  <span>Return to {returnLabel || 'blog'}</span>
-                </Link>
+              <div className="detail-back-bottom">
+                <ReturnButton href={onBack} label={backLabel} />
               </div>
             )}
           </div>

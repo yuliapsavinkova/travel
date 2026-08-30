@@ -2,61 +2,19 @@ import Link from 'next/link';
 import {
   CURRENT_YEAR,
   NAV_ITEMS,
-  SITE_CONFIG,
   TRUSTED_HOUSESITTERS_REF_LINK,
 } from '../constants';
-import { InstagramIcon, FacebookIcon, TikTokIcon, MailIcon, SJLogo, ExternalLink } from './Icons';
+import BrandLogo from './BrandLogo';
+import { ExternalLink } from './Icons';
+import SocialMediaIcons from './SocialMediaIcons';
 
 const Footer = () => {
   return (
     <footer className="refined-footer" id="site-footer">
       <div className="footer-grid">
         <div className="footer-brand-col">
-          <Link
-            href="/"
-            className="branding-clickable footer-brand-trigger"
-            aria-label="Sitter Journey Home"
-          >
-            <div className="footer-brand-wordmark">
-              <SJLogo size={40} className="footer-brand-icon" />
-              <span className="footer-brand-name serif-italic">
-                <span>Sitter </span>
-                <span className="shimmer-text">Journey</span>
-              </span>
-            </div>
-          </Link>
-          <div className="footer-socials">
-            <a
-              href={SITE_CONFIG.socials.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              aria-label="Instagram"
-            >
-              <InstagramIcon />
-            </a>
-            <a
-              href={SITE_CONFIG.socials.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              aria-label="Facebook"
-            >
-              <FacebookIcon />
-            </a>
-            <a
-              href={SITE_CONFIG.socials.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              aria-label="TikTok"
-            >
-              <TikTokIcon />
-            </a>
-            <a href={`mailto:${SITE_CONFIG.email}`} className="social-icon" aria-label="Email">
-              <MailIcon size={20} />
-            </a>
-          </div>
+          <BrandLogo />
+          <SocialMediaIcons className="footer-socials" />
         </div>
         <div className="footer-nav-col">
           <div className="sub-header footer-header">Explore</div>

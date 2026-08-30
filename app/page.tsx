@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ContactTrigger } from '../components/ClientTriggers';
+import SocialMediaIcons from '../components/SocialMediaIcons';
 import {
   ChevronDownIcon,
   GlobeIcon,
@@ -15,14 +16,48 @@ import {
 import { SITE_STATS } from '../constants';
 
 export const metadata: Metadata = {
+  title: 'Sitter Journey | Professional House Sitting & Slow Travel Across America',
+  description:
+    'Follow my full-time journey as a solo female traveler and professional house sitter. Discover how to travel the USA, save on accommodation, and care for pets.',
   alternates: {
-    canonical: 'https://sitterjourney.com/',
+    canonical: 'https://sitterjourney.com',
+  },
+  openGraph: {
+    title: 'Sitter Journey | Professional House Sitting & Slow Travel Across America',
+    description:
+      'Follow my full-time journey as a solo female traveler and professional house sitter. Discover how to travel the USA, save on accommodation, and care for pets.',
+    url: 'https://sitterjourney.com',
+    type: 'website',
   },
 };
 
 export default function HomePage() {
+  const homeJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Sitter Journey | Slow Travel & House Sitting Across The United States',
+    url: 'https://sitterjourney.com',
+    description:
+      'Follow my full-time journey as a solo female traveler and professional house sitter across America.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://sitterjourney.com',
+        },
+      ],
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
           <Image
@@ -38,6 +73,9 @@ export default function HomePage() {
         </div>
 
         <div className="hero-content-overlay content-layer">
+          <div className="hero-socials-wrapper">
+            <SocialMediaIcons className="hero-socials" iconSize={18} />
+          </div>
           <h1 className="display-title">
             <span className="sub-header home-hero-sub-header">Slow Travel</span>
             My Journey <span className="shimmer-text">Across The United States</span>

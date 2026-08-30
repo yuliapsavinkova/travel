@@ -32,8 +32,12 @@ const OG_IMAGE_URL =
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sitterjourney.com'),
-  title: 'Sitter Journey | Professional House Sitter & Traveler',
-  description: 'A blog about full-time travel, professional house sitting, and pet care by Yulia.',
+  title: {
+    default: 'Sitter Journey | Professional House Sitting & Full-Time Travel',
+    template: '%s | Sitter Journey',
+  },
+  description:
+    'Practical guides, real budget math, and expert tips for full-time travel, professional house sitting, and pet care by Yulia.',
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -43,22 +47,35 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-icon', sizes: '180x180', type: 'image/png' }],
   },
   keywords: [
-    'Traveler',
-    'Solo Female Travel',
     'House Sitting',
-    'Pet Care',
     'Professional Housesitter',
-    'Travel Blog',
+    'TrustedHousesitters',
+    'TrustedHousesitters Review',
+    'Solo Female Travel',
+    'Nomad Travel',
+    'Pet Sitting',
+    'Free Travel Accommodation',
     'Sitter Journey',
+    'Full Time Travel',
   ],
-  authors: [{ name: 'Sitter Journey' }],
+  authors: [{ name: 'Yulia', url: 'https://sitterjourney.com/about' }],
+  creator: 'Yulia',
+  publisher: 'Sitter Journey',
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
-    title: 'Sitter Journey',
-    description: 'Professional house sitting, pet care, and travel blog.',
+    title: 'Sitter Journey | Professional House Sitting & Full-Time Travel',
+    description:
+      'Practical guides, real budget math, and expert tips for full-time travel, professional house sitting, and pet care by Yulia.',
     url: 'https://sitterjourney.com',
     siteName: 'Sitter Journey',
     images: [
@@ -66,7 +83,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: 'Sitter Journey',
+        alt: 'Sitter Journey - Full-Time Travel & House Sitting',
       },
     ],
     locale: 'en_US',
@@ -74,33 +91,68 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sitter Journey',
-    description: 'Professional house sitting, pet care, and travel blog.',
+    title: 'Sitter Journey | Professional House Sitting & Full-Time Travel',
+    description:
+      'Practical guides, real budget math, and expert tips for full-time travel, professional house sitting, and pet care by Yulia.',
     images: [OG_IMAGE_URL],
   },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const jsonLd = {
+  const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'Sitter Journey',
-    url: 'https://sitterjourney.com',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': 'https://sitterjourney.com/#website',
+        url: 'https://sitterjourney.com',
+        name: 'Sitter Journey',
+        description: 'Professional house sitting, pet care, and full-time travel blog by Yulia.',
+        publisher: {
+          '@id': 'https://sitterjourney.com/#author',
+        },
+      },
+      {
+        '@type': 'Person',
+        '@id': 'https://sitterjourney.com/#author',
+        name: 'Yulia',
+        url: 'https://sitterjourney.com/about',
+        jobTitle: 'Professional House Sitter & Travel Writer',
+        description:
+          'Solo traveler and professional house sitter sharing real-world advice, budgeting, and strategies for long-term travel.',
+        sameAs: [
+          SITE_CONFIG.socials.instagram,
+          SITE_CONFIG.socials.facebook,
+          SITE_CONFIG.socials.tiktok,
+        ],
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://sitterjourney.com/#organization',
+        name: 'Sitter Journey',
+        url: 'https://sitterjourney.com',
+        logo: 'https://sitterjourney.com/icon.svg',
+        founder: {
+          '@id': 'https://sitterjourney.com/#author',
+        },
+        sameAs: [
+          SITE_CONFIG.socials.instagram,
+          SITE_CONFIG.socials.facebook,
+          SITE_CONFIG.socials.tiktok,
+        ],
+      },
+    ],
   };
 
   const gaId = SITE_CONFIG.googleAnalyticsId;
 
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <head>
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.ico" sizes="any" />
+      <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-      </head>
-      <body>
         {gaId && (
           <>
             <Script

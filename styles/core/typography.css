@@ -69,12 +69,13 @@ h6 {
 }
 
 .shimmer-text {
-  padding: 0 1rem;
+  padding: 0.05em 0.5rem 0.18em 0.5rem;
   background: var(--g-champagne);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  line-height: inherit;
 }
 
 .metadata-item {

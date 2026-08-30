@@ -7,16 +7,65 @@ import { MapPinIcon, ChevronDownIcon, CompassIcon } from '../../components/Icons
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Travel Guides & Destinations | Sitter Journey',
-  description: 'Explore guides and stories from the countries I have visited.',
+  title: 'Travel Guides & Nomad Destinations | Sitter Journey',
+  description:
+    'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
   alternates: {
     canonical: 'https://sitterjourney.com/travel',
+  },
+  openGraph: {
+    title: 'Travel Guides & Nomad Destinations',
+    description:
+      'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
+    url: 'https://sitterjourney.com/travel',
+    type: 'website',
   },
 };
 
 export default function TravelPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://sitterjourney.com/travel#collection',
+        url: 'https://sitterjourney.com/travel',
+        name: 'Travel Guides & Destinations | Sitter Journey',
+        description: 'Explore in-depth travel guides and stories across the United States.',
+        hasPart: TRAVEL_GUIDES.map((guide) => ({
+          '@type': 'Article',
+          headline: guide.title,
+          url: `https://sitterjourney.com/travel/${guide.slug}`,
+          description: guide.excerpt,
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://sitterjourney.com/travel#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://sitterjourney.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Travel Guides',
+            item: 'https://sitterjourney.com/travel',
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
           <Image

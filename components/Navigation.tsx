@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState, useRef } from 'react';
 import { NAV_ITEMS } from '../constants';
+import BrandLogo from './BrandLogo';
 import ContactForm from './ContactForm';
-import { MenuIcon, SJLogo, XIcon } from './Icons';
+import { MenuIcon, XIcon } from './Icons';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -65,10 +66,7 @@ const Navigation = () => {
       <header className={`app-header ${isHidden ? 'hidden' : ''}`}>
         <div className="nav-wrapper">
           <nav className="glass-island">
-            <Link href="/" className="branding-clickable" aria-label="Sitter Journey Home">
-              <SJLogo className="branding-logo" size={44} />
-              <span className="branding-text">Sitter Journey</span>
-            </Link>
+            <BrandLogo />
             <div className="desktop-nav">
               {NAV_ITEMS.map((item) => (
                 <Link

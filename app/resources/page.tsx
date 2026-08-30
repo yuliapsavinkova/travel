@@ -13,11 +13,62 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://sitterjourney.com/resources',
   },
+  openGraph: {
+    title: 'Travel Resources & Discounts: My Trusted Toolkit',
+    description:
+      'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
+    url: 'https://sitterjourney.com/resources',
+    type: 'website',
+  },
 };
 
 export default function ResourcesPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://sitterjourney.com/resources#collection',
+        url: 'https://sitterjourney.com/resources',
+        name: 'Travel Resources & Discounts | Sitter Journey',
+        description: 'A curated list of tools, memberships, and services for nomadic travel and house sitting.',
+        hasPart: ALL_RESOURCES.map((item) => ({
+          '@type': 'Review',
+          itemReviewed: {
+            '@type': 'Product',
+            name: item.name,
+            description: item.description,
+          },
+          url: `https://sitterjourney.com/resources/${item.slug}`,
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://sitterjourney.com/resources#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://sitterjourney.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Travel Resources',
+            item: 'https://sitterjourney.com/resources',
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
           <Image

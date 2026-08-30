@@ -9,17 +9,67 @@ import { formatCardDate } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'The Sitter Blog: Expert Tips & House Sitting Stories | Sitter Journey',
-  description: 'Practical guides on landing your first house sit and solo travel tips.',
+  description:
+    'Practical guides, real budget math, and strategies on landing your first house sit, beating competition, and living full-time on the road.',
   alternates: {
     canonical: 'https://sitterjourney.com/blog',
+  },
+  openGraph: {
+    title: 'The Sitter Blog: Expert Tips & House Sitting Stories',
+    description:
+      'Practical guides, real budget math, and strategies on landing your first house sit, beating competition, and living full-time on the road.',
+    url: 'https://sitterjourney.com/blog',
+    type: 'website',
   },
 };
 
 export default function BlogPage() {
   const sortedPosts = [...BLOG_POSTS].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Blog',
+        '@id': 'https://sitterjourney.com/blog#collection',
+        url: 'https://sitterjourney.com/blog',
+        name: 'Sitter Journey Blog',
+        description: 'Practical guides and stories about full-time travel and house sitting.',
+        blogPost: sortedPosts.map((post) => ({
+          '@type': 'BlogPosting',
+          headline: post.title,
+          url: `https://sitterjourney.com/blog/${post.slug}`,
+          datePublished: post.date,
+          description: post.excerpt,
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://sitterjourney.com/blog#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://sitterjourney.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog',
+            item: 'https://sitterjourney.com/blog',
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section className="hero-stack section-margin">
         <div className="hero-media-container media-viewport">
           <Image
