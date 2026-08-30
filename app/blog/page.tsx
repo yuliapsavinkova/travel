@@ -4,6 +4,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { BLOG_POSTS } from '../../constants';
 import CommonCard from '../../components/CommonCard';
+import SocialMediaIcons from '../../components/SocialMediaIcons';
 import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icons';
 import { formatCardDate } from '../../utils/content';
 
@@ -85,6 +86,9 @@ export default function BlogPage() {
         </div>
 
         <div className="hero-content-overlay content-layer">
+          <div className="hero-socials-wrapper">
+            <SocialMediaIcons className="hero-socials" iconSize={18} />
+          </div>
           <div className="sub-header hero-sub-header">House Sitting</div>
           <h1 className="display-title">
             Lessons from<span className="shimmer-text">My Journey as a Housesitter</span>

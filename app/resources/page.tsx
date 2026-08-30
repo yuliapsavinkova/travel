@@ -4,6 +4,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ALL_RESOURCES } from '../../constants';
 import CommonCard from '../../components/CommonCard';
+import SocialMediaIcons from '../../components/SocialMediaIcons';
 import { ChevronDownIcon } from '../../components/Icons';
 
 export const metadata: Metadata = {
@@ -83,6 +84,9 @@ export default function ResourcesPage() {
         </div>
 
         <div className="hero-content-overlay content-layer">
+          <div className="hero-socials-wrapper">
+            <SocialMediaIcons className="hero-socials" iconSize={18} />
+          </div>
           <div className="sub-header hero-sub-header">Tools & Services</div>
           <h1 className="display-title">
             Travel <span className="shimmer-text">Resources.</span>
