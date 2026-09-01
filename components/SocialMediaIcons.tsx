@@ -13,14 +13,13 @@ export default function SocialMediaIcons({
   showEmail = true,
 }: SocialMediaIconsProps) {
   return (
-    <div className={`social-icons-group ${className}`} role="list" aria-label="Social media links">
+    <nav className={`social-icons-group ${className}`} aria-label="Social media links">
       <a
         href={SITE_CONFIG.socials.instagram}
         target="_blank"
         rel="noopener noreferrer"
         className="social-icon-btn"
         aria-label="Instagram"
-        role="listitem"
       >
         <InstagramIcon size={iconSize} />
       </a>
@@ -30,7 +29,6 @@ export default function SocialMediaIcons({
         rel="noopener noreferrer"
         className="social-icon-btn"
         aria-label="Facebook"
-        role="listitem"
       >
         <FacebookIcon size={iconSize} />
       </a>
@@ -40,20 +38,14 @@ export default function SocialMediaIcons({
         rel="noopener noreferrer"
         className="social-icon-btn"
         aria-label="TikTok"
-        role="listitem"
       >
         <TikTokIcon size={iconSize} />
       </a>
       {showEmail && (
-        <a
-          href={`mailto:${SITE_CONFIG.email}`}
-          className="social-icon-btn"
-          aria-label="Email"
-          role="listitem"
-        >
+        <a href={`mailto:${SITE_CONFIG.email}`} className="social-icon-btn" aria-label="Email">
           <MailIcon size={iconSize} />
         </a>
       )}
-    </div>
+    </nav>
   );
 }
