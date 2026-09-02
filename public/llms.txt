@@ -1,0 +1,53 @@
+# Sitter Journey
+
+> Sitter Journey is a curated knowledge base and practical guide to full-time house sitting, pet care exchanges, slow travel, and intentional nomadic living by Yulia.
+
+## Overview
+Sitter Journey shares real-world guides, financial breakdowns, strategy blueprints, platform comparisons, and verified nomadic resources for individuals looking to travel long-term sustainably through exchange-based house and pet sitting.
+
+- Primary Platform: [TrustedHousesitters](https://sitterjourney.com/resources/trusted-housesitters-review)
+- Author: Yulia (Full-time traveler & professional house sitter)
+- Professional Portfolio: [yulia.sitterjourney.com](https://yulia.sitterjourney.com/)
+- Contact: sitterjourney@gmail.com
+- Full Documentation: [llms-full.txt](https://sitterjourney.com/llms-full.txt)
+
+## Core Pages
+- [Home](https://sitterjourney.com/): Introduction to full-time house sitting, travel philosophy, stats, and verified discounts.
+- [Blog](https://sitterjourney.com/blog): In-depth house sitting strategies, honest platform reviews, financial breakdowns, and application tips.
+- [Resources](https://sitterjourney.com/resources): Essential tools, nomad phone plans, nationwide gym access, and pet care platforms.
+- [Travel Guides](https://sitterjourney.com/travel): Slow travel narratives, destination insights, and mindful nomadism.
+- [FAQ](https://sitterjourney.com/faq): Comprehensive answers to common questions about house sitting logistics, trust, safety, and budgeting.
+- [About](https://sitterjourney.com/about): Yulia's story, background, housesitting philosophy, and portfolio links.
+- [Disclosure](https://sitterjourney.com/disclosure): Transparent affiliate and referral disclosure.
+- [Privacy Policy](https://sitterjourney.com/privacy): Site privacy standards and data policies.
+
+## House Sitting Guides & Articles
+- [Is TrustedHousesitters Worth It for Sitters?](https://sitterjourney.com/blog/is-trusted-housesitters-worth-it-for-sitters): Honest pros, cons, hidden costs, and realistic ROI for exchange-based travel.
+- [Can You Really Travel for Free with House Sitting? Real Examples & Math](https://sitterjourney.com/blog/can-you-really-travel-for-free-house-sitting-math): Detailed cost breakdowns, living expenses, and real savings from long-term sits.
+- [TrustedHousesitters Membership Cost Levels: Basic vs. Standard vs. Premium](https://sitterjourney.com/blog/trusted-housesitters-membership-cost-levels): Detailed comparison of tiers, cancellation insurance, background checks, and value.
+- [How to Get Your First House Sit (Even With No Reviews)](https://sitterjourney.com/blog/how-to-get-your-first-house-sit-no-reviews): Actionable playbook for building external references, local trial sits, and winning initial applications.
+- [Profile Tips: How to Secure More Sits](https://sitterjourney.com/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits): Photo rules, bio phrasing, experience framing, and trust-building optimizations.
+- [TrustedHousesitters vs Other House Sitting Websites](https://sitterjourney.com/blog/trusted-housesitters-vs-other-house-sitting-websites): Side-by-side comparison with Nomador, MindMyHouse, HouseCarers, and Aussie House Sitters.
+- [TrustedHousesitters vs Rover Comparison](https://sitterjourney.com/blog/trusted-housesitters-vs-rover-comparison): Exchange vs. transactional pet sitting models and how to combine them effectively.
+- [Why My House Sit Application Got Rejected](https://sitterjourney.com/blog/why-trusted-housesitters-applications-get-rejected): Analyzing application bottlenecks, 5-applicant limits, timing issues, and profile friction.
+- [What Happens If a Sit Goes Wrong and How to Report It](https://sitterjourney.com/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it): Conflict resolution, emergency protocols, platform dispute reporting, and documentation best practices.
+- [How to Apply for Competitive Sits Fast (Using AI)](https://sitterjourney.com/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai): Workflow for crafting high-quality, customized applications within minutes of new listings going live.
+- [Hidden Perks of House Sitting](https://sitterjourney.com/blog/hidden-perks-of-house-sitting): Deep neighborhood immersion, unique amenities, pet companionship, and mental decompression.
+- [My TrustedHousesitters Alert Strategy](https://sitterjourney.com/blog/trusted-housesitters-how-to-set-up-alerts-and-filters): Exact filter setups, instant notifications, and saved searches to catch high-demand listings.
+- [How to Update Homeowners While House Sitting](https://sitterjourney.com/blog/how-to-update-homeowners-while-house-sitting): Communication rhythms, photo updates, boundaries, and building 5-star repeat relationships.
+
+## Travel Narratives & Slow Travel
+- [Bali: Ubud Slow Travel Narrative](https://sitterjourney.com/travel/bali-ubud-slow-travel): A month of intentional living, wellness, and quiet exploration among the terraced rice fields.
+- [Gili Trawangan: No Motorbikes, First Scuba](https://sitterjourney.com/travel/gili-trawangan-slow-travel): Transitioning to the car-free quiet of the Gili Islands and underwater adventures.
+
+## Recommended Nomad Resources & Tools
+- [TrustedHousesitters (25% Discount)](https://sitterjourney.com/resources/trusted-housesitters-review): Primary platform for global accommodation exchange in exchange for pet sitting.
+- [Rover ($20 Credit)](https://sitterjourney.com/resources/rover-review): Paid pet care platform for filling nomadic calendar gaps and earning while traveling.
+- [Visible Wireless (Save $20)](https://sitterjourney.com/resources/visible-review): Unlimited data, talk, text, and mobile hotspot plan powered by Verizon's 5G network.
+- [Planet Fitness ($1 Down Promo)](https://sitterjourney.com/resources/planet-fitness-review): Nationwide Black Card gym network for daily fitness, showers, and wellness on the road.
+
+## Key Themes & Guidance Topics
+- **House Sitting Economics**: How mutual-benefit exchanges eliminate lodging fees without monetary transactions between sitters and homeowners.
+- **Application Speed & Quality**: Why the 5-application limit on TrustedHousesitters demands fast, tailored cover messages with personal pet stories.
+- **Trust & Verification**: Background checks, reference verification, video call interviews, and written welcome handbooks.
+- **Digital Nomad Infrastructure**: Mobile hotspots, reliable Wi-Fi verification, gym access for wellness/showers, and emergency pet protocols.

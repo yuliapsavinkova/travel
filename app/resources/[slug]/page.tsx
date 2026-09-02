@@ -90,37 +90,64 @@ export default async function ResourceDetailPage({
   const faqs = item.faqIds ? getFaqsByIds(item.faqIds) : [];
 
   const resourceUrl = `https://sitterjourney.com/resources/${item.slug}`;
+  const productName = item.name.replace(/\s+Review$/i, '');
+  const imageFormatted = item.imageUrl?.startsWith('http')
+    ? item.imageUrl
+    : item.imageUrl
+      ? `https://sitterjourney.com${item.imageUrl}`
+      : 'https://sitterjourney.com/icon.svg';
+
   const graphEntities: any[] = [
     {
-      '@type': 'Review',
-      '@id': `${resourceUrl}#review`,
-      headline: item.seoTitle || item.name,
-      description: item.seoDescription || item.description,
-      image: item.imageUrl?.startsWith('http') ? item.imageUrl : item.imageUrl ? `https://sitterjourney.com${item.imageUrl}` : undefined,
-      datePublished: item.date,
-      dateModified: item.date,
-      mainEntityOfPage: resourceUrl,
-      itemReviewed: {
-        '@type': 'Product',
-        name: item.name,
-        description: item.description,
+      '@type': 'Product',
+      '@id': `${resourceUrl}#product`,
+      name: productName,
+      description: item.description,
+      image: imageFormatted,
+      offers: {
+        '@type': 'Offer',
+        url: item.link || resourceUrl,
+        priceCurrency: 'USD',
+        price: '0',
+        priceValidUntil: '2027-12-31',
+        availability: 'https://schema.org/InStock',
+        description: item.discountText || item.description,
       },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5.0',
+        reviewCount: '1',
         bestRating: '5',
+        worstRating: '1',
       },
-      author: {
-        '@type': 'Person',
-        '@id': 'https://sitterjourney.com/#author',
-        name: 'Yulia',
-        url: 'https://sitterjourney.com/about',
-      },
-      publisher: {
-        '@type': 'Organization',
-        '@id': 'https://sitterjourney.com/#organization',
-        name: 'Sitter Journey',
-        logo: 'https://sitterjourney.com/icon.svg',
+      review: {
+        '@type': 'Review',
+        '@id': `${resourceUrl}#review`,
+        headline: item.seoTitle || item.name,
+        description: item.seoDescription || item.description,
+        reviewBody: item.seoDescription || item.description,
+        image: imageFormatted,
+        datePublished: item.date,
+        dateModified: item.date,
+        mainEntityOfPage: resourceUrl,
+        author: {
+          '@type': 'Person',
+          '@id': 'https://sitterjourney.com/#author',
+          name: 'Yulia',
+          url: 'https://sitterjourney.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          '@id': 'https://sitterjourney.com/#organization',
+          name: 'Sitter Journey',
+          logo: 'https://sitterjourney.com/icon.svg',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
       },
     },
     {

@@ -33,15 +33,16 @@ export default function ResourcesPage() {
         url: 'https://sitterjourney.com/resources',
         name: 'Travel Resources & Discounts | Sitter Journey',
         description: 'A curated list of tools, memberships, and services for nomadic travel and house sitting.',
-        hasPart: ALL_RESOURCES.map((item) => ({
-          '@type': 'Review',
-          itemReviewed: {
-            '@type': 'Product',
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: ALL_RESOURCES.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
             name: item.name,
             description: item.description,
-          },
-          url: `https://sitterjourney.com/resources/${item.slug}`,
-        })),
+            url: `https://sitterjourney.com/resources/${item.slug}`,
+          })),
+        },
       },
       {
         '@type': 'BreadcrumbList',
