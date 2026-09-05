@@ -125,6 +125,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           SITE_CONFIG.socials.instagram,
           SITE_CONFIG.socials.facebook,
           SITE_CONFIG.socials.tiktok,
+          SITE_CONFIG.socials.pinterest,
         ],
       },
       {
@@ -140,6 +141,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           SITE_CONFIG.socials.instagram,
           SITE_CONFIG.socials.facebook,
           SITE_CONFIG.socials.tiktok,
+          SITE_CONFIG.socials.pinterest,
         ],
       },
     ],

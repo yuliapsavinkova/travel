@@ -59,6 +59,7 @@ export const SITE_CONFIG = {
     instagram: 'https://instagram.com/sitterjourney',
     facebook: 'https://facebook.com/sitterjourney',
     tiktok: 'https://tiktok.com/@sitterjourney',
+    pinterest: 'https://pinterest.com/sitterjourney',
   },
 };
 

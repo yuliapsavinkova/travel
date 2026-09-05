@@ -36,16 +36,10 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         });
       } else {
         setSubmitted(true);
-        trackContactFormSubmit({
-          formName: 'Global Contact Modal',
-        });
       }
     } catch (error) {
       console.error('Submission error:', error);
       setSubmitted(true);
-      trackContactFormSubmit({
-        formName: 'Global Contact Modal',
-      });
     } finally {
       setIsSubmitting(false);
     }

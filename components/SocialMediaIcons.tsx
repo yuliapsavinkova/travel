@@ -1,5 +1,5 @@
 import { SITE_CONFIG } from '../constants';
-import { FacebookIcon, InstagramIcon, MailIcon, TikTokIcon } from './Icons';
+import { FacebookIcon, InstagramIcon, MailIcon, PinterestIcon, TikTokIcon } from './Icons';
 
 interface SocialMediaIconsProps {
   className?: string;
@@ -40,6 +40,15 @@ export default function SocialMediaIcons({
         aria-label="TikTok"
       >
         <TikTokIcon size={iconSize} />
+      </a>
+      <a
+        href={SITE_CONFIG.socials.pinterest}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-icon-btn"
+        aria-label="Pinterest"
+      >
+        <PinterestIcon size={iconSize} />
       </a>
       {showEmail && (
         <a

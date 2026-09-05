@@ -73,7 +73,17 @@ export default function StickyReaderCta({
   // If not scrolled enough or if user has scrolled all the way to the footer, hide it smoothly
   const shouldRender = isVisible && !isNearFooter;
 
-  const handleClick = () => {
+  const lastClickRef = React.useRef<number>(0);
+
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    // Only fire on authentic user click events
+    if (event && !event.isTrusted) return;
+
+    // Guard against rapid duplicate clicks within 1.5 seconds
+    const now = Date.now();
+    if (now - lastClickRef.current < 1500) return;
+    lastClickRef.current = now;
+
     trackFloatingCtaClick({
       text,
       promoLink,
@@ -96,9 +106,6 @@ export default function StickyReaderCta({
           rel="noopener noreferrer"
           className="sticky-cta-link"
           id="sticky-cta-link"
-          data-analytics-event="floating_cta_click"
-          data-analytics-label={text}
-          data-analytics-destination={promoLink}
           onClick={handleClick}
         >
           <span className="sticky-cta-text">{text}</span>

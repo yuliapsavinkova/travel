@@ -17,6 +17,9 @@ import {
 export default function AnalyticsTracker() {
   useEffect(() => {
     const handleGlobalClick = (event: MouseEvent) => {
+      // Only process trusted user clicks (ignore synthetic / script triggers)
+      if (event && !event.isTrusted) return;
+
       const target = event.target as HTMLElement | null;
       if (!target) return;
 
