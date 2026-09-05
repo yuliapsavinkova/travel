@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { SITE_CONFIG } from '../constants';
 import { CheckCircleIcon, XIcon } from './Icons';
+import { trackContactFormSubmit } from '../utils/analytics';
 
 interface ContactFormProps {
   onClose: () => void;
@@ -30,12 +31,21 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
 
       if (response.ok) {
         setSubmitted(true);
+        trackContactFormSubmit({
+          formName: 'Global Contact Modal',
+        });
       } else {
         setSubmitted(true);
+        trackContactFormSubmit({
+          formName: 'Global Contact Modal',
+        });
       }
     } catch (error) {
       console.error('Submission error:', error);
       setSubmitted(true);
+      trackContactFormSubmit({
+        formName: 'Global Contact Modal',
+      });
     } finally {
       setIsSubmitting(false);
     }

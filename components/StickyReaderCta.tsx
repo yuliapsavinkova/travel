@@ -3,17 +3,22 @@
 import React, { useState, useEffect } from 'react';
 import { REFERRALS } from '../constants';
 import { ArrowUpRightIcon } from './Icons';
+import { trackFloatingCtaClick } from '../utils/analytics';
 
 interface StickyReaderCtaProps {
   promoLink?: string;
   text?: string;
   showAfterScroll?: number;
+  articleTitle?: string;
+  articleSlug?: string;
 }
 
 export default function StickyReaderCta({
   promoLink = REFERRALS.THS.link,
   text = 'Get 25% off TrustedHousesitters Membership',
   showAfterScroll = 350,
+  articleTitle,
+  articleSlug,
 }: StickyReaderCtaProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isNearFooter, setIsNearFooter] = useState<boolean>(false);
@@ -68,6 +73,16 @@ export default function StickyReaderCta({
   // If not scrolled enough or if user has scrolled all the way to the footer, hide it smoothly
   const shouldRender = isVisible && !isNearFooter;
 
+  const handleClick = () => {
+    trackFloatingCtaClick({
+      text,
+      promoLink,
+      ctaId: 'sticky-cta-link',
+      articleTitle,
+      articleSlug,
+    });
+  };
+
   return (
     <aside
       id="sticky-reader-cta"
@@ -81,6 +96,10 @@ export default function StickyReaderCta({
           rel="noopener noreferrer"
           className="sticky-cta-link"
           id="sticky-cta-link"
+          data-analytics-event="floating_cta_click"
+          data-analytics-label={text}
+          data-analytics-destination={promoLink}
+          onClick={handleClick}
         >
           <span className="sticky-cta-text">{text}</span>
           <ArrowUpRightIcon size={14} className="sticky-link-icon" />

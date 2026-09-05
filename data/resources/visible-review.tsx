@@ -6,7 +6,6 @@ export const resource: ResourceItem = {
   slug: 'visible-review',
   name: 'Visible Review',
   navTitle: 'Visible Review',
-  subtitle: '(Written by an active user)',
   description: 'The phone plan I use for unlimited data and hotspot.',
   date: 'January 2026',
   sortOrder: 3,

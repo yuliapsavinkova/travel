@@ -34,6 +34,9 @@ const Footer = () => {
                 href="https://yulia.sitterjourney.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                id="footer-portfolio-link"
+                data-analytics-event="portfolio_visit"
+                aria-label="Yulia Professional House & Pet Sitting Services"
               >
                 House &amp; Pet Sitting Services <ExternalLink size={12} />
               </a>

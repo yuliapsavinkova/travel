@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import Script from 'next/script';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import AnalyticsTracker from '../components/AnalyticsTracker';
 import { SITE_CONFIG } from '../constants';
 import '../styles.css';
 
@@ -173,6 +174,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
 
         <div className="app-root">
+          <AnalyticsTracker />
           <div className="studio-depth" />
           <Navigation />
           <main className="main-viewport">{children}</main>

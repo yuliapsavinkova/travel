@@ -100,7 +100,7 @@
   opacity: 0.8;
 }
 
-.metadata-item:last-child {
+.card-metadata .metadata-item:last-child {
   margin-left: auto;
 }
 

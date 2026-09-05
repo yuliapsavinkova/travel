@@ -6,7 +6,6 @@ export const resource: ResourceItem = {
   slug: 'planet-fitness-review',
   name: 'Planet Fitness Review',
   navTitle: 'PF Review',
-  subtitle: '(Written by an active member)',
   description: 'Gym access across the country for workouts and showers.',
   date: 'January 2026',
   sortOrder: 4,

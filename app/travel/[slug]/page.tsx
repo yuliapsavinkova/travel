@@ -1,8 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { TRAVEL_GUIDES, GLOBAL_STRINGS } from '../../../constants';
+import { TRAVEL_GUIDES, GLOBAL_STRINGS, REFERRALS } from '../../../constants';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
+import StickyReaderCta from '../../../components/StickyReaderCta';
 
 export async function generateStaticParams() {
   return TRAVEL_GUIDES.map((guide) => ({
@@ -174,6 +175,13 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
           <ContentRenderer content={guide.body} />
         </div>
       </CommonDetail>
+
+      <StickyReaderCta
+        promoLink={REFERRALS.THS.link}
+        text="Get 25% off TrustedHousesitters Membership"
+        articleTitle={guide.title}
+        articleSlug={guide.slug}
+      />
     </>
   );
 }

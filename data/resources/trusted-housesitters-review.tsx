@@ -7,7 +7,6 @@ export const resource: ResourceItem = {
   slug: 'trusted-housesitters-review',
   name: 'TrustedHousesitters Review',
   navTitle: 'TrustedHousesitters Review',
-  subtitle: '(Written by an active sitter)',
   description: 'Where I find almost all of my house sits. Use my link for a membership discount.',
   date: 'January 2026',
   sortOrder: 1,

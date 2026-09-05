@@ -122,19 +122,23 @@
 }
 
 /* Metadata Groups */
-.home-metadata-group {
-  display: flex;
-  justify-content: center;
-  gap: var(--s-6);
-  flex-wrap: wrap;
-}
-
+.home-metadata-group,
 .home-metadata-group-dim {
   display: flex;
   justify-content: center;
-  gap: var(--s-4);
+  align-items: center;
+  gap: var(--s-6);
   flex-wrap: wrap;
+  width: 100%;
+}
+
+.home-metadata-group-dim {
   opacity: 0.6;
+}
+
+.home-metadata-group .metadata-item,
+.home-metadata-group-dim .metadata-item {
+  margin: 0 !important;
 }
 
 /* Stat Card Media & Overlays */

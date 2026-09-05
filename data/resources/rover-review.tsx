@@ -6,7 +6,6 @@ export const resource: ResourceItem = {
   slug: 'rover-review',
   name: 'Rover Review',
   navTitle: 'Rover Review',
-  subtitle: '(Written by an active sitter)',
   description: `Earn money as a pet sitter and get a ${REFERRALS.ROVER.discount} for your own pets.`,
   date: 'January 2026',
   sortOrder: 2,
