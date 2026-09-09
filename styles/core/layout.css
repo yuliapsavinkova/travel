@@ -62,3 +62,15 @@
   pointer-events: auto;
   cursor: pointer;
 }
+
+/* Blog Archive Section spacing */
+.blog-archive-section {
+  padding-bottom: var(--s-9);
+}
+
+@media (max-width: 768px) {
+  .blog-archive-section {
+    padding-bottom: var(--s-7);
+  }
+}
+

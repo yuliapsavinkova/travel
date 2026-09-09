@@ -13,6 +13,7 @@ export const post: BlogPost = {
   category: 'Review',
   location: 'Comparison',
   sortOrder: 7,
+  audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: REFERRALS.THS.label,

@@ -12,6 +12,7 @@ export const post: BlogPost = {
   category: 'Expertise',
   location: 'Strategy',
   sortOrder: 12,
+  audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=2070&auto=format&fit=crop',
   ctaLabel: 'Claim 25% Off Membership',

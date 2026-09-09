@@ -13,7 +13,8 @@ export const post: BlogPost = {
   date: 'July 21, 2026',
   category: 'Review',
   location: 'Financial',
-  sortOrder: 1,
+  sortOrder: 2,
+  audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2060&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,

@@ -1,0 +1,76 @@
+/* Filter Tabs Bar */
+.filter-tabs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 auto var(--s-8) auto;
+  max-width: 600px;
+}
+
+.filter-tab-pill {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--c-text);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 10px 22px;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.filter-tab-pill:hover:not(.active) {
+  background: rgba(229, 193, 133, 0.1);
+  border-color: var(--c-gold-rich);
+  color: var(--c-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.filter-tab-pill.active {
+  background-image: var(--g-gold-btn);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--c-black);
+  font-weight: 800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(229, 193, 133, 0.35);
+}
+
+.filter-tab-count {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+  transition: background 0.3s ease;
+}
+
+.filter-tab-pill.active .filter-tab-count {
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--c-black);
+}
+
+@media (max-width: 480px) {
+  .filter-tabs-container {
+    gap: 8px;
+    margin-bottom: var(--s-6);
+  }
+
+  .filter-tab-pill {
+    padding: 8px 14px;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    gap: 6px;
+  }
+}

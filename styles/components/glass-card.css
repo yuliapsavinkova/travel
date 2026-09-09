@@ -66,9 +66,15 @@
 
 .card-badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 14px;
+  right: 14px;
   z-index: 10;
+}
+
+.card-badge.glass-pill {
+  padding: 8px 16px;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
 }
 
 .card-content-stack {

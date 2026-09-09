@@ -114,7 +114,7 @@ export default function ResourcesPage() {
         </Link>
       </section>
 
-      <div className="container">
+      <div className="container section-margin">
         <header className="text-center section-margin" id="archive">
           <div className="sub-header">My Resources</div>
           <h2 className="display-title display-title-md">

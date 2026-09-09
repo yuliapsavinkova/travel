@@ -7,6 +7,7 @@
 
 /* Modular Components */
 @import "./styles/components/buttons.css";
+@import "./styles/components/filter-tabs.css";
 @import "./styles/components/scroll-trigger.css";
 @import "./styles/components/brand.css";
 @import "./styles/components/header.css";
@@ -23,6 +24,7 @@
 @import "./styles/components/faq.css";
 @import "./styles/components/financial-flip.css";
 @import "./styles/components/accent-box.css";
+@import "./styles/components/comparison-columns.css";
 
 /* Detail Page Architecture */
 @import "./styles/components/detail.css";

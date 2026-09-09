@@ -14,6 +14,7 @@ export const post: BlogPost = {
   category: 'Expertise',
   location: 'Strategy',
   sortOrder: 5,
+  audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1517125591588-3a29b2182219?q=80&w=2073&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,

@@ -102,7 +102,7 @@ export default function TravelPage() {
         </Link>
       </section>
 
-      <div className="container">
+      <div className="container section-margin">
         <header className="text-center section-margin" id="guides">
           <div className="sub-header">Where to go</div>
           <h2 className="display-title display-title-md">

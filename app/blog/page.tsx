@@ -3,10 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { BLOG_POSTS } from '../../constants';
-import CommonCard from '../../components/CommonCard';
+import BlogArchive from '../../components/BlogArchive';
 import SocialMediaIcons from '../../components/SocialMediaIcons';
-import { CalendarIcon, MapPinIcon, ChevronDownIcon } from '../../components/Icons';
-import { formatCardDate } from '../../utils/content';
+import { ChevronDownIcon } from '../../components/Icons';
 
 export const metadata: Metadata = {
   title: 'The Sitter Blog: Expert Tips & House Sitting Stories | Sitter Journey',
@@ -113,7 +112,7 @@ export default function BlogPage() {
         </Link>
       </section>
 
-      <div className="container">
+      <div className="container section-margin">
         <header
           className="text-center section-margin"
           id="archive"
@@ -132,23 +131,7 @@ export default function BlogPage() {
           </p>
         </header>
 
-        <div className="grid-standard">
-          {sortedPosts.map((post) => (
-            <CommonCard
-              key={post.id}
-              image={post.imageUrl}
-              badge="Post"
-              metadata={[
-                { icon: <CalendarIcon size={12} />, text: formatCardDate(post.date) },
-                { icon: <MapPinIcon size={12} />, text: post.location },
-              ]}
-              title={post.title}
-              description={post.excerpt}
-              slug={`/blog/${post.slug}`}
-              actionLabel="Read Post"
-            />
-          ))}
-        </div>
+        <BlogArchive posts={sortedPosts} />
       </div>
     </>
   );

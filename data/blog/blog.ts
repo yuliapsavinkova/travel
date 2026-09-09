@@ -1,4 +1,5 @@
 import { BlogPost } from '../../types';
+import { post as freeVsProfessional } from './free-house-sitting-vs-professional-house-sitting';
 import { post as worthIt } from './is-trusted-housesitters-worth-it';
 import { post as math } from './can-you-really-travel-for-free-house-sitting-math';
 import { post as costLevels } from './trusted-housesitters-membership-cost-levels';
@@ -14,6 +15,7 @@ import { post as alertsAndFilters } from './trusted-housesitters-how-to-set-up-a
 import { post as updatingOwners } from './how-to-update-homeowners-while-house-sitting';
 
 export const BLOG_POSTS: BlogPost[] = [
+  freeVsProfessional,
   worthIt,
   math,
   costLevels,

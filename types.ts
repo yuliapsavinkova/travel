@@ -69,6 +69,8 @@ export interface Review {
   imageUrl?: string;
 }
 
+export type BlogAudience = 'Sitters' | 'Pet Parents';
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -91,6 +93,7 @@ export interface BlogPost {
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string[];
+  audience?: BlogAudience[];
 }
 
 export interface TravelGuide {

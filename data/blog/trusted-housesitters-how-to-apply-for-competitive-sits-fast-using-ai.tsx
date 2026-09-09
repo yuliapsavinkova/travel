@@ -12,6 +12,7 @@ export const post: BlogPost = {
   category: 'Expertise',
   location: 'Strategy',
   sortOrder: 10,
+  audience: ['Sitters'],
   imageUrl: '/fast-running-dog.jpg',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
