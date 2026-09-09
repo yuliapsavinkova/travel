@@ -9,14 +9,14 @@ import {
 
 export const post: BlogPost = {
   id: '14',
-  slug: 'free-house-sitting-vs-professional-house-sitting',
+  slug: 'exchange-vs-professional-house-sitting',
   topic: 'Comparison',
-  title: 'Free vs. Professional House Sitting: Which Is Right for You?',
-  navTitle: 'Free vs. Professional Sitting',
+  title: 'Exchange vs. Professional House Sitting: Which Is Right for You?',
+  navTitle: 'Exchange vs. Professional Sitting',
   subtitle:
     'A clear comparison of community exchange platforms and dedicated professional pet sitting for homeowners.',
   excerpt:
-    'Is free house sitting really free? A practical comparison of TrustedHousesitters and professional pet sitting to help you choose the right fit for your home and pets.',
+    'How does exchange house sitting compare to private pet sitting? A practical breakdown of TrustedHousesitters and professional pet care to help you choose the right fit for your home and pets.',
   date: 'September 9, 2026',
   category: 'Guide',
   location: 'Global',
@@ -27,14 +27,14 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   audience: ['Pet Parents'],
   faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
-  seoTitle: 'Free vs Professional House Sitting: Which Is Right for You?',
+  seoTitle: 'Exchange vs Professional House Sitting: Which Is Right for You?',
   seoDescription:
     'Comparing TrustedHousesitters exchange sitting with hiring a professional house sitter. Fees, screening overhead, continuity, and how to decide what fits your pets best.',
   seoKeywords: [
-    'free vs professional house sitting',
-    'free house sitting vs professional house sitting',
+    'exchange vs professional house sitting',
+    'house sitting exchange vs professional house sitting',
     'trustedhousesitters vs private sitter',
-    'is trustedhousesitters free for homeowners',
+    'how house sitting exchange works for homeowners',
     'trustedhousesitters booking fee',
     'hiring a professional house sitter',
   ],
@@ -54,7 +54,7 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        While exchange sitting is often called "free," it comes with its own fees, screening time,
+        While exchange sitting is based on mutual value exchange rather than hourly pet sitting rates, it comes with its own platform fees, screening time,
         and trade-offs. Here is a simple, practical comparison to help you decide what fits your
         needs.
       </p>
@@ -67,7 +67,7 @@ export const post: BlogPost = {
             <tr>
               <th>Feature</th>
               <th>TrustedHousesitters (Exchange)</th>
-              <th>Professional Services</th>
+              <th>Professional Services (Private Sitter)</th>
             </tr>
           </thead>
           <tbody>
