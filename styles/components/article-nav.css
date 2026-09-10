@@ -49,7 +49,6 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  color: var(--c-gold);
   margin-bottom: 4px;
   display: block;
   line-height: 1;
@@ -65,15 +64,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-  background: var(--g-champagne);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: block;
 }
 
 .nav-link-item:hover .nav-link-title {
-  filter: brightness(1.2);
+  background: var(--g-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 768px) {
