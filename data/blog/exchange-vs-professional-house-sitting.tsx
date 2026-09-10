@@ -54,167 +54,123 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        While exchange sitting is based on mutual value exchange rather than hourly pet sitting rates, it comes with its own platform fees, screening time,
-        and trade-offs. Here is a simple, practical comparison to help you decide what fits your
-        needs.
+        Both options have clear strengths. An exchange community saves money on longer trips,
+        while a private sitter offers consistency, privacy, and locked-in dates. Here is how
+        they compare in day-to-day practice.
       </p>
 
-      {/* Comparison Table 1: At-a-Glance Specs */}
-      <div className="table-scroll-hint">← Swipe to compare features →</div>
+      {/* Comparison 1: Operational Comparison */}
       <div className="prose-table-wrap">
         <table className="comparison-table">
           <thead>
             <tr>
-              <th>Feature</th>
               <th>TrustedHousesitters (Exchange)</th>
-              <th>Professional Services (Private Sitter)</th>
+              <th>Professional Services</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Cost & Fees</td>
-              <td>
-                Annual platform membership fee + per-sit booking fee. No fees to sitters.
-              </td>
-              <td>Straightforward direct rate per stay.</td>
+            <tr className="table-topic-row">
+              <th colSpan={2}>Cost &amp; Platform Fees</th>
             </tr>
             <tr>
-              <td>Sitter Focus</td>
               <td>
-                Sitters are traveling to explore your city and sightsee; time is shared between pet
-                care and tourism.
-              </td>
-              <td>Dedicated focus on your pets, home upkeep, and daily routines.</td>
-            </tr>
-            <tr>
-              <td>Vetting Workload</td>
-              <td>
-                You create listings, review applications, check profiles, and interview new
-                candidates for every trip.
+                Annual membership fee, per-sit booking fee. No daily pet sitting charge.
               </td>
               <td>
-                Once you establish a relationship with a recurring sitter, you book dates directly
-                with someone you already trust.
+                Direct daily or stay rate. No membership or platform fees.
               </td>
             </tr>
-            <tr>
-              <td>Familiarity & Continuity</td>
-              <td>
-                New sitters learn your home quirks, alarm codes, and pet behaviors with each stay.
-              </td>
-              <td>
-                A familiar sitter already knows your pet's personality, routines, medication habits,
-                and home setup.
-              </td>
+
+            <tr className="table-topic-row">
+              <th colSpan={2}>Travel &amp; Arrival Times</th>
             </tr>
             <tr>
-              <td>Scheduling & Reliability</td>
               <td>
-                Depends on traveler availability. In non-touristy areas or off-peak dates, sits may
-                take longer to fill.
+                Sitters travel from other cities. Flights can get delayed and plans can shift, so homeowners usually plan for buffer time or an arrival overlap.
               </td>
-              <td>Confirmed reservation for your specific dates.</td>
+              <td>
+                Dates and times are arranged directly with you. No flight delays or traveling dependencies.
+              </td>
+            </tr>
+
+            <tr className="table-topic-row">
+              <th colSpan={2}>Sitter Focus</th>
+            </tr>
+            <tr>
+              <td>
+                Sitters are visiting to explore your area, so their daily schedule is split between sightseeing and caring for your pets.
+              </td>
+              <td>
+                Caring for your pets and home is their primary job, following your regular daily routine.
+              </td>
+            </tr>
+
+            <tr className="table-topic-row">
+              <th colSpan={2}>Screening &amp; Rebooking</th>
+            </tr>
+            <tr>
+              <td>
+                You post a listing, review applicants, and show a new person around your home for each trip.
+              </td>
+              <td>
+                Once you find someone you trust, rebooking future trips takes a quick text message.
+              </td>
+            </tr>
+
+            <tr className="table-topic-row">
+              <th colSpan={2}>Pet Care Fit</th>
+            </tr>
+            <tr>
+              <td>
+                Best for easygoing pets that adapt quickly to new people and don't require complex routines.
+              </td>
+              <td>
+                Ideal for pets that need a familiar face, consistent daily routines, or extra attention.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h2>Real Advantages & Disadvantages</h2>
-      <p>Here is a summary of how both models work in practice:</p>
+      <h2>Which Option Fits You Best?</h2>
+      <p>Here are a few quick scenarios to help you decide:</p>
 
-      {/* Side-by-Side Pros and Cons Columns */}
+      {/* Comparison 2: Decision Matrix */}
       <div className="comparison-columns">
         <div className="comparison-column variant-exchange">
           <span className="comparison-tag">Exchange Community</span>
-          <h3 className="comparison-column-header">TrustedHousesitters</h3>
+          <h3 className="comparison-column-header">Choose TrustedHousesitters If:</h3>
           <ul>
             <li>
-              <strong>Savings on long stays:</strong> If you take multiple long trips a year, an
-              exchange model eliminates nightly pet care fees.
+              <strong>You enjoy hosting:</strong> You like reviewing applications, chatting with travelers, and welcoming new people into your home.
             </li>
             <li>
-              <strong>Passionate pet lovers:</strong> Sitters travel because they genuinely love
-              animals and want a home-like experience.
+              <strong>Long trips:</strong> You take multi-week or multi-month trips where daily sitting fees would add up fast.
             </li>
             <li>
-              <strong>Membership and booking fees:</strong> Requires an annual membership plus a
-              booking fee for every sit you confirm.
+              <strong>Flexible schedule:</strong> You can accommodate travel delays, flight shifts, or a day of overlap with your sitter.
             </li>
             <li>
-              <strong>Interviewing process:</strong> You review profiles, read references, and
-              interview applicants for each trip.
-            </li>
-            <li>
-              <strong>Travelers explore:</strong> Sitters are visiting the area, so their schedule
-              includes sightseeing and local activities.
+              <strong>Easygoing pets:</strong> Your animals are friendly, independent, and warm up to new people right away.
             </li>
           </ul>
         </div>
 
         <div className="comparison-column variant-professional">
-          <span className="comparison-tag tag-gold">Dedicated Service</span>
-          <h3 className="comparison-column-header">Professional Services</h3>
-          <ul>
-            <li>
-              <strong>Established familiarity:</strong> A recurring sitter already knows which
-              cabinet holds the treats, your dog's cues, and your home routines.
-            </li>
-            <li>
-              <strong>Pets come first:</strong> Primary responsibility is your pet's comfort and
-              household care rather than tourist travel.
-            </li>
-            <li>
-              <strong>Confirmed schedule:</strong> Your calendar dates are reserved directly without
-              waiting for traveler applicants.
-            </li>
-            <li>
-              <strong>Specialized care:</strong> Experience with medications, anxious pets, senior
-              dog mobility, and customized care schedules.
-            </li>
-            <li>
-              <strong>Direct service rate:</strong> A set rate applies to each booking rather than
-              an exchange.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <h2>Which Option Fits You Best?</h2>
-      <p>
-        Use this quick checklist to decide whether an exchange platform or a dedicated sitter makes
-        more sense for your travel style:
-      </p>
-
-      {/* Decision Columns */}
-      <div className="comparison-columns">
-        <div className="comparison-column">
-          <h3 className="comparison-column-header">Choose TrustedHousesitters If:</h3>
-          <ul>
-            <li>You take extended trips (several weeks or months) where nightly costs add up fast.</li>
-            <li>Your pets are healthy, independent, and warm up instantly to new people.</li>
-            <li>Your home is in an attractive, accessible destination travelers love visiting.</li>
-            <li>
-              You genuinely enjoy the hosting process—interviewing, onboarding, and welcoming
-              travelers into your home.
-            </li>
-          </ul>
-        </div>
-
-        <div className="comparison-column">
+          <span className="comparison-tag tag-gold">Dedicated Care</span>
           <h3 className="comparison-column-header">Book Professional Services If:</h3>
           <ul>
             <li>
-              You want one trusted person you can rebook effortlessly without re-interviewing strangers.
+              <strong>Privacy:</strong> You prefer keeping your home photos, layout, and travel dates off public platform listings.
             </li>
             <li>
-              Your pets thrive on consistency, individualized attention, or have medication needs.
+              <strong>Firm dates:</strong> You need your sitter there right when you leave, without worrying about someone else's flight delays.
             </li>
             <li>
-              You want guaranteed dates without waiting on traveler applications or cancellations.
+              <strong>A familiar face:</strong> You want the same trusted person returning each trip so your pets stay in their normal groove.
             </li>
             <li>
-              You want someone whose sole priority is the security of your home and the happiness of
-              your pets.
+              <strong>Effortless rebooking:</strong> Once you have a relationship, booking your next vacation is just a quick direct check-in.
             </li>
           </ul>
         </div>

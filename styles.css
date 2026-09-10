@@ -25,6 +25,7 @@
 @import "./styles/components/financial-flip.css";
 @import "./styles/components/accent-box.css";
 @import "./styles/components/comparison-columns.css";
+@import "./styles/components/comparison-table.css";
 
 /* Detail Page Architecture */
 @import "./styles/components/detail.css";
