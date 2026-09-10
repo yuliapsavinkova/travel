@@ -53,11 +53,11 @@ const CommonDetail = ({
             </span>
           )}
 
-          {onBack && (
+          {/* {onBack && (
             <div className="detail-back-top">
               <ReturnButton href={onBack} label={backLabel} />
             </div>
-          )}
+          )} */}
 
           {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
         </div>
@@ -124,6 +124,12 @@ const CommonDetail = ({
                 </div>
               </div>
             )}
+          </div>
+        )}
+
+        {onBack && (
+          <div className="detail-back-top">
+            <ReturnButton href={onBack} label={backLabel} />
           </div>
         )}
       </div>
