@@ -44,21 +44,13 @@ const CommonDetail = ({
     <div className="detail-container">
       <header className="detail-header-area">
         <div className="container text-center">
-          {topic && <span className="detail-topic-label"> {topic} </span>}
-
-          <h1 className="detail-title-text">{title}</h1>
           {date && (
             <span className="detail-date-label">
               <CalendarIcon size={12} /> {formatArticleDate(date)}
             </span>
           )}
-
-          {/* {onBack && (
-            <div className="detail-back-top">
-              <ReturnButton href={onBack} label={backLabel} />
-            </div>
-          )} */}
-
+          {topic && <span className="detail-topic-label"> {topic} </span>}
+          <h1 className="detail-title-text">{title}</h1>
           {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
         </div>
       </header>
