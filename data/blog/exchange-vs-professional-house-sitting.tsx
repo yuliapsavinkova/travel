@@ -10,7 +10,6 @@ import {
 export const post: BlogPost = {
   id: '14',
   slug: 'exchange-vs-professional-house-sitting',
-  topic: 'Comparison',
   title: 'Exchange vs. Professional House Sitting: Which Is Right for You?',
   navTitle: 'Exchange vs. Professional Sitting',
   subtitle:
