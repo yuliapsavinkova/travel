@@ -67,7 +67,10 @@ const CommonDetail = ({
         {/* Top Prev / Next Navigation Bar (Matches bottom article navigation style) */}
         {(prevLink || nextLink) && (
           <div className="detail-hero-nav-wrapper">
-            <nav className="article-navigation article-navigation-top" aria-label="Previous and Next articles">
+            <nav
+              className="article-navigation article-navigation-top"
+              aria-label="Previous and Next articles"
+            >
               {prevLink ? (
                 <Link href={prevLink.href} className="nav-link-item prev">
                   <span className="nav-link-label">{prevLink.label}</span>
@@ -134,7 +137,10 @@ const CommonDetail = ({
 
             {/* Bottom Prev / Next Navigation */}
             {(prevLink || nextLink) && (
-              <nav className="article-navigation article-navigation-bottom" aria-label="Related articles">
+              <nav
+                className="article-navigation article-navigation-bottom"
+                aria-label="Related articles"
+              >
                 {prevLink && (
                   <Link href={prevLink.href} className="nav-link-item prev">
                     <span className="nav-link-label">{prevLink.label}</span>

@@ -54,9 +54,9 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        Both options have clear strengths. An exchange community saves money on longer trips,
-        while a private sitter offers consistency, privacy, and locked-in dates. Here is how
-        they compare in day-to-day practice.
+        Both options have clear strengths. An exchange community saves money on longer trips, while
+        a private sitter offers consistency, privacy, and locked-in dates. Here is how they compare
+        in day-to-day practice.
       </p>
 
       {/* Comparison 1: Operational Comparison */}
@@ -64,7 +64,7 @@ export const post: BlogPost = {
         <table className="comparison-table">
           <thead>
             <tr>
-              <th>TrustedHousesitters (Exchange)</th>
+              <th>TrustedHousesitters</th>
               <th>Professional Services</th>
             </tr>
           </thead>
@@ -73,12 +73,8 @@ export const post: BlogPost = {
               <th colSpan={2}>Cost &amp; Platform Fees</th>
             </tr>
             <tr>
-              <td>
-                Annual membership fee, per-sit booking fee. No daily pet sitting charge.
-              </td>
-              <td>
-                Direct daily or stay rate. No membership or platform fees.
-              </td>
+              <td>Annual membership fee, per-sit booking fee. No daily pet sitting charge.</td>
+              <td>Direct daily or stay rate. No membership or platform fees.</td>
             </tr>
 
             <tr className="table-topic-row">
@@ -86,10 +82,12 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td>
-                Sitters travel from other cities. Flights can get delayed and plans can shift, so homeowners usually plan for buffer time or an arrival overlap.
+                Sitters travel from other cities. Flights can get delayed and plans can shift, so
+                homeowners usually plan for buffer time or an arrival overlap.
               </td>
               <td>
-                Dates and times are arranged directly with you. No flight delays or traveling dependencies.
+                Dates and times are arranged directly with you. No flight delays or traveling
+                dependencies.
               </td>
             </tr>
 
@@ -98,10 +96,12 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td>
-                Sitters are visiting to explore your area, so their daily schedule is split between sightseeing and caring for your pets.
+                Sitters are visiting to explore your area, so their daily schedule is split between
+                sightseeing and caring for your pets.
               </td>
               <td>
-                Caring for your pets and home is their primary job, following your regular daily routine.
+                Caring for your pets and home is their primary job, following your regular daily
+                routine.
               </td>
             </tr>
 
@@ -110,7 +110,8 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td>
-                You post a listing, review applicants, and show a new person around your home for each trip.
+                You post a listing, review applicants, and show a new person around your home for
+                each trip.
               </td>
               <td>
                 Once you find someone you trust, rebooking future trips takes a quick text message.
@@ -122,10 +123,12 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td>
-                Best for easygoing pets that adapt quickly to new people and don't require complex routines.
+                Best for easygoing pets that adapt quickly to new people and don't require complex
+                routines.
               </td>
               <td>
-                Ideal for pets that need a familiar face, consistent daily routines, or extra attention.
+                Ideal for pets that need a familiar face, consistent daily routines, or extra
+                attention.
               </td>
             </tr>
           </tbody>
@@ -142,16 +145,20 @@ export const post: BlogPost = {
           <h3 className="comparison-column-header">Choose TrustedHousesitters If:</h3>
           <ul>
             <li>
-              <strong>You enjoy hosting:</strong> You like reviewing applications, chatting with travelers, and welcoming new people into your home.
+              <strong>You enjoy hosting:</strong> You like reviewing applications, chatting with
+              travelers, and welcoming new people into your home.
             </li>
             <li>
-              <strong>Long trips:</strong> You take multi-week or multi-month trips where daily sitting fees would add up fast.
+              <strong>Long trips:</strong> You take multi-week or multi-month trips where daily
+              sitting fees would add up fast.
             </li>
             <li>
-              <strong>Flexible schedule:</strong> You can accommodate travel delays, flight shifts, or a day of overlap with your sitter.
+              <strong>Flexible schedule:</strong> You can accommodate travel delays, flight shifts,
+              or a day of overlap with your sitter.
             </li>
             <li>
-              <strong>Easygoing pets:</strong> Your animals are friendly, independent, and warm up to new people right away.
+              <strong>Easygoing pets:</strong> Your animals are friendly, independent, and warm up
+              to new people right away.
             </li>
           </ul>
         </div>
@@ -161,16 +168,20 @@ export const post: BlogPost = {
           <h3 className="comparison-column-header">Book Professional Services If:</h3>
           <ul>
             <li>
-              <strong>Privacy:</strong> You prefer keeping your home photos, layout, and travel dates off public platform listings.
+              <strong>Privacy:</strong> You prefer keeping your home photos, layout, and travel
+              dates off public platform listings.
             </li>
             <li>
-              <strong>Firm dates:</strong> You need your sitter there right when you leave, without worrying about someone else's flight delays.
+              <strong>Firm dates:</strong> You need your sitter there right when you leave, without
+              worrying about someone else's flight delays.
             </li>
             <li>
-              <strong>A familiar face:</strong> You want the same trusted person returning each trip so your pets stay in their normal groove.
+              <strong>A familiar face:</strong> You want the same trusted person returning each trip
+              so your pets stay in their normal groove.
             </li>
             <li>
-              <strong>Effortless rebooking:</strong> Once you have a relationship, booking your next vacation is just a quick direct check-in.
+              <strong>Effortless rebooking:</strong> Once you have a relationship, booking your next
+              vacation is just a quick direct check-in.
             </li>
           </ul>
         </div>

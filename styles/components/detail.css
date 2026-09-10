@@ -5,7 +5,6 @@
 
 .detail-header-area {
   padding-top: calc(var(--h-header) + var(--s-7));
-  padding-bottom: var(--s-6);
   text-align: center;
   color: var(--c-white);
 }
