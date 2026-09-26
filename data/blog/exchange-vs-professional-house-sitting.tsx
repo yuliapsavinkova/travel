@@ -10,7 +10,7 @@ import {
 export const post: BlogPost = {
   id: '14',
   slug: 'exchange-vs-professional-house-sitting',
-  title: 'Exchange vs. Professional House Sitting: Which Is Right for You?',
+  title: 'TrustedHousesitters Exchange vs. Professional House Sitting: Which Is Right for You?',
   navTitle: 'Exchange vs. Professional Sitting',
   subtitle:
     'A clear comparison of community exchange platforms and dedicated professional pet sitting for homeowners.',
@@ -26,7 +26,7 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   audience: ['Pet Parents'],
   faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
-  seoTitle: 'Exchange vs Professional House Sitting: Which Is Right for You?',
+  seoTitle: 'TrustedHousesitters Exchange vs. Professional House Sitting: Which Is Right for You?',
   seoDescription:
     'Comparing TrustedHousesitters exchange sitting with hiring a professional house sitter. Fees, screening overhead, continuity, and how to decide what fits your pets best.',
   seoKeywords: [
