@@ -1,5 +1,5 @@
 import { BlogPost } from '../../types';
-import { post as exchangeVsProfessional } from './exchange-vs-professional-house-sitting';
+import { post as exchangeVsProfessional } from './trusted-housesitters-exchange-vs-professional-house-sitting';
 import { post as worthIt } from './is-trusted-housesitters-worth-it';
 import { post as math } from './can-you-really-travel-for-free-house-sitting-math';
 import { post as costLevels } from './trusted-housesitters-membership-cost-levels';
