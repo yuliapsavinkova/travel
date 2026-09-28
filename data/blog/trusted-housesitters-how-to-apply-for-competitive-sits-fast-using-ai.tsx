@@ -8,7 +8,7 @@ export const post: BlogPost = {
   title: 'How to Apply for Competitive TrustedHousesitters Sits Fast (Using AI)',
   navTitle: 'AI Strategy',
   excerpt: 'The best sits fill in minutes. Here is a strategy how to use AI to apply fast.',
-  date: 'January 2026',
+  date: 'September 28, 2026',
   category: 'Expertise',
   location: 'Strategy',
   sortOrder: 10,
