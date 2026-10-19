@@ -15,82 +15,113 @@ export default function AppleIcon() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #24211C 0%, #0F0E0C 100%)',
-        borderRadius: '36px',
-        border: '5px solid #DDAF68',
-        position: 'relative',
-        boxSizing: 'border-box',
+        background: 'linear-gradient(135deg, #1C1A17 0%, #0A0908 100%)',
       }}
     >
       <svg
-        width="135"
-        height="135"
-        viewBox="0 0 100 100"
+        width="180"
+        height="180"
+        viewBox="0 0 180 180"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ display: 'flex' }}
       >
         <defs>
           <linearGradient id="appleGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#FFFDF7" />
-            <stop offset="35%" stopColor="#F2D8A7" />
-            <stop offset="75%" stopColor="#DDAF68" />
+            <stop offset="30%" stopColor="#FEE0A6" />
+            <stop offset="70%" stopColor="#E5C185" />
             <stop offset="100%" stopColor="#B88A44" />
           </linearGradient>
+          <radialGradient id="appleInnerGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#DDAF68" stopOpacity="0.14" />
+            <stop offset="100%" stopColor="#000000" stopOpacity="0" />
+          </radialGradient>
         </defs>
 
+        {/* Outer Circular Emblem Border */}
         <circle
-          cx="50"
-          cy="50"
-          r="38"
+          cx="90"
+          cy="90"
+          r="76"
+          fill="url(#appleInnerGlow)"
           stroke="url(#appleGoldGrad)"
           strokeWidth="4"
         />
+
+        {/* Inset Decorative Ring */}
+        <circle
+          cx="90"
+          cy="90"
+          r="68"
+          fill="none"
+          stroke="url(#appleGoldGrad)"
+          strokeWidth="1.4"
+          opacity="0.45"
+        />
+
+        {/* Outer Globe Sphere */}
+        <circle cx="90" cy="90" r="50" fill="none" stroke="url(#appleGoldGrad)" strokeWidth="5" />
+
+        {/* Central Polar Axis */}
         <line
-          x1="50"
-          y1="12"
-          x2="50"
-          y2="88"
+          x1="90"
+          y1="40"
+          x2="90"
+          y2="140"
+          stroke="url(#appleGoldGrad)"
+          strokeWidth="4.4"
+          strokeLinecap="round"
+        />
+
+        {/* Equator */}
+        <line
+          x1="40"
+          y1="90"
+          x2="140"
+          y2="90"
+          stroke="url(#appleGoldGrad)"
+          strokeWidth="4.4"
+          strokeLinecap="round"
+        />
+
+        {/* Prime Meridian */}
+        <ellipse
+          cx="90"
+          cy="90"
+          rx="22"
+          ry="50"
+          fill="none"
+          stroke="url(#appleGoldGrad)"
+          strokeWidth="4.2"
+        />
+
+        {/* Secondary Meridian */}
+        <ellipse
+          cx="90"
+          cy="90"
+          rx="38"
+          ry="50"
+          fill="none"
+          stroke="url(#appleGoldGrad)"
+          strokeWidth="3.2"
+          opacity="0.8"
+        />
+
+        {/* Upper Latitude */}
+        <path
+          d="M 49 70 C 63 64, 117 64, 131 70"
+          fill="none"
           stroke="url(#appleGoldGrad)"
           strokeWidth="3.6"
           strokeLinecap="round"
         />
-        <line
-          x1="12"
-          y1="50"
-          x2="88"
-          y2="50"
+
+        {/* Lower Latitude */}
+        <path
+          d="M 49 110 C 63 116, 117 116, 131 110"
+          fill="none"
           stroke="url(#appleGoldGrad)"
           strokeWidth="3.6"
-          strokeLinecap="round"
-        />
-        <ellipse
-          cx="50"
-          cy="50"
-          rx="16"
-          ry="38"
-          stroke="url(#appleGoldGrad)"
-          strokeWidth="3.4"
-        />
-        <ellipse
-          cx="50"
-          cy="50"
-          rx="27"
-          ry="38"
-          stroke="url(#appleGoldGrad)"
-          strokeWidth="2.2"
-          opacity="0.65"
-        />
-        <path
-          d="M 18 35 C 28 32, 72 32, 82 35"
-          stroke="url(#appleGoldGrad)"
-          strokeWidth="3.2"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 18 65 C 28 68, 72 68, 82 65"
-          stroke="url(#appleGoldGrad)"
-          strokeWidth="3.2"
           strokeLinecap="round"
         />
       </svg>

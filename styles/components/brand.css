@@ -27,8 +27,8 @@
 }
 
 .brand-logo-link:hover .brand-logo-icon {
-  transform: scale(1.05) rotate(4deg);
-  filter: drop-shadow(0 0 10px rgba(229, 193, 133, 0.35));
+  transform: scale(1.06) translateY(-1px);
+  filter: drop-shadow(0 2px 14px rgba(247, 206, 120, 0.45));
 }
 
 .brand-logo-name {

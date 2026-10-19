@@ -43,66 +43,92 @@ export const SJLogo = ({ size = 48, className, ...props }: IconProps) => (
     <title>Sitter Journey Logo</title>
     <defs>
       <linearGradient id="logo-gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="45%" stopColor="#E5C185" />
+        <stop offset="0%" stopColor="#FFFDF7" />
+        <stop offset="30%" stopColor="#FEE0A6" />
+        <stop offset="70%" stopColor="#E5C185" />
         <stop offset="100%" stopColor="#B08D57" />
       </linearGradient>
     </defs>
 
-    {/* Outer Ring */}
-    <circle cx="50" cy="50" r="46" stroke="url(#logo-gold-gradient)" strokeWidth="2" />
+    {/* Outer Circular Ring with safe inset */}
+    <circle cx="50" cy="50" r="44" stroke="url(#logo-gold-gradient)" strokeWidth="2.2" />
 
-    {/* Stylized Globe Lines */}
+    {/* Inset Decorative Ring */}
     <circle
       cx="50"
       cy="50"
-      r="38"
+      r="39"
       stroke="url(#logo-gold-gradient)"
-      strokeWidth="1.5"
-      opacity="0.8"
+      strokeWidth="0.9"
+      opacity="0.45"
     />
 
-    {/* Meridians (Vertical) */}
-    <ellipse cx="50" cy="50" rx="14" ry="38" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
+    {/* Globe Outer Sphere */}
+    <circle
+      cx="50"
+      cy="50"
+      r="29"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="2.6"
+    />
+
+    {/* Central Polar Axis */}
+    <line
+      x1="50"
+      y1="21"
+      x2="50"
+      y2="79"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+    />
+
+    {/* Horizontal Equator */}
+    <line
+      x1="21"
+      y1="50"
+      x2="79"
+      y2="50"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+    />
+
+    {/* Meridians (Vertical Curves) */}
     <ellipse
       cx="50"
       cy="50"
-      rx="26"
-      ry="38"
+      rx="13"
+      ry="29"
       stroke="url(#logo-gold-gradient)"
-      strokeWidth="0.8"
-      opacity="0.4"
+      strokeWidth="2.2"
     />
-    <line x1="50" y1="12" x2="50" y2="88" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
+    <ellipse
+      cx="50"
+      cy="50"
+      rx="22.5"
+      ry="29"
+      stroke="url(#logo-gold-gradient)"
+      strokeWidth="1.6"
+      opacity="0.8"
+    />
 
-    {/* Equator / Parallels (Horizontal) */}
-    <line x1="12" y1="50" x2="88" y2="50" stroke="url(#logo-gold-gradient)" strokeWidth="1.5" />
+    {/* Parallels (Latitudes) */}
     <path
-      d="M18 35C28 32 72 32 82 35"
+      d="M26 38.5C34 35.5 66 35.5 74 38.5"
       stroke="url(#logo-gold-gradient)"
-      strokeWidth="1.2"
-      opacity="0.6"
+      strokeWidth="2"
+      strokeLinecap="round"
     />
     <path
-      d="M18 65C28 68 72 68 82 65"
+      d="M26 61.5C34 64.5 66 64.5 74 61.5"
       stroke="url(#logo-gold-gradient)"
-      strokeWidth="1.2"
-      opacity="0.6"
-    />
-    <path
-      d="M25 24C35 22 65 22 75 24"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="0.8"
-      opacity="0.4"
-    />
-    <path
-      d="M25 76C35 78 65 78 75 76"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="0.8"
-      opacity="0.4"
+      strokeWidth="2"
+      strokeLinecap="round"
     />
   </svg>
 );
+
 
 /* --- BRAND & SOCIAL --- */
 
