@@ -48,28 +48,23 @@ export const SJLogo = ({ size = 48, className, ...props }: IconProps) => (
         <stop offset="70%" stopColor="#E5C185" />
         <stop offset="100%" stopColor="#B08D57" />
       </linearGradient>
-      </defs>
+      <clipPath id="logo-globe-interior-clip">
+        <circle cx="50" cy="50" r="45.25" />
+      </clipPath>
+    </defs>
 
-    {/* Globe Outer Sphere (Exact globe structure without outer two rings) */}
+    {/* Globe Outer Sphere (Uniform stroke 1:1 circle) */}
     <circle cx="50" cy="50" r="47.5" stroke="url(#logo-gold-gradient)" strokeWidth="4.5" />
 
-    {/* Central Polar Axis */}
-    <line x1="50" y1="3" x2="50" y2="97" stroke="url(#logo-gold-gradient)" strokeWidth="4" strokeLinecap="round" />
-
-    {/* Horizontal Equator */}
-    <line x1="3" y1="50" x2="97" y2="50" stroke="url(#logo-gold-gradient)" strokeWidth="4" strokeLinecap="round" />
-
-    {/* Prime Meridian (Center Ellipse) */}
-    <ellipse cx="50" cy="50" rx="21.3" ry="47.5" stroke="url(#logo-gold-gradient)" strokeWidth="3.8" />
-
-    {/* Outer Meridian (Curved Longitude) */}
-    <ellipse cx="50" cy="50" rx="36.6" ry="47.5" stroke="url(#logo-gold-gradient)" strokeWidth="3" opacity="0.85" />
-
-    {/* Upper Latitude Parallel */}
-    <path d="M 10.8 30.4 C 24.4 25.3, 75.6 25.3, 89.2 30.4" stroke="url(#logo-gold-gradient)" strokeWidth="3.4" strokeLinecap="round" />
-
-    {/* Lower Latitude Parallel */}
-    <path d="M 10.8 69.6 C 24.4 74.7, 75.6 74.7, 89.2 69.6" stroke="url(#logo-gold-gradient)" strokeWidth="3.4" strokeLinecap="round" />
+    {/* Interior Globe Grid (clipped to prevent pole stacking) */}
+    <g clipPath="url(#logo-globe-interior-clip)" fill="none" stroke="url(#logo-gold-gradient)">
+      <line x1="50" y1="0" x2="50" y2="100" strokeWidth="3.8" />
+      <line x1="0" y1="50" x2="100" y2="50" strokeWidth="3.8" />
+      <ellipse cx="50" cy="50" rx="21.5" ry="47.5" strokeWidth="3.4" />
+      <ellipse cx="50" cy="50" rx="36.5" ry="47.5" strokeWidth="2.8" opacity="0.85" />
+      <path d="M 0 30.5 Q 50 24 100 30.5" strokeWidth="3.2" strokeLinecap="round" />
+      <path d="M 0 69.5 Q 50 76 100 69.5" strokeWidth="3.2" strokeLinecap="round" />
+    </g>
   </svg>
 );
 

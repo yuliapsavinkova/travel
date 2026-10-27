@@ -14,27 +14,34 @@
       <stop offset="0%" stop-color="#DDAF68" stop-opacity="0.22" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
+    <!-- Interior clip mask ensures meridian lines stop precisely at the inner boundary of the sphere stroke, preventing stroke stacking at the poles -->
+    <clipPath id="globe-interior-clip">
+      <circle cx="50" cy="50" r="45.25" />
+    </clipPath>
   </defs>
 
-  <!-- Globe Outer Sphere (The globe itself forms the outer boundary - no outer 2 rings) -->
+  <!-- Globe Outer Sphere: Uniform 4.5px circle touching exact 1:1 square canvas bounds (0 to 100) -->
   <circle cx="50" cy="50" r="47.5" fill="url(#fav-bg)" stroke="url(#fav-gold)" stroke-width="4.5" />
   <circle cx="50" cy="50" r="47.5" fill="url(#fav-inner-glow)" />
 
-  <!-- Central Polar Axis -->
-  <line x1="50" y1="3" x2="50" y2="97" stroke="url(#fav-gold)" stroke-width="4" stroke-linecap="round" />
+  <!-- Interior Globe Grid (clipped so pole thickness matches equator thickness perfectly) -->
+  <g clip-path="url(#globe-interior-clip)" fill="none" stroke="url(#fav-gold)">
+    <!-- Central Polar Axis -->
+    <line x1="50" y1="0" x2="50" y2="100" stroke-width="3.8" />
 
-  <!-- Horizontal Equator -->
-  <line x1="3" y1="50" x2="97" y2="50" stroke="url(#fav-gold)" stroke-width="4" stroke-linecap="round" />
+    <!-- Horizontal Equator -->
+    <line x1="0" y1="50" x2="100" y2="50" stroke-width="3.8" />
 
-  <!-- Prime Meridian (Center Ellipse) -->
-  <ellipse cx="50" cy="50" rx="21.3" ry="47.5" fill="none" stroke="url(#fav-gold)" stroke-width="3.8" />
+    <!-- Prime Meridian (Center Ellipse) -->
+    <ellipse cx="50" cy="50" rx="21.5" ry="47.5" stroke-width="3.4" />
 
-  <!-- Outer Meridian (Curved Longitude) -->
-  <ellipse cx="50" cy="50" rx="36.6" ry="47.5" fill="none" stroke="url(#fav-gold)" stroke-width="3" opacity="0.85" />
+    <!-- Outer Meridian (Curved Longitude) -->
+    <ellipse cx="50" cy="50" rx="36.5" ry="47.5" stroke-width="2.8" opacity="0.85" />
 
-  <!-- Upper Latitude Parallel -->
-  <path d="M 10.8 30.4 C 24.4 25.3, 75.6 25.3, 89.2 30.4" fill="none" stroke="url(#fav-gold)" stroke-width="3.4" stroke-linecap="round" />
+    <!-- Upper Latitude Parallel -->
+    <path d="M 0 30.5 Q 50 24 100 30.5" stroke-width="3.2" stroke-linecap="round" />
 
-  <!-- Lower Latitude Parallel -->
-  <path d="M 10.8 69.6 C 24.4 74.7, 75.6 74.7, 89.2 69.6" fill="none" stroke="url(#fav-gold)" stroke-width="3.4" stroke-linecap="round" />
+    <!-- Lower Latitude Parallel -->
+    <path d="M 0 69.5 Q 50 76 100 69.5" stroke-width="3.2" stroke-linecap="round" />
+  </g>
 </svg>
