@@ -48,84 +48,22 @@ export const SJLogo = ({ size = 48, className, ...props }: IconProps) => (
         <stop offset="70%" stopColor="#E5C185" />
         <stop offset="100%" stopColor="#B08D57" />
       </linearGradient>
+      <clipPath id="logo-globe-clip">
+        <circle cx="50" cy="50" r="46" />
+      </clipPath>
     </defs>
 
-    {/* Outer Circular Ring with safe inset */}
-    <circle cx="50" cy="50" r="44" stroke="url(#logo-gold-gradient)" strokeWidth="2.2" />
+    {/* Full-blown Globe: Outer circle IS the globe boundary */}
+    <circle cx="50" cy="50" r="46" stroke="url(#logo-gold-gradient)" strokeWidth="4.5" />
 
-    {/* Inset Decorative Ring */}
-    <circle
-      cx="50"
-      cy="50"
-      r="39"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="0.9"
-      opacity="0.45"
-    />
-
-    {/* Globe Outer Sphere */}
-    <circle
-      cx="50"
-      cy="50"
-      r="29"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="2.6"
-    />
-
-    {/* Central Polar Axis */}
-    <line
-      x1="50"
-      y1="21"
-      x2="50"
-      y2="79"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="2.4"
-      strokeLinecap="round"
-    />
-
-    {/* Horizontal Equator */}
-    <line
-      x1="21"
-      y1="50"
-      x2="79"
-      y2="50"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="2.4"
-      strokeLinecap="round"
-    />
-
-    {/* Meridians (Vertical Curves) */}
-    <ellipse
-      cx="50"
-      cy="50"
-      rx="13"
-      ry="29"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="2.2"
-    />
-    <ellipse
-      cx="50"
-      cy="50"
-      rx="22.5"
-      ry="29"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="1.6"
-      opacity="0.8"
-    />
-
-    {/* Parallels (Latitudes) */}
-    <path
-      d="M26 38.5C34 35.5 66 35.5 74 38.5"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <path
-      d="M26 61.5C34 64.5 66 64.5 74 61.5"
-      stroke="url(#logo-gold-gradient)"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+    {/* Interior Globe Grid (clipped to sphere) */}
+    <g clipPath="url(#logo-globe-clip)" fill="none" stroke="url(#logo-gold-gradient)">
+      <line x1="50" y1="0" x2="50" y2="100" strokeWidth="4" />
+      <line x1="0" y1="50" x2="100" y2="50" strokeWidth="4" />
+      <ellipse cx="50" cy="50" rx="21" ry="46" strokeWidth="3.8" />
+      <path d="M 0 31 Q 50 23 100 31" strokeWidth="3.5" />
+      <path d="M 0 69 Q 50 77 100 69" strokeWidth="3.5" />
+    </g>
   </svg>
 );
 
