@@ -48,22 +48,28 @@ export const SJLogo = ({ size = 48, className, ...props }: IconProps) => (
         <stop offset="70%" stopColor="#E5C185" />
         <stop offset="100%" stopColor="#B08D57" />
       </linearGradient>
-      <clipPath id="logo-globe-clip">
-        <circle cx="50" cy="50" r="46" />
-      </clipPath>
-    </defs>
+      </defs>
 
-    {/* Full-blown Globe: Outer circle IS the globe boundary */}
-    <circle cx="50" cy="50" r="46" stroke="url(#logo-gold-gradient)" strokeWidth="4.5" />
+    {/* Globe Outer Sphere (Exact globe structure without outer two rings) */}
+    <circle cx="50" cy="50" r="47.5" stroke="url(#logo-gold-gradient)" strokeWidth="4.5" />
 
-    {/* Interior Globe Grid (clipped to sphere) */}
-    <g clipPath="url(#logo-globe-clip)" fill="none" stroke="url(#logo-gold-gradient)">
-      <line x1="50" y1="0" x2="50" y2="100" strokeWidth="4" />
-      <line x1="0" y1="50" x2="100" y2="50" strokeWidth="4" />
-      <ellipse cx="50" cy="50" rx="21" ry="46" strokeWidth="3.8" />
-      <path d="M 0 31 Q 50 23 100 31" strokeWidth="3.5" />
-      <path d="M 0 69 Q 50 77 100 69" strokeWidth="3.5" />
-    </g>
+    {/* Central Polar Axis */}
+    <line x1="50" y1="3" x2="50" y2="97" stroke="url(#logo-gold-gradient)" strokeWidth="4" strokeLinecap="round" />
+
+    {/* Horizontal Equator */}
+    <line x1="3" y1="50" x2="97" y2="50" stroke="url(#logo-gold-gradient)" strokeWidth="4" strokeLinecap="round" />
+
+    {/* Prime Meridian (Center Ellipse) */}
+    <ellipse cx="50" cy="50" rx="21.3" ry="47.5" stroke="url(#logo-gold-gradient)" strokeWidth="3.8" />
+
+    {/* Outer Meridian (Curved Longitude) */}
+    <ellipse cx="50" cy="50" rx="36.6" ry="47.5" stroke="url(#logo-gold-gradient)" strokeWidth="3" opacity="0.85" />
+
+    {/* Upper Latitude Parallel */}
+    <path d="M 10.8 30.4 C 24.4 25.3, 75.6 25.3, 89.2 30.4" stroke="url(#logo-gold-gradient)" strokeWidth="3.4" strokeLinecap="round" />
+
+    {/* Lower Latitude Parallel */}
+    <path d="M 10.8 69.6 C 24.4 74.7, 75.6 74.7, 89.2 69.6" stroke="url(#logo-gold-gradient)" strokeWidth="3.4" strokeLinecap="round" />
   </svg>
 );
 
