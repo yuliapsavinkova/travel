@@ -2,8 +2,8 @@
   <defs>
     <linearGradient id="fav-gold" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFDF7" />
-      <stop offset="30%" stop-color="#FEE0A6" />
-      <stop offset="70%" stop-color="#E5C185" />
+      <stop offset="25%" stop-color="#FEE0A6" />
+      <stop offset="65%" stop-color="#E5C185" />
       <stop offset="100%" stop-color="#B88A44" />
     </linearGradient>
     <linearGradient id="fav-bg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -11,36 +11,36 @@
       <stop offset="100%" stop-color="#090807" />
     </linearGradient>
     <radialGradient id="fav-inner-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#DDAF68" stop-opacity="0.14" />
+      <stop offset="0%" stop-color="#DDAF68" stop-opacity="0.2" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
   </defs>
 
-  <!-- Solid circular badge with safe margin (radius 43 inside 100x100) - NEVER touches canvas edges -->
-  <circle cx="50" cy="50" r="43" fill="url(#fav-bg)" stroke="url(#fav-gold)" stroke-width="2.5" />
-  <circle cx="50" cy="50" r="43" fill="url(#fav-inner-glow)" />
+  <!-- Outer gold boundary circle: exactly reaches the 100x100 perimeter (r=48 with stroke 4 touches 0 and 100) -->
+  <circle cx="50" cy="50" r="48" fill="url(#fav-bg)" stroke="url(#fav-gold)" stroke-width="4" />
+  <circle cx="50" cy="50" r="48" fill="url(#fav-inner-glow)" />
 
-  <!-- Inset luxury accent ring -->
-  <circle cx="50" cy="50" r="37.5" fill="none" stroke="url(#fav-gold)" stroke-width="0.8" opacity="0.45" />
+  <!-- Inset accent ring -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#fav-gold)" stroke-width="1.2" opacity="0.5" />
 
   <!-- Globe Outer Sphere -->
-  <circle cx="50" cy="50" r="28" fill="none" stroke="url(#fav-gold)" stroke-width="2.8" />
+  <circle cx="50" cy="50" r="34" fill="none" stroke="url(#fav-gold)" stroke-width="3.4" />
 
   <!-- Central Polar Axis -->
-  <line x1="50" y1="22" x2="50" y2="78" stroke="url(#fav-gold)" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="50" y1="14" x2="50" y2="86" stroke="url(#fav-gold)" stroke-width="3.4" stroke-linecap="round" />
 
   <!-- Equator -->
-  <line x1="22" y1="50" x2="78" y2="50" stroke="url(#fav-gold)" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="14" y1="50" x2="86" y2="50" stroke="url(#fav-gold)" stroke-width="3.4" stroke-linecap="round" />
 
   <!-- Prime Meridian (Center Ellipse) -->
-  <ellipse cx="50" cy="50" rx="12.5" ry="28" fill="none" stroke="url(#fav-gold)" stroke-width="2.4" />
+  <ellipse cx="50" cy="50" rx="15" ry="34" fill="none" stroke="url(#fav-gold)" stroke-width="2.8" />
 
-  <!-- Outer Meridian (Curved Longitude) -->
-  <ellipse cx="50" cy="50" rx="21.5" ry="28" fill="none" stroke="url(#fav-gold)" stroke-width="1.8" opacity="0.8" />
+  <!-- Outer Meridian -->
+  <ellipse cx="50" cy="50" rx="26" ry="34" fill="none" stroke="url(#fav-gold)" stroke-width="2.4" opacity="0.85" />
 
   <!-- Upper Latitude Parallel -->
-  <path d="M 27 38.5 C 35 35.5, 65 35.5, 73 38.5" fill="none" stroke="url(#fav-gold)" stroke-width="2.1" stroke-linecap="round" />
+  <path d="M 23 37 C 32 33, 68 33, 77 37" fill="none" stroke="url(#fav-gold)" stroke-width="2.8" stroke-linecap="round" />
 
   <!-- Lower Latitude Parallel -->
-  <path d="M 27 61.5 C 35 64.5, 65 64.5, 73 61.5" fill="none" stroke="url(#fav-gold)" stroke-width="2.1" stroke-linecap="round" />
+  <path d="M 23 63 C 32 67, 68 67, 77 63" fill="none" stroke="url(#fav-gold)" stroke-width="2.8" stroke-linecap="round" />
 </svg>
