@@ -1,4 +1,25 @@
-/* Flex-based layout for consistent card sizing and centering */
+/* ==========================================================================
+   LAYOUT FOUNDATION & UTILITIES
+   ========================================================================== */
+
+/* Global Container */
+.container {
+  width: 100%;
+  max-width: var(--w-container, 1240px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--pad-page);
+  padding-right: var(--pad-page);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--pad-page-mobile);
+    padding-right: var(--pad-page-mobile);
+  }
+}
+
+/* Standard Flex Card Grid */
 .grid-standard {
   display: flex;
   flex-wrap: wrap;
@@ -7,6 +28,13 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .grid-standard {
+    gap: var(--s-4);
+  }
+}
+
+/* Section Margins */
 .section-margin {
   margin-bottom: var(--gap-section);
 }
@@ -15,19 +43,16 @@
   .section-margin {
     margin-bottom: var(--gap-section-mobile);
   }
-  .grid-standard {
-    gap: var(--s-4);
-  }
 }
 
-/* Centering Logic */
+/* Alignment & Flex Utilities */
 .text-center {
   text-align: center;
 }
 
 .text-center > * {
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flex-col {
@@ -35,10 +60,36 @@
   flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-gap-sm {
+  gap: var(--gap-text);
+}
+
 .flex-gap-md {
   gap: var(--gap-element);
 }
 
+.flex-gap-lg {
+  gap: var(--gap-grid);
+}
+
+/* Viewports & Media */
 .media-viewport {
   position: relative;
   overflow: hidden;
@@ -53,7 +104,7 @@
   z-index: 2;
 }
 
-/* Stretched Link for clickability */
+/* Clickable Stretched Link */
 .stretched-link::after {
   content: "";
   position: absolute;
@@ -63,7 +114,7 @@
   cursor: pointer;
 }
 
-/* Blog Archive Section spacing */
+/* Archive Spacing */
 .blog-archive-section {
   padding-bottom: var(--s-9);
 }
@@ -73,4 +124,3 @@
     padding-bottom: var(--s-7);
   }
 }
-

@@ -93,7 +93,7 @@
   font-family: var(--f-serif);
   font-size: 1.85rem;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--c-white);
   opacity: 0.65;
   transition: all 0.25s ease;
@@ -124,7 +124,9 @@
     padding: 0 var(--s-3) 0 var(--s-4);
   }
   .desktop-nav,
-  .desktop-only {
+  .desktop-only,
+  .btn-gold.desktop-only,
+  button.desktop-only {
     display: none;
   }
   .mobile-toggle {

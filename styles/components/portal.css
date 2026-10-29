@@ -41,8 +41,9 @@
   margin-bottom: var(--s-6);
 }
 
-.portal-title-flush {
-  margin-bottom: 0 !important;
+.portal-title-flush,
+h2.portal-title-flush {
+  margin-bottom: 0;
 }
 
 .portal-form-top {

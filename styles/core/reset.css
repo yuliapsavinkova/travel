@@ -2,45 +2,17 @@ html {
   scroll-behavior: smooth;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: crosshair;
 }
 
-/* Clear fixed header precisely */
+/* Offset for fixed site header when jumping to anchors */
 [id] {
   scroll-margin-top: calc(var(--h-header) + 20px);
-}
-
-a,
-a *,
-button,
-button *,
-[role="button"],
-[role="button"] *,
-.branding-clickable,
-.branding-clickable *,
-.btn-nav,
-.btn-nav *,
-.btn-gold,
-.btn-gold *,
-.secondary-btn,
-.secondary-btn *,
-.scroll-trigger,
-.scroll-trigger *,
-.glass-card,
-.glass-card *,
-.social-icon,
-.social-icon *,
-.footer-links li,
-.footer-links li *,
-.mobile-menu-item,
-.mobile-menu-item *,
-.btn-back,
-.btn-back * {
-  cursor: pointer;
 }
 
 body {
@@ -50,6 +22,8 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -57,9 +31,35 @@ a {
   color: inherit;
 }
 
-button {
+/* Standard clickable elements get pointer cursor naturally */
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+label[for] {
+  cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--f-main);
   border: none;
   background: none;
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .hide-scrollbar {

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
 import Footer from '../components/Footer';
@@ -14,17 +14,25 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
   variable: '--f-main',
   display: 'swap',
 });
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  style: ['italic'],
-  weight: ['400', '700', '900'],
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
   variable: '--f-serif',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--f-mono',
   display: 'swap',
 });
 
@@ -153,7 +161,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const gaId = SITE_CONFIG.googleAnalyticsId;
 
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${cormorant.variable} ${jetbrainsMono.variable}`}
+    >
       <body>
         <script
           type="application/ld+json"

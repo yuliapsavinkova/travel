@@ -9,14 +9,14 @@ import { body as aboutBody } from '../../data/about';
 export const metadata: Metadata = {
   title: 'About Yulia: Full-Time Housesitter & Traveler | Sitter Journey',
   description:
-    'Learn more about my journey as a solo female housesitter and how I travel intentionally across the United States.',
+    'Learn more about my journey as a solo female housesitter and how I travel intentionally and across the United States.',
   alternates: {
     canonical: 'https://sitterjourney.com/about',
   },
   openGraph: {
     title: 'About Yulia: Full-Time Housesitter & Traveler',
     description:
-      'Learn more about my journey as a solo female housesitter and how I travel intentionally across the United States.',
+      'Learn more about my journey as a solo female housesitter and how I travel intentionally and across the United States.',
     url: 'https://sitterjourney.com/about',
     type: 'profile',
     images: [

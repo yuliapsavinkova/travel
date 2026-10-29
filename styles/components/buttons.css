@@ -1,8 +1,9 @@
 .btn-nav {
   color: var(--c-text);
   opacity: 0.65;
+  font-family: var(--f-main);
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   padding: 10px 16px;
@@ -48,8 +49,9 @@
   -webkit-backdrop-filter: blur(20px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: var(--c-white);
+  font-family: var(--f-main);
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   padding: 12px 28px;
@@ -74,11 +76,12 @@
 
 .btn-gold {
   background-image: var(--g-gold-btn); /* Pointing to centralized token */
-  color: var(--c-black) !important;
+  color: var(--c-black);
   border-radius: var(--r-pill);
   padding: 12px 24px;
+  font-family: var(--f-main);
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -110,8 +113,9 @@
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  font-family: var(--f-main);
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);

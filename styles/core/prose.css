@@ -1,20 +1,18 @@
-/* 
-   PROSE CONTENT - Consistently Muted for Reading Comfort 
-*/
+/* ==========================================================================
+   PROSE CONTENT - Long-form Editorial Article Typography
+   ========================================================================== */
+
 .prose-content {
   color: var(--c-prose-body);
   font-size: 18px;
   line-height: 1.8;
-  max-width: 720px;
+  max-width: var(--w-prose, 720px);
   margin: 0 auto;
   font-weight: 400;
 }
 
-.prose-content p a,
-.prose-content li a,
-.prose-content .prose-lead a,
-.prose-content blockquote a,
-.prose-content .prose-end a {
+/* Unified Link Styling - DRY */
+.prose-content a {
   color: var(--c-gold);
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -22,14 +20,10 @@
   font-weight: 500;
   font-family: var(--f-serif);
   font-style: italic;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--t-fast);
 }
 
-.prose-content p a:hover,
-.prose-content li a:hover,
-.prose-content .prose-lead a:hover,
-.prose-content blockquote a:hover,
-.prose-content .prose-end a:hover {
+.prose-content a:hover {
   opacity: 0.75;
 }
 
@@ -66,6 +60,7 @@
   letter-spacing: 0.01em;
 }
 
+/* Section Dividers & Sign-off */
 .prose-end {
   margin-top: var(--s-9);
   padding: var(--s-8) var(--s-6);
@@ -79,12 +74,16 @@
   color: var(--c-text-dim);
 }
 
-.prose-end::before {
-  content: "";
+.prose-end::before,
+.prose-end::after {
   position: absolute;
-  top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.prose-end::before {
+  content: "";
+  top: 0;
   width: 60px;
   height: 1px;
   background: var(--c-gold-rich);
@@ -92,10 +91,7 @@
 
 .prose-end::after {
   content: "✦";
-  position: absolute;
   top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
   background: var(--c-black);
   padding: 0 10px;
   color: var(--c-gold);
@@ -103,13 +99,12 @@
   font-size: 14px;
 }
 
-/* Sign-off Label - standardized to proper header style */
 .prose-end strong:first-child {
   display: block;
   font-family: var(--f-serif);
   font-style: italic;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--c-gold);
   margin-bottom: var(--s-3);
   letter-spacing: normal;
@@ -120,7 +115,7 @@
   font-family: var(--f-serif);
   font-size: 1.9rem;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--c-white);
   margin-top: var(--s-8);
   margin-bottom: var(--s-4);
@@ -130,8 +125,8 @@
 .prose-content h3 {
   font-family: var(--f-serif);
   font-style: italic;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 500;
   color: var(--c-gold);
   margin-top: var(--s-4);
   margin-bottom: var(--s-2);
@@ -154,11 +149,8 @@
 .prose-quote {
   padding: var(--s-6);
   margin: var(--s-7) 0;
-  font-family: var(--f-serif);
-  font-style: italic;
-  font-size: 1.4rem;
-  color: var(--c-gold);
   text-align: center;
+  color: var(--c-gold);
   border-top: 1px solid var(--c-gold-muted);
   border-bottom: 1px solid var(--c-gold-muted);
 }
@@ -173,4 +165,3 @@
     font-size: 1.05rem;
   }
 }
-

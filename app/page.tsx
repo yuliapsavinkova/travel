@@ -35,7 +35,7 @@ export default function HomePage() {
   const homeJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Sitter Journey | Slow Travel & House Sitting Across The United States',
+    name: 'Sitter Journey | Slow Travel & House Sitting Across The World',
     url: 'https://sitterjourney.com',
     description:
       'Follow my full-time journey as a solo female traveler and professional house sitter across America.',
@@ -78,7 +78,7 @@ export default function HomePage() {
           </div>
           <h1 className="display-title">
             <span className="sub-header home-hero-sub-header">Slow Travel</span>
-            My Journey <span className="shimmer-text">Across The United States</span>
+            My <span className="shimmer-text">Journey</span>
           </h1>
           <p className="hero-paragraph">
             I am embarking on an adventure using housesitting to slow-travel through every state and
