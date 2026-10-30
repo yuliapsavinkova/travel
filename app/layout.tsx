@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, DM_Sans, JetBrains_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
 import Footer from '../components/Footer';
@@ -14,24 +14,38 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+const dmSans = localFont({
+  src: [
+    {
+      path: './fonts/dm-sans-latin.woff2',
+      style: 'normal',
+    },
+    {
+      path: './fonts/dm-sans-latin-italic.woff2',
+      style: 'italic',
+    },
+  ],
   variable: '--f-main',
   display: 'swap',
 });
 
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  style: ['normal', 'italic'],
+const cormorant = localFont({
+  src: [
+    {
+      path: './fonts/cormorant-garamond-latin.woff2',
+      style: 'normal',
+    },
+    {
+      path: './fonts/cormorant-garamond-latin-italic.woff2',
+      style: 'italic',
+    },
+  ],
   variable: '--f-serif',
   display: 'swap',
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+const jetbrainsMono = localFont({
+  src: './fonts/jetbrains-mono-latin.woff2',
   variable: '--f-mono',
   display: 'swap',
 });
