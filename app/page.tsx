@@ -69,8 +69,8 @@ export default function HomePage() {
                 <span className="hero-title-nowrap">My Journey</span>
               </h1>
               <p className="hero-paragraph">
-                I am embarking on an adventure using housesitting to slow-travel through every state and
-                see the country through local eyes.
+                I'm embarking on an adventure of slow travel around the world through house sitting,
+                discovering new places and experiencing life through local eyes.
               </p>
               <div className="hero-button-group">
                 <Link href="/blog#archive" className="btn-gold">
@@ -85,8 +85,8 @@ export default function HomePage() {
             <div className="hero-col-media">
               <div className="hero-image-card">
                 <Image
-                  src="/home-hero.jpg"
-                  alt="Yulia on the road"
+                  src="/yulia-miami-beach.jpg"
+                  alt="Yulia on the beach in Miami, Florida"
                   fill
                   priority
                   unoptimized
@@ -103,7 +103,7 @@ export default function HomePage() {
         {/* SECTION: MISSION / TOP ARTICLES */}
         <section className="home-section-wrap text-center" id="mission">
           <h2 className="display-title display-title-md">
-            Seeing the U.S. through <span className="serif-italic">Local Eyes</span>
+            How to start <span className="serif-italic">your journey</span>
           </h2>
           <p className="hero-paragraph home-section-intro">
             Top 3 Articles to Get You Started on Your Own Journey
@@ -154,9 +154,7 @@ export default function HomePage() {
                     <div className="sub-header">{pillar.label}</div>
                     <h3 className="serif-italic home-pillar-title">{pillar.title}</h3>
                     <p className="home-pillar-desc">{pillar.desc}</p>
-                    <span className="home-pillar-action">
-                      Read Article &rarr;
-                    </span>
+                    <span className="home-pillar-action">Read Article &rarr;</span>
                   </div>
                 </div>
               </Link>
@@ -206,7 +204,7 @@ export default function HomePage() {
             </h2>
             <p className="hero-paragraph home-section-intro">
               I Have Visited {SITE_STATS.countriesCount} Countries and {SITE_STATS.statesCount}{' '}
-              States While Working Remote
+              States
             </p>
 
             <div className="grid-standard">
