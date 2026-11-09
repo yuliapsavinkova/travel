@@ -5,6 +5,7 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '5',
   slug: 'why-trusted-housesitters-applications-get-rejected',
+  topic: 'TrustedHousesitters',
   title: 'Why My House Sit Application Got Rejected',
   navTitle: 'Rejections',
   excerpt: 'Rejections happen. Here’s what you can control and what you cannot.',

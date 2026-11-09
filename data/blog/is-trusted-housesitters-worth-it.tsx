@@ -6,7 +6,7 @@ export const post: BlogPost = {
   id: '3',
   slug: 'is-trusted-housesitters-worth-it-for-sitters',
   topic: 'TrustedHousesitters',
-  title: 'Is TrustedHousesitters Worth It for Sitters? Honest Pros, Cons, and Real Costs',
+  title: 'Pros and Cons of Exchanging Pet Care for Accommodation',
   navTitle: 'Is It Worth It?',
   excerpt:
     'TrustedHousesitters removes the biggest cost of travel by exchanging pet care for real homes around the world.',

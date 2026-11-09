@@ -4,6 +4,7 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '13',
   slug: 'how-to-update-homeowners-while-house-sitting',
+  topic: 'TrustedHousesitters',
   title: 'How to Update Homeowners While House Sitting: Frequency, Content, and Boundaries',
   navTitle: 'Updating Owners',
   excerpt:

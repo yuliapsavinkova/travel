@@ -5,6 +5,7 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '12',
   slug: 'trusted-housesitters-how-to-set-up-alerts-and-filters',
+  topic: 'TrustedHousesitters',
   title: 'My TrustedHousesitters Alert Strategy (Real Examples)',
   navTitle: 'Alerts Strategy',
   excerpt:

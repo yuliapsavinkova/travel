@@ -6,7 +6,8 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '9',
   slug: 'trusted-housesitters-vs-rover-comparison',
-  title: 'TrustedHousesitters vs Rover: What People Get Wrong When Comparing Them',
+  topic: 'TrustedHousesitters',
+  title: 'TrustedHousesitters vs. Rover: Why They are Not Comparable',
   navTitle: 'TrustedHousesitters vs Rover',
   excerpt: 'One is an exchange, the other is a transaction. Which one fits your lifestyle?',
   date: 'January 2026',

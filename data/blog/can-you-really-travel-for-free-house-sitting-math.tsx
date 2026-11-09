@@ -5,6 +5,7 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '6',
   slug: 'can-you-really-travel-for-free-house-sitting-math',
+  topic: 'TrustedHousesitters',
   title: 'Can You Really Travel for Free with House Sitting? Real Examples & Math',
   navTitle: 'Travel Math',
   excerpt:

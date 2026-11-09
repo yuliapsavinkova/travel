@@ -5,6 +5,7 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '7',
   slug: 'trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+  topic: 'TrustedHousesitters',
   title: 'What Happens If a Sit Goes Wrong and How to Report It',
   navTitle: 'Reporting',
   excerpt:

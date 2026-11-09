@@ -5,7 +5,8 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '10',
   slug: 'trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
-  title: 'How to Apply for Competitive TrustedHousesitters Sits Fast (Using AI)',
+  topic: 'TrustedHousesitters',
+  title: 'How to Apply for Competitive Sits Fast (Using AI)',
   navTitle: 'AI Strategy',
   excerpt: 'The best sits fill in minutes. Here is a strategy how to use AI to apply fast.',
   date: 'September 28, 2026',

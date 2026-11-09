@@ -10,7 +10,8 @@ import {
 export const post: BlogPost = {
   id: '14',
   slug: 'trusted-housesitters-exchange-vs-professional-house-sitting',
-  title: 'TrustedHousesitters Exchange vs. Professional House Sitting: Which Is Right for You?',
+  topic: 'TrustedHousesitters',
+  title: 'Exchange vs. Professional House Sitting: Which Is Right for You?',
   navTitle: 'Exchange vs. Professional Sitting',
   subtitle:
     'A clear comparison of community exchange platforms and dedicated professional pet sitting for homeowners.',

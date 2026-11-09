@@ -6,7 +6,8 @@ import { BlogPost, REFERRALS } from '../../types';
 export const post: BlogPost = {
   id: '8',
   slug: 'trusted-housesitters-vs-other-house-sitting-websites',
-  title: 'TrustedHousesitters vs Other House Sitting Websites: Which Is Actually Best?',
+  topic: 'TrustedHousesitters',
+  title: 'TrustedHousesitters vs Other House Sitting Websites',
   navTitle: 'TrustedHousesitters vs Others',
   excerpt:
     'Comparing TrustedHousesitters against Nomador, MindMyHouse, and others. Which one wins?',
