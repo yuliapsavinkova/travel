@@ -70,62 +70,50 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <section className="hero-stack section-margin">
-        <div className="hero-media-container media-viewport">
-          <Image
-            src="/remote-house.avif"
-            alt="Blog"
-            fill
-            priority
-            unoptimized
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="overlay-hero" />
-        </div>
+      <section className="hero-two-col section-margin">
+        <div className="container">
+          <div className="hero-two-col-grid">
+            <div className="hero-col-text">
+              <div className="hero-socials-wrapper">
+                <SocialMediaIcons className="hero-socials" iconSize={18} />
+              </div>
+              <h1 className="display-title">
+                Lessons from My Journey as a Housesitter
+              </h1>
+              <p className="hero-paragraph">I share how to travel sustainably through housesitting.</p>
+              <div className="hero-button-group">
+                <Link href="#archive" className="btn-gold">
+                  Read Blog
+                </Link>
+                <Link href="/resources#archive" className="secondary-btn">
+                  Resources
+                </Link>
+              </div>
+            </div>
 
-        <div className="hero-content-overlay content-layer">
-          <div className="hero-socials-wrapper">
-            <SocialMediaIcons className="hero-socials" iconSize={18} />
-          </div>
-          <div className="sub-header hero-sub-header">House Sitting</div>
-          <h1 className="display-title">
-            Lessons from<span className="shimmer-text">My Journey as a Housesitter</span>
-          </h1>
-          <p className="hero-paragraph">I share how to travel sustainably through housesitting.</p>
-          <div className="hero-button-group">
-            <Link href="#archive" className="btn-gold">
-              Read Blog
-            </Link>
-            <Link href="/resources#archive" className="secondary-btn">
-              Resources
-            </Link>
+            <div className="hero-col-media">
+              <div className="hero-image-card">
+                <Image
+                  src="/remote-house.avif"
+                  alt="Blog"
+                  fill
+                  priority
+                  unoptimized
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
-
-        <Link
-          href="#archive"
-          className="scroll-trigger content-layer"
-          aria-label="Scroll to archive"
-        >
-          <ChevronDownIcon size={28} className="scroll-icon-anim" />
-        </Link>
       </section>
 
       <div className="container section-margin">
-        <header
-          className="text-center section-margin"
-          id="archive"
-          style={{ maxWidth: '800px', margin: '0 auto var(--s-8) auto' }}
-        >
-          <div className="sub-header">Lessons Learned</div>
+        <header className="text-center section-margin" id="archive">
           <h2 className="display-title display-title-md">
-            The <span className="serif-italic shimmer-text">Archive</span>
+            The <span className="serif-italic">Archive</span>
           </h2>
-          <p
-            className="hero-paragraph"
-            style={{ fontSize: '1rem', opacity: 0.8, marginTop: 'var(--s-3)' }}
-          >
+          <p className="hero-paragraph home-section-intro">
             I am currently documenting my journey. While the archive is growing, please check back
             often for new hacks, packing essentials, and stories from the road.
           </p>

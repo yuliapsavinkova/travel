@@ -16,14 +16,23 @@ html {
 }
 
 body {
-  background-color: var(--c-black);
-  color: var(--c-text);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
   font-family: var(--f-main);
   overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  position: relative;
 }
 
 a {

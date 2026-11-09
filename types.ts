@@ -8,9 +8,9 @@ export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 export const REFERRALS = {
   THS: {
     link: 'https://trustedhousesitters.com/refer/raf943607',
-    discount: '25% Off',
-    label: 'Claim 25% Off Membership',
-    cta: '25% Off Membership',
+    discount: '30% Off',
+    label: 'Claim 30% Off Membership',
+    cta: '30% Off Membership',
   },
   ROVER: {
     link: 'https://www.rover.com/ambas-refer-a-friend/Q93GankN',

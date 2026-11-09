@@ -30,7 +30,7 @@ const ArticleImage = ({
           width: '100%',
           borderRadius: 'var(--r-md)',
           overflow: 'hidden',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
+          border: '1px solid var(--color-border-subtle)',
         }}
       >
         <Image

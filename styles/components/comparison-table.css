@@ -1,12 +1,13 @@
-/* Comparison Table Component - Strict Two-Column Architecture for Flawless Mobile & iPhone Rendering */
+/* Comparison Table Component - Strict Two-Column Architecture */
 .prose-table-wrap {
   margin: var(--s-6) 0 var(--s-8) 0;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  border: 1px solid var(--c-border);
+  border: 1px solid var(--color-border-primary);
   border-radius: var(--r-md);
-  background: rgba(255, 255, 255, 0.015);
+  background: var(--color-bg-surface);
+  box-shadow: var(--shadow-sm);
   box-sizing: border-box;
 }
 
@@ -14,21 +15,21 @@
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Ensures rigid 50% / 50% column widths with zero layout shifting */
+  table-layout: fixed;
   text-align: left;
   box-sizing: border-box;
 }
 
 .comparison-table thead th {
   width: 50%;
-  background: rgba(229, 193, 133, 0.08);
-  color: var(--c-gold);
+  background: var(--color-bg-secondary);
+  color: var(--color-brand-primary);
   font-family: var(--f-serif);
   font-style: italic;
   font-size: 1.1rem;
   font-weight: 700;
   padding: var(--s-4) var(--s-5);
-  border-bottom: 2px solid rgba(229, 193, 133, 0.35);
+  border-bottom: 2px solid var(--color-border-bold);
   line-height: 1.35;
   vertical-align: middle;
   word-break: break-word;
@@ -36,14 +37,14 @@
 }
 
 .comparison-table thead th:first-child {
-  border-right: 1px solid var(--c-border);
+  border-right: 1px solid var(--color-border-primary);
 }
 
 /* Feature Topic Header spanning across both columns */
 .comparison-table .table-topic-row th {
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--c-white);
+  background: var(--color-bg-secondary-translucent);
+  color: var(--color-text-primary);
   font-family: var(--f-main);
   font-style: normal;
   font-size: 11px;
@@ -51,16 +52,16 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   padding: 10px var(--s-5);
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
+  border-top: 1px solid var(--color-border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
   text-align: center;
 }
 
 .comparison-table tbody td {
   width: 50%;
   padding: var(--s-4) var(--s-5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  color: var(--c-text-dim);
+  border-bottom: 1px solid var(--color-border-soft);
+  color: var(--color-text-primary);
   vertical-align: top;
   line-height: 1.6;
   font-size: 14.5px;
@@ -69,7 +70,7 @@
 }
 
 .comparison-table tbody tr:not(.table-topic-row) td:first-child {
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid var(--color-border-soft);
 }
 
 .comparison-table tbody tr:last-child td {

@@ -1,9 +1,9 @@
 /* ==========================================================================
-   1. Standardized Hero Navigation (Matches your .btn-back-footer style)
+   1. Standardized Hero Navigation
    ========================================================================== */
 
 .detail-hero-nav-wrapper {
-  max-width: 900px;
+  max-width: var(--container-width-medium);
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -13,12 +13,11 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--s-3);
-  padding: var(--s-4) 4px; /* Matches your structure while staying flush with the image edge */
+  padding: var(--s-4) 4px;
 }
 
-/* Inherits your clean, muted uppercase styling */
 .hero-nav-link {
-  color: var(--c-text-muted);
+  color: var(--color-text-secondary);
   display: inline-flex;
   align-items: center;
   gap: var(--s-3);
@@ -32,10 +31,9 @@
 }
 
 .hero-nav-link:hover {
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
 }
 
-/* Vector icon alignment matches footer text layout natively */
 .hero-nav-link .nav-icon {
   width: 14px;
   height: 14px;
@@ -50,15 +48,15 @@
 
 .detail-hero-section {
   position: relative;
-  max-width: 900px;
+  max-width: var(--container-width-medium);
   margin: 0 auto var(--s-6) auto;
   aspect-ratio: 21 / 9;
-  min-height: 340px;
+  min-height: var(--h-hero-card-tablet);
   border-radius: var(--r-md);
   overflow: hidden;
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
-  background: var(--c-obsidian);
+  border: 1px solid var(--color-border-primary);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-bg-secondary);
 }
 
 .detail-hero-section .media-viewport {
@@ -81,7 +79,7 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
 }
 
@@ -101,12 +99,12 @@
   z-index: 10;
 
   padding: 14px 20px;
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--color-bg-dark-translucent-strong);
   backdrop-filter: blur(25px) saturate(160%);
   -webkit-backdrop-filter: blur(25px) saturate(160%);
 
-  border-top: 1px solid var(--glass-border);
-  color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid var(--color-border-inverse-soft);
+  color: var(--color-text-primary-inverse);
   font-size: 11px;
 
   display: flex;
@@ -122,7 +120,7 @@
 }
 
 .disclosure-icon {
-  color: var(--c-gold);
+  color: var(--color-brand-secondary);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -133,7 +131,7 @@
 }
 
 .disclosure-link-inline {
-  color: var(--c-gold);
+  color: var(--color-brand-secondary);
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 700;
@@ -145,7 +143,7 @@
 }
 
 /* ==========================================================================
-   Responsive Breakpoints (iPhones / Mobile)
+   Responsive Breakpoints
    ========================================================================== */
 
 @media (max-width: 768px) {
@@ -154,10 +152,9 @@
   }
 
   .detail-hero-nav {
-    padding: var(--s-2) 0; /* Brings down the line spacing slightly on mobile */
+    padding: var(--s-2) 0;
   }
 
-  /* Compact scaling rules to protect small mobile screens from crowding */
   .hero-nav-link {
     font-size: 8px;
     letter-spacing: 0.2em;
@@ -169,7 +166,6 @@
     height: 12px;
   }
 
-  /* Original Hero Image Layout on Mobile */
   .detail-hero-section {
     margin: 0 var(--s-4);
     aspect-ratio: 16 / 9;

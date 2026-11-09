@@ -66,47 +66,46 @@ export default function TravelPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <section className="hero-stack section-margin">
-        <div className="hero-media-container media-viewport">
-          <Image
-            src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=2400"
-            alt="Travel"
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="overlay-hero" />
-        </div>
+      <section className="hero-two-col section-margin">
+        <div className="container">
+          <div className="hero-two-col-grid">
+            <div className="hero-col-text">
+              <h1 className="display-title">
+                Travel Guides.
+              </h1>
+              <p className="hero-paragraph">
+                Guides and stories from the {SITE_STATS.countriesCount} countries I've visited.
+              </p>
+              <div className="hero-button-group">
+                <Link href="#guides" className="btn-gold">
+                  View Guides
+                </Link>
+                <Link href="/resources#archive" className="secondary-btn">
+                  Resources
+                </Link>
+              </div>
+            </div>
 
-        <div className="hero-content-overlay content-layer">
-          <div className="sub-header hero-sub-header">Destinations</div>
-          <h1 className="display-title">
-            Travel <span className="shimmer-text">Guides.</span>
-          </h1>
-          <p className="hero-paragraph">
-            Guides and stories from the {SITE_STATS.countriesCount} countries I've visited.
-          </p>
-          <div className="hero-button-group">
-            <Link href="#guides" className="btn-gold">
-              View Guides
-            </Link>
-            <Link href="/resources#archive" className="secondary-btn">
-              Resources
-            </Link>
+            <div className="hero-col-media">
+              <div className="hero-image-card">
+                <Image
+                  src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=1200"
+                  alt="Travel"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
-
-        <Link href="#guides" className="scroll-trigger content-layer" aria-label="Scroll to guides">
-          <ChevronDownIcon size={28} className="scroll-icon-anim" />
-        </Link>
       </section>
 
       <div className="container section-margin">
         <header className="text-center section-margin" id="guides">
-          <div className="sub-header">Where to go</div>
           <h2 className="display-title display-title-md">
-            My <span className="serif-italic shimmer-text">Guides.</span>
+            My <span className="serif-italic">Guides.</span>
           </h2>
         </header>
 

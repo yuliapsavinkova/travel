@@ -18,8 +18,7 @@ export default function BrandLogo({
     <div className={`brand-wordmark ${className}`}>
       <SJLogo size={iconSize} className="brand-logo-icon" />
       <span className="brand-logo-name serif-italic">
-        <span className="brand-name-light">Sitter </span>
-        <span className="brand-name-accent">Journey</span>
+        Sitter Journey
       </span>
     </div>
   );

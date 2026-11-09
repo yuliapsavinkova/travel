@@ -15,7 +15,7 @@ interface StickyReaderCtaProps {
 
 export default function StickyReaderCta({
   promoLink = REFERRALS.THS.link,
-  text = 'Get 25% off TrustedHousesitters Membership',
+  text = 'Get 30% off TrustedHousesitters Membership',
   showAfterScroll = 350,
   articleTitle,
   articleSlug,

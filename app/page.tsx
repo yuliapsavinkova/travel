@@ -58,53 +58,52 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
-      <section className="hero-stack section-margin">
-        <div className="hero-media-container media-viewport">
-          <Image
-            src="/home-hero.jpg"
-            alt="Yulia on the road"
-            fill
-            priority
-            unoptimized
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="overlay-hero" />
-        </div>
+      <section className="hero-two-col section-margin">
+        <div className="container">
+          <div className="hero-two-col-grid">
+            <div className="hero-col-text">
+              <div className="hero-socials-wrapper">
+                <SocialMediaIcons className="hero-socials" iconSize={18} />
+              </div>
+              <h1 className="display-title">
+                <span className="hero-title-nowrap">My Journey</span>
+              </h1>
+              <p className="hero-paragraph">
+                I am embarking on an adventure using housesitting to slow-travel through every state and
+                see the country through local eyes.
+              </p>
+              <div className="hero-button-group">
+                <Link href="/blog#archive" className="btn-gold">
+                  Read My Blog
+                </Link>
+                <Link href="/resources#archive" className="secondary-btn">
+                  My Resources
+                </Link>
+              </div>
+            </div>
 
-        <div className="hero-content-overlay content-layer">
-          <div className="hero-socials-wrapper">
-            <SocialMediaIcons className="hero-socials" iconSize={18} />
-          </div>
-          <h1 className="display-title">
-            <span className="sub-header home-hero-sub-header">Slow Travel</span>
-            My <span className="shimmer-text">Journey</span>
-          </h1>
-          <p className="hero-paragraph">
-            I am embarking on an adventure using housesitting to slow-travel through every state and
-            see the country through local eyes.
-          </p>
-          <div className="hero-button-group">
-            <Link href="/blog#archive" className="btn-gold">
-              Read My Blog
-            </Link>
-            <Link href="/resources#archive" className="secondary-btn">
-              My Resources
-            </Link>
+            <div className="hero-col-media">
+              <div className="hero-image-card">
+                <Image
+                  src="/home-hero.jpg"
+                  alt="Yulia on the road"
+                  fill
+                  priority
+                  unoptimized
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
-
-        <Link href="#mission" className="scroll-trigger content-layer" aria-label="Scroll down">
-          <ChevronDownIcon size={28} className="scroll-icon-anim" />
-        </Link>
       </section>
 
       <div className="container">
         {/* SECTION: MISSION / TOP ARTICLES */}
         <section className="home-section-wrap text-center" id="mission">
-          <div className="sub-header">Start Here</div>
           <h2 className="display-title display-title-md">
-            Seeing the U.S. through <span className="serif-italic shimmer-text">Local Eyes</span>
+            Seeing the U.S. through <span className="serif-italic">Local Eyes</span>
           </h2>
           <p className="hero-paragraph home-section-intro">
             Top 3 Articles to Get You Started on Your Own Journey
@@ -155,7 +154,7 @@ export default function HomePage() {
                     <div className="sub-header">{pillar.label}</div>
                     <h3 className="serif-italic home-pillar-title">{pillar.title}</h3>
                     <p className="home-pillar-desc">{pillar.desc}</p>
-                    <span className="btn-nav" style={{ padding: 0 }}>
+                    <span className="home-pillar-action">
                       Read Article &rarr;
                     </span>
                   </div>
@@ -167,7 +166,7 @@ export default function HomePage() {
           <div className="home-section-footer">
             <Link href="/blog#archive" className="home-footer-link">
               <span>or read my </span>
-              <span className="serif-italic shimmer-text">entire blog here &rarr;</span>
+              <span className="serif-italic">entire blog here &rarr;</span>
             </Link>
           </div>
         </section>
@@ -175,9 +174,8 @@ export default function HomePage() {
         {/* SECTION: LESSONS / DOCUMENTATION (WITH GLASS BACKGROUND) */}
         <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
           <div className="glass-card home-feature-card">
-            <div className="sub-header">Ongoing Documentation</div>
             <h2 className="display-title display-title-md">
-              Lessons <span className="serif-italic shimmer-text">from My Journey</span>
+              Lessons <span className="serif-italic">from My Journey</span>
             </h2>
             <p className="hero-paragraph home-feature-paragraph">
               I am documenting every lesson, success, and technical detail here. Whether you want to
@@ -197,29 +195,14 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        {/* SECTION: QUESTIONS / CONNECT */}
-        {/* <section className="home-section-wrap text-center">
-          <div className="sub-header">Have Questions?</div>
-          <h2 className="display-title display-title-md">
-            Connect <span className="serif-italic shimmer-text">With Me</span>
-          </h2>
-          <div className="home-cta-group">
-            <ContactTrigger label="Contact" className="btn-gold" />
-            <Link href="/blog#archive" className="secondary-btn">
-              Read Blog
-            </Link>
-          </div>
-        </section> */}
       </div>
 
       {/* SECTION: PERSPECTIVE / STATS (TINTED) */}
       <div className="home-section-divider home-section-tinted">
         <div className="container">
           <section className="home-section-wrap text-center" id="perspective">
-            <div className="sub-header">My Journey</div>
             <h2 className="display-title display-title-md">
-              Travel <span className="serif-italic shimmer-text">& Life</span>
+              Travel <span className="serif-italic">& Life</span>
             </h2>
             <p className="hero-paragraph home-section-intro">
               I Have Visited {SITE_STATS.countriesCount} Countries and {SITE_STATS.statesCount}{' '}
@@ -276,9 +259,8 @@ export default function HomePage() {
       {/* SECTION: ROADMAP (WITH GLASS BACKGROUND) */}
       <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
         <div className="glass-card home-feature-card">
-          <div className="sub-header">Growth Roadmap</div>
           <h2 className="display-title display-title-md">
-            The Road <span className="serif-italic shimmer-text">Ahead</span>
+            The Road <span className="serif-italic">Ahead</span>
           </h2>
           <p className="hero-paragraph home-feature-paragraph">
             I’m just getting started here, so check back as the site grows. I’ll be sharing packing

@@ -104,7 +104,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       },
       headline: post.title,
       description: post.seoDescription || post.excerpt,
-      image: post.imageUrl.startsWith('http') ? post.imageUrl : `https://sitterjourney.com${post.imageUrl}`,
+      image: post.imageUrl.startsWith('http')
+        ? post.imageUrl
+        : `https://sitterjourney.com${post.imageUrl}`,
       datePublished: post.date,
       dateModified: post.date,
       mainEntityOfPage: postUrl,
@@ -194,7 +196,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
       <StickyReaderCta
         promoLink={post.ctaLink || REFERRALS.THS.link}
-        text="Get 25% off TrustedHousesitters Membership"
+        text="Get 30% off TrustedHousesitters Membership"
         articleTitle={post.title}
         articleSlug={post.slug}
       />

@@ -71,54 +71,49 @@ export default function ResourcesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <section className="hero-stack section-margin">
-        <div className="hero-media-container media-viewport">
-          <Image
-            src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=2400"
-            alt="Resources"
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="overlay-hero" />
-        </div>
+      <section className="hero-two-col section-margin">
+        <div className="container">
+          <div className="hero-two-col-grid">
+            <div className="hero-col-text">
+              <div className="hero-socials-wrapper">
+                <SocialMediaIcons className="hero-socials" iconSize={18} />
+              </div>
+              <h1 className="display-title">
+                Travel Resources.
+              </h1>
+              <p className="hero-paragraph">
+                The tools and services I use every day to live and work on the road.
+              </p>
+              <div className="hero-button-group">
+                <Link href="#archive" className="btn-gold">
+                  View Resources
+                </Link>
+                <Link href="/blog#archive" className="secondary-btn">
+                  Read Blog
+                </Link>
+              </div>
+            </div>
 
-        <div className="hero-content-overlay content-layer">
-          <div className="hero-socials-wrapper">
-            <SocialMediaIcons className="hero-socials" iconSize={18} />
-          </div>
-          <div className="sub-header hero-sub-header">Tools & Services</div>
-          <h1 className="display-title">
-            Travel <span className="shimmer-text">Resources.</span>
-          </h1>
-          <p className="hero-paragraph">
-            The tools and services I use every day to live and work on the road.
-          </p>
-          <div className="hero-button-group">
-            <Link href="#archive" className="btn-gold">
-              View Resources
-            </Link>
-            <Link href="/blog#archive" className="secondary-btn">
-              Read Blog
-            </Link>
+            <div className="hero-col-media">
+              <div className="hero-image-card">
+                <Image
+                  src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=1200"
+                  alt="Resources"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
-
-        <Link
-          href="#archive"
-          className="scroll-trigger content-layer"
-          aria-label="Scroll to resources"
-        >
-          <ChevronDownIcon size={28} className="scroll-icon-anim" />
-        </Link>
       </section>
 
       <div className="container section-margin">
         <header className="text-center section-margin" id="archive">
-          <div className="sub-header">My Resources</div>
           <h2 className="display-title display-title-md">
-            The <span className="serif-italic shimmer-text">Resources.</span>
+            The <span className="serif-italic">Resources.</span>
           </h2>
         </header>
 

@@ -68,7 +68,12 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   if (!guide) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail onBack="/travel#guides" backLabel="Return to Travel" image="" title="Not Found">
+        <CommonDetail
+          onBack="/travel#guides"
+          backLabel="Return to Travel"
+          image=""
+          title="Not Found"
+        >
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Guide Not Found</h1>
             <p className="hero-paragraph">The requested travel guide could not be located.</p>
@@ -106,7 +111,9 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
         '@id': `${guideUrl}#article`,
         headline: guide.title,
         description: guide.excerpt,
-        image: guide.imageUrl?.startsWith('http') ? guide.imageUrl : `https://sitterjourney.com${guide.imageUrl}`,
+        image: guide.imageUrl?.startsWith('http')
+          ? guide.imageUrl
+          : `https://sitterjourney.com${guide.imageUrl}`,
         datePublished: guide.date,
         dateModified: guide.date,
         mainEntityOfPage: guideUrl,
@@ -178,7 +185,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
 
       <StickyReaderCta
         promoLink={REFERRALS.THS.link}
-        text="Get 25% off TrustedHousesitters Membership"
+        text="Get 30% off TrustedHousesitters Membership"
         articleTitle={guide.title}
         articleSlug={guide.slug}
       />

@@ -3,19 +3,20 @@
   bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 52px;
-  height: 52px;
+  width: var(--h-scroll-trigger);
+  height: var(--h-scroll-trigger);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
   z-index: 10;
   cursor: pointer;
-  background: transparent;
-  backdrop-filter: blur(4px) saturate(150%);
-  -webkit-backdrop-filter: blur(4px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--color-bg-primary-translucent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border-primary);
+  box-shadow: var(--shadow-sm);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -24,16 +25,16 @@
   position: absolute;
   inset: -1px;
   border-radius: 50%;
-  border: 1px solid var(--c-gold);
+  border: 1px solid var(--color-brand-primary);
   animation: liquid-pulse 3s infinite ease-out;
   pointer-events: none;
 }
 
 .scroll-trigger:hover {
   transform: translateX(-50%) translateY(-4px) scale(1.05);
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px) saturate(180%);
+  border-color: var(--color-brand-primary);
+  background: var(--color-bg-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .scroll-icon-anim {
@@ -58,14 +59,14 @@
     transform: translateY(-2px);
   }
   50% {
-    transform: translateY(2px);
+    transform: translateY(3px);
   }
 }
 
 @media (max-width: 768px) {
   .scroll-trigger {
-    width: 40px;
-    height: 40px;
-    bottom: max(1.25rem, env(safe-area-inset-bottom, 16px));
+    width: var(--h-scroll-trigger-mobile);
+    height: var(--h-scroll-trigger-mobile);
+    bottom: 4vh;
   }
 }

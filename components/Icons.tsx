@@ -43,10 +43,8 @@ export const SJLogo = ({ size = 48, className, ...props }: IconProps) => (
     <title>Sitter Journey Logo</title>
     <defs>
       <linearGradient id="logo-gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#FFFDF7" />
-        <stop offset="30%" stopColor="#FEE0A6" />
-        <stop offset="70%" stopColor="#E5C185" />
-        <stop offset="100%" stopColor="#B08D57" />
+        <stop offset="0%" stopColor="var(--color-brand-secondary)" />
+        <stop offset="100%" stopColor="var(--color-brand-primary)" />
       </linearGradient>
       <clipPath id="logo-globe-interior-clip">
         <circle cx="50" cy="50" r="45.25" />

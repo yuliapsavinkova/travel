@@ -1,6 +1,6 @@
 /* ==========================================================================
    STICKY READER CTA BAR
-   Simplified floating offer pill centered at the bottom
+   Floating offer pill centered at the bottom
    ========================================================================== */
 
 .sticky-reader-cta {
@@ -17,7 +17,7 @@
   transition:
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.3s ease;
-  max-width: min(calc(100vw - 32px), 560px);
+  max-width: min(calc(100vw - var(--s-7)), var(--container-width-narrow));
   width: max-content;
 }
 
@@ -35,26 +35,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(18, 18, 20, 0.94);
+  background: var(--color-bg-dark);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 207, 135, 0.35);
-  border-radius: 9999px;
-  padding: 8px 18px;
-  box-shadow:
-    0 12px 32px rgba(0, 0, 0, 0.6),
-    0 0 16px rgba(255, 207, 135, 0.1);
+  border: 1px solid var(--color-border-bold);
+  border-radius: var(--r-pill);
+  padding: 10px 22px;
+  box-shadow: var(--shadow-xl);
   max-width: 100%;
   box-sizing: border-box;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
 
 .sticky-cta-inner:hover {
-  border-color: rgba(255, 207, 135, 0.6);
-  box-shadow:
-    0 14px 36px rgba(0, 0, 0, 0.7),
-    0 0 22px rgba(255, 207, 135, 0.2);
-  transform: translateY(-1px);
+  border-color: var(--color-brand-secondary);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
 }
 
 .sticky-cta-link {
@@ -63,9 +59,9 @@
   justify-content: center;
   gap: 8px;
   text-decoration: none;
-  color: var(--c-gold);
+  color: var(--color-brand-secondary);
   padding: 2px 4px;
-  border-radius: 9999px;
+  border-radius: var(--r-pill);
   min-width: 0;
   transition: opacity 0.25s ease;
 }
@@ -73,12 +69,11 @@
 .sticky-cta-text {
   font-family: var(--f-main);
   font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--c-gold);
+  font-weight: 600;
+  color: var(--color-text-primary-inverse);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
-  text-decoration-color: currentColor;
   letter-spacing: -0.01em;
   white-space: nowrap;
   overflow: hidden;
@@ -86,22 +81,18 @@
 }
 
 .sticky-link-icon {
-  color: var(--c-gold);
+  color: var(--color-brand-secondary);
   flex-shrink: 0;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
 
 .sticky-cta-link:hover {
-  opacity: 0.88;
+  opacity: 0.9;
 }
 
 .sticky-cta-link:hover .sticky-link-icon {
   transform: translate(2px, -2px);
 }
-
-/* ==========================================================================
-   MOBILE RESPONSIVENESS
-   ========================================================================== */
 
 @media (max-width: 600px) {
   .sticky-reader-cta {
@@ -110,7 +101,7 @@
   }
 
   .sticky-cta-inner {
-    padding: 7px 14px;
+    padding: 8px 16px;
   }
 
   .sticky-cta-text {
@@ -125,7 +116,7 @@
   }
 
   .sticky-cta-inner {
-    padding: 6px 12px;
+    padding: 7px 14px;
   }
 
   .sticky-cta-text {

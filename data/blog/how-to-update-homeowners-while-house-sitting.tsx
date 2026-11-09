@@ -15,7 +15,7 @@ export const post: BlogPost = {
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=2070&auto=format&fit=crop',
-  ctaLabel: 'Claim 25% Off Membership',
+  ctaLabel: 'Claim 30% Off Membership',
   ctaLink: REFERRALS.THS.link,
   seoTitle: 'How to Update Homeowners While House Sitting | Sitter Communication Strategy',
   seoDescription:

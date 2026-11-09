@@ -1,134 +1,303 @@
-.btn-nav {
-  color: var(--c-text);
-  opacity: 0.65;
+/* ==========================================================================
+   BUTTONS & INTERACTIVE CONTROLS
+   Standard, generic design-system primitives reusable across projects.
+   Strictly token-driven (no hardcoded colors).
+   All interactive states: Default, Hover, Focus-Visible, Active, Disabled.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Shared Base Button Primitives (.btn)
+   -------------------------------------------------------------------------- */
+.btn,
+.btn-gold,
+.secondary-btn,
+.btn-return {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
   font-family: var(--f-main);
-  font-size: 11px;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--r-pill);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  text-decoration: none !important;
+  font-style: normal !important;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Primary Filled Button (.btn-fill / .btn-gold)
+   -------------------------------------------------------------------------- */
+.btn-fill,
+.btn-gold {
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: var(--color-text-primary-inverse) !important;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-fill:hover,
+.btn-gold:hover {
+  background-color: var(--color-brand-secondary);
+  border-color: var(--color-brand-secondary);
+  color: var(--color-text-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-fill:active,
+.btn-gold:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-brand-secondary);
+  border-color: var(--color-brand-secondary);
+  color: var(--color-text-primary) !important;
+  opacity: 0.95;
+}
+
+/* --------------------------------------------------------------------------
+   3. Dark Outline / Secondary Button (.btn-outline-dark / .secondary-btn)
+   -------------------------------------------------------------------------- */
+.btn-outline-dark,
+.secondary-btn {
+  background-color: transparent;
+  border-color: var(--color-border-bold);
+  color: var(--color-text-primary) !important;
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.15em;
+}
+
+.btn-outline-dark:hover,
+.secondary-btn:hover {
+  background-color: var(--color-brand-primary-subtle);
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-dark:active,
+.secondary-btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-brand-primary-soft);
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Outline Button (.btn-outline)
+   -------------------------------------------------------------------------- */
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-border-primary);
+  color: var(--color-text-primary) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-brand-primary-subtle);
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* --------------------------------------------------------------------------
+   5. Light / Surface / Return Button (.btn-light / .btn-return)
+   -------------------------------------------------------------------------- */
+.btn-light,
+.btn-return,
+.top-breadcrumb-link {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border-primary);
+  color: var(--color-text-secondary) !important;
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  padding: 0.5rem 1.125rem;
+  min-height: 2.25rem;
+  box-shadow: var(--shadow-sm);
+  gap: var(--s-2);
+}
+
+.btn-light:hover,
+.btn-return:hover,
+.top-breadcrumb-link:hover {
+  background-color: var(--color-brand-primary-subtle);
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-light:active,
+.btn-return:active,
+.top-breadcrumb-link:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-return-icon {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-return:hover .btn-return-icon,
+.top-breadcrumb-link:hover .btn-return-icon {
+  transform: translateX(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   6. Ghost / Borderless Button (.btn-ghost)
+   -------------------------------------------------------------------------- */
+.btn-ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text-secondary);
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-brand-primary-subtle);
+  color: var(--color-brand-primary) !important;
+}
+
+.btn-ghost:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   7. Universal Focus & Disabled States
+   -------------------------------------------------------------------------- */
+.btn:focus-visible,
+.btn-gold:focus-visible,
+.secondary-btn:focus-visible,
+.btn-return:focus-visible,
+.top-breadcrumb-link:focus-visible,
+.btn-fill:focus-visible,
+.btn-outline:focus-visible,
+.btn-outline-dark:focus-visible,
+.btn-light:focus-visible,
+.btn-ghost:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 3px;
+}
+
+.btn:disabled,
+.btn[disabled],
+.btn.disabled,
+.btn-gold:disabled,
+.btn-gold[disabled],
+.secondary-btn:disabled,
+.secondary-btn[disabled],
+.btn-return:disabled,
+.btn-return[disabled],
+.btn-fill:disabled,
+.btn-outline:disabled,
+.btn-outline-dark:disabled,
+.btn-light:disabled,
+.btn-ghost:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   8. Navigation Link Button (.btn-nav)
+   -------------------------------------------------------------------------- */
+.btn-nav {
+  color: var(--color-text-secondary);
+  opacity: 0.75;
+  font-family: var(--f-main);
+  font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  padding: 10px 16px;
-  transition: all 0.3s ease;
+  padding: 0.625rem 1rem;
+  background: transparent;
+  border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   position: relative;
+  text-decoration: none !important;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.btn-nav::after {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  left: 16px;
-  right: 16px;
-  height: 2px;
-  background: var(--c-gold);
-  transform: scaleX(0);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  transform-origin: center;
-  box-shadow: 0 0 10px var(--c-gold-rich);
+.btn-nav:hover {
+  opacity: 1;
+  color: var(--color-brand-primary) !important;
 }
 
 .btn-nav.active {
   opacity: 1;
-  color: var(--c-gold);
-  text-shadow: 0 0 12px rgba(255, 207, 135, 0.3);
+  color: var(--color-brand-primary);
+  font-weight: 700;
 }
 
 .btn-nav.active::after {
-  transform: scaleX(1);
-}
-
-.btn-nav:hover:not(.active) {
-  opacity: 1;
-  color: var(--c-white);
-}
-
-.glass-pill {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--c-white);
-  font-family: var(--f-main);
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  padding: 12px 28px;
+  content: "";
+  position: absolute;
+  bottom: 0.35rem;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: var(--color-brand-primary);
   border-radius: var(--r-pill);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  text-decoration: none;
-  width: auto;
-  white-space: nowrap;
 }
 
-.glass-pill:hover {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.45);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+.btn-nav:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
 }
 
-.btn-gold {
-  background-image: var(--g-gold-btn); /* Pointing to centralized token */
-  color: var(--c-black);
-  border-radius: var(--r-pill);
-  padding: 12px 24px;
-  font-family: var(--f-main);
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
 
-.btn-gold:hover {
-  background-image: var(--g-champagne);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(229, 193, 133, 0.4);
-  filter: brightness(1.1);
-}
-
-/* Wide Button Utility */
+/* --------------------------------------------------------------------------
+   10. Layout Modifiers (.btn-full, .btn-wide, .btn-auto-sm)
+   -------------------------------------------------------------------------- */
+.btn-full,
 .btn-wide {
-  min-width: 280px;
+  width: 100%;
+  max-width: 17.5rem;
 }
 
-.secondary-btn {
-  border: 1.5px solid var(--c-gold-rich);
-  padding: 12px 24px;
-  color: var(--c-white);
-  border-radius: var(--r-pill);
-  background-color: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  font-family: var(--f-main);
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+.btn-auto-sm {
+  width: 100%;
+  max-width: 15rem;
 }
 
-.secondary-btn:hover {
-  background-color: rgba(255, 207, 135, 0.1);
-  border-color: var(--c-gold);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+@media (max-width: 480px) {
+  .btn-full,
+  .btn-wide,
+  .btn-auto-sm {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-auto-sm {
+    width: auto;
+    max-width: none;
+  }
 }

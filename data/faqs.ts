@@ -61,7 +61,7 @@ export const MASTER_FAQS: FAQItem[] = [
     id: 'ths-membership-discounts',
     question: 'Are there discounts or trials for new members?',
     answer:
-      'Yes. I provide a verified 25% discount through my referral link. Check my ' +
+      'Yes. I provide a verified 30% discount through my referral link. Check my ' +
       'review page for details.',
     link: {
       label: 'Claim Discount',

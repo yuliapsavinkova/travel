@@ -13,7 +13,7 @@ interface FAQSectionProps {
 const FAQSection = ({
   items,
   title = 'Frequently Asked Questions',
-  subHeader = 'Common Queries',
+  subHeader,
   showReadAll = false,
 }: FAQSectionProps) => {
   if (!items || items.length === 0) return null;
@@ -21,7 +21,7 @@ const FAQSection = ({
   return (
     <section className="prose-faq" aria-label="Frequently Asked Questions">
       <div className="faq-header-wrap">
-        <span className="sub-header">{subHeader}</span>
+        {subHeader && <span className="sub-header">{subHeader}</span>}
         <h2 className="faq-title">{title}</h2>
       </div>
 

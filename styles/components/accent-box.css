@@ -1,18 +1,18 @@
 .prose-accent-box {
-  background: rgba(255, 255, 255, 0.02);
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--r-md);
   padding: var(--s-7) var(--s-6);
   margin: var(--s-8) 0;
   position: relative;
-  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-card);
 }
 
 .prose-accent-box p {
   margin-bottom: var(--s-4);
-  color: var(--c-text-dim);
+  color: var(--color-text-primary);
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* Standardized Proper Header Label */
@@ -23,12 +23,12 @@
   font-style: italic;
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
   margin-bottom: var(--s-3);
   letter-spacing: normal;
   text-transform: none;
   opacity: 1;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .prose-accent-box p:last-child {
@@ -36,20 +36,20 @@
 }
 
 .prose-accent-box.variant-pros {
-  background: rgba(229, 193, 133, 0.04);
-  border-color: var(--c-gold-muted);
+  background: var(--color-status-success-bg);
+  border-color: var(--color-status-success-border);
 }
 
 .prose-accent-box.variant-cons {
-  background: rgba(255, 255, 255, 0.01);
-  border-color: var(--c-border);
+  background: var(--color-status-error-bg);
+  border-color: var(--color-status-error-border);
 }
 
 .prose-accent-box.variant-highlight {
-  background: rgba(255, 207, 135, 0.08);
-  border: 1px solid var(--c-gold-rich);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-bold);
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 .prose-accent-box.variant-cta {
@@ -59,22 +59,21 @@
   align-items: center;
   gap: var(--s-4);
   padding: var(--s-8) var(--s-6);
-  background: var(--c-obsidian);
-  border: 1px solid var(--c-gold-muted);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-bold);
   border-radius: var(--r-md);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
 .prose-accent-box.variant-cta p {
-  max-width: 500px;
+  max-width: var(--container-width-narrow);
   margin: 0 auto;
 }
 
-.prose-accent-box.variant-cta .btn-gold {
+.prose-accent-box .btn-gold {
   margin-top: var(--s-2);
 }
 
-/* TODO: reorganize */
 .underline {
   text-decoration: underline;
   font-weight: 600;

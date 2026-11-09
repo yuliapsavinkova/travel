@@ -4,8 +4,8 @@
   "description": "One year slow travel around the US while housesitting.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#e5c185",
+  "background_color": "#FAF7F2",
+  "theme_color": "#4E3F28",
   "icons": [
     {
       "src": "/icon.svg",

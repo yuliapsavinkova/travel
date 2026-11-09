@@ -3,17 +3,17 @@
    ========================================================================== */
 
 .prose-content {
-  color: var(--c-prose-body);
+  color: var(--color-text-primary);
   font-size: 18px;
   line-height: 1.8;
-  max-width: var(--w-prose, 720px);
+  max-width: var(--container-width-narrow);
   margin: 0 auto;
   font-weight: 400;
 }
 
-/* Unified Link Styling - DRY */
-.prose-content a {
-  color: var(--c-gold);
+/* Unified Link Styling - Applies to inline body text links only */
+.prose-content a:not([class*="btn"]):not([class*="nav-link"]):not(.subtle-referral-link):not(.stretched-link) {
+  color: var(--color-brand-primary);
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
@@ -23,19 +23,36 @@
   transition: opacity var(--t-fast);
 }
 
-.prose-content a:hover {
-  opacity: 0.75;
+.prose-content a:not([class*="btn"]):not([class*="nav-link"]):not(.subtle-referral-link):not(.stretched-link):hover {
+  opacity: 0.8;
+  color: var(--color-brand-secondary);
+}
+
+/* Explicitly reset non-editorial action links inside prose */
+.prose-content a[class*="btn"],
+.prose-content .btn,
+.prose-content .btn-fill,
+.prose-content .btn-outline,
+.prose-content .btn-outline-dark,
+.prose-content .btn-light,
+.prose-content .btn-gold,
+.prose-content .secondary-btn,
+.prose-content .btn-return,
+.prose-content .nav-link-item,
+.prose-content .article-navigation a {
+  text-decoration: none !important;
+  font-style: normal !important;
 }
 
 .prose-lead {
   font-size: 1.25rem;
-  color: var(--c-white);
+  color: var(--color-text-primary);
   line-height: 1.6;
   margin-bottom: var(--s-7);
   font-family: var(--f-serif);
   font-style: italic;
   font-weight: 400;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* Image blocks and captions */
@@ -52,7 +69,7 @@
   margin-top: 1rem;
   font-family: var(--f-main);
   font-size: 0.85rem;
-  color: var(--c-text-muted);
+  color: var(--color-text-secondary);
   text-align: center;
   font-style: italic;
   line-height: 1.5;
@@ -64,14 +81,16 @@
 .prose-end {
   margin-top: var(--s-9);
   padding: var(--s-8) var(--s-6);
-  background: linear-gradient(to bottom, rgba(229, 193, 133, 0.03), transparent);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-primary);
   border-radius: var(--r-md);
   text-align: center;
   position: relative;
   font-family: var(--f-serif);
   font-style: italic;
   font-size: 1.15rem;
-  color: var(--c-text-dim);
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-subtle);
 }
 
 .prose-end::before,
@@ -86,15 +105,15 @@
   top: 0;
   width: 60px;
   height: 1px;
-  background: var(--c-gold-rich);
+  background: var(--color-border-bold);
 }
 
 .prose-end::after {
   content: "✦";
   top: -10px;
-  background: var(--c-black);
+  background: var(--color-bg-secondary);
   padding: 0 10px;
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
   font-style: normal;
   font-size: 14px;
 }
@@ -105,7 +124,7 @@
   font-style: italic;
   font-size: 1.4rem;
   font-weight: 500;
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
   margin-bottom: var(--s-3);
   letter-spacing: normal;
   text-transform: none;
@@ -116,7 +135,7 @@
   font-size: 1.9rem;
   font-style: italic;
   font-weight: 500;
-  color: var(--c-white);
+  color: var(--color-text-primary);
   margin-top: var(--s-8);
   margin-bottom: var(--s-4);
   line-height: 1.3;
@@ -127,32 +146,35 @@
   font-style: italic;
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
   margin-top: var(--s-4);
   margin-bottom: var(--s-2);
 }
 
 .prose-content p {
   margin-bottom: var(--s-5);
+  color: var(--color-text-primary);
 }
 
 .prose-content ul,
 .prose-content ol {
   margin-bottom: var(--s-6);
   padding-left: var(--s-6);
+  color: var(--color-text-primary);
 }
 
 .prose-content li {
   margin-bottom: var(--s-2);
+  line-height: 1.7;
 }
 
 .prose-quote {
   padding: var(--s-6);
   margin: var(--s-7) 0;
   text-align: center;
-  color: var(--c-gold);
-  border-top: 1px solid var(--c-gold-muted);
-  border-bottom: 1px solid var(--c-gold-muted);
+  color: var(--color-brand-primary);
+  border-top: 1px solid var(--color-border-primary);
+  border-bottom: 1px solid var(--color-border-primary);
 }
 
 @media (max-width: 768px) {

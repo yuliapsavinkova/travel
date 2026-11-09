@@ -5,11 +5,23 @@
 /* Global Container */
 .container {
   width: 100%;
-  max-width: var(--w-container, 1240px);
+  max-width: var(--container-width-standard);
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--pad-page);
   padding-right: var(--pad-page);
+}
+
+.container-narrow {
+  max-width: var(--container-width-narrow);
+}
+
+.container-medium {
+  max-width: var(--container-width-medium);
+}
+
+.container-wide {
+  max-width: var(--container-width-wide);
 }
 
 @media (max-width: 768px) {
@@ -19,17 +31,18 @@
   }
 }
 
-/* Standard Flex Card Grid */
+/* Standard Card Grid - 3-Column Responsive Grid */
 .grid-standard {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--gap-grid);
-  justify-content: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .grid-standard {
+    grid-template-columns: 1fr;
     gap: var(--s-4);
   }
 }

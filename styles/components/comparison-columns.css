@@ -14,13 +14,14 @@
 }
 
 .comparison-column {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--c-border);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--r-md);
   padding: var(--s-6);
   display: flex;
   flex-direction: column;
-  transition: border-color 0.3s ease;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 @media (max-width: 680px) {
@@ -30,13 +31,13 @@
 }
 
 .comparison-column.variant-exchange {
-  border-color: rgba(229, 193, 133, 0.25);
-  background: rgba(229, 193, 133, 0.02);
+  border-color: var(--color-border-card-hover);
+  background: var(--color-bg-surface);
 }
 
 .comparison-column.variant-professional {
-  border-color: rgba(255, 207, 135, 0.4);
-  background: rgba(255, 207, 135, 0.04);
+  border-color: var(--color-border-subtle);
+  background: var(--color-bg-surface);
 }
 
 .comparison-column-header {
@@ -44,7 +45,7 @@
   font-style: italic;
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
   margin-bottom: var(--s-2);
   line-height: 1.3;
 }
@@ -65,14 +66,14 @@
   padding: 4px 10px;
   border-radius: var(--r-pill);
   margin-bottom: var(--s-4);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--c-white);
+  background: var(--color-brand-primary-soft);
+  color: var(--color-brand-primary);
   width: fit-content;
 }
 
 .comparison-tag.tag-gold {
-  background: rgba(229, 193, 133, 0.2);
-  color: var(--c-gold);
+  background: var(--color-brand-primary);
+  color: var(--color-text-primary-inverse);
 }
 
 .comparison-column ul {
@@ -84,7 +85,7 @@
   margin-bottom: var(--s-3);
   font-size: 15px;
   line-height: 1.6;
-  color: var(--c-text-dim);
+  color: var(--color-text-primary);
 }
 
 @media (max-width: 680px) {
@@ -95,5 +96,6 @@
 }
 
 .comparison-column li strong {
-  color: var(--c-white);
+  color: var(--color-text-primary);
+  font-weight: 600;
 }

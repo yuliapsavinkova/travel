@@ -1,47 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
   <defs>
-    <linearGradient id="fav-gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFDF7" />
-      <stop offset="25%" stop-color="#FEE0A6" />
-      <stop offset="65%" stop-color="#E5C185" />
-      <stop offset="100%" stop-color="#B88A44" />
+    <linearGradient id="fav-gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C7334" />
+      <stop offset="50%" stop-color="#845D25" />
+      <stop offset="100%" stop-color="#6E4B19" />
     </linearGradient>
-    <linearGradient id="fav-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1C1A17" />
-      <stop offset="100%" stop-color="#090807" />
-    </linearGradient>
-    <radialGradient id="fav-inner-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#DDAF68" stop-opacity="0.22" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-    <!-- Interior clip mask ensures meridian lines stop precisely at the inner boundary of the sphere stroke, preventing stroke stacking at the poles -->
-    <clipPath id="globe-interior-clip">
-      <circle cx="50" cy="50" r="45.25" />
+    <clipPath id="globe-inner-clip">
+      <circle cx="50" cy="50" r="44" />
     </clipPath>
   </defs>
 
-  <!-- Globe Outer Sphere: Uniform 4.5px circle touching exact 1:1 square canvas bounds (0 to 100) -->
-  <circle cx="50" cy="50" r="47.5" fill="url(#fav-bg)" stroke="url(#fav-gold)" stroke-width="4.5" />
-  <circle cx="50" cy="50" r="47.5" fill="url(#fav-inner-glow)" />
+  <!-- Outer Sphere Ring (Completely Transparent Center) -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="url(#fav-gold-grad)" stroke-width="6" />
 
-  <!-- Interior Globe Grid (clipped so pole thickness matches equator thickness perfectly) -->
-  <g clip-path="url(#globe-interior-clip)" fill="none" stroke="url(#fav-gold)">
-    <!-- Central Polar Axis -->
-    <line x1="50" y1="0" x2="50" y2="100" stroke-width="3.8" />
+  <!-- Interior Globe Grid (Transparent, Precision Vector Geometry) -->
+  <g clip-path="url(#globe-inner-clip)" fill="none" stroke="url(#fav-gold-grad)">
+    <!-- Polar Axis -->
+    <line x1="50" y1="0" x2="50" y2="100" stroke-width="5" />
 
-    <!-- Horizontal Equator -->
-    <line x1="0" y1="50" x2="100" y2="50" stroke-width="3.8" />
+    <!-- Equator -->
+    <line x1="0" y1="50" x2="100" y2="50" stroke-width="5" />
 
-    <!-- Prime Meridian (Center Ellipse) -->
-    <ellipse cx="50" cy="50" rx="21.5" ry="47.5" stroke-width="3.4" />
+    <!-- Prime Meridian Ellipse -->
+    <ellipse cx="50" cy="50" rx="22" ry="46" stroke-width="4.5" />
 
-    <!-- Outer Meridian (Curved Longitude) -->
-    <ellipse cx="50" cy="50" rx="36.5" ry="47.5" stroke-width="2.8" opacity="0.85" />
+    <!-- Outer Longitude Ellipse -->
+    <ellipse cx="50" cy="50" rx="36" ry="46" stroke-width="4" opacity="0.9" />
 
     <!-- Upper Latitude Parallel -->
-    <path d="M 0 30.5 Q 50 24 100 30.5" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 0 31 Q 50 24 100 31" stroke-width="4.5" stroke-linecap="round" />
 
     <!-- Lower Latitude Parallel -->
-    <path d="M 0 69.5 Q 50 76 100 69.5" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 0 69 Q 50 76 100 69" stroke-width="4.5" stroke-linecap="round" />
   </g>
 </svg>

@@ -61,6 +61,9 @@ export const metadata: Metadata = {
   },
   description:
     'Practical guides, real budget math, and expert tips for full-time travel, professional house sitting, and pet care by Yulia.',
+  alternates: {
+    canonical: 'https://sitterjourney.com',
+  },
   manifest: '/site.webmanifest',
   icons: {
     icon: [

@@ -66,9 +66,8 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
     <div className="portal-form-wrapper">
       <div className="portal-header-group">
         <div>
-          <div className="sub-header">Get In Touch</div>
           <h2 className="display-title display-title-md portal-title-flush">
-            <span className="shimmer-text">Contact.</span>
+            Contact.
           </h2>
         </div>
         <button

@@ -1,10 +1,10 @@
 .financial-flip-container {
-  background: var(--c-obsidian);
-  border: 1px solid var(--c-border);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--r-md);
   padding: var(--s-7) var(--s-6);
   text-align: center;
-  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--shadow-card);
 }
 
 .financial-flip-grid {
@@ -24,26 +24,35 @@
   font-family: var(--f-serif);
   font-style: italic;
   font-weight: 700;
-  color: var(--c-gold-rich);
+  color: var(--color-brand-primary);
   font-size: 1.2rem;
-  background: var(--c-obsidian);
-  padding: 10px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--r-pill);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
+  box-shadow: var(--shadow-sm);
 }
 
 .financial-flip-col {
   padding: var(--s-5);
   border-radius: var(--r-sm);
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid transparent;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-soft);
 }
 
 .financial-flip-col.old {
-  opacity: 0.6;
+  opacity: 0.75;
 }
+
 .financial-flip-col.new {
-  background: rgba(229, 193, 133, 0.05);
-  border-color: var(--c-gold-rich);
+  background: var(--color-bg-secondary-translucent);
+  border-color: var(--color-border-bold);
+  box-shadow: var(--shadow-sm);
 }
 
 .financial-flip-col .amount {
@@ -51,24 +60,24 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin: var(--s-2) 0;
-  color: var(--c-white);
+  color: var(--color-text-primary);
 }
 
 .financial-flip-col.new .amount {
-  color: var(--c-gold);
+  color: var(--color-brand-primary);
 }
 
 .financial-flip-col .calculation {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--c-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .financial-flip-results {
   margin-top: var(--s-7);
   padding-top: var(--s-7);
-  border-top: 1px solid var(--c-border);
+  border-top: 1px solid var(--color-border-soft);
 }
 
 @media (max-width: 768px) {

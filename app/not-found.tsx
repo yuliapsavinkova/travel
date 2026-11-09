@@ -4,15 +4,18 @@ export default function NotFound() {
   return (
     <div className="container text-center section-margin" style={{ padding: 'var(--s-9) 0' }}>
       <div className="text-center">
-        <span className="sub-header" style={{ color: 'var(--c-gold)' }}>
-          404 Error
-        </span>
+        <span className="sub-header">404 Error</span>
         <h1 className="display-title" style={{ marginTop: 'var(--s-4)' }}>
           Page Not Found
         </h1>
         <p
-          className="hero-paragraph"
-          style={{ maxWidth: '500px', margin: 'var(--s-4) auto var(--s-6)' }}
+          style={{
+            maxWidth: '500px',
+            margin: 'var(--s-4) auto var(--s-6)',
+            color: 'var(--color-text-secondary)',
+            fontSize: '1.1rem',
+            lineHeight: 1.6,
+          }}
         >
           The page you are looking for might have been moved or does not exist.
         </p>
@@ -25,4 +28,3 @@ export default function NotFound() {
     </div>
   );
 }
-

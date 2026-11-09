@@ -130,7 +130,7 @@ export const post: BlogPost = {
           <strong>No booking fees:</strong> If you're doing 8+ sits per year at regular pricing (or
           6+ with a{' '}
           <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-            25% referral discount
+            30% referral discount
           </a>
           ), this alone can make Premium worth it financially.
         </li>
@@ -203,7 +203,7 @@ export const post: BlogPost = {
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           referral link
         </a>{' '}
-        receive <strong>25% off</strong> their first year's membership. That brings the prices to
+        receive <strong>30% off</strong> their first year's membership. That brings the prices to
         approximately <strong>$97</strong> for Basic, <strong>$127</strong> for Standard, and{' '}
         <strong>$194</strong> for Premium. With discounted pricing, Premium becomes the less
         expensive option starting with your 6th confirmed sit.
@@ -233,8 +233,8 @@ export const post: BlogPost = {
       </p>
       <div className="prose-end">
         <strong>Final Verdict</strong>
-        Whichever plan you choose, pick the tier that best aligns with your expected travel frequency,
-        sit volume, and need for cancellation protection.
+        Whichever plan you choose, pick the tier that best aligns with your expected travel
+        frequency, sit volume, and need for cancellation protection.
       </div>
     </>
   ),

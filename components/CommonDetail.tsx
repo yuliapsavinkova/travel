@@ -44,14 +44,16 @@ const CommonDetail = ({
     <div className="detail-container">
       <header className="detail-header-area">
         <div className="container text-center">
-          {date && (
-            <span className="detail-date-label">
-              <CalendarIcon size={12} /> {formatArticleDate(date)}
-            </span>
-          )}
-          {topic && <span className="detail-topic-label"> {topic} </span>}
+          {topic && <div className="detail-topic-label">{topic}</div>}
           <h1 className="detail-title-text">{title}</h1>
           {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
+          {date && (
+            <div className="detail-date-wrapper">
+              <span className="detail-date-label">
+                <CalendarIcon size={12} /> {formatArticleDate(date)}
+              </span>
+            </div>
+          )}
         </div>
       </header>
 
