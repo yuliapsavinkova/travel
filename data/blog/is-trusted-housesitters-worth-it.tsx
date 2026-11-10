@@ -128,8 +128,9 @@ export const post: BlogPost = {
       <p>
         Make sure you use a discount when signing up to lower the fee even further —{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          this link applies 30% off automatically
+          this link applies {REFERRALS.THS.discount} automatically
         </a>
+
         .
       </p>
 

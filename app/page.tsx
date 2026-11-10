@@ -74,7 +74,7 @@ export default function HomePage() {
               </p>
               <div className="hero-button-group">
                 <Link href="/blog#archive" className="btn-gold">
-                  Read My Blog
+                  My Blog
                 </Link>
                 <Link href="/resources#archive" className="secondary-btn">
                   My Resources

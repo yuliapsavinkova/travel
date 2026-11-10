@@ -5,7 +5,7 @@
 
 .sticky-reader-cta {
   position: fixed;
-  bottom: max(20px, env(safe-area-inset-bottom, 20px));
+  bottom: max(var(--s-5), env(safe-area-inset-bottom, var(--s-5)));
   left: 50%;
   right: auto;
   z-index: var(--z-portal);
@@ -15,9 +15,9 @@
   transform: translate(-50%, 140%);
   transform-origin: center bottom;
   transition:
-    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.3s ease;
-  max-width: min(calc(100vw - var(--s-7)), var(--container-width-narrow));
+    transform var(--t-slow),
+    opacity var(--t-base);
+  max-width: min(calc(100vw - var(--s-6)), var(--container-width-narrow));
   width: max-content;
 }
 
@@ -28,28 +28,38 @@
 }
 
 /* ==========================================================================
-   INNER PILL & LINK
+   INNER PILL & LINK - SLEEK MODERN GLASS CAPSULE
    ========================================================================== */
 
 .sticky-cta-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg-dark);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--color-border-bold);
+  background: var(--color-sticky-bg);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--color-sticky-border);
   border-radius: var(--r-pill);
-  padding: 10px 22px;
-  box-shadow: var(--shadow-xl);
+  padding: var(--s-2) var(--s-2) var(--s-2) var(--s-5);
+  box-shadow:
+    var(--shadow-xl),
+    inset 0 1px 0 var(--color-sticky-highlight);
   max-width: 100%;
   box-sizing: border-box;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  transition:
+    border-color var(--t-fast),
+    box-shadow var(--t-fast),
+    transform var(--t-base),
+    background-color var(--t-fast);
 }
 
 .sticky-cta-inner:hover {
-  border-color: var(--color-brand-secondary);
-  box-shadow: var(--shadow-xl);
+  background: var(--color-sticky-bg-hover);
+  border-color: var(--color-sticky-border-hover);
+  box-shadow:
+    var(--shadow-xl),
+    0 0 var(--s-4) var(--color-sticky-glow),
+    inset 0 1px 0 var(--color-sticky-highlight);
   transform: translateY(-2px);
 }
 
@@ -57,69 +67,96 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--s-3);
   text-decoration: none;
-  color: var(--color-brand-secondary);
-  padding: 2px 4px;
-  border-radius: var(--r-pill);
   min-width: 0;
-  transition: opacity 0.25s ease;
+  outline: none;
 }
 
 .sticky-cta-text {
   font-family: var(--f-main);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-text-primary-inverse);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-sticky-text);
   letter-spacing: -0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.sticky-cta-inner:hover .sticky-cta-text {
+  color: var(--color-sticky-text-hover);
+}
+
+/* Subtle modern circular icon badge */
+.sticky-cta-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-cta-badge);
+  height: var(--h-cta-badge);
+  border-radius: var(--r-pill);
+  background: var(--color-sticky-badge-bg);
+  border: 1px solid var(--color-sticky-badge-border);
+  color: var(--color-sticky-icon);
+  flex-shrink: 0;
+  transition:
+    background-color var(--t-fast),
+    border-color var(--t-fast),
+    transform var(--t-base),
+    color var(--t-fast);
 }
 
 .sticky-link-icon {
-  color: var(--color-brand-secondary);
-  flex-shrink: 0;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  color: inherit;
+  transition: transform var(--t-base);
 }
 
-.sticky-cta-link:hover {
-  opacity: 0.9;
+.sticky-cta-inner:hover .sticky-cta-icon-badge {
+  background: var(--color-sticky-badge-bg-hover);
+  border-color: var(--color-sticky-badge-border-hover);
+  color: var(--color-sticky-icon-hover);
+  transform: scale(1.05);
 }
 
-.sticky-cta-link:hover .sticky-link-icon {
-  transform: translate(2px, -2px);
+.sticky-cta-inner:hover .sticky-link-icon {
+  transform: translate(1px, -1px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .sticky-reader-cta {
-    bottom: max(14px, env(safe-area-inset-bottom, 14px));
-    max-width: calc(100vw - 24px);
+    bottom: max(var(--s-4), env(safe-area-inset-bottom, var(--s-4)));
+    max-width: calc(100vw - var(--s-5));
   }
 
   .sticky-cta-inner {
-    padding: 8px 16px;
+    padding: var(--s-1) var(--s-2) var(--s-1) var(--s-4);
   }
 
   .sticky-cta-text {
     font-size: 0.82rem;
-    text-underline-offset: 2.5px;
+  }
+
+  .sticky-cta-icon-badge {
+    width: var(--h-cta-badge-mobile);
+    height: var(--h-cta-badge-mobile);
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .sticky-reader-cta {
-    max-width: calc(100vw - 16px);
+    max-width: calc(100vw - var(--s-3));
   }
 
   .sticky-cta-inner {
-    padding: 7px 14px;
+    padding: var(--s-1) var(--s-1) var(--s-1) var(--s-3);
   }
 
   .sticky-cta-text {
     font-size: 0.76rem;
   }
 }
+
+

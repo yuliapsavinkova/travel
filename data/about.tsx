@@ -15,8 +15,9 @@ export const body = (
       TrustedHousesitters platform for finding my sits. If you're looking to start your own journey,
       you can use my link for{' '}
       <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-        30% off your membership
+        {REFERRALS.THS.ratePercent} off your membership
       </a>
+
       .
     </p>
 

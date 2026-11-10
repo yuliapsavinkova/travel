@@ -17,6 +17,7 @@
 @import "./styles/components/glass-card.css";
 @import "./styles/components/portal.css";
 @import "./styles/components/form.css";
+@import "./styles/components/error.css";
 
 /* Home Specific */
 @import "./styles/components/home.css";

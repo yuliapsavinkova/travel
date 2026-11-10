@@ -3,15 +3,23 @@ import { ReactNode } from 'react';
 export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
 
 /**
- * SINGLE SOURCE OF TRUTH FOR REFERRALS
+ * SINGLE SOURCE OF TRUTH FOR REFERRALS & PROMOTIONS
+ * Update THS_DISCOUNT_PERCENT here (e.g., 25, 30, 35) to update all CTA bars,
+ * articles, FAQs, and price break-down math across the entire site in one place.
  */
+export const THS_DISCOUNT_PERCENT = 30;
+
 export const REFERRALS = {
   THS: {
     link: 'https://trustedhousesitters.com/refer/raf943607',
-    discount: '30% Off',
-    label: 'Claim 30% Off Membership',
-    cta: '30% Off Membership',
+    rate: THS_DISCOUNT_PERCENT,
+    ratePercent: `${THS_DISCOUNT_PERCENT}%`,
+    discount: `${THS_DISCOUNT_PERCENT}% Off`,
+    label: `Claim ${THS_DISCOUNT_PERCENT}% Off Membership`,
+    cta: `${THS_DISCOUNT_PERCENT}% Off Membership`,
+    stickyText: `Get ${THS_DISCOUNT_PERCENT}% off TrustedHousesitters Membership`,
   },
+
   ROVER: {
     link: 'https://www.rover.com/ambas-refer-a-friend/Q93GankN',
     discount: '$20 Credit',

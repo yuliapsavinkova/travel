@@ -15,8 +15,9 @@ interface StickyReaderCtaProps {
 
 export default function StickyReaderCta({
   promoLink = REFERRALS.THS.link,
-  text = 'Get 30% off TrustedHousesitters Membership',
+  text = REFERRALS.THS.stickyText,
   showAfterScroll = 350,
+
   articleTitle,
   articleSlug,
 }: StickyReaderCtaProps) {
@@ -109,9 +110,12 @@ export default function StickyReaderCta({
           onClick={handleClick}
         >
           <span className="sticky-cta-text">{text}</span>
-          <ArrowUpRightIcon size={14} className="sticky-link-icon" />
+          <span className="sticky-cta-icon-badge" aria-hidden="true">
+            <ArrowUpRightIcon size={13} className="sticky-link-icon" />
+          </span>
         </a>
       </div>
     </aside>
   );
 }
+

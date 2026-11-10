@@ -185,10 +185,11 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
 
       <StickyReaderCta
         promoLink={REFERRALS.THS.link}
-        text="Get 30% off TrustedHousesitters Membership"
+        text={REFERRALS.THS.stickyText}
         articleTitle={guide.title}
         articleSlug={guide.slug}
       />
+
     </>
   );
 }

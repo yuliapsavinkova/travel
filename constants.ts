@@ -1,5 +1,6 @@
 import {
   SiteStrings,
+  THS_DISCOUNT_PERCENT,
   REFERRALS,
   YULIA_SITTER_JOURNEY,
   YULIA_SITTER_JOURNEY_URL,
@@ -12,6 +13,7 @@ import { TRAVEL_GUIDES } from './data/travel/travel';
 import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
 
 export {
+  THS_DISCOUNT_PERCENT,
   REFERRALS,
   YULIA_SITTER_JOURNEY,
   YULIA_SITTER_JOURNEY_URL,
@@ -21,6 +23,7 @@ export {
   ALL_RESOURCES,
   RESOURCES,
 };
+
 export const TRUSTED_HOUSESITTERS_REF_LINK = REFERRALS.THS.link;
 
 export const IS_DEV = process.env.NODE_ENV === 'development';

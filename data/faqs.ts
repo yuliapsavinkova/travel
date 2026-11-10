@@ -1,4 +1,4 @@
-import { FAQItem } from '../types';
+import { FAQItem, REFERRALS } from '../types';
 
 export const MASTER_FAQS: FAQItem[] = [
   // =====================================================
@@ -61,7 +61,7 @@ export const MASTER_FAQS: FAQItem[] = [
     id: 'ths-membership-discounts',
     question: 'Are there discounts or trials for new members?',
     answer:
-      'Yes. I provide a verified 30% discount through my referral link. Check my ' +
+      `Yes. I provide a verified ${REFERRALS.THS.ratePercent} discount through my referral link. Check my ` +
       'review page for details.',
     link: {
       label: 'Claim Discount',
@@ -76,10 +76,10 @@ export const MASTER_FAQS: FAQItem[] = [
       'initial investment significantly cheaper.',
     link: {
       label: 'Get My Discount',
-      // TODO: hardcoded link, should be dynamic from REFERRALS.THS.link
-      href: 'https://trustedhousesitters.com/refer/raf943607',
+      href: REFERRALS.THS.link,
     },
   },
+
 
   // =====================================================
   // 3. GETTING YOUR FIRST SIT (BEGINNER PHASE)

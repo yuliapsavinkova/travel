@@ -137,6 +137,23 @@
     color-mix(in srgb, var(--pram-gray-925) 50%, transparent) 100%
   );
 
+  /* Sticky Reader Floating Offer Bar */
+  --color-sticky-bg: color-mix(in srgb, var(--pram-gray-925) var(--alpha-90), transparent);
+  --color-sticky-bg-hover: color-mix(in srgb, var(--pram-gray-925) var(--alpha-95), transparent);
+  --color-sticky-border: color-mix(in srgb, var(--pram-gold-500) var(--alpha-25), transparent);
+  --color-sticky-border-hover: color-mix(in srgb, var(--pram-gold-500) var(--alpha-45), transparent);
+  --color-sticky-text: var(--color-text-primary-inverse);
+  --color-sticky-text-hover: var(--pram-white);
+  --color-sticky-badge-bg: color-mix(in srgb, var(--pram-gold-500) var(--alpha-12), transparent);
+  --color-sticky-badge-bg-hover: color-mix(in srgb, var(--pram-gold-500) var(--alpha-25), transparent);
+  --color-sticky-badge-border: color-mix(in srgb, var(--pram-gold-500) var(--alpha-25), transparent);
+  --color-sticky-badge-border-hover: color-mix(in srgb, var(--pram-gold-500) var(--alpha-45), transparent);
+  --color-sticky-icon: var(--color-brand-secondary);
+  --color-sticky-icon-hover: var(--color-brand-cream);
+  --color-sticky-highlight: color-mix(in srgb, var(--pram-white) var(--alpha-12), transparent);
+  --color-sticky-glow: color-mix(in srgb, var(--pram-gold-500) var(--alpha-20), transparent);
+
+
   /* Status */
   --color-status-success: var(--pram-green-600);
   --color-status-success-bg: color-mix(in srgb, var(--pram-green-600) var(--alpha-08), transparent);
@@ -232,6 +249,9 @@
   --h-portal-close: 44px;
   --h-scroll-trigger: 52px;
   --h-scroll-trigger-mobile: 44px;
+  --h-cta-badge: 1.625rem; /* 26px */
+  --h-cta-badge-mobile: 1.5rem; /* 24px */
+
 
   --img-base-opacity: 0.95;
 
