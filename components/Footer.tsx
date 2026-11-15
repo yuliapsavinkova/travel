@@ -1,88 +1,107 @@
 import Link from 'next/link';
-import {
-  CURRENT_YEAR,
-  NAV_ITEMS,
-  TRUSTED_HOUSESITTERS_REF_LINK,
-} from '../constants';
+import { useId, type ReactNode } from 'react';
+import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../constants';
 import BrandLogo from './BrandLogo';
 import { ExternalLink } from './Icons';
 import SocialMediaIcons from './SocialMediaIcons';
 
-const Footer = () => {
+interface FooterLink {
+  href: string;
+  label: string;
+  sponsored?: boolean;
+}
+
+const SITE_NAME = 'sitterjourney.com';
+
+const EXTERNAL_LINKS: FooterLink[] = [
+  { href: 'https://yulia.sitterjourney.com', label: 'House & Pet Sitting Services' },
+  { href: TRUSTED_HOUSESITTERS_REF_LINK, label: 'TrustedHousesitters', sponsored: true },
+];
+
+const LEGAL_LINKS: FooterLink[] = [
+  { href: '/privacy', label: 'Privacy' },
+  { href: '/disclosure', label: 'Disclosure' },
+];
+
+interface NewTabLinkProps extends Pick<FooterLink, 'href' | 'sponsored'> {
+  showIcon?: boolean;
+  children: ReactNode;
+}
+
+const NewTabLink = ({ href, sponsored = false, showIcon = false, children }: NewTabLinkProps) => (
+  <Link href={href} target="_blank" rel={`noopener noreferrer${sponsored ? ' sponsored' : ''}`}>
+    {children}
+    {showIcon && <ExternalLink size={12} aria-hidden="true" />}
+    <span className="sr-only"> (opens in a new tab)</span>
+  </Link>
+);
+
+interface FooterNavProps {
+  title: string;
+  children: ReactNode;
+}
+
+const FooterNav = ({ title, children }: FooterNavProps) => {
+  const titleId = useId();
+
   return (
-    <footer className="refined-footer" id="site-footer">
-      <div className="footer-grid">
-        <div className="footer-brand-col">
+    <nav className="footer-col" aria-labelledby={titleId}>
+      <h2 className="footer-col-title" id={titleId}>
+        {title}
+      </h2>
+      <ul className="footer-links-list">{children}</ul>
+    </nav>
+  );
+};
+
+const Footer = () => (
+  <footer className="footer" id="site-footer">
+    <div className="footer-inner">
+      <div className="footer-columns">
+        <div className="footer-col footer-col-brand">
           <BrandLogo />
           <SocialMediaIcons className="footer-socials" />
         </div>
-        <div className="footer-nav-col">
-          <div className="sub-header footer-header">Explore</div>
-          <ul className="footer-links">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="footer-col footer-col-ext" id="footer-ext-col">
-          <div className="sub-header footer-header footer-col-title">External Networks</div>
-          <ul className="footer-links footer-links-list">
-            <li>
-              <a
-                href="https://yulia.sitterjourney.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                id="footer-portfolio-link"
-                aria-label="Yulia Professional House & Pet Sitting Services"
-              >
-                House &amp; Pet Sitting Services <ExternalLink size={12} />
-              </a>
+
+        <FooterNav title="Explore">
+          {NAV_ITEMS.map(({ href, label }) => (
+            <li key={href}>
+              <Link href={href}>{label}</Link>
             </li>
-            <li>
-              <a
-                href={TRUSTED_HOUSESITTERS_REF_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                TrustedHousesitters <ExternalLink size={12} />
-              </a>
+          ))}
+        </FooterNav>
+
+        <FooterNav title="External Networks">
+          {EXTERNAL_LINKS.map(({ href, label, sponsored }) => (
+            <li key={href}>
+              <NewTabLink href={href} sponsored={sponsored} showIcon>
+                {label}
+              </NewTabLink>
             </li>
-          </ul>
-        </div>
+          ))}
+        </FooterNav>
       </div>
+
       <div className="footer-bottom">
-        <div className="footer-legal-bar">
-          <span className="footer-credits copyright-block">
-            <span className="copyright-symbol">&copy;</span>{' '}
-            <span className="footer-year-highlight">{CURRENT_YEAR}</span> sitterjourney.com
+        <p className="footer-copyright">
+          <span className="copyright-symbol" aria-hidden="true">
+            &copy;
           </span>
-          <span className="footer-dot-divider" aria-hidden="true">&middot;</span>
-          <span className="footer-credits">All Rights Reserved</span>
-          <span className="footer-dot-divider" aria-hidden="true">&middot;</span>
-          <div className="footer-policy-group">
-            <Link
-              href="/privacy"
-              className="footer-legal-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privacy
-            </Link>
-            <Link
-              href="/disclosure"
-              className="footer-legal-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Disclosure
-            </Link>
-          </div>
-        </div>
+          {CURRENT_YEAR} {SITE_NAME}
+        </p>
+
+        <p>All Rights Reserved</p>
+
+        <ul className="footer-legal">
+          {LEGAL_LINKS.map(({ href, label }) => (
+            <li key={href}>
+              <NewTabLink href={href}>{label}</NewTabLink>
+            </li>
+          ))}
+        </ul>
       </div>
-    </footer>
-  );
-};
+    </div>
+  </footer>
+);
 
 export default Footer;

@@ -3,6 +3,7 @@
 @import "./styles/core/breakpoints.css";
 @import "./styles/core/reset.css";
 @import "./styles/core/typography.css";
+@import "./styles/core/utilities.css";
 @import "./styles/core/prose.css";
 @import "./styles/core/layout.css";
 
