@@ -1,0 +1,65 @@
+/* ========================================
+   SURF HORIZON
+   ======================================== */
+
+@keyframes surf-swell {
+  0%,
+  100% {
+    transform: scale(1.02) translateY(0);
+  }
+  50% {
+    transform: scale(1.045) translateY(-3px);
+  }
+}
+
+.surf-horizon {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 260px;
+  max-height: 920px;
+  margin-top: var(--s-2);
+  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+}
+
+.surf-horizon::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 26%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary) 0%,
+    color-mix(in srgb, var(--color-bg-secondary) 50%, transparent) 35%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.surf-image {
+  object-fit: cover;
+  object-position: 43% center;
+  animation: surf-swell 18s ease-in-out infinite;
+}
+
+.surf-wave {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: clamp(30px, 4.5vw, 62px);
+  display: block;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.surf-wave-back {
+  fill: color-mix(in srgb, var(--pram-gold-100) 75%, var(--pram-white));
+  opacity: 0.72;
+}
+
+.surf-wave-front {
+  fill: var(--color-bg-secondary);
+}

@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ContactTrigger } from '../components/ClientTriggers';
-import SocialMediaIcons from '../components/SocialMediaIcons';
+import HomeHero from '../components/HomeHero';
 import {
-  ChevronDownIcon,
   GlobeIcon,
   CompassIcon,
   MapPinIcon,
@@ -58,46 +56,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
-      <section className="hero-two-col section-margin">
-        <div className="container">
-          <div className="hero-two-col-grid">
-            <div className="hero-col-text">
-              <div className="hero-socials-wrapper">
-                <SocialMediaIcons className="hero-socials" iconSize={18} />
-              </div>
-              <h1 className="display-title">
-                <span className="hero-title-nowrap">My Journey</span>
-              </h1>
-              <p className="hero-paragraph">
-                I'm embarking on an adventure of slow travel around the world through house sitting,
-                discovering new places and experiencing life through local eyes.
-              </p>
-              <div className="hero-button-group">
-                <Link href="/blog#archive" className="btn-gold">
-                  My Blog
-                </Link>
-                <Link href="/resources#archive" className="secondary-btn">
-                  My Resources
-                </Link>
-              </div>
-            </div>
-
-            <div className="hero-col-media">
-              <div className="hero-image-card">
-                <Image
-                  src="/yulia-miami-beach.jpg"
-                  alt="Yulia on the beach in Miami, Florida"
-                  fill
-                  priority
-                  unoptimized
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
       <div className="container">
         {/* SECTION: MISSION / TOP ARTICLES */}

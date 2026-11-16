@@ -4,6 +4,7 @@ import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../const
 import BrandLogo from './BrandLogo';
 import { ExternalLink } from './Icons';
 import SocialMediaIcons from './SocialMediaIcons';
+import SurfHorizon from './SurfHorizon';
 
 interface FooterLink {
   href: string;
@@ -60,6 +61,9 @@ const Footer = () => (
       <div className="footer-columns">
         <div className="footer-col footer-col-brand">
           <BrandLogo />
+          <p className="footer-brand-text">
+            Travel the world on your own terms, spend less, live more, and enjoy the journey. Real stories, tips, and inspiration from the road.
+          </p>
           <SocialMediaIcons className="footer-socials" />
         </div>
 
@@ -101,6 +105,8 @@ const Footer = () => (
         </ul>
       </div>
     </div>
+
+    <SurfHorizon />
   </footer>
 );
 
