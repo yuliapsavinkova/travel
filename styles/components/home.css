@@ -5,38 +5,6 @@
   z-index: 2;
 }
 
-/* Specific background to make cards pop */
-.home-section-glassy-bg {
-  position: relative;
-  background: transparent;
-}
-
-.home-section-tinted {
-  background: transparent;
-  border-top: 1px solid var(--color-border-subtle);
-  border-bottom: 1px solid var(--color-border-subtle);
-}
-
-/* Refined Section Divider */
-.home-section-divider {
-  position: relative;
-  border-top: 1px solid var(--color-border-soft);
-}
-
-.home-section-divider::before {
-  content: "✦";
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-bg-primary);
-  padding: 0 var(--s-4);
-  color: var(--color-brand-primary);
-  font-size: 14px;
-  z-index: 10;
-  letter-spacing: 0;
-}
-
 /* Section Intros */
 .home-section-intro {
   margin-bottom: var(--s-6);

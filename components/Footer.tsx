@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { useId, type ReactNode } from 'react';
+import { type ReactNode, useId } from 'react';
 import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../constants';
 import BrandLogo from './BrandLogo';
 import { ExternalLink } from './Icons';
+import SectionDivider from './SectionDivider';
 import SocialMediaIcons from './SocialMediaIcons';
 import SurfHorizon from './SurfHorizon';
 
@@ -62,7 +63,8 @@ const Footer = () => (
         <div className="footer-col footer-col-brand">
           <BrandLogo />
           <p className="footer-brand-text">
-            Travel the world on your own terms, spend less, live more, and enjoy the journey. Real stories, tips, and inspiration from the road.
+            Travel the world on your own terms, spend less, live more, and enjoy the journey. Real
+            stories, tips, and inspiration from the road.
           </p>
           <SocialMediaIcons className="footer-socials" />
         </div>
@@ -106,6 +108,7 @@ const Footer = () => (
       </div>
     </div>
 
+    <SectionDivider overlap="below" />
     <SurfHorizon />
   </footer>
 );

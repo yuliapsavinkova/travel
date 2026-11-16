@@ -1,0 +1,56 @@
+/* ==========================================================================
+   SECTION DIVIDER
+   Standalone organic dual-wave separator with optional sibling edge overlap
+   ========================================================================== */
+
+.section-divider {
+  --wave-h: clamp(32px, 4.5vw, 64px);
+  --divider-back: color-mix(in srgb, var(--pram-gold-500) 14%, var(--color-bg-primary));
+  --divider-front: var(--color-bg-primary);
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.section-divider-wave {
+  display: block;
+  width: 100%;
+  height: var(--wave-h);
+  pointer-events: none;
+}
+
+.section-divider-wave-back {
+  fill: var(--divider-back);
+  opacity: 0.72;
+}
+
+.section-divider-wave-front {
+  fill: var(--divider-front);
+}
+
+/* Pull upward onto the bottom edge of the preceding sibling */
+.section-divider--above {
+  --divider-back: color-mix(in srgb, var(--pram-gold-100) 75%, var(--pram-white));
+  --divider-front: var(--color-bg-primary);
+  margin-top: calc(var(--wave-h) * -1);
+  z-index: 3;
+}
+
+/* Flip and pull downward onto the top edge of the following sibling */
+.section-divider--below {
+  --wave-h: clamp(30px, 4.5vw, 62px);
+  --divider-back: color-mix(in srgb, var(--pram-gold-100) 75%, var(--pram-white));
+  --divider-front: var(--color-bg-secondary);
+  margin-bottom: calc(var(--wave-h) * -1);
+  z-index: 2;
+  transform: scaleY(-1);
+}
+
+@media (max-width: 768px) {
+  .section-divider {
+    --wave-h: clamp(22px, 3.8vw, 40px);
+  }
+}

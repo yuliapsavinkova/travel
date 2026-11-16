@@ -1,16 +1,17 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Metadata } from 'next';
 import HomeHero from '../components/HomeHero';
 import {
-  GlobeIcon,
   CompassIcon,
-  MapPinIcon,
   CreditCardIcon,
-  ZapIcon,
+  GlobeIcon,
   HomeIcon,
+  MapPinIcon,
   StarIcon,
+  ZapIcon,
 } from '../components/Icons';
+import SectionDivider from '../components/SectionDivider';
 import { SITE_STATS } from '../constants';
 
 export const metadata: Metadata = {
@@ -56,7 +57,9 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
-      <HomeHero />
+      <HomeHero>
+        <SectionDivider overlap="above" />
+      </HomeHero>
 
       <div className="container">
         {/* SECTION: MISSION / TOP ARTICLES */}
@@ -94,8 +97,8 @@ export default function HomePage() {
                 img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/can-you-really-travel-for-free-house-sitting-math',
               },
-            ].map((pillar, i) => (
-              <Link key={i} href={pillar.link} className="card-wrapper card-wrapper-link">
+            ].map((pillar) => (
+              <Link key={pillar.link} href={pillar.link} className="card-wrapper card-wrapper-link">
                 <div className="glass-card">
                   <div className="home-pillar-media media-viewport">
                     <Image
@@ -127,9 +130,13 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
+      </div>
 
-        {/* SECTION: LESSONS / DOCUMENTATION (WITH GLASS BACKGROUND) */}
-        <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
+      <SectionDivider />
+
+      {/* SECTION: LESSONS / DOCUMENTATION */}
+      <div className="container">
+        <section className="home-section-wrap text-center">
           <div className="glass-card home-feature-card">
             <h2 className="display-title display-title-md">
               Lessons <span className="serif-italic">from My Journey</span>
@@ -154,89 +161,92 @@ export default function HomePage() {
         </section>
       </div>
 
-      {/* SECTION: PERSPECTIVE / STATS (TINTED) */}
-      <div className="home-section-divider home-section-tinted">
-        <div className="container">
-          <section className="home-section-wrap text-center" id="perspective">
-            <h2 className="display-title display-title-md">
-              Travel <span className="serif-italic">& Life</span>
-            </h2>
-            <p className="hero-paragraph home-section-intro">
-              I Have Visited {SITE_STATS.countriesCount} Countries and {SITE_STATS.statesCount}{' '}
-              States
-            </p>
+      <SectionDivider />
 
-            <div className="grid-standard">
-              {[
-                {
-                  label: 'Countries',
-                  value: SITE_STATS.countriesCount,
-                  icon: <GlobeIcon size={28} />,
-                  img: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800',
-                },
-                {
-                  label: 'States',
-                  value: SITE_STATS.statesCount,
-                  icon: <MapPinIcon size={28} />,
-                  img: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=800',
-                },
-                {
-                  label: 'Experience',
-                  value: '100%',
-                  icon: <CompassIcon size={28} />,
-                  img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
-                },
-              ].map((stat, i) => (
-                <div key={i} className="card-wrapper">
-                  <div className="glass-card">
-                    <div className="card-image-viewport media-viewport home-stat-media">
-                      <Image
-                        src={stat.img}
-                        alt={stat.label}
-                        fill
-                        unoptimized
-                        sizes="(max-width: 1024px) 100vw, 33vw"
-                        style={{ objectFit: 'cover' }}
-                      />
-                      <div className="home-stat-overlay" />
-                      <div className="home-stat-icon-overlay content-layer">{stat.icon}</div>
-                    </div>
-                    <div className="content-layer">
-                      <div className="display-title-md home-stat-value">{stat.value}</div>
-                      <div className="sub-header">{stat.label}</div>
-                    </div>
+      {/* SECTION: PERSPECTIVE / STATS */}
+      <div className="container">
+        <section className="home-section-wrap text-center" id="perspective">
+          <h2 className="display-title display-title-md">
+            Travel <span className="serif-italic">& Life</span>
+          </h2>
+          <p className="hero-paragraph home-section-intro">
+            I Have Visited {SITE_STATS.countriesCount} Countries and {SITE_STATS.statesCount} States
+          </p>
+
+          <div className="grid-standard">
+            {[
+              {
+                label: 'Countries',
+                value: SITE_STATS.countriesCount,
+                icon: <GlobeIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800',
+              },
+              {
+                label: 'States',
+                value: SITE_STATS.statesCount,
+                icon: <MapPinIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=800',
+              },
+              {
+                label: 'Experience',
+                value: '100%',
+                icon: <CompassIcon size={28} />,
+                img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+              },
+            ].map((stat) => (
+              <div key={stat.label} className="card-wrapper">
+                <div className="glass-card">
+                  <div className="card-image-viewport media-viewport home-stat-media">
+                    <Image
+                      src={stat.img}
+                      alt={stat.label}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div className="home-stat-overlay" />
+                    <div className="home-stat-icon-overlay content-layer">{stat.icon}</div>
+                  </div>
+                  <div className="content-layer">
+                    <div className="display-title-md home-stat-value">{stat.value}</div>
+                    <div className="sub-header">{stat.label}</div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </section>
-        </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
 
-      {/* SECTION: ROADMAP (WITH GLASS BACKGROUND) */}
-      <section className="home-section-wrap home-section-divider home-section-glassy-bg text-center">
-        <div className="glass-card home-feature-card">
-          <h2 className="display-title display-title-md">
-            The Road <span className="serif-italic">Ahead</span>
-          </h2>
-          <p className="hero-paragraph home-feature-paragraph">
-            I’m just getting started here, so check back as the site grows. I’ll be sharing packing
-            hacks, real budget breakdowns, and the technical details of traveling full time
-            efficiently and sustainably.
-          </p>
-          <div className="home-metadata-group-dim">
-            <span className="metadata-item">
-              <StarIcon size={14} /> Packing Lists
-            </span>
-            <span className="metadata-item">
-              <StarIcon size={14} /> Sitter Hacks
-            </span>
-            <span className="metadata-item">
-              <StarIcon size={14} /> Safety Tips
-            </span>
+      <SectionDivider />
+
+      {/* SECTION: ROADMAP */}
+      <div className="container">
+        <section className="home-section-wrap text-center">
+          <div className="glass-card home-feature-card">
+            <h2 className="display-title display-title-md">
+              The Road <span className="serif-italic">Ahead</span>
+            </h2>
+            <p className="hero-paragraph home-feature-paragraph">
+              I’m just getting started here, so check back as the site grows. I’ll be sharing
+              packing hacks, real budget breakdowns, and the technical details of traveling full
+              time efficiently and sustainably.
+            </p>
+            <div className="home-metadata-group-dim">
+              <span className="metadata-item">
+                <StarIcon size={14} /> Packing Lists
+              </span>
+              <span className="metadata-item">
+                <StarIcon size={14} /> Sitter Hacks
+              </span>
+              <span className="metadata-item">
+                <StarIcon size={14} /> Safety Tips
+              </span>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
