@@ -11,7 +11,8 @@
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--r-md);
   box-shadow: var(--shadow-card);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s
+    cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   height: 100%;
   width: 100%;
   display: flex;
@@ -173,7 +174,7 @@
 }
 
 .subtle-referral-link:hover {
-  color: var(--color-brand-secondary);
+  color: var(--color-brand-primary-hover);
   transform: translateX(2px);
 }
 

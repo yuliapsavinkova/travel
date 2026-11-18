@@ -103,10 +103,15 @@
 }
 
 .faq-action-link:hover {
-  background: var(--color-brand-primary);
+  background: var(--color-brand-primary-subtle);
   border-color: var(--color-brand-primary);
-  color: var(--color-text-primary-inverse);
+  color: var(--color-brand-primary);
   transform: translateX(2px);
+}
+
+.faq-action-link:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
 }
 
 .faq-action-icon {

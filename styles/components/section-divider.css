@@ -5,7 +5,7 @@
 
 .section-divider {
   --wave-h: clamp(32px, 4.5vw, 64px);
-  --divider-back: color-mix(in srgb, var(--pram-gold-500) 14%, var(--color-bg-primary));
+  --divider-back: color-mix(in srgb, var(--color-brand-secondary) 16%, var(--color-bg-primary));
   --divider-front: var(--color-bg-primary);
 
   position: relative;
@@ -33,7 +33,7 @@
 
 /* Pull upward onto the bottom edge of the preceding sibling */
 .section-divider--above {
-  --divider-back: color-mix(in srgb, var(--pram-gold-100) 75%, var(--pram-white));
+  --divider-back: color-mix(in srgb, var(--color-brand-cream) 80%, var(--pram-white));
   --divider-front: var(--color-bg-primary);
   margin-top: calc(var(--wave-h) * -1);
   z-index: 3;
@@ -42,7 +42,7 @@
 /* Flip and pull downward onto the top edge of the following sibling */
 .section-divider--below {
   --wave-h: clamp(30px, 4.5vw, 62px);
-  --divider-back: color-mix(in srgb, var(--pram-gold-100) 75%, var(--pram-white));
+  --divider-back: color-mix(in srgb, var(--color-brand-cream) 80%, var(--pram-white));
   --divider-front: var(--color-bg-secondary);
   margin-bottom: calc(var(--wave-h) * -1);
   z-index: 2;

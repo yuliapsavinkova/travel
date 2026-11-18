@@ -12,7 +12,10 @@
 }
 
 /* Unified Link Styling - Applies to inline body text links only */
-.prose-content a:not([class*="btn"]):not([class*="nav-link"]):not(.subtle-referral-link):not(.stretched-link) {
+.prose-content
+  a:not([class*="btn"]):not([class*="nav-link"]):not(.subtle-referral-link):not(
+    .stretched-link
+  ):not(.faq-action-link) {
   color: var(--color-brand-primary);
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -23,9 +26,12 @@
   transition: opacity var(--t-fast);
 }
 
-.prose-content a:not([class*="btn"]):not([class*="nav-link"]):not(.subtle-referral-link):not(.stretched-link):hover {
-  opacity: 0.8;
-  color: var(--color-brand-secondary);
+.prose-content
+  a:not([class*="btn"]):not([class*="nav-link"]):not(.subtle-referral-link):not(
+    .stretched-link
+  ):not(.faq-action-link):hover {
+  opacity: 0.9;
+  color: var(--color-brand-primary-hover);
 }
 
 /* Explicitly reset non-editorial action links inside prose */
@@ -39,6 +45,7 @@
 .prose-content .secondary-btn,
 .prose-content .btn-return,
 .prose-content .nav-link-item,
+.prose-content .faq-action-link,
 .prose-content .article-navigation a {
   text-decoration: none !important;
   font-style: normal !important;
