@@ -2,15 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import HomeHero from '../components/HomeHero';
-import {
-  CompassIcon,
-  CreditCardIcon,
-  GlobeIcon,
-  HomeIcon,
-  MapPinIcon,
-  StarIcon,
-  ZapIcon,
-} from '../components/Icons';
+import { StarIcon } from '../components/Icons';
 import SectionDivider from '../components/SectionDivider';
 import { SITE_STATS } from '../constants';
 
@@ -77,7 +69,6 @@ export default function HomePage() {
                 label: 'Lifestyle',
                 title: 'Is it really worth it?',
                 desc: 'What I Expected vs. What Happened',
-                icon: <HomeIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/is-trusted-housesitters-worth-it-for-sitters',
               },
@@ -85,7 +76,6 @@ export default function HomePage() {
                 label: 'Strategy',
                 title: 'How can I do this too?',
                 desc: 'My Strategies That Made It Possible',
-                icon: <ZapIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/how-to-get-your-first-house-sit-no-reviews',
               },
@@ -93,7 +83,6 @@ export default function HomePage() {
                 label: 'Financials',
                 title: 'How much do I need to save?',
                 desc: 'What I Budgeted vs. What I Needed',
-                icon: <CreditCardIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
                 link: '/blog/can-you-really-travel-for-free-house-sitting-math',
               },
@@ -109,8 +98,7 @@ export default function HomePage() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       style={{ objectFit: 'cover' }}
                     />
-                    <div className="home-stat-overlay" />
-                    <div className="home-pillar-icon-overlay">{pillar.icon}</div>
+                    <div className="card-image-overlay" />
                   </div>
                   <div className="content-layer home-pillar-content">
                     <div className="sub-header">{pillar.label}</div>
@@ -178,19 +166,16 @@ export default function HomePage() {
               {
                 label: 'Countries',
                 value: SITE_STATS.countriesCount,
-                icon: <GlobeIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800',
               },
               {
                 label: 'States',
                 value: SITE_STATS.statesCount,
-                icon: <MapPinIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=800',
               },
               {
                 label: 'Experience',
                 value: '100%',
-                icon: <CompassIcon size={28} />,
                 img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
               },
             ].map((stat) => (
@@ -205,8 +190,7 @@ export default function HomePage() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       style={{ objectFit: 'cover' }}
                     />
-                    <div className="home-stat-overlay" />
-                    <div className="home-stat-icon-overlay content-layer">{stat.icon}</div>
+                    <div className="card-image-overlay" />
                   </div>
                   <div className="content-layer">
                     <div className="display-title-md home-stat-value">{stat.value}</div>

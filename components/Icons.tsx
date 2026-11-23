@@ -1,4 +1,4 @@
-import type { SVGProps, ReactNode } from 'react';
+import { useId, type SVGProps, type ReactNode } from 'react';
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
@@ -29,42 +29,92 @@ const IconBase = ({ size = 24, strokeWidth = 2, children, ...props }: IconProps)
   </svg>
 );
 
-export const SJLogo = ({ size = 48, className, ...props }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 100 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    shapeRendering="geometricPrecision"
-    {...props}
-  >
-    <title>Sitter Journey Logo</title>
-    <defs>
-      <linearGradient id="logo-gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="var(--color-brand-secondary)" />
-        <stop offset="100%" stopColor="var(--color-brand-primary)" />
-      </linearGradient>
-      <clipPath id="logo-globe-interior-clip">
-        <circle cx="50" cy="50" r="45.25" />
-      </clipPath>
-    </defs>
+export const SJLogo = ({ size = 48, className, ...props }: IconProps) => {
+  const uid = useId().replace(/:/g, '');
+  const clipId = `sj-clip-${uid}`;
+  const skyId = `sj-sky-${uid}`;
+  const sunId = `sj-sun-${uid}`;
+  const sandId = `sj-sand-${uid}`;
+  const seaId = `sj-sea-${uid}`;
 
-    {/* Globe Outer Sphere (Uniform stroke 1:1 circle) */}
-    <circle cx="50" cy="50" r="47.5" stroke="url(#logo-gold-gradient)" strokeWidth="4.5" />
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      shapeRendering="geometricPrecision"
+      {...props}
+    >
+      <title>Sitter Journey Logo</title>
+      <defs>
+        <clipPath id={clipId}>
+          <circle cx="50" cy="50" r="45.5" />
+        </clipPath>
+        <linearGradient id={skyId} x1="50" y1="4" x2="50" y2="66" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#103A68" />
+          <stop offset="100%" stopColor="#236CB0" />
+        </linearGradient>
+        <linearGradient id={sunId} x1="37" y1="23" x2="43" y2="52" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FFE494" />
+          <stop offset="100%" stopColor="#E19638" />
+        </linearGradient>
+        <linearGradient id={sandId} x1="35" y1="52" x2="90" y2="75" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#EAC98E" />
+          <stop offset="100%" stopColor="#C89B58" />
+        </linearGradient>
+        <linearGradient id={seaId} x1="50" y1="56" x2="50" y2="96" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#2382A6" />
+          <stop offset="100%" stopColor="#12486C" />
+        </linearGradient>
+      </defs>
 
-    {/* Interior Globe Grid (clipped to prevent pole stacking) */}
-    <g clipPath="url(#logo-globe-interior-clip)" fill="none" stroke="url(#logo-gold-gradient)">
-      <line x1="50" y1="0" x2="50" y2="100" strokeWidth="3.8" />
-      <line x1="0" y1="50" x2="100" y2="50" strokeWidth="3.8" />
-      <ellipse cx="50" cy="50" rx="21.5" ry="47.5" strokeWidth="3.4" />
-      <ellipse cx="50" cy="50" rx="36.5" ry="47.5" strokeWidth="2.8" opacity="0.85" />
-      <path d="M 0 30.5 Q 50 24 100 30.5" strokeWidth="3.2" strokeLinecap="round" />
-      <path d="M 0 69.5 Q 50 76 100 69.5" strokeWidth="3.2" strokeLinecap="round" />
-    </g>
-  </svg>
-);
+      <g clipPath={`url(#${clipId})`}>
+        {/* Coastal Sky */}
+        <rect x="0" y="0" width="100" height="100" fill={`url(#${skyId})`} />
+
+        {/* Travel Sun */}
+        <circle cx="38" cy="38" r="14" fill={`url(#${sunId})`} />
+
+        {/* North Star / Compass Sparkle */}
+        <path
+          d="M 69 19 Q 69 26.5 76.5 26.5 Q 69 26.5 69 34 Q 69 26.5 61.5 26.5 Q 69 26.5 69 19 Z"
+          fill="#FAF6EE"
+        />
+
+        {/* Minimalist Home Silhouette (grounded seamlessly into headland) */}
+        <path d="M 62 50 L 70 42.5 L 78 50 V 61 H 62 Z" fill="#FAF6EE" />
+
+        {/* Sunlit Coastal Headland */}
+        <path d="M 24 67 Q 58 51 98 63 L 98 100 L 20 100 Z" fill={`url(#${sandId})`} />
+
+        {/* Ocean Swell */}
+        <path d="M 0 60 Q 28 51 56 65 T 100 61 L 100 100 L 0 100 Z" fill={`url(#${seaId})`} />
+
+        {/* Journey Wave Crests */}
+        <path
+          d="M 4 72 Q 30 62 56 73 T 97 72"
+          stroke="#FAF6EE"
+          strokeWidth="3.2"
+          strokeLinecap="round"
+          opacity="0.92"
+        />
+        <path
+          d="M 12 84 Q 38 76 64 84 T 94 83"
+          stroke="#7AD0E4"
+          strokeWidth="2.8"
+          strokeLinecap="round"
+          opacity="0.75"
+        />
+      </g>
+
+      {/* High-contrast Medallion Rim (legible on both light & dark tabs) */}
+      <circle cx="50" cy="50" r="46" stroke="#E4C488" strokeWidth="3.5" />
+    </svg>
+  );
+};
 
 
 /* --- BRAND & SOCIAL --- */

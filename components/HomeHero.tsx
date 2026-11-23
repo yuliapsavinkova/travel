@@ -35,10 +35,10 @@ export default function HomeHero({ children }: HomeHeroProps) {
           </p>
           <div className="hero-button-group">
             <Link href="/blog#archive" className="btn-gold">
-              My Blog
+              Read Blog
             </Link>
-            <Link href="/resources#archive" className="secondary-btn">
-              My Resources
+            <Link href="/resources" className="secondary-btn">
+              Resources
             </Link>
           </div>
         </div>

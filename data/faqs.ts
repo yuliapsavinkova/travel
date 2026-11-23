@@ -266,7 +266,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'I maintain a nationwide gym membership for consistent workouts and reliable showers. ' +
       'Planet Fitness is my go to.',
-    link: { label: 'Travel Wellness Kit', href: '/resources/planet-fitness-review' },
+    // link: { label: 'Travel Wellness Kit', href: '/resources/planet-fitness-review' },
   },
 
   // =====================================================

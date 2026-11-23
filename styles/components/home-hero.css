@@ -72,9 +72,10 @@
 .hero-home-text .display-title {
   text-align: left;
   margin-bottom: 1rem;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--color-text-primary);
-  font-size: clamp(2.25rem, 4.8vw, 3.85rem);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5.2vw, 4.15rem);
 }
 
 .hero-home-text .hero-paragraph {

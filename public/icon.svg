@@ -1,37 +1,52 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <title>Sitter Journey</title>
   <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FCE79C" />
-      <stop offset="45%" stop-color="#D8B446" />
-      <stop offset="100%" stop-color="#9E7422" />
-    </linearGradient>
-    <radialGradient id="darkDisc" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#2A2722" />
-      <stop offset="100%" stop-color="#131210" />
-    </radialGradient>
-    <clipPath id="discClip">
-      <circle cx="50" cy="50" r="42" />
+    <clipPath id="sj-clip">
+      <circle cx="50" cy="50" r="45.5" />
     </clipPath>
+    <linearGradient id="sj-sky" x1="50" y1="4" x2="50" y2="66" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#103A68" />
+      <stop offset="100%" stop-color="#236CB0" />
+    </linearGradient>
+    <linearGradient id="sj-sun" x1="37" y1="23" x2="43" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE494" />
+      <stop offset="100%" stop-color="#E19638" />
+    </linearGradient>
+    <linearGradient id="sj-sand" x1="35" y1="52" x2="90" y2="75" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EAC98E" />
+      <stop offset="100%" stop-color="#C89B58" />
+    </linearGradient>
+    <linearGradient id="sj-sea" x1="50" y1="56" x2="50" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2382A6" />
+      <stop offset="100%" stop-color="#12486C" />
+    </linearGradient>
   </defs>
-  
-  <!-- Outer transparent padding, circular dark medallion -->
-  <circle cx="50" cy="50" r="47" fill="url(#darkDisc)" stroke="url(#goldGrad)" stroke-width="3.8" />
-  
-  <!-- Inner Globe circle -->
-  <circle cx="50" cy="50" r="39" fill="none" stroke="url(#goldGrad)" stroke-width="4" />
-  
-  <g clip-path="url(#discClip)" fill="none" stroke="url(#goldGrad)">
-    <!-- Polar axis -->
-    <line x1="50" y1="10" x2="50" y2="90" stroke-width="4" />
-    <!-- Equator -->
-    <line x1="10" y1="50" x2="90" y2="50" stroke-width="4" />
-    <!-- Prime meridian -->
-    <ellipse cx="50" cy="50" rx="20" ry="39" stroke-width="4" />
-    
-    <ellipse cx="50" cy="50" rx="31" ry="39" stroke-width="3" opacity="0.8" />
-    <path d="M 14 34 Q 50 28 86 34" stroke-width="3.2" stroke-linecap="round" />
-    <path d="M 14 66 Q 50 72 86 66" stroke-width="3.2" stroke-linecap="round" />
-    
+
+  <g clip-path="url(#sj-clip)">
+    <rect x="0" y="0" width="100" height="100" fill="url(#sj-sky)" />
+    <circle cx="38" cy="38" r="14" fill="url(#sj-sun)" />
+    <path
+      d="M 69 19 Q 69 26.5 76.5 26.5 Q 69 26.5 69 34 Q 69 26.5 61.5 26.5 Q 69 26.5 69 19 Z"
+      fill="#FAF6EE"
+    />
+    <path d="M 62 50 L 70 42.5 L 78 50 V 61 H 62 Z" fill="#FAF6EE" />
+    <path d="M 24 67 Q 58 51 98 63 L 98 100 L 20 100 Z" fill="url(#sj-sand)" />
+    <path d="M 0 60 Q 28 51 56 65 T 100 61 L 100 100 L 0 100 Z" fill="url(#sj-sea)" />
+    <path
+      d="M 4 72 Q 30 62 56 73 T 97 72"
+      stroke="#FAF6EE"
+      stroke-width="3.2"
+      stroke-linecap="round"
+      opacity="0.92"
+    />
+    <path
+      d="M 12 84 Q 38 76 64 84 T 94 83"
+      stroke="#7AD0E4"
+      stroke-width="2.8"
+      stroke-linecap="round"
+      opacity="0.75"
+    />
   </g>
+
+  <circle cx="50" cy="50" r="46" stroke="#E4C488" stroke-width="3.5" />
 </svg>

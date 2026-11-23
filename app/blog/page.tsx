@@ -85,7 +85,7 @@ export default function BlogPage() {
                 <Link href="#archive" className="btn-gold">
                   Read Blog
                 </Link>
-                <Link href="/resources#archive" className="secondary-btn">
+                <Link href="/resources" className="secondary-btn">
                   Resources
                 </Link>
               </div>

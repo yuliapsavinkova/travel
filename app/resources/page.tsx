@@ -1,11 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ALL_RESOURCES } from '../../constants';
 import CommonCard from '../../components/CommonCard';
-import SocialMediaIcons from '../../components/SocialMediaIcons';
-import { ChevronDownIcon } from '../../components/Icons';
 
 export const metadata: Metadata = {
   title: 'Travel Resources & Discounts: My Trusted Toolkit | Sitter Journey',
@@ -71,50 +66,14 @@ export default function ResourcesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <section className="hero-two-col section-margin">
-        <div className="container">
-          <div className="hero-two-col-grid">
-            <div className="hero-col-text">
-              <div className="hero-socials-wrapper">
-                <SocialMediaIcons className="hero-socials" iconSize={18} />
-              </div>
-              <h1 className="display-title">
-                Travel Resources.
-              </h1>
-              <p className="hero-paragraph">
-                The tools and services I use every day to live and work on the road.
-              </p>
-              <div className="hero-button-group">
-                <Link href="#archive" className="btn-gold">
-                  View Resources
-                </Link>
-                <Link href="/blog#archive" className="secondary-btn">
-                  Read Blog
-                </Link>
-              </div>
-            </div>
-
-            <div className="hero-col-media">
-              <div className="hero-image-card">
-                <Image
-                  src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&q=80&w=1200"
-                  alt="Resources"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="container section-margin">
-        <header className="text-center section-margin" id="archive">
-          <h2 className="display-title display-title-md">
+      <div className="container section-margin archive-page-container" id="archive">
+        <header className="text-center section-margin">
+          <h1 className="display-title display-title-md">
             The <span className="serif-italic">Resources.</span>
-          </h2>
+          </h1>
+          <p className="hero-paragraph home-section-intro">
+            The tools and services I use every day to live and work on the road.
+          </p>
         </header>
 
         <div className="grid-standard">

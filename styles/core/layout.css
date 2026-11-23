@@ -128,11 +128,19 @@
 }
 
 /* Archive Spacing */
+.archive-page-container {
+  padding-top: calc(var(--h-header) + var(--s-7));
+  scroll-margin-top: calc(var(--h-header) + var(--s-4));
+}
+
 .blog-archive-section {
   padding-bottom: var(--s-9);
 }
 
 @media (max-width: 768px) {
+  .archive-page-container {
+    padding-top: calc(var(--h-header) + var(--s-4));
+  }
   .blog-archive-section {
     padding-bottom: var(--s-7);
   }
