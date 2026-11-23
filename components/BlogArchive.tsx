@@ -1,109 +1,202 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
-import type { BlogPost, BlogAudience } from '../types';
-import CommonCard from './CommonCard';
-import { CalendarIcon, MapPinIcon } from './Icons';
+import { useMemo, useState } from 'react';
+import type { BlogPost } from '../types';
 import { formatCardDate } from '../utils/content';
+import CommonCard from './CommonCard';
+import { CalendarIcon, XIcon } from './Icons';
 
 interface BlogArchiveProps {
   posts: BlogPost[];
 }
 
-type FilterOption = 'All' | 'Sitter Guides' | 'Pet Parent Guides';
+const PILLAR_ORDER = ['House Sitting', 'Minimalism', 'Destinations', 'Freedom'];
+const AUDIENCE_FILTERS = ['For Sitters', 'For Homeowners'] as const;
+
+function getPostPillar(post: BlogPost): string {
+  return post.pillar || 'House Sitting';
+}
+
+function isHomeownerPost(post: BlogPost): boolean {
+  return Boolean(post.audience?.some((a) => /pet parent|homeowner/i.test(a)));
+}
+
+function getAudienceFilterLabel(post: BlogPost): 'For Sitters' | 'For Homeowners' {
+  return isHomeownerPost(post) ? 'For Homeowners' : 'For Sitters';
+}
+
+function getAudienceBadge(post: BlogPost): 'Sitter' | 'Homeowner' {
+  return isHomeownerPost(post) ? 'Homeowner' : 'Sitter';
+}
 
 export default function BlogArchive({ posts }: BlogArchiveProps) {
-  const [activeFilter, setActiveFilter] = useState<FilterOption>('All');
+  const [activeFilter, setActiveFilter] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const filterCounts = useMemo(() => {
-    const sittersCount = posts.filter(
-      (p) => !p.audience || p.audience.includes('Sitters')
-    ).length;
-    const petParentsCount = posts.filter(
-      (p) => p.audience && p.audience.includes('Pet Parents')
-    ).length;
-
-    return {
-      All: posts.length,
-      'Sitter Guides': sittersCount,
-      'Pet Parent Guides': petParentsCount,
-    };
+  // Detect distinct top-level pillars present across published posts
+  const activePillars = useMemo(() => {
+    const present = new Set(posts.map(getPostPillar));
+    const ordered = PILLAR_ORDER.filter((p) => present.has(p));
+    for (const p of present) {
+      if (!ordered.includes(p)) ordered.push(p);
+    }
+    return ordered;
   }, [posts]);
 
-  const filteredPosts = useMemo(() => {
-    if (activeFilter === 'All') return posts;
-    if (activeFilter === 'Sitter Guides') {
-      return posts.filter((p) => !p.audience || p.audience.includes('Sitters'));
-    }
-    if (activeFilter === 'Pet Parent Guides') {
-      return posts.filter((p) => p.audience && p.audience.includes('Pet Parents'));
-    }
-    return posts;
-  }, [posts, activeFilter]);
+  const isMultiPillarMode = activePillars.length > 1;
 
-  const filters: FilterOption[] = ['All', 'Sitter Guides', 'Pet Parent Guides'];
+  // Build filter tabs dynamically:
+  // - Multi-pillar mode (once Minimalism / Destinations / Freedom posts exist): filter by Pillar
+  // - Single-pillar mode (today: House Sitting only): filter by For Sitters vs. For Homeowners
+  const filterTabs = useMemo(() => {
+    if (isMultiPillarMode) {
+      return [
+        { label: 'All', count: posts.length },
+        ...activePillars.map((pillar) => ({
+          label: pillar,
+          count: posts.filter((p) => getPostPillar(p) === pillar).length,
+        })),
+      ];
+    }
+
+    const audienceTabs = AUDIENCE_FILTERS.map((audience) => ({
+      label: audience,
+      count: posts.filter((p) => getAudienceFilterLabel(p) === audience).length,
+    })).filter((tab) => tab.count > 0);
+
+    return [{ label: 'All', count: posts.length }, ...audienceTabs];
+  }, [posts, activePillars, isMultiPillarMode]);
+
+  const filteredPosts = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+
+    return posts.filter((post) => {
+      const matchesTab =
+        activeFilter === 'All'
+          ? true
+          : isMultiPillarMode
+            ? getPostPillar(post) === activeFilter
+            : getAudienceFilterLabel(post) === activeFilter;
+
+      if (!matchesTab) return false;
+      if (!query) return true;
+
+      const haystack = [
+        post.title,
+        post.excerpt,
+        post.topic,
+        post.category,
+        ...(post.audience ?? []),
+        getAudienceFilterLabel(post),
+        getAudienceBadge(post),
+        getPostPillar(post),
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+
+      return haystack.includes(query);
+    });
+  }, [posts, activeFilter, searchQuery, isMultiPillarMode]);
+
+  const handleReset = () => {
+    setActiveFilter('All');
+    setSearchQuery('');
+  };
 
   return (
     <div className="blog-archive-section">
-      {/* Interactive Category Filter Pills */}
-      <nav
-        className="filter-tabs-container"
-        role="tablist"
-        aria-label="Filter blog posts by audience"
-      >
-        {filters.map((filter) => {
-          const isActive = activeFilter === filter;
-          const count = filterCounts[filter];
-          const tabId = `filter-tab-${filter.toLowerCase().replace(/\s+/g, '-')}`;
-
-          return (
+      <div className="blog-controls">
+        {/* Search Input */}
+        <div className="blog-search-box">
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search guides by keyword or topic..."
+            aria-label="Search blog articles"
+            className="blog-search-input"
+          />
+          {searchQuery && (
             <button
-              key={filter}
               type="button"
-              role="tab"
-              aria-selected={isActive}
-              aria-controls="blog-archive-grid"
-              id={tabId}
-              className={`filter-tab-pill ${isActive ? 'active' : ''}`}
-              onClick={() => setActiveFilter(filter)}
+              className="blog-search-clear"
+              onClick={() => setSearchQuery('')}
+              aria-label="Clear search"
             >
-              <span>{filter}</span>
-              <span className="filter-tab-count" aria-label={`${count} articles`}>
-                {count}
-              </span>
+              <XIcon size={14} />
             </button>
-          );
-        })}
-      </nav>
+          )}
+        </div>
+
+        {/* Dynamic Filter Pills */}
+        <nav
+          className="filter-tabs-container"
+          role="tablist"
+          aria-label={
+            isMultiPillarMode ? 'Filter blog posts by topic' : 'Filter blog posts by audience'
+          }
+        >
+          {filterTabs.map(({ label, count }) => {
+            const isActive = activeFilter === label;
+            const tabId = `filter-tab-${label.toLowerCase().replace(/\s+/g, '-')}`;
+
+            return (
+              <button
+                key={label}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                aria-controls="blog-archive-grid"
+                id={tabId}
+                className={`filter-tab-pill ${isActive ? 'active' : ''}`}
+                onClick={() => setActiveFilter(label)}
+              >
+                <span>{label}</span>
+                <span className="filter-tab-count" aria-label={`${count} articles`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </nav>
+      </div>
 
       {/* Grid of Articles */}
-      <div
-        id="blog-archive-grid"
-        role="tabpanel"
-        aria-labelledby={`filter-tab-${activeFilter.toLowerCase().replace(/\s+/g, '-')}`}
-        className="grid-standard"
-      >
-        {filteredPosts.map((post) => {
-          const isPetParent = post.audience?.includes('Pet Parents');
-          const badgeLabel = isPetParent ? 'Pet Parent Guide' : 'Sitter Guide';
+      {filteredPosts.length > 0 ? (
+        <div
+          id="blog-archive-grid"
+          role="tabpanel"
+          aria-labelledby={`filter-tab-${activeFilter.toLowerCase().replace(/\s+/g, '-')}`}
+          className="grid-standard"
+        >
+          {filteredPosts.map((post) => {
+            const pillar = getPostPillar(post);
+            const badgeLabel =
+              isMultiPillarMode && pillar !== 'House Sitting' ? pillar : getAudienceBadge(post);
 
-          return (
-            <CommonCard
-              key={post.id}
-              image={post.imageUrl}
-              badge={badgeLabel}
-              metadata={[
-                { icon: <CalendarIcon size={12} />, text: formatCardDate(post.date) },
-                { icon: <MapPinIcon size={12} />, text: post.location },
-              ]}
-              title={post.title}
-              description={post.excerpt}
-              slug={`/blog/${post.slug}`}
-              actionLabel="Read Post"
-            />
-          );
-        })}
-      </div>
+            return (
+              <CommonCard
+                key={post.id}
+                image={post.imageUrl}
+                badge={badgeLabel}
+                metadata={[{ icon: <CalendarIcon size={12} />, text: formatCardDate(post.date) }]}
+                title={post.title}
+                description={post.excerpt}
+                slug={`/blog/${post.slug}`}
+                actionLabel="Read Post"
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <div className="blog-empty-state" id="blog-archive-grid">
+          <p>No articles matched &ldquo;{searchQuery || activeFilter}&rdquo;.</p>
+          <button type="button" className="secondary-btn" onClick={handleReset}>
+            Show All Articles
+          </button>
+        </div>
+      )}
     </div>
   );
 }

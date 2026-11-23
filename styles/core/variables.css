@@ -123,8 +123,18 @@
   /* Overlays & Scrims */
   --color-overlay-light: color-mix(in srgb, var(--pram-gray-050) var(--alpha-08), transparent);
   --color-overlay-dark: color-mix(in srgb, var(--pram-gray-925) var(--alpha-65), transparent);
-  --color-overlay-badge-bg: color-mix(in srgb, var(--pram-white) var(--alpha-94), transparent);
-  --color-overlay-badge-border: var(--color-border-subtle);
+  --color-overlay-badge-bg: color-mix(in srgb, var(--pram-gray-925) 38%, transparent);
+  --color-overlay-badge-bg-hover: color-mix(in srgb, var(--pram-gray-925) 48%, transparent);
+  --color-overlay-badge-sheen: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--pram-white) 24%, transparent) 0%,
+    color-mix(in srgb, var(--pram-white) 5%, transparent) 52%,
+    transparent 100%
+  );
+  --color-overlay-badge-border: color-mix(in srgb, var(--pram-white) 32%, transparent);
+  --color-overlay-badge-border-hover: color-mix(in srgb, var(--pram-white) 50%, transparent);
+  --color-overlay-badge-highlight: color-mix(in srgb, var(--pram-white) 45%, transparent);
+  --color-overlay-badge-text: var(--pram-white);
   --color-overlay-icon-bg: color-mix(in srgb, var(--pram-gray-925) var(--alpha-45), transparent);
   --color-image-scrim: color-mix(in srgb, var(--pram-gray-925) 35%, transparent);
   --color-image-scrim-light: linear-gradient(

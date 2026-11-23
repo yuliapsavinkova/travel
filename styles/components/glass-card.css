@@ -77,29 +77,39 @@
   align-items: center;
   justify-content: center;
   min-height: 0;
-  padding: 0.25rem 0.625rem;
+  padding: 0.3rem 0.72rem;
   font-family: var(--f-main);
   font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   line-height: 1.2;
   text-transform: uppercase;
-  background: var(--color-overlay-badge-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--color-overlay-badge-bg);
+  background-image: var(--color-overlay-badge-sheen);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
   border: 1px solid var(--color-overlay-badge-border);
-  color: var(--color-text-primary);
+  color: var(--color-overlay-badge-text);
+  text-shadow: 0 1px 2px var(--color-overlay-dark);
   border-radius: var(--r-pill);
-  box-shadow: var(--shadow-badge);
+  box-shadow:
+    inset 0 1px 0 var(--color-overlay-badge-highlight),
+    var(--shadow-md);
   pointer-events: none;
   white-space: nowrap;
   user-select: none;
-  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+  transition:
+    background-color var(--t-fast),
+    border-color var(--t-fast),
+    box-shadow var(--t-fast);
 }
 
 .glass-card:hover .card-badge {
-  border-color: var(--color-border-card-hover);
-  box-shadow: var(--shadow-card);
+  background-color: var(--color-overlay-badge-bg-hover);
+  border-color: var(--color-overlay-badge-border-hover);
+  box-shadow:
+    inset 0 1px 0 var(--color-overlay-badge-highlight),
+    var(--shadow-lg);
 }
 
 .card-content-stack {
@@ -128,7 +138,7 @@
   font-weight: 500;
 }
 
-.card-metadata .metadata-item:last-child {
+.card-metadata .metadata-item:not(:first-child):last-child {
   margin-left: auto;
 }
 
@@ -235,8 +245,4 @@
   color: var(--color-text-primary-inverse);
   transform: scale(1.06);
   box-shadow: var(--shadow-action-hover);
-}
-
-.glass-card:hover .action-arrow {
-  transform: translate(2px, -2px);
 }

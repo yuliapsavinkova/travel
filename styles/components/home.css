@@ -40,6 +40,8 @@
   padding: 1.25rem 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   flex: 1 1 auto;
 }
 
@@ -61,6 +63,8 @@
 .home-pillar-action {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  align-self: center;
   gap: var(--s-1);
   color: var(--color-brand-primary);
   font-size: 0.6875rem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS, sits_completed } from '../../types';
 
 export const post: BlogPost = {
   id: '5',
@@ -34,8 +34,8 @@ export const post: BlogPost = {
   body: (
     <>
       <p className="prose-lead">
-        I am a solo female housesitter and petsitter. I’ve completed dozens of sits across the
-        United States, and one thing I know for sure is that rejection is just part of the
+        I am a solo female housesitter and petsitter. I’ve completed {sits_completed} sits across
+        the United States, and one thing I know for sure is that rejection is just part of the
         experience. My advice has always been: don't take it personally.
       </p>
 

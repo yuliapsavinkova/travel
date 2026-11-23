@@ -15,7 +15,6 @@ import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
 
 export {
   THS_DISCOUNT_PERCENT,
-  sits_completed,
   REFERRALS,
   YULIA_SITTER_JOURNEY,
   YULIA_SITTER_JOURNEY_URL,
@@ -50,7 +49,6 @@ export const NAV_ITEMS = [
 export const SITE_STATS = {
   statesCount: '28',
   countriesCount: '42',
-  sits_completed,
   sitsCompleted: String(sits_completed),
   clientRating: '5.0',
   satisfactionRate: '100%',

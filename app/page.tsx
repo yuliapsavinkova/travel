@@ -136,10 +136,10 @@ export default function HomePage() {
             </p>
             <div className="home-metadata-group">
               <span className="metadata-item">
-                <StarIcon size={14} /> 5.0 Sitter Rating
+                <StarIcon size={14} /> {SITE_STATS.clientRating} Sitter Rating
               </span>
               <span className="metadata-item">
-                <StarIcon size={14} /> Full Transparency
+                <StarIcon size={14} /> {SITE_STATS.sitsCompleted} Sits Completed
               </span>
               <span className="metadata-item">
                 <StarIcon size={14} /> Solo Safety Guides
@@ -158,7 +158,8 @@ export default function HomePage() {
             Travel <span className="serif-italic">& Life</span>
           </h2>
           <p className="hero-paragraph home-section-intro">
-            I Have Visited {SITE_STATS.countriesCount} Countries and {SITE_STATS.statesCount} States
+            I Have Visited {SITE_STATS.countriesCount} Countries, {SITE_STATS.statesCount} States,
+            and Completed {SITE_STATS.sitsCompleted} House Sits
           </p>
 
           <div className="grid-standard">
@@ -174,8 +175,8 @@ export default function HomePage() {
                 img: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=800',
               },
               {
-                label: 'Experience',
-                value: '100%',
+                label: 'Sits Completed',
+                value: SITE_STATS.sitsCompleted,
                 img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
               },
             ].map((stat) => (

@@ -1,23 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import type { Metadata } from 'next';
-import { BLOG_POSTS } from '../../constants';
 import BlogArchive from '../../components/BlogArchive';
-import SocialMediaIcons from '../../components/SocialMediaIcons';
-import { ChevronDownIcon } from '../../components/Icons';
+import { BLOG_POSTS } from '../../constants';
 
 export const metadata: Metadata = {
-  title: 'The Sitter Blog: Expert Tips & House Sitting Stories | Sitter Journey',
+  title: 'The Sitter Blog: House Sitting, Slow Travel & Freedom | Sitter Journey',
   description:
-    'Practical guides, real budget math, and strategies on landing your first house sit, beating competition, and living full-time on the road.',
+    'Practical guides, real budget math, and field notes on house sitting, slow travel, minimalism, and living with more freedom.',
   alternates: {
     canonical: 'https://sitterjourney.com/blog',
   },
   openGraph: {
-    title: 'The Sitter Blog: Expert Tips & House Sitting Stories',
+    title: 'The Sitter Blog: House Sitting, Slow Travel & Freedom',
     description:
-      'Practical guides, real budget math, and strategies on landing your first house sit, beating competition, and living full-time on the road.',
+      'Practical guides, real budget math, and field notes on house sitting, slow travel, minimalism, and living with more freedom.',
     url: 'https://sitterjourney.com/blog',
     type: 'website',
   },
@@ -34,7 +29,8 @@ export default function BlogPage() {
         '@id': 'https://sitterjourney.com/blog#collection',
         url: 'https://sitterjourney.com/blog',
         name: 'Sitter Journey Blog',
-        description: 'Practical guides and stories about full-time travel and house sitting.',
+        description:
+          'Practical guides and stories on house sitting, minimalism, destinations, and full-time travel.',
         blogPost: sortedPosts.map((post) => ({
           '@type': 'BlogPosting',
           headline: post.title,
@@ -70,56 +66,41 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <section className="hero-two-col section-margin">
-        <div className="container">
-          <div className="hero-two-col-grid">
-            <div className="hero-col-text">
-              <div className="hero-socials-wrapper">
-                <SocialMediaIcons className="hero-socials" iconSize={18} />
-              </div>
-              <h1 className="display-title">
-                Lessons from My Journey as a Housesitter
-              </h1>
-              <p className="hero-paragraph">I share how to travel sustainably through housesitting.</p>
-              <div className="hero-button-group">
-                <Link href="#archive" className="btn-gold">
-                  Read Blog
-                </Link>
-                <Link href="/resources" className="secondary-btn">
-                  Resources
-                </Link>
-              </div>
-            </div>
 
-            <div className="hero-col-media">
-              <div className="hero-image-card">
-                <Image
-                  src="/remote-house.avif"
-                  alt="Blog"
-                  fill
-                  priority
-                  unoptimized
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="container section-margin">
-        <header className="text-center section-margin" id="archive">
-          <h2 className="display-title display-title-md">
-            The <span className="serif-italic">Archive</span>
-          </h2>
+      <div className="container section-margin archive-page-container">
+        <header className="text-center blog-header">
+          <h1 className="display-title display-title-md">
+            The <span className="serif-italic">Blog.</span>
+          </h1>
           <p className="hero-paragraph home-section-intro">
-            I am currently documenting my journey. While the archive is growing, please check back
-            often for new hacks, packing essentials, and stories from the road.
+            Practical guides and lived stories on house sitting, minimalism, destinations, and
+            building a life with more freedom.
           </p>
         </header>
 
-        <BlogArchive posts={sortedPosts} />
+        {/* Filterable & Searchable Archive */}
+        <section id="archive">
+          <BlogArchive posts={sortedPosts} />
+        </section>
+
+        {/* Future Pillars Callout */}
+        <section className="blog-horizons-card" aria-label="Blog themes">
+          <span className="sub-header">Growing Journal</span>
+          <h2 className="display-title display-title-md">
+            More Chapters <span className="serif-italic">Ahead</span>
+          </h2>
+          <p className="hero-paragraph">
+            Today&apos;s archive focuses on house sitting fundamentals. As the journal grows, new
+            essays on minimalism, slow destinations, and location freedom will join the archive.
+          </p>
+
+          <div className="blog-horizons-topics">
+            <span className="blog-topic-tag active-pillar">House Sitting · {sortedPosts.length}</span>
+            <span className="blog-topic-tag">Minimalism · Soon</span>
+            <span className="blog-topic-tag">Destinations · Soon</span>
+            <span className="blog-topic-tag">Freedom · Soon</span>
+          </div>
+        </section>
       </div>
     </>
   );

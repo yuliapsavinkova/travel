@@ -158,7 +158,27 @@
   .glass-island {
     height: var(--h-nav-tablet);
     padding: 0 var(--s-3) 0 var(--s-4);
+    gap: var(--s-2);
   }
+  .desktop-nav {
+    gap: 0.125rem;
+  }
+  .glass-island .btn-nav {
+    padding: 0.5rem 0.625rem;
+    letter-spacing: 0.14em;
+    font-size: 0.65rem;
+  }
+  .glass-island .btn-nav.active::after {
+    left: 0.625rem;
+    right: 0.625rem;
+  }
+  .glass-island .btn-gold {
+    min-height: 2.125rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 720px) {
   .desktop-nav,
   .desktop-only,
   .btn-gold.desktop-only,
@@ -194,7 +214,7 @@
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 721px) {
   .mobile-toggle {
     display: none;
   }

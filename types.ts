@@ -80,9 +80,17 @@ export interface Review {
 
 export type BlogAudience = 'Sitters' | 'Pet Parents';
 
+export type BlogPillar =
+  | 'House Sitting'
+  | 'Minimalism'
+  | 'Destinations'
+  | 'Freedom'
+  | (string & {});
+
 export interface BlogPost {
   id: string;
   slug: string;
+  pillar?: BlogPillar;
   topic?: string;
   title: string;
   navTitle?: string;

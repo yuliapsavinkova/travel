@@ -17,7 +17,6 @@ export const body = (
       <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
         {REFERRALS.THS.ratePercent} off your membership
       </a>
-
       .
     </p>
 
