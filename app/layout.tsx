@@ -2,10 +2,11 @@ import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
+import AnalyticsTracker from '../components/AnalyticsTracker';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import AnalyticsTracker from '../components/AnalyticsTracker';
 import { SITE_CONFIG } from '../constants';
+import { DEFAULT_OG_IMAGE, PUBLISHER_LOGO_URL } from '../utils/content';
 import '../styles.css';
 
 export const viewport: Viewport = {
@@ -50,8 +51,7 @@ const jetbrainsMono = localFont({
   display: 'swap',
 });
 
-const OG_IMAGE_URL =
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=1200&h=630';
+const OG_IMAGE_URL = DEFAULT_OG_IMAGE;
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sitterjourney.com'),
@@ -161,7 +161,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         '@id': 'https://sitterjourney.com/#organization',
         name: 'Sitter Journey',
         url: 'https://sitterjourney.com',
-        logo: 'https://sitterjourney.com/icon.svg',
+        logo: PUBLISHER_LOGO_URL,
         founder: {
           '@id': 'https://sitterjourney.com/#author',
         },

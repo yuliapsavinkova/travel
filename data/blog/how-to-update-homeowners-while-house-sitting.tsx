@@ -9,10 +9,10 @@ export const post: BlogPost = {
   navTitle: 'Updating Owners',
   excerpt:
     'Good communication is one of the biggest differentiators between an average sit and a great one. Learn a strategy that actually works.',
-  date: 'January 2026',
+  date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 12,
+  sortOrder: 14,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=2070&auto=format&fit=crop',

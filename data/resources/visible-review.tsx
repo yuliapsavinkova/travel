@@ -7,7 +7,7 @@ export const resource: ResourceItem = {
   name: 'Visible Review',
   navTitle: 'Visible Review',
   description: 'The phone plan I use for unlimited data and hotspot.',
-  date: 'January 2026',
+  date: 'January 9, 2026',
   sortOrder: 3,
   discountText: REFERRALS.VISIBLE.discount,
   link: REFERRALS.VISIBLE.link,

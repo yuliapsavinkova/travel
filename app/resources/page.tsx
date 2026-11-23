@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import { ALL_RESOURCES } from '../../constants';
 import CommonCard from '../../components/CommonCard';
+import { ALL_RESOURCES } from '../../constants';
+import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'Travel Resources & Discounts: My Trusted Toolkit | Sitter Journey',
@@ -15,6 +16,21 @@ export const metadata: Metadata = {
       'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
     url: 'https://sitterjourney.com/resources',
     type: 'website',
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Sitter Journey Resources & Verified Discounts',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Travel Resources & Discounts: My Trusted Toolkit',
+    description:
+      'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

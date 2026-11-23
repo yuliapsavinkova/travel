@@ -28,6 +28,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Yulia: Full-Time Housesitter & Traveler',
+    description:
+      'Learn more about my journey as a solo female housesitter and how I travel intentionally and across the United States.',
+    images: ['https://sitterjourney.com/yulia-with-dog.jpg'],
+  },
 };
 
 export default function AboutPage() {

@@ -10,10 +10,10 @@ export const post: BlogPost = {
   navTitle: 'Alerts Strategy',
   excerpt:
     'How I configure alerts to catch the sits I actually want. Real examples from a full-time sitter.',
-  date: 'January 2026',
+  date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 11,
+  sortOrder: 13,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1741061963486-a56144a73791?q=80&w=2070&auto=format&fit=crop',

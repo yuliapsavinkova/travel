@@ -7,7 +7,7 @@ export const resource: ResourceItem = {
   name: 'Planet Fitness Review',
   navTitle: 'PF Review',
   description: 'Gym access across the country for workouts and showers.',
-  date: 'January 2026',
+  date: 'January 9, 2026',
   sortOrder: 4,
   discountText: REFERRALS.PF.discount,
   link: REFERRALS.PF.link,

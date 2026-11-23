@@ -15,6 +15,7 @@ interface CommonDetailProps {
   title: string;
   subtitle?: string;
   date?: string;
+  updatedDate?: string;
   isAffiliate?: boolean;
   children?: ReactNode;
   sidebar?: ReactNode;
@@ -33,6 +34,7 @@ const CommonDetail = ({
   title,
   subtitle,
   date,
+  updatedDate,
   isAffiliate = false,
   children,
   sidebar,
@@ -47,10 +49,10 @@ const CommonDetail = ({
           {topic && <div className="detail-topic-label">{topic}</div>}
           <h1 className="detail-title-text">{title}</h1>
           {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
-          {date && (
+          {(date || updatedDate) && (
             <div className="detail-date-wrapper">
               <span className="detail-date-label">
-                <CalendarIcon size={12} /> {formatArticleDate(date)}
+                <CalendarIcon size={12} /> {formatArticleDate(date, updatedDate)}
               </span>
             </div>
           )}

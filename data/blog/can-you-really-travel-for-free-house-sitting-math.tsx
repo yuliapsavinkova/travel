@@ -10,10 +10,10 @@ export const post: BlogPost = {
   navTitle: 'Travel Math',
   excerpt:
     'Is "free travel" a scam? We look at real numbers, and the hidden costs of house sitting.',
-  date: 'January 2026',
+  date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Financial',
-  sortOrder: 2,
+  sortOrder: 3,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',

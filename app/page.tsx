@@ -5,6 +5,7 @@ import HomeHero from '../components/HomeHero';
 import { StarIcon } from '../components/Icons';
 import SectionDivider from '../components/SectionDivider';
 import { SITE_STATS } from '../constants';
+import { DEFAULT_OG_IMAGE } from '../utils/content';
 
 export const metadata: Metadata = {
   title: 'Sitter Journey | Professional House Sitting & Slow Travel Across America',
@@ -19,6 +20,21 @@ export const metadata: Metadata = {
       'Follow my full-time journey as a solo female traveler and professional house sitter. Discover how to travel the USA, save on accommodation, and care for pets.',
     url: 'https://sitterjourney.com',
     type: 'website',
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Sitter Journey - Full-Time Travel & House Sitting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sitter Journey | Professional House Sitting & Slow Travel Across America',
+    description:
+      'Follow my full-time journey as a solo female traveler and professional house sitter. Discover how to travel the USA, save on accommodation, and care for pets.',
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

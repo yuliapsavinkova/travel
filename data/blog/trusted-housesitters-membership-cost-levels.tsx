@@ -13,7 +13,7 @@ export const post: BlogPost = {
   date: 'June 26, 2026',
   category: 'Sitter Guide',
   location: 'Financial',
-  sortOrder: 3,
+  sortOrder: 4,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=1200',

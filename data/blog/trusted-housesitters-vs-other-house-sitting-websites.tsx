@@ -11,10 +11,10 @@ export const post: BlogPost = {
   navTitle: 'TrustedHousesitters vs Others',
   excerpt:
     'Comparing TrustedHousesitters against Nomador, MindMyHouse, and others. Which one wins?',
-  date: 'January 2026',
+  date: 'January 9, 2026',
   category: 'Review',
   location: 'Comparison',
-  sortOrder: 6,
+  sortOrder: 7,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1200',

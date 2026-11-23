@@ -1,9 +1,10 @@
-import React from 'react';
 import type { Metadata } from 'next';
+import React from 'react';
 import CommonDetail from '../../components/CommonDetail';
 import FAQSection from '../../components/FAQSection';
 import { MASTER_FAQS } from '../../data/faqs';
 import { REFERRALS } from '../../types';
+import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions: House Sitting & Nomadic Travel | Sitter Journey',
@@ -18,6 +19,21 @@ export const metadata: Metadata = {
       'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and nomadic life.',
     url: 'https://sitterjourney.com/faq',
     type: 'website',
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Sitter Journey Frequently Asked Questions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Frequently Asked Questions: House Sitting & Nomadic Travel',
+    description:
+      'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and nomadic life.',
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

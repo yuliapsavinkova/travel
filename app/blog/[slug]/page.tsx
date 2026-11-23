@@ -1,10 +1,11 @@
-import React from 'react';
 import type { Metadata } from 'next';
-import { BLOG_POSTS, REFERRALS } from '../../../constants';
+import React from 'react';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
 import StickyReaderCta from '../../../components/StickyReaderCta';
+import { BLOG_POSTS, REFERRALS } from '../../../constants';
 import { getFaqsByIds } from '../../../data/faqs';
+import { PUBLISHER_LOGO_URL, toAbsoluteUrl, toIsoDate } from '../../../utils/content';
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -20,6 +21,10 @@ export async function generateMetadata({
 
   if (!post) return { title: 'Post Not Found' };
 
+  const publishedTime = toIsoDate(post.date);
+  const modifiedTime = toIsoDate(post.updatedDate) || publishedTime;
+  const absoluteImageUrl = toAbsoluteUrl(post.imageUrl);
+
   return {
     title: post.seoTitle || `${post.title} | Sitter Journey Blog`,
     description: post.seoDescription || post.excerpt,
@@ -30,11 +35,14 @@ export async function generateMetadata({
     openGraph: {
       title: post.seoTitle || post.title,
       description: post.seoDescription || post.excerpt,
+      url: `https://sitterjourney.com/blog/${post.slug}`,
       type: 'article',
-      publishedTime: post.date,
+      publishedTime,
+      modifiedTime,
+      authors: ['Yulia'],
       images: [
         {
-          url: post.imageUrl,
+          url: absoluteImageUrl,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -45,7 +53,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: post.seoTitle || post.title,
       description: post.seoDescription || post.excerpt,
-      images: [post.imageUrl],
+      images: [absoluteImageUrl],
     },
   };
 }
@@ -93,6 +101,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const faqs = post.faqIds ? getFaqsByIds(post.faqIds) : [];
 
   const postUrl = `https://sitterjourney.com/blog/${post.slug}`;
+  const publishedIso = toIsoDate(post.date) || post.date;
+  const modifiedIso = toIsoDate(post.updatedDate) || post.updatedDate || publishedIso;
   const graphEntities: any[] = [
     {
       '@type': 'BlogPosting',
@@ -104,11 +114,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       },
       headline: post.title,
       description: post.seoDescription || post.excerpt,
-      image: post.imageUrl.startsWith('http')
-        ? post.imageUrl
-        : `https://sitterjourney.com${post.imageUrl}`,
-      datePublished: post.date,
-      dateModified: post.date,
+      image: toAbsoluteUrl(post.imageUrl),
+      datePublished: publishedIso,
+      dateModified: modifiedIso,
       mainEntityOfPage: postUrl,
       articleSection: post.category,
       keywords: post.seoKeywords?.join(', '),
@@ -122,7 +130,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         '@type': 'Organization',
         '@id': 'https://sitterjourney.com/#organization',
         name: 'Sitter Journey',
-        logo: 'https://sitterjourney.com/icon.svg',
+        logo: PUBLISHER_LOGO_URL,
       },
     },
     {
@@ -184,6 +192,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         title={post.title}
         topic={post.topic}
         date={post.date}
+        updatedDate={post.updatedDate}
         isAffiliate={true}
         prevLink={prevLink}
         nextLink={nextLink}

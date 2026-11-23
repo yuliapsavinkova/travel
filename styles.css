@@ -23,9 +23,8 @@
 @import "./styles/components/form.css";
 @import "./styles/components/error.css";
 
-/* Home & Blog Specific */
+/* Home Specific */
 @import "./styles/components/home.css";
-@import "./styles/components/blog.css";
 
 /* Prose Extras */
 @import "./styles/components/faq.css";

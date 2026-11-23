@@ -1,9 +1,10 @@
-import React from 'react';
 import type { Metadata } from 'next';
-import { ALL_RESOURCES } from '../../../constants';
+import React from 'react';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
+import { ALL_RESOURCES } from '../../../constants';
 import { getFaqsByIds } from '../../../data/faqs';
+import { PUBLISHER_LOGO_URL, toAbsoluteUrl, toIsoDate } from '../../../utils/content';
 
 export async function generateStaticParams() {
   return ALL_RESOURCES.map((item) => ({
@@ -19,6 +20,8 @@ export async function generateMetadata({
 
   if (!item) return { title: 'Resource Not Found' };
 
+  const absoluteImageUrl = item.imageUrl ? toAbsoluteUrl(item.imageUrl) : undefined;
+
   return {
     title: item.seoTitle || `${item.name} | Sitter Journey Resources`,
     description: item.seoDescription || item.description,
@@ -29,13 +32,14 @@ export async function generateMetadata({
     openGraph: {
       title: item.seoTitle || `${item.name}: My Recommended Travel Tool`,
       description: item.seoDescription || item.description,
-      images: item.imageUrl ? [{ url: item.imageUrl }] : [],
+      url: `https://sitterjourney.com/resources/${item.slug}`,
+      images: absoluteImageUrl ? [{ url: absoluteImageUrl }] : [],
     },
     twitter: {
       card: 'summary_large_image',
       title: item.seoTitle || item.name,
       description: item.seoDescription || item.description,
-      images: item.imageUrl ? [item.imageUrl] : [],
+      images: absoluteImageUrl ? [absoluteImageUrl] : [],
     },
   };
 }
@@ -91,11 +95,9 @@ export default async function ResourceDetailPage({
 
   const resourceUrl = `https://sitterjourney.com/resources/${item.slug}`;
   const productName = item.name.replace(/\s+Review$/i, '');
-  const imageFormatted = item.imageUrl?.startsWith('http')
-    ? item.imageUrl
-    : item.imageUrl
-      ? `https://sitterjourney.com${item.imageUrl}`
-      : 'https://sitterjourney.com/icon.svg';
+  const imageFormatted = toAbsoluteUrl(item.imageUrl);
+  const publishedIso = toIsoDate(item.date) || item.date;
+  const modifiedIso = toIsoDate(item.updatedDate) || item.updatedDate || publishedIso;
 
   const graphEntities: any[] = [
     {
@@ -127,8 +129,8 @@ export default async function ResourceDetailPage({
         description: item.seoDescription || item.description,
         reviewBody: item.seoDescription || item.description,
         image: imageFormatted,
-        datePublished: item.date,
-        dateModified: item.date,
+        datePublished: publishedIso,
+        dateModified: modifiedIso,
         mainEntityOfPage: resourceUrl,
         author: {
           '@type': 'Person',
@@ -140,7 +142,7 @@ export default async function ResourceDetailPage({
           '@type': 'Organization',
           '@id': 'https://sitterjourney.com/#organization',
           name: 'Sitter Journey',
-          logo: 'https://sitterjourney.com/icon.svg',
+          logo: PUBLISHER_LOGO_URL,
         },
         reviewRating: {
           '@type': 'Rating',
@@ -209,6 +211,7 @@ export default async function ResourceDetailPage({
         title={item.name}
         subtitle={item.subtitle}
         date={item.date}
+        updatedDate={item.updatedDate}
         isAffiliate={true}
         prevLink={prevLink}
         nextLink={nextLink}

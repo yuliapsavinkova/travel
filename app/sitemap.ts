@@ -1,7 +1,13 @@
 import type { MetadataRoute } from 'next';
-import { BLOG_POSTS, TRAVEL_GUIDES, ALL_RESOURCES } from '../constants';
+import { ALL_RESOURCES, BLOG_POSTS, TRAVEL_GUIDES } from '../constants';
+import { toIsoDate } from '../utils/content';
 
 const SITE_URL = 'https://sitterjourney.com';
+
+function resolveLastModified(date?: string, fallback: Date = new Date()): Date {
+  const iso = toIsoDate(date);
+  return iso ? new Date(`${iso}T00:00:00Z`) : fallback;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date();
@@ -58,56 +64,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Blog posts
-  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => {
-    let lastMod = currentDate;
-    if (post.date) {
-      const parsed = new Date(post.date);
-      if (!isNaN(parsed.getTime())) {
-        lastMod = parsed;
-      }
-    }
-    return {
-      url: `${SITE_URL}/blog/${post.slug}`,
-      lastModified: lastMod,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    };
-  });
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: resolveLastModified(post.updatedDate || post.date, currentDate),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
 
-  // Travel guides
-  const travelPages: MetadataRoute.Sitemap = TRAVEL_GUIDES.map((guide) => {
-    let lastMod = currentDate;
-    if (guide.date) {
-      const parsed = new Date(guide.date);
-      if (!isNaN(parsed.getTime())) {
-        lastMod = parsed;
-      }
-    }
-    return {
-      url: `${SITE_URL}/travel/${guide.slug}`,
-      lastModified: lastMod,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    };
-  });
+  const travelPages: MetadataRoute.Sitemap = TRAVEL_GUIDES.map((guide) => ({
+    url: `${SITE_URL}/travel/${guide.slug}`,
+    lastModified: resolveLastModified(guide.updatedDate || guide.date, currentDate),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
 
-  // Resource items
-  const resourcePages: MetadataRoute.Sitemap = ALL_RESOURCES.map((item) => {
-    let lastMod = currentDate;
-    if (item.date) {
-      const parsed = new Date(item.date);
-      if (!isNaN(parsed.getTime())) {
-        lastMod = parsed;
-      }
-    }
-    return {
-      url: `${SITE_URL}/resources/${item.slug}`,
-      lastModified: lastMod,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    };
-  });
+  const resourcePages: MetadataRoute.Sitemap = ALL_RESOURCES.map((item) => ({
+    url: `${SITE_URL}/resources/${item.slug}`,
+    lastModified: resolveLastModified(item.updatedDate || item.date, currentDate),
+    changeFrequency: 'monthly',
+    priority: 0.75,
+  }));
 
   return [...staticPages, ...blogPages, ...travelPages, ...resourcePages];
 }

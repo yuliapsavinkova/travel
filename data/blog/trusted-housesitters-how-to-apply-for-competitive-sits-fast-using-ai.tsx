@@ -12,7 +12,7 @@ export const post: BlogPost = {
   date: 'September 28, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 10,
+  sortOrder: 11,
   audience: ['Sitters'],
   imageUrl: '/fast-running-dog.jpg',
   ctaLabel: REFERRALS.THS.label,

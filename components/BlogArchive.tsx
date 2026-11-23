@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import type { BlogPost } from '../types';
 import { formatCardDate } from '../utils/content';
 import CommonCard from './CommonCard';
-import { CalendarIcon, XIcon } from './Icons';
+import { CalendarIcon, SearchIcon, XIcon } from './Icons';
 
 interface BlogArchiveProps {
   posts: BlogPost[];
@@ -106,29 +106,7 @@ export default function BlogArchive({ posts }: BlogArchiveProps) {
 
   return (
     <div className="blog-archive-section">
-      <div className="blog-controls">
-        {/* Search Input */}
-        <div className="blog-search-box">
-          <input
-            type="search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search guides by keyword or topic..."
-            aria-label="Search blog articles"
-            className="blog-search-input"
-          />
-          {searchQuery && (
-            <button
-              type="button"
-              className="blog-search-clear"
-              onClick={() => setSearchQuery('')}
-              aria-label="Clear search"
-            >
-              <XIcon size={14} />
-            </button>
-          )}
-        </div>
-
+      <div className="archive-toolbar">
         {/* Dynamic Filter Pills */}
         <nav
           className="filter-tabs-container"
@@ -160,6 +138,29 @@ export default function BlogArchive({ posts }: BlogArchiveProps) {
             );
           })}
         </nav>
+
+        {/* Integrated Search Input */}
+        <div className="archive-search-wrap">
+          <SearchIcon size={15} className="archive-search-icon" aria-hidden="true" />
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search articles..."
+            aria-label="Search blog articles"
+            className="archive-search-input"
+          />
+          {searchQuery && (
+            <button
+              type="button"
+              className="archive-search-clear"
+              onClick={() => setSearchQuery('')}
+              aria-label="Clear search"
+            >
+              <XIcon size={13} />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Grid of Articles */}
@@ -180,7 +181,9 @@ export default function BlogArchive({ posts }: BlogArchiveProps) {
                 key={post.id}
                 image={post.imageUrl}
                 badge={badgeLabel}
-                metadata={[{ icon: <CalendarIcon size={12} />, text: formatCardDate(post.date) }]}
+                metadata={[
+                  { icon: <CalendarIcon size={12} />, text: formatCardDate(post.date, post.updatedDate) },
+                ]}
                 title={post.title}
                 description={post.excerpt}
                 slug={`/blog/${post.slug}`}
@@ -190,8 +193,10 @@ export default function BlogArchive({ posts }: BlogArchiveProps) {
           })}
         </div>
       ) : (
-        <div className="blog-empty-state" id="blog-archive-grid">
-          <p>No articles matched &ldquo;{searchQuery || activeFilter}&rdquo;.</p>
+        <div className="home-feature-card text-center" id="blog-archive-grid">
+          <p className="hero-paragraph home-feature-paragraph">
+            No articles matched &ldquo;{searchQuery || activeFilter}&rdquo;.
+          </p>
           <button type="button" className="secondary-btn" onClick={handleReset}>
             Show All Articles
           </button>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import BlogArchive from '../../components/BlogArchive';
 import { BLOG_POSTS } from '../../constants';
+import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'The Sitter Blog: House Sitting, Slow Travel & Freedom | Sitter Journey',
@@ -15,6 +16,21 @@ export const metadata: Metadata = {
       'Practical guides, real budget math, and field notes on house sitting, slow travel, minimalism, and living with more freedom.',
     url: 'https://sitterjourney.com/blog',
     type: 'website',
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Sitter Journey Blog - House Sitting, Minimalism & Freedom',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Sitter Blog: House Sitting, Slow Travel & Freedom',
+    description:
+      'Practical guides, real budget math, and field notes on house sitting, slow travel, minimalism, and living with more freedom.',
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
@@ -35,8 +51,14 @@ export default function BlogPage() {
           '@type': 'BlogPosting',
           headline: post.title,
           url: `https://sitterjourney.com/blog/${post.slug}`,
-          datePublished: post.date,
+          image: toAbsoluteUrl(post.imageUrl),
+          datePublished: toIsoDate(post.date) || post.date,
           description: post.excerpt,
+          author: {
+            '@type': 'Person',
+            '@id': 'https://sitterjourney.com/#author',
+            name: 'Yulia',
+          },
         })),
       },
       {
@@ -68,7 +90,7 @@ export default function BlogPage() {
       />
 
       <div className="container section-margin archive-page-container">
-        <header className="text-center blog-header">
+        <header className="text-center">
           <h1 className="display-title display-title-md">
             The <span className="serif-italic">Blog.</span>
           </h1>
@@ -84,21 +106,33 @@ export default function BlogPage() {
         </section>
 
         {/* Future Pillars Callout */}
-        <section className="blog-horizons-card" aria-label="Blog themes">
+        <section className="home-feature-card text-center" aria-label="Blog themes">
           <span className="sub-header">Growing Journal</span>
           <h2 className="display-title display-title-md">
             More Chapters <span className="serif-italic">Ahead</span>
           </h2>
-          <p className="hero-paragraph">
+          <p className="hero-paragraph home-feature-paragraph">
             Today&apos;s archive focuses on house sitting fundamentals. As the journal grows, new
             essays on minimalism, slow destinations, and location freedom will join the archive.
           </p>
 
-          <div className="blog-horizons-topics">
-            <span className="blog-topic-tag active-pillar">House Sitting · {sortedPosts.length}</span>
-            <span className="blog-topic-tag">Minimalism · Soon</span>
-            <span className="blog-topic-tag">Destinations · Soon</span>
-            <span className="blog-topic-tag">Freedom · Soon</span>
+          <div className="filter-tabs-container filter-tabs-static">
+            <span className="filter-tab-pill filter-tab-static active">
+              <span>House Sitting</span>
+              <span className="filter-tab-count">{sortedPosts.length}</span>
+            </span>
+            <span className="filter-tab-pill filter-tab-static">
+              <span>Minimalism</span>
+              <span className="filter-tab-count">Soon</span>
+            </span>
+            <span className="filter-tab-pill filter-tab-static">
+              <span>Destinations</span>
+              <span className="filter-tab-count">Soon</span>
+            </span>
+            <span className="filter-tab-pill filter-tab-static">
+              <span>Freedom</span>
+              <span className="filter-tab-count">Soon</span>
+            </span>
           </div>
         </section>
       </div>

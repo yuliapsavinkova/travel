@@ -1,10 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { TRAVEL_GUIDES, SITE_STATS } from '../../constants';
-import CommonCard from '../../components/CommonCard';
-import { MapPinIcon, ChevronDownIcon, CompassIcon } from '../../components/Icons';
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import CommonCard from '../../components/CommonCard';
+import { CompassIcon, MapPinIcon } from '../../components/Icons';
+import { SITE_STATS, TRAVEL_GUIDES } from '../../constants';
+import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'Travel Guides & Nomad Destinations | Sitter Journey',
@@ -19,6 +20,21 @@ export const metadata: Metadata = {
       'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
     url: 'https://sitterjourney.com/travel',
     type: 'website',
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Sitter Journey Travel Guides & Nomad Destinations',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Travel Guides & Nomad Destinations',
+    description:
+      'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

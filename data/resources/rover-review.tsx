@@ -7,7 +7,7 @@ export const resource: ResourceItem = {
   name: 'Rover Review',
   navTitle: 'Rover Review',
   description: `Earn money as a pet sitter and get a ${REFERRALS.ROVER.discount} for your own pets.`,
-  date: 'January 2026',
+  date: 'January 9, 2026',
   sortOrder: 2,
   discountText: REFERRALS.ROVER.discount,
   link: REFERRALS.ROVER.link,

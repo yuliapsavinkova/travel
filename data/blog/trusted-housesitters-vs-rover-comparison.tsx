@@ -10,10 +10,10 @@ export const post: BlogPost = {
   title: 'TrustedHousesitters vs. Rover: Why They are Not Comparable',
   navTitle: 'TrustedHousesitters vs Rover',
   excerpt: 'One is an exchange, the other is a transaction. Which one fits your lifestyle?',
-  date: 'January 2026',
+  date: 'January 9, 2026',
   category: 'Review',
   location: 'Comparison',
-  sortOrder: 7,
+  sortOrder: 8,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',

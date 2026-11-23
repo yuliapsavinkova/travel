@@ -87,6 +87,23 @@ export type BlogPillar =
   | 'Freedom'
   | (string & {});
 
+export type MonthName =
+  | 'January'
+  | 'February'
+  | 'March'
+  | 'April'
+  | 'May'
+  | 'June'
+  | 'July'
+  | 'August'
+  | 'September'
+  | 'October'
+  | 'November'
+  | 'December';
+
+/** Standard human-readable date format (e.g., "November 23, 2026") */
+export type ContentDate = `${MonthName} ${number}, ${number}`;
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -97,7 +114,8 @@ export interface BlogPost {
   subtitle?: string;
   excerpt: string;
   body: string | ReactNode;
-  date?: string;
+  date?: ContentDate;
+  updatedDate?: ContentDate;
   category: string;
   imageUrl: string;
   location: string;
@@ -122,7 +140,8 @@ export interface TravelGuide {
   excerpt: string;
   body: string | ReactNode;
   imageUrl: string;
-  date?: string;
+  date?: ContentDate;
+  updatedDate?: ContentDate;
   sortOrder?: number;
   prevLink?: NavLink;
   nextLink?: NavLink;
@@ -137,7 +156,8 @@ export interface ResourceItem {
   subtitle?: string;
   description: string;
   body: string | ReactNode;
-  date?: string;
+  date?: ContentDate;
+  updatedDate?: ContentDate;
   discountText?: string;
   link: string;
   icon: string;

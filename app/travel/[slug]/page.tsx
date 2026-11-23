@@ -1,9 +1,10 @@
-import React from 'react';
 import type { Metadata } from 'next';
-import { TRAVEL_GUIDES, GLOBAL_STRINGS, REFERRALS } from '../../../constants';
+import React from 'react';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
 import StickyReaderCta from '../../../components/StickyReaderCta';
+import { REFERRALS, TRAVEL_GUIDES } from '../../../constants';
+import { PUBLISHER_LOGO_URL, toAbsoluteUrl, toIsoDate } from '../../../utils/content';
 
 export async function generateStaticParams() {
   return TRAVEL_GUIDES.map((guide) => ({
@@ -18,6 +19,10 @@ export async function generateMetadata({
   const guide = TRAVEL_GUIDES.find((g) => g.slug === slug);
 
   if (!guide) return { title: 'Guide Not Found' };
+
+  const publishedTime = toIsoDate(guide.date);
+  const modifiedTime = toIsoDate(guide.updatedDate) || publishedTime;
+  const absoluteImageUrl = guide.imageUrl ? toAbsoluteUrl(guide.imageUrl) : undefined;
 
   return {
     title: `${guide.title} | Travel Guide | Sitter Journey`,
@@ -35,12 +40,15 @@ export async function generateMetadata({
     openGraph: {
       title: `${guide.title} | Travel Guide`,
       description: guide.excerpt,
+      url: `https://sitterjourney.com/travel/${guide.slug}`,
       type: 'article',
-      publishedTime: guide.date,
-      images: guide.imageUrl
+      publishedTime,
+      modifiedTime,
+      authors: ['Yulia'],
+      images: absoluteImageUrl
         ? [
             {
-              url: guide.imageUrl,
+              url: absoluteImageUrl,
               width: 1200,
               height: 630,
               alt: guide.title,
@@ -52,7 +60,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: `${guide.title} | Travel Guide`,
       description: guide.excerpt,
-      images: guide.imageUrl ? [guide.imageUrl] : [],
+      images: absoluteImageUrl ? [absoluteImageUrl] : [],
     },
   };
 }
@@ -103,6 +111,8 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   };
 
   const guideUrl = `https://sitterjourney.com/travel/${guide.slug}`;
+  const publishedIso = toIsoDate(guide.date) || guide.date;
+  const modifiedIso = toIsoDate(guide.updatedDate) || guide.updatedDate || publishedIso;
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -111,11 +121,9 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
         '@id': `${guideUrl}#article`,
         headline: guide.title,
         description: guide.excerpt,
-        image: guide.imageUrl?.startsWith('http')
-          ? guide.imageUrl
-          : `https://sitterjourney.com${guide.imageUrl}`,
-        datePublished: guide.date,
-        dateModified: guide.date,
+        image: toAbsoluteUrl(guide.imageUrl),
+        datePublished: publishedIso,
+        dateModified: modifiedIso,
         mainEntityOfPage: guideUrl,
         about: {
           '@type': 'Place',
@@ -131,7 +139,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
           '@type': 'Organization',
           '@id': 'https://sitterjourney.com/#organization',
           name: 'Sitter Journey',
-          logo: 'https://sitterjourney.com/icon.svg',
+          logo: PUBLISHER_LOGO_URL,
         },
       },
       {
@@ -173,6 +181,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
         image={guide.imageUrl}
         title={guide.title}
         date={guide.date}
+        updatedDate={guide.updatedDate}
         isAffiliate={true}
         prevLink={prevLink}
         nextLink={nextLink}

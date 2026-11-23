@@ -18,6 +18,7 @@ export const post: BlogPost = {
   excerpt:
     'How does exchange house sitting compare to hiring a professional pet sitter? A clear breakdown of TrustedHousesitters and private pet care to help you choose the right fit for your home and pets.',
   date: 'September 9, 2026',
+  updatedDate: 'November 22, 2026',
   category: 'Guide',
   location: 'Global',
   sortOrder: 1,
