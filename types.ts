@@ -8,6 +8,7 @@ export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
  * articles, FAQs, and price break-down math across the entire site in one place.
  */
 export const THS_DISCOUNT_PERCENT = 30;
+export const sits_completed = 41;
 
 export const REFERRALS = {
   THS: {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ResourceItem, REFERRALS } from '../../types';
+import { ResourceItem, REFERRALS, sits_completed } from '../../types';
 
 export const resource: ResourceItem = {
   id: 'ths',
@@ -8,7 +8,7 @@ export const resource: ResourceItem = {
   name: 'TrustedHousesitters Review',
   navTitle: 'TrustedHousesitters Review',
   description: 'Where I find almost all of my house sits. Use my link for a membership discount.',
-  date: 'January 2026',
+  date: 'November 2026',
   sortOrder: 1,
   discountText: REFERRALS.THS.discount,
   link: REFERRALS.THS.link,
@@ -20,56 +20,68 @@ export const resource: ResourceItem = {
     <>
       <p className="prose-lead">
         TrustedHousesitters is the main platform I use to travel full-time. The concept is simple: I
-        stay in homes for free. In exchange, owners get reliable care for their beloved furry family
-        members. There is no money involved, and I am treated as a guest rather than an employee.
+        stay in people's homes in exchange for taking care of their pets. Owners get reliable care
+        for their beloved furry family members, while I get a place to stay. No money changes hands
+        between the sitter and the owner. It's a mutual exchange built on trust.
       </p>
 
       <p>
-        As a solo female housesitter and petsitter, I have completed numerous sits across the United
-        States. I can say with confidence that this is the single most effective way to travel
-        sustainably. It is not just about a free place to stay; it is about a mutual exchange of
-        trust that benefits both the sitter and the pet owner.
+        As a solo female housesitter and petsitter, I have completed {sits_completed} sits across the
+        United States. I can say with confidence that this is one of the most effective ways to
+        travel affordably and sustainably. It's not just about saving money on accommodation; it's
+        about experiencing places like a local and building genuine connections along the way.
       </p>
 
       <h2>Why I Use This Platform</h2>
       <p>
-        The platform is built on verified reviews, which makes it easy to choose the right fit. I
-        always read previous reviews carefully before committing to a stay. This ensures that the
-        expectations of both the homeowner and myself are aligned before the sit begins.
+        One of the biggest advantages of TrustedHousesitters is its review system. Both homeowners
+        and sitters can leave reviews after a sit, making it easier to assess whether an arrangement
+        is a good fit. I always read previous reviews carefully before committing. It's important
+        that expectations on both sides are aligned before the sit begins.
       </p>
 
       <p>
-        I paid for a year-long membership with a sign-up discount and it was worth the investment.
-        By using this service, I didn’t pay for any accommodations for an entire year I traveled
-        full-time across the US. Even at a very low estimate of one hundred dollars per night for a
-        hotel, that adds up to thirty-six thousand dollars in annual savings. You can read my full
-        breakdown of the math in my guide:{' '}
+        I paid for a year-long membership using{' '}
+        <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
+          a sign-up discount
+        </a>
+        , and it turned out to be well worth the investment. During an entire year of traveling
+        full-time across the US, I didn't pay for accommodation. Even using a conservative estimate
+        of $100 per night for a hotel, that's approximately $36,500 in lodging costs avoided in one
+        year. You can read my full breakdown of the numbers in my guide:{' '}
         <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
           Is TrustedHousesitters worth it for sitters?
         </Link>
       </p>
 
       <p>
-        I have used the platform in many different states. It works exceptionally well if you work
-        remotely or simply enjoy spending time with animals. You get to live like a local in real
-        neighborhoods and experience life in a way that hotels can't offer.
+        I've used the platform in many different states, and it works particularly well if you work
+        remotely or simply enjoy spending time with animals. You get to live in real neighborhoods,
+        discover local favorites, and experience everyday life in places that hotels can't quite
+        offer.
       </p>
 
       <h2>The Human Connection</h2>
       <p>
-        Many homeowners are incredibly warm. They often go out of their way to show appreciation and
-        make you comfortable; they even sometimes invite you out for a meal or leave thoughtful
-        gifts on your arrival. What sets TrustedHousesitters apart is the sense of community. You
-        aren't just a guest; you are a temporary steward of a home. I've built lasting relationships
-        with homeowners who appreciate knowing their pets are happy and their home is safe while
-        they are away.
+        One thing I didn't fully appreciate before starting was the human connection. Many
+        homeowners are incredibly warm and welcoming. They often go out of their way to make you
+        comfortable, sometimes inviting you out for a meal, sharing local recommendations, or
+        leaving thoughtful gifts for your arrival. These are just a few of the{' '}
+        <Link href="/blog/hidden-perks-of-house-sitting">hidden perks of house sitting</Link>.
+      </p>
+
+      <p>
+        Over time, I've built lasting relationships with homeowners who trust me with their homes
+        and pets. There's something special about knowing that someone can go away and enjoy their
+        trip without worrying about their furry family members. That's what makes this arrangement
+        work: both sides benefit from a relationship built on trust.
       </p>
 
       <div className="prose-accent-box variant-cta">
         <span className="accent-box-label">Get {REFERRALS.THS.discount} Membership</span>
         <p>
-          Ready to start your own journey? Use my verified referral link to get{' '}
-          {REFERRALS.THS.discount} your annual membership.
+          Ready to start your own journey? Use my referral link to get {REFERRALS.THS.discount} off
+          your annual membership.
         </p>
         <a
           href={REFERRALS.THS.link}
