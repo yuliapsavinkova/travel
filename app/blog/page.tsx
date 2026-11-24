@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import BlogArchive from '../../components/BlogArchive';
 import { BLOG_POSTS } from '../../constants';
-import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate } from '../../utils/content';
+import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'All Guides & Articles | Sitter Journey',
@@ -98,7 +98,7 @@ export default function BlogPage() {
         </header>
 
         <section id="archive">
-          <BlogArchive posts={BLOG_POSTS} />
+          <BlogArchive posts={toPostSummaries(BLOG_POSTS)} />
         </section>
       </div>
     </>

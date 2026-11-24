@@ -137,6 +137,8 @@ export interface BlogPost {
   audience?: BlogAudience[];
 }
 
+export type BlogPostSummary = Omit<BlogPost, 'body'>;
+
 export interface TravelGuide {
   id: string;
   slug: string;

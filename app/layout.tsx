@@ -5,7 +5,7 @@ import Script from 'next/script';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { SITE_CONFIG } from '../constants';
+import { BLOG_POSTS, SITE_CONFIG } from '../constants';
 import { DEFAULT_OG_IMAGE, PUBLISHER_LOGO_URL } from '../utils/content';
 import '../styles.css';
 
@@ -176,6 +176,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   };
 
   const gaId = SITE_CONFIG.googleAnalyticsId;
+  const blogPaths = BLOG_POSTS.map((post) => `/${post.slug}`);
 
   return (
     <html
@@ -209,7 +210,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="app-root">
           <AnalyticsTracker />
           <div className="studio-depth" />
-          <Navigation />
+          <Navigation blogPaths={blogPaths} />
           <main className="main-viewport">{children}</main>
           <Footer />
         </div>

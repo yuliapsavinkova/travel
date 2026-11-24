@@ -1,4 +1,4 @@
-import { SITE_CONFIG } from '../constants';
+import { SITE_CONFIG } from '../site-config';
 import { FacebookIcon, InstagramIcon, MailIcon, PinterestIcon, TikTokIcon } from './Icons';
 
 interface SocialMediaIconsProps {

@@ -1,17 +1,28 @@
 import {
-  SiteStrings,
-  THS_DISCOUNT_PERCENT,
-  sits_completed,
   REFERRALS,
+  THS_DISCOUNT_PERCENT,
   YULIA_SITTER_JOURNEY,
-  YULIA_SITTER_JOURNEY_URL,
   YULIA_SITTER_JOURNEY_DISPLAY,
+  YULIA_SITTER_JOURNEY_URL,
 } from './types';
 
-// Domain registries
+// Domain registries (Server / static data)
 import { BLOG_POSTS, HOMEOWNER_POSTS, SITTER_POSTS } from './data/house-sitting/house-sitting';
-import { TRAVEL_GUIDES } from './data/travel/travel';
 import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
+import { TRAVEL_GUIDES } from './data/travel/travel';
+
+// Pure configuration constants
+export {
+  ACTIVE_YEAR,
+  CURRENT_YEAR,
+  GLOBAL_STRINGS,
+  IS_DEV,
+  NAV_ITEMS,
+  NEXT_YEAR,
+  SITE_CONFIG,
+  SITE_STATS,
+  TRUSTED_HOUSESITTERS_REF_LINK,
+} from './site-config';
 
 export {
   THS_DISCOUNT_PERCENT,
@@ -25,56 +36,4 @@ export {
   TRAVEL_GUIDES,
   ALL_RESOURCES,
   RESOURCES,
-};
-
-export const TRUSTED_HOUSESITTERS_REF_LINK = REFERRALS.THS.link;
-
-export const IS_DEV = process.env.NODE_ENV === 'development';
-
-const now = new Date();
-export const CURRENT_YEAR = now.getFullYear();
-export const ACTIVE_YEAR =
-  now.getMonth() === 11 && now.getDate() >= 25 ? CURRENT_YEAR + 1 : CURRENT_YEAR;
-export const NEXT_YEAR = ACTIVE_YEAR + 1;
-
-export const NAV_ITEMS = [
-  { label: 'Home', href: '/' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Resources', href: '/resources' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'About', href: '/about' },
-];
-
-/**
- * GLOBAL SITE STATISTICS
- */
-export const SITE_STATS = {
-  statesCount: '28',
-  countriesCount: '42',
-  sitsCompleted: String(sits_completed),
-  clientRating: '5.0',
-  satisfactionRate: '100%',
-};
-
-export const SITE_CONFIG = {
-  name: 'Sitter Journey',
-  tagline: 'Full-Time Traveler',
-  missionStart: 'May 2025',
-  email: 'sitterjourney@gmail.com',
-  googleAnalyticsId: 'G-R0920QKYXK',
-  socials: {
-    instagram: 'https://instagram.com/sitterjourney',
-    facebook: 'https://facebook.com/sitterjourney',
-    tiktok: 'https://tiktok.com/@sitterjourney',
-    pinterest: 'https://pinterest.com/sitterjourney',
-  },
-};
-
-export const GLOBAL_STRINGS: SiteStrings = {
-  resourcesSectionTitle: 'Resources',
-  resourcesSectionDescription: 'The tools and services I use while traveling full-time.',
-  travelPromoTitle: 'Join Me',
-  travelPromoText: `Ready to travel? Use my verified TrustedHousesitters discount link to get ${REFERRALS.THS.discount} your membership.`,
-  travelPromoLink: REFERRALS.THS.link,
-  travelPromoBtn: `Get ${REFERRALS.THS.discount} Now`,
 };

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { type ReactNode, useId } from 'react';
-import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../constants';
+import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../site-config';
 import BrandLogo from './BrandLogo';
 import { ExternalLink } from './Icons';
 import SectionDivider from './SectionDivider';

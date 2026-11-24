@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import BlogArchive from '../../components/BlogArchive';
 import { HOMEOWNER_POSTS } from '../../constants';
-import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate } from '../../utils/content';
+import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../../utils/content';
 
 export const metadata: Metadata = {
   title: 'Guides for Homeowners & Pet Parents | Sitter Journey',
@@ -99,7 +99,7 @@ export default function HomeownersPage() {
         </header>
 
         <section id="archive">
-          <BlogArchive posts={HOMEOWNER_POSTS} showAudienceTabs={false} />
+          <BlogArchive posts={toPostSummaries(HOMEOWNER_POSTS)} showAudienceTabs={false} />
         </section>
 
         <section className="home-feature-card text-center" aria-label="Track switcher">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { REFERRALS } from '../constants';
+import { REFERRALS } from '../types';
 import { ArrowUpRightIcon } from './Icons';
 import { trackFloatingCtaClick } from '../utils/analytics';
 

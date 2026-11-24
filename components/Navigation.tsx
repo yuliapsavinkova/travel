@@ -2,20 +2,19 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
-import { BLOG_POSTS, NAV_ITEMS } from '../constants';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { NAV_ITEMS } from '../site-config';
 import BrandLogo from './BrandLogo';
 import ContactForm from './ContactForm';
 import { MenuIcon, XIcon } from './Icons';
 
-const BLOG_ROUTES = new Set([
-  '/blog',
-  '/sitters',
-  '/homeowners',
-  ...BLOG_POSTS.map((p) => `/${p.slug}`),
-]);
+interface NavigationProps {
+  blogPaths?: string[];
+}
 
-const Navigation = () => {
+const STATIC_BLOG_ROUTES = new Set(['/blog', '/sitters', '/homeowners']);
+
+const Navigation = ({ blogPaths = [] }: NavigationProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
@@ -61,9 +60,13 @@ const Navigation = () => {
     }
   }, [pathname]);
 
+  const blogRouteSet = useMemo(() => {
+    return new Set([...STATIC_BLOG_ROUTES, ...blogPaths]);
+  }, [blogPaths]);
+
   const checkActive = (href: string) => {
     if (href === '/') return pathname === '/';
-    if (href === '/blog' && pathname && BLOG_ROUTES.has(pathname)) return true;
+    if (href === '/blog' && pathname && blogRouteSet.has(pathname)) return true;
     return pathname === href || pathname?.startsWith(`${href}/`);
   };
 

@@ -1,4 +1,4 @@
-import type { BlogPost, BlogTrack } from '../types';
+import type { BlogPost, BlogPostSummary, BlogTrack } from '../types';
 
 const SITE_URL = 'https://sitterjourney.com';
 
@@ -143,13 +143,13 @@ export const toAbsoluteUrl = (url?: string): string => {
   return `${SITE_URL}${url.startsWith('/') ? url : `/${url}`}`;
 };
 
-export const isHomeownerPost = (post: BlogPost): boolean => {
+export const isHomeownerPost = (post: Pick<BlogPost, 'track' | 'audience'>): boolean => {
   if (post.track === 'homeowners') return true;
   if (post.track === 'sitters') return false;
   return Boolean(post.audience?.some((a) => /pet parent|homeowner/i.test(a)));
 };
 
-export const getPostTrack = (post: BlogPost): BlogTrack => {
+export const getPostTrack = (post: Pick<BlogPost, 'track' | 'audience'>): BlogTrack => {
   return isHomeownerPost(post) ? 'homeowners' : 'sitters';
 };
 
@@ -161,7 +161,11 @@ export const getTrackLabel = (track: BlogTrack): string => {
   return track === 'homeowners' ? 'For Homeowners' : 'For Sitters';
 };
 
-export const sortPostsByOrder = (posts: BlogPost[]): BlogPost[] => {
+export const sortPostsByOrder = <T extends Pick<BlogPost, 'sortOrder'>>(posts: T[]): T[] => {
   return [...posts].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+};
+
+export const toPostSummaries = (posts: BlogPost[]): BlogPostSummary[] => {
+  return posts.map(({ body: _body, ...summary }) => summary);
 };
 

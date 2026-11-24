@@ -1,28 +1,28 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import type { BlogPost } from '../types';
+import type { BlogPostSummary } from '../types';
 import { formatCardDate, isHomeownerPost } from '../utils/content';
 import CommonCard from './CommonCard';
 import { CalendarIcon, SearchIcon, XIcon } from './Icons';
 
 interface BlogArchiveProps {
-  posts: BlogPost[];
+  posts: BlogPostSummary[];
   showAudienceTabs?: boolean;
 }
 
 const PILLAR_ORDER = ['House Sitting', 'Minimalism', 'Destinations', 'Freedom'];
 const AUDIENCE_FILTERS = ['For Sitters', 'For Homeowners'] as const;
 
-function getPostPillar(post: BlogPost): string {
+function getPostPillar(post: BlogPostSummary): string {
   return post.pillar || 'House Sitting';
 }
 
-function getAudienceFilterLabel(post: BlogPost): 'For Sitters' | 'For Homeowners' {
+function getAudienceFilterLabel(post: BlogPostSummary): 'For Sitters' | 'For Homeowners' {
   return isHomeownerPost(post) ? 'For Homeowners' : 'For Sitters';
 }
 
-function getAudienceBadge(post: BlogPost): 'Sitter' | 'Homeowner' {
+function getAudienceBadge(post: BlogPostSummary): 'Sitter' | 'Homeowner' {
   return isHomeownerPost(post) ? 'Homeowner' : 'Sitter';
 }
 

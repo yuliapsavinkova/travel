@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { SITE_CONFIG } from '../constants';
+import { SITE_CONFIG } from '../site-config';
 import { CheckCircleIcon, XIcon } from './Icons';
 import { trackContactFormSubmit } from '../utils/analytics';
 
