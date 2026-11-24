@@ -17,9 +17,7 @@ export default function BrandLogo({
   const content = (
     <div className={`brand-wordmark ${className}`}>
       <SJLogo size={iconSize} className="brand-logo-icon" />
-      <span className="brand-logo-name serif-italic">
-        Sitter Journey
-      </span>
+      <span className="brand-logo-name serif-italic">Sitter Journey</span>
     </div>
   );
 

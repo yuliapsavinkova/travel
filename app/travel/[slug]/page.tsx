@@ -199,7 +199,6 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
         articleTitle={guide.title}
         articleSlug={guide.slug}
       />
-
     </>
   );
 }

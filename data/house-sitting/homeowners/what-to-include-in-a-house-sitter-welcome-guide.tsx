@@ -28,11 +28,7 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
-  faqIds: [
-    'homeowner-what-to-leave',
-    'homeowner-how-to-prepare',
-    'homeowner-interview-questions',
-  ],
+  faqIds: ['homeowner-what-to-leave', 'homeowner-how-to-prepare', 'homeowner-interview-questions'],
   seoTitle: 'What to Include in a House Sitter Welcome Guide | Homeowner Checklist',
   seoDescription:
     'Complete checklist for writing a house sitter welcome guide: pet routines, emergency vet details, lock and Wi-Fi instructions, trash schedules, and house quirks.',
@@ -47,14 +43,14 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         Across {sits_completed}+ sits, the single document that prevents almost every mid-trip text
-        question is a clear, well-organized Welcome Guide. You do not need a 30-page manual—just
-        the practical details someone actually needs at 7 a.m. or in an unexpected moment.
+        question is a clear, well-organized Welcome Guide. You do not need a 30-page manual—just the
+        practical details someone actually needs at 7 a.m. or in an unexpected moment.
       </p>
 
       <p>
-        Whether you write it in a shared Google Doc, use TrustedHousesitters’ built-in Welcome Guide,
-        or leave a printed binder on the kitchen counter, aim to send a copy a few days before
-        arrival so your sitter can review it ahead of time.
+        Whether you write it in a shared Google Doc, use TrustedHousesitters’ built-in Welcome
+        Guide, or leave a printed binder on the kitchen counter, aim to send a copy a few days
+        before arrival so your sitter can review it ahead of time.
       </p>
 
       {/* Draft note: Add 1–2 sentences from experience on why sending the guide 2–3 days before arrival beats handing over a binder only at the door. */}
@@ -118,8 +114,8 @@ export const post: BlogPost = {
           and mailbox key location.
         </li>
         <li>
-          <strong>Thermostat &amp; appliances:</strong> Preferred temperature range, dishwasher/laundry
-          quirks, and plant watering schedule.
+          <strong>Thermostat &amp; appliances:</strong> Preferred temperature range,
+          dishwasher/laundry quirks, and plant watering schedule.
         </li>
         <li>
           <strong>Emergency shut-offs:</strong> Breaker panel and main water shut-off locations.

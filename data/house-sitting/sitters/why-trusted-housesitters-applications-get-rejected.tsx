@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { BlogPost, REFERRALS, sits_completed } from '../../../types';
 
 export const post: BlogPost = {

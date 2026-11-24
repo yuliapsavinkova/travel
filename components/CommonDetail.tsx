@@ -1,11 +1,11 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { type ReactNode } from 'react';
-import { ShieldCheckIcon, CalendarIcon } from './Icons';
-import FAQSection from './FAQSection';
-import ReturnButton from './ReturnButton';
-import type { NavLink, FAQItem } from '../types';
+import type { FAQItem, NavLink } from '../types';
 import { formatArticleDate } from '../utils/content';
+import FAQSection from './FAQSection';
+import { CalendarIcon, ShieldCheckIcon } from './Icons';
+import ReturnButton from './ReturnButton';
 
 interface CommonDetailProps {
   onBack?: string;
@@ -22,8 +22,6 @@ interface CommonDetailProps {
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqs?: FAQItem[];
-  ctaLabel?: string;
-  ctaLink?: string;
 }
 
 const CommonDetail = ({

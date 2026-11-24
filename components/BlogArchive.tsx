@@ -1,208 +1,192 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import type { BlogPostSummary } from '../types';
-import { formatCardDate, isHomeownerPost } from '../utils/content';
+import type { BlogPostSummary, BlogTrack } from '../types';
+import { formatCardDate } from '../utils/content';
 import CommonCard from './CommonCard';
 import { CalendarIcon, SearchIcon, XIcon } from './Icons';
 
 interface BlogArchiveProps {
-  posts: BlogPostSummary[];
-  showAudienceTabs?: boolean;
+  sitterPosts: BlogPostSummary[];
+  homeownerPosts: BlogPostSummary[];
+  initialTrack?: BlogTrack;
+  variant?: 'blog' | 'track';
 }
 
-const PILLAR_ORDER = ['House Sitting', 'Minimalism', 'Destinations', 'Freedom'];
-const AUDIENCE_FILTERS = ['For Sitters', 'For Homeowners'] as const;
+function matchesSearch(post: BlogPostSummary, query: string): boolean {
+  if (!query) return true;
 
-function getPostPillar(post: BlogPostSummary): string {
-  return post.pillar || 'House Sitting';
+  const haystack = [post.title, post.excerpt, post.topic, post.category, ...(post.audience ?? [])]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  return haystack.includes(query);
 }
 
-function getAudienceFilterLabel(post: BlogPostSummary): 'For Sitters' | 'For Homeowners' {
-  return isHomeownerPost(post) ? 'For Homeowners' : 'For Sitters';
-}
-
-function getAudienceBadge(post: BlogPostSummary): 'Sitter' | 'Homeowner' {
-  return isHomeownerPost(post) ? 'Homeowner' : 'Sitter';
-}
-
-export default function BlogArchive({ posts, showAudienceTabs = true }: BlogArchiveProps) {
-  const [activeFilter, setActiveFilter] = useState<string>('All');
+export default function BlogArchive({
+  sitterPosts,
+  homeownerPosts,
+  initialTrack = 'sitters',
+  variant = 'blog',
+}: BlogArchiveProps) {
+  const [activeTrack, setActiveTrack] = useState<BlogTrack>(initialTrack);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const activePillars = useMemo(() => {
-    const present = new Set(posts.map(getPostPillar));
-    const ordered = PILLAR_ORDER.filter((p) => present.has(p));
-    for (const p of present) {
-      if (!ordered.includes(p)) ordered.push(p);
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+
+  const filteredSitters = useMemo(
+    () => sitterPosts.filter((post) => matchesSearch(post, normalizedQuery)),
+    [sitterPosts, normalizedQuery]
+  );
+
+  const filteredHomeowners = useMemo(
+    () => homeownerPosts.filter((post) => matchesSearch(post, normalizedQuery)),
+    [homeownerPosts, normalizedQuery]
+  );
+
+  const activePosts = activeTrack === 'sitters' ? filteredSitters : filteredHomeowners;
+  const otherTrack: BlogTrack = activeTrack === 'sitters' ? 'homeowners' : 'sitters';
+  const otherPostsCount =
+    otherTrack === 'sitters' ? filteredSitters.length : filteredHomeowners.length;
+
+  const handleSelectTrack = (track: BlogTrack) => {
+    setActiveTrack(track);
+    if (variant === 'track' && typeof window !== 'undefined') {
+      window.history.replaceState(null, '', track === 'sitters' ? '/sitters' : '/homeowners');
     }
-    return ordered;
-  }, [posts]);
-
-  const isMultiPillarMode = activePillars.length > 1;
-
-  const filterTabs = useMemo(() => {
-    if (!showAudienceTabs && !isMultiPillarMode) {
-      return [];
-    }
-
-    if (isMultiPillarMode) {
-      return [
-        { label: 'All', count: posts.length },
-        ...activePillars.map((pillar) => ({
-          label: pillar,
-          count: posts.filter((p) => getPostPillar(p) === pillar).length,
-        })),
-      ];
-    }
-
-    const audienceTabs = AUDIENCE_FILTERS.map((audience) => ({
-      label: audience,
-      count: posts.filter((p) => getAudienceFilterLabel(p) === audience).length,
-    })).filter((tab) => tab.count > 0);
-
-    return [{ label: 'All', count: posts.length }, ...audienceTabs];
-  }, [posts, activePillars, isMultiPillarMode, showAudienceTabs]);
-
-  const filteredPosts = useMemo(() => {
-    const query = searchQuery.trim().toLowerCase();
-
-    return posts.filter((post) => {
-      const matchesTab =
-        activeFilter === 'All'
-          ? true
-          : isMultiPillarMode
-            ? getPostPillar(post) === activeFilter
-            : getAudienceFilterLabel(post) === activeFilter;
-
-      if (!matchesTab) return false;
-      if (!query) return true;
-
-      const haystack = [
-        post.title,
-        post.excerpt,
-        post.topic,
-        post.category,
-        ...(post.audience ?? []),
-        getAudienceFilterLabel(post),
-        getAudienceBadge(post),
-        getPostPillar(post),
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-
-      return haystack.includes(query);
-    });
-  }, [posts, activeFilter, searchQuery, isMultiPillarMode]);
-
-  const handleReset = () => {
-    setActiveFilter('All');
-    setSearchQuery('');
   };
 
+  const staticIntro = 'Guides for sitters and homeowners from the perspective of a sitter.';
+
   return (
-    <div className="blog-archive-section">
-      <div className="archive-toolbar">
-        {filterTabs.length > 0 && (
-          <nav
-            className="filter-tabs-container"
+    <>
+      <header className="text-center blog-archive-header">
+        <h1 className="display-title display-title-md">
+          {variant === 'blog' ? (
+            <>
+              The <span className="serif-italic">Blog.</span>
+            </>
+          ) : activeTrack === 'sitters' ? (
+            <>
+              Sitter <span className="serif-italic">Guides.</span>
+            </>
+          ) : (
+            <>
+              Homeowner <span className="serif-italic">Guides.</span>
+            </>
+          )}
+        </h1>
+        <p className="hero-paragraph home-section-intro">{staticIntro}</p>
+      </header>
+
+      <div className="blog-archive-section" id="archive">
+        <div className="blog-toolbar">
+          <div
+            className="track-segmented-control"
             role="tablist"
-            aria-label={
-              isMultiPillarMode ? 'Filter guides by topic' : 'Filter guides by audience'
-            }
+            aria-label="Switch between Sitter and Homeowner guides"
           >
-            {filterTabs.map(({ label, count }) => {
-              const isActive = activeFilter === label;
-              const tabId = `filter-tab-${label.toLowerCase().replace(/\s+/g, '-')}`;
-
-              return (
-                <button
-                  key={label}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  aria-controls="blog-archive-grid"
-                  id={tabId}
-                  className={`filter-tab-pill ${isActive ? 'active' : ''}`}
-                  onClick={() => setActiveFilter(label)}
-                >
-                  <span>{label}</span>
-                  <span className="filter-tab-count" aria-label={`${count} articles`}>
-                    {count}
-                  </span>
-                </button>
-              );
-            })}
-          </nav>
-        )}
-
-        {/* Integrated Search Input */}
-        <div className="archive-search-wrap">
-          <SearchIcon size={15} className="archive-search-icon" aria-hidden="true" />
-          <input
-            type="search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search guides..."
-            aria-label="Search guides"
-            className="archive-search-input"
-          />
-          {searchQuery && (
             <button
               type="button"
-              className="archive-search-clear"
-              onClick={() => setSearchQuery('')}
-              aria-label="Clear search"
+              role="tab"
+              id="tab-sitters"
+              aria-selected={activeTrack === 'sitters'}
+              aria-controls="blog-track-panel"
+              className={`track-segment ${activeTrack === 'sitters' ? 'active' : ''}`}
+              onClick={() => handleSelectTrack('sitters')}
             >
-              <XIcon size={13} />
+              <span>For Sitters</span>
+              <span className="track-segment-count">{sitterPosts.length}</span>
             </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-homeowners"
+              aria-selected={activeTrack === 'homeowners'}
+              aria-controls="blog-track-panel"
+              className={`track-segment ${activeTrack === 'homeowners' ? 'active' : ''}`}
+              onClick={() => handleSelectTrack('homeowners')}
+            >
+              <span>For Homeowners</span>
+              <span className="track-segment-count">{homeownerPosts.length}</span>
+            </button>
+          </div>
+
+          <div className="archive-search-wrap">
+            <SearchIcon size={15} className="archive-search-icon" aria-hidden="true" />
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={
+                activeTrack === 'sitters' ? 'Search sitter guides...' : 'Search homeowner guides...'
+              }
+              aria-label="Search guides"
+              className="archive-search-input"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                className="archive-search-clear"
+                onClick={() => setSearchQuery('')}
+                aria-label="Clear search"
+              >
+                <XIcon size={13} />
+              </button>
+            )}
+          </div>
+        </div>
+
+        <div
+          id="blog-track-panel"
+          role="tabpanel"
+          aria-labelledby={activeTrack === 'sitters' ? 'tab-sitters' : 'tab-homeowners'}
+        >
+          {activePosts.length > 0 ? (
+            <div className="grid-standard">
+              {activePosts.map((post) => (
+                <CommonCard
+                  key={post.id}
+                  image={post.imageUrl}
+                  metadata={[
+                    {
+                      icon: <CalendarIcon size={12} />,
+                      text: formatCardDate(post.date, post.updatedDate),
+                    },
+                  ]}
+                  title={post.title}
+                  description={post.excerpt}
+                  slug={`/${post.slug}`}
+                  actionLabel="Read Guide"
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="home-feature-card text-center">
+              <p className="hero-paragraph home-feature-paragraph">
+                No {activeTrack === 'sitters' ? 'sitter' : 'homeowner'} guides matched &ldquo;
+                {searchQuery}&rdquo;.
+              </p>
+              <div className="blog-empty-actions">
+                <button type="button" className="secondary-btn" onClick={() => setSearchQuery('')}>
+                  Clear Search
+                </button>
+                {otherPostsCount > 0 && (
+                  <button
+                    type="button"
+                    className="btn-gold"
+                    onClick={() => handleSelectTrack(otherTrack)}
+                  >
+                    See {otherPostsCount} {otherTrack === 'sitters' ? 'Sitter' : 'Homeowner'}{' '}
+                    {otherPostsCount === 1 ? 'Match' : 'Matches'}
+                  </button>
+                )}
+              </div>
+            </div>
           )}
         </div>
       </div>
-
-      {/* Grid of Articles */}
-      {filteredPosts.length > 0 ? (
-        <div
-          id="blog-archive-grid"
-          role="tabpanel"
-          aria-labelledby={`filter-tab-${activeFilter.toLowerCase().replace(/\s+/g, '-')}`}
-          className="grid-standard"
-        >
-          {filteredPosts.map((post) => {
-            const pillar = getPostPillar(post);
-            const badgeLabel =
-              isMultiPillarMode && pillar !== 'House Sitting' ? pillar : getAudienceBadge(post);
-
-            return (
-              <CommonCard
-                key={post.id}
-                image={post.imageUrl}
-                badge={showAudienceTabs || isMultiPillarMode ? badgeLabel : undefined}
-                metadata={[
-                  {
-                    icon: <CalendarIcon size={12} />,
-                    text: formatCardDate(post.date, post.updatedDate),
-                  },
-                ]}
-                title={post.title}
-                description={post.excerpt}
-                slug={`/${post.slug}`}
-                actionLabel="Read Guide"
-              />
-            );
-          })}
-        </div>
-      ) : (
-        <div className="home-feature-card text-center" id="blog-archive-grid">
-          <p className="hero-paragraph home-feature-paragraph">
-            No articles matched &ldquo;{searchQuery || activeFilter}&rdquo;.
-          </p>
-          <button type="button" className="secondary-btn" onClick={handleReset}>
-            Show All Guides
-          </button>
-        </div>
-      )}
-    </div>
+    </>
   );
 }

@@ -29,7 +29,6 @@
   line-height: 1.6;
 }
 
-
 .error-view-actions {
   display: inline-flex;
   gap: var(--s-4);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResourceItem, REFERRALS } from '../../types';
+import { REFERRALS, ResourceItem } from '../../types';
 
 export const resource: ResourceItem = {
   id: 'pf',

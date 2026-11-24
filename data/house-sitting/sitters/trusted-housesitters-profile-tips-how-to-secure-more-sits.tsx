@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import ArticleImage from '../../../components/ArticleImage';
 import { BlogPost, REFERRALS } from '../../../types';
 
@@ -236,10 +236,9 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        A clear, professional profile removes barriers for owners to say "yes." Get your photos
-        right, write for their concerns, and show you're responsible. That's what converts views into
-        confirmed sits.
+        <strong>Final Verdict</strong>A clear, professional profile removes barriers for owners to
+        say "yes." Get your photos right, write for their concerns, and show you're responsible.
+        That's what converts views into confirmed sits.
       </div>
     </>
   ),

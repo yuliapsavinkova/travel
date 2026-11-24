@@ -14,7 +14,6 @@ export default function GlobalError({
     <html lang="en">
       <body className="global-error-body">
         <ErrorView
-
           error={error}
           reset={reset}
           subtitle="Critical Error"
@@ -25,4 +24,3 @@ export default function GlobalError({
     </html>
   );
 }
-

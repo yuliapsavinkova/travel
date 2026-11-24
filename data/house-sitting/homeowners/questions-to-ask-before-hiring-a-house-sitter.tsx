@@ -27,11 +27,7 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
-  faqIds: [
-    'homeowner-interview-questions',
-    'homeowner-how-to-prepare',
-    'homeowner-what-to-leave',
-  ],
+  faqIds: ['homeowner-interview-questions', 'homeowner-how-to-prepare', 'homeowner-what-to-leave'],
   seoTitle: 'Questions to Ask Before Hiring a House Sitter | Vetting Guide',
   seoDescription:
     'Learn the best questions to ask when interviewing a house sitter or pet sitter, what thoughtful answers sound like, and common red flags to watch for.',
@@ -46,8 +42,8 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         Handing someone the keys to your home and trusting them with your pets is a big decision.
-        Having been on the other side of over {sits_completed} homeowner video calls and handovers, I
-        have noticed that the best interviews are short, specific, and practical.
+        Having been on the other side of over {sits_completed} homeowner video calls and handovers,
+        I have noticed that the best interviews are short, specific, and practical.
       </p>
 
       <p>
@@ -62,7 +58,9 @@ export const post: BlogPost = {
       <p>Start with how the sitter handles your specific pets—not pets in general:</p>
       <ul>
         <li>
-          <strong>“Have you cared for a pet with [anxiety / reactivity / medical needs] before?”</strong>{' '}
+          <strong>
+            “Have you cared for a pet with [anxiety / reactivity / medical needs] before?”
+          </strong>{' '}
           Listen for specific examples rather than a generic “I love all animals.”
         </li>
         <li>
@@ -70,8 +68,8 @@ export const post: BlogPost = {
           stay alone for 8 hours, clarify remote work habits, errands, and time at home upfront.
         </li>
         <li>
-          <strong>“What do you do if a pet refuses food or seems off?”</strong> You want a sitter who
-          notices subtle changes early and reaches out promptly instead of guessing.
+          <strong>“What do you do if a pet refuses food or seems off?”</strong> You want a sitter
+          who notices subtle changes early and reaches out promptly instead of guessing.
         </li>
       </ul>
 
@@ -94,7 +92,9 @@ export const post: BlogPost = {
             you clearly whether they have buffer time or another commitment right after your dates.
           </li>
           <li>
-            <strong>“Have you handled a home issue (leak, power outage, lock problem) before?”</strong>{' '}
+            <strong>
+              “Have you handled a home issue (leak, power outage, lock problem) before?”
+            </strong>{' '}
             Practical problem-solving protects your house as well as your pets.
           </li>
         </ul>

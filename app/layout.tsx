@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
-import type { ReactNode } from 'react';
 import Script from 'next/script';
+import type { ReactNode } from 'react';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';

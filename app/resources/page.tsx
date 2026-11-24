@@ -43,7 +43,8 @@ export default function ResourcesPage() {
         '@id': 'https://sitterjourney.com/resources#collection',
         url: 'https://sitterjourney.com/resources',
         name: 'Travel Resources & Discounts | Sitter Journey',
-        description: 'A curated list of tools, memberships, and services for nomadic travel and house sitting.',
+        description:
+          'A curated list of tools, memberships, and services for nomadic travel and house sitting.',
         mainEntity: {
           '@type': 'ItemList',
           itemListElement: ALL_RESOURCES.map((item, index) => ({

@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
@@ -133,7 +133,6 @@ export const post: BlogPost = {
           <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
             {REFERRALS.THS.ratePercent} referral discount
           </a>
-
           ), this alone can make Premium worth it financially.
         </li>
         <li>
@@ -205,12 +204,13 @@ export const post: BlogPost = {
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           referral link
         </a>{' '}
-        receive <strong>{REFERRALS.THS.ratePercent} off</strong> their first year's membership. That brings the prices to
-        approximately <strong>${Math.round(129 * (1 - REFERRALS.THS.rate / 100))}</strong> for Basic,{' '}
+        receive <strong>{REFERRALS.THS.ratePercent} off</strong> their first year's membership. That
+        brings the prices to approximately{' '}
+        <strong>${Math.round(129 * (1 - REFERRALS.THS.rate / 100))}</strong> for Basic,{' '}
         <strong>${Math.round(169 * (1 - REFERRALS.THS.rate / 100))}</strong> for Standard, and{' '}
-        <strong>${Math.round(259 * (1 - REFERRALS.THS.rate / 100))}</strong> for Premium. With discounted pricing, Premium becomes the less
-        expensive option starting with your 6th confirmed sit.
-
+        <strong>${Math.round(259 * (1 - REFERRALS.THS.rate / 100))}</strong> for Premium. With
+        discounted pricing, Premium becomes the less expensive option starting with your 6th
+        confirmed sit.
       </p>
 
       <h2>My Recommendation</h2>

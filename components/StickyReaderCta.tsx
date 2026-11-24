@@ -2,8 +2,8 @@
 
 import { type MouseEvent, useEffect, useRef, useState } from 'react';
 import { REFERRALS } from '../types';
-import { ArrowUpRightIcon } from './Icons';
 import { trackFloatingCtaClick } from '../utils/analytics';
+import { ArrowUpRightIcon } from './Icons';
 
 interface StickyReaderCtaProps {
   promoLink?: string;
@@ -118,4 +118,3 @@ export default function StickyReaderCta({
     </aside>
   );
 }
-

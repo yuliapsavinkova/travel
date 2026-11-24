@@ -87,9 +87,7 @@ export default function TravelPage() {
         <div className="container">
           <div className="hero-two-col-grid">
             <div className="hero-col-text">
-              <h1 className="display-title">
-                Travel Guides.
-              </h1>
+              <h1 className="display-title">Travel Guides.</h1>
               <p className="hero-paragraph">
                 Guides and stories from the {SITE_STATS.countriesCount} countries I've visited.
               </p>

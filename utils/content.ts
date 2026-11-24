@@ -29,19 +29,6 @@ const MONTH_INDEX: Record<string, string> = {
   dec: '12',
 };
 
-/**
- * Simple helper to convert plain text with double-newlines into HTML paragraphs.
- * This removes the need to manually write <p> tags in data files.
- */
-export const txt = (content: string): string => {
-  if (!content) return '';
-  return content
-    .split('\n\n')
-    .filter((paragraph) => paragraph.trim() !== '')
-    .map((paragraph) => `<p>${paragraph.trim().replace(/\n/g, '<br />')}</p>`)
-    .join('');
-};
-
 const MONTH_NAMES = [
   'January',
   'February',
@@ -60,7 +47,7 @@ const MONTH_NAMES = [
 /**
  * Format ISO dates ("2026-11-23") or clean display dates into human-readable text.
  */
-export const formatDisplayDate = (date?: string): string => {
+const formatDisplayDate = (date?: string): string => {
   if (!date) return '';
   const clean = date.replace(/^Updated:\s*/i, '').trim();
   const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(clean);
@@ -143,7 +130,7 @@ export const toAbsoluteUrl = (url?: string): string => {
   return `${SITE_URL}${url.startsWith('/') ? url : `/${url}`}`;
 };
 
-export const isHomeownerPost = (post: Pick<BlogPost, 'track' | 'audience'>): boolean => {
+const isHomeownerPost = (post: Pick<BlogPost, 'track' | 'audience'>): boolean => {
   if (post.track === 'homeowners') return true;
   if (post.track === 'sitters') return false;
   return Boolean(post.audience?.some((a) => /pet parent|homeowner/i.test(a)));
@@ -168,4 +155,3 @@ export const sortPostsByOrder = <T extends Pick<BlogPost, 'sortOrder'>>(posts: T
 export const toPostSummaries = (posts: BlogPost[]): BlogPostSummary[] => {
   return posts.map(({ body: _body, ...summary }) => summary);
 };
-

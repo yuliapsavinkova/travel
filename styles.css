@@ -9,8 +9,6 @@
 
 /* Modular Components */
 @import "./styles/components/buttons.css";
-@import "./styles/components/filter-tabs.css";
-@import "./styles/components/scroll-trigger.css";
 @import "./styles/components/brand.css";
 @import "./styles/components/header.css";
 @import "./styles/components/footer.css";
@@ -23,8 +21,9 @@
 @import "./styles/components/form.css";
 @import "./styles/components/error.css";
 
-/* Home Specific */
+/* Home & Blog Archive Specific */
 @import "./styles/components/home.css";
+@import "./styles/components/blog-archive.css";
 
 /* Prose Extras */
 @import "./styles/components/faq.css";

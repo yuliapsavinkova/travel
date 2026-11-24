@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { SITE_CONFIG } from '../site-config';
-import { CheckCircleIcon, XIcon } from './Icons';
 import { trackContactFormSubmit } from '../utils/analytics';
+import { CheckCircleIcon, XIcon } from './Icons';
 
 interface ContactFormProps {
   onClose: () => void;
@@ -66,9 +66,7 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
     <div className="portal-form-wrapper">
       <div className="portal-header-group">
         <div>
-          <h2 className="display-title display-title-md portal-title-flush">
-            Contact.
-          </h2>
+          <h2 className="display-title display-title-md portal-title-flush">Contact.</h2>
         </div>
         <button
           onClick={onClose}

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { ContactTrigger } from '../../components/ClientTriggers';
-import { MailIcon } from '../../components/Icons';
-import { SITE_CONFIG } from '../../site-config';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
+import { MailIcon } from '../../components/Icons';
 import { body as aboutBody } from '../../data/about';
+import { SITE_CONFIG } from '../../site-config';
 
 export const metadata: Metadata = {
   title: 'About Yulia: Full-Time Housesitter & Traveler | Sitter Journey',

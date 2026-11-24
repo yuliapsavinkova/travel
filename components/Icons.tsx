@@ -1,6 +1,6 @@
-import { useId, type SVGProps, type ReactNode } from 'react';
+import { type ReactNode, type SVGProps, useId } from 'react';
 
-export interface IconProps extends SVGProps<SVGSVGElement> {
+interface IconProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   // Explicitly add common SVG attributes to satisfy strict TypeScript checking
   className?: string;
@@ -116,7 +116,6 @@ export const SJLogo = ({ size = 48, className, ...props }: IconProps) => {
   );
 };
 
-
 /* --- BRAND & SOCIAL --- */
 
 export const InstagramIcon = (props: IconProps) => (
@@ -147,14 +146,6 @@ export const PinterestIcon = (props: IconProps) => (
   </IconBase>
 );
 
-// export const LinkedinIcon = (props: IconProps) => (
-//   <IconBase {...props}>
-//     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-//     <rect width="4" height="12" x="2" y="9" />
-//     <circle cx="4" cy="4" r="2" />
-//   </IconBase>
-// );
-
 export const MailIcon = (props: IconProps) => (
   <IconBase {...props}>
     <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -179,24 +170,6 @@ export const XIcon = (props: IconProps) => (
   </IconBase>
 );
 
-export const ChevronDownIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="m6 9 6 6 6-6" />
-  </IconBase>
-);
-
-export const ChevronUpIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="m18 15-6-6-6 6" />
-  </IconBase>
-);
-
-export const MinusIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="M5 12h14" />
-  </IconBase>
-);
-
 export const ArrowLeftIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="m12 19-7-7 7-7" />
@@ -208,21 +181,6 @@ export const ArrowUpRightIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M7 7h10v10" />
     <path d="M7 17 17 7" />
-  </IconBase>
-);
-
-export const LinkIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-  </IconBase>
-);
-
-export const HelpCircleIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <circle cx="12" cy="12" r="10" />
-    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-    <line x1="12" x2="12.01" y1="17" y2="17" />
   </IconBase>
 );
 
@@ -257,84 +215,10 @@ export const StarIcon = (props: IconProps) => (
   </IconBase>
 );
 
-export const AwardIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <circle cx="12" cy="8" r="6" />
-    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
-  </IconBase>
-);
-
-export const GlobeIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <circle cx="12" cy="12" r="10" />
-    <line x1="2" x2="22" y1="12" y2="12" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-  </IconBase>
-);
-
 export const ShieldCheckIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
     <path d="m9 12 2 2 4-4" />
-  </IconBase>
-);
-
-export const HeartIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-  </IconBase>
-);
-
-export const HomeIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-    <polyline points="9 22 9 12 15 12 15 22" />
-  </IconBase>
-);
-
-export const SmartphoneIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-    <line x1="12" x2="12" y1="18" y2="18" />
-  </IconBase>
-);
-
-export const LayoutIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-    <line x1="3" x2="21" y1="9" y2="9" />
-    <line x1="9" x2="9" y1="21" y2="9" />
-  </IconBase>
-);
-
-export const ZapIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-  </IconBase>
-);
-
-export const AlertCircleIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <circle cx="12" cy="12" r="10" />
-    <line x1="12" x2="12" y1="8" y2="12" />
-    <line x1="12" x2="12.01" y1="16" y2="16" />
-  </IconBase>
-);
-
-/**
- * Added to support financial and payment tool representation.
- */
-export const CreditCardIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <rect width="20" height="14" x="2" y="5" rx="2" />
-    <line x1="2" x2="22" y1="10" y2="10" />
-  </IconBase>
-);
-
-export const LeafIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a7 7 0 0 1-10 10Z" />
-    <path d="M11 20c-1 0-3-3-3-3" />
   </IconBase>
 );
 
@@ -345,27 +229,11 @@ export const CompassIcon = (props: IconProps) => (
   </IconBase>
 );
 
-export const QuoteIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 4.48-3.52 8-4 8Z" />
-    <path d="M14 21c3 0 7-1 7-8V5h-7v8h4c0 4.48-3.52 8-4 8Z" />
-  </IconBase>
-);
-
 export const ExternalLinkIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
     <polyline points="15 3 21 3 21 9" />
     <line x1="10" x2="21" y1="14" y2="3" />
-  </IconBase>
-);
-
-export const ExternalLink = ExternalLinkIcon;
-
-export const TagIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z" />
-    <line x1="7" x2="7.01" y1="7" y2="7" />
   </IconBase>
 );
 

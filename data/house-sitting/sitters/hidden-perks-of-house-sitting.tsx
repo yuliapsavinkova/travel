@@ -1,7 +1,7 @@
-import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../../types';
+import React from 'react';
 import ArticleImage from '../../../components/ArticleImage';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '11',

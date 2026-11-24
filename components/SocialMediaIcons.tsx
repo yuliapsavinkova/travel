@@ -51,11 +51,7 @@ export default function SocialMediaIcons({
         <PinterestIcon size={iconSize} />
       </a>
       {showEmail && (
-        <a
-          href={`mailto:${SITE_CONFIG.email}`}
-          className="social-icon-btn"
-          aria-label="Email"
-        >
+        <a href={`mailto:${SITE_CONFIG.email}`} className="social-icon-btn" aria-label="Email">
           <MailIcon size={iconSize} />
         </a>
       )}

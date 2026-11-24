@@ -92,24 +92,17 @@
   color: var(--color-overlay-badge-text);
   text-shadow: 0 1px 2px var(--color-overlay-dark);
   border-radius: var(--r-pill);
-  box-shadow:
-    inset 0 1px 0 var(--color-overlay-badge-highlight),
-    var(--shadow-md);
+  box-shadow: inset 0 1px 0 var(--color-overlay-badge-highlight), var(--shadow-md);
   pointer-events: none;
   white-space: nowrap;
   user-select: none;
-  transition:
-    background-color var(--t-fast),
-    border-color var(--t-fast),
-    box-shadow var(--t-fast);
+  transition: background-color var(--t-fast), border-color var(--t-fast), box-shadow var(--t-fast);
 }
 
 .glass-card:hover .card-badge {
   background-color: var(--color-overlay-badge-bg-hover);
   border-color: var(--color-overlay-badge-border-hover);
-  box-shadow:
-    inset 0 1px 0 var(--color-overlay-badge-highlight),
-    var(--shadow-lg);
+  box-shadow: inset 0 1px 0 var(--color-overlay-badge-highlight), var(--shadow-lg);
 }
 
 .card-content-stack {

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
-import { ALL_RESOURCES, BLOG_POSTS, TRAVEL_GUIDES } from '../constants';
+import { BLOG_POSTS } from '../data/house-sitting/house-sitting';
+import { ALL_RESOURCES } from '../data/resources/resources';
+import { TRAVEL_GUIDES } from '../data/travel/travel';
 import { toIsoDate } from '../utils/content';
 
 const SITE_URL = 'https://sitterjourney.com';

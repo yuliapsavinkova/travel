@@ -22,7 +22,3 @@ export const ContactTrigger = ({ label, className, style }: ContactTriggerProps)
     </button>
   );
 };
-
-// Re-export as InquiryTrigger for backward compatibility if needed,
-// but we will update all usages.
-export const InquiryTrigger = ContactTrigger;

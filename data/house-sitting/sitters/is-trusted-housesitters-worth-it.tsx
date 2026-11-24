@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
@@ -67,9 +67,7 @@ export const post: BlogPost = {
           <ul>
             <li>
               <strong>Upfront Cost:</strong> An annual membership fee is required. Review the{' '}
-              <Link href="/trusted-housesitters-membership-cost-levels">
-                membership levels
-              </Link>{' '}
+              <Link href="/trusted-housesitters-membership-cost-levels">membership levels</Link>{' '}
               before choosing.
             </li>
             <li>
@@ -131,7 +129,6 @@ export const post: BlogPost = {
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           this link applies {REFERRALS.THS.discount} automatically
         </a>
-
         .
       </p>
 

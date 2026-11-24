@@ -1,10 +1,10 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import {
   BlogPost,
   REFERRALS,
-  YULIA_SITTER_JOURNEY_URL,
   YULIA_SITTER_JOURNEY_DISPLAY,
+  YULIA_SITTER_JOURNEY_URL,
 } from '../../../types';
 
 export const post: BlogPost = {

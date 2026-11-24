@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
@@ -46,11 +46,9 @@ export const post: BlogPost = {
 
       <p>
         If you don't have any reviews yet, this strategy won't help you. You need to{' '}
-        <Link href="/how-to-get-your-first-house-sit-no-reviews">
-          land your first sit first
-        </Link>{' '}
-        to build credibility. This guide is for sitters who already have a foundation and want to
-        scale up to competitive sits.
+        <Link href="/how-to-get-your-first-house-sit-no-reviews">land your first sit first</Link> to
+        build credibility. This guide is for sitters who already have a foundation and want to scale
+        up to competitive sits.
       </p>
 
       <h2>The Problem: Speed vs. Quality</h2>

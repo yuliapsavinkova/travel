@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import BlogArchive from '../../components/BlogArchive';
-import { SITTER_POSTS } from '../../data/house-sitting/house-sitting';
+import { HOMEOWNER_POSTS, SITTER_POSTS } from '../../data/house-sitting/house-sitting';
 import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../../utils/content';
 
 export const metadata: Metadata = {
@@ -87,39 +86,12 @@ export default function SittersPage() {
       />
 
       <div className="container section-margin archive-page-container">
-        <header className="text-center">
-          <span className="sub-header">For Sitters</span>
-          <h1 className="display-title display-title-md">
-            Sitter <span className="serif-italic">Guides.</span>
-          </h1>
-          <p className="hero-paragraph home-section-intro">
-            Everything I learned completing full-time house sits—from landing your first stay with
-            zero reviews to saving thousands on travel lodging.
-          </p>
-        </header>
-
-        <section id="archive">
-          <BlogArchive posts={toPostSummaries(SITTER_POSTS)} showAudienceTabs={false} />
-        </section>
-
-        <section className="home-feature-card text-center" aria-label="Track switcher">
-          <span className="sub-header">Are You a Pet Parent or Homeowner?</span>
-          <h2 className="display-title display-title-md">
-            Looking to <span className="serif-italic">Hire or Host a Sitter?</span>
-          </h2>
-          <p className="hero-paragraph home-feature-paragraph">
-            I keep homeowner guides separate from sitter strategy—read checklists on preparing your
-            home, interviewing applicants, and choosing exchange vs. private care.
-          </p>
-          <div className="hero-button-group" style={{ justifyContent: 'center' }}>
-            <Link href="/homeowners" className="btn-gold">
-              Read Homeowner Guides &rarr;
-            </Link>
-            <Link href="/blog" className="secondary-btn">
-              All Blog Guides
-            </Link>
-          </div>
-        </section>
+        <BlogArchive
+          sitterPosts={toPostSummaries(SITTER_POSTS)}
+          homeownerPosts={toPostSummaries(HOMEOWNER_POSTS)}
+          initialTrack="sitters"
+          variant="track"
+        />
       </div>
     </>
   );

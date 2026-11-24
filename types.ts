@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
-export type PetType = 'Dog' | 'Cat' | 'Farm' | 'Reptile';
+import type { ReactNode } from 'react';
 
 /**
  * SINGLE SOURCE OF TRUTH FOR REFERRALS & PROMOTIONS
@@ -78,18 +76,13 @@ export interface Review {
   imageUrl?: string;
 }
 
-export type BlogAudience = 'Sitters' | 'Pet Parents' | 'Homeowners';
+type BlogAudience = 'Sitters' | 'Pet Parents' | 'Homeowners';
 
 export type BlogTrack = 'sitters' | 'homeowners';
 
-export type BlogPillar =
-  | 'House Sitting'
-  | 'Minimalism'
-  | 'Destinations'
-  | 'Freedom'
-  | (string & {});
+type BlogPillar = 'House Sitting' | 'Minimalism' | 'Destinations' | 'Freedom' | (string & {});
 
-export type MonthName =
+type MonthName =
   | 'January'
   | 'February'
   | 'March'
@@ -104,7 +97,7 @@ export type MonthName =
   | 'December';
 
 /** Standard human-readable date format (e.g., "November 23, 2026") */
-export type ContentDate = `${MonthName} ${number}, ${number}`;
+type ContentDate = `${MonthName} ${number}, ${number}`;
 
 export interface BlogPost {
   id: string;
@@ -183,13 +176,4 @@ export interface ResourceItem {
 export interface ResourceCategory {
   title: string;
   items: ResourceItem[];
-}
-
-export interface SiteStrings {
-  resourcesSectionTitle: string;
-  resourcesSectionDescription: string;
-  travelPromoTitle: string;
-  travelPromoText: string;
-  travelPromoLink: string;
-  travelPromoBtn: string;
 }

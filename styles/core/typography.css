@@ -82,7 +82,12 @@ blockquote,
 }
 
 /* 2. Heading Colors & Accents (Single Solid Color) */
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .display-hero,
 .display-title,
 .display-title-md,
@@ -92,7 +97,12 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Guarantee single solid color across all heading descendants */
-h1 span, h2 span, h3 span, h4 span, h5 span, h6 span,
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span,
 .display-hero span,
 .display-title span,
 .display-title-md span,

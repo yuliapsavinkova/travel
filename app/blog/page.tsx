@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
 import BlogArchive from '../../components/BlogArchive';
-import { BLOG_POSTS } from '../../data/house-sitting/house-sitting';
+import { BLOG_POSTS, HOMEOWNER_POSTS, SITTER_POSTS } from '../../data/house-sitting/house-sitting';
 import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../../utils/content';
 
 export const metadata: Metadata = {
-  title: 'All Guides & Articles | Sitter Journey',
+  title: 'House Sitting Blog: Guides for Sitters & Homeowners | Sitter Journey',
   description:
-    'Browse all house sitting guides separated clearly into dedicated tracks for Sitters and Homeowners.',
+    'Read dedicated house sitting guides separated by tab: For Sitters and For Homeowners.',
   alternates: {
     canonical: 'https://sitterjourney.com/blog',
   },
   openGraph: {
-    title: 'All Guides & Articles | Sitter Journey',
+    title: 'House Sitting Blog: Guides for Sitters & Homeowners | Sitter Journey',
     description:
-      'Browse all house sitting guides separated clearly into dedicated tracks for Sitters and Homeowners.',
+      'Read dedicated house sitting guides separated by tab: For Sitters and For Homeowners.',
     url: 'https://sitterjourney.com/blog',
     type: 'website',
     images: [
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Sitter Journey Guides & Journal',
+        alt: 'Sitter Journey Blog - For Sitters and For Homeowners',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All Guides & Articles | Sitter Journey',
+    title: 'House Sitting Blog: Guides for Sitters & Homeowners | Sitter Journey',
     description:
-      'Browse all house sitting guides separated clearly into dedicated tracks for Sitters and Homeowners.',
+      'Read dedicated house sitting guides separated by tab: For Sitters and For Homeowners.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
@@ -42,9 +42,9 @@ export default function BlogPage() {
         '@type': 'Blog',
         '@id': 'https://sitterjourney.com/blog#collection',
         url: 'https://sitterjourney.com/blog',
-        name: 'Sitter Journey Guides',
+        name: 'Sitter Journey Blog',
         description:
-          'Practical guides and stories on house sitting for both sitters and homeowners.',
+          'House sitting guides organized into dedicated tabs for Sitters and Homeowners.',
         blogPost: BLOG_POSTS.map((post) => ({
           '@type': 'BlogPosting',
           headline: post.title,
@@ -72,7 +72,7 @@ export default function BlogPage() {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'All Guides',
+            name: 'Blog',
             item: 'https://sitterjourney.com/blog',
           },
         ],
@@ -88,18 +88,12 @@ export default function BlogPage() {
       />
 
       <div className="container section-margin archive-page-container">
-        <header className="text-center">
-          <h1 className="display-title display-title-md">
-            The <span className="serif-italic">Blog.</span>
-          </h1>
-          <p className="hero-paragraph home-section-intro">
-            Practical guides and lived stories on house sitting for both sitters and homeowners.
-          </p>
-        </header>
-
-        <section id="archive">
-          <BlogArchive posts={toPostSummaries(BLOG_POSTS)} />
-        </section>
+        <BlogArchive
+          sitterPosts={toPostSummaries(SITTER_POSTS)}
+          homeownerPosts={toPostSummaries(HOMEOWNER_POSTS)}
+          initialTrack="sitters"
+          variant="blog"
+        />
       </div>
     </>
   );

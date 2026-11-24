@@ -37,8 +37,7 @@ export default function AnalyticsTracker() {
       // Extract article title from page heading or document title
       const headingEl = document.querySelector('h1.detail-title-text, h1');
       const articleTitle =
-        headingEl?.textContent?.trim() ||
-        document.title.replace(/\s*\|.*$/, '').trim();
+        headingEl?.textContent?.trim() || document.title.replace(/\s*\|.*$/, '').trim();
 
       // Check if this link points to Yulia's Professional Portfolio
       if (href.includes('yulia.sitterjourney.com')) {
@@ -65,7 +64,13 @@ export default function AnalyticsTracker() {
         const isFooter = Boolean(anchor.closest('#site-footer, footer'));
         const isHero = Boolean(anchor.closest('.hero-socials-wrapper, header'));
         const isProse = Boolean(anchor.closest('.prose-content, .detail-rich-content, article'));
-        const placement = isFooter ? 'footer' : isHero ? 'hero' : isProse ? 'in_article' : 'general';
+        const placement = isFooter
+          ? 'footer'
+          : isHero
+            ? 'hero'
+            : isProse
+              ? 'in_article'
+              : 'general';
 
         trackSocialClick({
           network,
@@ -80,7 +85,9 @@ export default function AnalyticsTracker() {
       if (!isReferral) return;
 
       // Determine placement context
-      const isInsideProse = Boolean(anchor.closest('.prose-content, .detail-rich-content, article'));
+      const isInsideProse = Boolean(
+        anchor.closest('.prose-content, .detail-rich-content, article')
+      );
       const isInsideCallout = Boolean(anchor.closest('.prose-accent-box, .hero-disclosure-bar'));
       const linkPlacement = isInsideCallout
         ? 'resource_callout'

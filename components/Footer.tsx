@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { type ReactNode, useId } from 'react';
 import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../site-config';
 import BrandLogo from './BrandLogo';
-import { ExternalLink } from './Icons';
+import { ExternalLinkIcon } from './Icons';
 import SectionDivider from './SectionDivider';
 import SocialMediaIcons from './SocialMediaIcons';
 import SurfHorizon from './SurfHorizon';
@@ -33,7 +33,7 @@ interface NewTabLinkProps extends Pick<FooterLink, 'href' | 'sponsored'> {
 const NewTabLink = ({ href, sponsored = false, showIcon = false, children }: NewTabLinkProps) => (
   <Link href={href} target="_blank" rel={`noopener noreferrer${sponsored ? ' sponsored' : ''}`}>
     {children}
-    {showIcon && <ExternalLink size={12} aria-hidden="true" />}
+    {showIcon && <ExternalLinkIcon size={12} aria-hidden="true" />}
     <span className="sr-only"> (opens in a new tab)</span>
   </Link>
 );

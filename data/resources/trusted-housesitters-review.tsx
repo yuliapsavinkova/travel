@@ -1,6 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
-import { ResourceItem, REFERRALS, sits_completed } from '../../types';
+import React from 'react';
+import { REFERRALS, ResourceItem, sits_completed } from '../../types';
 
 export const resource: ResourceItem = {
   id: 'ths',
@@ -27,8 +27,8 @@ export const resource: ResourceItem = {
       </p>
 
       <p>
-        As a solo female housesitter and petsitter, I have completed {sits_completed} sits across the
-        United States. I can say with confidence that this is one of the most effective ways to
+        As a solo female housesitter and petsitter, I have completed {sits_completed} sits across
+        the United States. I can say with confidence that this is one of the most effective ways to
         travel affordably and sustainably. It's not just about saving money on accommodation; it's
         about experiencing places like a local and building genuine connections along the way.
       </p>

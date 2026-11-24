@@ -5,7 +5,7 @@ declare global {
   }
 }
 
-export interface AnalyticsEventParams {
+interface AnalyticsEventParams {
   event_category?: string;
   event_label?: string;
   value?: number;
@@ -19,7 +19,7 @@ const recentEvents = new Map<string, number>();
  * Dispatches a single canonical event to Google Analytics (gtag.js) and dataLayer.
  * Safe to call in browser environments; no-ops during SSR.
  */
-export function trackEvent(eventName: string, params?: AnalyticsEventParams): void {
+function trackEvent(eventName: string, params?: AnalyticsEventParams): void {
   if (typeof window === 'undefined') return;
 
   // Deduplicate identical events triggered in rapid succession (< 800ms)
@@ -56,7 +56,7 @@ export function trackEvent(eventName: string, params?: AnalyticsEventParams): vo
   }
 }
 
-export interface ReferralPartnerInfo {
+interface ReferralPartnerInfo {
   partner: string;
   isReferral: boolean;
 }
@@ -94,7 +94,7 @@ export function detectReferralPartner(url: string): ReferralPartnerInfo {
   return { partner: 'External', isReferral: false };
 }
 
-export interface SocialNetworkInfo {
+interface SocialNetworkInfo {
   network: string;
   isSocial: boolean;
 }
@@ -155,7 +155,7 @@ export function trackFloatingCtaClick(options: {
 
   const slug =
     options.articleSlug ||
-    currentPath.replace(/^\/(blog|travel|resources)\//, '').replace(/\/$/, '') ||
+    currentPath.replace(/^\/(?:travel\/)?/, '').replace(/\/$/, '') ||
     'unknown';
 
   trackEvent('floating_cta_click', {
@@ -199,7 +199,7 @@ export function trackInArticleReferralClick(options: {
 
   const slug =
     options.articleSlug ||
-    currentPath.replace(/^\/(blog|travel|resources)\//, '').replace(/\/$/, '') ||
+    currentPath.replace(/^\/(?:travel\/)?/, '').replace(/\/$/, '') ||
     'unknown';
 
   const partnerName = options.partner || detectReferralPartner(options.linkUrl).partner;
@@ -232,8 +232,7 @@ export function trackContactFormSubmit(options?: {
 }): void {
   const currentPath =
     typeof window !== 'undefined' ? window.location.pathname : options?.pagePath || '';
-  const currentTitle =
-    typeof document !== 'undefined' ? document.title : options?.pageTitle || '';
+  const currentTitle = typeof document !== 'undefined' ? document.title : options?.pageTitle || '';
   const currentHref = typeof window !== 'undefined' ? window.location.href : '';
   const formName = options?.formName || 'Global Contact Modal';
 
@@ -300,8 +299,7 @@ export function trackSocialClick(options: {
 }): void {
   const currentPath =
     typeof window !== 'undefined' ? window.location.pathname : options.pagePath || '';
-  const currentTitle =
-    typeof document !== 'undefined' ? document.title : options.pageTitle || '';
+  const currentTitle = typeof document !== 'undefined' ? document.title : options.pageTitle || '';
   const currentHref = typeof window !== 'undefined' ? window.location.href : '';
   const placement = options.placement || 'general';
 

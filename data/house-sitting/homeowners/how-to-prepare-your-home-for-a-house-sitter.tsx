@@ -27,11 +27,7 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
-  faqIds: [
-    'homeowner-how-to-prepare',
-    'homeowner-what-to-leave',
-    'homeowner-interview-questions',
-  ],
+  faqIds: ['homeowner-how-to-prepare', 'homeowner-what-to-leave', 'homeowner-interview-questions'],
   seoTitle: 'How to Prepare Your Home for a House Sitter | Complete Checklist',
   seoDescription:
     'A practical checklist for homeowners preparing for a house sitter: welcome guide details, pet supplies, clean kitchen & sleeping space, and house quirks to share early.',
@@ -52,16 +48,16 @@ export const post: BlogPost = {
 
       <p>
         You do not need hotel-level perfection to welcome a sitter. What makes the biggest
-        difference is removing guesswork around your pets, keys, routines, and small house quirks
-        so everyone relaxes on day one.
+        difference is removing guesswork around your pets, keys, routines, and small house quirks so
+        everyone relaxes on day one.
       </p>
 
       {/* Draft note: Add 1–2 short personal observations here about what immediately puts you at ease on arrival vs. common small oversights homeowners miss when rushing to pack. */}
 
       <h2>1. Ready the Living &amp; Sleeping Spaces</h2>
       <p>
-        A sitter settles in faster—and focuses right away on your pets—when the basics are ready
-        for them upon arrival:
+        A sitter settles in faster—and focuses right away on your pets—when the basics are ready for
+        them upon arrival:
       </p>
       <ul>
         <li>
@@ -94,8 +90,8 @@ export const post: BlogPost = {
         <span className="accent-box-label">Pet Supply Check</span>
         <ul>
           <li>
-            <strong>Food and treats:</strong> Extra kibble, wet food, litter, and poop bags stored in
-            one obvious spot.
+            <strong>Food and treats:</strong> Extra kibble, wet food, litter, and poop bags stored
+            in one obvious spot.
           </li>
           <li>
             <strong>Medications and dosing notes:</strong> Clear written instructions, pill pockets
@@ -156,7 +152,8 @@ export const post: BlogPost = {
       <p>
         Before you head out, agree on two practical details: how often you want updates (text,
         WhatsApp, or platform messages) and whether you will do a handover overlap or lockbox entry.
-        If you are still deciding between an exchange platform and hiring privately, read my guide on{' '}
+        If you are still deciding between an exchange platform and hiring privately, read my guide
+        on{' '}
         <Link href="/trusted-housesitters-exchange-vs-professional-house-sitting">
           exchange vs. professional house sitting
         </Link>
@@ -170,10 +167,9 @@ export const post: BlogPost = {
       {/* Draft note: Wrap up with a short closing story or invite homeowners to reach out via yulia.sitterjourney.com if they want a dependable private sitter. */}
 
       <div className="prose-end">
-        <strong>Ready to Welcome a Sitter?</strong>
-        A little preparation before departure lets you step onto the plane knowing both your pets
-        and your home are in calm hands. If you are inviting sitters through TrustedHousesitters,
-        you can{' '}
+        <strong>Ready to Welcome a Sitter?</strong>A little preparation before departure lets you
+        step onto the plane knowing both your pets and your home are in calm hands. If you are
+        inviting sitters through TrustedHousesitters, you can{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           get {REFERRALS.THS.discount} your homeowner membership with my referral link
         </a>
