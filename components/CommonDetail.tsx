@@ -121,11 +121,11 @@ const CommonDetail = ({
           </div>
         )}
 
-        {onBack && (
+        {/* {onBack && (
           <div className="detail-back-top">
             <ReturnButton href={onBack} label={backLabel} />
           </div>
-        )}
+        )} */}
       </div>
 
       <div className="detail-layout-container">

@@ -14,9 +14,9 @@ export default function ReturnButton({
 }: ReturnButtonProps) {
   let displayLabel = label;
   if (/^back to\s+/i.test(displayLabel)) {
-    displayLabel = displayLabel.replace(/^back to\s+/i, 'Return to ');
+    displayLabel = displayLabel.replace(/^back to\s+/i, 'Return to Guides ');
   } else if (!/^return to\s+/i.test(displayLabel)) {
-    displayLabel = `Return to ${displayLabel}`;
+    displayLabel = `Return to Guides ${displayLabel}`;
   }
 
   return (

@@ -14,12 +14,12 @@
   margin: 0 auto;
 }
 
-.detail-back-top {
+/* .detail-back-top {
   margin-top: var(--s-4);
   margin-bottom: var(--s-4);
   display: flex;
   justify-content: center;
-}
+} */
 
 .detail-back-bottom {
   margin-top: var(--s-9);
