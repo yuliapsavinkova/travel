@@ -78,7 +78,9 @@ export interface Review {
   imageUrl?: string;
 }
 
-export type BlogAudience = 'Sitters' | 'Pet Parents';
+export type BlogAudience = 'Sitters' | 'Pet Parents' | 'Homeowners';
+
+export type BlogTrack = 'sitters' | 'homeowners';
 
 export type BlogPillar =
   | 'House Sitting'
@@ -107,6 +109,7 @@ export type ContentDate = `${MonthName} ${number}, ${number}`;
 export interface BlogPost {
   id: string;
   slug: string;
+  track?: BlogTrack;
   pillar?: BlogPillar;
   topic?: string;
   title: string;
@@ -122,6 +125,9 @@ export interface BlogPost {
   sortOrder?: number;
   ctaLink?: string;
   ctaLabel?: string;
+  isAffiliate?: boolean;
+  showStickyCta?: boolean;
+  stickyCtaText?: string;
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqIds?: string[];

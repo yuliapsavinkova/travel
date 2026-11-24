@@ -86,21 +86,21 @@ export default function HomePage() {
                 title: 'Is it really worth it?',
                 desc: 'What I Expected vs. What Happened',
                 img: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=800',
-                link: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+                link: '/is-trusted-housesitters-worth-it-for-sitters',
               },
               {
                 label: 'Strategy',
                 title: 'How can I do this too?',
                 desc: 'My Strategies That Made It Possible',
                 img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
-                link: '/blog/how-to-get-your-first-house-sit-no-reviews',
+                link: '/how-to-get-your-first-house-sit-no-reviews',
               },
               {
                 label: 'Financials',
                 title: 'How much do I need to save?',
                 desc: 'What I Budgeted vs. What I Needed',
                 img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
-                link: '/blog/can-you-really-travel-for-free-house-sitting-math',
+                link: '/can-you-really-travel-for-free-house-sitting-math',
               },
             ].map((pillar) => (
               <Link key={pillar.link} href={pillar.link} className="card-wrapper card-wrapper-link">
@@ -128,9 +128,9 @@ export default function HomePage() {
           </div>
 
           <div className="home-section-footer">
-            <Link href="/blog#archive" className="home-footer-link">
-              <span>or read my </span>
-              <span className="serif-italic">entire blog here &rarr;</span>
+            <Link href="/sitters" className="home-footer-link">
+              <span>or explore all </span>
+              <span className="serif-italic">sitter guides &rarr;</span>
             </Link>
           </div>
         </section>

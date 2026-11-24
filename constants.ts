@@ -9,7 +9,7 @@ import {
 } from './types';
 
 // Domain registries
-import { BLOG_POSTS } from './data/blog/blog';
+import { BLOG_POSTS, HOMEOWNER_POSTS, SITTER_POSTS } from './data/house-sitting/house-sitting';
 import { TRAVEL_GUIDES } from './data/travel/travel';
 import { ALL_RESOURCES, RESOURCES } from './data/resources/resources';
 
@@ -20,6 +20,8 @@ export {
   YULIA_SITTER_JOURNEY_URL,
   YULIA_SITTER_JOURNEY_DISPLAY,
   BLOG_POSTS,
+  SITTER_POSTS,
+  HOMEOWNER_POSTS,
   TRAVEL_GUIDES,
   ALL_RESOURCES,
   RESOURCES,

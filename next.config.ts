@@ -15,6 +15,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Temporary legacy /blog/:slug -> /:slug redirect for Google re-indexing (safe to remove after ~1 month)
+  async redirects() {
+    return [
+      {
+        source: '/blog/:slug',
+        destination: '/:slug',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
