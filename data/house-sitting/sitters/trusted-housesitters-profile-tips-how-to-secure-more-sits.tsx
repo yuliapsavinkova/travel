@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import ArticleImage from '../../components/ArticleImage';
-import { BlogPost, REFERRALS } from '../../types';
+import ArticleImage from '../../../components/ArticleImage';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '2',
   slug: 'trusted-housesitters-profile-tips-how-to-secure-more-sits',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'Profile Tips: How to Secure More Sits',
   navTitle: 'Profile Tips',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 6,
+  sortOrder: 5,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1517125591588-3a29b2182219?q=80&w=2073&auto=format&fit=crop',
@@ -170,7 +171,7 @@ export const post: BlogPost = {
       <p>
         Owners are reviewing multiple profiles. Make yours easy to read. If you're just getting
         started, check out my guide on{' '}
-        <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+        <Link href="/how-to-get-your-first-house-sit-no-reviews">
           how to get your first sit with no reviews
         </Link>{' '}
         for strategies that work even without a track record.
@@ -228,7 +229,7 @@ export const post: BlogPost = {
       <p>
         Once your profile is solid and you've built up some reviews, you'll want to move fast on
         competitive sits. Read my{' '}
-        <Link href="/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
+        <Link href="/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
           AI strategy for applying to high-demand sits
         </Link>{' '}
         to scale your applications without sacrificing quality.

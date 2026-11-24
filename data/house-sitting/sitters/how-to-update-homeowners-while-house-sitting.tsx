@@ -1,9 +1,10 @@
 import React from 'react';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '13',
   slug: 'how-to-update-homeowners-while-house-sitting',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'How to Update Homeowners While House Sitting: Frequency, Content, and Boundaries',
   navTitle: 'Updating Owners',
@@ -12,7 +13,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 14,
+  sortOrder: 13,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=2070&auto=format&fit=crop',

@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '3',
   slug: 'is-trusted-housesitters-worth-it-for-sitters',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'Pros and Cons of Exchanging Pet Care for Accommodation',
   navTitle: 'Is It Worth It?',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'July 21, 2026',
   category: 'Review',
   location: 'Financial',
-  sortOrder: 2,
+  sortOrder: 1,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2060&auto=format&fit=crop',
@@ -29,7 +30,7 @@ export const post: BlogPost = {
 
       <p>
         If you're comparing TrustedHousesitters to paid platforms like Rover, read my{' '}
-        <Link href="/blog/trusted-housesitters-vs-rover-comparison">
+        <Link href="/trusted-housesitters-vs-rover-comparison">
           breakdown of the key differences
         </Link>
         . They solve completely different problems.
@@ -66,7 +67,7 @@ export const post: BlogPost = {
           <ul>
             <li>
               <strong>Upfront Cost:</strong> An annual membership fee is required. Review the{' '}
-              <Link href="/blog/trusted-housesitters-membership-cost-levels">
+              <Link href="/trusted-housesitters-membership-cost-levels">
                 membership levels
               </Link>{' '}
               before choosing.
@@ -74,14 +75,14 @@ export const post: BlogPost = {
             <li>
               <strong>Competition:</strong> Desirable sits move fast and platform has applicant cap
               pressure. I share a{' '}
-              <Link href="/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
+              <Link href="/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
                 strategy for applying quickly
               </Link>{' '}
               if you want an edge.
             </li>
             <li>
               <strong>Learning Curve:</strong> Early success takes strategy. See my{' '}
-              <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+              <Link href="/how-to-get-your-first-house-sit-no-reviews">
                 guide to getting your first sit without reviews
               </Link>
               .
@@ -94,7 +95,7 @@ export const post: BlogPost = {
       <p>
         Most hesitation comes from the annual fee. Here's the current reality — and if you want to
         dig deeper into which tier fits your travel pace, I break it all down in{' '}
-        <Link href="/blog/trusted-housesitters-membership-cost-levels">
+        <Link href="/trusted-housesitters-membership-cost-levels">
           my membership levels article
         </Link>
         :
@@ -136,11 +137,11 @@ export const post: BlogPost = {
 
       <p>
         For long-term or full-time travel, this math is hard to beat. I go deeper in my{' '}
-        <Link href="/blog/can-you-really-travel-for-free-house-sitting-math">
+        <Link href="/can-you-really-travel-for-free-house-sitting-math">
           full house sitting cost breakdown
         </Link>
         , and in my{' '}
-        <Link href="/blog/trusted-housesitters-membership-cost-levels">
+        <Link href="/trusted-housesitters-membership-cost-levels">
           tier-by-tier membership comparison
         </Link>{' '}
         if you're deciding which plan fits your travel pace.

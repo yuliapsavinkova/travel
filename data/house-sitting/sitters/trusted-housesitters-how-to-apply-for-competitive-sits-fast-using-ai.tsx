@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '10',
   slug: 'trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'How to Apply for Competitive Sits Fast (Using AI)',
   navTitle: 'AI Strategy',
@@ -12,7 +13,7 @@ export const post: BlogPost = {
   date: 'September 28, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 11,
+  sortOrder: 10,
   audience: ['Sitters'],
   imageUrl: '/fast-running-dog.jpg',
   ctaLabel: REFERRALS.THS.label,
@@ -45,7 +46,7 @@ export const post: BlogPost = {
 
       <p>
         If you don't have any reviews yet, this strategy won't help you. You need to{' '}
-        <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+        <Link href="/how-to-get-your-first-house-sit-no-reviews">
           land your first sit first
         </Link>{' '}
         to build credibility. This guide is for sitters who already have a foundation and want to
@@ -74,7 +75,7 @@ export const post: BlogPost = {
 
       <p>
         Before you even think about speed, make sure your{' '}
-        <Link href="/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits">
+        <Link href="/trusted-housesitters-profile-tips-how-to-secure-more-sits">
           profile is strong and complete
         </Link>
         . A fast application from a weak profile still has a disadvantage. Get your foundation right
@@ -219,7 +220,7 @@ export const post: BlogPost = {
         Configure alerts for your preferred locations, pet types, and date ranges. Turn on push
         notifications on your phone so you don't miss a high-demand sit. For a detailed breakdown of
         how I configure my alerts, check out my{' '}
-        <Link href="/blog/trusted-housesitters-how-to-set-up-alerts-and-filters">
+        <Link href="/trusted-housesitters-how-to-set-up-alerts-and-filters">
           alert strategy guide
         </Link>
         .

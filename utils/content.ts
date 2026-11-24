@@ -1,3 +1,5 @@
+import type { BlogPost, BlogTrack } from '../types';
+
 const SITE_URL = 'https://sitterjourney.com';
 
 const MONTH_INDEX: Record<string, string> = {
@@ -139,5 +141,27 @@ export const toAbsoluteUrl = (url?: string): string => {
   if (!url) return PUBLISHER_LOGO_URL;
   if (url.startsWith('http://') || url.startsWith('https://')) return url;
   return `${SITE_URL}${url.startsWith('/') ? url : `/${url}`}`;
+};
+
+export const isHomeownerPost = (post: BlogPost): boolean => {
+  if (post.track === 'homeowners') return true;
+  if (post.track === 'sitters') return false;
+  return Boolean(post.audience?.some((a) => /pet parent|homeowner/i.test(a)));
+};
+
+export const getPostTrack = (post: BlogPost): BlogTrack => {
+  return isHomeownerPost(post) ? 'homeowners' : 'sitters';
+};
+
+export const getTrackPath = (track: BlogTrack): string => {
+  return track === 'homeowners' ? '/homeowners' : '/sitters';
+};
+
+export const getTrackLabel = (track: BlogTrack): string => {
+  return track === 'homeowners' ? 'For Homeowners' : 'For Sitters';
+};
+
+export const sortPostsByOrder = (posts: BlogPost[]): BlogPost[] => {
+  return [...posts].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
 };
 

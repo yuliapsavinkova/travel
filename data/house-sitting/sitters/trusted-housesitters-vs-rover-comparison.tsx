@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import ArticleImage from '../../components/ArticleImage';
-import { BlogPost, REFERRALS } from '../../types';
+import ArticleImage from '../../../components/ArticleImage';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '9',
   slug: 'trusted-housesitters-vs-rover-comparison',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'TrustedHousesitters vs. Rover: Why They are Not Comparable',
   navTitle: 'TrustedHousesitters vs Rover',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Review',
   location: 'Comparison',
-  sortOrder: 8,
+  sortOrder: 7,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
@@ -113,7 +114,7 @@ export const post: BlogPost = {
       <p>
         TrustedHousesitters is not casual. It rewards people who plan and commit. If you’re curious
         how issues are actually handled, see the breakdown of:{' '}
-        <Link href="/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it">
+        <Link href="/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it">
           what happens when a sit is reported on TrustedHousesitters
         </Link>
         .
@@ -139,7 +140,7 @@ export const post: BlogPost = {
       <p>
         This is why long-term users rarely quit once they’re established. If you’ve decided house
         sitting fits your life, the next real question is{' '}
-        <Link href="/blog/trusted-housesitters-vs-other-house-sitting-websites">
+        <Link href="/trusted-housesitters-vs-other-house-sitting-websites">
           which platform within house sitting works best
         </Link>
         .

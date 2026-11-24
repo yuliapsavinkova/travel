@@ -20,7 +20,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'the stay, you can save thousands per year.',
     link: {
       label: 'Real Examples & Math',
-      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+      href: '/can-you-really-travel-for-free-house-sitting-math',
     },
   },
   {
@@ -31,7 +31,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'ensures these remain minimal.',
     link: {
       label: 'Nomad Budget Math',
-      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+      href: '/can-you-really-travel-for-free-house-sitting-math',
     },
   },
   {
@@ -40,7 +40,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'Not necessarily. Start with small local assignments. Focus on building a ' +
       'trustworthy profile and clear communication.',
-    link: { label: 'First Sit Guide', href: '/blog/how-to-get-your-first-house-sit-no-reviews' },
+    link: { label: 'First Sit Guide', href: '/how-to-get-your-first-house-sit-no-reviews' },
   },
 
   // =====================================================
@@ -54,7 +54,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'plans before committing.',
     link: {
       label: 'Membership Cost Levels',
-      href: '/blog/trusted-housesitters-membership-cost-levels',
+      href: '/trusted-housesitters-membership-cost-levels',
     },
   },
   {
@@ -90,7 +90,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'It takes strategy. Most beginners fail by applying to high competition sits first. ' +
       'Start with shorter local sits.',
-    link: { label: 'First Sit Strategy', href: '/blog/how-to-get-your-first-house-sit-no-reviews' },
+    link: { label: 'First Sit Strategy', href: '/how-to-get-your-first-house-sit-no-reviews' },
   },
   {
     id: 'first-sit-easy',
@@ -100,7 +100,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'competitive, long term sits at first.',
     link: {
       label: 'Profile Tips',
-      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
+      href: '/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
   {
@@ -109,7 +109,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'No. Many sitters get their first sit without reviews. What matters is a profile that ' +
       'clearly explains your experience, responsibility, and availability.',
-    link: { label: 'First Sit Guide', href: '/blog/how-to-get-your-first-house-sit-no-reviews' },
+    link: { label: 'First Sit Guide', href: '/how-to-get-your-first-house-sit-no-reviews' },
   },
   {
     id: 'ths-experience-level-sits',
@@ -119,7 +119,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'for bigger opportunities.',
     link: {
       label: 'How to Get Started',
-      href: '/blog/how-to-get-your-first-house-sit-no-reviews',
+      href: '/how-to-get-your-first-house-sit-no-reviews',
     },
   },
 
@@ -134,7 +134,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'might have about their pet and home.',
     link: {
       label: 'Check Out My Profile Tips',
-      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
+      href: '/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
   {
@@ -145,7 +145,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'standards and home treatment work better than long personal stories.',
     link: {
       label: 'Writing Your Bio',
-      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
+      href: '/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
   {
@@ -156,7 +156,7 @@ export const MASTER_FAQS: FAQItem[] = [
       '3:2 (e.g., 900×600) and ideally include you with a pet.',
     link: {
       label: 'Photo Requirements',
-      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
+      href: '/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
   {
@@ -167,7 +167,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'routine will be followed and their home respected.',
     link: {
       label: 'Sitter Best Practices',
-      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
+      href: '/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
   {
@@ -178,7 +178,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'instructions builds trust faster than vague statements.',
     link: {
       label: 'Trust Building Tips',
-      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
+      href: '/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
   {
@@ -189,7 +189,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'for pets. If you prefer long term sits, mention it clearly.',
     link: {
       label: 'Strategic Applications',
-      href: '/blog/how-to-get-your-first-house-sit-no-reviews',
+      href: '/how-to-get-your-first-house-sit-no-reviews',
     },
   },
 
@@ -204,7 +204,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'often a matter of timing, demographics, or a returning sitter applying.',
     link: {
       label: 'Success Strategy',
-      href: '/blog/why-trusted-housesitters-applications-get-rejected',
+      href: '/why-trusted-housesitters-applications-get-rejected',
     },
   },
   {
@@ -215,7 +215,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'returning sitters or specific demographic preferences. Always move on immediately.',
     link: {
       label: 'Read Rejection Guide',
-      href: '/blog/why-trusted-housesitters-applications-get-rejected',
+      href: '/why-trusted-housesitters-applications-get-rejected',
     },
   },
   {
@@ -226,7 +226,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'resembles their own appearance or energy levels, creating a sense of familiarity.',
     link: {
       label: 'Psychology of Rejection',
-      href: '/blog/why-trusted-housesitters-applications-get-rejected',
+      href: '/why-trusted-housesitters-applications-get-rejected',
     },
   },
   {
@@ -237,7 +237,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'to 3:2 ratio, and ensure your application mentions the pets by name.',
     link: {
       label: 'Improve Your Profile',
-      href: '/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits',
+      href: '/trusted-housesitters-profile-tips-how-to-secure-more-sits',
     },
   },
 
@@ -279,7 +279,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'If you ever feel unsafe, document the issues with photos immediately and contact TrustedHousesitters support via their member safety line. Their team can help mediate or advise on next steps if the home condition poses a genuine risk.',
     link: {
       label: 'View Safety Guide',
-      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+      href: '/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
   },
   {
@@ -289,7 +289,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'Take clear photos or videos of the issue, and ensure all critical communication with the homeowner happens via the in-app messaging system. This creates a timestamped record that TrustedHousesitters can use if a formal report is ever filed.',
     link: {
       label: 'Documentation Tips',
-      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+      href: '/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
   },
   {
@@ -299,7 +299,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'Yes, most issues are resolved through direct, polite communication. If a misunderstanding occurs, referring back to the original listing or your initial messages often clears things up without involving platform support.',
     link: {
       label: 'Conflict Resolution',
-      href: '/blog/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+      href: '/trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
     },
   },
 
@@ -313,7 +313,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'is hard to beat.',
     link: {
       label: 'See The Breakeven Math',
-      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+      href: '/is-trusted-housesitters-worth-it-for-sitters',
     },
   },
   {
@@ -325,7 +325,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'gives me a massive edge.',
     link: {
       label: 'My AI Application Strategy',
-      href: '/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
+      href: '/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
     },
   },
   {
@@ -336,7 +336,7 @@ export const MASTER_FAQS: FAQItem[] = [
       "routine. If pets feel like a chore rather than companionship, this isn't for you.",
     link: {
       label: 'Read Honest Assessment',
-      href: '/blog/is-trusted-housesitters-worth-it-for-sitters',
+      href: '/is-trusted-housesitters-worth-it-for-sitters',
     },
   },
 
@@ -350,7 +350,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'back-to-back.',
     link: {
       label: 'See My Real Numbers',
-      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+      href: '/can-you-really-travel-for-free-house-sitting-math',
     },
   },
   {
@@ -361,7 +361,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'make flights free, but eliminating accommodation (40-70% of travel costs) changes everything.',
     link: {
       label: 'Full Cost Breakdown',
-      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+      href: '/can-you-really-travel-for-free-house-sitting-math',
     },
   },
   {
@@ -373,7 +373,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'hardest. After that, it compounds.',
     link: {
       label: 'Why People Fail',
-      href: '/blog/can-you-really-travel-for-free-house-sitting-math',
+      href: '/can-you-really-travel-for-free-house-sitting-math',
     },
   },
 
@@ -387,7 +387,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'with 1-2 sits per year.',
     link: {
       label: 'Membership Decision Guide',
-      href: '/blog/trusted-housesitters-membership-cost-levels',
+      href: '/trusted-housesitters-membership-cost-levels',
     },
   },
   {
@@ -398,7 +398,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'sit cancellation insurance is essential when you have no backup housing plan.',
     link: {
       label: 'Premium Tier Breakdown',
-      href: '/blog/trusted-housesitters-membership-cost-levels',
+      href: '/trusted-housesitters-membership-cost-levels',
     },
   },
   {
@@ -409,7 +409,44 @@ export const MASTER_FAQS: FAQItem[] = [
       "has zero booking fees. If you're doing many sits, Premium breaks even around 8 sits per year.",
     link: {
       label: 'Fee Structure Explained',
-      href: '/blog/trusted-housesitters-membership-cost-levels',
+      href: '/trusted-housesitters-membership-cost-levels',
+    },
+  },
+
+  // =====================================================
+  // 8. FOR HOMEOWNERS: PREPARING & VETTING A SITTER
+  // =====================================================
+  {
+    id: 'homeowner-how-to-prepare',
+    question: 'How do I prepare my home before a house sitter arrives?',
+    answer:
+      'Focus on clean basics: fresh bedding, cleared fridge and counter space, stocked pet food ' +
+      'and medications, and a clear Welcome Guide with house quirks and vet details.',
+    link: {
+      label: 'Home Prep Checklist',
+      href: '/how-to-prepare-your-home-for-a-house-sitter',
+    },
+  },
+  {
+    id: 'homeowner-what-to-leave',
+    question: 'What should I include in a welcome guide for my house sitter?',
+    answer:
+      'Include feeding and medication schedules, emergency vet details, your local backup contact, ' +
+      'Wi-Fi and lock instructions, trash days, and any quirks about appliances or pet triggers.',
+    link: {
+      label: 'Welcome Guide Checklist',
+      href: '/what-to-include-in-a-house-sitter-welcome-guide',
+    },
+  },
+  {
+    id: 'homeowner-interview-questions',
+    question: 'What questions should I ask before hiring a house sitter?',
+    answer:
+      'Ask about their experience with pets like yours, how many hours a day they will be at home, ' +
+      'how they handle medical or home emergencies, and their routine for daily photo updates.',
+    link: {
+      label: 'Sitter Interview Questions',
+      href: '/questions-to-ask-before-hiring-a-house-sitter',
     },
   },
 ];

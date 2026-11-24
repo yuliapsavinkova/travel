@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '4',
   slug: 'trusted-housesitters-membership-cost-levels',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'Which Membership Level Should You Choose?',
   navTitle: 'Membership Guide',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'June 26, 2026',
   category: 'Sitter Guide',
   location: 'Financial',
-  sortOrder: 4,
+  sortOrder: 3,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=1200',
@@ -45,7 +46,7 @@ export const post: BlogPost = {
       <p>
         Before diving into the tiers, understand this: if you're still deciding whether house
         sitting is even worth it,{' '}
-        <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
+        <Link href="/is-trusted-housesitters-worth-it-for-sitters">
           read my breakdown on whether TrustedHousesitters is worth the investment
         </Link>
         . Once you know you're joining, the membership decision becomes about risk tolerance and
@@ -229,7 +230,7 @@ export const post: BlogPost = {
 
       <p>
         For a deeper look at whether the membership investment makes sense at all, read my{' '}
-        <Link href="/blog/can-you-really-travel-for-free-house-sitting-math">
+        <Link href="/can-you-really-travel-for-free-house-sitting-math">
           breakdown of the actual travel math
         </Link>
         .

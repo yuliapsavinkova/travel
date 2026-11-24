@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '6',
   slug: 'can-you-really-travel-for-free-house-sitting-math',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'Can You Really Travel for Free with House Sitting? Real Examples & Math',
   navTitle: 'Travel Math',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Financial',
-  sortOrder: 3,
+  sortOrder: 2,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
@@ -45,7 +46,7 @@ export const post: BlogPost = {
         This article breaks down exactly when house sitting is effectively free, when it's not, and
         why most people fail to make it work. Accommodation is typically 40–70% of travel costs.
         Removing it changes everything. If you're still deciding whether to join,{' '}
-        <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
+        <Link href="/is-trusted-housesitters-worth-it-for-sitters">
           read my honest breakdown of whether TrustedHousesitters is worth it
         </Link>
         .
@@ -144,7 +145,7 @@ export const post: BlogPost = {
       <h2>The Hidden Benefits</h2>
       <p>
         While we're being honest about costs, it's worth mentioning that house sitting comes with{' '}
-        <Link href="/blog/hidden-perks-of-house-sitting">
+        <Link href="/hidden-perks-of-house-sitting">
           unexpected perks beyond just free accommodation
         </Link>
         . Zero utilities, stocked homes, and location-specific benefits all add value that's hard to
@@ -159,11 +160,11 @@ export const post: BlogPost = {
       </p>
       <p>
         If you're struggling to land sits, read my guides on{' '}
-        <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+        <Link href="/how-to-get-your-first-house-sit-no-reviews">
           getting your first sit with no reviews
         </Link>{' '}
         and{' '}
-        <Link href="/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits">
+        <Link href="/trusted-housesitters-profile-tips-how-to-secure-more-sits">
           building a strong profile
         </Link>
         .

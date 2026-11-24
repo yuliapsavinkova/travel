@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import ArticleImage from '../../components/ArticleImage';
-import { BlogPost, REFERRALS } from '../../types';
+import ArticleImage from '../../../components/ArticleImage';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '8',
   slug: 'trusted-housesitters-vs-other-house-sitting-websites',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'TrustedHousesitters vs Other House Sitting Websites',
   navTitle: 'TrustedHousesitters vs Others',
@@ -14,7 +15,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Review',
   location: 'Comparison',
-  sortOrder: 7,
+  sortOrder: 6,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1200',
@@ -231,7 +232,7 @@ export const post: BlogPost = {
 
       <p>
         If you're trying to decide whether house sitting itself is worth the investment, read my{' '}
-        <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
+        <Link href="/is-trusted-housesitters-worth-it-for-sitters">
           honest breakdown of whether THS is worth it
         </Link>
         . Once you know house sitting fits your lifestyle, platform choice becomes about where you

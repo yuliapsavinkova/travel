@@ -2,11 +2,18 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState, useRef } from 'react';
-import { NAV_ITEMS } from '../constants';
+import { useEffect, useRef, useState } from 'react';
+import { BLOG_POSTS, NAV_ITEMS } from '../constants';
 import BrandLogo from './BrandLogo';
 import ContactForm from './ContactForm';
 import { MenuIcon, XIcon } from './Icons';
+
+const BLOG_ROUTES = new Set([
+  '/blog',
+  '/sitters',
+  '/homeowners',
+  ...BLOG_POSTS.map((p) => `/${p.slug}`),
+]);
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,11 +61,10 @@ const Navigation = () => {
     }
   }, [pathname]);
 
-  // Logic to determine if a link is active, including sub-paths
   const checkActive = (href: string) => {
     if (href === '/') return pathname === '/';
-    // Match exact path OR if the current path is a sub-page of the link (e.g., /blog/post-slug matches /blog)
-    return pathname === href || pathname.startsWith(href + '/');
+    if (href === '/blog' && pathname && BLOG_ROUTES.has(pathname)) return true;
+    return pathname === href || pathname?.startsWith(`${href}/`);
   };
 
   return (

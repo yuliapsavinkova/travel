@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '7',
   slug: 'trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'What Happens If a Sit Goes Wrong and How to Report It',
   navTitle: 'Reporting',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Lifestyle',
-  sortOrder: 10,
+  sortOrder: 9,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&q=80&w=1200',
@@ -135,7 +136,7 @@ export const post: BlogPost = {
       <p>
         The best way to avoid issues is to start strong from your very first sit. If you're new to
         house sitting, read my{' '}
-        <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+        <Link href="/how-to-get-your-first-house-sit-no-reviews">
           guide on getting your first sit
         </Link>{' '}
         to understand how to set clear expectations, ask the right questions, and document

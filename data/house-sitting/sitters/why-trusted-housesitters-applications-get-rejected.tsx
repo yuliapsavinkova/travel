@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS, sits_completed } from '../../types';
+import { BlogPost, REFERRALS, sits_completed } from '../../../types';
 
 export const post: BlogPost = {
   id: '5',
   slug: 'why-trusted-housesitters-applications-get-rejected',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'Why My House Sit Application Got Rejected',
   navTitle: 'Rejections',
@@ -12,7 +13,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 9,
+  sortOrder: 8,
   audience: ['Sitters'],
   imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2070&fit=crop',
   ctaLabel: REFERRALS.THS.label,
@@ -50,7 +51,7 @@ export const post: BlogPost = {
         <li>
           <strong>Limited Reviews:</strong> Without verified proof on the platform, you are seen as
           a higher risk. Focus on building your base with local assignments first. Read my:{' '}
-          <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+          <Link href="/how-to-get-your-first-house-sit-no-reviews">
             guide for landing your first sit
           </Link>
           .
@@ -63,7 +64,7 @@ export const post: BlogPost = {
         <li>
           <strong>Profile Quality:</strong> If your photos are not clear or your bio feels generic,
           homeowners will likely pass over your profile. You can fix this immediately using my:{' '}
-          <Link href="/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits">
+          <Link href="/trusted-housesitters-profile-tips-how-to-secure-more-sits">
             profile mastery tips
           </Link>
           .

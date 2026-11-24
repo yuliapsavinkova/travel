@@ -5,11 +5,12 @@ import {
   REFERRALS,
   YULIA_SITTER_JOURNEY_URL,
   YULIA_SITTER_JOURNEY_DISPLAY,
-} from '../../types';
+} from '../../../types';
 
 export const post: BlogPost = {
   id: '14',
   slug: 'trusted-housesitters-exchange-vs-professional-house-sitting',
+  track: 'homeowners',
   topic: 'TrustedHousesitters',
   title: 'Exchange vs. Professional House Sitting: Which Is Right for You?',
   navTitle: 'Exchange vs. Professional Sitting',
@@ -27,7 +28,7 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Pet Parents'],
-  faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
+  faqIds: ['homeowner-interview-questions', 'homeowner-how-to-prepare', 'homeowner-what-to-leave'],
   seoTitle: 'TrustedHousesitters vs. Professional House Sitter: How to Choose',
   seoDescription:
     'Compare TrustedHousesitters exchange sitting with hiring a professional house sitter: fees, scheduling, privacy, and which fits your pets and trips best.',

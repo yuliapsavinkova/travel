@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
-import ArticleImage from '../../components/ArticleImage';
+import { BlogPost, REFERRALS } from '../../../types';
+import ArticleImage from '../../../components/ArticleImage';
 
 export const post: BlogPost = {
   id: '11',
   slug: 'hidden-perks-of-house-sitting',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'Hidden Perks of House Sitting',
   navTitle: 'Hidden Perks',
@@ -14,7 +15,7 @@ export const post: BlogPost = {
   date: 'July 12, 2026',
   category: 'Expertise',
   location: 'Lifestyle',
-  sortOrder: 12,
+  sortOrder: 11,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1597714026720-8f74c62310ba?q=80&w=2070&auto=format&fit=crop',
@@ -37,7 +38,7 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         When people ask{' '}
-        <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
+        <Link href="/is-trusted-housesitters-worth-it-for-sitters">
           "Is house sitting worth it?"
         </Link>{' '}
         they focus on free accommodation. But there are dozens of unexpected benefits that compound

@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import ArticleImage from '../../components/ArticleImage';
-import { BlogPost, REFERRALS } from '../../types';
+import ArticleImage from '../../../components/ArticleImage';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '1',
   slug: 'how-to-get-your-first-house-sit-no-reviews',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'How to Get Your First House Sit (Even With No Reviews)',
   navTitle: 'First Sit Guide',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'July 21, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 5,
+  sortOrder: 4,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1655992108235-b9bbf5bb18cc?auto=format&fit=crop&q=80&w=2400',
@@ -74,7 +75,7 @@ export const post: BlogPost = {
       <p>
         Avoid long travel manifestos about your bucket list or life philosophy. For a deep dive into
         writing a complete, standout profile, read{' '}
-        <Link href="/blog/trusted-housesitters-profile-tips-how-to-secure-more-sits">
+        <Link href="/trusted-housesitters-profile-tips-how-to-secure-more-sits">
           my full profile tips article
         </Link>
         .
@@ -148,7 +149,7 @@ export const post: BlogPost = {
         is posted. Since many TrustedHousesitters listings stop accepting applications after
         receiving five, applying quickly gives you the best chance of being seen. Once you have your
         profile and message template ready, you can{' '}
-        <Link href="/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
+        <Link href="/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
           use AI to apply quickly to competitive sits
         </Link>
         .
@@ -156,7 +157,7 @@ export const post: BlogPost = {
       <p>
         Don't be discouraged by rejections. Even experienced sitters get rejected regularly. Read my
         article on{' '}
-        <Link href="/blog/why-trusted-housesitters-applications-get-rejected">
+        <Link href="/why-trusted-housesitters-applications-get-rejected">
           why applications get rejected
         </Link>{' '}
         to understand the factors, many of which are completely outside your control. Keep applying

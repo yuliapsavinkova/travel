@@ -34,8 +34,8 @@ export default function HomeHero({ children }: HomeHeroProps) {
             sitting, discovering new places and experiencing life through local eyes.
           </p>
           <div className="hero-button-group">
-            <Link href="/blog#archive" className="btn-gold">
-              Read Blog
+            <Link href="/blog" className="btn-gold">
+              Explore Guides
             </Link>
             <Link href="/resources" className="secondary-btn">
               Resources

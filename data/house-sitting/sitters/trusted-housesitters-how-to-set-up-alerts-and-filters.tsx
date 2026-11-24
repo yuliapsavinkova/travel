@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost, REFERRALS } from '../../types';
+import { BlogPost, REFERRALS } from '../../../types';
 
 export const post: BlogPost = {
   id: '12',
   slug: 'trusted-housesitters-how-to-set-up-alerts-and-filters',
+  track: 'sitters',
   topic: 'TrustedHousesitters',
   title: 'My TrustedHousesitters Alert Strategy (Real Examples)',
   navTitle: 'Alerts Strategy',
@@ -13,7 +14,7 @@ export const post: BlogPost = {
   date: 'January 9, 2026',
   category: 'Expertise',
   location: 'Strategy',
-  sortOrder: 13,
+  sortOrder: 12,
   audience: ['Sitters'],
   imageUrl:
     'https://images.unsplash.com/photo-1741061963486-a56144a73791?q=80&w=2070&auto=format&fit=crop',
@@ -190,7 +191,7 @@ export const post: BlogPost = {
 
       <p>
         If you're brand new and don't have reviews yet, read my{' '}
-        <Link href="/blog/how-to-get-your-first-house-sit-no-reviews">
+        <Link href="/how-to-get-your-first-house-sit-no-reviews">
           guide on landing your first sit
         </Link>{' '}
         before spending too much time on alert strategy. Get that first review, then worry about
@@ -199,7 +200,7 @@ export const post: BlogPost = {
 
       <p>
         Once you have alerts set up and you're ready to apply quickly, check out my{' '}
-        <Link href="/blog/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
+        <Link href="/trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai">
           AI strategy for fast applications
         </Link>
         .

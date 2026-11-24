@@ -50,7 +50,7 @@ export const resource: ResourceItem = {
         full-time across the US, I didn't pay for accommodation. Even using a conservative estimate
         of $100 per night for a hotel, that's approximately $36,500 in lodging costs avoided in one
         year. You can read my full breakdown of the numbers in my guide:{' '}
-        <Link href="/blog/is-trusted-housesitters-worth-it-for-sitters">
+        <Link href="/is-trusted-housesitters-worth-it-for-sitters">
           Is TrustedHousesitters worth it for sitters?
         </Link>
       </p>
@@ -68,7 +68,7 @@ export const resource: ResourceItem = {
         homeowners are incredibly warm and welcoming. They often go out of their way to make you
         comfortable, sometimes inviting you out for a meal, sharing local recommendations, or
         leaving thoughtful gifts for your arrival. These are just a few of the{' '}
-        <Link href="/blog/hidden-perks-of-house-sitting">hidden perks of house sitting</Link>.
+        <Link href="/hidden-perks-of-house-sitting">hidden perks of house sitting</Link>.
       </p>
 
       <p>
