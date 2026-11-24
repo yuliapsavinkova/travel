@@ -10,8 +10,28 @@ interface BlogArchiveProps {
   sitterPosts: BlogPostSummary[];
   homeownerPosts: BlogPostSummary[];
   initialTrack?: BlogTrack;
-  variant?: 'blog' | 'track';
 }
+
+const TRACK_COPY: Record<
+  BlogTrack,
+  {
+    srHeading: string;
+    subtitle: string;
+    searchPlaceholder: string;
+  }
+> = {
+  sitters: {
+    srHeading: 'Guides for House Sitters',
+    subtitle: 'House sitting tips, real numbers, and honest lessons from my own experience.',
+    searchPlaceholder: 'Search sitter guides...',
+  },
+  homeowners: {
+    srHeading: 'Guides for Homeowners',
+    subtitle:
+      'Checklists, questions to ask, and advice for welcoming a sitter—from my perspective as a sitter.',
+    searchPlaceholder: 'Search homeowner guides...',
+  },
+};
 
 function matchesSearch(post: BlogPostSummary, query: string): boolean {
   if (!query) return true;
@@ -28,7 +48,6 @@ export default function BlogArchive({
   sitterPosts,
   homeownerPosts,
   initialTrack = 'sitters',
-  variant = 'blog',
 }: BlogArchiveProps) {
   const [activeTrack, setActiveTrack] = useState<BlogTrack>(initialTrack);
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -52,76 +71,73 @@ export default function BlogArchive({
 
   const handleSelectTrack = (track: BlogTrack) => {
     setActiveTrack(track);
-    if (variant === 'track' && typeof window !== 'undefined') {
-      window.history.replaceState(null, '', track === 'sitters' ? '/sitters' : '/homeowners');
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(
+        null,
+        '',
+        track === 'sitters' ? '/sitters-guides' : '/homeowners-guides'
+      );
     }
   };
 
-  const staticIntro = 'Guides for sitters and homeowners from the perspective of a sitter.';
+  const activeCopy = TRACK_COPY[activeTrack];
 
   return (
     <>
       <header className="text-center blog-archive-header">
-        <h1 className="display-title display-title-md">
-          {variant === 'blog' ? (
-            <>
-              The <span className="serif-italic">Blog.</span>
-            </>
-          ) : activeTrack === 'sitters' ? (
-            <>
-              Sitter <span className="serif-italic">Guides.</span>
-            </>
-          ) : (
-            <>
-              Homeowner <span className="serif-italic">Guides.</span>
-            </>
-          )}
-        </h1>
-        <p className="hero-paragraph home-section-intro">{staticIntro}</p>
-      </header>
+        <span className="sub-header">Guides for</span>
+        <h1 className="sr-only">{activeCopy.srHeading}</h1>
 
-      <div className="blog-archive-section" id="archive">
-        <div className="blog-toolbar">
-          <div
-            className="track-segmented-control"
-            role="tablist"
-            aria-label="Switch between Sitter and Homeowner guides"
+        <div
+          className="blog-header-switcher"
+          role="tablist"
+          aria-label="Switch between House Sitters and Homeowners guides"
+        >
+          <button
+            type="button"
+            role="tab"
+            id="tab-sitters"
+            aria-selected={activeTrack === 'sitters'}
+            aria-controls="blog-track-panel"
+            className={`blog-header-tab blog-header-tab-left ${activeTrack === 'sitters' ? 'active' : ''}`}
+            onClick={() => handleSelectTrack('sitters')}
           >
-            <button
-              type="button"
-              role="tab"
-              id="tab-sitters"
-              aria-selected={activeTrack === 'sitters'}
-              aria-controls="blog-track-panel"
-              className={`track-segment ${activeTrack === 'sitters' ? 'active' : ''}`}
-              onClick={() => handleSelectTrack('sitters')}
-            >
-              <span>For Sitters</span>
-              <span className="track-segment-count">{sitterPosts.length}</span>
-            </button>
-            <button
-              type="button"
-              role="tab"
-              id="tab-homeowners"
-              aria-selected={activeTrack === 'homeowners'}
-              aria-controls="blog-track-panel"
-              className={`track-segment ${activeTrack === 'homeowners' ? 'active' : ''}`}
-              onClick={() => handleSelectTrack('homeowners')}
-            >
-              <span>For Homeowners</span>
-              <span className="track-segment-count">{homeownerPosts.length}</span>
-            </button>
-          </div>
+            <span className="blog-header-tab-text">House Sitters</span>
+            <span className="blog-header-tab-count">
+              {sitterPosts.length} {sitterPosts.length === 1 ? 'guide' : 'guides'}
+            </span>
+          </button>
 
+          <span className="blog-header-divider" aria-hidden="true" />
+
+          <button
+            type="button"
+            role="tab"
+            id="tab-homeowners"
+            aria-selected={activeTrack === 'homeowners'}
+            aria-controls="blog-track-panel"
+            className={`blog-header-tab blog-header-tab-right ${activeTrack === 'homeowners' ? 'active' : ''}`}
+            onClick={() => handleSelectTrack('homeowners')}
+          >
+            <span className="blog-header-tab-text">Homeowners</span>
+            <span className="blog-header-tab-count">
+              {homeownerPosts.length} {homeownerPosts.length === 1 ? 'guide' : 'guides'}
+            </span>
+          </button>
+        </div>
+
+        <p className="hero-paragraph home-section-intro blog-archive-subtitle">
+          {activeCopy.subtitle}
+        </p>
+
+        <div className="blog-search-row">
           <div className="archive-search-wrap">
             <SearchIcon size={15} className="archive-search-icon" aria-hidden="true" />
             <input
               type="search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={
-                activeTrack === 'sitters' ? 'Search sitter guides...' : 'Search homeowner guides...'
-              }
+              placeholder={activeCopy.searchPlaceholder}
               aria-label="Search guides"
               className="archive-search-input"
             />
@@ -137,7 +153,9 @@ export default function BlogArchive({
             )}
           </div>
         </div>
+      </header>
 
+      <div className="blog-archive-section" id="archive">
         <div
           id="blog-track-panel"
           role="tabpanel"

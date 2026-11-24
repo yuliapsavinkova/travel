@@ -13,9 +13,8 @@ Sitter Journey shares real-world guides, financial breakdowns, strategy blueprin
 
 ## Core Pages
 - [Home](https://sitterjourney.com/): Introduction to full-time house sitting, travel philosophy, stats, and verified discounts.
-- [Guides for Sitters](https://sitterjourney.com/sitters): Dedicated reading track for aspiring and full-time house sitters.
-- [Guides for Homeowners](https://sitterjourney.com/homeowners): Dedicated reading track for homeowners and pet parents hiring or hosting sitters.
-- [All Guides](https://sitterjourney.com/blog): Searchable directory linking to both sitter and homeowner tracks.
+- [Guides for Sitters](https://sitterjourney.com/sitters-guides): Dedicated reading track for aspiring and full-time house sitters.
+- [Guides for Homeowners](https://sitterjourney.com/homeowners-guides): Dedicated reading track for homeowners and pet parents hiring or hosting sitters.
 - [Resources](https://sitterjourney.com/resources): Essential tools, nomad phone plans, nationwide gym access, and pet care platforms.
 - [Travel Guides](https://sitterjourney.com/travel): Slow travel narratives, destination insights, and mindful nomadism.
 - [FAQ](https://sitterjourney.com/faq): Comprehensive answers to common questions about house sitting logistics, trust, safety, and budgeting.

@@ -1,107 +1,142 @@
 /* ==========================================================================
-   BLOG ARCHIVE (TABS, TOOLBAR & SEARCH)
-   Direct one-click switching between For Sitters and For Homeowners.
+   BLOG ARCHIVE ("GUIDES FOR" + SITTERS | HOMEOWNERS SWITCHER & SEARCH)
+   Second-level editorial navigation with top-aligned superscript counts.
    ========================================================================== */
 
 .blog-archive-header {
   max-width: 100%;
-  margin: 0 auto var(--s-6);
+  margin: 0 auto var(--s-7);
 }
 
-.blog-archive-header .display-title {
-  text-wrap: balance;
+.blog-archive-header .sub-header {
+  margin-bottom: var(--s-2);
 }
 
-.blog-archive-header .hero-paragraph {
-  max-width: 54rem;
-}
-
-.blog-toolbar {
-  display: flex;
+.blog-header-switcher {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--s-4);
-  padding: var(--s-4) 0;
-  border-top: 1px solid var(--color-border-subtle);
-  border-bottom: 1px solid var(--color-border-subtle);
-  margin-bottom: var(--s-7);
+  gap: clamp(0.85rem, 3vw, 2.25rem);
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto var(--s-3);
 }
 
-.track-segmented-control {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--r-pill);
-  box-shadow: var(--shadow-sm);
+.blog-header-tab-left {
+  justify-self: end;
 }
 
-.track-segment {
-  appearance: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 2.5rem;
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--r-pill);
-  font-family: var(--f-main);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-text-secondary);
-  white-space: nowrap;
+.blog-header-tab-right {
+  justify-self: start;
+}
+
+.blog-header-divider {
+  width: 1px;
+  height: clamp(2.1rem, 4.2vw, 3.1rem);
+  background: var(--color-border-bold);
+  opacity: 0.45;
   flex-shrink: 0;
-  user-select: none;
-  transition: background-color var(--t-fast), color var(--t-fast), box-shadow var(--t-fast);
 }
 
-.track-segment:hover:not(.active) {
-  color: var(--color-brand-primary);
-  background: var(--color-brand-primary-subtle);
-}
-
-.track-segment.active {
-  background: var(--color-brand-primary);
-  color: var(--color-text-primary-inverse);
-  box-shadow: var(--shadow-sm);
-}
-
-.track-segment-count {
-  font-size: 0.6875rem;
-  font-variant-numeric: tabular-nums;
-  padding: 2px 7px;
-  border-radius: var(--r-pill);
-  background: var(--color-border-primary);
+.blog-header-tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0.35rem 0 0.7rem;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.38rem, 4.3vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
   color: var(--color-text-secondary);
+  opacity: 0.5;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--t-fast), opacity var(--t-fast), transform var(--t-fast);
 }
 
-.track-segment.active .track-segment-count {
-  background: color-mix(in srgb, var(--color-text-primary-inverse) var(--alpha-20), transparent);
-  color: var(--color-text-primary-inverse);
+.blog-header-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.15rem;
+  height: 2.5px;
+  border-radius: var(--r-pill);
+  background-color: var(--color-brand-primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--t-base);
 }
 
-.track-segment:focus-visible {
+.blog-header-tab:hover:not(.active) {
+  opacity: 0.88;
+  color: var(--color-brand-primary);
+}
+
+.blog-header-tab.active {
+  color: var(--color-text-primary);
+  opacity: 1;
+}
+
+.blog-header-tab.active::after {
+  transform: scaleX(1);
+}
+
+.blog-header-tab:focus-visible {
   outline: 2px solid var(--color-brand-primary);
-  outline-offset: 2px;
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.blog-header-tab-count {
+  font-family: var(--f-main);
+  font-style: normal;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-secondary);
+  line-height: 1;
+  transition: color var(--t-fast);
+}
+
+.blog-header-tab.active .blog-header-tab-count {
+  color: var(--color-brand-primary);
+}
+
+.blog-archive-subtitle {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-search-row {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--s-5);
 }
 
 .archive-search-wrap {
   position: relative;
-  flex: 0 0 17.5rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 24rem;
   display: flex;
   align-items: center;
 }
 
 .archive-search-icon {
   position: absolute;
-  left: 0.95rem;
+  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-text-secondary);
@@ -122,9 +157,9 @@
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--r-pill);
-  padding: 0.5625rem 2.25rem 0.5625rem 2.4rem;
+  padding: 0.65rem 2.4rem 0.65rem 2.5rem;
   font-family: var(--f-main);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-text-primary);
   box-shadow: var(--shadow-sm);
@@ -152,7 +187,7 @@
 
 .archive-search-clear {
   position: absolute;
-  right: 0.55rem;
+  right: 0.6rem;
   top: 50%;
   transform: translateY(-50%);
   width: 24px;
@@ -183,31 +218,18 @@
 
 @media (max-width: 768px) {
   .blog-archive-header {
-    margin-bottom: var(--s-5);
-  }
-
-  .blog-toolbar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--s-3);
     margin-bottom: var(--s-6);
   }
 
-  .track-segmented-control {
-    width: 100%;
-    justify-content: space-between;
+  .blog-header-switcher {
+    gap: 0.9rem;
   }
 
-  .track-segment {
-    flex: 1 1 0;
-    justify-content: center;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
+  .blog-search-row {
+    margin-top: var(--s-4);
   }
 
   .archive-search-wrap {
-    flex: none;
-    width: 100%;
+    max-width: 100%;
   }
 }

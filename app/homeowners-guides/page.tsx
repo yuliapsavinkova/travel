@@ -6,15 +6,15 @@ import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../
 export const metadata: Metadata = {
   title: 'Guides for Homeowners & Pet Parents | Sitter Journey',
   description:
-    'Practical guides for homeowners leaving pets at home: choosing exchange vs. private sitting, preparing your home, and questions to ask before hiring a sitter.',
+    'Checklists, questions to ask, and advice for homeowners welcoming a house sitter—shared from my perspective as a sitter.',
   alternates: {
-    canonical: 'https://sitterjourney.com/homeowners',
+    canonical: 'https://sitterjourney.com/homeowners-guides',
   },
   openGraph: {
     title: 'Guides for Homeowners & Pet Parents | Sitter Journey',
     description:
-      'Practical guides for homeowners leaving pets at home: choosing exchange vs. private sitting, preparing your home, and questions to ask before hiring a sitter.',
-    url: 'https://sitterjourney.com/homeowners',
+      'Checklists, questions to ask, and advice for homeowners welcoming a house sitter—shared from my perspective as a sitter.',
+    url: 'https://sitterjourney.com/homeowners-guides',
     type: 'website',
     images: [
       {
@@ -29,19 +29,19 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Guides for Homeowners & Pet Parents | Sitter Journey',
     description:
-      'Practical guides for homeowners leaving pets at home: choosing exchange vs. private sitting, preparing your home, and questions to ask before hiring a sitter.',
+      'Checklists, questions to ask, and advice for homeowners welcoming a house sitter—shared from my perspective as a sitter.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
 
-export default function HomeownersPage() {
+export default function HomeownersGuidesPage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'CollectionPage',
-        '@id': 'https://sitterjourney.com/homeowners#collection',
-        url: 'https://sitterjourney.com/homeowners',
+        '@id': 'https://sitterjourney.com/homeowners-guides#collection',
+        url: 'https://sitterjourney.com/homeowners-guides',
         name: 'Guides for Homeowners & Pet Parents',
         description:
           'Checklists and honest comparisons to help homeowners find, vet, and welcome trustworthy house sitters.',
@@ -59,7 +59,7 @@ export default function HomeownersPage() {
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://sitterjourney.com/homeowners#breadcrumb',
+        '@id': 'https://sitterjourney.com/homeowners-guides#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -71,7 +71,7 @@ export default function HomeownersPage() {
             '@type': 'ListItem',
             position: 2,
             name: 'For Homeowners',
-            item: 'https://sitterjourney.com/homeowners',
+            item: 'https://sitterjourney.com/homeowners-guides',
           },
         ],
       },
@@ -90,7 +90,6 @@ export default function HomeownersPage() {
           sitterPosts={toPostSummaries(SITTER_POSTS)}
           homeownerPosts={toPostSummaries(HOMEOWNER_POSTS)}
           initialTrack="homeowners"
-          variant="track"
         />
       </div>
     </>

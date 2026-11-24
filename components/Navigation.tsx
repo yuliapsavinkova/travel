@@ -15,7 +15,7 @@ interface NavigationProps {
   resourcePaths?: string[];
 }
 
-const STATIC_BLOG_ROUTES = new Set(['/blog', '/sitters', '/homeowners']);
+const STATIC_BLOG_ROUTES = new Set(['/sitters-guides', '/homeowners-guides']);
 
 const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -73,7 +73,7 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
 
   const checkActive = (href: string) => {
     if (href === '/') return pathname === '/';
-    if (href === '/blog' && pathname && blogRouteSet.has(pathname)) return true;
+    if (href === '/sitters-guides' && pathname && blogRouteSet.has(pathname)) return true;
     if (href === '/resources' && pathname && resourceRouteSet.has(pathname)) return true;
     return pathname === href || pathname?.startsWith(`${href}/`);
   };

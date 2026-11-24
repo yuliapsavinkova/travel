@@ -94,7 +94,7 @@ export default function AboutPage() {
         image="/yulia-with-dog.jpg"
         title="About Yulia"
         date="August 29, 2026"
-        prevLink={{ label: 'Go to', title: 'Blog', href: '/blog' }}
+        prevLink={{ label: 'Go to', title: 'Blog', href: '/sitters-guides' }}
         nextLink={{ label: 'Go to', title: 'Resources', href: '/resources' }}
       >
         <div className="flex-col">

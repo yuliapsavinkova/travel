@@ -6,15 +6,15 @@ import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../
 export const metadata: Metadata = {
   title: 'House Sitting Guides for Sitters | Sitter Journey',
   description:
-    'Step-by-step house sitting strategy for sitters: getting your first sit without reviews, winning competitive sits, budget math, and life on the road.',
+    'House sitting tips, real numbers, and honest lessons from my own experience: getting your first sit without reviews, winning competitive sits, and budget math.',
   alternates: {
-    canonical: 'https://sitterjourney.com/sitters',
+    canonical: 'https://sitterjourney.com/sitters-guides',
   },
   openGraph: {
     title: 'House Sitting Guides for Sitters | Sitter Journey',
     description:
-      'Step-by-step house sitting strategy for sitters: getting your first sit without reviews, winning competitive sits, budget math, and life on the road.',
-    url: 'https://sitterjourney.com/sitters',
+      'House sitting tips, real numbers, and honest lessons from my own experience: getting your first sit without reviews, winning competitive sits, and budget math.',
+    url: 'https://sitterjourney.com/sitters-guides',
     type: 'website',
     images: [
       {
@@ -29,22 +29,21 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'House Sitting Guides for Sitters | Sitter Journey',
     description:
-      'Step-by-step house sitting strategy for sitters: getting your first sit without reviews, winning competitive sits, budget math, and life on the road.',
+      'House sitting tips, real numbers, and honest lessons from my own experience: getting your first sit without reviews, winning competitive sits, and budget math.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
 
-export default function SittersPage() {
+export default function SittersGuidesPage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'CollectionPage',
-        '@id': 'https://sitterjourney.com/sitters#collection',
-        url: 'https://sitterjourney.com/sitters',
+        '@id': 'https://sitterjourney.com/sitters-guides#collection',
+        url: 'https://sitterjourney.com/sitters-guides',
         name: 'Guides for House Sitters',
-        description:
-          'Step-by-step guides on starting house sitting, building a 5-star profile, and traveling full-time.',
+        description: 'House sitting tips, real numbers, and honest lessons from my own experience.',
         mainEntity: {
           '@type': 'ItemList',
           itemListElement: SITTER_POSTS.map((post, idx) => ({
@@ -59,7 +58,7 @@ export default function SittersPage() {
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://sitterjourney.com/sitters#breadcrumb',
+        '@id': 'https://sitterjourney.com/sitters-guides#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -71,7 +70,7 @@ export default function SittersPage() {
             '@type': 'ListItem',
             position: 2,
             name: 'For Sitters',
-            item: 'https://sitterjourney.com/sitters',
+            item: 'https://sitterjourney.com/sitters-guides',
           },
         ],
       },
@@ -90,7 +89,6 @@ export default function SittersPage() {
           sitterPosts={toPostSummaries(SITTER_POSTS)}
           homeownerPosts={toPostSummaries(HOMEOWNER_POSTS)}
           initialTrack="sitters"
-          variant="track"
         />
       </div>
     </>

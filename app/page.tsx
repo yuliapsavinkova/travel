@@ -128,7 +128,7 @@ export default function HomePage() {
           </div>
 
           <div className="home-section-footer">
-            <Link href="/sitters" className="home-footer-link">
+            <Link href="/sitters-guides" className="home-footer-link">
               <span>or explore all </span>
               <span className="serif-italic">sitter guides &rarr;</span>
             </Link>

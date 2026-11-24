@@ -141,7 +141,7 @@ export const getPostTrack = (post: Pick<BlogPost, 'track' | 'audience'>): BlogTr
 };
 
 export const getTrackPath = (track: BlogTrack): string => {
-  return track === 'homeowners' ? '/homeowners' : '/sitters';
+  return track === 'homeowners' ? '/homeowners-guides' : '/sitters-guides';
 };
 
 export const getTrackLabel = (track: BlogTrack): string => {

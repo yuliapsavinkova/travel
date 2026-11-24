@@ -6,7 +6,7 @@ export const CURRENT_YEAR = new Date().getFullYear();
 
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'Blog', href: '/sitters-guides' },
   { label: 'Resources', href: '/resources' },
   { label: 'FAQ', href: '/faq' },
   { label: 'About', href: '/about' },

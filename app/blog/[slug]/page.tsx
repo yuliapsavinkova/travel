@@ -23,5 +23,5 @@ export default async function LegacyBlogPostRedirectPage({
     permanentRedirect(`/${matchingPost.slug}`);
   }
 
-  permanentRedirect('/blog');
+  permanentRedirect('/sitters-guides');
 }

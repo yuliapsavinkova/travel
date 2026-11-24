@@ -19,6 +19,26 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/blog',
+        destination: '/sitters-guides',
+        permanent: true,
+      },
+      {
+        source: '/sitter-guides',
+        destination: '/sitters-guides',
+        permanent: true,
+      },
+      {
+        source: '/sitters',
+        destination: '/sitters-guides',
+        permanent: true,
+      },
+      {
+        source: '/homeowners',
+        destination: '/homeowners-guides',
+        permanent: true,
+      },
+      {
         source: '/blog/:slug',
         destination: '/:slug',
         permanent: true,
