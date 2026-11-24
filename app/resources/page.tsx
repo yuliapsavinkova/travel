@@ -51,7 +51,7 @@ export default function ResourcesPage() {
             position: index + 1,
             name: item.name,
             description: item.description,
-            url: `https://sitterjourney.com/resources/${item.slug}`,
+            url: `https://sitterjourney.com/${item.slug}`,
           })),
         },
       },
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
               image={item.imageUrl}
               description={item.description}
               badge={item.discountText ? 'Promo' : 'Tool'}
-              slug={`/resources/${item.slug}`}
+              slug={`/${item.slug}`}
               actionLabel="Details"
               ctaLink={item.link}
               ctaLabel={item.discountText ? `Discount: ${item.discountText}` : 'Visit'}

@@ -91,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const resourcePages: MetadataRoute.Sitemap = ALL_RESOURCES.map((item) => ({
-    url: `${SITE_URL}/resources/${item.slug}`,
+    url: `${SITE_URL}/${item.slug}`,
     lastModified: resolveLastModified(item.updatedDate || item.date, currentDate),
     changeFrequency: 'monthly',
     priority: 0.75,

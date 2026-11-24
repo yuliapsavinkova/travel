@@ -12,11 +12,12 @@ const ContactForm = dynamic(() => import('./ContactForm'), { ssr: false });
 
 interface NavigationProps {
   blogPaths?: string[];
+  resourcePaths?: string[];
 }
 
 const STATIC_BLOG_ROUTES = new Set(['/blog', '/sitters', '/homeowners']);
 
-const Navigation = ({ blogPaths = [] }: NavigationProps) => {
+const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
@@ -66,9 +67,14 @@ const Navigation = ({ blogPaths = [] }: NavigationProps) => {
     return new Set([...STATIC_BLOG_ROUTES, ...blogPaths]);
   }, [blogPaths]);
 
+  const resourceRouteSet = useMemo(() => {
+    return new Set(resourcePaths);
+  }, [resourcePaths]);
+
   const checkActive = (href: string) => {
     if (href === '/') return pathname === '/';
     if (href === '/blog' && pathname && blogRouteSet.has(pathname)) return true;
+    if (href === '/resources' && pathname && resourceRouteSet.has(pathname)) return true;
     return pathname === href || pathname?.startsWith(`${href}/`);
   };
 

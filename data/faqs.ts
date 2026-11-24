@@ -10,7 +10,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'I find almost all my month long stays through house sitting. It is by far the most ' +
       'sustainable way to see the country.',
-    link: { label: 'My Primary Travel Tool', href: '/resources/trusted-housesitters-review' },
+    link: { label: 'My Primary Travel Tool', href: '/trusted-housesitters-review' },
   },
   {
     id: 'travel-savings',
@@ -65,7 +65,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'review page for details.',
     link: {
       label: 'Claim Discount',
-      href: '/resources/trusted-housesitters-review',
+      href: '/trusted-housesitters-review',
     },
   },
   {
@@ -250,7 +250,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'A reliable mobile hotspot is essential for nomadic life, as you can never fully ' +
       'trust public WiFi.',
-    link: { label: 'Read My Phone Plan Guide', href: '/resources/visible-review' },
+    link: { label: 'Read My Phone Plan Guide', href: '/visible-review' },
   },
   {
     id: 'ths-internet-remote',
@@ -258,7 +258,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'Unlimited data is a must for reliable hotspotting. I use Visible for its ' +
       'unlimited hotspot feature.',
-    link: { label: 'View Connectivity Kit', href: '/resources/visible-review' },
+    link: { label: 'View Connectivity Kit', href: '/visible-review' },
   },
   {
     id: 'travel-wellness-gym',
@@ -266,7 +266,7 @@ export const MASTER_FAQS: FAQItem[] = [
     answer:
       'I maintain a nationwide gym membership for consistent workouts and reliable showers. ' +
       'Planet Fitness is my go to.',
-    // link: { label: 'Travel Wellness Kit', href: '/resources/planet-fitness-review' },
+    // link: { label: 'Travel Wellness Kit', href: '/planet-fitness-review' },
   },
 
   // =====================================================

@@ -6,6 +6,7 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import { BLOG_POSTS } from '../data/house-sitting/house-sitting';
+import { ALL_RESOURCES } from '../data/resources/resources';
 import { SITE_CONFIG } from '../site-config';
 import { DEFAULT_OG_IMAGE, PUBLISHER_LOGO_URL } from '../utils/content';
 import '../styles.css';
@@ -178,6 +179,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   const gaId = SITE_CONFIG.googleAnalyticsId;
   const blogPaths = BLOG_POSTS.map((post) => `/${post.slug}`);
+  const resourcePaths = ALL_RESOURCES.map((item) => `/${item.slug}`);
 
   return (
     <html
@@ -211,7 +213,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="app-root">
           <AnalyticsTracker />
           <div className="studio-depth" />
-          <Navigation blogPaths={blogPaths} />
+          <Navigation blogPaths={blogPaths} resourcePaths={resourcePaths} />
           <main className="main-viewport">{children}</main>
           <Footer />
         </div>

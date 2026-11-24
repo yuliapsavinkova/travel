@@ -5,7 +5,7 @@
 ## Overview
 Sitter Journey shares real-world guides, financial breakdowns, strategy blueprints, platform comparisons, and verified nomadic resources for both house sitters and homeowners.
 
-- Primary Platform: [TrustedHousesitters](https://sitterjourney.com/resources/trusted-housesitters-review)
+- Primary Platform: [TrustedHousesitters](https://sitterjourney.com/trusted-housesitters-review)
 - Author: Yulia (Full-time traveler & professional house sitter)
 - Professional Portfolio: [yulia.sitterjourney.com](https://yulia.sitterjourney.com/)
 - Contact: sitterjourney@gmail.com
@@ -49,10 +49,9 @@ Sitter Journey shares real-world guides, financial breakdowns, strategy blueprin
 - [Gili Trawangan: No Motorbikes, First Scuba](https://sitterjourney.com/travel/gili-trawangan-slow-travel): Transitioning to the car-free quiet of the Gili Islands and underwater adventures.
 
 ## Recommended Nomad Resources & Tools
-- [TrustedHousesitters (Membership Discount)](https://sitterjourney.com/resources/trusted-housesitters-review): Primary platform for global accommodation exchange in exchange for pet care.
-- [Rover ($20 Credit)](https://sitterjourney.com/resources/rover-review): Paid pet care platform for filling nomadic calendar gaps and earning while traveling.
-- [Visible Wireless (Save $20)](https://sitterjourney.com/resources/visible-review): Unlimited data, talk, text, and mobile hotspot plan powered by Verizon's 5G network.
-- [Planet Fitness ($1 Down Promo)](https://sitterjourney.com/resources/planet-fitness-review): Nationwide Black Card gym network for daily fitness, showers, and wellness on the road.
+- [TrustedHousesitters (Membership Discount)](https://sitterjourney.com/trusted-housesitters-review): Primary platform for global accommodation exchange in exchange for pet care.
+- [Rover ($20 Credit)](https://sitterjourney.com/rover-review): Paid pet care platform for filling nomadic calendar gaps and earning while traveling.
+- [Visible Wireless (Save $20)](https://sitterjourney.com/visible-review): Unlimited data, talk, text, and mobile hotspot plan powered by Verizon's 5G network.
 
 ## Key Themes & Guidance Topics
 - **House Sitting Economics**: How mutual-benefit exchanges eliminate lodging fees without monetary transactions between sitters and homeowners.
