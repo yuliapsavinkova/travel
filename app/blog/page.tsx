@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import BlogArchive from '../../components/BlogArchive';
-import { BLOG_POSTS } from '../../constants';
+import { BLOG_POSTS } from '../../data/house-sitting/house-sitting';
 import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../../utils/content';
 
 export const metadata: Metadata = {

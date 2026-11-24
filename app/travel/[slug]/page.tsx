@@ -3,7 +3,8 @@ import React from 'react';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
 import StickyReaderCta from '../../../components/StickyReaderCta';
-import { REFERRALS, TRAVEL_GUIDES } from '../../../constants';
+import { TRAVEL_GUIDES } from '../../../data/travel/travel';
+import { REFERRALS } from '../../../types';
 import { PUBLISHER_LOGO_URL, toAbsoluteUrl, toIsoDate } from '../../../utils/content';
 
 export async function generateStaticParams() {

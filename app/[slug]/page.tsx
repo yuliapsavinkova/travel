@@ -4,7 +4,12 @@ import React from 'react';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
 import StickyReaderCta from '../../components/StickyReaderCta';
-import { BLOG_POSTS, HOMEOWNER_POSTS, REFERRALS, SITTER_POSTS } from '../../constants';
+import {
+  BLOG_POSTS,
+  HOMEOWNER_POSTS,
+  SITTER_POSTS,
+} from '../../data/house-sitting/house-sitting';
+import { REFERRALS } from '../../types';
 import { getFaqsByIds } from '../../data/faqs';
 import {
   PUBLISHER_LOGO_URL,

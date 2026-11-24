@@ -1,5 +1,5 @@
 import React from 'react';
-import { SITE_CONFIG } from '../constants';
+import { SITE_CONFIG } from '../site-config';
 
 export const privacyPolicyContent = (
   <>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import HomeHero from '../components/HomeHero';
 import { StarIcon } from '../components/Icons';
 import SectionDivider from '../components/SectionDivider';
-import { SITE_STATS } from '../constants';
+import { SITE_STATS } from '../site-config';
 import { DEFAULT_OG_IMAGE } from '../utils/content';
 
 export const metadata: Metadata = {

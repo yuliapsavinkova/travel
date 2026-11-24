@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { type MouseEvent, useEffect, useRef, useState } from 'react';
 import { REFERRALS } from '../types';
 import { ArrowUpRightIcon } from './Icons';
 import { trackFloatingCtaClick } from '../utils/analytics';
@@ -74,9 +74,9 @@ export default function StickyReaderCta({
   // If not scrolled enough or if user has scrolled all the way to the footer, hide it smoothly
   const shouldRender = isVisible && !isNearFooter;
 
-  const lastClickRef = React.useRef<number>(0);
+  const lastClickRef = useRef<number>(0);
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     // Only fire on authentic user click events
     if (event && !event.isTrusted) return;
 

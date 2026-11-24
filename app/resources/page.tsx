@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import CommonCard from '../../components/CommonCard';
-import { ALL_RESOURCES } from '../../constants';
+import { ALL_RESOURCES } from '../../data/resources/resources';
 import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {

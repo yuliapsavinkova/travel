@@ -1,12 +1,14 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { NAV_ITEMS } from '../site-config';
 import BrandLogo from './BrandLogo';
-import ContactForm from './ContactForm';
 import { MenuIcon, XIcon } from './Icons';
+
+const ContactForm = dynamic(() => import('./ContactForm'), { ssr: false });
 
 interface NavigationProps {
   blogPaths?: string[];

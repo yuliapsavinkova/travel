@@ -5,7 +5,8 @@ import Script from 'next/script';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { BLOG_POSTS, SITE_CONFIG } from '../constants';
+import { BLOG_POSTS } from '../data/house-sitting/house-sitting';
+import { SITE_CONFIG } from '../site-config';
 import { DEFAULT_OG_IMAGE, PUBLISHER_LOGO_URL } from '../utils/content';
 import '../styles.css';
 

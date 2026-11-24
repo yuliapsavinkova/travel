@@ -1,5 +1,5 @@
 import { permanentRedirect } from 'next/navigation';
-import { BLOG_POSTS } from '../../../constants';
+import { BLOG_POSTS } from '../../../data/house-sitting/house-sitting';
 
 /**
  * Temporary legacy /blog/[slug] -> /[slug] redirect page for Google re-indexing.

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
-import { ALL_RESOURCES } from '../../../constants';
+import { ALL_RESOURCES } from '../../../data/resources/resources';
 import { getFaqsByIds } from '../../../data/faqs';
 import { PUBLISHER_LOGO_URL, toAbsoluteUrl, toIsoDate } from '../../../utils/content';
 

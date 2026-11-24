@@ -4,7 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 import CommonCard from '../../components/CommonCard';
 import { CompassIcon, MapPinIcon } from '../../components/Icons';
-import { SITE_STATS, TRAVEL_GUIDES } from '../../constants';
+import { TRAVEL_GUIDES } from '../../data/travel/travel';
+import { SITE_STATS } from '../../site-config';
 import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {

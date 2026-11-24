@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { ContactTrigger } from '../../components/ClientTriggers';
 import { MailIcon } from '../../components/Icons';
-import { SITE_CONFIG } from '../../constants';
+import { SITE_CONFIG } from '../../site-config';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
 import { body as aboutBody } from '../../data/about';

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import BlogArchive from '../../components/BlogArchive';
-import { SITTER_POSTS } from '../../constants';
+import { SITTER_POSTS } from '../../data/house-sitting/house-sitting';
 import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../../utils/content';
 
 export const metadata: Metadata = {
