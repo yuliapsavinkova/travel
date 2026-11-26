@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { type ReactNode, useId } from 'react';
 import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../site-config';
 import BrandLogo from './BrandLogo';
-import { ExternalLinkIcon } from './Icons';
+import { ContactTrigger, EmailTrigger } from './ClientTriggers';
+import { ExternalLinkIcon, MailIcon } from './Icons';
 import SectionDivider from './SectionDivider';
 import SocialMediaIcons from './SocialMediaIcons';
 import SurfHorizon from './SurfHorizon';
@@ -77,15 +78,29 @@ const Footer = () => (
           ))}
         </FooterNav>
 
-        <FooterNav title="External Networks">
-          {EXTERNAL_LINKS.map(({ href, label, sponsored }) => (
-            <li key={href}>
-              <NewTabLink href={href} sponsored={sponsored} showIcon>
-                {label}
-              </NewTabLink>
+        <div className="footer-col-stack">
+          <FooterNav title="External Networks">
+            {EXTERNAL_LINKS.map(({ href, label, sponsored }) => (
+              <li key={href}>
+                <NewTabLink href={href} sponsored={sponsored} showIcon>
+                  {label}
+                </NewTabLink>
+              </li>
+            ))}
+          </FooterNav>
+
+          <FooterNav title="Get in Touch">
+            <li>
+              <ContactTrigger label="Contact Me" />
             </li>
-          ))}
-        </FooterNav>
+            <li>
+              <EmailTrigger ariaLabel="Email Me">
+                <MailIcon size={12} aria-hidden="true" />
+                <span>Email Me</span>
+              </EmailTrigger>
+            </li>
+          </FooterNav>
+        </div>
       </div>
 
       <div className="footer-bottom">

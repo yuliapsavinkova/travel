@@ -1,4 +1,5 @@
 import { SITE_CONFIG } from '../site-config';
+import { EmailTrigger } from './ClientTriggers';
 import { FacebookIcon, InstagramIcon, MailIcon, PinterestIcon, TikTokIcon } from './Icons';
 
 interface SocialMediaIconsProps {
@@ -51,9 +52,9 @@ export default function SocialMediaIcons({
         <PinterestIcon size={iconSize} />
       </a>
       {showEmail && (
-        <a href={`mailto:${SITE_CONFIG.email}`} className="social-icon-btn" aria-label="Email">
+        <EmailTrigger className="social-icon-btn" ariaLabel="Email Me">
           <MailIcon size={iconSize} />
-        </a>
+        </EmailTrigger>
       )}
     </nav>
   );

@@ -25,6 +25,10 @@ export const SITE_CONFIG = {
   tagline: 'Full-Time Traveler',
   missionStart: 'May 2025',
   email: 'sitterjourney@gmail.com',
+  emailParts: {
+    user: 'sitterjourney',
+    domain: 'gmail.com',
+  },
   googleAnalyticsId: 'G-R0920QKYXK',
   socials: {
     instagram: 'https://instagram.com/sitterjourney',

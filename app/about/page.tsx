@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ContactTrigger } from '../../components/ClientTriggers';
+import { ContactTrigger, EmailTrigger } from '../../components/ClientTriggers';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
 import { MailIcon } from '../../components/Icons';
@@ -109,15 +109,15 @@ export default function AboutPage() {
               flexWrap: 'wrap',
             }}
           >
-            <ContactTrigger label="Contact" className="btn-gold" />
-            <a
-              href={`mailto:${SITE_CONFIG.email}`}
+            <ContactTrigger label="Contact Me" className="btn-gold" />
+            <EmailTrigger
               className="secondary-btn"
               style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
+              ariaLabel="Email Me"
             >
-              <MailIcon size={16} />
-              {SITE_CONFIG.email}
-            </a>
+              <MailIcon size={16} aria-hidden="true" />
+              <span>Email Me</span>
+            </EmailTrigger>
           </div>
         </div>
       </CommonDetail>
