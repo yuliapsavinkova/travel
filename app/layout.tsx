@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     'TrustedHousesitters',
     'TrustedHousesitters Review',
     'Solo Female Travel',
-    'Nomad Travel',
+    'Slow Travel',
     'Pet Sitting',
     'Free Travel Accommodation',
     'Sitter Journey',

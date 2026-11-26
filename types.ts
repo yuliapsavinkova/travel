@@ -170,6 +170,7 @@ export interface ResourceItem {
   date?: ContentDate;
   updatedDate?: ContentDate;
   discountText?: string;
+  ctaLabel?: string;
   link: string;
   icon: string;
   imageUrl?: string;

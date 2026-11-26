@@ -16,7 +16,7 @@ interface ArticleSidebarProps {
 export default function ArticleSidebar({
   promoBadge = 'Referral Offer',
   promoTitle = 'TrustedHousesitters',
-  promoDescription = 'Exchange pet care for comfortable homes worldwide—save on your annual membership.',
+  promoDescription = 'Stay in comfortable homes worldwide in exchange for caring for pets, and save on your annual membership.',
   promoLink = REFERRALS.THS.link,
   promoLabel = REFERRALS.THS.cta,
   showPromo = true,
@@ -35,7 +35,7 @@ export default function ArticleSidebar({
           <div className="sidebar-author-avatar-wrap">
             <Image
               src="/yulia-with-dog.jpg"
-              alt="Yulia — House Sitter & Slow Traveler"
+              alt="Yulia, House Sitter and Slow Traveler"
               fill
               sizes="132px"
               className="sidebar-author-avatar"

@@ -10,6 +10,7 @@ export const resource: ResourceItem = {
   date: 'January 9, 2026',
   sortOrder: 3,
   discountText: REFERRALS.VISIBLE.discount,
+  ctaLabel: REFERRALS.VISIBLE.discount,
   link: REFERRALS.VISIBLE.link,
   icon: 'smartphone',
   imageUrl:
@@ -21,29 +22,30 @@ export const resource: ResourceItem = {
     'is-trusted-housesitters-worth-it-for-sitters',
   ],
   seoTitle: 'Visible Wireless Review: Best Unlimited Plan for Travelers',
-  seoDescription: `Personal review of Visible Wireless for nomadic life. Get your first month of unlimited data and ${REFERRALS.VISIBLE.discount} with referral code.`,
+  seoDescription: `Personal review of Visible Wireless for house sitting and remote work. Get your first month of unlimited data and ${REFERRALS.VISIBLE.discount} with referral code.`,
   seoKeywords: [
     'visible mobile review 2026',
     'best unlimited hotspot for travelers',
-    'digital nomad internet solutions',
-    'visible vs verizon for nomads',
-    'remote work on the road',
-    'cheap unlimited data plans',
+    'remote work internet solutions',
+    'visible vs verizon for travelers',
+    'reliable hotspot while traveling',
+    'affordable unlimited data plans',
     'visible wireless referral code',
-    'nomad tech kit essentials',
+    'travel tech kit essentials',
   ],
   body: (
     <>
       <p className="prose-lead">
-        For a digital nomad, internet is oxygen. Visible is the single most important tool in my
-        connectivity kit, providing the reliable unlimited hotspot I need for remote work.
+        When you work remotely from different homes, reliable internet is essential. Visible is the
+        most important part of my setup, giving me an unlimited hotspot whenever I need a dependable
+        connection.
       </p>
 
       <h2>The Unlimited Hotspot Hack</h2>
       <p>
         Most "unlimited" plans have a hidden hotspot cap. Visible is different. They offer unlimited
-        mobile hotspot data, which has allowed me to work from rural mountain cabins, beachfronts,
-        and suburban homes without a single worry about data overages.
+        mobile hotspot data, which lets me work comfortably from quiet mountain cabins, beachfront
+        homes, and suburban neighborhoods without worrying about data limits.
       </p>
 
       <div className="prose-accent-box">
@@ -56,7 +58,8 @@ export const resource: ResourceItem = {
             <strong>Price:</strong> Simple, flat monthly rate (even lower with a referral).
           </li>
           <li>
-            <strong>Network:</strong> Runs on Verizon’s 5G/LTE network—the best in the US.
+            <strong>Network:</strong> Runs on Verizon’s 5G/LTE network, with strong coverage across
+            the US.
           </li>
         </ul>
       </div>

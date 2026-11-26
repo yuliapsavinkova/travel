@@ -9,14 +9,14 @@ import { SITE_STATS } from '../../site-config';
 import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
-  title: 'Travel Guides & Nomad Destinations | Sitter Journey',
+  title: 'Travel Guides & Slow Travel Destinations | Sitter Journey',
   description:
     'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
   alternates: {
     canonical: 'https://sitterjourney.com/travel',
   },
   openGraph: {
-    title: 'Travel Guides & Nomad Destinations',
+    title: 'Travel Guides & Slow Travel Destinations',
     description:
       'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
     url: 'https://sitterjourney.com/travel',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Sitter Journey Travel Guides & Nomad Destinations',
+        alt: 'Sitter Journey Travel Guides & Slow Travel Destinations',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Travel Guides & Nomad Destinations',
+    title: 'Travel Guides & Slow Travel Destinations',
     description:
       'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
     images: [DEFAULT_OG_IMAGE],

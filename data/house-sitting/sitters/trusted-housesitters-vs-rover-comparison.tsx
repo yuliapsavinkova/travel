@@ -41,8 +41,8 @@ export const post: BlogPost = {
   body: (
     <>
       <p className="prose-lead">
-        Comparing TrustedHousesitters to Rover is extremely common—and mostly wrong. Not because one
-        is better than the other, but because they solve different problems.
+        Comparing TrustedHousesitters to Rover is extremely common, and mostly wrong. Not because
+        one is better than the other, but because they solve different problems.
       </p>
 
       <p>
@@ -109,7 +109,7 @@ export const post: BlogPost = {
         <li>“Why would anyone trust strangers?”</li>
       </ul>
 
-      <p>Valid concerns—but they fade once you understand:</p>
+      <p>Valid concerns, and they fade once you understand:</p>
       <ul>
         <li>Reviews matter more than profiles</li>
         <li>Most sits are routine, not dramatic</li>
@@ -153,8 +153,8 @@ export const post: BlogPost = {
 
       <div className="prose-end">
         <strong>Final Verdict</strong>
-        One is a side-hustle, one is a gateway to travel. I use both to maintain my life on the
-        road, but for housing, TrustedHousesitters is the clear winner.
+        One is a side job, and one is a way to travel. I use both between stays, but for full-time
+        living, TrustedHousesitters is the clear winner.
       </div>
     </>
   ),

@@ -42,7 +42,7 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         Good communication is one of the biggest differentiators between an average sit and a great
-        one. Clear updates build trust, reassure owners, and prevent problems—but only if
+        one. Clear updates build trust, reassure owners, and prevent problems, but only if
         expectations are set early and followed consistently.
       </p>
 
@@ -96,7 +96,7 @@ export const post: BlogPost = {
       <div className="prose-accent-box variant-highlight">
         <span className="accent-box-label">Important Note</span>
         <p className="serif-italic">
-          If everything is normal, keep updates positive. Owners are on vacation—they don’t need
+          If everything is normal, keep updates positive. Owners are on vacation, so they don’t need
           unnecessary micro-issues unless they truly matter.{' '}
           <strong>Report real issues (broken items, malfunctions) early</strong>; unreported
           problems found later always go worse.
@@ -111,7 +111,7 @@ export const post: BlogPost = {
           "Buddy was very proud of himself chasing squirrels today").
         </li>
         <li>
-          <strong>Keep it simple:</strong> If nothing interesting happened, don’t force it—just
+          <strong>Keep it simple:</strong> If nothing interesting happened, don’t force it. Just
           confirm the routine is solid.
         </li>
       </ul>
@@ -129,9 +129,9 @@ export const post: BlogPost = {
         </p>
 
         <p className="serif-italic" style={{ marginTop: 'var(--s-4)' }}>
-          “Fun afternoon today—lots of playtime and a few zoomies around the house. After burning
-          off all that energy, she completely crashed and slept next to me on the couch. Added a few
-          photos.”
+          “Fun afternoon today, with lots of playtime and a few zoomies around the house. After
+          burning off all that energy, she completely crashed and slept next to me on the couch.
+          Added a few photos.”
           <br />
           <strong>(Warm, personal, easy to picture)</strong>
         </p>
@@ -159,7 +159,7 @@ export const post: BlogPost = {
 
       <h2>6. Handling Common Situations</h2>
       <p>
-        <strong>Quiet Days:</strong> Still update if that’s the agreement. "All is well today—walks
+        <strong>Quiet Days:</strong> Still update if that’s the agreement. "All is well today, walks
         and routines as usual."
       </p>
       <p>
@@ -176,7 +176,7 @@ export const post: BlogPost = {
 
       <div className="prose-end">
         <strong>Final Verdict</strong>
-        Good communication while house sitting isn’t about volume—it’s about clarity, consistency,
+        Good communication while house sitting isn’t about volume. It’s about clarity, consistency,
         and judgment. Do this well, and most sits run smoothly with very little friction.
       </div>
     </>

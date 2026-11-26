@@ -125,7 +125,7 @@ export const post: BlogPost = {
         </ul>
       </div>
       <p>
-        <strong>Best for:</strong> Full-time nomads who rely on house sitting as their primary
+        <strong>Best for:</strong> Full-time sitters who rely on house sitting as their primary
         accommodation, frequent sitters, and anyone who wants maximum protection.
       </p>
       <p>

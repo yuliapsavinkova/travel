@@ -10,6 +10,7 @@ export const resource: ResourceItem = {
   date: 'January 9, 2026',
   sortOrder: 2,
   discountText: REFERRALS.ROVER.discount,
+  ctaLabel: `Claim ${REFERRALS.ROVER.discount}`,
   link: REFERRALS.ROVER.link,
   icon: 'heart',
   imageUrl:
@@ -23,8 +24,8 @@ export const resource: ResourceItem = {
   body: (
     <>
       <p className="prose-lead">
-        Rover is the ultimate side-gig for animal lovers and a vital tool for filling scheduling
-        gaps in a nomadic lifestyle. It allows you to earn while you travel.
+        Rover is a great option for animal lovers and a practical way to fill scheduling gaps
+        between house sits. It lets you earn extra income while staying in a new city.
       </p>
 
       <h2>Turning Animal Care into Income</h2>

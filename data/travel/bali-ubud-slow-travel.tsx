@@ -16,7 +16,7 @@ export const content = (
     </p>
 
     <p>
-      Exploring the intersection of ancient traditions and modern nomadic life has been a defining
+      Exploring the intersection of ancient traditions and full-time slow travel has been a defining
       chapter of my global journey across 35+ countries and continues to influence my professional
       standards.
     </p>

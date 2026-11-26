@@ -87,7 +87,7 @@ export default function MobileReferralBar({
     lastClickRef.current = now;
 
     trackFloatingCtaClick({
-      text: `${title} — ${ctaLabel}`,
+      text: `${title}: ${ctaLabel}`,
       promoLink,
       ctaId: 'mobile-referral-cta',
       articleTitle,
@@ -101,26 +101,27 @@ export default function MobileReferralBar({
       className={`mobile-referral-bar ${shouldRender ? 'is-visible' : ''}`}
       aria-label="Referral offer"
     >
-      <div className="mobile-referral-bar-inner">
-        <div className="mobile-referral-meta">
-          <span className="mobile-referral-badge">{badge}</span>
-          <span className="mobile-referral-title">{title}</span>
-        </div>
+      <a
+        id="mobile-referral-cta"
+        href={promoLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mobile-referral-bar-link"
+        onClick={handleClick}
+        aria-label={`${title}, ${ctaLabel} (opens in a new tab)`}
+      >
+        <div className="mobile-referral-bar-inner">
+          <div className="mobile-referral-meta">
+            <span className="mobile-referral-badge">{badge}</span>
+            <span className="mobile-referral-title">{title}</span>
+          </div>
 
-        <div className="mobile-referral-actions">
-          <a
-            id="mobile-referral-cta"
-            href={promoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold mobile-referral-cta"
-            onClick={handleClick}
-          >
+          <span className="btn-gold mobile-referral-cta" aria-hidden="true">
             <span>{ctaLabel}</span>
-            <ArrowUpRightIcon size={12} aria-hidden="true" />
-          </a>
+            <ArrowUpRightIcon size={12} />
+          </span>
         </div>
-      </div>
+      </a>
     </aside>
   );
 }

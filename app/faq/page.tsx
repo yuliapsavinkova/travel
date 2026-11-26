@@ -7,16 +7,16 @@ import { REFERRALS } from '../../types';
 import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions: House Sitting & Nomadic Travel | Sitter Journey',
+  title: 'Frequently Asked Questions: House Sitting & Full-Time Travel | Sitter Journey',
   description:
-    'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and nomadic life.',
+    'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and full-time travel.',
   alternates: {
     canonical: 'https://sitterjourney.com/faq',
   },
   openGraph: {
-    title: 'Frequently Asked Questions: House Sitting & Nomadic Travel',
+    title: 'Frequently Asked Questions: House Sitting & Full-Time Travel',
     description:
-      'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and nomadic life.',
+      'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and full-time travel.',
     url: 'https://sitterjourney.com/faq',
     type: 'website',
     images: [
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frequently Asked Questions: House Sitting & Nomadic Travel',
+    title: 'Frequently Asked Questions: House Sitting & Full-Time Travel',
     description:
-      'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and nomadic life.',
+      'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and full-time travel.',
     images: [DEFAULT_OG_IMAGE],
   },
 };

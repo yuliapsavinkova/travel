@@ -163,8 +163,8 @@ export default function BlogPostDetail({ post }: { post: BlogPost }) {
           <ArticleSidebar
             promoDescription={
               track === 'homeowners'
-                ? 'Find vetted, reviewed sitters for your home and pets—save on an annual TrustedHousesitters membership.'
-                : 'Exchange pet care for comfortable homes worldwide—save on your annual TrustedHousesitters membership.'
+                ? 'Find vetted, reviewed sitters for your home and pets, and save on an annual TrustedHousesitters membership.'
+                : 'Stay in comfortable homes worldwide in exchange for caring for pets, and save on your annual membership.'
             }
             promoLink={post.ctaLink || REFERRALS.THS.link}
             promoLabel={post.ctaLabel || REFERRALS.THS.cta}

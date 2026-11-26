@@ -162,7 +162,7 @@ export const post: BlogPost = {
           {'\n'}[paste your template]
           {'\n\n'}
           <span className="text-gold text-bold">LISTING:</span>
-          {'\n'}[paste the entire listing — all 3 sections from TrustedHousesitters]
+          {'\n'}[paste the entire listing, all 3 sections from TrustedHousesitters]
           {'\n\n'}
           <span className="text-gold text-bold">INSTRUCTIONS:</span>
           {'\n'}- Keep the fixed parts of my template unchanged.
@@ -286,7 +286,7 @@ export const post: BlogPost = {
       </ul>
 
       <p>
-        Use your judgment. Speed mode is a tool for situations where moving quickly matters — not a
+        Use your judgment. Speed mode is a tool for situations where moving quickly matters, not a
         rule that every application should be rushed.
       </p>
 
@@ -300,7 +300,7 @@ export const post: BlogPost = {
       <div className="prose-accent-box variant-cons">
         <p className="text-mono serif-italic">
           Hi [NAME],{'\n\n'}
-          Just wanted to clarify — I see you mentioned [SPECIFIC DETAIL]. I can confirm [YOUR
+          Just wanted to clarify: I see you mentioned [SPECIFIC DETAIL]. I can confirm [YOUR
           RELEVANT CAPABILITY].{'\n\n'}
           Best,{'\n'}
           [YOUR NAME]
@@ -312,7 +312,7 @@ export const post: BlogPost = {
 
         <p>
           Competitive sits can move quickly. A reusable template doesn't have to make your
-          applications feel generic — it gives you a consistent structure while leaving room for
+          applications feel generic. It gives you a consistent structure while leaving room for
           genuine personalization.
         </p>
         <p>

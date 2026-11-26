@@ -64,7 +64,7 @@ const Footer = () => (
           <BrandLogo />
           <p className="footer-brand-text">
             Travel the world on your own terms, spend less, live more, and enjoy the journey. Real
-            stories, tips, and inspiration from the road.
+            stories, tips, and practical advice from my adventures.
           </p>
           <SocialMediaIcons className="footer-socials" />
         </div>

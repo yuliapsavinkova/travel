@@ -96,7 +96,7 @@ export const post: BlogPost = {
 
       <h2>The Real 2026 Breakeven Math</h2>
       <p>
-        Most hesitation comes from the annual fee. Here's the current reality — and if you want to
+        Most hesitation comes from the annual fee. Here's the current reality, and if you want to
         dig deeper into which tier fits your travel pace, I break it all down in{' '}
         <Link href="/trusted-housesitters-membership-cost-levels">
           my membership levels article
@@ -130,7 +130,7 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        Make sure you use a discount when signing up to lower the fee even further —{' '}
+        Make sure you use a discount when signing up to lower the fee even further:{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           this link applies {REFERRALS.THS.discount} automatically
         </a>
@@ -167,7 +167,7 @@ export const post: BlogPost = {
 
       <h2>What to Be Aware Of</h2>
       <p>
-        The real skill in house sitting isn't caring for pets — it's picking the right sit. Like any
+        The real skill in house sitting isn't caring for pets, it's picking the right sit. Like any
         exchange between people, expectations can vary from host to host, and a mismatch in
         communication style is the most common source of friction, not the animals. The good news,
         this is largely avoidable; I look for hosts with a strong, consistent review history and a
@@ -177,10 +177,10 @@ export const post: BlogPost = {
 
       <div className="prose-end">
         <strong>Final Verdict</strong>
-        For the cost of a single weekend in a mediocre hotel, you unlock the opportunity to find
-        sits in beautiful homes for the full length of your membership, with the company of new
-        furry friends along the way. In my experience, it's one of the most effective ways to see
-        the world on a budget — and to immerse yourself and live like a local.
+        For the cost of a single weekend in a standard hotel, you unlock the opportunity to stay in
+        comfortable homes for the full length of your membership, with the company of new furry
+        friends along the way. In my experience, it's one of the best ways to travel comfortably on
+        a budget and live like a local.
       </div>
     </>
   ),

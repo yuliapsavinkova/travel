@@ -227,7 +227,7 @@ export default function HomePage() {
         <section className="home-section-wrap text-center">
           <div className="glass-card home-feature-card">
             <h2 className="display-title display-title-md">
-              The Road <span className="serif-italic">Ahead</span>
+              What Comes <span className="serif-italic">Next</span>
             </h2>
             <p className="hero-paragraph home-feature-paragraph">
               I’m just getting started here, so check back as the site grows. I’ll be sharing

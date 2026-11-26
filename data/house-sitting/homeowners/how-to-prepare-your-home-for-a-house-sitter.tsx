@@ -18,7 +18,7 @@ export const post: BlogPost = {
   subtitle:
     'A calm, practical home-prep guide from a full-time sitter so your pets stay settled and your trip starts smoothly.',
   excerpt:
-    'Learn how to prepare your home and pets before a house sitter arrives—from welcome guide essentials and stocked supplies to clearing space in the kitchen and setting clear expectations.',
+    'Learn how to prepare your home and pets before a house sitter arrives, from welcome guide essentials and stocked supplies to clearing space in the kitchen and setting clear expectations.',
   date: 'November 23, 2026',
   category: 'Guide',
   location: 'Global',
@@ -47,7 +47,7 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         After completing {sits_completed}+ stays across the country, one pattern stands out right
-        away: the smoothest sits rarely happen in the fanciest homes—they happen in homes where
+        away: the smoothest sits rarely happen in the fanciest homes. They happen in homes where
         essentials are clear, easy to find, and ready before departure.
       </p>
 
@@ -61,7 +61,7 @@ export const post: BlogPost = {
 
       <h2>1. Ready the Living &amp; Sleeping Spaces</h2>
       <p>
-        A sitter settles in faster—and focuses right away on your pets—when the basics are ready for
+        A sitter settles in faster and focuses right away on your pets when the basics are ready for
         them upon arrival:
       </p>
       <ul>
@@ -120,7 +120,7 @@ export const post: BlogPost = {
         <Link href="/what-to-include-in-a-house-sitter-welcome-guide">
           what to include in a house sitter welcome guide
         </Link>
-        —at minimum, cover:
+        . At minimum, cover:
       </p>
       <ul>
         <li>
@@ -147,9 +147,9 @@ export const post: BlogPost = {
       <div className="prose-accent-box variant-highlight">
         <span className="accent-box-label">Why Honesty Helps</span>
         <p className="serif-italic">
-          Every house and pet has quirks—a temperamental shower handle, a dog that barks at delivery
-          trucks, or a neighbor who drops by for mail. Naming them upfront prevents surprises and
-          helps your sitter handle them calmly.
+          Every house and pet has quirks, like a temperamental shower handle, a dog that barks at
+          delivery trucks, or a neighbor who drops by for mail. Naming them upfront prevents
+          surprises and helps your sitter handle them calmly.
         </p>
       </div>
 
@@ -178,7 +178,7 @@ export const post: BlogPost = {
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           get {REFERRALS.THS.discount} your homeowner membership with my referral link
         </a>
-        —or learn about hiring me privately at{' '}
+        , or learn about hiring me privately at{' '}
         <a href={YULIA_SITTER_JOURNEY_URL} target="_blank" rel="noopener noreferrer">
           {YULIA_SITTER_JOURNEY_DISPLAY}
         </a>

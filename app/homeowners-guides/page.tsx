@@ -6,14 +6,14 @@ import { DEFAULT_OG_IMAGE, toAbsoluteUrl, toIsoDate, toPostSummaries } from '../
 export const metadata: Metadata = {
   title: 'Guides for Homeowners & Pet Parents | Sitter Journey',
   description:
-    'Checklists, questions to ask, and advice for homeowners welcoming a house sitter—shared from my perspective as a sitter.',
+    'Checklists, questions to ask, and advice for homeowners welcoming a house sitter, shared from my perspective as a sitter.',
   alternates: {
     canonical: 'https://sitterjourney.com/homeowners-guides',
   },
   openGraph: {
     title: 'Guides for Homeowners & Pet Parents | Sitter Journey',
     description:
-      'Checklists, questions to ask, and advice for homeowners welcoming a house sitter—shared from my perspective as a sitter.',
+      'Checklists, questions to ask, and advice for homeowners welcoming a house sitter, shared from my perspective as a sitter.',
     url: 'https://sitterjourney.com/homeowners-guides',
     type: 'website',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Guides for Homeowners & Pet Parents | Sitter Journey',
     description:
-      'Checklists, questions to ask, and advice for homeowners welcoming a house sitter—shared from my perspective as a sitter.',
+      'Checklists, questions to ask, and advice for homeowners welcoming a house sitter, shared from my perspective as a sitter.',
     images: [DEFAULT_OG_IMAGE],
   },
 };

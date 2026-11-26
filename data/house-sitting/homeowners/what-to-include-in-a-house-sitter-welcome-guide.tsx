@@ -16,7 +16,7 @@ export const post: BlogPost = {
   title: 'What to Include in a House Sitter Welcome Guide (Checklist)',
   navTitle: 'Welcome Guide Checklist',
   subtitle:
-    'The clear, stress-saving sections every homeowner welcome guide needs—based on over 40 real house sits.',
+    'The clear, stress-saving sections every homeowner welcome guide needs, based on over 40 real house sits.',
   excerpt:
     'Learn exactly what to leave in a house sitter welcome guide: pet feeding and medication routines, emergency vet authorization, Wi-Fi and appliance quirks, and local contacts.',
   date: 'November 23, 2026',
@@ -48,8 +48,8 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         Across {sits_completed}+ sits, the single document that prevents almost every mid-trip text
-        question is a clear, well-organized Welcome Guide. You do not need a 30-page manual—just the
-        practical details someone actually needs at 7 a.m. or in an unexpected moment.
+        question is a clear, well-organized Welcome Guide. You do not need a 30-page manual, just
+        the practical details someone actually needs at 7 a.m. or in an unexpected moment.
       </p>
 
       <p>
@@ -85,7 +85,7 @@ export const post: BlogPost = {
       </div>
 
       <h2>2. Pet Routines, Quirks &amp; Medications</h2>
-      <p>Spell out habits clearly—even ones that feel automatic to you:</p>
+      <p>Spell out habits clearly, even ones that feel automatic to you:</p>
       <ul>
         <li>
           <strong>Feeding &amp; treats:</strong> Exact scoop sizes, feeding times, forbidden table
@@ -152,8 +152,8 @@ export const post: BlogPost = {
 
       <div className="prose-end">
         <strong>Looking for a Trusted Sitter?</strong>
-        If you use TrustedHousesitters—where their built-in Welcome Guide template makes sharing all
-        of this simple—you can{' '}
+        If you use TrustedHousesitters, where their built-in Welcome Guide template makes sharing
+        all of this simple, you can{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           get {REFERRALS.THS.discount} your homeowner membership with my referral link
         </a>

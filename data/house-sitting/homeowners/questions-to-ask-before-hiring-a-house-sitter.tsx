@@ -60,7 +60,7 @@ export const post: BlogPost = {
       {/* Draft note: Add a brief opening anecdote about what separates thoughtful homeowner calls from rushed ones. */}
 
       <h2>1. Pet Care &amp; Temperament Questions</h2>
-      <p>Start with how the sitter handles your specific pets—not pets in general:</p>
+      <p>Start with how the sitter handles your specific pets, not pets in general:</p>
       <ul>
         <li>
           <strong>
@@ -118,7 +118,7 @@ export const post: BlogPost = {
         </li>
         <li>
           <strong>“Do you have any questions about our routine or neighborhood?”</strong> Strong
-          sitters ask thoughtful questions back—about leash habits, vet preferences, or sleep rules.
+          sitters ask thoughtful questions back about leash habits, vet preferences, or sleep rules.
         </li>
       </ul>
 
@@ -156,11 +156,11 @@ export const post: BlogPost = {
 
       <div className="prose-end">
         <strong>Ready to Find the Right Sitter?</strong>
-        Whether you interview sitters through TrustedHousesitters—where you can{' '}
+        Whether you interview sitters through TrustedHousesitters, where you can{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
           claim {REFERRALS.THS.discount} your membership with my referral link
         </a>
-        —or hire a private sitter directly at{' '}
+        , or hire a private sitter directly at{' '}
         <a href={YULIA_SITTER_JOURNEY_URL} target="_blank" rel="noopener noreferrer">
           {YULIA_SITTER_JOURNEY_DISPLAY}
         </a>

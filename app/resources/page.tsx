@@ -6,14 +6,14 @@ import { DEFAULT_OG_IMAGE } from '../../utils/content';
 export const metadata: Metadata = {
   title: 'Travel Resources & Discounts: My Trusted Toolkit | Sitter Journey',
   description:
-    'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
+    'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
   alternates: {
     canonical: 'https://sitterjourney.com/resources',
   },
   openGraph: {
     title: 'Travel Resources & Discounts: My Trusted Toolkit',
     description:
-      'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
+      'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
     url: 'https://sitterjourney.com/resources',
     type: 'website',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Travel Resources & Discounts: My Trusted Toolkit',
     description:
-      'A curated list of the tools, memberships, and services I use for full-time travel and house sitting. Includes verified discounts.',
+      'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
@@ -44,7 +44,7 @@ export default function ResourcesPage() {
         url: 'https://sitterjourney.com/resources',
         name: 'Travel Resources & Discounts | Sitter Journey',
         description:
-          'A curated list of tools, memberships, and services for nomadic travel and house sitting.',
+          'A curated list of apps, memberships, and services I use for house sitting and travel.',
         mainEntity: {
           '@type': 'ItemList',
           itemListElement: ALL_RESOURCES.map((item, index) => ({
@@ -84,12 +84,11 @@ export default function ResourcesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="container section-margin archive-page-container" id="archive">
-        <header className="text-center section-margin">
-          <h1 className="display-title display-title-md">
-            The <span className="serif-italic">Resources.</span>
-          </h1>
-          <p className="hero-paragraph home-section-intro">
-            The tools and services I use every day to live and work on the road.
+        <header className="text-center blog-archive-header">
+          <span className="sub-header">Resources</span>
+          <h1 className="display-title display-title-md">Apps and Services I Personally Use.</h1>
+          <p className="hero-paragraph blog-archive-subtitle">
+            I only recommend what I actually use myself on my travels and adventures.
           </p>
         </header>
 
@@ -104,7 +103,7 @@ export default function ResourcesPage() {
               slug={`/${item.slug}`}
               actionLabel="Details"
               ctaLink={item.link}
-              ctaLabel={item.discountText ? `Discount: ${item.discountText}` : 'Visit'}
+              ctaLabel={item.ctaLabel || (item.discountText ? `Get ${item.discountText}` : 'Visit')}
             />
           ))}
         </div>

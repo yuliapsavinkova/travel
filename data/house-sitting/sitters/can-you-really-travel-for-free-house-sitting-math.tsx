@@ -28,12 +28,12 @@ export const post: BlogPost = {
   ],
   seoTitle: 'Can You Really Travel for Free? House Sitting Math & Reality',
   seoDescription:
-    'Discover the truth about "free travel." We break down house sitting itineraries and math for nomads.',
+    'Discover the truth about "free travel." We break down house sitting itineraries and math for full-time sitters.',
   seoKeywords: [
     'travel for free math',
     'house sitting cost breakdown',
     'how to travel without paying for hotels',
-    'nomad budget planning',
+    'house sitting budget planning',
     'trustedhousesitters savings calculator',
     'financial freedom through travel',
     'long term travel budgeting',
@@ -71,8 +71,8 @@ export const post: BlogPost = {
 
       <h2>Scenario #1: The Slow Traveler (1–2 Sits/Month)</h2>
       <p>
-        This is the most common path for digital nomads. You spend a few weeks in one location
-        before moving on.
+        This is the most common path for remote workers. You spend a few weeks in one home before
+        moving on to your next stay.
       </p>
       <ul>
         <li>Assumption: 14 nights per sit, 10 months per year.</li>
@@ -85,15 +85,15 @@ export const post: BlogPost = {
         $10k ahead compared to traditional travel.
       </p>
 
-      <h2>Scenario #2: Full-Time Nomad (365 Days)</h2>
+      <h2>Scenario #2: Full-Time Sitting (365 Days)</h2>
       <p>
         Skeptics usually say: "Sure, but you'll never cover the whole year." In practice, many
-        sitters do—especially if they are flexible with location and apply strategically.
+        sitters do, especially if they are flexible with location and apply strategically.
       </p>
 
       <div className="prose-breakout">
         <div className="financial-flip-container">
-          <div className="sub-header">Full-Time Nomad Comparison</div>
+          <div className="sub-header">Full-Time Sitter Comparison</div>
           <h3 className="serif-italic">The Financial Flip</h3>
 
           <div className="financial-flip-grid">
@@ -122,7 +122,7 @@ export const post: BlogPost = {
 
       <h2>Scenario #3: My Actual Experience</h2>
       <p>
-        In the last 6 months (180 days), I paid for just 6 nights of hotels—and that was mostly by
+        In the last 6 months (180 days), I paid for just 6 nights of hotels, and that was mostly by
         choice, not necessity. This is the part most people miss: House sitting compounds. The
         longer you do it and the stronger your reviews, the easier it becomes to string sits
         together back-to-back.
@@ -159,9 +159,9 @@ export const post: BlogPost = {
 
       <h2>Why Most People Fail</h2>
       <p>
-        They treat it like Airbnb—browsing casually and applying whenever they feel like it. Success
-        requires a different approach: strategic applications, flexibility with location, and a
-        profile that builds trust instantly.
+        They treat it like Airbnb, browsing casually and applying whenever they feel like it.
+        Success requires a different approach: strategic applications, flexibility with location,
+        and a profile that builds trust instantly.
       </p>
       <p>
         If you're struggling to land sits, read my guides on{' '}

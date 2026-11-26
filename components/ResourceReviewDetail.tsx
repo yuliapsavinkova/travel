@@ -148,6 +148,14 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
     '@graph': graphEntities,
   };
 
+  const actionLabel =
+    item.ctaLabel ||
+    (item.discountText
+      ? /^(save|get|join|claim)\b/i.test(item.discountText)
+        ? item.discountText
+        : `Get ${item.discountText}`
+      : `Visit ${productName}`);
+
   return (
     <>
       <script
@@ -171,7 +179,7 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
             promoTitle={productName}
             promoDescription={item.description}
             promoLink={item.link}
-            promoLabel={item.discountText ? `Claim ${item.discountText}` : `Visit ${productName}`}
+            promoLabel={actionLabel}
             relatedArticles={relatedArticles}
           />
         }
@@ -184,7 +192,7 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
         badge={item.discountText ? 'Referral Offer' : 'Recommended Tool'}
         title={productName}
         promoLink={item.link}
-        ctaLabel={item.discountText ? `Claim ${item.discountText}` : `Visit ${productName}`}
+        ctaLabel={actionLabel}
         articleTitle={item.name}
         articleSlug={item.slug}
       />

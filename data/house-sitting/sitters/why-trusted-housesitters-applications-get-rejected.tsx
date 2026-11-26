@@ -47,7 +47,7 @@ export const post: BlogPost = {
 
       <p>
         Even after so many successful sits, I still get rejected. Most of the time, the "no" has
-        absolutely nothing to do with you. Here is a breakdown of the factors I've identified—the
+        absolutely nothing to do with you. Here is a breakdown of the factors I've identified: the
         ones you can influence and the ones that are completely out of your hands.
       </p>
 
@@ -137,7 +137,7 @@ export const post: BlogPost = {
       <div className="prose-end">
         <strong>Final Verdict</strong>
         Every "no" brings you closer to the next great experience. Don't let the process discourage
-        you—just keep being yourself.
+        you. Just keep being yourself.
       </div>
     </>
   ),

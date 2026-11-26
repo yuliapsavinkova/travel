@@ -43,7 +43,7 @@ export const post: BlogPost = {
     <>
       <p className="prose-lead">
         If you're considering joining TrustedHousesitters, one common question comes up early: What
-        actually happens if a sit doesn't go as planned — or if someone reports a problem?
+        actually happens if a sit doesn't go as planned, or if someone reports a problem?
       </p>
 
       <p>
@@ -67,8 +67,8 @@ export const post: BlogPost = {
 
       <h2>Can a sit be reported?</h2>
       <p>
-        Yes. Either party — the sitter or the homeowner — can report a sit. Reports can be made
-        during the sit (if the issue is ongoing) or after the sit ends. Reporting exists to formally
+        Yes. Either party (the sitter or the homeowner) can report a sit. Reports can be made during
+        the sit (if the issue is ongoing) or after the sit ends. Reporting exists to formally
         document an issue when it can't be resolved directly.
       </p>
 

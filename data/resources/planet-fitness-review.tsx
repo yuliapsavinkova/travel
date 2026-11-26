@@ -10,6 +10,7 @@ export const resource: ResourceItem = {
   date: 'January 9, 2026',
   sortOrder: 4,
   discountText: REFERRALS.PF.discount,
+  ctaLabel: REFERRALS.PF.label,
   link: REFERRALS.PF.link,
   icon: 'award',
   imageUrl:
@@ -24,39 +25,40 @@ export const resource: ResourceItem = {
   seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${REFERRALS.PF.discount} with referral code.`,
   seoKeywords: [
     'planet fitness review for travelers',
-    'best gym for nomads 2026',
+    'best gym for travelers 2026',
     'where to shower while traveling',
     'planet fitness black card benefits',
-    'nomad wellness and fitness',
+    'travel wellness and fitness',
     'gym membership with nationwide access',
     'planet fitness promo code',
-    'van life shower hacks',
+    'gym access while traveling',
   ],
   body: (
     <>
       <p className="prose-lead">
-        Staying healthy and refreshed while traveling full-time is a challenge. My Planet Fitness
-        membership is my "home base" in every city for workouts and reliable recovery.
+        Staying healthy while moving between house sits takes a bit of planning. My Planet Fitness
+        membership gives me a familiar place to work out and reset in almost any city.
       </p>
 
       <h2>More Than Just a Gym</h2>
       <p>
-        When you're traveling between sits, you need a predictable place to reset. Planet Fitness
-        has thousands of locations, making it the most accessible gym for nomads in the United
-        States.
+        When you are driving between sits, it helps to have a reliable stop along the way. Planet
+        Fitness has thousands of locations across the United States, so there is almost always one
+        nearby.
       </p>
 
       <div className="prose-accent-box">
-        <span className="accent-box-label">Nomad Benefits:</span>
+        <span className="accent-box-label">Travel Benefits:</span>
         <ul>
           <li>
-            <strong>Consistency:</strong> High-quality equipment everywhere you go.
+            <strong>Consistency:</strong> Familiar equipment wherever your next sit takes you.
           </li>
           <li>
             <strong>Recovery:</strong> Hydromassage and tanning on the Black Card plan.
           </li>
           <li>
-            <strong>The Shower Hack:</strong> A guaranteed clean shower during travel days.
+            <strong>Easy Showers:</strong> A clean, private shower during long travel days between
+            homes.
           </li>
         </ul>
       </div>

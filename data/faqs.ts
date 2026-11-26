@@ -30,7 +30,7 @@ export const MASTER_FAQS: FAQItem[] = [
       'Mostly free, but you cover transport, groceries, and personal items. Planning ' +
       'ensures these remain minimal.',
     link: {
-      label: 'Nomad Budget Math',
+      label: 'Travel Budget Math',
       href: '/can-you-really-travel-for-free-house-sitting-math',
     },
   },
@@ -245,10 +245,10 @@ export const MASTER_FAQS: FAQItem[] = [
   // =====================================================
   {
     id: 'remote-work-internet',
-    question: 'How do you handle remote work internet while on the road?',
+    question: 'How do you handle remote work internet when staying in different homes?',
     answer:
-      'A reliable mobile hotspot is essential for nomadic life, as you can never fully ' +
-      'trust public WiFi.',
+      'A reliable mobile hotspot is essential when you travel full-time, as you can never fully ' +
+      'rely on home Wi-Fi alone.',
     link: { label: 'Read My Phone Plan Guide', href: '/visible-review' },
   },
   {
@@ -367,7 +367,7 @@ export const MASTER_FAQS: FAQItem[] = [
     id: 'travel-math-compound',
     question: 'Why do most people fail at house sitting?',
     answer:
-      'They treat it like Airbnb—browsing casually and applying randomly. Success requires ' +
+      'They treat it like Airbnb, browsing casually and applying randomly. Success requires ' +
       'strategic applications, a strong profile, and understanding that the first sit is the ' +
       'hardest. After that, it compounds.',
     link: {
