@@ -20,6 +20,11 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
+  relatedSlugs: [
+    'trusted-housesitters-vs-other-house-sitting-websites',
+    'is-trusted-housesitters-worth-it-for-sitters',
+    'how-to-get-your-first-house-sit-no-reviews',
+  ],
   seoTitle: 'TrustedHousesitters vs Rover: Professional Pet Care Comparison',
   seoDescription:
     'Stop comparing Rover and TrustedHousesitters. One is a job, one is a lifestyle. Learn which fits your 2026 travel goals.',

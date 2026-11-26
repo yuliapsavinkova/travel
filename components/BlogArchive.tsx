@@ -1,10 +1,13 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useMemo, useState } from 'react';
 import type { BlogPostSummary, BlogTrack } from '../types';
 import { formatCardDate } from '../utils/content';
 import CommonCard from './CommonCard';
 import { CalendarIcon, SearchIcon, XIcon } from './Icons';
+
+let pendingTrackSwitchQuery: string | null = null;
 
 interface BlogArchiveProps {
   sitterPosts: BlogPostSummary[];
@@ -27,8 +30,7 @@ const TRACK_COPY: Record<
   },
   homeowners: {
     srHeading: 'Guides for Homeowners',
-    subtitle:
-      'Checklists, questions to ask, and advice for welcoming a sitter—from my perspective as a sitter.',
+    subtitle: 'Checklists, questions to ask, and advice from my perspective as a sitter.',
     searchPlaceholder: 'Search homeowner guides...',
   },
 };
@@ -49,8 +51,33 @@ export default function BlogArchive({
   homeownerPosts,
   initialTrack = 'sitters',
 }: BlogArchiveProps) {
-  const [activeTrack, setActiveTrack] = useState<BlogTrack>(initialTrack);
+  const router = useRouter();
+  const pathname = usePathname();
+  const resolvedTrack: BlogTrack =
+    pathname === '/homeowners-guides'
+      ? 'homeowners'
+      : pathname === '/sitters-guides'
+        ? 'sitters'
+        : initialTrack;
+
+  const [activeTrack, setActiveTrack] = useState<BlogTrack>(resolvedTrack);
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  useEffect(() => {
+    setActiveTrack(resolvedTrack);
+  }, [resolvedTrack]);
+
+  useEffect(() => {
+    if (pendingTrackSwitchQuery !== null) {
+      setSearchQuery(pendingTrackSwitchQuery);
+      pendingTrackSwitchQuery = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    router.prefetch('/sitters-guides');
+    router.prefetch('/homeowners-guides');
+  }, [router]);
 
   const normalizedQuery = searchQuery.trim().toLowerCase();
 
@@ -70,14 +97,12 @@ export default function BlogArchive({
     otherTrack === 'sitters' ? filteredSitters.length : filteredHomeowners.length;
 
   const handleSelectTrack = (track: BlogTrack) => {
+    if (track === activeTrack) return;
     setActiveTrack(track);
-    if (typeof window !== 'undefined') {
-      window.history.replaceState(
-        null,
-        '',
-        track === 'sitters' ? '/sitters-guides' : '/homeowners-guides'
-      );
-    }
+    pendingTrackSwitchQuery = searchQuery;
+    router.replace(track === 'sitters' ? '/sitters-guides' : '/homeowners-guides', {
+      scroll: false,
+    });
   };
 
   const activeCopy = TRACK_COPY[activeTrack];

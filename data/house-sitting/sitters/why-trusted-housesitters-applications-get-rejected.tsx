@@ -19,6 +19,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-rejection-fix', 'ths-reviews-starting', 'ths-reporting-safety'],
+  relatedSlugs: [
+    'trusted-housesitters-profile-tips-how-to-secure-more-sits',
+    'trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
+    'trusted-housesitters-how-to-set-up-alerts-and-filters',
+  ],
   seoTitle: 'Why TrustedHousesitters Applications Get Rejected | Sitter Journey',
   seoDescription:
     'Discover why TrustedHousesitters applications get declined and how to beat the 5-app rule. Understand homeowner psychology.',

@@ -29,8 +29,7 @@ export default function AnalyticsTracker() {
 
       const href = anchor.href;
 
-      // Skip the floating reader CTA (it has its own dedicated handler)
-      if (anchor.id === 'sticky-cta-link' || anchor.closest('#sticky-reader-cta')) {
+      if (anchor.id === 'mobile-referral-cta' || anchor.closest('#mobile-referral-bar')) {
         return;
       }
 
@@ -88,7 +87,7 @@ export default function AnalyticsTracker() {
       const isInsideProse = Boolean(
         anchor.closest('.prose-content, .detail-rich-content, article')
       );
-      const isInsideCallout = Boolean(anchor.closest('.prose-accent-box, .hero-disclosure-bar'));
+      const isInsideCallout = Boolean(anchor.closest('.prose-accent-box, .sidebar-promo-card'));
       const linkPlacement = isInsideCallout
         ? 'resource_callout'
         : isInsideProse

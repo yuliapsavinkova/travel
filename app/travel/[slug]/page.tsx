@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
 import React from 'react';
+import ArticleSidebar from '../../../components/ArticleSidebar';
 import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
-import StickyReaderCta from '../../../components/StickyReaderCta';
+import MobileReferralBar from '../../../components/MobileReferralBar';
 import { TRAVEL_GUIDES } from '../../../data/travel/travel';
 import { REFERRALS } from '../../../types';
-import { PUBLISHER_LOGO_URL, toAbsoluteUrl, toIsoDate } from '../../../utils/content';
+import {
+  PUBLISHER_LOGO_URL,
+  estimateReadingTime,
+  toAbsoluteUrl,
+  toIsoDate,
+} from '../../../utils/content';
+import { getRelatedArticlesFor } from '../../../utils/related';
 
 export async function generateStaticParams() {
   return TRAVEL_GUIDES.map((guide) => ({
@@ -69,20 +76,12 @@ export async function generateMetadata({
 export default async function TravelDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  // Dynamic navigation logic (Circular)
-  const sortedGuides = [...TRAVEL_GUIDES].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
-  const guideIndex = sortedGuides.findIndex((g) => g.slug === slug);
-  const guide = sortedGuides[guideIndex];
+  const guide = TRAVEL_GUIDES.find((g) => g.slug === slug);
 
   if (!guide) {
     return (
       <div className="container text-center section-margin">
-        <CommonDetail
-          onBack="/travel#guides"
-          backLabel="Return to Travel"
-          image=""
-          title="Not Found"
-        >
+        <CommonDetail topic="Travel Guides" topicHref="/travel" image="" title="Not Found">
           <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
             <h1 className="display-title">Guide Not Found</h1>
             <p className="hero-paragraph">The requested travel guide could not be located.</p>
@@ -92,24 +91,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
     );
   }
 
-  // Circular logic for navigation
-  const prevIndex = (guideIndex - 1 + sortedGuides.length) % sortedGuides.length;
-  const nextIndex = (guideIndex + 1) % sortedGuides.length;
-
-  const prevGuide = sortedGuides[prevIndex];
-  const nextGuide = sortedGuides[nextIndex];
-
-  const prevLink = {
-    label: 'Previous',
-    title: prevGuide.title,
-    href: `/travel/${prevGuide.slug}`,
-  };
-
-  const nextLink = {
-    label: 'Next',
-    title: nextGuide.title,
-    href: `/travel/${nextGuide.slug}`,
-  };
+  const relatedArticles = getRelatedArticlesFor(guide.slug, guide.relatedSlugs);
 
   const guideUrl = `https://sitterjourney.com/travel/${guide.slug}`;
   const publishedIso = toIsoDate(guide.date) || guide.date;
@@ -177,25 +159,32 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <CommonDetail
-        onBack="/travel#guides"
-        backLabel="Return to Travel"
         image={guide.imageUrl}
+        topic="Travel Guides"
+        topicHref="/travel"
         title={guide.title}
         date={guide.date}
         updatedDate={guide.updatedDate}
+        readingTime={estimateReadingTime(guide.body)}
         isAffiliate={true}
-        prevLink={prevLink}
-        nextLink={nextLink}
+        sidebar={
+          <ArticleSidebar
+            promoLink={REFERRALS.THS.link}
+            promoLabel={REFERRALS.THS.cta}
+            relatedArticles={relatedArticles}
+          />
+        }
       >
         <div className="flex-col flex-gap-md">
           <p className="prose-lead">{guide.excerpt}</p>
           <ContentRenderer content={guide.body} />
         </div>
       </CommonDetail>
-
-      <StickyReaderCta
+      <MobileReferralBar
+        badge="Referral Offer"
+        title="TrustedHousesitters"
         promoLink={REFERRALS.THS.link}
-        text={REFERRALS.THS.stickyText}
+        ctaLabel={`Get ${REFERRALS.THS.discount}`}
         articleTitle={guide.title}
         articleSlug={guide.slug}
       />

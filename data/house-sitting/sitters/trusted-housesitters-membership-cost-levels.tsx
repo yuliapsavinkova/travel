@@ -21,6 +21,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['travel-savings', 'ths-experience-level-sits', 'ths-membership-try'],
+  relatedSlugs: [
+    'is-trusted-housesitters-worth-it-for-sitters',
+    'can-you-really-travel-for-free-house-sitting-math',
+    'trusted-housesitters-vs-other-house-sitting-websites',
+  ],
   seoTitle: 'Which TrustedHousesitters Sitter Membership Should You Choose? | Decision Guide',
   seoDescription:
     'Compare Basic, Standard, and Premium sitter tiers. Understand what each level offers and which one fits your travel frequency and risk tolerance.',

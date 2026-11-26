@@ -93,9 +93,7 @@ export default function FAQPage() {
             rejections, and traveling sustainably.
           </p>
 
-          <div style={{ marginTop: 'var(--s-6)' }}>
-            <FAQSection items={MASTER_FAQS} />
-          </div>
+          <FAQSection items={MASTER_FAQS} />
 
           <div className="prose-accent-box variant-cta" style={{ marginTop: 'var(--s-9)' }}>
             <span className="accent-box-label">Get {REFERRALS.THS.discount} Membership</span>

@@ -21,6 +21,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['trusted-profile-tips', 'ths-rejection-common', 'travel-savings'],
+  relatedSlugs: [
+    'trusted-housesitters-profile-tips-how-to-secure-more-sits',
+    'why-trusted-housesitters-applications-get-rejected',
+    'trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
+  ],
   seoTitle: 'How to Get Your First House Sit (Even With No Reviews)',
   seoDescription:
     'Learn how to get your first house sit with no reviews. Discover proven strategies to build trust, stand out to homeowners, and land your first TrustedHousesitters sit.',

@@ -21,18 +21,21 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const lastScrollY = useRef(0);
   const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 24);
+
       // If mobile menu is open, never hide the header
       if (isMobileMenuOpen) {
         setIsHidden(false);
         return;
       }
-
-      const currentScrollY = window.scrollY;
 
       // Always show header at or near the top of the page, or when scrolling UP
       if (currentScrollY <= 60 || currentScrollY < lastScrollY.current) {
@@ -46,6 +49,7 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
       lastScrollY.current = Math.max(0, currentScrollY);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isMobileMenuOpen]);
@@ -57,9 +61,31 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
   }, []);
 
   useEffect(() => {
+    const isOverlayOpen = isMobileMenuOpen || isContactOpen;
+    if (!isOverlayOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+        setIsContactOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMobileMenuOpen, isContactOpen]);
+
+  useEffect(() => {
     if (pathname) {
       setIsMobileMenuOpen(false);
       setIsHidden(false);
+      setIsScrolled(window.scrollY > 24);
     }
   }, [pathname]);
 
@@ -80,9 +106,11 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
 
   return (
     <>
-      <header className={`app-header ${isHidden ? 'hidden' : ''}`}>
+      <header
+        className={`app-header ${isHome ? 'is-home' : ''} ${isScrolled ? 'is-scrolled' : ''} ${isHidden ? 'hidden' : ''}`}
+      >
         <div className="nav-wrapper">
-          <nav className="glass-island">
+          <nav className="header-bar" aria-label="Primary navigation">
             <BrandLogo />
             <div className="desktop-nav">
               {NAV_ITEMS.map((item) => (
@@ -108,7 +136,9 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
                 type="button"
                 className="mobile-toggle"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle menu"
+                aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu-overlay"
               >
                 {isMobileMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
               </button>
@@ -117,7 +147,11 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
         </div>
       </header>
 
-      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div
+        id="mobile-menu-overlay"
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}
+        aria-hidden={!isMobileMenuOpen}
+      >
         <div className="mobile-menu-content">
           <div className="mobile-nav-stack">
             {NAV_ITEMS.map((item) => (
@@ -145,8 +179,8 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
       </div>
 
       {isContactOpen && (
-        <div className="portal-overlay">
-          <div className="portal-bg" onClick={() => setIsContactOpen(false)} />
+        <div className="portal-overlay" role="dialog" aria-modal="true" aria-label="Contact Yulia">
+          <div className="portal-bg" aria-hidden="true" onClick={() => setIsContactOpen(false)} />
           <div className="portal-modal hide-scrollbar">
             <ContactForm onClose={() => setIsContactOpen(false)} />
           </div>

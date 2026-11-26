@@ -5,45 +5,47 @@ import { REFERRALS } from '../types';
 import { trackFloatingCtaClick } from '../utils/analytics';
 import { ArrowUpRightIcon } from './Icons';
 
-interface StickyReaderCtaProps {
+interface MobileReferralBarProps {
+  badge?: string;
+  title?: string;
   promoLink?: string;
-  text?: string;
+  ctaLabel?: string;
   showAfterScroll?: number;
   articleTitle?: string;
   articleSlug?: string;
 }
 
-export default function StickyReaderCta({
+export default function MobileReferralBar({
+  badge = 'Referral Offer',
+  title = 'TrustedHousesitters',
   promoLink = REFERRALS.THS.link,
-  text = REFERRALS.THS.stickyText,
-  showAfterScroll = 350,
-
+  ctaLabel = `Get ${REFERRALS.THS.discount}`,
+  showAfterScroll = 280,
   articleTitle,
   articleSlug,
-}: StickyReaderCtaProps) {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [isNearFooter, setIsNearFooter] = useState<boolean>(false);
+}: MobileReferralBarProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isNearFooter, setIsNearFooter] = useState(false);
+  const lastClickRef = useRef(0);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1024px)');
     const checkVisibility = () => {
+      if (!mediaQuery.matches) {
+        setIsVisible(false);
+        return;
+      }
+
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
-      // Check if scrolled enough from top
-      const shouldShow = scrollY > showAfterScroll;
-      setIsVisible(shouldShow);
+      setIsVisible(scrollY > showAfterScroll);
 
-      // Check if near bottom / footer
       const distanceFromBottom = documentHeight - (scrollY + windowHeight);
-      if (distanceFromBottom < 180) {
-        setIsNearFooter(true);
-      } else {
-        setIsNearFooter(false);
-      }
+      setIsNearFooter(distanceFromBottom < 140);
     };
 
-    // IntersectionObserver for the footer
     const footerEl = document.getElementById('site-footer');
     let observer: IntersectionObserver | null = null;
 
@@ -51,44 +53,43 @@ export default function StickyReaderCta({
       observer = new IntersectionObserver(
         (entries) => {
           const entry = entries[0];
-          setIsNearFooter(entry.isIntersecting);
+          if (entry) {
+            setIsNearFooter(entry.isIntersecting);
+          }
         },
-        { rootMargin: '60px 0px 0px 0px', threshold: 0 }
+        { rootMargin: '40px 0px 0px 0px', threshold: 0 }
       );
       observer.observe(footerEl);
     }
 
     window.addEventListener('scroll', checkVisibility, { passive: true });
     window.addEventListener('resize', checkVisibility, { passive: true });
+    mediaQuery.addEventListener('change', checkVisibility);
     checkVisibility();
 
     return () => {
       window.removeEventListener('scroll', checkVisibility);
       window.removeEventListener('resize', checkVisibility);
+      mediaQuery.removeEventListener('change', checkVisibility);
       if (observer && footerEl) {
         observer.unobserve(footerEl);
       }
     };
   }, [showAfterScroll]);
 
-  // If not scrolled enough or if user has scrolled all the way to the footer, hide it smoothly
   const shouldRender = isVisible && !isNearFooter;
 
-  const lastClickRef = useRef<number>(0);
-
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    // Only fire on authentic user click events
     if (event && !event.isTrusted) return;
 
-    // Guard against rapid duplicate clicks within 1.5 seconds
     const now = Date.now();
     if (now - lastClickRef.current < 1500) return;
     lastClickRef.current = now;
 
     trackFloatingCtaClick({
-      text,
+      text: `${title} — ${ctaLabel}`,
       promoLink,
-      ctaId: 'sticky-cta-link',
+      ctaId: 'mobile-referral-cta',
       articleTitle,
       articleSlug,
     });
@@ -96,24 +97,29 @@ export default function StickyReaderCta({
 
   return (
     <aside
-      id="sticky-reader-cta"
-      className={`sticky-reader-cta ${shouldRender ? 'is-visible' : ''}`}
-      aria-label="Reader discount offer"
+      id="mobile-referral-bar"
+      className={`mobile-referral-bar ${shouldRender ? 'is-visible' : ''}`}
+      aria-label="Referral offer"
     >
-      <div className="sticky-cta-inner">
-        <a
-          href={promoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="sticky-cta-link"
-          id="sticky-cta-link"
-          onClick={handleClick}
-        >
-          <span className="sticky-cta-text">{text}</span>
-          <span className="sticky-cta-icon-badge" aria-hidden="true">
-            <ArrowUpRightIcon size={13} className="sticky-link-icon" />
-          </span>
-        </a>
+      <div className="mobile-referral-bar-inner">
+        <div className="mobile-referral-meta">
+          <span className="mobile-referral-badge">{badge}</span>
+          <span className="mobile-referral-title">{title}</span>
+        </div>
+
+        <div className="mobile-referral-actions">
+          <a
+            id="mobile-referral-cta"
+            href={promoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold mobile-referral-cta"
+            onClick={handleClick}
+          >
+            <span>{ctaLabel}</span>
+            <ArrowUpRightIcon size={12} aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </aside>
   );

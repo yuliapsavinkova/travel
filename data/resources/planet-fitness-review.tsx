@@ -15,6 +15,11 @@ export const resource: ResourceItem = {
   imageUrl:
     'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200',
   faqIds: ['travel-wellness-gym', 'ths-internet-remote', 'remote-work-internet'],
+  relatedSlugs: [
+    'can-you-really-travel-for-free-house-sitting-math',
+    'hidden-perks-of-house-sitting',
+    'visible-review',
+  ],
   seoTitle: 'Planet Fitness Review: Essential for Full-Time Travel',
   seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${REFERRALS.PF.discount} with referral code.`,
   seoKeywords: [
@@ -54,22 +59,6 @@ export const resource: ResourceItem = {
             <strong>The Shower Hack:</strong> A guaranteed clean shower during travel days.
           </li>
         </ul>
-      </div>
-
-      <div className="prose-accent-box variant-cta">
-        <span className="accent-box-label">Claim Your {REFERRALS.PF.discount} Promo</span>
-        <p>
-          Stay fit and fresh on the road. Join today using my referral link for just
-          {REFERRALS.PF.discount} down.
-        </p>
-        <a
-          href={REFERRALS.PF.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold btn-wide"
-        >
-          {REFERRALS.PF.cta}
-        </a>
       </div>
     </>
   ),

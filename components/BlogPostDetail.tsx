@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
 import { getFaqsByIds } from '../data/faqs';
-import { HOMEOWNER_POSTS, SITTER_POSTS } from '../data/house-sitting/house-sitting';
 import { type BlogPost, REFERRALS } from '../types';
 import {
   PUBLISHER_LOGO_URL,
+  estimateReadingTime,
   getPostTrack,
   getTrackLabel,
   getTrackPath,
   toAbsoluteUrl,
   toIsoDate,
 } from '../utils/content';
+import { getRelatedArticlesFor } from '../utils/related';
+import ArticleSidebar from './ArticleSidebar';
 import CommonDetail from './CommonDetail';
 import ContentRenderer from './ContentRenderer';
-import StickyReaderCta from './StickyReaderCta';
+import MobileReferralBar from './MobileReferralBar';
 
 export function getBlogPostMetadata(post: BlogPost): Metadata {
   const canonicalUrl = `https://sitterjourney.com/${post.slug}`;
@@ -57,30 +59,7 @@ export default function BlogPostDetail({ post }: { post: BlogPost }) {
   const track = getPostTrack(post);
   const trackPath = getTrackPath(track);
   const trackLabel = getTrackLabel(track);
-  const trackPosts = track === 'homeowners' ? HOMEOWNER_POSTS : SITTER_POSTS;
-  const trackIndex = trackPosts.findIndex((p) => p.slug === post.slug);
-
-  // Circular navigation strictly isolated within the article's track
-  const prevPost = trackPosts[(trackIndex - 1 + trackPosts.length) % trackPosts.length];
-  const nextPost = trackPosts[(trackIndex + 1) % trackPosts.length];
-
-  const prevLink =
-    trackPosts.length > 1
-      ? {
-          label: 'Previous',
-          title: prevPost.navTitle || prevPost.title,
-          href: `/${prevPost.slug}`,
-        }
-      : undefined;
-
-  const nextLink =
-    trackPosts.length > 1
-      ? {
-          label: 'Next',
-          title: nextPost.navTitle || nextPost.title,
-          href: `/${nextPost.slug}`,
-        }
-      : undefined;
+  const relatedArticles = getRelatedArticlesFor(post.slug, post.relatedSlugs);
 
   const faqs = post.faqIds ? getFaqsByIds(post.faqIds) : [];
   const postUrl = `https://sitterjourney.com/${post.slug}`;
@@ -171,27 +150,38 @@ export default function BlogPostDetail({ post }: { post: BlogPost }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <CommonDetail
-        onBack={trackPath}
-        backLabel={`Back to ${trackLabel}`}
         image={post.imageUrl}
         title={post.title}
-        topic={post.topic}
+        topic={trackLabel}
+        topicHref={trackPath}
         date={post.date}
         updatedDate={post.updatedDate}
+        readingTime={estimateReadingTime(post.body)}
         isAffiliate={post.isAffiliate ?? true}
-        prevLink={prevLink}
-        nextLink={nextLink}
         faqs={faqs}
+        sidebar={
+          <ArticleSidebar
+            promoDescription={
+              track === 'homeowners'
+                ? 'Find vetted, reviewed sitters for your home and pets—save on an annual TrustedHousesitters membership.'
+                : 'Exchange pet care for comfortable homes worldwide—save on your annual TrustedHousesitters membership.'
+            }
+            promoLink={post.ctaLink || REFERRALS.THS.link}
+            promoLabel={post.ctaLabel || REFERRALS.THS.cta}
+            relatedArticles={relatedArticles}
+          />
+        }
       >
         <div className="flex-col flex-gap-lg">
           <ContentRenderer content={post.body} />
         </div>
       </CommonDetail>
-
       {post.showStickyCta !== false && (
-        <StickyReaderCta
+        <MobileReferralBar
+          badge="Referral Offer"
+          title="TrustedHousesitters"
           promoLink={post.ctaLink || REFERRALS.THS.link}
-          text={post.stickyCtaText || REFERRALS.THS.stickyText}
+          ctaLabel={`Get ${REFERRALS.THS.discount}`}
           articleTitle={post.title}
           articleSlug={post.slug}
         />

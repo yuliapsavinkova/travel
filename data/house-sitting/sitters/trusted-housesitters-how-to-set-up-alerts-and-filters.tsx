@@ -20,6 +20,11 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1741061963486-a56144a73791?q=80&w=2070&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
+  relatedSlugs: [
+    'trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
+    'why-trusted-housesitters-applications-get-rejected',
+    'how-to-get-your-first-house-sit-no-reviews',
+  ],
   seoTitle: 'TrustedHousesitters Alert Strategy | Real Sitter Examples',
   seoDescription:
     'Real examples of how an experienced sitter configures TrustedHousesitters alerts. Learn a strategic approach that actually works.',

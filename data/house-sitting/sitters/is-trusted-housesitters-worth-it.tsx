@@ -21,6 +21,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
+  relatedSlugs: [
+    'can-you-really-travel-for-free-house-sitting-math',
+    'trusted-housesitters-membership-cost-levels',
+    'how-to-get-your-first-house-sit-no-reviews',
+  ],
   body: (
     <>
       <p className="prose-lead">

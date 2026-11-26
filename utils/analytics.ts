@@ -163,7 +163,7 @@ export function trackFloatingCtaClick(options: {
     event_label: `${cleanArticleTitle} — Floating CTA: ${options.text}`,
     cta_text: options.text,
     link_url: options.promoLink,
-    link_id: options.ctaId || 'sticky-cta-link',
+    link_id: options.ctaId || 'referral-cta-link',
     link_placement: 'floating_reader_bar',
     article_title: cleanArticleTitle,
     article_slug: slug,

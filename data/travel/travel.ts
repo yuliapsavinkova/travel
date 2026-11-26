@@ -13,6 +13,11 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1200',
     date: 'January 9, 2026',
     sortOrder: 1,
+    relatedSlugs: [
+      'gili-trawangan-slow-travel',
+      'can-you-really-travel-for-free-house-sitting-math',
+      'hidden-perks-of-house-sitting',
+    ],
     body: ubudContent,
   },
   {
@@ -25,6 +30,11 @@ export const TRAVEL_GUIDES: TravelGuide[] = [
       'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&q=80&w=1200',
     date: 'January 9, 2026',
     sortOrder: 2,
+    relatedSlugs: [
+      'bali-ubud-slow-travel',
+      'is-trusted-housesitters-worth-it-for-sitters',
+      'hidden-perks-of-house-sitting',
+    ],
     body: giliIslandsContent,
   },
 ];

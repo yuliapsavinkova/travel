@@ -21,6 +21,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-rejection-common', 'ths-owner-priorities', 'ths-reviews-starting'],
+  relatedSlugs: [
+    'how-to-update-homeowners-while-house-sitting',
+    'trusted-housesitters-membership-cost-levels',
+    'is-trusted-housesitters-worth-it-for-sitters',
+  ],
   seoTitle: 'What Happens If a Sit Goes Wrong | Sitter Journey',
   seoDescription:
     'A clear guide to the TrustedHousesitters reporting process and dispute resolution. Protect your 5-star rating.',

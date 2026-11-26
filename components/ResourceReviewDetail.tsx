@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
 import { getFaqsByIds } from '../data/faqs';
-import { ALL_RESOURCES } from '../data/resources/resources';
 import type { ResourceItem } from '../types';
-import { PUBLISHER_LOGO_URL, toAbsoluteUrl, toIsoDate } from '../utils/content';
+import {
+  PUBLISHER_LOGO_URL,
+  estimateReadingTime,
+  toAbsoluteUrl,
+  toIsoDate,
+} from '../utils/content';
+import { getRelatedArticlesFor } from '../utils/related';
+import ArticleSidebar from './ArticleSidebar';
 import CommonDetail from './CommonDetail';
 import ContentRenderer from './ContentRenderer';
+import MobileReferralBar from './MobileReferralBar';
 
 export function getResourceMetadata(item: ResourceItem): Metadata {
   const canonicalUrl = `https://sitterjourney.com/${item.slug}`;
@@ -33,28 +40,7 @@ export function getResourceMetadata(item: ResourceItem): Metadata {
 }
 
 export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
-  const sortedItems = [...ALL_RESOURCES].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
-  const itemIndex = sortedItems.findIndex((i) => i.slug === item.slug);
-  const prevItem = sortedItems[(itemIndex - 1 + sortedItems.length) % sortedItems.length];
-  const nextItem = sortedItems[(itemIndex + 1) % sortedItems.length];
-
-  const prevLink =
-    sortedItems.length > 1
-      ? {
-          label: 'Previous',
-          title: prevItem.navTitle || prevItem.name,
-          href: `/${prevItem.slug}`,
-        }
-      : undefined;
-
-  const nextLink =
-    sortedItems.length > 1
-      ? {
-          label: 'Next',
-          title: nextItem.navTitle || nextItem.name,
-          href: `/${nextItem.slug}`,
-        }
-      : undefined;
+  const relatedArticles = getRelatedArticlesFor(item.slug, item.relatedSlugs);
 
   const faqs = item.faqIds ? getFaqsByIds(item.faqIds) : [];
   const resourceUrl = `https://sitterjourney.com/${item.slug}`;
@@ -169,22 +155,39 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <CommonDetail
-        onBack="/resources#archive"
-        backLabel="Return to Resources"
         image={item.imageUrl || ''}
+        topic="Resources"
+        topicHref="/resources"
         title={item.name}
         subtitle={item.subtitle}
         date={item.date}
         updatedDate={item.updatedDate}
+        readingTime={estimateReadingTime(item.body)}
         isAffiliate={true}
-        prevLink={prevLink}
-        nextLink={nextLink}
         faqs={faqs}
+        sidebar={
+          <ArticleSidebar
+            promoBadge={item.discountText ? 'Referral Offer' : 'Recommended Tool'}
+            promoTitle={productName}
+            promoDescription={item.description}
+            promoLink={item.link}
+            promoLabel={item.discountText ? `Claim ${item.discountText}` : `Visit ${productName}`}
+            relatedArticles={relatedArticles}
+          />
+        }
       >
         <div className="flex-col">
           <ContentRenderer content={item.body} className="detail-rich-content" />
         </div>
       </CommonDetail>
+      <MobileReferralBar
+        badge={item.discountText ? 'Referral Offer' : 'Recommended Tool'}
+        title={productName}
+        promoLink={item.link}
+        ctaLabel={item.discountText ? `Claim ${item.discountText}` : `Visit ${productName}`}
+        articleTitle={item.name}
+        articleSlug={item.slug}
+      />
     </>
   );
 }

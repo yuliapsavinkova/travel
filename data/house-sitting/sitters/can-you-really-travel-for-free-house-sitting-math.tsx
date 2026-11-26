@@ -21,6 +21,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-membership-worth-it', 'ths-beginner-difficulty', 'best-platform-travel'],
+  relatedSlugs: [
+    'is-trusted-housesitters-worth-it-for-sitters',
+    'trusted-housesitters-membership-cost-levels',
+    'hidden-perks-of-house-sitting',
+  ],
   seoTitle: 'Can You Really Travel for Free? House Sitting Math & Reality',
   seoDescription:
     'Discover the truth about "free travel." We break down house sitting itineraries and math for nomads.',

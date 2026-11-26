@@ -36,6 +36,5 @@
 @import "./styles/components/detail.css";
 @import "./styles/components/hero-detail.css";
 @import "./styles/components/article-nav.css";
-
-/* Conversion Features */
-@import "./styles/components/sticky-cta.css";
+@import "./styles/components/article-sidebar.css";
+@import "./styles/components/mobile-referral-bar.css";

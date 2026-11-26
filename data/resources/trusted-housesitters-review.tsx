@@ -17,6 +17,11 @@ export const resource: ResourceItem = {
   imageUrl:
     'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200',
   faqIds: ['ths-membership-worth-it', 'travel-savings', 'ths-experience-level-sits'],
+  relatedSlugs: [
+    'is-trusted-housesitters-worth-it-for-sitters',
+    'trusted-housesitters-membership-cost-levels',
+    'can-you-really-travel-for-free-house-sitting-math',
+  ],
   body: (
     <>
       <p className="prose-lead">
@@ -77,22 +82,6 @@ export const resource: ResourceItem = {
         trip without worrying about their furry family members. That's what makes this arrangement
         work: both sides benefit from a relationship built on trust.
       </p>
-
-      <div className="prose-accent-box variant-cta">
-        <span className="accent-box-label">Get {REFERRALS.THS.discount} Membership</span>
-        <p>
-          Ready to start your own journey? Use my referral link to get {REFERRALS.THS.discount} off
-          your annual membership.
-        </p>
-        <a
-          href={REFERRALS.THS.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold btn-wide"
-        >
-          Discount: {REFERRALS.THS.discount}
-        </a>
-      </div>
     </>
   ),
 };

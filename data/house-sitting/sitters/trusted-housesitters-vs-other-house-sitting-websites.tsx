@@ -21,6 +21,11 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
+  relatedSlugs: [
+    'trusted-housesitters-vs-rover-comparison',
+    'is-trusted-housesitters-worth-it-for-sitters',
+    'trusted-housesitters-membership-cost-levels',
+  ],
   seoTitle: 'TrustedHousesitters vs Other House Sitting Sites: 2026 Comparison',
   seoDescription:
     'Is TrustedHousesitters actually the best house sitting site? We compare it to Nomador, MindMyHouse, HouseSittersAmerica and more.',

@@ -1,4 +1,5 @@
-import type { BlogPost, BlogPostSummary, BlogTrack } from '../types';
+import { isValidElement } from 'react';
+import type { BlogPost, BlogPostSummary, BlogTrack, RelatedArticleItem } from '../types';
 
 const SITE_URL = 'https://sitterjourney.com';
 
@@ -154,4 +155,59 @@ export const sortPostsByOrder = <T extends Pick<BlogPost, 'sortOrder'>>(posts: T
 
 export const toPostSummaries = (posts: BlogPost[]): BlogPostSummary[] => {
   return posts.map(({ body: _body, ...summary }) => summary);
+};
+
+function extractTextFromNode(node: unknown): string {
+  if (node == null || typeof node === 'boolean') return '';
+  if (typeof node === 'string') {
+    return node.replace(/<[^>]+>/g, ' ');
+  }
+  if (typeof node === 'number') return String(node);
+  if (Array.isArray(node)) {
+    return node.map(extractTextFromNode).join(' ');
+  }
+  if (isValidElement(node)) {
+    const props = node.props as { children?: unknown };
+    return extractTextFromNode(props?.children);
+  }
+  return '';
+}
+
+export const estimateReadingTime = (body: unknown, wordsPerMinute = 210): string => {
+  const text = extractTextFromNode(body).trim();
+  if (!text) return '1 min read';
+  const wordCount = text.split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+  return `${minutes} min read`;
+};
+
+export const resolveRelatedArticles = (
+  relatedSlugs: string[] | undefined,
+  currentSlug: string,
+  pool: RelatedArticleItem[],
+  limit = 3
+): RelatedArticleItem[] => {
+  const bySlug = new Map(pool.map((item) => [item.slug, item]));
+  const picked: RelatedArticleItem[] = [];
+  const seen = new Set<string>([currentSlug]);
+
+  for (const slug of relatedSlugs ?? []) {
+    if (seen.has(slug)) continue;
+    const match = bySlug.get(slug);
+    if (match) {
+      picked.push(match);
+      seen.add(slug);
+    }
+    if (picked.length >= limit) return picked;
+  }
+
+  for (const item of pool) {
+    if (picked.length >= limit) break;
+    if (!seen.has(item.slug)) {
+      picked.push(item);
+      seen.add(item.slug);
+    }
+  }
+
+  return picked;
 };

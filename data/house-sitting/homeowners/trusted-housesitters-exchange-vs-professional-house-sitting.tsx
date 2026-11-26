@@ -29,6 +29,11 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   audience: ['Pet Parents'],
   faqIds: ['homeowner-interview-questions', 'homeowner-how-to-prepare', 'homeowner-what-to-leave'],
+  relatedSlugs: [
+    'questions-to-ask-before-hiring-a-house-sitter',
+    'how-to-prepare-your-home-for-a-house-sitter',
+    'what-to-include-in-a-house-sitter-welcome-guide',
+  ],
   seoTitle: 'TrustedHousesitters vs. Professional House Sitter: How to Choose',
   seoDescription:
     'Compare TrustedHousesitters exchange sitting with hiring a professional house sitter: fees, scheduling, privacy, and which fits your pets and trips best.',

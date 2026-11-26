@@ -31,6 +31,12 @@
   z-index: 2;
   pointer-events: none;
   background: linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-bg-primary) 68%, transparent) 0%,
+      color-mix(in srgb, var(--color-bg-primary) 22%, transparent) 8%,
+      transparent 16%
+    ),
+    linear-gradient(
       to right,
       var(--color-bg-primary) 0%,
       color-mix(in srgb, var(--color-bg-primary) 85%, transparent) 8%,
@@ -130,7 +136,7 @@
     flex-direction: column;
     align-items: stretch;
     min-height: auto;
-    padding-top: calc(var(--h-nav-tablet) + 0.75rem);
+    padding-top: var(--h-nav-tablet);
     padding-bottom: 1rem;
   }
 
@@ -205,7 +211,7 @@
 
 @media (max-width: 480px) {
   .hero-home {
-    padding-top: calc(var(--h-nav-mobile) + 0.5rem);
+    padding-top: var(--h-nav-mobile);
   }
 
   .hero-home-media {

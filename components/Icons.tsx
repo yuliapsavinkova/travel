@@ -184,6 +184,12 @@ export const ArrowUpRightIcon = (props: IconProps) => (
   </IconBase>
 );
 
+export const ChevronDownIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path d="m6 9 6 6 6-6" />
+  </IconBase>
+);
+
 export const SearchIcon = (props: IconProps) => (
   <IconBase {...props}>
     <circle cx="11" cy="11" r="8" />
@@ -206,6 +212,13 @@ export const CalendarIcon = (props: IconProps) => (
     <line x1="16" x2="16" y1="2" y2="6" />
     <line x1="8" x2="8" y1="2" y2="6" />
     <line x1="3" x2="21" y1="10" y2="10" />
+  </IconBase>
+);
+
+export const ClockIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <circle cx="12" cy="12" r="10" />
+    <polyline points="12 6 12 12 16 14" />
   </IconBase>
 );
 

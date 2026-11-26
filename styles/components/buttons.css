@@ -10,8 +10,7 @@
    -------------------------------------------------------------------------- */
 .btn,
 .btn-gold,
-.secondary-btn,
-.btn-return {
+.secondary-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -122,11 +121,9 @@
 }
 
 /* --------------------------------------------------------------------------
-   5. Light / Surface / Return Button (.btn-light / .btn-return)
+   5. Light / Surface Button (.btn-light)
    -------------------------------------------------------------------------- */
-.btn-light,
-.btn-return,
-.top-breadcrumb-link {
+.btn-light {
   background-color: var(--color-bg-secondary);
   border-color: var(--color-border-primary);
   color: var(--color-text-secondary) !important;
@@ -138,9 +135,7 @@
   gap: var(--s-2);
 }
 
-.btn-light:hover,
-.btn-return:hover,
-.top-breadcrumb-link:hover {
+.btn-light:hover {
   background-color: var(--color-brand-primary-subtle);
   border-color: var(--color-brand-primary);
   color: var(--color-brand-primary) !important;
@@ -148,21 +143,9 @@
   box-shadow: var(--shadow-md);
 }
 
-.btn-light:active,
-.btn-return:active,
-.top-breadcrumb-link:active {
+.btn-light:active {
   transform: translateY(0);
   box-shadow: var(--shadow-sm);
-}
-
-.btn-return-icon {
-  transition: transform 0.25s ease;
-  flex-shrink: 0;
-}
-
-.btn-return:hover .btn-return-icon,
-.top-breadcrumb-link:hover .btn-return-icon {
-  transform: translateX(-3px);
 }
 
 /* --------------------------------------------------------------------------
@@ -190,8 +173,6 @@
 .btn:focus-visible,
 .btn-gold:focus-visible,
 .secondary-btn:focus-visible,
-.btn-return:focus-visible,
-.top-breadcrumb-link:focus-visible,
 .btn-fill:focus-visible,
 .btn-outline:focus-visible,
 .btn-outline-dark:focus-visible,
@@ -208,8 +189,6 @@
 .btn-gold[disabled],
 .secondary-btn:disabled,
 .secondary-btn[disabled],
-.btn-return:disabled,
-.btn-return[disabled],
 .btn-fill:disabled,
 .btn-outline:disabled,
 .btn-outline-dark:disabled,

@@ -29,6 +29,11 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
   faqIds: ['homeowner-what-to-leave', 'homeowner-how-to-prepare', 'homeowner-interview-questions'],
+  relatedSlugs: [
+    'how-to-prepare-your-home-for-a-house-sitter',
+    'questions-to-ask-before-hiring-a-house-sitter',
+    'how-to-update-homeowners-while-house-sitting',
+  ],
   seoTitle: 'What to Include in a House Sitter Welcome Guide | Homeowner Checklist',
   seoDescription:
     'Complete checklist for writing a house sitter welcome guide: pet routines, emergency vet details, lock and Wi-Fi instructions, trash schedules, and house quirks.',

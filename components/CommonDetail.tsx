@@ -4,18 +4,17 @@ import React, { type ReactNode } from 'react';
 import type { FAQItem, NavLink } from '../types';
 import { formatArticleDate } from '../utils/content';
 import FAQSection from './FAQSection';
-import { CalendarIcon, ShieldCheckIcon } from './Icons';
-import ReturnButton from './ReturnButton';
+import { CalendarIcon, ClockIcon } from './Icons';
 
 interface CommonDetailProps {
-  onBack?: string;
-  backLabel?: string;
   image: string;
   topic?: string;
+  topicHref?: string;
   title: string;
   subtitle?: string;
   date?: string;
   updatedDate?: string;
+  readingTime?: string;
   isAffiliate?: boolean;
   children?: ReactNode;
   sidebar?: ReactNode;
@@ -25,14 +24,14 @@ interface CommonDetailProps {
 }
 
 const CommonDetail = ({
-  onBack,
-  backLabel,
   image,
   topic,
+  topicHref,
   title,
   subtitle,
   date,
   updatedDate,
+  readingTime,
   isAffiliate = false,
   children,
   sidebar,
@@ -40,103 +39,120 @@ const CommonDetail = ({
   nextLink,
   faqs,
 }: CommonDetailProps) => {
-  return (
-    <div className="detail-container">
-      <header className="detail-header-area">
-        <div className="container text-center">
-          {topic && <div className="detail-topic-label">{topic}</div>}
-          <h1 className="detail-title-text">{title}</h1>
-          {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
-          {(date || updatedDate) && (
-            <div className="detail-date-wrapper">
-              <span className="detail-date-label">
-                <CalendarIcon size={12} /> {formatArticleDate(date, updatedDate)}
-              </span>
-            </div>
+  const hasDate = Boolean(date || updatedDate);
+  const articleHeaderContent = (
+    <>
+      {topic &&
+        (topicHref ? (
+          <Link href={topicHref} className="detail-topic-label detail-topic-link">
+            {topic}
+          </Link>
+        ) : (
+          <div className="detail-topic-label">{topic}</div>
+        ))}
+      <h1 className="detail-title-text">{title}</h1>
+      {subtitle && <p className="detail-subtitle-text">{subtitle}</p>}
+      {(hasDate || readingTime) && (
+        <div className="detail-date-wrapper">
+          {hasDate && (
+            <span className="detail-date-label">
+              <CalendarIcon size={12} /> {formatArticleDate(date, updatedDate)}
+            </span>
+          )}
+          {hasDate && readingTime && (
+            <span className="detail-meta-sep" aria-hidden="true">
+              ·
+            </span>
+          )}
+          {readingTime && (
+            <span className="detail-date-label">
+              <ClockIcon size={12} /> {readingTime}
+            </span>
           )}
         </div>
-      </header>
+      )}
+    </>
+  );
 
-      <div>
-        {/* Top Prev / Next Navigation Bar (Matches bottom article navigation style) */}
-        {(prevLink || nextLink) && (
-          <div className="detail-hero-nav-wrapper">
-            <nav
-              className="article-navigation article-navigation-top"
-              aria-label="Previous and Next articles"
-            >
-              {prevLink ? (
-                <Link href={prevLink.href} className="nav-link-item prev">
-                  <span className="nav-link-label">{prevLink.label}</span>
-                  <span className="nav-link-title">{prevLink.title}</span>
-                </Link>
-              ) : (
-                <div className="nav-link-item prev empty" />
-              )}
-              {nextLink ? (
-                <Link href={nextLink.href} className="nav-link-item next">
-                  <span className="nav-link-label">{nextLink.label}</span>
-                  <span className="nav-link-title">{nextLink.title}</span>
-                </Link>
-              ) : (
-                <div className="nav-link-item next empty" />
-              )}
-            </nav>
-          </div>
-        )}
+  return (
+    <div className={`detail-container ${sidebar ? 'has-sidebar' : ''}`}>
+      {!sidebar && (
+        <>
+          <header className="detail-header-area">
+            <div className="container text-center">{articleHeaderContent}</div>
+          </header>
 
-        {/* Hero Section Container */}
-        {image && (
-          <div className="detail-hero-section">
-            <div className="media-viewport">
-              <Image
-                src={image}
-                alt={title}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 900px"
-                className="detail-hero-image"
-                style={{ objectFit: 'cover' }}
-              />
+          {/* Top Prev / Next Navigation Bar (Matches bottom article navigation style) */}
+          {(prevLink || nextLink) && (
+            <div className="detail-hero-nav-wrapper">
+              <nav
+                className="article-navigation article-navigation-top"
+                aria-label="Previous and Next articles"
+              >
+                {prevLink ? (
+                  <Link href={prevLink.href} className="nav-link-item prev">
+                    <span className="nav-link-label">{prevLink.label}</span>
+                    <span className="nav-link-title">{prevLink.title}</span>
+                  </Link>
+                ) : (
+                  <div className="nav-link-item prev empty" />
+                )}
+                {nextLink ? (
+                  <Link href={nextLink.href} className="nav-link-item next">
+                    <span className="nav-link-label">{nextLink.label}</span>
+                    <span className="nav-link-title">{nextLink.title}</span>
+                  </Link>
+                ) : (
+                  <div className="nav-link-item next empty" />
+                )}
+              </nav>
             </div>
-
-            {isAffiliate && (
-              <div className="hero-disclosure-bar">
-                <div className="disclosure-main-group">
-                  <ShieldCheckIcon size={14} className="disclosure-icon" />
-                  <span className="disclosure-text">
-                    <a
-                      href="/disclosure"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="disclosure-link-inline"
-                    >
-                      Disclosure
-                    </a>
-                    : This post may contain referral or affiliate links.
-                  </span>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* {onBack && (
-          <div className="detail-back-top">
-            <ReturnButton href={onBack} label={backLabel} />
-          </div>
-        )} */}
-      </div>
+          )}
+        </>
+      )}
 
       <div className="detail-layout-container">
         <div className={`detail-layout ${sidebar ? 'with-sidebar' : ''}`}>
           <div className="prose-content">
-            {children}
+            {sidebar && <header className="detail-article-header">{articleHeaderContent}</header>}
 
-            {faqs && faqs.length > 0 && <FAQSection items={faqs} showReadAll={true} />}
+            {image && (
+              <div className="detail-hero-section">
+                <div className="media-viewport">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 640px"
+                    className="detail-hero-image"
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              </div>
+            )}
 
-            {/* Bottom Prev / Next Navigation */}
-            {(prevLink || nextLink) && (
+            {isAffiliate && (
+              <p className="detail-disclosure-note">
+                <Link
+                  href="/disclosure"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="detail-disclosure-link"
+                >
+                  Disclosure
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </Link>
+                : May contain referral links
+              </p>
+            )}
+
+            <div className="detail-article-body">{children}</div>
+
+            {faqs && faqs.length > 0 && <FAQSection items={faqs} linkHeading={true} />}
+
+            {/* Bottom Prev / Next Navigation (shown only on non-sidebar utility pages) */}
+            {!sidebar && (prevLink || nextLink) && (
               <nav
                 className="article-navigation article-navigation-bottom"
                 aria-label="Related articles"
@@ -155,16 +171,13 @@ const CommonDetail = ({
                 )}
               </nav>
             )}
-
-            {/* Return to blog / archive link */}
-            {onBack && (
-              <div className="detail-back-bottom">
-                <ReturnButton href={onBack} label={backLabel} />
-              </div>
-            )}
           </div>
 
-          {sidebar && <div className="detail-sidebar">{sidebar}</div>}
+          {sidebar && (
+            <aside className="detail-sidebar" aria-label="Author and related guides sidebar">
+              {sidebar}
+            </aside>
+          )}
         </div>
       </div>
     </div>

@@ -15,6 +15,11 @@ export const resource: ResourceItem = {
   imageUrl:
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
   faqIds: ['ths-experience-level-sits', 'travel-experience-needed', 'first-sit-easy'],
+  relatedSlugs: [
+    'trusted-housesitters-vs-rover-comparison',
+    'trusted-housesitters-vs-other-house-sitting-websites',
+    'how-to-get-your-first-house-sit-no-reviews',
+  ],
   body: (
     <>
       <p className="prose-lead">
@@ -41,21 +46,6 @@ export const resource: ResourceItem = {
           <strong>Safety:</strong> The Rover Guarantee and 24/7 support.
         </li>
       </ul>
-
-      <div className="prose-accent-box variant-cta">
-        <span className="accent-box-label">Claim Your {REFERRALS.ROVER.discount}</span>
-        <p>
-          Sign up to become a sitter on Rover, start earning, or get a credit for your own pets.
-        </p>
-        <a
-          href={REFERRALS.ROVER.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold btn-wide"
-        >
-          {REFERRALS.ROVER.cta}
-        </a>
-      </div>
     </>
   ),
 };

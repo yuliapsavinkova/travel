@@ -28,6 +28,11 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
   faqIds: ['homeowner-interview-questions', 'homeowner-how-to-prepare', 'homeowner-what-to-leave'],
+  relatedSlugs: [
+    'trusted-housesitters-exchange-vs-professional-house-sitting',
+    'how-to-prepare-your-home-for-a-house-sitter',
+    'what-to-include-in-a-house-sitter-welcome-guide',
+  ],
   seoTitle: 'Questions to Ask Before Hiring a House Sitter | Vetting Guide',
   seoDescription:
     'Learn the best questions to ask when interviewing a house sitter or pet sitter, what thoughtful answers sound like, and common red flags to watch for.',

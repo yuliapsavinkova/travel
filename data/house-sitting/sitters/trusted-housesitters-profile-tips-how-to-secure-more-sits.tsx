@@ -21,6 +21,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   faqIds: ['ths-beginner-difficulty', 'ths-rejection-common', 'ths-reporting-safety'],
+  relatedSlugs: [
+    'how-to-get-your-first-house-sit-no-reviews',
+    'why-trusted-housesitters-applications-get-rejected',
+    'how-to-update-homeowners-while-house-sitting',
+  ],
   seoTitle: 'TrustedHousesitters Profile Tips | How to Build a 5-Star Profile',
   seoDescription:
     'Master your TrustedHousesitters profile with these photo and bio tips. Learn the 3:2 aspect ratio rule for winning applications.',

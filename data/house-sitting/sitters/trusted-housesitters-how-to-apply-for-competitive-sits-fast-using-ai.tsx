@@ -18,6 +18,11 @@ export const post: BlogPost = {
   imageUrl: '/fast-running-dog.jpg',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
+  relatedSlugs: [
+    'trusted-housesitters-how-to-set-up-alerts-and-filters',
+    'why-trusted-housesitters-applications-get-rejected',
+    'trusted-housesitters-profile-tips-how-to-secure-more-sits',
+  ],
   seoTitle: 'How to Apply for Competitive TrustedHousesitters Sits Fast: AI Strategy & Templates',
   seoDescription:
     'Learn how to win competitive house sits on TrustedHousesitters using an AI system. Apply within minutes and beat the competition with high-quality personalization.',

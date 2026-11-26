@@ -21,6 +21,11 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1597714026720-8f74c62310ba?q=80&w=2070&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
+  relatedSlugs: [
+    'can-you-really-travel-for-free-house-sitting-math',
+    'is-trusted-housesitters-worth-it-for-sitters',
+    'how-to-get-your-first-house-sit-no-reviews',
+  ],
   seoTitle: 'Hidden Perks of House Sitting: Real Benefits Beyond Free Accommodation',
   seoDescription:
     'Discover the unexpected benefits of house sitting: zero utilities, well-prepared kitchens, entertainment subscriptions, and more.',

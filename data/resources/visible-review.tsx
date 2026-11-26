@@ -15,6 +15,11 @@ export const resource: ResourceItem = {
   imageUrl:
     'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200',
   faqIds: ['ths-internet-remote', 'remote-work-internet', 'travel-wellness-gym'],
+  relatedSlugs: [
+    'can-you-really-travel-for-free-house-sitting-math',
+    'hidden-perks-of-house-sitting',
+    'is-trusted-housesitters-worth-it-for-sitters',
+  ],
   seoTitle: 'Visible Wireless Review: Best Unlimited Plan for Travelers',
   seoDescription: `Personal review of Visible Wireless for nomadic life. Get your first month of unlimited data and ${REFERRALS.VISIBLE.discount} with referral code.`,
   seoKeywords: [
@@ -54,22 +59,6 @@ export const resource: ResourceItem = {
             <strong>Network:</strong> Runs on Verizon’s 5G/LTE network—the best in the US.
           </li>
         </ul>
-      </div>
-
-      <div className="prose-accent-box variant-cta">
-        <span className="accent-box-label">Claim Your {REFERRALS.VISIBLE.discount}</span>
-        <p>
-          Get your first month of service for just $5 and save {REFERRALS.VISIBLE.discount} using my
-          verified referral link. It's the best investment a remote worker can make.
-        </p>
-        <a
-          href={REFERRALS.VISIBLE.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold btn-wide"
-        >
-          {REFERRALS.VISIBLE.cta}
-        </a>
       </div>
     </>
   ),

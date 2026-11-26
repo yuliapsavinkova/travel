@@ -19,6 +19,11 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=2070&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
+  relatedSlugs: [
+    'trusted-housesitters-what-happens-if-sit-goes-wrong-and-how-to-report-it',
+    'trusted-housesitters-profile-tips-how-to-secure-more-sits',
+    'how-to-get-your-first-house-sit-no-reviews',
+  ],
 
   seoTitle: 'How to Update Homeowners While House Sitting | Sitter Communication Strategy',
   seoDescription:

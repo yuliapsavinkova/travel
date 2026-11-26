@@ -13,10 +13,12 @@ interface ContactFormProps {
 const ContactForm = ({ onClose }: ContactFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
     const formData = new FormData(e.currentTarget);
 
@@ -35,11 +37,10 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
           formName: 'Global Contact Modal',
         });
       } else {
-        setSubmitted(true);
+        setErrorMessage('Could not send your message right now. Please try again in a moment.');
       }
-    } catch (error) {
-      console.error('Submission error:', error);
-      setSubmitted(true);
+    } catch {
+      setErrorMessage('Network error while sending. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -129,6 +130,12 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
             className="form-textarea"
           />
         </div>
+
+        {errorMessage && (
+          <p className="form-error" role="alert">
+            {errorMessage}
+          </p>
+        )}
 
         <div className="form-actions-centered">
           <button

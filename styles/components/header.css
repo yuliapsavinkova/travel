@@ -1,37 +1,53 @@
 .app-header {
   position: fixed;
-  top: calc(1.25rem + env(safe-area-inset-top, 0px));
+  top: 0;
   left: 0;
   right: 0;
   z-index: var(--z-nav);
-  padding: 0 var(--pad-page);
-  pointer-events: none;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: color-mix(in srgb, var(--pram-gray-050) 90%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--color-border-subtle);
+  box-shadow: 0 1px 12px var(--shadow-tint-faint);
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.app-header.is-home:not(.is-scrolled) {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+.app-header.is-home:not(.is-scrolled) .btn-nav {
+  color: var(--color-text-primary);
+  opacity: 0.88;
 }
 
 .app-header.hidden {
-  transform: translateY(calc(-160% - env(safe-area-inset-top, 0px)));
+  transform: translateY(-105%);
   opacity: 0;
 }
 
 .nav-wrapper {
   max-width: var(--container-width-standard);
   margin: 0 auto;
+  padding: 0 var(--pad-page);
 }
 
-.glass-island {
-  background: var(--color-bg-primary-translucent);
-  backdrop-filter: blur(25px) saturate(180%);
-  -webkit-backdrop-filter: blur(25px) saturate(180%);
-  border: 1px solid var(--color-border-primary);
-  border-radius: var(--r-pill);
+.header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--s-4) 0 var(--s-6);
+  gap: var(--s-4);
   height: var(--h-nav);
-  pointer-events: auto;
-  box-shadow: var(--shadow-md);
 }
 
 .desktop-nav {
@@ -39,9 +55,9 @@
   gap: var(--s-2);
 }
 
-.glass-island .btn-gold {
-  min-height: 2.375rem;
-  padding: 0.45rem 1.25rem;
+.header-bar .btn-gold {
+  min-height: 2.25rem;
+  padding: 0.4rem 1.2rem;
   font-size: 0.6875rem;
   letter-spacing: 0.12em;
   box-shadow: var(--shadow-sm);
@@ -49,7 +65,7 @@
     ease;
 }
 
-.glass-island .btn-gold:hover {
+.header-bar .btn-gold:hover {
   background-color: var(--color-brand-secondary);
   border-color: var(--color-brand-secondary);
   color: var(--color-text-primary) !important;
@@ -57,7 +73,7 @@
   box-shadow: var(--shadow-md);
 }
 
-.glass-island .btn-gold:active {
+.header-bar .btn-gold:active {
   transform: none;
   opacity: 0.9;
 }
@@ -70,7 +86,6 @@
   background: transparent;
   border: none;
   transition: color 0.2s ease, opacity 0.2s ease;
-  pointer-events: auto;
 }
 
 .mobile-toggle:hover {
@@ -153,28 +168,26 @@
 }
 
 @media (max-width: 1024px) {
-  .app-header {
-    top: calc(0.75rem + env(safe-area-inset-top, 0px));
+  .nav-wrapper {
     padding: 0 var(--pad-page-mobile);
   }
-  .glass-island {
+  .header-bar {
     height: var(--h-nav-tablet);
-    padding: 0 var(--s-3) 0 var(--s-4);
     gap: var(--s-2);
   }
   .desktop-nav {
     gap: 0.125rem;
   }
-  .glass-island .btn-nav {
+  .header-bar .btn-nav {
     padding: 0.5rem 0.625rem;
     letter-spacing: 0.14em;
     font-size: 0.65rem;
   }
-  .glass-island .btn-nav.active::after {
+  .header-bar .btn-nav.active::after {
     left: 0.625rem;
     right: 0.625rem;
   }
-  .glass-island .btn-gold {
+  .header-bar .btn-gold {
     min-height: 2.125rem;
     padding: 0.4rem 1rem;
   }
@@ -195,13 +208,8 @@
 }
 
 @media (max-width: 480px) {
-  .app-header {
-    top: calc(0.5rem + env(safe-area-inset-top, 0px));
-    padding: 0 0.75rem;
-  }
-  .glass-island {
+  .header-bar {
     height: var(--h-nav-mobile);
-    padding: 0 var(--s-2) 0 var(--s-3);
   }
   .mobile-menu-item {
     font-size: 1.6rem;

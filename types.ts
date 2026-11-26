@@ -128,6 +128,15 @@ export interface BlogPost {
   seoDescription?: string;
   seoKeywords?: string[];
   audience?: BlogAudience[];
+  relatedSlugs?: string[];
+}
+
+export interface RelatedArticleItem {
+  slug: string;
+  title: string;
+  imageUrl: string;
+  href: string;
+  category?: string;
 }
 
 export type BlogPostSummary = Omit<BlogPost, 'body'>;
@@ -147,6 +156,7 @@ export interface TravelGuide {
   prevLink?: NavLink;
   nextLink?: NavLink;
   faqIds?: string[];
+  relatedSlugs?: string[];
 }
 
 export interface ResourceItem {
@@ -171,6 +181,7 @@ export interface ResourceItem {
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string[];
+  relatedSlugs?: string[];
 }
 
 export interface ResourceCategory {

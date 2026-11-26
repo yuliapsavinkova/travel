@@ -28,6 +28,11 @@ export const post: BlogPost = {
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
   faqIds: ['homeowner-how-to-prepare', 'homeowner-what-to-leave', 'homeowner-interview-questions'],
+  relatedSlugs: [
+    'what-to-include-in-a-house-sitter-welcome-guide',
+    'questions-to-ask-before-hiring-a-house-sitter',
+    'trusted-housesitters-exchange-vs-professional-house-sitting',
+  ],
   seoTitle: 'How to Prepare Your Home for a House Sitter | Complete Checklist',
   seoDescription:
     'A practical checklist for homeowners preparing for a house sitter: welcome guide details, pet supplies, clean kitchen & sleeping space, and house quirks to share early.',
