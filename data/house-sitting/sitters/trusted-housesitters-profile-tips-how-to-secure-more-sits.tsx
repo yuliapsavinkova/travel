@@ -10,9 +10,10 @@ export const post: BlogPost = {
   topic: 'TrustedHousesitters',
   title: 'Profile Tips: How to Secure More Sits',
   navTitle: 'Profile Tips',
-  excerpt: 'Master your profile with practical tips, including photo rules and proven examples.',
+  excerpt:
+    'What I have learned about building a sitter profile homeowners trust, including photo guidelines and real examples.',
   date: 'January 9, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Strategy',
   sortOrder: 5,
   audience: ['Sitters'],
@@ -20,7 +21,7 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1517125591588-3a29b2182219?q=80&w=2073&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  faqIds: ['ths-beginner-difficulty', 'ths-rejection-common', 'ths-reporting-safety'],
+  faqIds: ['trusted-profile-tips', 'ths-photo-aspect', 'ths-cleanliness-mention'],
   relatedSlugs: [
     'how-to-get-your-first-house-sit-no-reviews',
     'why-trusted-housesitters-applications-get-rejected',
@@ -28,7 +29,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'TrustedHousesitters Profile Tips | How to Build a 5-Star Profile',
   seoDescription:
-    'Master your TrustedHousesitters profile with these photo and bio tips. Learn the 3:2 aspect ratio rule for winning applications.',
+    'My insights on building a TrustedHousesitters profile that earns trust, including the 3:2 photo aspect ratio and practical bio examples.',
   seoKeywords: [
     'trustedhousesitters profile tips',
     'how to get more house sits',
@@ -42,15 +43,15 @@ export const post: BlogPost = {
   body: (
     <>
       <p className="prose-lead">
-        Most sitters write profiles about themselves - their travel dreams, their love of animals,
-        their life story. Owners don't care about any of that. They care about one thing: whether
-        you can handle their home and their pet.
+        In my experience, many sitters write profiles focused mostly on their travel dreams or life
+        story. From what I have seen and heard from homeowners, what matters most to them is knowing
+        you can take good care of their home and their pet.
       </p>
 
       <p>
-        A strong profile makes an owner feel confident. They need to know they can hand you their
-        keys and their beloved pets without worry. This isn't about telling your life story: it is
-        about clarity and proof of responsibility.
+        A strong profile helps an owner feel comfortable handing over their keys and beloved pets.
+        For me, writing a good profile has never been about telling my life story. It is about
+        clarity and showing reliability.
       </p>
 
       <h2>1. Profile Photos: Get This Right First</h2>
@@ -60,13 +61,13 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-accent-box">
-        <span className="accent-box-label">Image rules for success:</span>
+        <span className="accent-box-label">What works well for photos:</span>
         <ul>
           <li>Show your face clearly in your main profile photo</li>
           <li>Include at least one photo of you with a pet (dog or cat both work)</li>
           <li>
-            <strong>Use a 3:2 aspect ratio:</strong> This ensures your images don't get cropped,
-            rescaled, or blurry.
+            <strong>Use a 3:2 aspect ratio:</strong> This helps keep your images from getting
+            cropped, rescaled, or blurry.
           </li>
         </ul>
       </div>
@@ -74,13 +75,13 @@ export const post: BlogPost = {
       <h3>What 3:2 means in practice:</h3>
       <ul>
         <li>Examples: 900 × 600, 1500 × 1000, 3000 × 2000</li>
-        <li>The width of your photo should always be 1.5 times the height</li>
+        <li>For a 3:2 photo, the width is 1.5 times the height</li>
       </ul>
 
       <p>
         If you upload a square or vertical image, TrustedHousesitters will shrink it and it won't
-        display full-size. That immediately looks sloppy and unprofessional. Authentic, well-lit
-        photos with animals build immediate rapport.
+        display full-size. That can make an otherwise great profile look unpolished. Authentic,
+        well-lit photos with animals build immediate rapport.
       </p>
 
       <ArticleImage
@@ -92,8 +93,9 @@ export const post: BlogPost = {
 
       <h2>2. Profile Content: Write for Owners, Not for Yourself</h2>
       <p>
-        Owners care about one thing: whether you can handle their home and their pet. Avoid generic
-        travel manifestos and long childhood stories.
+        When owners look through profiles, they mainly want to know whether they can picture you
+        caring for their home and pet. I have found it helps to skip long travel manifestos or
+        childhood stories.
       </p>
 
       <div className="prose-accent-box variant-cons">
@@ -241,9 +243,9 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>A clear, professional profile removes barriers for owners to
-        say "yes." Get your photos right, write for their concerns, and show you're responsible.
-        That's what converts views into confirmed sits.
+        <strong>My Takeaway</strong>From my experience, a clear, thoughtful profile removes a lot of
+        hesitation for owners. Getting your photos right, speaking to their concerns, and showing
+        how you care for a home goes a long way toward turning profile views into confirmed sits.
       </div>
     </>
   ),

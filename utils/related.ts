@@ -15,21 +15,18 @@ export function getRelatedArticlesFor(
       title: post.title,
       imageUrl: post.imageUrl,
       href: `/${post.slug}`,
-      category: post.track === 'homeowners' ? 'For Homeowners' : 'For Sitters',
     })),
     ...TRAVEL_GUIDES.map((guide) => ({
       slug: guide.slug,
       title: guide.title,
       imageUrl: guide.imageUrl,
       href: `/travel/${guide.slug}`,
-      category: 'Travel Guide',
     })),
     ...ALL_RESOURCES.map((resource) => ({
       slug: resource.slug,
       title: resource.name,
       imageUrl: resource.imageUrl || '/yulia-with-dog.jpg',
       href: `/${resource.slug}`,
-      category: 'Resource',
     })),
   ];
 

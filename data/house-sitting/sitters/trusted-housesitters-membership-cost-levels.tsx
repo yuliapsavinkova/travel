@@ -20,13 +20,13 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  faqIds: ['travel-savings', 'ths-experience-level-sits', 'ths-membership-try'],
+  faqIds: ['membership-which-tier', 'membership-basic-fees', 'ths-membership-discounts'],
   relatedSlugs: [
     'is-trusted-housesitters-worth-it-for-sitters',
     'can-you-really-travel-for-free-house-sitting-math',
     'trusted-housesitters-vs-other-house-sitting-websites',
   ],
-  seoTitle: 'Which TrustedHousesitters Sitter Membership Should You Choose? | Decision Guide',
+  seoTitle: 'Which TrustedHousesitters Sitter Membership Should You Choose? | My Insights',
   seoDescription:
     'Compare Basic, Standard, and Premium sitter tiers. Understand what each level offers and which one fits your travel frequency and risk tolerance.',
   seoKeywords: [
@@ -49,13 +49,13 @@ export const post: BlogPost = {
         website for current pricing.)
       </p>
       <p>
-        Before diving into the tiers, understand this: if you're still deciding whether house
-        sitting is even worth it,{' '}
+        Before looking at the tiers, here is how I think about it: if you're still deciding whether
+        house sitting fits you at all,{' '}
         <Link href="/is-trusted-housesitters-worth-it-for-sitters">
-          read my breakdown on whether TrustedHousesitters is worth the investment
+          read my breakdown on whether TrustedHousesitters is worth it
         </Link>
-        . Once you know you're joining, the membership decision becomes about risk tolerance and
-        travel frequency.
+        . Once you know you're joining, choosing a membership comes down to risk tolerance and how
+        often you plan to sit.
       </p>
       <h2>Understanding the Three Sitter Tiers</h2>
       <p>All three levels let you apply for unlimited sits worldwide. The differences are in:</p>
@@ -241,9 +241,9 @@ export const post: BlogPost = {
         .
       </p>
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        Whichever plan you choose, pick the tier that best aligns with your expected travel
-        frequency, sit volume, and need for cancellation protection.
+        <strong>My Takeaway</strong>
+        From my experience, the best plan is simply the one that fits how many sits you plan to take
+        on and how much cancellation protection gives you peace of mind.
       </div>
     </>
   ),

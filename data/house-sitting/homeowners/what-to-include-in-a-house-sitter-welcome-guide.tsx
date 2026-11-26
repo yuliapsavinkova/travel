@@ -15,8 +15,7 @@ export const post: BlogPost = {
   topic: 'Homeowners',
   title: 'What to Include in a House Sitter Welcome Guide (Checklist)',
   navTitle: 'Welcome Guide Checklist',
-  subtitle:
-    'The clear, stress-saving sections every homeowner welcome guide needs, based on over 40 real house sits.',
+  subtitle: 'The welcome guide details I find most helpful on a sit, based on my own stays.',
   excerpt:
     'Learn exactly what to leave in a house sitter welcome guide: pet feeding and medication routines, emergency vet authorization, Wi-Fi and appliance quirks, and local contacts.',
   date: 'November 23, 2026',
@@ -28,7 +27,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
-  faqIds: ['homeowner-what-to-leave', 'homeowner-how-to-prepare', 'homeowner-interview-questions'],
+  faqIds: [
+    'homeowner-what-to-leave',
+    'homeowner-when-to-send-welcome-guide',
+    'homeowner-emergency-vet-auth',
+  ],
   relatedSlugs: [
     'how-to-prepare-your-home-for-a-house-sitter',
     'questions-to-ask-before-hiring-a-house-sitter',
@@ -36,7 +39,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'What to Include in a House Sitter Welcome Guide | Homeowner Checklist',
   seoDescription:
-    'Complete checklist for writing a house sitter welcome guide: pet routines, emergency vet details, lock and Wi-Fi instructions, trash schedules, and house quirks.',
+    'A welcome guide checklist shared from a house sitter perspective: pet routines, emergency vet details, lock and Wi-Fi instructions, trash schedules, and house quirks.',
   seoKeywords: [
     'house sitter welcome guide',
     'what to include in a house sitter welcome guide',

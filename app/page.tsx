@@ -10,14 +10,14 @@ import { DEFAULT_OG_IMAGE } from '../utils/content';
 export const metadata: Metadata = {
   title: 'Sitter Journey | Professional House Sitting & Slow Travel Across America',
   description:
-    'Follow my full-time journey as a solo female traveler and professional house sitter. Discover how to travel the USA, save on accommodation, and care for pets.',
+    'Follow my journey as a solo female traveler and house sitter. I share my insights from experience on traveling the USA, saving on accommodation, and caring for pets.',
   alternates: {
     canonical: 'https://sitterjourney.com',
   },
   openGraph: {
     title: 'Sitter Journey | Professional House Sitting & Slow Travel Across America',
     description:
-      'Follow my full-time journey as a solo female traveler and professional house sitter. Discover how to travel the USA, save on accommodation, and care for pets.',
+      'Follow my journey as a solo female traveler and house sitter. I share my insights from experience on traveling the USA, saving on accommodation, and caring for pets.',
     url: 'https://sitterjourney.com',
     type: 'website',
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sitter Journey | Professional House Sitting & Slow Travel Across America',
     description:
-      'Follow my full-time journey as a solo female traveler and professional house sitter. Discover how to travel the USA, save on accommodation, and care for pets.',
+      'Follow my journey as a solo female traveler and house sitter. I share my insights from experience on traveling the USA, saving on accommodation, and caring for pets.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
@@ -158,7 +158,7 @@ export default function HomePage() {
                 <StarIcon size={14} /> {SITE_STATS.sitsCompleted} Sits Completed
               </span>
               <span className="metadata-item">
-                <StarIcon size={14} /> Solo Safety Guides
+                <StarIcon size={14} /> Solo Travel Insights
               </span>
             </div>
           </div>
@@ -230,9 +230,9 @@ export default function HomePage() {
               What Comes <span className="serif-italic">Next</span>
             </h2>
             <p className="hero-paragraph home-feature-paragraph">
-              I’m just getting started here, so check back as the site grows. I’ll be sharing
-              packing hacks, real budget breakdowns, and the technical details of traveling full
-              time efficiently and sustainably.
+              I’m still building this out, so check back as the site grows. I’ll keep sharing
+              packing tips, real budget breakdowns, and the practical lessons I have learned from
+              house sitting and traveling full time.
             </p>
             <div className="home-metadata-group-dim">
               <span className="metadata-item">

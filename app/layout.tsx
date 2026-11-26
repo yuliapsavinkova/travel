@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     template: '%s | Sitter Journey',
   },
   description:
-    'Practical guides, real budget math, and expert tips for full-time travel, professional house sitting, and pet care by Yulia.',
+    'Real stories, budget math, and my insights from experience with house sitting, slow travel, and pet care by Yulia.',
   alternates: {
     canonical: 'https://sitterjourney.com',
   },
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sitter Journey | Professional House Sitting & Full-Time Travel',
     description:
-      'Practical guides, real budget math, and expert tips for full-time travel, professional house sitting, and pet care by Yulia.',
+      'Real stories, budget math, and my insights from experience with house sitting, slow travel, and pet care by Yulia.',
     url: 'https://sitterjourney.com',
     siteName: 'Sitter Journey',
     images: [
@@ -124,7 +124,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sitter Journey | Professional House Sitting & Full-Time Travel',
     description:
-      'Practical guides, real budget math, and expert tips for full-time travel, professional house sitting, and pet care by Yulia.',
+      'Real stories, budget math, and my insights from experience with house sitting, slow travel, and pet care by Yulia.',
     images: [OG_IMAGE_URL],
   },
 };
@@ -150,7 +150,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         url: 'https://sitterjourney.com/about',
         jobTitle: 'Professional House Sitter & Travel Writer',
         description:
-          'Solo traveler and professional house sitter sharing real-world advice, budgeting, and strategies for long-term travel.',
+          'Solo traveler and house sitter sharing personal insights, real budget math, and lessons from my stays.',
         sameAs: [
           SITE_CONFIG.socials.instagram,
           SITE_CONFIG.socials.facebook,

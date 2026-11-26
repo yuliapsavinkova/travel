@@ -11,14 +11,14 @@ export const post: BlogPost = {
   navTitle: 'Rejections',
   excerpt: 'Rejections happen. Here’s what you can control and what you cannot.',
   date: 'January 9, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Strategy',
   sortOrder: 8,
   audience: ['Sitters'],
   imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2070&fit=crop',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  faqIds: ['ths-rejection-fix', 'ths-reviews-starting', 'ths-reporting-safety'],
+  faqIds: ['ths-rejection-common', 'ths-rejection-resemblance', 'ths-rejection-fix'],
   relatedSlugs: [
     'trusted-housesitters-profile-tips-how-to-secure-more-sits',
     'trusted-housesitters-how-to-apply-for-competitive-sits-fast-using-ai',
@@ -70,7 +70,7 @@ export const post: BlogPost = {
           <strong>Profile Quality:</strong> If your photos are not clear or your bio feels generic,
           homeowners will likely pass over your profile. You can fix this immediately using my:{' '}
           <Link href="/trusted-housesitters-profile-tips-how-to-secure-more-sits">
-            profile mastery tips
+            profile tips
           </Link>
           .
         </li>
@@ -98,23 +98,22 @@ export const post: BlogPost = {
           your hands.
         </li>
         <li>
-          <strong>The "Mirror" Effect:</strong> Owners often pick sitters who reflect their own
-          lifestyle. A young active couple might pick a young active couple. A retired solo
-          homeowner might feel more comfortable with a solo female sitter.
+          <strong>The "Mirror" Effect:</strong> From what I have noticed, owners often lean toward
+          sitters who reflect their own lifestyle. A young active couple might pick a young active
+          couple, while a solo homeowner might feel more comfortable with a solo female sitter.
         </li>
         <li>
-          <strong>Solo vs Couple:</strong> Some owners believe a couple provides more "security" or
-          better care for multiple pets. Others prefer a solo person because they have a small guest
-          room or want less wear-and-tear on their home.
+          <strong>Solo vs Couple:</strong> Some owners feel a couple provides extra peace of mind or
+          help with multiple pets. Others prefer a solo person because they have a small guest room
+          or want lighter day-to-day wear on their home.
         </li>
         <li>
-          <strong>Age Range Filters:</strong> Some owners seek a specific age range, for example, “a
-          retired couple over 55”, to match the pace of their lifestyle or neighborhood.
+          <strong>Age Range Preferences:</strong> Some owners picture a specific life stage, for
+          example, “a retired couple over 55”, to match the pace of their home or neighborhood.
         </li>
         <li>
-          <strong>Subconscious Resemblance:</strong> Owners often subconsciously choose a sitter who
-          resembles themselves. They believe the pet will adjust more easily to someone who feels
-          familiar.
+          <strong>Familiarity:</strong> Owners sometimes lean toward a sitter who reminds them of
+          themselves or their household, hoping their pet will settle in more easily.
         </li>
         <li>
           <strong>Sitter Location:</strong> Even though the platform is focused on travel, many
@@ -135,9 +134,9 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        Every "no" brings you closer to the next great experience. Don't let the process discourage
-        you. Just keep being yourself.
+        <strong>My Takeaway</strong>
+        Every "no" simply clears space for the next good fit. In my experience, the easiest way to
+        stay sane is not to overthink it and just keep showing up honestly as yourself.
       </div>
     </>
   ),

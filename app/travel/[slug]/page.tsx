@@ -40,7 +40,7 @@ export async function generateMetadata({
       `${guide.location} travel guide`,
       'house sitting destinations',
       'slow travel',
-      'slow travel guide',
+      'long-term travel guide',
     ],
     alternates: {
       canonical: `https://sitterjourney.com/travel/${guide.slug}`,

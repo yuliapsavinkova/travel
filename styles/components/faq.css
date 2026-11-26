@@ -9,6 +9,17 @@
   width: 100%;
 }
 
+.faq-archive-panel {
+  max-width: var(--container-width-narrow);
+  margin: 0 auto;
+}
+
+.faq-archive-panel .prose-faq {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
 /* Explicitly reset any inherited prose link/italic bleed */
 .prose-content .prose-faq a,
 .prose-faq a {

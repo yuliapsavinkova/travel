@@ -12,7 +12,7 @@ export const post: BlogPost = {
   excerpt:
     'How I configure alerts to catch the sits I actually want. Real examples from a full-time sitter.',
   date: 'January 9, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Strategy',
   sortOrder: 12,
   audience: ['Sitters'],
@@ -27,7 +27,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'TrustedHousesitters Alert Strategy | Real Sitter Examples',
   seoDescription:
-    'Real examples of how an experienced sitter configures TrustedHousesitters alerts. Learn a strategic approach that actually works.',
+    'Real examples of how I set up my TrustedHousesitters alerts and filters to catch the sits that fit my schedule.',
   seoKeywords: [
     'trustedhousesitters alerts strategy',
     'TrustedHousesitters notification setup',
@@ -159,9 +159,9 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        <strong>Pro tip:</strong> If you're in a busy location (major city or popular area), you'll
-        almost always find something if you're not too picky. These gap filler sits are about being
-        practical, not finding your dream home.
+        <strong>From my experience:</strong> If you're in a busy location (major city or popular
+        area), you can usually find something if you're not too picky. These gap filler sits are
+        about being practical, not finding your dream home.
       </p>
 
       <h2>Finding Your Own Strategy</h2>
@@ -212,10 +212,10 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        Alerts save time and catch opportunities you'd otherwise miss. Start simple, adjust as you
-        learn what you actually want. And yes, browsing sits is addictive, but at least it's more
-        useful than scrolling social media.
+        <strong>My Takeaway</strong>
+        Alerts save me a lot of time and help me catch sits I would otherwise miss. Start simple and
+        adjust as you see what you actually enjoy. And yes, browsing sits can be addictive, but at
+        least it's more useful than scrolling social media.
       </div>
     </>
   ),

@@ -17,8 +17,7 @@ export const content = (
 
     <p>
       Exploring the intersection of ancient traditions and full-time slow travel has been a defining
-      chapter of my global journey across 35+ countries and continues to influence my professional
-      standards.
+      chapter of my travels across 40+ countries and continues to shape how I care for every home.
     </p>
 
     <ArticleImage

@@ -11,14 +11,14 @@ import { DEFAULT_OG_IMAGE } from '../../utils/content';
 export const metadata: Metadata = {
   title: 'Travel Guides & Slow Travel Destinations | Sitter Journey',
   description:
-    'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
+    'Personal travel stories, slow travel notes, and insights from places I have stayed around the world.',
   alternates: {
     canonical: 'https://sitterjourney.com/travel',
   },
   openGraph: {
     title: 'Travel Guides & Slow Travel Destinations',
     description:
-      'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
+      'Personal travel stories, slow travel notes, and insights from places I have stayed around the world.',
     url: 'https://sitterjourney.com/travel',
     type: 'website',
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Travel Guides & Slow Travel Destinations',
     description:
-      'Explore in-depth travel guides, house sitting destinations, itineraries, and stories from across the United States.',
+      'Personal travel stories, slow travel notes, and insights from places I have stayed around the world.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
@@ -48,7 +48,7 @@ export default function TravelPage() {
         '@id': 'https://sitterjourney.com/travel#collection',
         url: 'https://sitterjourney.com/travel',
         name: 'Travel Guides & Destinations | Sitter Journey',
-        description: 'Explore in-depth travel guides and stories across the United States.',
+        description: 'Personal travel stories and insights from places I have stayed.',
         hasPart: TRAVEL_GUIDES.map((guide) => ({
           '@type': 'Article',
           headline: guide.title,

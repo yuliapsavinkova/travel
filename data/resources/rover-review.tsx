@@ -15,7 +15,7 @@ export const resource: ResourceItem = {
   icon: 'heart',
   imageUrl:
     'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1200',
-  faqIds: ['ths-experience-level-sits', 'travel-experience-needed', 'first-sit-easy'],
+  faqIds: ['rover-between-sits'],
   relatedSlugs: [
     'trusted-housesitters-vs-rover-comparison',
     'trusted-housesitters-vs-other-house-sitting-websites',

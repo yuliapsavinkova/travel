@@ -20,7 +20,7 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2060&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  faqIds: ['ths-membership-worth-it', 'travel-savings', 'best-platform-travel'],
+  faqIds: ['ths-worth-breakeven', 'ths-worth-competition', 'ths-worth-not-for'],
   relatedSlugs: [
     'can-you-really-travel-for-free-house-sitting-math',
     'trusted-housesitters-membership-cost-levels',
@@ -176,7 +176,7 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
+        <strong>My Takeaway</strong>
         For the cost of a single weekend in a standard hotel, you unlock the opportunity to stay in
         comfortable homes for the full length of your membership, with the company of new furry
         friends along the way. In my experience, it's one of the best ways to travel comfortably on

@@ -21,10 +21,10 @@ export const body = (
     </p>
 
     <p>
-      This site is a practical guide to the lifestyle I’ve built. I share exactly how to get your
-      first house sit, what you should expect during a stay, and how to navigate solo travel safely.
-      It also explores the philosophy of intentional living: focusing on what really matters while
-      letting go of the rest.
+      This site is where I share my insights from building this lifestyle. I write about how I got
+      my first house sit, what staying in someone’s home has really been like for me, and what helps
+      me feel safe traveling solo. It also reflects how I think about intentional living: focusing
+      on what matters most to me while letting go of the rest.
     </p>
 
     <h2>Professional House Sitting</h2>
@@ -47,9 +47,10 @@ export const body = (
     </p>
 
     <p>
-      I am currently documenting my journey and expanding this space to share deeper insights on
-      minimalist living and slow travel. These approaches to freedom and happiness go hand in hand,
-      and I invite you to check back often as I document more of my stories and technical hacks.
+      I am currently documenting my journey and expanding this space to share more of my insights on
+      minimalist living and slow travel. These approaches to freedom and happiness go hand in hand
+      for me, and I invite you to check back often as I share more of my stories and practical
+      lessons.
     </p>
 
     <h2>How This Site Is Funded</h2>

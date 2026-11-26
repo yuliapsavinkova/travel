@@ -1,22 +1,19 @@
 import type { Metadata } from 'next';
-import React from 'react';
-import CommonDetail from '../../components/CommonDetail';
-import FAQSection from '../../components/FAQSection';
-import { MASTER_FAQS } from '../../data/faqs';
-import { REFERRALS } from '../../types';
+import FAQArchive from '../../components/FAQArchive';
+import { HOMEOWNER_FAQS, MASTER_FAQS, SITTER_FAQS } from '../../data/faqs';
 import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions: House Sitting & Full-Time Travel | Sitter Journey',
+  title: 'Common Questions: House Sitting for Sitters & Homeowners | Sitter Journey',
   description:
-    'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and full-time travel.',
+    'Answers to common questions about house sitting for sitters and homeowners: landing your first stay, memberships, prepping your home, and vetting sitters.',
   alternates: {
     canonical: 'https://sitterjourney.com/faq',
   },
   openGraph: {
-    title: 'Frequently Asked Questions: House Sitting & Full-Time Travel',
+    title: 'Common Questions: House Sitting for Sitters & Homeowners',
     description:
-      'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and full-time travel.',
+      'Answers to common questions about house sitting for sitters and homeowners: landing your first stay, memberships, prepping your home, and vetting sitters.',
     url: 'https://sitterjourney.com/faq',
     type: 'website',
     images: [
@@ -24,15 +21,15 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Sitter Journey Frequently Asked Questions',
+        alt: 'Sitter Journey Common Questions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frequently Asked Questions: House Sitting & Full-Time Travel',
+    title: 'Common Questions: House Sitting for Sitters & Homeowners',
     description:
-      'Answers to common questions about house sitting, TrustedHousesitters memberships, application strategies, background checks, and full-time travel.',
+      'Answers to common questions about house sitting for sitters and homeowners: landing your first stay, memberships, prepping your home, and vetting sitters.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
@@ -66,7 +63,7 @@ export default function FAQPage() {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Frequently Asked Questions',
+            name: 'Common Questions',
             item: 'https://sitterjourney.com/faq',
           },
         ],
@@ -80,38 +77,14 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <CommonDetail
-        image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=2400"
-        title="Common Questions."
-        date="January 2026"
-        prevLink={{ label: 'Previous', title: 'Blog', href: '/sitters-guides' }}
-        nextLink={{ label: 'Next', title: 'Resources', href: '/resources' }}
-      >
-        <div className="flex-col">
-          <p className="prose-lead">
-            Everything you need to know about starting your house sitting journey, handling
-            rejections, and traveling sustainably.
-          </p>
 
-          <FAQSection items={MASTER_FAQS} />
-
-          <div className="prose-accent-box variant-cta" style={{ marginTop: 'var(--s-9)' }}>
-            <span className="accent-box-label">Get {REFERRALS.THS.discount} Membership</span>
-            <p>
-              Ready to start your journey? Use my verified referral link to get
-              {REFERRALS.THS.discount} your annual membership.
-            </p>
-            <a
-              href={REFERRALS.THS.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold btn-wide"
-            >
-              Discount: {REFERRALS.THS.discount}
-            </a>
-          </div>
-        </div>
-      </CommonDetail>
+      <div className="container section-margin archive-page-container">
+        <FAQArchive
+          sitterFaqs={SITTER_FAQS}
+          homeownerFaqs={HOMEOWNER_FAQS}
+          initialTrack="sitters"
+        />
+      </div>
     </>
   );
 }

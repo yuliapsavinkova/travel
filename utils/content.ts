@@ -146,7 +146,7 @@ export const getTrackPath = (track: BlogTrack): string => {
 };
 
 export const getTrackLabel = (track: BlogTrack): string => {
-  return track === 'homeowners' ? 'For Homeowners' : 'For Sitters';
+  return track === 'homeowners' ? 'Guide for Homeowners' : 'Guide for Sitters';
 };
 
 export const sortPostsByOrder = <T extends Pick<BlogPost, 'sortOrder'>>(posts: T[]): T[] => {

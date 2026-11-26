@@ -11,7 +11,7 @@ export const post: BlogPost = {
   navTitle: 'AI Strategy',
   excerpt: 'The best sits fill in minutes. Here is a strategy how to use AI to apply fast.',
   date: 'September 28, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Strategy',
   sortOrder: 10,
   audience: ['Sitters'],
@@ -25,7 +25,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'How to Apply for Competitive TrustedHousesitters Sits Fast: AI Strategy & Templates',
   seoDescription:
-    'Learn how to win competitive house sits on TrustedHousesitters using an AI system. Apply within minutes and beat the competition with high-quality personalization.',
+    'How I use a reusable template and AI to apply quickly on TrustedHousesitters without sounding generic.',
   seoKeywords: [
     'trustedhousesitters application speed',
     'TrustedHousesitters ai strategy',
@@ -85,7 +85,7 @@ export const post: BlogPost = {
         first.
       </p>
 
-      <h2>Step 1: Build Your Master Template</h2>
+      <h2>Step 1: Build Your Base Template</h2>
 
       <p>
         Create one strong application structure and save it somewhere you can access instantly. The
@@ -308,7 +308,7 @@ export const post: BlogPost = {
       </div>
 
       <div className="prose-end">
-        <strong>The Bottom Line</strong>
+        <strong>My Takeaway</strong>
 
         <p>
           Competitive sits can move quickly. A reusable template doesn't have to make your

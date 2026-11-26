@@ -15,7 +15,6 @@ export const resource: ResourceItem = {
   icon: 'award',
   imageUrl:
     'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200',
-  faqIds: ['travel-wellness-gym', 'ths-internet-remote', 'remote-work-internet'],
   relatedSlugs: [
     'can-you-really-travel-for-free-house-sitting-math',
     'hidden-perks-of-house-sitting',

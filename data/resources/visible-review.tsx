@@ -15,13 +15,13 @@ export const resource: ResourceItem = {
   icon: 'smartphone',
   imageUrl:
     'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200',
-  faqIds: ['ths-internet-remote', 'remote-work-internet', 'travel-wellness-gym'],
+  faqIds: ['ths-internet-remote', 'visible-hotspot-caps'],
   relatedSlugs: [
     'can-you-really-travel-for-free-house-sitting-math',
     'hidden-perks-of-house-sitting',
     'is-trusted-housesitters-worth-it-for-sitters',
   ],
-  seoTitle: 'Visible Wireless Review: Best Unlimited Plan for Travelers',
+  seoTitle: 'Visible Wireless Review: My Unlimited Hotspot Setup',
   seoDescription: `Personal review of Visible Wireless for house sitting and remote work. Get your first month of unlimited data and ${REFERRALS.VISIBLE.discount} with referral code.`,
   seoKeywords: [
     'visible mobile review 2026',
@@ -41,7 +41,7 @@ export const resource: ResourceItem = {
         connection.
       </p>
 
-      <h2>The Unlimited Hotspot Hack</h2>
+      <h2>Why I Rely on Unlimited Hotspot</h2>
       <p>
         Most "unlimited" plans have a hidden hotspot cap. Visible is different. They offer unlimited
         mobile hotspot data, which lets me work comfortably from quiet mountain cabins, beachfront

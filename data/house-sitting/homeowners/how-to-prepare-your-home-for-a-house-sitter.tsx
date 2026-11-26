@@ -16,7 +16,7 @@ export const post: BlogPost = {
   title: 'How to Prepare Your Home for a House Sitter: Practical Checklist',
   navTitle: 'Preparing Your Home',
   subtitle:
-    'A calm, practical home-prep guide from a full-time sitter so your pets stay settled and your trip starts smoothly.',
+    'Practical home-prep insights from my house sitting stays so your pets settle in easily and your trip starts calmly.',
   excerpt:
     'Learn how to prepare your home and pets before a house sitter arrives, from welcome guide essentials and stocked supplies to clearing space in the kitchen and setting clear expectations.',
   date: 'November 23, 2026',
@@ -27,13 +27,17 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
-  faqIds: ['homeowner-how-to-prepare', 'homeowner-what-to-leave', 'homeowner-interview-questions'],
+  faqIds: [
+    'homeowner-how-to-prepare',
+    'homeowner-living-space-prep',
+    'homeowner-pet-supplies-buffer',
+  ],
   relatedSlugs: [
     'what-to-include-in-a-house-sitter-welcome-guide',
     'questions-to-ask-before-hiring-a-house-sitter',
     'trusted-housesitters-exchange-vs-professional-house-sitting',
   ],
-  seoTitle: 'How to Prepare Your Home for a House Sitter | Complete Checklist',
+  seoTitle: 'How to Prepare Your Home for a House Sitter | Insights from a Sitter',
   seoDescription:
     'A practical checklist for homeowners preparing for a house sitter: welcome guide details, pet supplies, clean kitchen & sleeping space, and house quirks to share early.',
   seoKeywords: [

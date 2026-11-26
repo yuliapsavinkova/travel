@@ -4,14 +4,14 @@ import { ALL_RESOURCES } from '../../data/resources/resources';
 import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
-  title: 'Travel Resources & Discounts: My Trusted Toolkit | Sitter Journey',
+  title: 'Resources: Apps & Services I Personally Use | Sitter Journey',
   description:
     'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
   alternates: {
     canonical: 'https://sitterjourney.com/resources',
   },
   openGraph: {
-    title: 'Travel Resources & Discounts: My Trusted Toolkit',
+    title: 'Resources: Apps & Services I Personally Use',
     description:
       'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
     url: 'https://sitterjourney.com/resources',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Travel Resources & Discounts: My Trusted Toolkit',
+    title: 'Resources: Apps & Services I Personally Use',
     description:
       'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
     images: [DEFAULT_OG_IMAGE],
@@ -42,7 +42,7 @@ export default function ResourcesPage() {
         '@type': 'CollectionPage',
         '@id': 'https://sitterjourney.com/resources#collection',
         url: 'https://sitterjourney.com/resources',
-        name: 'Travel Resources & Discounts | Sitter Journey',
+        name: 'Resources: Apps and Services I Personally Use | Sitter Journey',
         description:
           'A curated list of apps, memberships, and services I use for house sitting and travel.',
         mainEntity: {
@@ -69,7 +69,7 @@ export default function ResourcesPage() {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Travel Resources',
+            name: 'Resources',
             item: 'https://sitterjourney.com/resources',
           },
         ],

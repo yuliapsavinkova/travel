@@ -13,7 +13,7 @@ export const post: BlogPost = {
   excerpt:
     'Beyond free accommodation, house sitting comes with dozens of unexpected benefits that compound the value.',
   date: 'July 12, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Lifestyle',
   sortOrder: 11,
   audience: ['Sitters'],
@@ -28,7 +28,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'Hidden Perks of House Sitting: Real Benefits Beyond Free Accommodation',
   seoDescription:
-    'Discover the unexpected benefits of house sitting: zero utilities, well-prepared kitchens, entertainment subscriptions, and more.',
+    'Unexpected perks I have come across while house sitting, from stocked kitchens and streaming subscriptions to gardens and local tips.',
   seoKeywords: [
     'house sitting benefits',
     'hidden perks of house sitting',
@@ -273,10 +273,10 @@ export const post: BlogPost = {
       </ul>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        House sitting isn't just about free accommodation. It's about living comfortably while
-        caring for pets and homes, with everyday comforts, occasional extras, and, for full-timers,
-        real savings on top.
+        <strong>My Takeaway</strong>
+        For me, house sitting has never just been about saving on lodging. It is about living
+        comfortably while caring for pets and homes, with everyday comforts, occasional extras, and
+        real savings along the way.
       </div>
     </>
   ),

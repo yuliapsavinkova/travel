@@ -12,7 +12,7 @@ export const post: BlogPost = {
   excerpt:
     'Understand the reporting process, common triggers for disputes, and how to protect yourself through documentation.',
   date: 'January 9, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Lifestyle',
   sortOrder: 9,
   audience: ['Sitters'],
@@ -20,7 +20,7 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&q=80&w=1200',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  faqIds: ['ths-rejection-common', 'ths-owner-priorities', 'ths-reviews-starting'],
+  faqIds: ['ths-reporting-safety', 'ths-reporting-documentation', 'ths-reporting-resolution'],
   relatedSlugs: [
     'how-to-update-homeowners-while-house-sitting',
     'trusted-housesitters-membership-cost-levels',
@@ -28,7 +28,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'What Happens If a Sit Goes Wrong | Sitter Journey',
   seoDescription:
-    'A clear guide to the TrustedHousesitters reporting process and dispute resolution. Protect your 5-star rating.',
+    'What I have learned about how TrustedHousesitters handles sit disputes, common triggers, and how keeping notes in writing helps protect you.',
   seoKeywords: [
     'trustedhousesitters reporting process',
     'what if a house sit goes wrong',
@@ -47,9 +47,8 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        This article explains, in simple terms, how issues are raised, what typically triggers a
-        report, and why documentation matters, so you can understand the system before deciding
-        whether to join.
+        Here is a straightforward look at how issues are handled, what tends to cause friction, and
+        why keeping details in writing helps before deciding whether to join.
       </p>
 
       <h2>First: what "going wrong" usually means</h2>
@@ -150,10 +149,10 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        If a sit goes wrong, the process centers on what was documented and agreed to, not on
-        assumptions. For most sitters, issues are uncommon. Clarity and communication matter more
-        than anything else.
+        <strong>My Takeaway</strong>
+        From what I have seen, if a sit goes sideways, reviews and support tend to look at what was
+        actually written down and agreed to. For most sitters, serious issues are rare, and clear
+        communication early prevents almost all of them.
       </div>
     </>
   ),

@@ -10,9 +10,9 @@ export const post: BlogPost = {
   title: 'Can You Really Travel for Free with House Sitting? Real Examples & Math',
   navTitle: 'Travel Math',
   excerpt:
-    'Is "free travel" a scam? We look at real numbers, and the hidden costs of house sitting.',
+    'Is "free travel" realistic? Here are my real numbers and the hidden costs I have run into while house sitting.',
   date: 'January 9, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Financial',
   sortOrder: 2,
   audience: ['Sitters'],
@@ -20,7 +20,7 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  faqIds: ['ths-membership-worth-it', 'ths-beginner-difficulty', 'best-platform-travel'],
+  faqIds: ['travel-savings', 'travel-math-hidden-costs', 'travel-math-compound'],
   relatedSlugs: [
     'is-trusted-housesitters-worth-it-for-sitters',
     'trusted-housesitters-membership-cost-levels',
@@ -28,7 +28,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'Can You Really Travel for Free? House Sitting Math & Reality',
   seoDescription:
-    'Discover the truth about "free travel." We break down house sitting itineraries and math for full-time sitters.',
+    'A real look at "free travel" from my own house sitting numbers, budget math, and hidden costs.',
   seoKeywords: [
     'travel for free math',
     'house sitting cost breakdown',
@@ -48,9 +48,9 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        This article breaks down exactly when house sitting is effectively free, when it's not, and
-        why most people fail to make it work. Accommodation is typically 40–70% of travel costs.
-        Removing it changes everything. If you're still deciding whether to join,{' '}
+        Here is my breakdown of when house sitting feels close to free, when it doesn't, and why I
+        think expectations matter so much. Accommodation is often 40 to 70% of travel costs, so
+        removing it makes a big difference. If you're still deciding whether to join,{' '}
         <Link href="/is-trusted-housesitters-worth-it-for-sitters">
           read my honest breakdown of whether TrustedHousesitters is worth it
         </Link>
@@ -176,10 +176,9 @@ export const post: BlogPost = {
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        So, is it really "free travel"? If by "free" you mean no accommodation costs and radically
-        cheaper long-term travel, then absolutely. It doesn't make you rich; it makes travel
-        sustainable.
+        <strong>My Takeaway</strong>
+        So, is it really "free travel"? Not in the fantasy sense. If by "free" you mean zero nightly
+        lodging bills and much more sustainable long-term travel, that has matched my experience.
       </div>
     </>
   ),

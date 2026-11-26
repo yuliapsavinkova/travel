@@ -9,9 +9,9 @@ export const post: BlogPost = {
   title: 'How to Update Homeowners While House Sitting: Frequency, Content, and Boundaries',
   navTitle: 'Updating Owners',
   excerpt:
-    'Good communication is one of the biggest differentiators between an average sit and a great one. Learn a strategy that actually works.',
+    'Good communication has made a huge difference on my sits. Here is the approach that has worked well for me.',
   date: 'January 9, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Strategy',
   sortOrder: 13,
   audience: ['Sitters'],
@@ -27,7 +27,7 @@ export const post: BlogPost = {
 
   seoTitle: 'How to Update Homeowners While House Sitting | Sitter Communication Strategy',
   seoDescription:
-    'Master the art of updating homeowners during a house sit. Learn the right frequency, what to include in daily messages, and how to handle issues professionally.',
+    'My insights on updating homeowners during a house sit, including how often I message, what photos I send, and how I handle unexpected issues.',
   seoKeywords: [
     'updating homeowners house sitting',
     'house sitter communication strategy',
@@ -98,8 +98,8 @@ export const post: BlogPost = {
         <p className="serif-italic">
           If everything is normal, keep updates positive. Owners are on vacation, so they don’t need
           unnecessary micro-issues unless they truly matter.{' '}
-          <strong>Report real issues (broken items, malfunctions) early</strong>; unreported
-          problems found later always go worse.
+          <strong>Report real issues (broken items, malfunctions) early</strong>; problems found
+          after an owner gets home tend to go much worse.
         </p>
       </div>
 
@@ -169,15 +169,15 @@ export const post: BlogPost = {
 
       <h2>7. After the Sit: The Wrap-Up</h2>
       <p>
-        Before departure or shortly after, always send a final wrap-up message including a summary
-        of pet behavior, house condition, small notes, and a clear thank-you. This strongly
-        influences reviews and future trust.
+        Before departure or shortly after, I like to send a final wrap-up message including a
+        summary of pet behavior, house condition, small notes, and a clear thank-you. In my
+        experience, it leaves things on a warm note and helps future trust.
       </p>
 
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        Good communication while house sitting isn’t about volume. It’s about clarity, consistency,
-        and judgment. Do this well, and most sits run smoothly with very little friction.
+        <strong>My Takeaway</strong>
+        Good communication while house sitting has never been about writing long messages for me. It
+        comes down to clarity, consistency, and thoughtful judgment.
       </div>
     </>
   ),

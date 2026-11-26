@@ -237,16 +237,6 @@
   min-width: 0;
 }
 
-.sidebar-related-cat {
-  font-family: var(--f-mono);
-  font-size: 0.6rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-brand-primary);
-  opacity: 0.9;
-}
-
 .sidebar-related-title {
   font-family: var(--f-serif);
   font-style: italic;

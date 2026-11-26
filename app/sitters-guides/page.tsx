@@ -69,7 +69,7 @@ export default function SittersGuidesPage() {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'For Sitters',
+            name: 'Guides for House Sitters',
             item: 'https://sitterjourney.com/sitters-guides',
           },
         ],

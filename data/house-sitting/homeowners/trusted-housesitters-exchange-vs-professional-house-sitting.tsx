@@ -28,7 +28,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Pet Parents'],
-  faqIds: ['homeowner-interview-questions', 'homeowner-how-to-prepare', 'homeowner-what-to-leave'],
+  faqIds: [
+    'homeowner-exchange-vs-pro',
+    'homeowner-exchange-cost',
+    'homeowner-when-professional-better',
+  ],
   relatedSlugs: [
     'questions-to-ask-before-hiring-a-house-sitter',
     'how-to-prepare-your-home-for-a-house-sitter',

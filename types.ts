@@ -57,6 +57,7 @@ export interface NavLink {
 
 export interface FAQItem {
   id: string;
+  audience?: BlogTrack;
   question: string;
   answer: string;
   link?: {

@@ -10,9 +10,9 @@ export const post: BlogPost = {
   topic: 'TrustedHousesitters',
   title: 'How to Get Your First House Sit (Even With No Reviews)',
   navTitle: 'First Sit Guide',
-  excerpt: 'Proven strategies to go from zero reviews to getting accepted for your first sit.',
+  excerpt: 'What worked for me to go from zero reviews to getting accepted for my first house sit.',
   date: 'July 21, 2026',
-  category: 'Expertise',
+  category: 'Sitter Guide',
   location: 'Strategy',
   sortOrder: 4,
   audience: ['Sitters'],
@@ -20,7 +20,7 @@ export const post: BlogPost = {
     'https://images.unsplash.com/photo-1655992108235-b9bbf5bb18cc?auto=format&fit=crop&q=80&w=2400',
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
-  faqIds: ['trusted-profile-tips', 'ths-rejection-common', 'travel-savings'],
+  faqIds: ['ths-beginner-difficulty', 'first-sit-easy', 'ths-reviews-starting'],
   relatedSlugs: [
     'trusted-housesitters-profile-tips-how-to-secure-more-sits',
     'why-trusted-housesitters-applications-get-rejected',
@@ -28,7 +28,7 @@ export const post: BlogPost = {
   ],
   seoTitle: 'How to Get Your First House Sit (Even With No Reviews)',
   seoDescription:
-    'Learn how to get your first house sit with no reviews. Discover proven strategies to build trust, stand out to homeowners, and land your first TrustedHousesitters sit.',
+    'My insights on getting your first house sit with no reviews, building trust early, and standing out to homeowners on TrustedHousesitters.',
   seoKeywords: [
     'first house sit no reviews',
     'trustedhousesitters beginner',
@@ -65,8 +65,8 @@ export const post: BlogPost = {
             aren't used to being left alone.
           </li>
           <li>
-            <strong>Address the Pets by Name:</strong> Always mention the pets by name in your
-            message. This shows you actually read the listing.
+            <strong>Address the Pets by Name:</strong> I try to mention the pets by name in every
+            message. It shows you actually read the listing.
           </li>
           <li>
             <strong>Offer a Video Call:</strong> Proactively offering a call shows transparency and
@@ -206,11 +206,11 @@ export const post: BlogPost = {
         more popular destinations.
       </p>
       <div className="prose-end">
-        <strong>Final Verdict</strong>
-        Getting your first house sit requires strategy, not luck. Build a profile that removes
-        doubt, invest a little time upfront in references and local sits, and focus on short,
-        low-competition opportunities until you earn that first five-star review. Once you have that
-        first review, many more opportunities become available.
+        <strong>My Takeaway</strong>
+        Getting my first house sit took patience and a practical approach, not luck. Building a
+        profile that eases early doubts, gathering personal references, and starting with shorter,
+        lower-competition stays helped me earn that first five-star review. From there, everything
+        opened up.
       </div>
     </>
   ),

@@ -25,7 +25,7 @@ export function getResourceMetadata(item: ResourceItem): Metadata {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: item.seoTitle || `${item.name}: My Recommended Travel Tool`,
+      title: item.seoTitle || `${item.name} | Resources`,
       description: item.seoDescription || item.description,
       url: canonicalUrl,
       images: absoluteImageUrl ? [{ url: absoluteImageUrl }] : [],
@@ -115,7 +115,7 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
         {
           '@type': 'ListItem',
           position: 2,
-          name: 'Travel Resources',
+          name: 'Resources',
           item: 'https://sitterjourney.com/resources',
         },
         {

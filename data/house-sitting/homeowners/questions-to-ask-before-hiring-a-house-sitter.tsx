@@ -27,7 +27,11 @@ export const post: BlogPost = {
   ctaLabel: REFERRALS.THS.label,
   ctaLink: REFERRALS.THS.link,
   audience: ['Homeowners'],
-  faqIds: ['homeowner-interview-questions', 'homeowner-how-to-prepare', 'homeowner-what-to-leave'],
+  faqIds: [
+    'homeowner-interview-questions',
+    'homeowner-green-red-flags',
+    'homeowner-house-rules-boundaries',
+  ],
   relatedSlugs: [
     'trusted-housesitters-exchange-vs-professional-house-sitting',
     'how-to-prepare-your-home-for-a-house-sitter',

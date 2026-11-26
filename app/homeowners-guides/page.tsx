@@ -44,7 +44,7 @@ export default function HomeownersGuidesPage() {
         url: 'https://sitterjourney.com/homeowners-guides',
         name: 'Guides for Homeowners & Pet Parents',
         description:
-          'Checklists and honest comparisons to help homeowners find, vet, and welcome trustworthy house sitters.',
+          'Checklists, questions to ask, and insights for homeowners welcoming a house sitter, shared from my perspective as a sitter.',
         mainEntity: {
           '@type': 'ItemList',
           itemListElement: HOMEOWNER_POSTS.map((post, idx) => ({
@@ -70,7 +70,7 @@ export default function HomeownersGuidesPage() {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'For Homeowners',
+            name: 'Guides for Homeowners',
             item: 'https://sitterjourney.com/homeowners-guides',
           },
         ],

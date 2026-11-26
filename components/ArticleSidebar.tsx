@@ -89,9 +89,6 @@ export default function ArticleSidebar({
                   />
                 </div>
                 <div className="sidebar-related-meta">
-                  {article.category && (
-                    <span className="sidebar-related-cat">{article.category}</span>
-                  )}
                   <span className="sidebar-related-title">{article.title}</span>
                 </div>
               </Link>
