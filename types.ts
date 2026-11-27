@@ -33,12 +33,6 @@ export const REFERRALS = {
     label: 'Save $20 on Mobile Service',
     cta: 'Save $20 Now',
   },
-  PF: {
-    link: 'https://www.planetfitness.com/referrals?referralCode=LVX9KEAQ',
-    discount: '$1 Down',
-    label: 'Join for $1 Down',
-    cta: '$1 Down Promo',
-  },
 };
 
 /**

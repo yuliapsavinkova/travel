@@ -23,7 +23,7 @@ function trackEvent(eventName: string, params?: AnalyticsEventParams): void {
   if (typeof window === 'undefined') return;
 
   // Deduplicate identical events triggered in rapid succession (< 800ms)
-  const dedupeKey = `${eventName}:${params?.link_url || params?.form_name || params?.event_label || ''}`;
+  const dedupeKey = `${eventName}:${params?.link_url || params?.form_name || params?.page_path || params?.event_label || ''}`;
   const now = Date.now();
   const lastTime = recentEvents.get(dedupeKey);
   if (lastTime && now - lastTime < 800) {
@@ -77,9 +77,6 @@ export function detectReferralPartner(url: string): ReferralPartnerInfo {
   if (lower.includes('visible.com')) {
     return { partner: 'Visible Wireless', isReferral: true };
   }
-  if (lower.includes('planetfitness.com')) {
-    return { partner: 'Planet Fitness', isReferral: true };
-  }
 
   // General check for referral / affiliate URL query patterns
   if (
@@ -132,6 +129,31 @@ export function detectSocialNetwork(url: string): SocialNetworkInfo {
 }
 
 /**
+ * 0. PAGE VIEW (INITIAL + NEXT.JS SOFT NAVIGATIONS)
+ * Ensures accurate page_path and document.title on client-side App Router transitions.
+ */
+export function trackPageView(options?: {
+  pagePath?: string;
+  pageLocation?: string;
+  pageTitle?: string;
+}): void {
+  const currentPath =
+    options?.pagePath || (typeof window !== 'undefined' ? window.location.pathname : '');
+  const currentLocation =
+    options?.pageLocation || (typeof window !== 'undefined' ? window.location.href : '');
+  const currentTitle =
+    options?.pageTitle || (typeof document !== 'undefined' ? document.title : '');
+
+  if (!currentPath) return;
+
+  trackEvent('page_view', {
+    page_path: currentPath,
+    page_location: currentLocation,
+    page_title: currentTitle,
+  });
+}
+
+/**
  * 1. FLOATING READER CTA CLICK
  * Triggered when a reader clicks the sticky discount bar at the bottom of articles.
  */
@@ -176,7 +198,7 @@ export function trackFloatingCtaClick(options: {
 
 /**
  * 2. IN-ARTICLE REFERRAL CLICK
- * Triggered when a reader clicks a referral or affiliate partner link inside an article or review.
+ * Triggered when a reader clicks a referral or affiliate partner link inside an article, sidebar, card, or footer.
  */
 export function trackInArticleReferralClick(options: {
   linkUrl: string;
@@ -184,7 +206,14 @@ export function trackInArticleReferralClick(options: {
   partner?: string;
   articleTitle?: string;
   articleSlug?: string;
-  linkPlacement?: 'in_article' | 'resource_callout' | 'general';
+  linkPlacement?:
+    | 'in_article'
+    | 'resource_callout'
+    | 'sidebar_callout'
+    | 'faq_callout'
+    | 'resource_card'
+    | 'footer'
+    | 'general';
 }): void {
   const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
   const currentTitle = typeof document !== 'undefined' ? document.title : '';
@@ -207,7 +236,7 @@ export function trackInArticleReferralClick(options: {
 
   trackEvent('in_article_referral_click', {
     event_category: 'referral',
-    event_label: `${cleanArticleTitle} — In-Article: ${partnerName} ("${cleanLinkText}")`,
+    event_label: `${cleanArticleTitle} — ${options.linkPlacement || 'in_article'}: ${partnerName} ("${cleanLinkText}")`,
     partner: partnerName,
     link_text: cleanLinkText,
     link_url: options.linkUrl,
@@ -222,9 +251,27 @@ export function trackInArticleReferralClick(options: {
 }
 
 /**
- * 3. CONTACT FORM SUBMISSION
- * Triggered when a visitor submits the contact message modal.
+ * 3. CONTACT MODAL OPEN & FORM SUBMISSION
+ * Triggered when a visitor opens or submits the contact message modal.
  */
+export function trackContactModalOpen(options?: {
+  placement?: 'header_desktop' | 'header_mobile' | 'footer' | 'about_page' | 'general';
+}): void {
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+  const currentTitle = typeof document !== 'undefined' ? document.title : '';
+  const currentHref = typeof window !== 'undefined' ? window.location.href : '';
+  const placement = options?.placement || 'general';
+
+  trackEvent('contact_modal_open', {
+    event_category: 'engagement',
+    event_label: `Contact Modal Open (${placement}) on ${currentPath || 'Site'}`,
+    link_placement: placement,
+    page_location: currentHref,
+    page_path: currentPath,
+    page_title: currentTitle,
+  });
+}
+
 export function trackContactFormSubmit(options?: {
   formName?: string;
   pagePath?: string;
@@ -288,7 +335,7 @@ export function trackPortfolioVisit(options: {
 
 /**
  * 5. SOCIAL PROFILE CLICK
- * Triggered when a reader clicks an Instagram, Facebook, TikTok, or Email link.
+ * Triggered when a reader clicks an Instagram, Facebook, TikTok, Pinterest, or Email link.
  */
 export function trackSocialClick(options: {
   network: string;
@@ -313,5 +360,28 @@ export function trackSocialClick(options: {
     page_path: currentPath,
     page_title: currentTitle,
     outbound: true,
+  });
+}
+
+/**
+ * 6. GUIDE / FAQ TRACK SWITCH
+ * Triggered when a visitor switches between House Sitters and Homeowners tabs.
+ */
+export function trackGuideTrackSwitch(options: {
+  section: 'guides' | 'faq';
+  track: 'sitters' | 'homeowners';
+}): void {
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+  const currentTitle = typeof document !== 'undefined' ? document.title : '';
+  const currentHref = typeof window !== 'undefined' ? window.location.href : '';
+
+  trackEvent('guide_track_switch', {
+    event_category: 'engagement',
+    event_label: `${options.section === 'faq' ? 'FAQ' : 'Guides'} Track: ${options.track}`,
+    section: options.section,
+    track: options.track,
+    page_location: currentHref,
+    page_path: currentPath,
+    page_title: currentTitle,
   });
 }

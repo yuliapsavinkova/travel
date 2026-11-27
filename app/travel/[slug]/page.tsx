@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import React from 'react';
 import ArticleSidebar from '../../../components/ArticleSidebar';
 import CommonDetail from '../../../components/CommonDetail';
@@ -79,16 +80,7 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
   const guide = TRAVEL_GUIDES.find((g) => g.slug === slug);
 
   if (!guide) {
-    return (
-      <div className="container text-center section-margin">
-        <CommonDetail topic="Travel Guides" topicHref="/travel" image="" title="Not Found">
-          <div className="text-center" style={{ padding: 'var(--s-8) 0' }}>
-            <h1 className="display-title">Guide Not Found</h1>
-            <p className="hero-paragraph">The requested travel guide could not be located.</p>
-          </div>
-        </CommonDetail>
-      </div>
-    );
+    notFound();
   }
 
   const relatedArticles = getRelatedArticlesFor(guide.slug, guide.relatedSlugs);

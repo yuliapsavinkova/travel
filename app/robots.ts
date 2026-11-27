@@ -10,6 +10,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://sitterjourney.com/sitemap.xml',
-    host: 'https://sitterjourney.com',
   };
 }

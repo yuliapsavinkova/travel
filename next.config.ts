@@ -44,6 +44,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/resources/planet-fitness-review',
+        destination: '/resources',
+        permanent: true,
+      },
+      {
         source: '/resources/:slug',
         destination: '/:slug',
         permanent: true,

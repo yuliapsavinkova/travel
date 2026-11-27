@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
-import type { ReactNode } from 'react';
+import { type ReactNode, Suspense } from 'react';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -63,9 +63,6 @@ export const metadata: Metadata = {
   },
   description:
     'Real stories, budget math, and my insights from experience with house sitting, slow travel, and pet care by Yulia.',
-  alternates: {
-    canonical: 'https://sitterjourney.com',
-  },
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -211,7 +208,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
 
         <div className="app-root">
-          <AnalyticsTracker />
+          <Suspense fallback={null}>
+            <AnalyticsTracker />
+          </Suspense>
           <div className="studio-depth" />
           <Navigation blogPaths={blogPaths} resourcePaths={resourcePaths} />
           <main className="main-viewport">{children}</main>

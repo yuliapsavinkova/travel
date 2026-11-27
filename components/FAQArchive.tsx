@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { type BlogTrack, type FAQItem, REFERRALS } from '../types';
+import { trackGuideTrackSwitch } from '../utils/analytics';
 import { ChevronDownIcon } from './Icons';
 import ReferralPromoCard from './ReferralPromoCard';
 
@@ -52,6 +53,7 @@ export default function FAQArchive({
 
   const handleSelectTrack = (track: BlogTrack) => {
     if (track === activeTrack) return;
+    trackGuideTrackSwitch({ section: 'faq', track });
     setActiveTrack(track);
     const nextUrl = track === 'homeowners' ? '/faq?tab=homeowners' : '/faq';
     window.history.replaceState(null, '', nextUrl);

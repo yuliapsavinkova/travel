@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { NAV_ITEMS } from '../site-config';
+import { trackContactModalOpen } from '../utils/analytics';
 import BrandLogo from './BrandLogo';
 import { MenuIcon, XIcon } from './Icons';
 
@@ -128,7 +129,10 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
               <button
                 type="button"
                 className="btn-gold desktop-only"
-                onClick={() => setIsContactOpen(true)}
+                onClick={() => {
+                  trackContactModalOpen({ placement: 'header_desktop' });
+                  setIsContactOpen(true);
+                }}
               >
                 Contact
               </button>
@@ -168,6 +172,7 @@ const Navigation = ({ blogPaths = [], resourcePaths = [] }: NavigationProps) => 
               type="button"
               className="mobile-menu-item mobile-menu-cta"
               onClick={() => {
+                trackContactModalOpen({ placement: 'header_mobile' });
                 setIsMobileMenuOpen(false);
                 setIsContactOpen(true);
               }}

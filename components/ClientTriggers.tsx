@@ -1,7 +1,8 @@
 'use client';
 
-import type { CSSProperties, ReactNode } from 'react';
+import type { CSSProperties, MouseEvent, ReactNode } from 'react';
 import { SITE_CONFIG } from '../site-config';
+import { trackContactModalOpen, trackSocialClick } from '../utils/analytics';
 
 interface ContactTriggerProps {
   label?: string;
@@ -21,7 +22,13 @@ export const ContactTrigger = ({
   style,
   ariaLabel,
 }: ContactTriggerProps) => {
-  const handleOpen = () => {
+  const handleOpen = (event: MouseEvent<HTMLButtonElement>) => {
+    const button = event.currentTarget;
+    const isFooter = Boolean(button.closest('#site-footer, footer'));
+    const isAboutPage = typeof window !== 'undefined' && window.location.pathname === '/about';
+    const placement = isFooter ? 'footer' : isAboutPage ? 'about_page' : 'general';
+
+    trackContactModalOpen({ placement });
     window.dispatchEvent(new CustomEvent('open-contact-portal'));
   };
 
@@ -55,9 +62,31 @@ export const EmailTrigger = ({
   style,
   ariaLabel = 'Email',
 }: EmailTriggerProps) => {
-  const handleEmail = () => {
+  const handleEmail = (event: MouseEvent<HTMLButtonElement>) => {
     const address = `${SITE_CONFIG.emailParts.user}@${SITE_CONFIG.emailParts.domain}`;
-    window.location.href = `mailto:${address}`;
+    const mailtoUrl = `mailto:${address}`;
+    const button = event.currentTarget;
+    const isFooter = Boolean(button.closest('#site-footer, footer'));
+    const isHero = Boolean(button.closest('.hero-socials-wrapper, header'));
+    const isAboutPage = typeof window !== 'undefined' && window.location.pathname === '/about';
+    const isProse = Boolean(button.closest('.prose-content, .detail-rich-content, article'));
+    const placement = isFooter
+      ? 'footer'
+      : isHero
+        ? 'hero'
+        : isAboutPage
+          ? 'about_page'
+          : isProse
+            ? 'in_article'
+            : 'general';
+
+    trackSocialClick({
+      network: 'Email',
+      linkUrl: mailtoUrl,
+      placement,
+    });
+
+    window.location.href = mailtoUrl;
   };
 
   return (

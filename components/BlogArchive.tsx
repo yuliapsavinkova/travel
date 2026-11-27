@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import type { BlogPostSummary, BlogTrack } from '../types';
+import { trackGuideTrackSwitch } from '../utils/analytics';
 import { formatCardDate } from '../utils/content';
 import CommonCard from './CommonCard';
 import { CalendarIcon } from './Icons';
@@ -59,6 +60,7 @@ export default function BlogArchive({
 
   const handleSelectTrack = (track: BlogTrack) => {
     if (track === activeTrack) return;
+    trackGuideTrackSwitch({ section: 'guides', track });
     setActiveTrack(track);
     router.replace(track === 'sitters' ? '/sitters-guides' : '/homeowners-guides', {
       scroll: false,
