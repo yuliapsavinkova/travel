@@ -6,11 +6,11 @@ export const resource: ResourceItem = {
   slug: 'rover-review',
   name: 'Rover Review',
   navTitle: 'Rover Review',
-  description: `Earn money as a pet sitter and get a ${REFERRALS.ROVER.discount} for your own pets.`,
+  description: `Earn money as a pet sitter and get a ${REFERRALS.ROVER.discount.toLowerCase()} for your own pets.`,
   date: 'January 9, 2026',
   sortOrder: 2,
   discountText: REFERRALS.ROVER.discount,
-  ctaLabel: `Claim ${REFERRALS.ROVER.discount}`,
+  ctaLabel: REFERRALS.ROVER.discount,
   link: REFERRALS.ROVER.link,
   icon: 'heart',
   imageUrl:

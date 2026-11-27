@@ -21,7 +21,7 @@ export const resource: ResourceItem = {
     'visible-review',
   ],
   seoTitle: 'Planet Fitness Review: Essential for Full-Time Travel',
-  seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${REFERRALS.PF.discount} with referral code.`,
+  seoDescription: `Why Planet Fitness is the best gym for travelers. Personal review by a full-time member. Join for ${REFERRALS.PF.discount.toLowerCase()} with a referral code.`,
   seoKeywords: [
     'planet fitness review for travelers',
     'best gym for travelers 2026',

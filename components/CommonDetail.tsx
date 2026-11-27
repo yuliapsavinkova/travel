@@ -143,7 +143,7 @@ const CommonDetail = ({
                   Disclosure
                   <span className="sr-only"> (opens in a new tab)</span>
                 </Link>
-                : May contain referral links
+                : May contain invite links
               </p>
             )}
 

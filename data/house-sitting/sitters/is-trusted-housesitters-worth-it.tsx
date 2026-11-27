@@ -130,11 +130,11 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        Make sure you use a discount when signing up to lower the fee even further:{' '}
+        You can use my referral link for{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          this link applies {REFERRALS.THS.discount} automatically
-        </a>
-        .
+          {REFERRALS.THS.ratePercent} off your membership
+        </a>{' '}
+        when signing up to lower the fee even further.
       </p>
 
       <p>

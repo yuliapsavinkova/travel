@@ -5,7 +5,7 @@ import CommonDetail from '../../../components/CommonDetail';
 import ContentRenderer from '../../../components/ContentRenderer';
 import MobileReferralBar from '../../../components/MobileReferralBar';
 import { TRAVEL_GUIDES } from '../../../data/travel/travel';
-import { REFERRALS } from '../../../types';
+import { INVITE_BADGE, REFERRALS } from '../../../types';
 import {
   PUBLISHER_LOGO_URL,
   estimateReadingTime,
@@ -181,10 +181,10 @@ export default async function TravelDetailPage({ params }: { params: Promise<{ s
         </div>
       </CommonDetail>
       <MobileReferralBar
-        badge="Referral Offer"
+        badge={INVITE_BADGE}
         title="TrustedHousesitters"
         promoLink={REFERRALS.THS.link}
-        ctaLabel={`Get ${REFERRALS.THS.discount}`}
+        ctaLabel={REFERRALS.THS.discount}
         articleTitle={guide.title}
         articleSlug={guide.slug}
       />

@@ -21,11 +21,10 @@ export const privacyPolicyContent = (
       services like <strong>Google Analytics</strong> may collect anonymous data about your visit.
     </p>
 
-    <h2>3. Resource and Affiliate Links</h2>
+    <h2>3. Member Invite Links</h2>
     <p>
-      I use resource and affiliate links (e.g., TrustedHousesitters). If you click these links, the
-      third-party provider may use cookies to track your purchase for the purpose of assigning a
-      resource credit.
+      I use member invite links (such as TrustedHousesitters). If you click these links, the
+      third-party provider may use cookies to apply your discount and credit my account.
     </p>
 
     <div className="prose-accent-box">

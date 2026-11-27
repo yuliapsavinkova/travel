@@ -1,7 +1,7 @@
 'use client';
 
 import { type MouseEvent, useEffect, useRef, useState } from 'react';
-import { REFERRALS } from '../types';
+import { INVITE_BADGE, REFERRALS } from '../types';
 import { trackFloatingCtaClick } from '../utils/analytics';
 import { ArrowUpRightIcon } from './Icons';
 
@@ -16,10 +16,10 @@ interface MobileReferralBarProps {
 }
 
 export default function MobileReferralBar({
-  badge = 'Referral Offer',
+  badge = INVITE_BADGE,
   title = 'TrustedHousesitters',
   promoLink = REFERRALS.THS.link,
-  ctaLabel = `Get ${REFERRALS.THS.discount}`,
+  ctaLabel = REFERRALS.THS.discount,
   showAfterScroll = 280,
   articleTitle,
   articleSlug,
@@ -99,7 +99,7 @@ export default function MobileReferralBar({
     <aside
       id="mobile-referral-bar"
       className={`mobile-referral-bar ${shouldRender ? 'is-visible' : ''}`}
-      aria-label="Referral offer"
+      aria-label="Friend invite discount"
     >
       <a
         id="mobile-referral-cta"

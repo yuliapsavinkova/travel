@@ -193,8 +193,7 @@ export const SITTER_FAQS: FAQItem[] = [
     id: 'membership-basic-fees',
     audience: 'sitters',
     question: 'What are the per-sit booking fees for Basic and Standard?',
-    answer:
-      'Both Basic and Standard charge a $12 booking fee for each confirmed sit. Premium has no booking fees and usually becomes cheaper starting at your 8th sit (or 6th sit with a 30% discount).',
+    answer: `Both Basic and Standard charge a $12 booking fee for each confirmed sit. Premium has no booking fees and usually becomes cheaper starting at your 8th sit (or 6th sit with a ${REFERRALS.THS.ratePercent} discount).`,
     link: {
       label: 'Fee Structure Explained',
       href: '/trusted-housesitters-membership-cost-levels',

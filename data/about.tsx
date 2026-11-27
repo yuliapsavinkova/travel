@@ -53,12 +53,11 @@ export const body = (
       lessons.
     </p>
 
-    <h2>How This Site Is Funded</h2>
+    <h2>About My Links</h2>
     <p>
-      Some articles contain affiliate links. If you sign up or make a purchase through these, I may
-      earn a small commission at no extra cost to you. I only recommend services I’ve personally
-      used or would recommend regardless of any compensation. These relationships never influence my
-      editorial content.
+      Some pages include member invite links. If you join through them, you get a discount and I
+      receive free membership months or account credits at no extra cost to you. I only share
+      services I actually use myself.
     </p>
   </>
 );

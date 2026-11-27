@@ -12,7 +12,7 @@ export const resource: ResourceItem = {
   updatedDate: 'November 23, 2026',
   sortOrder: 1,
   discountText: REFERRALS.THS.discount,
-  ctaLabel: `Get ${REFERRALS.THS.discount}`,
+  ctaLabel: REFERRALS.THS.discount,
   link: REFERRALS.THS.link,
   icon: 'home',
   imageUrl:

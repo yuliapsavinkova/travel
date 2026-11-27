@@ -156,9 +156,9 @@ export const post: BlogPost = {
       <div className="prose-end">
         <strong>Looking for a Trusted Sitter?</strong>
         If you use TrustedHousesitters, where their built-in Welcome Guide template makes sharing
-        all of this simple, you can{' '}
+        all of this simple, you can use my referral link for{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          get {REFERRALS.THS.discount} your homeowner membership with my referral link
+          {REFERRALS.THS.ratePercent} off your membership
         </a>
         . Or learn more about hiring me privately at{' '}
         <a href={YULIA_SITTER_JOURNEY_URL} target="_blank" rel="noopener noreferrer">

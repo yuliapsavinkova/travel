@@ -4,22 +4,36 @@ import type { CSSProperties, ReactNode } from 'react';
 import { SITE_CONFIG } from '../site-config';
 
 interface ContactTriggerProps {
-  label: string;
+  label?: string;
+  children?: ReactNode;
   className?: string;
   style?: CSSProperties;
+  ariaLabel?: string;
 }
 
 /**
  * ContactTrigger triggers the global contact modal.
  */
-export const ContactTrigger = ({ label, className, style }: ContactTriggerProps) => {
+export const ContactTrigger = ({
+  label,
+  children,
+  className,
+  style,
+  ariaLabel,
+}: ContactTriggerProps) => {
   const handleOpen = () => {
     window.dispatchEvent(new CustomEvent('open-contact-portal'));
   };
 
   return (
-    <button className={className} style={style} onClick={handleOpen} type="button">
-      {label}
+    <button
+      className={className}
+      style={style}
+      onClick={handleOpen}
+      type="button"
+      aria-label={ariaLabel}
+    >
+      {children ?? label}
     </button>
   );
 };
@@ -39,7 +53,7 @@ export const EmailTrigger = ({
   children,
   className,
   style,
-  ariaLabel = 'Email Me',
+  ariaLabel = 'Email',
 }: EmailTriggerProps) => {
   const handleEmail = () => {
     const address = `${SITE_CONFIG.emailParts.user}@${SITE_CONFIG.emailParts.domain}`;

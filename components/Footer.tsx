@@ -3,7 +3,7 @@ import { type ReactNode, useId } from 'react';
 import { CURRENT_YEAR, NAV_ITEMS, TRUSTED_HOUSESITTERS_REF_LINK } from '../site-config';
 import BrandLogo from './BrandLogo';
 import { ContactTrigger, EmailTrigger } from './ClientTriggers';
-import { ExternalLinkIcon, MailIcon } from './Icons';
+import { ExternalLinkIcon, MailIcon, MessageSquareIcon } from './Icons';
 import SectionDivider from './SectionDivider';
 import SocialMediaIcons from './SocialMediaIcons';
 import SurfHorizon from './SurfHorizon';
@@ -91,12 +91,15 @@ const Footer = () => (
 
           <FooterNav title="Get in Touch">
             <li>
-              <ContactTrigger label="Contact Me" />
+              <ContactTrigger ariaLabel="Contact">
+                <MessageSquareIcon size={12} aria-hidden="true" />
+                <span>Contact</span>
+              </ContactTrigger>
             </li>
             <li>
-              <EmailTrigger ariaLabel="Email Me">
+              <EmailTrigger ariaLabel="Email">
                 <MailIcon size={12} aria-hidden="true" />
-                <span>Email Me</span>
+                <span>Email</span>
               </EmailTrigger>
             </li>
           </FooterNav>

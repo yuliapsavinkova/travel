@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { type BlogTrack, type FAQItem, REFERRALS } from '../types';
-import { ChevronDownIcon, SearchIcon, XIcon } from './Icons';
+import { ChevronDownIcon } from './Icons';
+import ReferralPromoCard from './ReferralPromoCard';
 
 interface FAQArchiveProps {
   sitterFaqs: FAQItem[];
@@ -16,32 +17,21 @@ const TRACK_COPY: Record<
   {
     srHeading: string;
     subtitle: string;
-    searchPlaceholder: string;
+    promoDescription: string;
   }
 > = {
   sitters: {
     srHeading: 'Common Questions for House Sitters',
     subtitle: 'My insights on getting started, profile tips, memberships, and more.',
-    searchPlaceholder: 'Search sitter questions...',
+    promoDescription: REFERRALS.THS.sitterInviteText,
   },
   homeowners: {
     srHeading: 'Common Questions for Homeowners',
     subtitle:
       'My insights on preparing your home, writing a welcome guide, vetting sitters, and comparing options.',
-    searchPlaceholder: 'Search homeowner questions...',
+    promoDescription: REFERRALS.THS.homeownerInviteText,
   },
 };
-
-function matchesSearch(item: FAQItem, query: string): boolean {
-  if (!query) return true;
-
-  const haystack = [item.question, item.answer, item.link?.label]
-    .filter(Boolean)
-    .join(' ')
-    .toLowerCase();
-
-  return haystack.includes(query);
-}
 
 export default function FAQArchive({
   sitterFaqs,
@@ -49,7 +39,6 @@ export default function FAQArchive({
   initialTrack = 'sitters',
 }: FAQArchiveProps) {
   const [activeTrack, setActiveTrack] = useState<BlogTrack>(initialTrack);
-  const [searchQuery, setSearchQuery] = useState<string>('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -59,22 +48,7 @@ export default function FAQArchive({
     }
   }, []);
 
-  const normalizedQuery = searchQuery.trim().toLowerCase();
-
-  const filteredSitters = useMemo(
-    () => sitterFaqs.filter((item) => matchesSearch(item, normalizedQuery)),
-    [sitterFaqs, normalizedQuery]
-  );
-
-  const filteredHomeowners = useMemo(
-    () => homeownerFaqs.filter((item) => matchesSearch(item, normalizedQuery)),
-    [homeownerFaqs, normalizedQuery]
-  );
-
-  const activeFaqs = activeTrack === 'sitters' ? filteredSitters : filteredHomeowners;
-  const otherTrack: BlogTrack = activeTrack === 'sitters' ? 'homeowners' : 'sitters';
-  const otherFaqsCount =
-    otherTrack === 'sitters' ? filteredSitters.length : filteredHomeowners.length;
+  const activeFaqs = activeTrack === 'sitters' ? sitterFaqs : homeownerFaqs;
 
   const handleSelectTrack = (track: BlogTrack) => {
     if (track === activeTrack) return;
@@ -132,30 +106,6 @@ export default function FAQArchive({
         <p className="hero-paragraph home-section-intro blog-archive-subtitle">
           {activeCopy.subtitle}
         </p>
-
-        <div className="blog-search-row">
-          <div className="archive-search-wrap">
-            <SearchIcon size={15} className="archive-search-icon" aria-hidden="true" />
-            <input
-              type="search"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={activeCopy.searchPlaceholder}
-              aria-label="Search common questions"
-              className="archive-search-input"
-            />
-            {searchQuery && (
-              <button
-                type="button"
-                className="archive-search-clear"
-                onClick={() => setSearchQuery('')}
-                aria-label="Clear search"
-              >
-                <XIcon size={13} />
-              </button>
-            )}
-          </div>
-        </div>
       </header>
 
       <div className="blog-archive-section" id="faq-archive">
@@ -165,76 +115,34 @@ export default function FAQArchive({
             role="tabpanel"
             aria-labelledby={activeTrack === 'sitters' ? 'tab-faq-sitters' : 'tab-faq-homeowners'}
           >
-            {activeFaqs.length > 0 ? (
-              <section className="prose-faq" aria-label={activeCopy.srHeading}>
-                <div className="faq-list">
-                  {activeFaqs.map((item) => (
-                    <details key={item.id} className="faq-row">
-                      <summary className="faq-question">
-                        <span>{item.question}</span>
-                        <ChevronDownIcon size={16} className="faq-chevron" aria-hidden="true" />
-                      </summary>
-                      <div className="faq-answer-wrap">
-                        <p className="faq-answer">{item.answer}</p>
-                        {item.link && (
-                          <Link
-                            href={item.link.href}
-                            className="faq-action-link"
-                            aria-label={`Read guide: ${item.link.label}`}
-                          >
-                            <span>{item.link.label}</span>
-                            <span aria-hidden="true">&rarr;</span>
-                          </Link>
-                        )}
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </section>
-            ) : (
-              <div className="home-feature-card text-center">
-                <p className="hero-paragraph home-feature-paragraph">
-                  No {activeTrack === 'sitters' ? 'sitter' : 'homeowner'} questions matched &ldquo;
-                  {searchQuery}&rdquo;.
-                </p>
-                <div className="blog-empty-actions">
-                  <button
-                    type="button"
-                    className="secondary-btn"
-                    onClick={() => setSearchQuery('')}
-                  >
-                    Clear Search
-                  </button>
-                  {otherFaqsCount > 0 && (
-                    <button
-                      type="button"
-                      className="btn-gold"
-                      onClick={() => handleSelectTrack(otherTrack)}
-                    >
-                      See {otherFaqsCount} {otherTrack === 'sitters' ? 'Sitter' : 'Homeowner'}{' '}
-                      {otherFaqsCount === 1 ? 'Match' : 'Matches'}
-                    </button>
-                  )}
-                </div>
+            <section className="prose-faq" aria-label={activeCopy.srHeading}>
+              <div className="faq-list">
+                {activeFaqs.map((item) => (
+                  <details key={item.id} className="faq-row">
+                    <summary className="faq-question">
+                      <span>{item.question}</span>
+                      <ChevronDownIcon size={16} className="faq-chevron" aria-hidden="true" />
+                    </summary>
+                    <div className="faq-answer-wrap">
+                      <p className="faq-answer">{item.answer}</p>
+                      {item.link && (
+                        <Link
+                          href={item.link.href}
+                          className="faq-action-link"
+                          aria-label={`Read guide: ${item.link.label}`}
+                        >
+                          <span>{item.link.label}</span>
+                          <span aria-hidden="true">&rarr;</span>
+                        </Link>
+                      )}
+                    </div>
+                  </details>
+                ))}
               </div>
-            )}
+            </section>
           </div>
 
-          <div className="prose-accent-box variant-cta">
-            <span className="accent-box-label">Get {REFERRALS.THS.discount} Membership</span>
-            <p>
-              Ready to get started on TrustedHousesitters? Use my verified referral link to get{' '}
-              {REFERRALS.THS.discount} your annual membership.
-            </p>
-            <a
-              href={REFERRALS.THS.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold btn-wide"
-            >
-              Discount: {REFERRALS.THS.discount}
-            </a>
-          </div>
+          <ReferralPromoCard description={activeCopy.promoDescription} />
         </div>
       </div>
     </>

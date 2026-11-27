@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { REFERRALS, type RelatedArticleItem } from '../types';
-import { ArrowUpRightIcon } from './Icons';
+import { INVITE_BADGE, REFERRALS, type RelatedArticleItem } from '../types';
+import ReferralPromoCard from './ReferralPromoCard';
 
 interface ArticleSidebarProps {
   promoBadge?: string;
@@ -14,9 +14,9 @@ interface ArticleSidebarProps {
 }
 
 export default function ArticleSidebar({
-  promoBadge = 'Referral Offer',
+  promoBadge = INVITE_BADGE,
   promoTitle = 'TrustedHousesitters',
-  promoDescription = 'Stay in comfortable homes worldwide in exchange for caring for pets, and save on your annual membership.',
+  promoDescription = REFERRALS.THS.sitterInviteText,
   promoLink = REFERRALS.THS.link,
   promoLabel = REFERRALS.THS.cta,
   showPromo = true,
@@ -98,23 +98,13 @@ export default function ArticleSidebar({
       )}
 
       {showPromo && (
-        <section
-          className="sidebar-card sidebar-promo-card sidebar-ad-slot"
-          aria-label="Referral offer"
-        >
-          <span className="sidebar-promo-badge">{promoBadge}</span>
-          <h3 className="sidebar-promo-title">{promoTitle}</h3>
-          <p className="sidebar-promo-desc">{promoDescription}</p>
-          <a
-            href={promoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold sidebar-promo-cta"
-          >
-            <span>{promoLabel}</span>
-            <ArrowUpRightIcon size={13} style={{ marginLeft: '6px' }} aria-hidden="true" />
-          </a>
-        </section>
+        <ReferralPromoCard
+          badge={promoBadge}
+          title={promoTitle}
+          description={promoDescription}
+          link={promoLink}
+          ctaLabel={promoLabel}
+        />
       )}
     </div>
   );

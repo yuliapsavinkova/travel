@@ -31,12 +31,7 @@ const CommonCard: React.FC<CommonCardProps> = ({
   const internalPath = slug ? (slug.startsWith('/') ? slug : `/${slug}`) : '';
   const label = actionLabel || 'Explore';
 
-  // Strictly enforce "Discount: [Value]" pattern
-  const formattedCtaLabel = ctaLabel
-    ? ctaLabel.startsWith('Discount:')
-      ? ctaLabel
-      : `Discount: ${ctaLabel.replace(/Offer: |Get: |Claim: |Claim your |Your /gi, '').trim()}`
-    : 'Claim Discount';
+  const formattedCtaLabel = ctaLabel || 'Discount';
 
   return (
     <div className="card-wrapper">

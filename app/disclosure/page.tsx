@@ -4,9 +4,8 @@ import ContentRenderer from '../../components/ContentRenderer';
 import { disclosureContent } from '../../data/disclosure';
 
 export const metadata: Metadata = {
-  title: 'Referral & Affiliate Disclosure | Sitter Journey',
-  description:
-    'Transparency regarding resource links and affiliate relationships on Sitter Journey.',
+  title: 'Invite & Link Disclosure | Sitter Journey',
+  description: 'How member invite links and discounts work on Sitter Journey.',
   alternates: {
     canonical: 'https://sitterjourney.com/disclosure',
   },
@@ -16,7 +15,7 @@ export default function DisclosurePage() {
   return (
     <CommonDetail
       image="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&q=80&w=2400"
-      title="Disclosure of Referrals & Affiliates."
+      title="Link Disclosure."
       date="January 9, 2026"
     >
       <div className="flex-col">

@@ -195,9 +195,10 @@ export const post: BlogPost = {
       </p>
 
       <p>
-        If you want to try the exchange community and welcome travelers to your home, you can{' '}
+        If you want to try the exchange community and welcome travelers to your home, you can use my
+        referral link for{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          use my referral link to get {REFERRALS.THS.discount} your TrustedHousesitters membership
+          {REFERRALS.THS.ratePercent} off your membership
         </a>
         . And if you are interested in my professional house sitting services, you can find more
         details at{' '}

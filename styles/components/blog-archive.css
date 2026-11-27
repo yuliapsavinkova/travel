@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BLOG ARCHIVE ("GUIDES FOR" + SITTERS | HOMEOWNERS SWITCHER & SEARCH)
+   BLOG ARCHIVE ("GUIDES FOR" + SITTERS | HOMEOWNERS SWITCHER)
    Second-level editorial navigation with top-aligned superscript counts.
    ========================================================================== */
 
@@ -120,102 +120,6 @@
   margin-right: auto;
 }
 
-.blog-search-row {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--s-5);
-}
-
-.archive-search-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 24rem;
-  display: flex;
-  align-items: center;
-}
-
-.archive-search-icon {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--color-text-secondary);
-  opacity: 0.7;
-  pointer-events: none;
-  transition: color var(--t-fast), opacity var(--t-fast);
-}
-
-.archive-search-wrap:focus-within .archive-search-icon {
-  color: var(--color-brand-primary);
-  opacity: 1;
-}
-
-.archive-search-input {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 100%;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--r-pill);
-  padding: 0.65rem 2.4rem 0.65rem 2.5rem;
-  font-family: var(--f-main);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-text-primary);
-  box-shadow: var(--shadow-sm);
-  outline: none;
-  transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
-}
-
-.archive-search-input::-webkit-search-cancel-button {
-  display: none;
-}
-
-.archive-search-input::placeholder {
-  color: var(--color-text-secondary);
-  opacity: 0.7;
-}
-
-.archive-search-input:hover {
-  border-color: var(--color-border-bold);
-}
-
-.archive-search-input:focus {
-  border-color: var(--color-brand-primary);
-  box-shadow: 0 0 0 3px var(--color-brand-primary-soft);
-}
-
-.archive-search-clear {
-  position: absolute;
-  right: 0.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: none;
-  background: var(--color-brand-primary-subtle);
-  color: var(--color-brand-primary);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background var(--t-fast), color var(--t-fast);
-}
-
-.archive-search-clear:hover {
-  background: var(--color-brand-primary);
-  color: var(--color-text-primary-inverse);
-}
-
-.blog-empty-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--s-3);
-  flex-wrap: wrap;
-}
-
 @media (max-width: 768px) {
   .blog-archive-header {
     margin-bottom: var(--s-6);
@@ -223,13 +127,5 @@
 
   .blog-header-switcher {
     gap: 0.9rem;
-  }
-
-  .blog-search-row {
-    margin-top: var(--s-4);
-  }
-
-  .archive-search-wrap {
-    max-width: 100%;
   }
 }

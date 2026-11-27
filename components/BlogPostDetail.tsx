@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getFaqsByIds } from '../data/faqs';
-import { type BlogPost, REFERRALS } from '../types';
+import { type BlogPost, INVITE_BADGE, REFERRALS } from '../types';
 import {
   PUBLISHER_LOGO_URL,
   estimateReadingTime,
@@ -163,8 +163,8 @@ export default function BlogPostDetail({ post }: { post: BlogPost }) {
           <ArticleSidebar
             promoDescription={
               track === 'homeowners'
-                ? 'Find vetted, reviewed sitters for your home and pets, and save on an annual TrustedHousesitters membership.'
-                : 'Stay in comfortable homes worldwide in exchange for caring for pets, and save on your annual membership.'
+                ? REFERRALS.THS.homeownerInviteText
+                : REFERRALS.THS.sitterInviteText
             }
             promoLink={post.ctaLink || REFERRALS.THS.link}
             promoLabel={post.ctaLabel || REFERRALS.THS.cta}
@@ -178,10 +178,10 @@ export default function BlogPostDetail({ post }: { post: BlogPost }) {
       </CommonDetail>
       {post.showStickyCta !== false && (
         <MobileReferralBar
-          badge="Referral Offer"
+          badge={INVITE_BADGE}
           title="TrustedHousesitters"
           promoLink={post.ctaLink || REFERRALS.THS.link}
-          ctaLabel={`Get ${REFERRALS.THS.discount}`}
+          ctaLabel={REFERRALS.THS.discount}
           articleTitle={post.title}
           articleSlug={post.slug}
         />

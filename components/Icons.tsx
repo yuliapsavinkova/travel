@@ -153,6 +153,12 @@ export const MailIcon = (props: IconProps) => (
   </IconBase>
 );
 
+export const MessageSquareIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+  </IconBase>
+);
+
 /* --- INTERFACE & NAVIGATION --- */
 
 export const MenuIcon = (props: IconProps) => (
@@ -187,13 +193,6 @@ export const ArrowUpRightIcon = (props: IconProps) => (
 export const ChevronDownIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path d="m6 9 6 6 6-6" />
-  </IconBase>
-);
-
-export const SearchIcon = (props: IconProps) => (
-  <IconBase {...props}>
-    <circle cx="11" cy="11" r="8" />
-    <path d="m21 21-4.3-4.3" />
   </IconBase>
 );
 

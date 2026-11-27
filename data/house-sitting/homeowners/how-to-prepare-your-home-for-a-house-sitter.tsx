@@ -176,11 +176,11 @@ export const post: BlogPost = {
       {/* Draft note: Wrap up with a short closing story or invite homeowners to reach out via yulia.sitterjourney.com if they want a dependable private sitter. */}
 
       <div className="prose-end">
-        <strong>Ready to Welcome a Sitter?</strong>A little preparation before departure lets you
+        <strong>Ready to Welcome a Sitter?</strong> A little preparation before departure lets you
         step onto the plane knowing both your pets and your home are in calm hands. If you are
-        inviting sitters through TrustedHousesitters, you can{' '}
+        inviting sitters through TrustedHousesitters, you can use my referral link for{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          get {REFERRALS.THS.discount} your homeowner membership with my referral link
+          {REFERRALS.THS.ratePercent} off your membership
         </a>
         , or learn about hiring me privately at{' '}
         <a href={YULIA_SITTER_JOURNEY_URL} target="_blank" rel="noopener noreferrer">

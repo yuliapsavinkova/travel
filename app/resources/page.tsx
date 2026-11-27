@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
 import CommonCard from '../../components/CommonCard';
 import { ALL_RESOURCES } from '../../data/resources/resources';
+import { INVITE_BADGE } from '../../types';
 import { DEFAULT_OG_IMAGE } from '../../utils/content';
 
 export const metadata: Metadata = {
-  title: 'Resources: Apps & Services I Personally Use | Sitter Journey',
+  title: 'Resources: Apps & Services I Use | Sitter Journey',
   description:
     'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
   alternates: {
     canonical: 'https://sitterjourney.com/resources',
   },
   openGraph: {
-    title: 'Resources: Apps & Services I Personally Use',
+    title: 'Resources: Apps & Services I Use',
     description:
       'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
     url: 'https://sitterjourney.com/resources',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Resources: Apps & Services I Personally Use',
+    title: 'Resources: Apps & Services I Use',
     description:
       'A curated list of the apps, memberships, and services I use for house sitting and travel. Includes verified discounts.',
     images: [DEFAULT_OG_IMAGE],
@@ -42,7 +43,7 @@ export default function ResourcesPage() {
         '@type': 'CollectionPage',
         '@id': 'https://sitterjourney.com/resources#collection',
         url: 'https://sitterjourney.com/resources',
-        name: 'Resources: Apps and Services I Personally Use | Sitter Journey',
+        name: 'Resources: Apps and Services I Use | Sitter Journey',
         description:
           'A curated list of apps, memberships, and services I use for house sitting and travel.',
         mainEntity: {
@@ -86,7 +87,7 @@ export default function ResourcesPage() {
       <div className="container section-margin archive-page-container" id="archive">
         <header className="text-center blog-archive-header">
           <span className="sub-header">Resources</span>
-          <h1 className="display-title display-title-md">Apps and Services I Personally Use.</h1>
+          <h1 className="display-title display-title-md">Apps and Services I Use.</h1>
           <p className="hero-paragraph blog-archive-subtitle">
             I only recommend what I actually use myself on my travels and adventures.
           </p>
@@ -99,11 +100,11 @@ export default function ResourcesPage() {
               title={item.name}
               image={item.imageUrl}
               description={item.description}
-              badge={item.discountText ? 'Promo' : 'Tool'}
+              badge={item.discountText ? INVITE_BADGE : 'Tool'}
               slug={`/${item.slug}`}
               actionLabel="Details"
               ctaLink={item.link}
-              ctaLabel={item.ctaLabel || (item.discountText ? `Get ${item.discountText}` : 'Visit')}
+              ctaLabel={item.ctaLabel || item.discountText || 'Visit'}
             />
           ))}
         </div>

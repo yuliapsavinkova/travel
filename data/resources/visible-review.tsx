@@ -22,7 +22,7 @@ export const resource: ResourceItem = {
     'is-trusted-housesitters-worth-it-for-sitters',
   ],
   seoTitle: 'Visible Wireless Review: My Unlimited Hotspot Setup',
-  seoDescription: `Personal review of Visible Wireless for house sitting and remote work. Get your first month of unlimited data and ${REFERRALS.VISIBLE.discount} with referral code.`,
+  seoDescription: `Personal review of Visible Wireless for house sitting and remote work. Get your first month of unlimited data and ${REFERRALS.VISIBLE.discount.toLowerCase()} with a referral code.`,
   seoKeywords: [
     'visible mobile review 2026',
     'best unlimited hotspot for travelers',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getFaqsByIds } from '../data/faqs';
-import type { ResourceItem } from '../types';
+import { INVITE_BADGE, type ResourceItem } from '../types';
 import {
   PUBLISHER_LOGO_URL,
   estimateReadingTime,
@@ -148,13 +148,7 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
     '@graph': graphEntities,
   };
 
-  const actionLabel =
-    item.ctaLabel ||
-    (item.discountText
-      ? /^(save|get|join|claim)\b/i.test(item.discountText)
-        ? item.discountText
-        : `Get ${item.discountText}`
-      : `Visit ${productName}`);
+  const actionLabel = item.ctaLabel || item.discountText || `Visit ${productName}`;
 
   return (
     <>
@@ -175,7 +169,7 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
         faqs={faqs}
         sidebar={
           <ArticleSidebar
-            promoBadge={item.discountText ? 'Referral Offer' : 'Recommended Tool'}
+            promoBadge={item.discountText ? INVITE_BADGE : 'Recommended Tool'}
             promoTitle={productName}
             promoDescription={item.description}
             promoLink={item.link}
@@ -189,7 +183,7 @@ export default function ResourceReviewDetail({ item }: { item: ResourceItem }) {
         </div>
       </CommonDetail>
       <MobileReferralBar
-        badge={item.discountText ? 'Referral Offer' : 'Recommended Tool'}
+        badge={item.discountText ? INVITE_BADGE : 'Recommended Tool'}
         title={productName}
         promoLink={item.link}
         ctaLabel={actionLabel}

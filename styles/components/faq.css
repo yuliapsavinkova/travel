@@ -20,6 +20,10 @@
   border-top: none;
 }
 
+.faq-archive-panel .sidebar-callout-card {
+  margin-top: var(--s-8);
+}
+
 /* Explicitly reset any inherited prose link/italic bleed */
 .prose-content .prose-faq a,
 .prose-faq a {

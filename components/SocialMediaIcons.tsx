@@ -52,7 +52,7 @@ export default function SocialMediaIcons({
         <PinterestIcon size={iconSize} />
       </a>
       {showEmail && (
-        <EmailTrigger className="social-icon-btn" ariaLabel="Email Me">
+        <EmailTrigger className="social-icon-btn" ariaLabel="Email">
           <MailIcon size={iconSize} />
         </EmailTrigger>
       )}

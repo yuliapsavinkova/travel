@@ -87,7 +87,7 @@ export default function AnalyticsTracker() {
       const isInsideProse = Boolean(
         anchor.closest('.prose-content, .detail-rich-content, article')
       );
-      const isInsideCallout = Boolean(anchor.closest('.prose-accent-box, .sidebar-promo-card'));
+      const isInsideCallout = Boolean(anchor.closest('.prose-accent-box, .sidebar-callout-card'));
       const linkPlacement = isInsideCallout
         ? 'resource_callout'
         : isInsideProse

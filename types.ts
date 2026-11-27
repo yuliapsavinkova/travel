@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react';
 
 /**
- * SINGLE SOURCE OF TRUTH FOR REFERRALS & PROMOTIONS
- * Update THS_DISCOUNT_PERCENT here (e.g., 25, 30, 35) to update all CTA bars,
- * articles, FAQs, and price break-down math across the entire site in one place.
+ * SINGLE SOURCE OF TRUTH FOR INVITES & DISCOUNTS
+ * Update INVITE_BADGE or THS_DISCOUNT_PERCENT here to update all callout cards,
+ * mobile bars, articles, FAQs, and pricing breakdowns in one place.
  */
+export const INVITE_BADGE = 'Friend Invite';
 export const THS_DISCOUNT_PERCENT = 30;
 export const sits_completed = 41;
 
@@ -14,15 +15,16 @@ export const REFERRALS = {
     rate: THS_DISCOUNT_PERCENT,
     ratePercent: `${THS_DISCOUNT_PERCENT}%`,
     discount: `${THS_DISCOUNT_PERCENT}% Off`,
-    label: `Claim ${THS_DISCOUNT_PERCENT}% Off Membership`,
+    label: `${THS_DISCOUNT_PERCENT}% Off Membership`,
     cta: `${THS_DISCOUNT_PERCENT}% Off Membership`,
-    stickyText: `Get ${THS_DISCOUNT_PERCENT}% off TrustedHousesitters Membership`,
+    sitterInviteText: 'Ready to start house sitting? Sign up using my link.',
+    homeownerInviteText: 'Ready to find a sitter? Sign up using my link.',
   },
 
   ROVER: {
     link: 'https://www.rover.com/ambas-refer-a-friend/Q93GankN',
     discount: '$20 Credit',
-    label: 'Claim $20 Rover Credit',
+    label: '$20 Rover Credit',
     cta: '$20 Sitter Credit',
   },
   VISIBLE: {

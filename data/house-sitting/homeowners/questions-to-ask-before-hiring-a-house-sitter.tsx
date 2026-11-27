@@ -160,9 +160,10 @@ export const post: BlogPost = {
 
       <div className="prose-end">
         <strong>Ready to Find the Right Sitter?</strong>
-        Whether you interview sitters through TrustedHousesitters, where you can{' '}
+        Whether you interview sitters through TrustedHousesitters, where you can use my referral
+        link for{' '}
         <a href={REFERRALS.THS.link} target="_blank" rel="noopener noreferrer">
-          claim {REFERRALS.THS.discount} your membership with my referral link
+          {REFERRALS.THS.ratePercent} off your membership
         </a>
         , or hire a private sitter directly at{' '}
         <a href={YULIA_SITTER_JOURNEY_URL} target="_blank" rel="noopener noreferrer">

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { ContactTrigger, EmailTrigger } from '../../components/ClientTriggers';
 import CommonDetail from '../../components/CommonDetail';
 import ContentRenderer from '../../components/ContentRenderer';
-import { MailIcon } from '../../components/Icons';
+import { MailIcon, MessageSquareIcon } from '../../components/Icons';
 import { body as aboutBody } from '../../data/about';
 import { SITE_CONFIG } from '../../site-config';
 
@@ -109,14 +109,21 @@ export default function AboutPage() {
               flexWrap: 'wrap',
             }}
           >
-            <ContactTrigger label="Contact Me" className="btn-gold" />
+            <ContactTrigger
+              className="btn-gold"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
+              ariaLabel="Contact"
+            >
+              <MessageSquareIcon size={16} aria-hidden="true" />
+              <span>Contact</span>
+            </ContactTrigger>
             <EmailTrigger
               className="secondary-btn"
               style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
-              ariaLabel="Email Me"
+              ariaLabel="Email"
             >
               <MailIcon size={16} aria-hidden="true" />
-              <span>Email Me</span>
+              <span>Email</span>
             </EmailTrigger>
           </div>
         </div>

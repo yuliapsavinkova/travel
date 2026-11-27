@@ -10,7 +10,7 @@ export const disclosureContent = (
 
     <h2>Resources vs. Affiliates</h2>
     <p>
-      Currently, many of the links in my resources (like TrustedHousesitters) are
+      Currently, some of the links in my resources (like TrustedHousesitters) are{' '}
       <strong>Resource Links</strong>. I do not receive cash payments for these. Instead, they
       operate on a "Give One, Get One" model. For example, you receive a discount on your
       membership, and I receive a credit (like a free month) added to mine.
@@ -39,7 +39,7 @@ export const disclosureContent = (
               TrustedHousesitters
             </a>
             :
-          </strong>
+          </strong>{' '}
           Resource (Free Membership Months)
         </li>
         <li>
@@ -48,7 +48,7 @@ export const disclosureContent = (
               Rover
             </a>
             :
-          </strong>
+          </strong>{' '}
           Resource (Pet Care Credits)
         </li>
         <li>
@@ -57,17 +57,8 @@ export const disclosureContent = (
               Visible
             </a>
             :
-          </strong>
+          </strong>{' '}
           Resource (Mobile Service Credits)
-        </li>
-        <li>
-          <strong>
-            <a href={REFERRALS.PF.link} target="_blank" rel="noopener noreferrer">
-              Planet Fitness
-            </a>
-            :
-          </strong>
-          Resource (Wellness Credits)
         </li>
       </ul>
     </div>
